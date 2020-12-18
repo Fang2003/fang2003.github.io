@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>制作UNIX/XENIX的后备用户口令<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　现在金融、邮电、税务等部门都在大力推广使用UNIX/XENIX操作系统。但这个系统的维护远比DOS操作系统困难和复杂。如果UNIX/XENIX操作系统的根——root口令长时间不用以致忘记、不正常操作丢失或被他人无意中更改，其后果是极其严重的。本人通过实践发现：制作多用户UNIX/XENIX操作系统超级用户root的后备用户口令，是丢失超级用户口令后挽救UNIX/XENIX操作系统的方法之一。<br>
+        　　<strong>一、原理</strong><br>
+        　　UNIX/XENIX操作系统的超级用户和一般用户的口令存放在/etc/passwd文件中。passwd文件存放的用户信息顺序包括注册名、加密口令、用户标识号、用户组标识号、注解等。用户间用换行符分开，即每个用户占一行；而每个用户的各项表之间用冒号“：”隔开。如果口令是空的，则不需加密口令，否则加密口令由18个数字、字母和符号组成。通过对/etc/passwd文件观察分析，我们可以创建一个普通用户，将普通用户的标识号、用户组标识号修改成和超级用户root一致，用这样一个修改后的普通用户注册，就可进入超级用户根目录下，如果有操作口令，则这个普通用户就成为后备用户，其口令就是后备口令。以后发生意外超级用户root口令丢失无法正常维护和工作时，就可通过后备用户口令注册，修改/etc/passwd文件，将超级用户的口令删除，重新注册，建立新口令。<br>
+        　　<strong>二、方法和步骤</strong><br>
+        　　1.建立后备用户和口令<br>
+        　　(1)在正常维护过程中，在超级用户下，创建一个名为sbnh的普通用户(任意取名)，并输入口令作为后备口令。<br>
+        　　(2)在超级用户下，用vi命令编辑/etc/passwd文件，找到名为sbnh的用户设置项，将其用户的标识号、用户组标识号修改成与超级用户root一致。即：<br>
+        　　＃vi /etc/passwd<br>
+        　　sbnh:kdMIPLOp36wc,YK:202:50::/usr/sbnh:/bin/sh(修改前)<br>
+        　　sbnh:kdMIPLOp36wc,YK:0:1:superuser:/:/bin/sh(修改后)<br>
+        　　存盘后退出vi编辑命令。此时已经建立了超级用户root的后备用户口令。<br>
+        　　2.启用后备用户口令注册，重新建立超级用户root口令<br>
+        　　(1)当超级用户口令丢失时，首先用后备用户口令注册，进入超级用户方式下，用vi编辑命令修改/etc/passwd文件中的root超级用户项，将其口令删除。即：<br>
+        　　sco unix login:sbnh<br>
+        　　passwd:[qqwwee](注：方括号内输入的口令是看不见的)<br>
+        　　＃vi /etc/passwd<br>
+        　　root:dIbaJae7eRB9E,ky:0:1:superuser:/:(修改前)<br>
+        　　root::0:1:superuser:/:(修改后)<br>
+        　　存盘退出vi编辑命令。此时超级用户root的口令为任意口令。<br>
+        　　(2)重新用root注册，建立超级用户新口令<br>
+        　　当第一次用root注册并输入任意口令时，注册成功。但第二次注册时，系统提示重新输入新口令。此时，重新输入口令后就是超级用户root的新口令。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(贵州　邰秀俐)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

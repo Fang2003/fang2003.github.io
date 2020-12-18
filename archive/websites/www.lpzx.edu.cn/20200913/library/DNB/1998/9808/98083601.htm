@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>硬盘的存储空间到哪里去了</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　由于故障，需对一台486笔记本电脑的硬盘重新分区，用DOS6.22的FDISK做分区操作时，屏幕总是显示：“Total 
+        disk space is 12 Mbytes(1 Mbytes=1048576 bytes)”，即硬盘的总空间是12MB。硬盘的标称尺寸为540MB，怎么突然只有12MB的存储空间了呢?显然，这是一个错误的分区信息。重新用DM、ADM或HD－F对硬盘做低级格式化操作，再用FDISK分区，还是显示只有12MB的硬盘空间。<br>
+        　　早期的BIOS只支持126MB的硬盘，在用10位二进制表示柱面号后，BIOS可支持504MB的硬盘。而在支持EIDE接口的BIOS中，硬盘容量最大可达到8064MB(约8GB)，在这种BIOS中，可对硬盘的工作模式进行设置，即在启动BIOS的设置程序(SETUP)后，进入CMOS设置，选择MODE(硬盘工作模式设置)项，可作如下选择设置：<br>
+        　　&middot;AUTO　系统自动设置。<br>
+        　　&middot;NORMAL　硬盘按常规模式工作。这是早期IDE硬盘的工作模式，此时的CMOS参数是真正的硬盘物理参数，最大柱面数为1024，可管理的最大硬盘容量为：16(磁头数)×1024(柱面数)×63(扇区数)×512(字节数)=528482304字节，即504MB。<br>
+        　　&middot;LBA　硬盘为逻辑块地址方式的LBA(Logical Block Access)模式。在这种工作模式下，硬盘的磁头数可设为0～255，这是突破504MB瓶颈的一种优秀的硬盘工作模式，此时可管理的硬盘的最大容量为：256(磁头数)×1024(柱面数)×63(扇区数)×512(字节数)=8064MB。高版本的DOS支持这种模式，但SCO－UNIX不支持这种模式，要使用NORMAL模式。<br>
+        　　&middot;LARGE　该模式适用于磁道数超过1024的硬盘。<br>
+        　　前述问题的出现是因为BIOS只支持504MB的硬盘空间，而硬盘的标称尺寸是540MB(实际上541065216字节=516MB)。在用FDISK分区时，发生了卷绕现象，即当FDISK读取硬盘的磁道数时，一计数到528482304字节(即504MB)时就满了，再从0开始计数，直到12582912字节(12MB)，硬盘读完，所以报告硬盘的总空间为12MB。<br>
+        　　从上面的分析知道，如果解决了卷绕问题，硬盘就能正确分区了。实际上，硬盘管理软件DM、ADM或HD－F均有分区功能，且已解决了卷绕问题。比如在DM中，它可以管理516MB硬盘的前504MB而不会发生卷绕现象。只不过要注意一点，在DM中，1MB=1000000bytes，所以它把检测到的541065216字节硬盘报告为540MB，而能分区管理的硬盘是前528482304字节，称硬盘分区为528MB。即在DM中1M是106，而在FDISK中1M是220。<br>
+        　　在DM(或ADM)中低级格式化且分区后，进入FDISK，选择“(4)Display 
+        partition information”(显示分区信息)，显示硬盘的总空间还是只有12MB，但是，只要此后不再用FDISK对硬盘作分区操作(千万不要作此操作，否则又要重新用DM或ADM分区)，就不会影响硬盘的正常工作，因为这时只使用了516MB硬盘的前504MB而已。(湖南 
+        刘海莎)　　<br>
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">VFP表单设计小技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　<strong>1.设计Tab键顺序。</strong>当表单中控件较多时，利用特性页来设置TabIndex特性就变得很慢了，你可以利用Shift键来设计其顺序。你可以选择“查看/Tab键次序”菜单，这时，在每个控件的左上角出现一个小方框。按下Shift键并按顺序单击每个控件，然后单击“重新排序”按钮即可。<br>
+        　　<strong>2.把“形状”放在后面。</strong>当你希望在表单中把颜色背景放在一些控件的后面时，可简单地单击表单布局工具栏的“形状”按钮，并在屏幕上拖出一个长方形的外形。若要把它移到现有控件之后，可单击“格式/置后”菜单或在布局工具栏中单击“置后”图标即可。<br>
+        　　<strong>3.修理损坏的表单。</strong>VFP把每个表单集或表单保存在以扩展名为.SCX的表中。每个表单的.SCX文件都有个以.SCT为扩展名的同名备注文件。表单中的每个控件在.SCX文件中都有一个记录，若某个控件的错误很可能使整个.SCX文件打不开而不能使用，这时你不要放弃整个表单，因为只是某条记录使VFP遇到了麻烦。<br>
+        　　改正这一问题的一种方法是把表单的.SCX文件当作表打开并对它进行编辑。首先对.SCX和.SCT文件进行备份，然后在命令窗口中用USE 
+        FormName.SCX命令打开表单并用BROW命令进行浏览，在.SCX文件中打开损坏了的记录中有问题的备注型字段并改正这一问题或删除这一行。<br>
+        　　如果问题存在于方法列中，可能需要将方法代码拷贝到一个文本文件中，删除Object备注型字段中的内容，然后根据文本文件重建方法即可。<br>
+        　　<strong>4.加快刷新速度。</strong>通常，当一个控件限于内存变量、数级或特性中的数据时，没有必要调用Refresh方法来更新控件的显示。因为这样需要大量的处理程序和图形资源，影响运行速度。如果控件限于表或缓冲区中的数据以及数据变化时，确实需要你刷新这些控件，你可以加入以下代码：<br>
+        　　thisform.LockScreen=.T.<br>
+        　　thisform.Refresh()<br>
+        　　thisform.LockScreen=.F.<br>
+        　　(江苏　曾庆祝)<br>
+        <strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月04日第1期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

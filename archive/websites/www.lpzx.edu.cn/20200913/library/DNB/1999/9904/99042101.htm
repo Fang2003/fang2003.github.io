@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>非“常”跳线——免跳线主板CPU的BIOS设置</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">非“常”跳线——免跳线主板CPU的BIOS设置<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　很多主板都是采用跳线设置CPU工作状态，其主要缺点是更新设置须打开机箱，操作不便。还有一些主板采用CPU即插即用方式，自动检测CPU的种类、工作电压并设置系统的工作状态，能确保不会出现因设置不正确而使主板和CPU等设备受到损坏，其优点是确定系统工作状态极为方便，缺点是无法更改系统的工作状态，如无法超频使用。<br>
+        　　当前有不少新型主板采用BIOS程序设置CPU工作状态，修改设置非常方便。如升技BH6、微星6119 
+        W（中文BIOS）等主板，只要将CPU插好，打开电源，进入BIOS，就可对设置CPU参数进行设置。<br>
+        　　设置CPU工作状态的内容包括CPU工作电压、CPU外频（系统总线工作频率）和CPU内频（CPU内部时钟频率）设置，CPU内频设置是通过更改倍频完成的（CPU内频= 
+        CPU外频×倍频）。下表是PⅡ系列CPU的标称参数。<br>
+        <img src="http://www.lpzx.edu.cn/library/DNB/1999/9904/image/21-1.gif" width="331" height="155" alt="21-1.gif (10384 字节)"><br>
+        注：除Kalmath 233－300系列CPU采用0.35(mm) 制造工艺、2.8V核心电压以外，其它均采用0.25(mm) 
+        制造工艺、2.0V核心电压，包括SL2WX系列和Celeron系列。<br>
+        　　下文以升技BH6（440BX，Slot1主板）为例介绍用BIOS设置系统工作状态的方法。<br>
+        　　进入升技BH6主板的Award BIOS后，选取“CPU SOFT MENU II”选项，可以看到以下内容：<br>
+        　　CPU Name Is : Intel Celeron MMX<br>
+        　　CPU Operating Speed : User Define<br>
+        　　－ Turbo Frequency : Disable<br>
+        　　－ External Clock : 100MHz<br>
+        　　－ Multiplier Factor : ×4.5<br>
+        　　－ SEL100/66＃ Signal : Low<br>
+        　　－ AGPCLK/CPUCLK : 2/3<br>
+        　　－ Speed Error Hold : Disable<br>
+        　　－ CPU Power Supply : CPU Default<br>
+        　　－ Core Voltage : 2.00V<br>
+        　　上述内容是Celeron 300A超频设置为4.5×100=450 MHz时显示的状态。以下分别说明各设置项的内容：<br>
+        　　1）CPU Operating Speed<br>
+        　　CPU的内核工作速度，有User Define、233（66×3.5）、266（66×4）、300（66×4.5）、333（66×5）、350（100×3.5）、400（100×4）等选项。选择User 
+        Define(用户定义)选项时，CPU外频和倍频由用户在下述条目3）和4）中自行设置。<br>
+        　　说明1：对不超频的用户来说，这项功能简化了设定过程。<br>
+        　　2：微星6119（W）的BIOS设置中，有CPU Plug ＆ Play选项，即自动检测CPU、设置其工作状态的功能选项。<br>
+        　　2）Turbo Frequency<br>
+        　　CPU外频加速模式选择，有“Disable”和“Enable”选项。选择Enable时,CPU的频率被提升2.5％，实际频率=外频×倍频×（1＋2.5％ 
+        ）。此条目仅在External Clock（外频）支持Turbo模式时方出现（目前只对100MHz提供支持）。<br>
+        　　3）External Clock<br>
+        　　CPU外频选择，有66、75、83、100、112、124、133MHz等选项<br>
+        　　4）Multiplier Factor<br>
+        　　CPU倍频选择，有2.0、2.5、3.0、3.5、4.0、4.5、5.0、5.5等选项<br>
+        　　5）SEL100/66＃ Signal<br>
+        　　Signal 100/66信号选择，有“High&quot;（高）和“Low&quot;（低）两个选项。设置为“High&quot;时CPU外频为100MHz，设置为“Low&quot;时为66MHz。<br>
+        　　说明1：PⅡ350和PⅡ400运行在100MHz外频时，倍频分别被锁定于3.5和4.0倍频，只要SEL100/66＃信号被设置为“Low&quot;，就解除了对倍频的锁定。<br>
+        　　2：大多数PⅡCPU被锁定了倍频，包括低倍频。此信号只对1998年9月以前生产的有些PⅡ和极少部分未锁频的赛扬起作用。<br>
+        　　6）AGPCLK/CPUCLK<br>
+        　　AGP时钟选择，默认值为2/3，此时AGP工作频率是CPU外频的2/3，如改设为1/1，则AGP工作频率等于CPU外频。<br>
+        　　说明1：AGP的标准工作频率是66MHz，对外频为66MHz的CPU应设置为1/1，对外频为100MHz的CPU应设置为2/3，此时AGP实际工作频率为100 
+        × 2/3=66MHz。<br>
+        　　2：当系统频率高于66MHz时，设置为1/1会大大增加AGP的性能，但对于大多数2XAGP卡，超频过高会导致不稳定。<br>
+        　　7）Speed Error Hold<br>
+        　　速度错误处理选择，有“Disable&quot;和“Enable&quot;选项。默认 “Disable&quot;，如设置为“Enable&quot;则相当于禁止超频，由系统自动检测CPU，发现设置值与CPU标称值不符时系统拒绝工作。<br>
+        　　说明：如果选择了无法顺利开机的BIOS设定值，关机等待一定时间，系统将使用原始BIOS 
+        default值启动。<br>
+        　　8）CPU Power Supply<br>
+        　　CPU电源（压）选择，有“CPU Default”（CPU默认）和“User Define”（用户定义）选项，选择“User 
+        Define”选项时，由下一条目9）设置CPU内核电压，略略提高一点对CPU内核电压可提高超频的稳定性，一般加0.1V左右的电压即可。<br>
+        　　9）Core Voltage <br>
+        　　CPU内核电压选择，有1.30V至3.2V间的电压选项，1.30V——2.10V以每档0.05V递增，2.10——3.20V以每档0.10V递增。由于电压过高会对CPU造成伤害，选择项中对调高电压有一定限制。对2.8V 
+        的 Pentium Ⅱ，电压最高可调至3.2V；对2.0V的Pentium Ⅱ，最高只可调至2.3V。<br>
+        BIOS设置的内容很多，本文仅讨论了与CPU相关的设置。另外，不同主板设置的方法不一，应参考主板说明进行设置。最后要说明的是，即使是免跳线主板，实际上在一些特殊情况下还是需要用跳线设置某些系统状态，有些声称免跳线的主板上还是有极少的跳线用于解决一些特殊问题。<br>
+        (重庆 张杰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

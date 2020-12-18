@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>微机不能识别MODEM的处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp;&nbsp;&nbsp; 计算机不能识别MODEM，是指开机后系统找不到MODEM，检测不到它的存在。当出现这种情况时，可按以下方法进行处理：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 1.检查系统在不能识别MODEM以前，是否人为修改过MODEM的参数设置，若修改过，请将MODEM的参数设置改回修改前的状态；<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 2.最近是否安装了新的硬件设备，若安装过，请检查新的硬件设备是否使用了MODEM所用的I/O地址、IRQ中断等资源，可通过手动分配I/O地址、IRQ中断或重新安装硬件驱动程序来解决；<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 3.如MODEM为外置式，请检查外置式MODEM的电源线是否接好，MODEM电源开关是否已置于“ON（开）”的位置；<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 4.请检查电话线缆连接是否正确，电话进线应接在MODEM上标有“LINE”的插口中，到电话机的连线应接在标有“PHONE”的插口中；<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 5.若电话线缆连接正确，且如果是外置式MODEM时，还要检查外置式MODEM到计算机串行口的数据线连接是否正确，然后确保各线缆接触良好；<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 6.若各电缆接线正确，请检查MODEM的基本设置是否正确，I/O端口地址、IRQ中断号设置是否与MODEM实际的硬件设置相符合。内置式MODEM使用自带的串行端口，检查一下MODEM卡上的I/O地址和IRQ的跳线开关设置，应使通讯软件中的设置与之相符；外置式MODEM使用的是计算机上的串行端口，一般为COM1或COM2，查看一下MODEM是否连接到了正确的串行口上，检查BIOS设置或主板跳线开关是否将该COM口设为了“Disable(关闭)”状态，若是，将其改为“Enable(打开)”。如果串行口在多功能卡上，检查卡上的串行口跳线，确认其设置为“Enable”。<br>
+        </font>&nbsp;&nbsp;<font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 实例：在微机上安装了一内置式MODEM，使用串口4(COM4)，用卡上跳线开关将I/O地址设为2E8H，IRQ为3，在DOS下运行BBS软件正常，在Windows下不能识别MODEM。由于DOS下运行BBS软件正常，故可排除MODEM本身及连线故障，考虑到Windows对硬件资源采取统一管理，在微机本身的串口1、串口2和MODEM卡的串口4之间并不存在串口3，有可能是由此引起Windows识别和管理上的错误。打开“主群组”中的“控制面板”，双击“端口”，查看串口状态，果然发现Windows把MODEM端口统一编号成了串口3。由于串口3与串口4在I/O地址、IRQ分配上并不相同，造成了Windows设置与实际MODEM配置的差异，使Windows不能识别MODEM。在“端口”中重新设置串口状态，将串口3的I/O地址设为3E8H、IRQ设为4，串口4的I/O地址设为2E8H、IRQ设为3，确认后重新启动Windows，MODEM被正确识别于串口4。值得一提的是，将MODEM的跳线开关设为串口2，I/O地址设为2F8H、IRQ设为3，可避免上述情况发生，不过这必须以计算机内没有其它外设使用COM2口(I/O地址为2F8H、IRQ为3)为前提，同时计算机自带的串口2应在BIOS或主板跳线上屏蔽，否则也会出现Windows不能识别MODEM的情况。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 7.如果是在Windows下使用MODEM，请确认正确安装了MODEM的驱动程序，若没有，使用MODEM驱动程序盘重新安装；<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp;&nbsp; 8.如果连线、参数设置都无问题，请更换一个好的MODEM或将MODEM装到其它计算机上测试，如果更换MODEM后能识别，说明MODEM本身有问题；如果将MODEM装到其它计算机上能被识别，说明原计算机的主板有问题或与该MODEM不兼容。(重庆冬凌)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

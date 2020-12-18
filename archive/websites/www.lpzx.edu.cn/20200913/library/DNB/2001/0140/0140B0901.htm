@@ -1,0 +1,173 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>《电脑报》电子版CPCW.COM</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第40期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->远程无盘启动Linux<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 编者按：我们都知道，针对Windows(95、98、NT、2000等)操作系统，我们可以建立远程无盘启动网络，并实现一些特别的应用。那么，我们也能用Linux操作系统来建立无盘网吗？答案是肯定的。下面，就向大家介绍具体的操作步骤。<br>
+              基本原理<br>
+              客户端机器只有计算机的基本部件：主板、CPU、 内存等，没有软驱和硬盘，但必须有网卡和启动芯片BootRom。所以，客户机只能通过网络获得操作系统，其启动过程如下：<br>
+              1.客户端电脑开机，首先在TCP/IP BootRom 获得控制权之前先作自我测试；<br>
+              2.BootRom 发出BOOTP/DHCP请求而获得IP；<br>
+              3.如果服务器收到客户机送出的请求，就会回送BOOTP/DHCP回应，内容包括客户端的IP地址、预设网关以及开机映像文件。否则 
+              服务器会忽略这个请求；<br>
+              4.BootRom 由 TFTP协议从服务器下载开机映像文件。<br>
+              5.客户机通过开机映像文件开机，这个开机映像文件可以只是单纯的开机程序，也可以是操作系统。<br>
+              6.开机映像文件将包含kernel loader及压缩过的kernel，此kernel将支持NF Sroot系统。<br>
+              7.客户机根据下载的文件启动机器。<br>
+              由以上启动过程可以看出，Linux的无盘远程启动与Novell、NT下的无盘启动的实现方式是不一样，它不是采用RPL(Remote 
+              Initial Program Loader)，而是基于标准的BootP/DHCP和TFTP协议并通过NFS文件系统来建立文件系统。相对前两种方式，更具有通用性和适应性，基于Linux系统，我们还可以远程启动DOS、Win95、NT和Linux客户机。<br>
+              应用实例<br>
+              工作环境：<br>
+              Linux服务器：server01<br>
+              第一个客户机：pc01<br>
+              所有远程启动客户目录：/machines<br>
+              第一个远程启动客户机目录：/machines/pc01<br>
+              1.首先，重新编译内核：<br>
+              make menuconfig<br>
+              注意：网络的支持、NFS-Root支持、BootPDHCP的支持必须包括在内。<br>
+              make clean<br>
+              make dep<br>
+              make bpImage<br>
+              make modules<br>
+              make modules_install<br>
+              执行以上命令后，你会发现客户端启动的映像文件在/usr/src/linux/i386/boot目录中。<br>
+              2.然后，执行以下命令：<br>
+              mknod /dev/nfsroot b 0 255<br>
+              修改启动设备，让它指向NFSRoot，将boot image拷贝到Linux服务器的/tftpboot目录下。<br>
+              rdev /dev/nfsroot<br>
+              3.为客户机修改服务器，用于建立远程客户机的文件系统。<br>
+              在服务器/etc/exports 中加入：<br>
+              /machines/pc01 pc01rwno_root_sq<br>
+              uash/usr rono_root_squash<br>
+              /sbinrono_root_squash /bin rono_root_squash<br>
+              /librono_root_squash/homerwno_root_squash<br>
+              4.使用DHCP，在/etc/dhcpd.conf 加入对远程客户的支持(具体可以参考DHCP-Howto)。在服务器上建立远程客户机目录： 
+              /machines<br>
+              /machines/pc01 /machines/pc01/bin /machines/pc01/dev<br>
+              /machines/pc01/etc /machines/pc01/home /machines/pc01/lib<br>
+              /machines/pc01/mnt /machines/pc01/proc /machines/pc01/root<br>
+              /machines/pc01/sbin /machines/pc01/server /machines/pc01/tmp<br>
+              /machines/pc01/usr /machines/pc01/var建立bin目录<br>
+              拷贝sh、umount、ls、rm、cp、domainname、dnsdomainname、nisdomainname、hostname、cat、mount、umount到/machines/pc01/bin 
+              中。建立dev目录：<br>
+              cp -a /dev /machines/pc01<br>
+              5.建立etc目录：<br>
+              cp -a /etc /machines/etc<br>
+              注意：必须修改/machines/pc01/etc/rc.d 启动文件：将mount -avt nonfs改为 mount 
+              -av.允许使用NFS Root文件系统，并按以下格式修改/machines/pc01/etc/fstab文件：<br>
+              server01/machines/pc01 /nfs server01/bin /bin nfs<br>
+              server01/usr /usr nfs server01/sbin /sbin nfs<br>
+              server01/home /home nfs server01/lib /lib nfs none /proc proc<br>
+              6.建立lib目录，拷贝/lib/l到/machines/pc01/lib。<br>
+              建立sbin目录，拷贝init、mount、umount、update、rdev、swapdev、swapon、swapoff、mount、umount 
+              到 /machines/pc01/sbin。<br>
+              建立var目录，并cp -a /var /machines/pc01/<br>
+              接下来必须建立一个链，将远程客户机的IP地址链接到/machines/pc01目录。<br>
+              最后请确认服务器上的nfsd、tftpd、bootpd和daemons已启动。<br>
+              一切操作完毕后！你就可以试着远程启动Linux，令人兴奋的是，这个过程很快，一般10秒钟左右就行了。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

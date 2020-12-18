@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>串、并行口针脚的定义<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">在计算机的后部，有许多输入输出插口，其中有并行口和串行口。并行口与串行口的区别是交换信息的方式不同，并行口能同时通过8条数据线传输信息，一次传输一个字节；而串行口只能用1条线传输一位数据，每次传输一个字节的一位。并行口由于同时传输更多的信息，速度明显高于串行口，但串行口可以用于比并行口更远距离的数据传输。下面具体介绍两种端口的针脚，供用户维护电缆或插口时参考。<br>
+        　&nbsp;&nbsp;1.25针并行口插口的针脚功能：<br>
+        　&nbsp;&nbsp;针脚&nbsp;&nbsp;&nbsp;&nbsp; 功能 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        针脚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 功能<br>
+        &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp; 选通&nbsp;&nbsp; （STROBE 低电平) &nbsp; 
+        &nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 确认&nbsp;&nbsp; （ACKNLG 
+        低电平）<br>
+        &nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 数据位0&nbsp; （DATAO） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 忙&nbsp;&nbsp;&nbsp; （BUSY）<br>
+        &nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 数据位1&nbsp; （DATA1） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 却纸&nbsp; （PE）<br>
+        &nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 数据位2&nbsp; （DATA2） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 选择&nbsp; （SLCT）<br>
+        &nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 数据位3&nbsp; （DATA3） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 自动换行&nbsp; （AUTO FEED 低电平）<br>
+        &nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp; 数据位4&nbsp; （DATA4） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 错误观点 （ERROR 低电平）<br>
+        &nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp; 数据位5&nbsp; （DATA5） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 初始化成 （INIT 低电平）<br>
+        &nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp; 数据位6&nbsp; （DATA6） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 17 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 选择输入&nbsp; （SLCT IN 低电平）<br>
+        &nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp; 数据位7&nbsp; （DATA7） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18-25 &nbsp;&nbsp;&nbsp; 
+        地线路 （GND）<br>
+        　&nbsp;&nbsp;2.串行口的典型代表是RS－232C及其兼容插口，25针串行口还具有20mA电流环接口功能，用9、11、18、25针来实现。其针脚功能如下：<br>
+        &nbsp;&nbsp;&nbsp; 针脚&nbsp;&nbsp;&nbsp;&nbsp; 功能 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;针脚 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 功能<br>
+        &nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未用 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <br>
+        &nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 发出数据 （TXD） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据发送（一）<br>
+        &nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接受数据 （RXD） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12-17 
+        &nbsp;&nbsp; 未用<br>
+        &nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 请求发送 （RTS） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 18 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据接收（+）<br>
+        &nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清除发送 （CTS） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未用<br>
+        &nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据准备好 （DSR） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据终端准备好比（DTR）<br>
+        &nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 信号地线路&nbsp; （SG） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 21 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 未用<br>
+        &nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 载波检测&nbsp; （DCD） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 振铃指示精神&nbsp; （RI）<br>
+        &nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 发送返回（+） 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        23-24 &nbsp;&nbsp; 未用<br>
+        &nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; 未用 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        25 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接收返回（一）<br>
+        &nbsp;&nbsp; 3.9针串行口的针脚功能：<br>
+        &nbsp;&nbsp; 针脚&nbsp;&nbsp; 功能 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        针脚 &nbsp;&nbsp;&nbsp; 功能<br>
+        &nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp; 载波检测(DCD) 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数据准备好(DSR)<br>
+        &nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp; 接受数据(RXD) 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 请求发送(RTS)<br>
+        &nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp; 发出数据(TXD) 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 清除发送(CTS)<br>
+        &nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp; 数据终端准备好(DTR) 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 振铃指示(RI)<br>
+        &nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp; 信号地线(SG)</font></p>
+        <p class="ourfont"><font color="#369681">(重庆冬凌)</font></p>
+        <p class="ourfont">　</p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月16日第44期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

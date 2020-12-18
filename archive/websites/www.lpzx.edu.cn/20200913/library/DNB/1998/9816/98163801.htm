@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>打通Photoshop图像处理的任督二脉</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>打通Photoshop图像处理的任督二脉</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp; 　Photoshop是当前最流行的图像处理软件，被戏称为搞平面设计的“吃饭家伙”。 
+        Photoshop本身并不庞大，但处理图像时对内存要求很高，通常为当前处理图形文件的五倍以上。因此，专业设计配128M以上内存是很平常的事，即便如此，在处理高分辨率大幅彩图时仍然吃力，就更不用说通常只有32M内存的家用电脑了。其实，遇到这种情况，只要对Photoshop的运行环境作合理设置，在操作上再讲究一些技巧，仍然可以获得较快的图像处理速度。<br>
+        　　Photoshop运行时将图像数据保存在内存、Scratch盘（Photoshop在硬盘上开辟的一块专用虚拟内存空间）和操作系统的虚拟内存里，当内存不够时就使用后两者，但处理速度会大幅降低。观察Photoshop 
+        4.0屏幕左下方的Efficiency状态显示，如果其值低于100％，表明内存不够，Photoshop已在使用Scratch盘，此时应当采取优化措施，才能保证Photoshop快速运行。(如图1)<br>
+        　　提高Photoshop图像处理速度的关键是，尽可能让Photoshop只用内存存储图像数据，避免使用低速度的硬盘虚拟内存，实现的途径有两个：一是调整系统设置，提高Photoshop可用的内存量；二是运用合理的操作方法，降低Photoshop运行时对内存的需求量。<br>
+        　　一、增加Photoshop可用系统资源的方法<br>
+        　　1.提高Photoshop可用的内存量。在Macintosh里, Photoshop可用的内存量由机型而定，如果系统配有较多的内存，可在Finder中为Photoshop分配更多的内存；在Windows里，Photoshop可用的缺省内存量为当前系统可用量的75％，如果微机的内存高于32M，应在“ 
+        File / Preferences / Memory ＆ Image Cache”菜单项中提高比例。(如图2)<br>
+        　　2.设置足够大的Scratch盘。无论Photoshop是否在使用Scratch盘, Scratch盘的自由空间必须大于Photoshop可用的内存量。原因是，Photoshop在等待状态时会将整个内存的内容写到Scratch盘里，如果Scratch盘的自由空间小于可用内存，Photoshop会自动减少使用的内存量。例如，若Photoshop可用的内存本有60M，而Scratch盘只有40M自由空间，则将有20M的内存被闲置。在缺省状态下， 
+        Photoshop将Boot盘作为Scratch盘，而用户应将速度最快、自由空间最多、碎片最少的盘作为Scratch盘。在Windows 
+        里，可在“File / Preferences / Plug－ins ＆ Scratch Disk”更改有关设置。对经常处理大图的用户，最好将一个300M以上的独立分区作为Photoshop的专用Scratch盘。(如图3)<br>
+        　　3.合理设置操作系统的虚拟内存。Macintosh的System 7.0以上和Windows都可用硬盘交换文件来模拟内存。为避免操作系统的虚拟内存与Scratch盘争用存储资源，在Macintosh中使用Photoshop时应关闭系统虚拟内存，而在Windows中应使系统虚拟内存与Scratch盘分别使用不同的硬盘逻辑分区。<br>
+        　　4.升级Photoshop 版本。Adobe公司在推出Photoshop 4.0以后，于去年6月和9月分别发布了4.01和4.04修正版的升级程序。其中4.01支持1GB的内存和2GB的硬盘分区，并优化了图像的质量和文件打开速度，部分运算支持Intel 
+        CPU的MMX指令。4.04版是专门针对使用MMX CPU的用户开发的，它全面支持MMX指令集，从而使Photoshop的运算速度显著提高。升级程序可到以下地址下载：<br>
+        　　ftp://ftp.adobe.com/pub/adobe/photoshop/win/4.x/plugins/mmxcore.exe，它必须在Photoshop 
+        4.01的基础上升级。<br>
+        　　5.使用内存压缩软件。如果有一颗高速奔腾的“芯”，却没有充足的内存，在处理大图时，使用内存压缩软件是提高速度的有效方法。虽然内存压缩会占用CPU时间，但比起使用Scratch盘，仍要快很多。<br>
+        　　二、降低Photoshop资源需求的操作技巧<br>
+        　　1.减小文件大小。方法一：不使用Photoshop 2.5兼容格式保存。Photoshop 
+        4.0保存文件的缺省设置是兼容2.5 版本的。在“Preferences/Saving files/2.5 
+        Compatibility”关闭该选项，文件会显著变小。方法二：为图形设置适当的分辨率和尺寸。通常Photoshop文件的缺省分辨率较高，对Photoshop文件进行处理前，首先应按输出要求设置图形的分辨率和尺寸，尽可能避免高分辨率编辑低分辨率输出。方法三：使用RGB显示模式编辑彩图。如果制作的文件要进行分色，应先在RGB模式下编辑，输出前再转换成CMYK模式，因为RGB文件的大小只有CMYK的75％大小。<br>
+        　　2.使用图像缓存。Photoshop 4.0可使用图像缓存来加速高分辨率图像的重画。用户可在“File 
+        / Preferences / Image Cache (Macintosh)”或“File / Preferences / Memory ＆ Image 
+        Cache (Windows)”中更改缓存的大小，输入的有效值为1～8之间，数值越大，屏幕重画越快，但缓存占用的内存也越多，如果系统的内存充足，应设为最大。若要提高显示histogram图的速度，应在前述选项中设置使用缓存显示histogram图，但精度会稍低。<br>
+        　　3.清除内存中无用的数据。保存在剪贴板上的图形和选取块、定义的花样和快照会占用内存，清除这些内容，可提高Photoshop 
+        的可用内存量。选择“Edit”菜单下的“Purge”，可用“Undo”移去上一步操作数据占用的内存，用“Clipboard”释放剪贴板内容占去的内存，用“Pattern”或“Snapshot”释放任何花样或快照占用的内存。此外，合并不再需要的层，删除不用的channel都可增加Photoshop的可用内存量。<br>
+        　　4.少用占用内存较多的常规操作。方法一：在转移和复制数据时，应多使用拖放，少用剪贴板。方法二：关掉面板菜单的预视功能。方法三：合理使用选取块。将选取块保存在channel里，或者用灰度文件制作彩色文件的复杂选取块，可以减少内存的占用量，节省处理时间。在Bitmap图中工作时，将选取块存为路径可以更快。方法四：使用两个工作窗口。一个显示局部放大图形，另一个显示整个图形，可以大大减少对窗口缩放的操作，提高操作速度，还可对比观察复合channel校色与单 
+        channel校色有何区别。<br>
+        　　5.使用占用较少内存的处理方式。方法一：在单一的channel里使用滤镜。一些Photoshop滤镜，如变形滤镜，只能在内存里执行，而不能使用scratch盘。若因内存不够无法执行时，可在每个单独的channel里使用滤镜。在RGB文件里，每个channel只有三分之一文件大小，而在CMYK文件里，只有四分之一大小。方法二：使用快速编辑。快速编辑可以只编辑文件的一部分，因此它可以显著提高大于4MB文件的打开速度。在内存不够时，快速编辑也是完成大图处理的有效途径。在尝试不同的着色或滤镜效果时，快速编辑可以大大提高处理速度。方法三：使用低分辨率版本尝试校色参数。比如，在对图形进行校色时，需要尝试多个校色参数，才能找到最佳值，如果直接在一张高分辨率大图中尝试不同的参数，会花很长时间。这时可先复制一个低分辨率版本，迅速找到最佳参数值，再对原图校色就可一步到位了。<br>
+        　　将以上各种方法结合具体的机型综合运用，可以收到更好的效果。</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月27日第16期38版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

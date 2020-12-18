@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Visual 
+        Basic使用技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        &nbsp; 1防止程序被重复运行　如果你不希望你的VB应用程序被别人通过多次双击图标而重复运行，导致内存不足或其它意外，你可以在程序中增加以下几行： 
+        <br>
+        　　Private Sub Form_ Load <br>
+        　　if app.previnstance then <br>
+        　　msgbox ″程序正在运行，请检查窗口是否被最小化。″ <br>
+        　　end if <br>
+        　　End Sub <br>
+        　　2用UCase函数保障文件操作的正确性　在WIN32平台下，文件名一般为小写字母，但在WIN95平台，有时会出现大写。为保障在WIN32平台下用VB3开发的涉及到文件操作的程序在WIN95平台也能正常工作，可以用UCase函数转换文件名的大小写。例如：在WIN32平台下用VB3开发一个媒体浏览器，可以用以下程序段实现自动播放，而不论文件的后缀名为大写的“ 
+        AVI”、“WAV”、“MID”，还是小写的“ avi”、“wav”、“mid”，还是大小写混合： 
+        <br>
+        　　Sub File1_Click() <br>
+        　　MMcontrol1.filename=File1Path＆″\″＆File1.filename <br>
+        　　t=UCase(Right(File1filename,3)) <br>
+        　　If t=″AVI″ Or t=″WAV″ Or t=″MID″ Then <br>
+        　　MMcontrol1.Command=″close″ <br>
+        　　MMcontrol1.Command=″play″ <br>
+        　　End if <br>
+        　　End Sub <br>
+        　　3在VB5中汉字的长度为1而不是2　在VB3中每个汉字的长度为2，而在VB4和VB5中每个汉字的长度为1。在截取汉字字符串的子串时需特别引起注意，这种变化对设计汉字的排序、检索、筛选程序带来了较大的方便。另外，在 
+        VB5中汉字的ASCII码小于0，而在VB3或C＋＋里，汉字的 ASCII码均大于零。 
+        <strong>　　(广东　甘家葆)&nbsp; </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月6日第13期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

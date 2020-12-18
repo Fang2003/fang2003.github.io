@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>升 级 主 板 BIOS 小 记</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>升 级 主 板 BIOS 小 记</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　升级主板的BIOS，是很多DIY迷很想做的事，但却无从下手。看了我的遭遇后，不知你有什么感觉？<br>
+        　　一直就想升级我的TX－97E主板的BIOS，在看了同学升级他的TX－97XE主板的BIOS后，没想到这么简单，遂决定一试。<br>
+        　　我的TX－97E主板的BIOS原为0107e版本，在网上找到TX5n0110.awd文件，是TX－97－n主板的升级文件，看样子版本提高不少，嘿嘿！于是开始操作，一切按部就班，改跳线、以实模式启动、运行Flash先保存当前BIOS，然后开始刷新。屏幕显示“Successfully”，一切OK，按照屏幕的提示关机。<br>
+                      　　满怀希望按下电源，黑屏。等待，还是黑屏。再关机，再启动，依旧黑屏 。心猛地往下一沉 ，估计是TX5n0110.awd文件的问题，怪不得我保存下来的BIOS文件大小只有131072个字节，而TX5n0110.awd 
+                      的大小为262144个字节。胆子太大了，现在悔之晚矣，该怎么办呢？百般无奈之际，我想拔下BIOS芯片看看，没想到BIOS芯片插得很紧，很不好撬，我一用力，“啪”的一声，BIOS芯片被撬了下来，慌忙拿起仔细瞧,My 
+                      God!真是祸不单行, BIOS芯片的一个引脚被撬断了，我欲哭无泪。<br>
+                      　　不能坐以待毙，冷静下来以后我决定再赌一次，试试久闻大名的“热拔插法”。闲话少说，以最快的速度借来了TX－97E主板的BIOS芯片、电烙铁（准备焊接断脚）等。当然，这要冒点风险，万一把别人的BIOS芯片再搞坏，那可真是……动手前我深吸一口气，告诫自己别慌，要胆大心细，注意防止静电的破坏。由于实在害怕电烙铁的感应电荷击坏BIOS芯片，并且焊接纤细的引脚难度较大，于是决定直接用断了一脚的BIOS芯片试试再说。<br>
+                      　　小心翼翼地将好的BIOS芯片插上主板，插入即可，此时不用太紧。开机引导，一切正常，进入DOS系统后，轻轻拔下好的BIOS芯片，换上断脚的BIOS芯片，将它插紧。运行Flash，屏幕提示找不到BIOS芯片，看来缺一脚不行。仔细观察发现BIOS芯片断脚处仍有一点点引脚伸出，只是太短，无法与插槽内的小簧片接触，这太好办了，我将一个废弃不用的8255芯片（任何DIP引脚的芯片均可）的一个引脚连根剪下，略略弯一个角度使其与BIOS芯片的断脚能紧密接触，用镊子夹住它仔细地插入断脚对应的那一个插槽内，让它与插槽内的小簧片和断脚都能接触到（小心别碰到其他管脚，以免引起短路），插好后再运行Flash，哇！找到BIOS芯片了，用原先备份的BIOS文件重新刷新，屏幕显示“Successfully”后，退出Flash程序，关机。边祈祷边按下电源开关，“嘀”，随着一声熟悉的鸣叫，久违的开机引导画面十分亲切的展现在我眼前，“成功啦！”我的心中一阵狂喜，高呼万岁！<br>
+                      　　从这件事可以看出，升级主板的BIOS务必要谨慎，升级前先把自己的主板的BIOS保存为文件，与欲升级的BIOS文件比较一下，若不一样，就要小心了。就是出了故障也别急躁，以免忙中出错，造成更大的损失。处理故障时更要灵活对待，胆大心细。<br>
+        　　(请作者与编辑部联系) </p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Windows 
+        NT4.0下建立PWin95无盘工作站的注意事项<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　一、对于NE2000的兼容网卡，可直接使用Windows 
+        NT4.0提供的各项驱动程序及设置。因为相关的文件都可在相应的NE2000子目录中找到，如：DOSBB.CNF和W95BB.CNF文件可在\winnt\bblock\NetBEUI\NE2000目录下找到。所以在建立适配器引导配置文件时，把“BbcFile=”项中的“bblock\NetBEUI\adaper\”换为“bblock\NetBEUI\NE2000\”即可。<br>
+        　　二、建立DOS6.22无盘工作站的启动配置时，应注意两点：<br>
+        　　1.安装DOS无盘工作站时一定要把IO.SYS和MSDOS.SYS文件的系统、隐藏的属性清除掉，否则工作站启动登录时，可能会出现：<br>
+        　　Non－system disk or disk error<br>
+        　　Replace and press any key when ready<br>
+        　　信息，因而无法启动无盘工作站。<br>
+        　　2.拷贝到\winnt\rpl\rplfiles\binfiles\DOS6.22下的IO.SYS和MSDOS.SYS必须是英文版DOS6.22的系统文件，否则安装PWin95不正常。<br>
+        　　三、安装完PWin95的共享文件后注意正确执行相应的批处理文件。<br>
+        　　1.如果是对远程启动服务升级，请先启动远程启动服务器的远程启动服务，然后执行Rbootsrv.bat批处理文件，让它具有PWin95远程启动的功能。该文件存放在\winnt\rpl\bin目录，命令格式为：<br>
+        　　Rbootsrv &lt;服务器中保存PWin95的路径&gt;&lt;远程启动目录的路径&gt; 
+        [远程启动服务器的计算机名称]<br>
+        　　2.执行WIN95SRV.BAT批处理文件时，应注意目录路径格式的书写，例如：<br>
+        　　正确格式：Win95srv \ntsrv\PWin95<br>
+        　　错误格式：Win95srv D:\PWin95<br>
+        　　若采用错误的格式，将会导致无盘启动PWin95时读硬盘，而无法实现真正的无盘启动。<br>
+        　　四、不需要设置服务器和工作站时间同步。<br>
+        　　很多杂志介绍必须要求服务器与工作站时间同步，其实经过验证，无需此步骤照样能正常安装和启动PWin95。<br>
+        　　五、在DOS无盘工作站上安装PWin95时，要注意安装选项使用“CUSTOM”方式，不要选用“TYPICAL”方式，否则，安装过程会死机，而且下次再安装PWin95时不正常。<br>
+        　　六、修改MACHINES.INI文件时，注意书写磁盘代号，不要加上冒号，例如：<br>
+        　　正确格式：G=\NTSR\RPL95<br>
+        　　不正确的格式：G：=\NTSR\RPL95<br>
+        　　若使用不正确的格式，则不能正常启动PWin95。<br>
+        　　七、应从“真正”的无盘工作站上安装PWin95到工作站用户目录下。<br>
+        　　注意：若只卸掉硬盘，而软驱未禁止掉，则从无盘工作站把PWin95安装到RPL95目录下的CLIENT1目录后，发现缺少两个文件CONFIG.SYS和AUTOEXEC.BAT。所以从无盘工作站启动PWin95时无法建立虚拟盘，导致出现“FILES 
+        CREATION ERROR”的错误提示。只有把软驱禁止掉后，重新安装PWin95到CLIENT1目录即会正常。</p>
+        </font><p class="ourfont"><font color="#369681">　　(广西　梁裕　刘永福　谭文洪)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!-- A:link {text-decoration: none;color:Black;font-family: 宋体}
+A:visited {text-decoration: none;color: Black;font-family: 宋体}
+A:active {text-decoration: none;color: Red;font-family: 宋体}
+A:hover {text-decoration: underline;color: FF0000}}
+body{font-size=9pt}
+TH{FONT-SIZE: 9pt;}
+TD{FONT-SIZE: 9pt;}-->
+</style>
+<title>背景音乐</title>
+</head>
+
+<body topmargin="0" leftmargin="0" bgcolor="#FFFFFF">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="75%">
+<table border="0" cellPadding="0" cellSpacing="0" height="34" width="100%">
+<tbody>
+<tr>
+<td colSpan="2" height="18" width="79%">
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul><font color="Red">(请打开您的宝贝音箱，让音乐响起来...)</font></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<p>关于背景音乐的实现，相信你已经知道。这里提供更详细的参数，也许对你有用。</p>
+<p>　　首先准备好一首 MIDI 音乐,例如这里采用的是 001.mid (仙剑奇侠传背景音乐)。背景音乐使用的 HTML 标记是
+</p>
+<p><font color="Red">&lt;EMBED SRC=&quot;001.mid&quot;&gt;</font></p>
+<p>　　这个标记可以视你的需求，放在 &lt;BODY&gt;和 &lt;/BODY&gt;之间的任何地方。在这个标记放置的位置会出现一个类似媒体播放程式的图案，可以控制播放音乐或暂停。　　　　　　　
+<br>
+<br>
+例如说：我在下面写上这一行 </p>
+<p><font color="Red">&lt;EMBED SRC=&quot;001.mid&quot;WIDTH=145　HEIGHT=60&gt;
+</font></p>
+<p>　　就会出现一个控制面版让你播放音乐，如果我要把音乐当作背景音乐来用，也就是不要显示控制面板。而且一进入画面就要播放，然後一直重复。就要这样写
+</p>
+<p><font color="Red">&lt;EMBED　SRC=&quot;001.mid&quot;HIDDEN=TRUE
+AUTOSTART=TRUE LOOP=TRUE&gt;</font><br>
+<br>
+关於 &lt;EMBED&gt;还有很多其他的属性，我一一解说给你听　 <br>
+<br>
+SRC=&quot;档案名称和路径&quot;<br>
+设定 midi 档案的路径　 <br>
+<br>
+<font color="Red">AUTOSTART=&quot;TRUE / FALSE&quot;</font><br>
+是否要在音乐档传完之後，就自动播放音乐。 TRUE 是要　<br>
+FALSE 是不要，内定值是不要。 <br>
+<br>
+<font color="Red">LOOP=&quot;TRUE / FALSE / 整数&quot;</font><br>
+设定是否要自动反覆播放，LOOP=2 表示重复两次，若要无限次重复可用 LOOP=&quot;TRUE&quot;　 <br>
+<br>
+<font color="Red">STARTTIIME=&quot;分:秒&quot;<big> </big></font><br>
+设定歌曲开始播放的时间，例如我想从这首歌第30秒的地方开始播放，就这样写 STARTTIIME=&quot;00:30&quot;　
+<br>
+<br>
+<font color="Red">ENDTIME=&quot;分:秒&quot;</font><br>
+歌曲播放结束的时间，一般来说我们不必去设定歌曲开始和结束的时间，它会自动从头播放到尾。　 <br>
+<br>
+<font color="Red">VOLUMEE=&quot;0-100&quot;</font><br>
+设定音乐音量的大小，数值一定是0到100之间，如果不设<br>
+定，就是使用者系统本身所设定的音量大小。<br>
+<br>
+<font color="Red">WIDTH 和 HIGH=&quot;整数&quot;<big> </big></font><br>
+设定控制面版的宽度和高度　 <br>
+<br>
+<font color="Red">ALIGN=&quot;TOP / BOTTOM / CENTER / BASELINE
+/ LEFT /<br>
+RIGHT / TEXTTOP / MIDDLE / ABSMIDDLE /<br>
+ABSBOTTOM&quot;</font><br>
+设定控制面板和旁边文字的对齐方式，跟 &lt;IMG&gt;(插入图形<br>
+的标记)所使用的属性是一样的　 <br>
+<br>
+<font color="Red">CONTROLS=&quot;CONSOLE / SMALLCONSOLE /<br>
+PLAYBUTTON / PAUSEBUTTON / STOPBUTTON /<br>
+VOLUMELEVER&quot;</font><br>
+设定控制面板的样子，预设值是 CONSOLE　 <br>
+<br>
+　　CONSOLE 一般正常的面板 <br>
+　　SMALLCONSOLE 较小的面板 <br>
+　　PLAYBUTTON 只显示播放按钮 <br>
+　　PAUSEBUTTON 只显示暂停按钮 <br>
+　　STOPBUTTON 只显示停止按钮 <br>
+　　VOLUMELEVER 只显示音量调整钮 <br>
+<br>
+<font color="Red">HIDDEN=&quot;TRUE&quot;</font><br>
+如果写上这个属性的话，就会完全隐藏控制面板，但你也不能去设定控制面板的宽和高。 <br>
+<br>
+<br>
+　　&lt;EMBED&gt;可以放在&lt;BODY&gt;和 &lt;/BODY&gt;之间的任何地方。记住：在这个标记放置的位置会出现一个控制面板的图案，你可以视自己的需求，把它放在适当的位置，也可以使用
+HIDDEN=TRUE 将面板隐藏起来，配合AUTOSTART=TRUE 当背景音乐使用。<br>
+<br>
+
+
+</tbody>
+</table>
+
+
+</table>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+</html>

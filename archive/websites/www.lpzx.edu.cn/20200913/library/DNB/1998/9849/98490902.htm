@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>岁末大抓世纪虫<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp; <strong> <font
+        color="#369681">每个定时炸弹都有一个时钟，这次时钟自己变成了炸弹</strong>。现在2000年问题似乎已成了计算机的焦点问题。<br>
+        &nbsp;&nbsp;&nbsp; 事实上两千年问题（英文叫做The Millennium Bug），源于出第一台计算机设计者手上，界业巨人IBM可以说是“罪魁祸首”之一。为了节省制造时间和代价，设计者们把计算机计年份的数据的大小控制在了两位数。而两位数的数据只能储存00到99，当在计算机中应用时由00年表1900年，01年表1901,以次类推。而2000年的储存方式与1900年相同，计算机由于不能正确识别2000年，因而导致出错，这就是2000年问题。<br>
+        &nbsp;&nbsp;&nbsp; 随着时间的流逝，2000年不再是什么遥远的日子了。有些公司已经开始被2000年虫所困扰。举一个真实的例子：在英国有一家大型超市Mark＆Spencer（M＆S)，他们用的是高科技激光扫描来自动获取货物的一些数据如出厂日期等，这样减少了人工还能增强货物管理能力。但却不知“水能载舟，也能覆舟”。这天一位工作人员突然之间发现他手里的这个罐头老是被扫描器拒绝，无论他怎么试，就是不行。往往被扫描器拒绝的都是已经过期的货物，但这一罐番茄蚕豆的寿命却很长，要2001年才过期。最后经技术人员调查，是由于系统不支持2000年后的时间而引起的，无奈之下只能暂时删除这个智能监测产品是否过期的功能。<br>
+        &nbsp;&nbsp;&nbsp; 这类例子还有很多很多，归根结底病源发生在两位数数据无法辨认1900年与2000年的差别。而如果程序有牵涉到日期运算的话，问题就更为突出，因为一般在这种情况下出问题可能性已定。<br>
+        &nbsp;&nbsp;&nbsp; <strong>据统计全球因2000年问题导致的系统失灵所衍生的法律诉讼开支及赔偿，估计会超过10000亿美元</strong>。英国俗话说“小洞不补，大洞吃苦。”而我们现在快到“大洞吃苦”阶段了。所以还是让我们投身于反虫的热潮中去吧。<br>
+        &nbsp;&nbsp;&nbsp; 首先向大家介绍一些如何识别系统与2000年是否兼容的方法。<br>
+        <strong><br>
+        &nbsp;&nbsp; </strong> <strong>BIOS：</strong><br>
+        &nbsp;&nbsp;&nbsp; 先介绍BIOS的测试法。从Win95退到DOS下面，然后键入Date，然后输入12－31－99。键入Time，输入23:59:50。 
+        然后静待30秒钟后，让计算机的时钟跳到2000年。在使用Date察看现在的时间，如果时间显示为1900年的话说明你的系统不能兼容2000年的时间，如果显示正常的话在进行第二步测试。用硬件重新启动（Reset），最后再回到DOS察看时间是否仍然显示2000年。<br>
+        <br>
+        &nbsp; <strong>&nbsp; 应用软件：</strong><br>
+        &nbsp;&nbsp;&nbsp; 对于应用主要是测试它能不能分辨1900和2000的区别和是否允许2000年后的日期的输入。在测试1900年和2000年的识别能力时，如果是数据库的话输入两个日期，年份分别为1920和2020年，日月相同即可，然后查找日期相同的纪录，这样就能知道这个软件会不会把2020识作1920年了。其他类的软件，只要测试他们是不是允许用户输入2000年后的日期就能知道他们的兼容性。<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; <strong>自编软件:</strong><br>
+        &nbsp;&nbsp;&nbsp; 在国内，大多公司里用的是当年自主开发的数据库程序，这种程序存在千年虫的可能性较高。上面这张流程图会给你一个清晰的概念，如何找出问题的所在。<br>
+        &nbsp;&nbsp;&nbsp; 虫找到了当然还要除虫，现在向大家介绍一些除虫的方法。除虫的方法多种多样，按其特性可分为一下几种：<br>
+        &nbsp;&nbsp;&nbsp; ● 
+        扩大年份法——将年份从原来的两位数扩大到四位数。这样可以保证你的系统会在下一世纪甚至到3000年都能运转如常。但是这个方法虽然简单，却需要很大的花费。在空间上，原来的2位数据翻了倍，按照“纪录数量＊2”的算法，一个具有1万个纪录的数据库会增加200MB。在转换手续上，由于年份扩大了，数据库的储存方案有了区别，因此需要将旧的数据库用新的储存方案重新储存一遍，也就是意味着旧的数据库必须被停止使用一段时间。如果你的公司需要数据库在线的话就需要同步转换的方式。<br>
+        &nbsp;&nbsp;&nbsp; ●滑动窗口法——又称作“70/30”、“80/20”法。如“70/30”表示:任何大于70的 
+        数字都为20世纪,小于70的数字为21世纪。使用这种办法不用改动数据,只需改动源码。程序 
+        中凡是用年代信息组进行比较计算时,都应将源码做相应的改动。例如日期01/01/01和01/0 
+        1/99,在程序未经修改时,系统将其解释为01/01/1901和01/01/1999。但在采用滑动窗口法的系统中,这两组数表示的日期 
+        分别为01/01/2001和01/01/1999。 <br>
+        &nbsp;&nbsp;&nbsp; ● 
+        资料压缩法——透过编码及压缩方法将四位数的年份储存在现有的两位数空间。注意：这种方法不一定能适用于所有的数据库，因为储存日期的空间本来就很小。故这种方法只适用于当年份在数据库里是以字串的方式纪录时，才会有明显的效果。<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; <strong>最后向大家介绍一个网上流传的测试工具和一些网站。</strong><br>
+        &nbsp;&nbsp;&nbsp; Test2000 软件来自 <a href="http://www.RighTime.com">http://www.RighTime.com</a><br>
+        &nbsp;&nbsp;&nbsp; 运行这个程序之前，需要先退出Windows，然后运行这个程序。运行后它会检测你的系统（BOIS）时钟，最后程序会让你重新启动计算机以便进一步测试。重新启动后Test2000会再次检查你的系统，并能看到最后的报告。这个程序的好处就是能够给你一个准确的定义——你的BOIS究竟能不能准确的识别2000年这个时间以及能不能让时间运转到2000年以后。<br>
+        &nbsp;&nbsp;&nbsp; 2000年相关网站：<br>
+        &nbsp;&nbsp;&nbsp; 2000年虫中心拥有大量的信息，包括应用程序的兼容报告和修复工具等，唯一的缺点它是英文站点。 
+        <a href="http://www.year2000.com">http://www.year2000.com</a><br>
+        &nbsp;&nbsp;&nbsp; 微软的站点，又有详细的报道，也是英文。http://www.microsoft.com/technet/topics/year2k/<br>
+        &nbsp;&nbsp;&nbsp; 香港的站点，大五码，内容也很多，本文有一部分内容也从那里来的，在此特别感谢他们。 
+        <a href="http://www.hkpc.org/csd/year">http://www.hkpc.org/csd/year</a> 2000 /gdbk_ch.html。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月21日第49期09版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

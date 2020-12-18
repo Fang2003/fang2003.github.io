@@ -1,0 +1,65 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>用PowerBuilder制作指示灯</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用PowerBuilder制作指示灯<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　相信大家在安装各种软件或微软公司产品时都会注意到那直观可爱的条状指示灯，它总是以最直接的方式告诉我们工作的进程情况，在PowberBuilder 
+        中也可以实现。<br>
+        　　1. 创建一个应用程序（working－out)。<br>
+        　　2. 创建一个窗口（w_01）。<br>
+        　　3. 在应用程序的Open事件中最未尾Open()函数改为Open(w_01)。<br>
+        　　4. 编辑w_01窗口。<br>
+        　　5. 添加三个控件在 w_01窗口上,即两个Rectangle ：r_1，r_2 和一个commandButton 
+        ：cb_1。 <br>
+        　　6. 将 r_1的Fill Color:设为White 将Line Color:设为Black，将X设为243，Y设为645，Width设为1541，Height设为113。按Apply 
+        或 OK即可。<br>
+        　　7. 将 r_2的Fill Color:设为Blue 将Line Color:设为White，将X设为261，Y设为661，Width设为5，Height设为85。按“Apply” 
+        或 “OK”即可。<br>
+        　　8. 在cb_1的 clicked事件中添写：<br>
+        　　r_1.visible= true<br>
+        　　r_2.visible = true<br>
+        　　int lock<br>
+        　　lock=0<br>
+        　　do while lock &lt;100 <br>
+        　　lock = lock ＋ 1<br>
+        　　r_2.width=lock＊15<br>
+        　　loop<br>
+        　　9. 按 “Run” 键运行此程序，就会看到一条从头走到尾的像安装Win98一样的指未灯出现在你的程序窗口上。<br>
+        　　注＊ 
+        此程序只是作为一个指示灯，那什么时候指示灯该向前走，什么时候指示灯该停，只要想办法用变量给Lock赋值就可以了。<strong>(Lige)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

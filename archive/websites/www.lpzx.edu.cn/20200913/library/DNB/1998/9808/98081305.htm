@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>利用VB三维面板控件设计流动条<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　VB提供了一个三维面板控件，利用这个控件可设计图形效果的立体界面，从而使应用程序的界面显得更生动、美观，该控件还可以设置各种形式的背景，然后在背景上显示各种形式的字符，令人感兴趣的是，使用三维面板控件，还可设计我们经常在安装程序中看到的表示安装进程的流动条，并可显示进程百分比，改变流动条的颜色等。<br>
+        　<strong>　一、介绍属性</strong><br>
+        　　FloodColor：确定流动条的颜色，缺省为蓝色。<br>
+        　　FloodPercent：显示当前过程如流动条进行的百分比，参数改变时显示的百分数和流动条的面积改变，设为一整型值，取值范围是0～100。<br>
+        　　FloodShowpct：决定是否在三维面板控件上显示百分比，是一个逻辑值。为True时显示，为False时不显示。<br>
+        　　FloodType：表示用户对三维面板控件的使用方式。可取值有6个，如下所示：<br>
+        　　0　缺省设置<br>
+        　　1　表示流动条方向从左到右<br>
+        　　2　表示流动条方向从右到左<br>
+        　　3　表示流动条方向从上到下<br>
+        　　4　表示流动条方向从下到上<br>
+        　　5　表示使用指定的颜色从圆心向外画圆<br>
+        <strong>　　二、流动条设计</strong><br>
+        　　如果在Windows3.X下，工具箱中不存在三维面板控件，可选择File菜单中的“Add 
+        File…”进行添加，在弹出的对话框中找到Windows\System目录，然后选定Threed.vbx文件即可，如果使用VB4.0，需在Tools菜单中选择Custom 
+        Controls命令，选定Sheridan 3d Controls项，按OK按钮，可在工具箱中增加三维面板控件。<br>
+        　　启动VB3.0，在窗体中画一水平方向的长方形三维面板控件，按F4，在属性窗口中设置其Name为P3d、Bevellnner为2－Raised、FloodType为1、FloodshowPct为True，再在窗体中画一个按钮Command1，双击该按钮，键入下面的代码：<br>
+        　　Sub Command1_Click()<br>
+        　　P3dfloodpercent=0<br>
+        　　For N％=1 To 100<br>
+        　　If N％&gt;100 THEN<br>
+        　　Exit Sub<br>
+        　　End If<br>
+        　　P3dFloodPercent=N％<br>
+        　　Next I％<br>
+        　　End Sub<br>
+        　　按F5，运行该程序，点击Command按钮，即可看到流动条效果。<strong>(王金柱)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

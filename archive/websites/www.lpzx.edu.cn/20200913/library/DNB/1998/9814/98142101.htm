@@ -1,0 +1,122 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NetWare 
+        3.12中用户菜单的制作<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　NetWare 3.12的Nmenu命令是一个应用广泛、使用方便的菜单命令，它能够帮助用户创建自己的菜单，并且这种用户菜单的格式与我们所熟悉的NetWare菜单实用程序SYSCON、FILER等很相似。笔者是一个从事计算机基础教学的教师，利用Novell网使教学工作取得了较好的效果，同时也总结出了一些Nmenu用户菜单的制作经验。下面分步介绍NetWare 
+        3.12中一个简单的Nmenu菜单的制作过程。<br>
+        　　<strong>一、常用的Nmenu菜单命令</strong><br>
+        　　1.MENU<br>
+        　　MENU命令用于设计和说明主菜单或子菜单，其语法为：<br>
+        　　MENU 菜单号码，菜单名称<br>
+        　　菜单号码从1到255，1是主菜单的固定号码，子菜单的号码一般取5或10的倍数。<br>
+        　　例如：MENU 1，MAIN MENU<br>
+        　　2.ITEM<br>
+        　　ITEM命令用于设计和说明菜单中的每一个可供选择项，其语法为：<br>
+        　　ITEM 项目名称{选择项1，选择项2……}<br>
+        　　其选择项的内容有：<br>
+        　　BATCH　执行命令前，先释放Nmenu程序。<br>
+        　　CHDIR　告诉菜单当执行完ITEM后回到上一个缺省目录处。<br>
+        　　PAUSE　暂停程序运行，按任意键返回菜单。<br>
+        　　SHOW　显示DOS命令正在执行的情况。<br>
+        　　例如：ITEM TO WINDOWS{BATCH}<br>
+        　　3.LOAD<br>
+        　　LOAD　调用已存在及规划好的一个菜单文件，其语法为：<br>
+        　　LOAD 菜单名称<br>
+        　　此处的菜单名称必须是已规划好的合法文件名，扩展名必须为.DAT。<br>
+        　　例如：LOAD FOXBASE_MENU.DAT<br>
+        　　4.SHOW<br>
+        　　SHOW命令仅可调用现行菜单的某一子菜单，其语法为：<br>
+        　　SHOW 子菜单号码<br>
+        　　例如：SHOW 30<br>
+        　　5.EXEC<br>
+        　　EXEC命令用于当使用者选择某一选项后，即执行某一DOS命令或其它可执行文件，其语法为：<br>
+        　　EXEC [命令][选项]<br>
+        　　语法中“命令”必须为DOS的内部命令或可执行文件；“选项”的内容主要有：<br>
+        　　DOS　回到DOS状态，返回菜单时键入EXIT命令。<br>
+        　　EXIT　退出Nmenu程序。<br>
+        　　LOGOUT　退出网络。<br>
+        　　例如：EXEC LOGOUT<br>
+        　　<strong>二、设计菜单结构</strong><br>
+        　　下面是一个供计算机初学者上机用的菜单结构<br>
+        　　说明：该菜单选项中由于考虑到操作者的具体要求，将DOS622、WPS和FOX的选择结果设计成同一个形式，即选择该选项后返回DOS状态。<br>
+        　　<strong>三、编写源程序</strong><br>
+        　　根据上面的菜单结构，可以用WPS、EDIT等编写源程序，其扩展名为.SRC。<br>
+        　　下面程序的文件名为YHCD.SRC<br>
+        　　MENU 1，Main Menu<br>
+        　　ITEM CAI<br>
+        　　SHOW 5<br>
+        　　ITEM TO DOS<br>
+        　　SHOW 10<br>
+        　　ITEM TO WINDOWS<br>
+        　　SHOW 15<br>
+        　　ITEM LOGOUT<br>
+        　　EXEC LOGOUT(退出网络)<br>
+        　　MENU 5，CAI<br>
+        　　ITEM TT{BATCH}　(执行TT.EXE前，先释放Nmenu程序)<br>
+        　　EXEC TT　(执行TT.EXE)<br>
+        　　ITEM WB{BATCH}<br>
+        　　EXEC WBX<br>
+        　　ITEM DOS622<br>
+        　　EXEC DOS　(回到DOS状态，键入EXIT返回菜单)<br>
+        　　MENU 10，TO DOS<br>
+        　　ITEM WPS{BATCH}<br>
+        　　EXEC DOS<br>
+        　　ITEM FOX{BATCH}<br>
+        　　EXEC DOS<br>
+        　　MENU 15，TO WINDOWS<br>
+        　　ITEM WORD60{BATCH}<br>
+        　　EXEC WIN<br>
+        　　ITEM WINDOWS32<br>
+        　　EXEC WIN/S<br>
+        　　<strong>四、编译源程序文件</strong><br>
+        　　对于已经编写好的源文件YHCD.SRC，可以通过位于F:\PUBLIC下的编译文件MENUMAKE.EXE进行编译，其操作如下：<br>
+        　　F:\PUBLIC&gt;MENUMAKE YHCD.SRC<br>
+        　　编译后将产生一个扩展名为.DAT的输出文件YHCD.DAT。<br>
+        　　<strong>五、建立存放目录并试运行菜单</strong><br>
+        　　建立的用户菜单文件为了便于管理和调用，必须建立一个公用目录。现在我们建立一个公用目录MENU，将编译后的YHCD.DAT文件拷入MENU目录下(为便于操作，也可将NMENU.BAT文件从F:\PUBLIC目录拷到F:\MENU目录下)。然后，先对文件YHCD.DAT进行试运行，如发现问题再进行修改，直到完全符合要求。试运行操作如下：<br>
+        　　F:\MENU&gt;NMENU YHCD.DAT<br>
+        　　当用Nmenu命令执行菜单文件时，在MENU目录下将会产生两个临时文件MENU_0.BAT和MENU＄＄＄.BAT，所以为了每次执行此菜单文件时都能覆盖这两个临时文件，当前目录MENU必须要有足够的权限，尤其是写入权限。一般情况下，对存放临时文件的MENU目录给予[RWCEF]五个权限。同时，MENU目录也必须开放给每一个需调用菜单的用户。<br>
+        　　<strong>六、将用户菜单加入用户登录原稿中</strong><br>
+        　　当以上所有过程结束后，最后的工作是将用户菜单文件加入到用户登录原稿中，以便用户一进入网络时就可以执行该菜单。在用户登录原稿中加入以下三条命令：<br>
+        　　MAP F:=SYS:MENU　(将SYS：MENU设置为网络驱动器F：，同时MENU目录为进入网络时的缺省目录)<br>
+        　　SET S_FILEDIR=″F:\MENU\″　(将两个临时文件存放在F:\MENU目录下)<br>
+        　　EXIT ″NMENU YHCD″　(自动调用用户菜单YHCD.DAT)<br>
+        　　该Nmenu菜单在由一台COMPAQ486服务器、60多台386和486兼容机为工作站所组成的网络上运行良好。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(江苏　王群)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月13日第14期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

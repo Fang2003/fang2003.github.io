@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 为五笔字型输入法添加大批量词组</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/banner.jpg' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>35 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 为五笔字型输入法添加大批量词组</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 为五笔字型输入法添加大批量词组 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　为了更好地、高效率地使用“五笔字型输入法”，笔者向广大爱好该输入法的朋友介绍为其输入法添加大批量词组的方法。 <br>
+　　我们可以将在中文Windows98中其他中文输入法的词组，添加到“五笔字型输入法”中去。下面以“全拼输入法”为例说明如何将其词组添加到“五笔字型输入法”中，具体操作如下：
+<p><b>　　1．建立“全拼输入法”与原“五笔”的码表原文件</b></p>
+　　（1）在C盘上建立目录C:\tmp及其子目录C:\tmp\pycz；<br>
+　　（2）建立“全拼输入法”的码表原文件。在Windows98桌面上单击开始\程序\附件\输入法生成器，进入输入法生成器环境，单击逆转换\打开文件，选择C:\Windows\System\winpy.mb后按确定，在码表原文件框里输入C:\tmp\winpy.txt后单击“逆转换”，即可在C:\tmp目录下生成“全拼输入法”的码表原文件winpy.txt；<br>
+　　（3）建立原“五笔”的码表原文件。在另一台装有Windows95操作系统的计算机上用上述同样方法在同样的目录中选择wbx.mb（确保计算机安装了“五笔字型输入法4.0版”，下同），生成原“五笔”的码表原文件wbx.txt（该步骤在Windows98环境中不能进行，仅五笔型受此限制，Windows98所带的中文输入法以及经过加工的五笔型不受此限制），并用软盘将该文件拷贝到原来的计算机C:\tmp目录中；<br>
+　　（4）修正原“五笔”三字词组编码规则错误。用Word97打开C:\tmp\wbx.txt，将“Name=五笔型码”修改为“Name=增强五笔”，意义为将输入法状态栏显示改为“增强五笔”，“WildChar=z”修改为“WildChar=？”，意义为将输入法查询键改为“？”，以示与原五笔的区别；“ce3=p11＋p12＋p21＋p31” 修改为“ce3=p11＋p21＋p31＋p32”，意义是将五笔字型三字词组编码规则纠正为前两字各取一码，最后一字取两码。保存、关闭wbx.txt文件，并复制一份wbx..txt文件到C:\ Windows\System目录中，后面的批量造词将会在此目录用到该文件。再一次用Word97打开C:\tmp\wbx.txt，并将其码表源文件[Description]段、[Rule]段内容及[Text]等几个字符剪切，并将文件保存、关闭。打开记事本，单击编辑\粘贴，将wbx.txt文件剪切的内容粘贴过来，以czbmgz.txt的文件名保存在C:\tmp目录中。
+<p><b>　　2．用中文Word97文字处理软件将“全拼输入法”的码表原文件winpy.txt里的英文字母即全拼编码全部删除（因“全拼输入法”编码长度超过4，其他中文输入法如果其编码长度不超过4的，该步骤可省略）。</b></p>
+　　（1）进入Word97环境中将码表源文件winpy.txt中的[Description]段、[Rule]段内容及[Text]等几个字符删除；<br>
+　　（2）用Word97的替换功能将英文字母全部删除，保存文件。
+<p><b>　　3．批量造词</b></p>
+　　（1）纠正原“五笔”三字词组编码规则错误：在Windows98的输入法生成器中用C：\Windows\System\wbx.txt把码表原文件转换为新的五笔字型码表文件wbx.mb，并覆盖原来的五笔字型码表文件，以此码表文件进行五笔字型输入法的创建及安装，即可纠正原“五笔”三字词组编码规则错误；<br>
+　　（2）批量造词：单击“开始\程序\附件\输入法生成器”，进入输入法生成器环境，在目标输入法框中选择五笔型，单击“批量造词\打开文件”，选择C:\tmp目录中的winpy.txt并打开，单击“全选”，再单击“自动编码”，按“保存”，选择C:\tmp\pycz目录，键入01.txt按“保存”，即可生成12k大小的含五笔型编码词组的文本文件01.txt；用Word97打开C:\tmp\winpy.txt，将光标定位在文件头，单击“编辑\查找”，在查找内容框里输入01.txt文件中最后一个词组名，这里键入“表决”两个字按“查找下一处”按钮，查到后用鼠标拖动，选择“表决”以上的词组块（含表决），将其全部删除，保存并关闭该文件；重复上述有关步骤建立02.txt至29.txt放置在C:\tmp\pycz目录中，直至将C:\tmp\winpy.txt的词组全部删除；<br>
+　　（3）合并有关文件：进入Dos环境，在C:\tmp\pycz目录中，键入copy ＊.＊   ..\py.txt，回车将01.txt至29.txt合并成名为py.txt文件并放置在C:\tmp目录中，这个py.txt文件包含了全拼输入法的全部词组及五笔字型编码；在C:\tmp目录中，键入copy wbx.txt＋py.txt wb.txt，回车将五笔字型码表原文件wbx.txt与全拼词组文件py.txt合并成名为wb.txt 文件。
+<p><b>　　4．将两种输入法均含有的词组剔除其一（即保留一组）。用数据库编程语言FoxPro2.5b for Windows以上版本均可将重复词组剔除。这里我们以FoxPro2.5b数据库编程语言为例说明剔除重复词组的具体操作方法：</b></p>
+　　（1）首先建立一个数据库wb.dbf。在FoxPro2.5b编程环境中，建立一个文件名为wb.dbf的数据库，库文件结构：fieldname为wbm，type为character,width为98，将其保存在C:\tmp目录中。<br>
+　　（2）其次在FoxPro2.5b编程环境中建立一个名为wb.prg的程序文件，代码如下：<br>
+　　Set default to C:\tmp<br>
+　　Use wb.dbf<br>
+　　Append from wb.txt type delimited<br>
+　　Index on wbm unique tag wb additive<br>
+　　Copy to wbzx.txt type delimited with blank<br>
+　　Close all<br>
+　　（3）最后在FoxPro2.5b编程环境中的Command窗口键入Do C:\tmp\wb.prg 回车即可创建名为wbzx.txt的文本文件。
+<p><b>　　5．制作“增强五笔”的码表原文件</b></p>
+　　（1）用Word97打开wbzx.txt，同时用记事本打开czbmgz.txt ，将czbmgz.txt文件内容复制到wbzx.txt文件内容的前端，保存后关闭两个文件；<br>
+　　（2）在Windows98桌面上单击开始\程序\附件\输入法生成器，进入输入法生成器环境，单击词条排序\打开文件，选择C:\tmp\wbzx.txt后按“排序”，出现有关提示框后，按“是”。<br>
+　　至此，“增强五笔”的码表原文件wbzx.txt制作完毕。
+<p><b>　　6．创建输入法</b></p>
+　　（1）将wbzx.txt拷贝至C:\Windows\System目录下；<br>
+　　（2）在Windows98桌面上单击开始\程序\附件\输入法生成器，进入输入法生成器环境，单击创建输入法\浏览，选择C:\Windows\System\wbzx.txt后按“打开”，单击“转换”，码表转换结束后按“确定”，单击“创建”，出现创建输入法时按“确定”，接下去再按两次“确定”，当出现“输入法已生成，是否安装？”提示框时，单击“是” , 关闭输入法生成器。<br>
+　　至此，为“五笔字型输入法”添加大批量的词组大功告成。为了能够在“增强五笔”中查看输入法入门帮助，还需在C:\Windows\System目录中将wbx.hlp文件在同目录中做一个复制文件，并将复制文件改名为wbzx.hlp。切换输入法，你可以发现“增强五笔”出现在桌面，调出Word97文字处理软件，试着输入“按照国际惯例”、“办公自动化”、“本着实事求是的原则”、“产品更新换代”等几个词组，与“五笔型码”比较，看有何区别。<br>
+　　此方法一次性为“五笔字型输入法”增加数万条不重复词组，可谓一劳永逸。<br>
+　<b>　(广西　卢　凡　刘东亮)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/35/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99351201.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>　Excel97 数据填充技巧
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　<strong>　</strong>在Excel97表格中填写数据时，经常会遇到一些在结构上有规律的数据，例如1997、1998、1999；星期一、星期二、星期三等。对这些数据我们可以采用填充技术，让它们自动出现在一系列的单元格中。<br>
+        　　填充功能是通过“填充柄”或“填充序列对话框”来实现的。用鼠标单击一个单元格或拖曳鼠标选定一个连续的单元格区域时，框线的右下角会出现一个黑点，这个黑点就是填充柄。打开填充序列对话框的方法是：单击“编辑”菜单下的“填充”中的“序列”即可。<br>
+        　　<strong>一、数字序列填充</strong><br>
+        　　数字的填充有三种填充方式选择：等差序列、等比序列、自动填充。以等差或等比序列方式填充需要输入步长值(步长值可以是负值，也可以是小数，并不一定要为整数)、终止值(如果所选范围还未填充完就已到终止值，那么余下的单元格将不再填充；如果填充完所选范围还未达到终止值，则到此为止)。自动填充功能的作用是，将所选范围内的单元全部用初始单元格的数值填充，也就是用来填充相同的数值。<br>
+        　　例如从工作表初始单元格A1开始沿列方向填入20、25、30、35、40这样一组数字序列，这是一个等差序列，初值为20，步长5，可以采用以下几种办法填充：<br>
+        　　<font face="楷体_GB2312">1利用鼠标拖曳法</font><br>
+        　　拖曳法是利用鼠标按住填充柄向上、下、左、右四个方向的拖曳，来填充数据。<br>
+        　　填充方法为：在初始单元格A1中填入20，再在单元格A2中填入25，用鼠标选定单元格A1、A2后按住填充柄向下拖曳至单元格A5时放手即可。<br>
+        　　<font face="楷体_GB2312">2利用填充序列对话框</font><br>
+        　　在初始单元格A1中填入20，打开填充序列对话框，选择“序列产生在”列、类型是“等差序列”、“步长值”填入5、“终止值”填入40，然后“确定”。<br>
+        　　<font face="楷体_GB2312">3利用鼠标右键</font><br>
+        　　在初始单元格A1中填入20，用鼠标右键按住填充柄向下拖曳到单元格A5时放手，这时会出现一个菜单，选择菜单的“序列”命令，以下操作同利用填充序列对话框操作方法一样。<br>
+        　　<strong>二、日期序列填充</strong><br>
+        　　日期序列包括日期和时间。当初始单元格中数据格式为日期时，利用填充对话框进行自动填写，“类型”自动设定为“日期”，“日期单位”中有4种单位按步长值(默认为1)进行填充选择：“日”、“工作日”、“月”、“年”。<br>
+        　　如果选择“自动填充”功能，无论是日期还是时间填充结果相当于按日步长为1的等差序列填充。利用鼠标拖曳填充结果与“自动填充”相同。<br>
+        　　<strong>三、文本填充</strong><br>
+        　　在涉及到文本填充时，需注意以下三点：<br>
+        　　<font face="楷体_GB2312">1文本中没有数字</font><br>
+        　　填充操作都是复制初始单元格内容，填充对话框中只有自动填充功能有效，其它方式无效。<br>
+        　　<font face="楷体_GB2312">2文本中全为数字</font><br>
+        　　当在文本单元格格式中，数字作为文本处理的情况下，填充时将按等差序列进行。<br>
+        　　<font face="楷体_GB2312">3文本中含有数字</font><br>
+        　　无论用何种方法填充，字符部分不变，数字按等差序列、步长为1(从初始单元格开始向右或向下填充步长为正1，从初始单元格开始向左或向上填充步长为负1)变化。如果文本中仅含有一个数字，数字按等差序列变化与数字所处的位置无关；当文本中有两个或两个以上数字时，只有最后面的数字才能按等差序列变化，其余数字不发生变化。<br>
+        　　例如，初始单元格的文本为“第4页”，从初始单元格开始向右或向下填充结果为“第5项”、“第6项”……；从初始单元格开始向左或向上填充结果为“第3项”、“第2项”……再如初始单元格的文本为“(3)2班第4名”，向下填充时它的变化依次为“(3)2班第5名、(3)2班第6名……”。<strong>(江西　刘云平)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

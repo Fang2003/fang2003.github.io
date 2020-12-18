@@ -1,0 +1,109 @@
+<html><!-- #BeginTemplate "/模板/hardware.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>实现双硬盘符的顺序排列</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0103/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第03期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{实现双硬盘符的顺序排列}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 笔者所用电脑的硬盘分C、D、E、F四个区,并安装了双操作系统,其中在C分区装有Windows 
+              NT系统(采用FAT16文件格式),在D分区装有Windows98系统(采用FAT32文件格式)。<br>
+              一日,朋友带来一块硬盘(没有安装Windows98,仅作数据备份用),要我替他刻录硬盘上的一些软件。我马上设置朋友的硬盘跳线,使之作为第二硬盘挂接到我的电脑上。然后启动机器,按Del键进入BIOS设置,将IDE各项参数均设为AUTO(自动),保存设置并退出。重启机器后BIOS成功检测到了各项设备(包括朋友的硬盘)；接下来进入启动菜单,我选择启动Windows98后却出现了问题：机器无法启动。后来仔细一想,原来是朋友的硬盘在“作怪”！因为在Windows98中当一台机器挂接两个硬盘(按主、从盘设定),同时又在BIOS中设置AUTO的话,两个硬盘的盘符就会这样分配：第一硬盘的C区仍为“C：”,“D：”是第二个硬盘原来的C区,接下来是第一个硬盘剩下的所有分区,并按顺序排列,最后是第二个硬盘剩下的分区。所以系统无法启动的原因一定是我的硬盘原来Windows98所在的D分区盘符被朋友的硬盘分区占领了。<br>
+              我重新启动机器,选择启动Windows NT,进入后双击桌面上“我的电脑”图标时又出现了问题：朋友的硬盘不见了！经过“拷问”,原来朋友的硬盘采用FAT32文件系统,而我也没有安装那个使NT系统直接访问FAT32分区的软件FAT32-FULL,因此Windows 
+              NT系统无论如何也找不到朋友的硬盘。我再次进入BIOS设置,将第二硬盘的TYPE参数设为None,仍从启动菜单中选择启动Windows98。因BIOS没有检测到朋友的硬盘,这下机器顺利地进入了Windows98。我双击“我的电脑”图标,结果发现两个硬盘不仅都在里面,而且第二硬盘的所有分区居然乖乖地排在第一硬盘所有分区的后面,实现了双硬盘盘符的顺序排列！究其原因是这种方法尽管骗过了BIOS,但Windows98却照样检测到了所有的硬盘及其分区信息。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,24 @@
+CLS
+FOR A = 1 TO 9
+FOR B = 1 TO 9: IF B = A THEN 80
+FOR C = 1 TO 9: IF C = A OR C = B THEN 70
+FOR D = 1 TO 9: IF D = A OR D = B OR D = C THEN 60
+FOR E = 1 TO 9: IF E = A OR E = B OR E = C OR E = D THEN 50
+FOR F = 1 TO 9: IF F = A OR F = B OR F = C OR F = D OR F = E THEN 40
+FOR G = 1 TO 9: IF G = A OR G = B OR G = C OR G = D OR G = E OR G = F THEN 30
+FOR H = 1 TO 9: IF H = A OR H = B OR H = C OR H = D OR H = E OR H = F OR H = G THEN 20
+FOR I = 1 TO 9: IF I = A OR I = B OR I = C OR I = D OR I = E OR I = F OR I = G OR I = H THEN 10
+X = A * 100 + B * 10 + C
+Y = D * 100 + E * 10 + F
+Z = G * 100 + H * 10 + I
+IF X + Y = Z THEN PRINT X; "+"; Y; "="; Z,
+10 NEXT I
+20 NEXT H
+30 NEXT G
+40 NEXT F
+50 NEXT E
+60 NEXT D
+70 NEXT C
+80 NEXT B
+NEXT A
+

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>给FoxPro增加一个判断内存变量存在的函数<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"><font
+        face="楷体_GB2312">　　</font>笔者在开发应用系统中曾经用FoxPro的on error语句编写了一个判断内存变量的函数Exist()，非常方便实用，在此介绍给大家。<br>
+        　　设计思路：先假设内存变量存在，然后将待判断的内存变量赋值给一个临时变量，若该内存变量不存在，则执行时必将出错，出错时将执行on 
+        error语句，只要在on error处理的函数中修改内存变量存在与否的标志即可。为了不影响调用程序的错误处理，保证该函数的通用性，在函数执行前后必须保存和恢复调用程序可能的错误处理。<br>
+        　　源程序如下：<br>
+        　　＊＊＊EXISTPRG＊＊＊<br>
+        　　para MemoVari<br>
+        　　private Mexist,temp,OldError<br>
+        　　Mexist=.T.　　＆＆假设内存变量存在<br>
+        　　OldError=on(′error′)　　＆＆保存调用程序的错误处理<br>
+        　　on error do ErrHandle<br>
+        　　temp=＆MemoVari<br>
+        　　on error ＆OldError　　＆＆恢复调用程序的错误处理<br>
+        　　retu Mexist　　＆＆返回存在标志<br>
+        　　proc ErrHandle<br>
+        　　　　Mexist=.F.　　＆＆出错则置存在标准为.F.<br>
+        　　retu&nbsp;&nbsp; <strong>(福建　吴庆裕)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月30日第12期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VB编程俱乐部</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VB编程俱乐部</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VB编程俱乐部 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好，VB编程俱乐部又与大家见面了，欢迎大家积极参与进来。提交问题或解答问题，既可使用 VBForums@126.com 或 VBForums@bigfoot.com邮件地址，也可以通过访问网站 http:／／VBForums.yeah.net 在 BBS板上讨论来达到。订阅VBForums请向 sub－vbforums@e－lists.lawton.com.cn 发送一封空白信即可。<br>
+　　问题1：制作一个帮助文件如wangqr.hlp并采用帮助菜单来访问，如何在vb程序中实现？<br>
+　　答:在窗体上放一CommonDialog控件，在菜单 Click 代码中写入：<br>
+　　CommonDialog1.HelpFile = ″路径和帮助文件名称″<br>
+　　CommonDialog1.HelpCommand = cdlHelpContents <br>
+　　′列出帮助主题，若为cdlHelpPartialKey则为列出搜索项目列表。<br>
+　　CommonDialog1.ShowHelp<br>
+　　问题2：我原来的程序是在VB5中作的，用了DBGRID控件，但在VB6中没有这个控件，我想把程序从VB5升级到VB6，我先把DBGRID32.OCX，DBGRID32.DEF拷到Windows／System32／下,然后注册，当用到这个控件时，提示“该部件的许可信息没有找到，在设计环境中，没有合适的许可证使用该功能”。为什么？请问该怎么做？<br>
+　　答：解决方法有两种，其一、可以先安装VB5，再安装VB6即可；其二、也可以将VB5下的dbgrid32.reg和dbgrid32.ocx等文件复制到Windows\System下，运行dbgrid32.reg进行注册，最后在VB6下引用即可。<br>
+　　问题3： 如何用Dir()函数列出C:\下所有＊.TMP文件,并且用文本框输出？<br>
+　　答：下面是一个列出指定目录下所有符合要求的文件名的函数：<br>
+　　Public Function AutoListFiles(ByVal sDirName As String,ByVal FileFilter As String ) As Boolean<br>
+　　On Error GoTo RF_ERROR<br>
+　　Dim sName As String, sFile As String, sExt As String<br>
+　　Dim sDirList() As String, iDirNum As Integer, i As Integer<br>
+　　′首先枚举所有文件<br>
+　　sFile = Dir(sDirName ＋ FileFilter, vbNormal ＋ vbArchive ＋ vbHidden)<br>
+　　Do While Len(sFile) &gt;0<br>
+　　sFile = UCase(Trim(sFile))<br>
+　　′在此处可以将 sFile 加入到一个 Text 控件...<br>
+　　sFile = Dir  ′下一个文件<br>
+　　Loop<br>
+　　iDirNum = 0<br>
+　　sName = Dir(sDirName ＋ ″＊.＊″, vbDirectory ＋ vbNormal)<br>
+　　Do While Len(sName) &gt;0<br>
+　　If sName &lt;&gt; ″.″ And sName &lt;&gt; ″..″ Then<br>
+　　iDirNum = iDirNum ＋ 1<br>
+　　ReDim Preserve sDirList(1 To iDirNum)<br>
+　　sDirList(iDirNum) = sDirName ＋ sName ＋ ″\″<br>
+　　End If<br>
+　　sName = Dir  ′下一个目录<br>
+　　Loop<br>
+　　For i = 1 To iDirNum<br>
+　　AutoListFiles sDirList(i) ′递归调用<br>
+　　Next<br>
+　　End If<br>
+　　RF_EXIT:<br>
+　　AutoListFiles = True<br>
+　　Exit Function<br>
+　　RF_ERROR:<br>
+　　MsgBox Err.Description, vbCritical, ″″<br>
+　　Resume RF_EXIT<br>
+　　End Function<br>
+　　调用上述函数的示例：<br>
+　　AutoListFiles(″C:\″,″＊.TMP″)<br>
+　　之所以采用上述先处理文件，再处理子目录，一是思路较清晰，另外也有模仿 Prolog 语言中的“尾递归”的想法，当然，VB中是不支持尾递归的。<br>
+　　问题4：请问怎样才能实现重启系统？是用shell″rundll32.exe user.exe,restartwindows″吗？为什么会提示user.exe出错，restartwindows项目丢失？<br>
+　　答：请首先在模块中增加以下说明：<br>
+　　Public Const EWX_LOGOFF = 0 <br>
+　　Public Const EWX_SHUTDOWN = 1 <br>
+　　Public Const EWX_REBOOT = 2 <br>
+　　Public Const EWX_FORCE = 4 <br>
+　　Declare Function ExitWindowsEx Lib ″user32″ Alias ″ExitWindowsEx″ (ByVal uFlags As Long, ByVal dwReserved As Long) As Long <br>
+　　′如果想强制重新启动计算机，函数应该这样使用：<br>
+　　t＆ = ExitWindowsEx(EWX_FORCE OR EWX_REBOOT, 0)<br>
+　　（魏霄鹏 提供解答）<br>
+　　问题5：怎样在软件中设定热键呢？就像抓图软件一样，无论窗体活不活动只要按下热键就可执行一定功能。<br>
+　　答：可以用API,在Form中加入<br>
+　　Private Declare Function GetAsyncKeyState Lib ″user32″ Alias ″GetAsyncKeyState″ (Byval vkey as Long) as integer<br>
+　　Private Function MyHotKey(vKeyCode) As Boolean<br>
+　　MyHotKey=((GetAsyncKeyState(vKeyCode)&lt;0)<br>
+　　End Function<br>
+　　然后在循环中或Timer的Timer事件中检测：<br>
+　　If myHotKey(vbkeyA) then .....<br>
+　　其中vbkeyA是键盘″A″的常数，其他键可按F1查得。<br>
+<b>　　(杨光宏 提供解答)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99421301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

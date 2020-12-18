@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用Delphi制作动态菜单</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>29 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用Delphi制作动态菜单</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用Delphi制作动态菜单 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　所谓动态菜单是指菜单项随着程序的操作变化而变化。现在，我们用Delphi来实现这一功能，具体步骤如下：<br>
+　　1．首先，确定动态菜单的数据来源，即要确定动态菜单标题是来自Windows的系统注册表，还是来自一个数据库，或者是来自一个子目录，主要由程序的功能而定。这里假设主窗口名为MainForm，上面已有主菜单，其动态菜单的数据源是一个String（字符串）类型的变量，名称为SubMenuItemSource。<br>
+　　2．确定生成的动态菜单的功能，即定义动态菜单的OnClick()事件，例如，动态菜单标题来自一个磁盘文件名时，那么程序在响应OnClick()事件时，可能的操作是要打开选中的文件。因此，对菜单所在的主窗口模块的单元程序的数，据我们需要定义Type后添加一个自定义的事件MyClick()。  <br>
+　　然后，需要编写如下MyClick（）事件的具体内容：<br>
+　　procedure TMainForm.MyClick(Sender: TObject);//动态菜单OnClick事件响应<br>
+　　begin  <br>
+　　Show.Message(TMenuItem(Sender).Caption)；//显示选中的动态菜单标题,<br>
+　　end;    <br>
+　　这里调用的ShowMessage标准例程(在Dialogs.pas中)显示TMenuItem(Sender).Caption，它就是选择的菜单项的Caption，类似用TMenuItem(Sender).Name则是选择菜单项的Name。<br>
+　　3.编写程序将动态菜单标题添加到指定的菜单顶下，并将其与OnClick()事件联系起来。将以下程序段添加到MainForm的OnCreate事件过程中，可在程序启动时完成动态菜单的动态生成：<br>
+　　procedure TMainForm.FormCreate(Sender: TObject);<br>
+　　var <br>
+　　addSubItem:TMenuItem;<br>
+　　i:Integer;<br>
+　　begin <br>
+　　for i:=0 to N do  //N等于要添加的动态菜单数目,需事先定义为数值型变量,并赋值  <br>
+　　begin   <br>
+　　addSubItem:= TMenuItem.Create(Self);   <br>
+　　addSubItem.Name := ′A′＋IntToStr(i);  <br>  
+　　addSubItem.Caption := SubMenuItemSource; // 步骤1的SubMenuItemSource应先赋值<br>
+　　FileOpenItem.Add(addSubItem);  //在名称为FileOpenItem的菜单项下添加子菜单<br>
+　　addSubItem.OnClick:=MyClick;   // 步骤2的MyClick(),自定义菜单要响应的事件 <br>
+　　end<br>
+　　end；<br>
+<b>(李晓方)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/29/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99291302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

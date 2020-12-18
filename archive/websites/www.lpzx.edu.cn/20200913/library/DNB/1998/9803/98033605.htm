@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">TOPSTARTM-858声卡硬件损坏的应急处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台AT＆T 
+        Globalyst 515型微机，486DX4－100 CPU、CIRRUS GD5249显卡、TOPSTAR TM－858声卡、TW解压卡，主板上只有一个IDE接口，SONY 
+        CDU77E四速光驱连接在声卡的IDE口上，一次在使用的过程中，从音箱中听到“吱吱”声后，显示器无显示，主机停止工作。关机后，重新启动计算机，屏幕显示出错代码“601”和“I9990305”，翻阅计算机用户手册找到“601”是指主板上的磁盘控制器发生故障，“I9990305”是指BIOS不能从A驱和C驱启动系统。<br>
+        　　故障分析与排除：将机箱打开，拆下声卡和解压卡，仔细观察主板未发现有明显的故障点，再拔插各连接线的接口，重新启动计算机，顺利启动。关机后将声卡、解压卡装上，再启动计算机，又出现如上的错误代码，这时意识到问题出在声卡和解压卡上。突然想到在出故障前声卡出现了不正常的声音，仔细观察声卡，发现一个芯片有明显的烧伤痕迹，芯片的型号为LS212(631GH)。经过分析得知，计算机出现以上故障是因为该芯片烧坏造成ISA插槽短路引起的，计算机在启动自检时错误地认为是主板出现了故障。<br>
+        　　故障的原因找到了，但苦于无法在市场上找到相同或参数相近的芯片，并且声卡的主芯片(ALS007)也并没有损坏。由于芯片LS212的功能是驱动光驱(估计是因为芯片本身的质量不过关，而光驱长时间连续工作，导致该芯片烧坏)，而声卡的工作分为两部分，一部分工作为驱动光驱；另一部分工作为处理声音。两部分工作无明显的联系，因此将LS212芯片从声卡上取下，使驱动光驱的模块开路，插上声卡，将光驱和硬盘接在同一IDE口上，启动计算机，一切顺利。在Windows下又听到了悦耳的音乐。<br>
+        　　最后提醒大家的是，当计算机自检报告主板有故障时，先别忘了看看主板插槽上各个插卡是否损坏。(新疆 
+        周春)<br>
+        </font></p>
+        <p align="right"><font color="#369681"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1998年1月19日第3期36版</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

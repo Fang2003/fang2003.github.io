@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>CMOS数据被破坏后的处理</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　<br>
+        　　一台机器，配置为：K6－200 CPU，华硕TX97主板，32M SDRAM，3.2G火球四代硬盘，丽台SD680显卡，20倍速Sony光驱，创新SB16声卡，系统为Windows 
+        95 OSR2。用户每次启动Windows 95时，系统均报告注册表出错，然后死机。在启动过程中，系统出现“Starting 
+        Windows95……”时按F8键，可以正常选择进入安全模式和DOS 6.22。用户以User.da0和System.da0覆盖User.dat和System.dat两个文件后，故障不变。用户曾以干净软盘从A盘引导(先修改CMOS使“Boot 
+        Sequence”为先A后C)，对硬盘先用Fdisk进行重新分区，再进行高级格式化，重装Windows95，多次安装不能成功，偶尔安装成功，故障仍不能排除。装载CMOS的缺省设置也不能排除故障。因而怀疑是硬件故障，请笔者前往检查。<br>
+        　　经询问得知，系统一直使用均正常；故障是在用户安装某游戏后出现的。因此，硬件故障的可能性极小，很可能是系统感染了病毒。但在重新分区、重装Windows95后，病毒应该已被清除。而故障仍存在让人有点吃惊。为了证实用户所言，进一观察故障现象，笔者执行了如下步骤：<br>
+        　　1.先用KV300(0＋版)查毒，没有发现病毒；<br>
+        　　2.根据经验手动修改CMOS数据，故障同前；<br>
+        　　3.装载CMOS缺省后启动Windows95，故障同前；<br>
+        　　4.重装Windows95(一次装成功)，故障同前。<br>
+        　　由于硬盘已无病毒，系统是重新装的，只有CMOS可能有问题。另外，Windows95的注册表文件是由记录用户配置信息和系统硬件配置信息两部分组成。系统尚未运行，用户未做任何设置。而Windows95对CMOS的设置是“照单全收”的，那么问题只可能出在CMOS里。既然CMOS“软”的(装载缺省设置)不吃，那就来“硬”的吧(对CMOS放电)!<br>
+        　　放电后，进入CMOS设置程序，设置好时间和硬盘参数等；在“Bios 
+        Setup”这一项中发现比放电以前这里多了几个设置项目!保存设置并退出。启动Windows95，故障排除。<br>
+        　　本例故障非常特殊，引起故障的原因是病毒感染系统并修改了CMOS设置的信息。杀掉病毒后，CMOS信息没有立即复原，被病毒感染后，CMOS中多出几个可设置项，手动或装载CMOS缺省值都无济于事，幸好给CMOS放电仍有效。<br>
+        　　另外有一点值得注意的是，CMOS放电前，Windows95报告注册表出错，而DOS下却一切正常。如果使用DOS系统，将不会发现CMOS设置有任何问题，或者说，将不能发现隐蔽的某种条件下才会发作的故障。因此，即使系统正常，但在CMOS感染了病毒后，一定要对CMOS放电，重新设置好CMOS数据后，以A盘引导并彻底杀毒。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">(广东　许庆照)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9850/index.htm.txt">《电脑报》1998年12月28日第50期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

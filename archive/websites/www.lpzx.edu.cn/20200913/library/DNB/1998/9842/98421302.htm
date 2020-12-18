@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用TCHimage组件实现图形切换效果<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; Delphi3.0与Authorware、Director、ToolBook等多媒体工具软件相比，没有提供图形切换效果组件，不免使其制作的多媒体程序看上去有些呆板。<br>
+        &nbsp;&nbsp;&nbsp; 在《PC世界3》上我发现了安徽的李新华朋友制作图形切换效果组件TCHimage，喜爱用Delphi编程的朋友不妨拷下来一试。下面我简单介绍一下这个组件的使用方法∶<br>
+        &nbsp;&nbsp;&nbsp; TCHimage组件是由Timage派生的子类。要使用这个组件，首先在DELPH中选择“COMPONENT/INSTALLCOMPONENT”。<br>
+        &nbsp;&nbsp;&nbsp; 选择“UNITFILENAME”，输入文件名TEST.PAS，按OK键，系统自行将TCHIMAGE组件加入到SAMPLE控件组中，这时便可以使用TCHIMAGE类了。下面通过一例具体介绍一下该组件的用法。<br>
+        &nbsp;&nbsp;&nbsp; 首先从SAMPLE控件组中选择TCHIMAGE，在FORM中创建一个TCHIMAGE对象，打开属性表，可以看到其基本属性与其父类TIMAGE一致，只是多了一个EFFECT属性，此属性即决定其PICTURE指定图形的切换效果，从0～24，总共25个值。这样，只需简单设置EFFECT的值，便可使你的图形有多达25种形式不同、内容丰富的切换方式，真是帅呆了。同时，在程序执行过程中，你还可以通过随时调用SetEffect(Effect:byte,FileName:string)过程动态实现图形效果的切换，使你的应用程序更加千变万化，丰富多彩。以下就以一例说明TCHIMAGE是怎样设置的。<br>
+        &nbsp;&nbsp;&nbsp; 1.创建一个FORM，在SAMPLE构件组中选择TCHIMAGE构件，在FORM中指定大校<br>
+        &nbsp;&nbsp;&nbsp; 2.激活TCHIMAGE属性框，在EFFECT属性栏中输入0，PICTURE属性可暂时不写，留待程序中再动态加入（对于TCHimage的Picture属性，可在设计期指定，但这样可能会对图形切换时的速度有一定的影响）。<br>
+        &nbsp;&nbsp;&nbsp; 3.程序代码如下：<br>
+        &nbsp;&nbsp;&nbsp; procedureTForm1Button1Click(Sender:TObject);<br>
+        &nbsp;&nbsp;&nbsp; var aa:string;<br>
+        &nbsp;&nbsp;&nbsp; begin<br>
+        &nbsp;&nbsp;&nbsp; aa:=′c:\snap.bmp′；<br>
+        &nbsp;&nbsp;&nbsp; chimage1seteffect(14,aa);<br>
+        &nbsp;&nbsp;&nbsp; end;<br>
+        &nbsp;&nbsp;&nbsp; 执行程序，你将看到图像呈现百页窗的效果如图，效果真的不错哟。灵活地使用这25种效果，你将发现原来你的多媒体软件也可以如此出色！<strong>(湖北 
+        周新)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月2日第42期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

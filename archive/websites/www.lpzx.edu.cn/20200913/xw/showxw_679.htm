@@ -1,0 +1,32 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 打包Authorware程序注意事项 </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+
+<img src="showpic.jpg" align="left" >
+
+李先武<br><br>摘自：赛迪网<br><br>　　Authorware以其功能强大、使用方便在广大爱好者中应用甚广。下面结合我们工作中的一点体会，以Authorware 5．0为例，给大家介绍Authorware应用程序在打包发行时应注意的几个问题。<br><br>　　□影响最终运行界面的几项设置<br><br>　　从Modify下拉选单中选File子选单的Properties选项，如图1所示，其中Title Bar和Menu Bar在默认状态下是选中的，而我们的应用程序在最后运行时是不希望有状态栏和选单栏的，所以我们应反选这两项。其中Task Bar虽然未选中，但如果Windows任务栏属性中的“总在最前”被选中，则最终运行界面一样有任务栏，遗憾的是，很多计算机Windows任务栏属性中的“总在最前”是被选中的。这时我们就要用到Macromedia公司提供的cover．u32或cover．ucd了，其中前者应用于32位系统，后者应用于16位系统。这两个文件可以到Macromedia公司的网站上去下载，然后拷贝到Authorware目录下。具体用法是，在流程线的开始和结束处各放置一个计算图标，将“cover（）”放在启始计算图标中，将“uncover（）”放在结束计算图标中，在保存时按照提示指明cover．u32所在路径位置即可，同样，在打包应用程序时应将这两个文件拷贝到打包程序所在的目录。另外，如果你打算在你的应用程序中使用MIDI音效的话，则应将a5wmme．ucd和a5wmme．u32一起拉下来，它们提供了对MIDI音效的支持。<br><br>　　图1<br><br>　　□外部动画文件的调用<br><br>　　我们的应用程序中往往包含avi或flc等动画文件，在Authorware中，这些是被当作外部（external）文件存储的，不能像图片文件、声音文件那样嵌入到最终打包的exe文件内部。最简单的办法是将动画文件与最后的打包文件放在同一目录下，这样虽然目录结构看起来乱一些，但却能解决问题。另一个办法是在源程序文件打包前为动画文件指定搜索路径。操作如下：打开Modify→File→Properties的Interaction窗口（即图1中Playback旁的Interaction），点击Search Path，输入指定的路径。一般来说Authorware应用程序最终是要刻成光盘发行的，所以在指定搜索路径时一定不要指出盘符。<br><br>　　□特效及外部动画的驱动<br><br>　　我们的应用程序中往往包含各种转换特效（或称转场特技），包含avi、flc、mov、mpeg等格式的外部动画文件。源程序打包后在Authorware目录下运行时，一切正常，但拷贝到目标目录后运行时，则会提示指定的转换特效不能使用，找不到外部动画驱动程序。这是因为Authorware需要外部驱动程序才能实现特效转换及动画文件的运行，而且这些外部驱动程序应与打包程序文件放在同一目录下。具体方法是将实现各种特效的“Xtras”文件夹及a5vfw32．xmo、a5mpeg32．xmo、a5qt32．xmo三个动画驱动程序文件拷贝到打包文件的同一目录下。<br><br>　　□外部视频文件的压缩算法<br><br>　　Authorware应用程序中往往会包含视频文件，由于视频采集卡往往随安装盘自带数字视频压缩算法，所以在采集用于发行的视频文件时，一般不要用采集卡自带的数字视频压缩算法（这种压缩算法往往是采集时的默认值），因为这种视频文件在别人的计算机上是无法播放的。如果采集时使用了默认压缩算法，则在使用Premiere等软件进行剪辑加工时，一定要选用通用的数字视频压缩算法以生成最终的视频文件。<br><br>　　解决了以上几个问题，您的应用程序就可以放心地刻成光盘发行了。
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001121103351
+<div align="center"><a href="xwpl_669.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

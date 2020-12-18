@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="leaf2.jpg">
+<table width="558" border="0" cellspacing="0" cellpadding="0" height="688" bordercolor="#FF0033">
+  <tr> 
+    <td width="528" height="65"><img src="taoshu.gif" width="478" height="70"></td>
+    <td width="30" height="65"><img src="ship-dh011x1.gif" width="80" height="59"></td>
+  </tr>
+  <tr> 
+    <td width="528" align="left" valign="middle" height="57"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:100px; height:71px; z-index:1; left: -28px; top: 80px; overflow: hidden"><font color="#0000FF"><b><img src="wugui.gif" width="92" height="59" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><b><font color="#FF0000" class="mdd6">中 国 与 奥 运</font></b> </p>
+          </div>
+      </div>
+    </td>
+    <td width="30" align="center" valign="middle" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="528" align="left" valign="top" height="442"> 
+      <p class="mdd7">　　中国是世界上人口最多的国家，奥林匹克运动已经在我们这个热爱和平与团结的国度牢牢地扎下了根。然而，早在20世纪初期，由于连年战乱，经济凋敝，国力虚弱，奥林匹克运动在中国发展得极为缓慢。旧中国的体育也因国家政治，经济等因素得不到改善和发展，从1949年中华人民共和国建立，奥林匹克运动也翻开了崭新的一页。<br>
+        　　1952年，第十五届奥运会在芬兰赫尔辛基举行。七月月二十九日，中国体育代表团（游泳、篮球、足球）四十人，由团长荣高棠率领，匆匆前往赫尔辛基，因迟到，仅游泳队正式参加了比赛。 
+        　　　随着1979年中国奥委会在国际奥委会组织中合法席位的恢复和80年代以来中国改革开放的迅速发展，值的中国人民纪念的是１９８４年重返奥运会，实现了中国在奥运会历史上金牌零的突破。至１９９６年，中国共在奥运会上夺得５２枚金牌。<br>
+        　　中国在奥运会上的传统强项为男子体操、跳水、乒乓球、女子竞走、射击、女子游泳等。<br>
+        　　１９８４年，在美国洛杉矶举行的第２３届奥运会上，中国运动员徐海峰为中国夺得男子手枪速射金牌，实现了中国在奥运史上金牌零的突破。在这届奥运会上，中国队共夺得１５枚金牌，列金牌总数第４。１９８８年，在韩国汉城举行的第２４届奥运会上，中国运动员共夺得５枚金牌。１９９２年，在西班牙巴塞罗那举行的第２５届奥运会上，中国运动员共夺得１６枚金牌，列金牌总数第４。１９９６年，在美国亚特兰大举行第２６届奥运会上，中国运动员共夺得１６枚金牌列金牌榜第四名。还夺得银牌２２枚，铜牌１２枚，奖牌总数５０枚。<br>
+        　　1991年北京提出申办2000年奥运会，虽然以2票之差落选，但标志着奥林匹克运动在中国的发展进入了一个新阶段。1999年北京再次向国际奥委会正式提交了申办2008年奥运会申请书，表明了中国申办奥运的决心。<br>
+        　　而随着香港，澳门行政区的回归，港澳地区的体育运动也展示了勃勃生机的局面。台湾与中国大陆--两岸地区在体育文化活动的推动下，也体现了同是中国同胞的感情，回归中国大陆的趋势 
+        。 </p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,169 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>《电脑报》电子版CPCW.COM</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第40期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->SQL 
+              Server中全文检索的使用<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->引 言<br>
+              全文检索使用户可以高效检索存储在数据库的char、varchar、text、ntext、nchar、nvarchar等数据类型列中的的文本数据。在进行全文检索之前，应建立和填充数据库全文索引。<br>
+              全文索引<br>
+              为了支持全文索引操作，SQL Server 7.0新增了一些存储过程和Transact-SQL语句。使用这些存储过程创建全文索引的具体步骤如下(括号内为每步所调用的存储过程名称)：<br>
+              1.启动数据库的全文处理功能sp_fulltext_database<br>
+              2.建立全文目录sp_fulltext_catalog<br>
+              3.在全文目录中注册需要全文索引的表sp_fulltext_table<br>
+              4.指出表中需要全文检索的列名，sp_fulltext_column<br>
+              5.为表创建全文索引sp_fulltext_table<br>
+              6.填充全文目录sp_fulltext_catalog。<br>
+              下面举例说明(在本例中，对test数据库book表中title列和notes列建立全文索引)：<br>
+              //首先启动SQL Server的全文搜索服务。<br>
+              use test //打开数据库<br>
+              go<br>
+              //打开全文索引支持<br>
+              execute sp_fulltext_database 'enable'<br>
+              //建立全文目录ft_pubs<br>
+              execute sp_fulltext_catalog 'ft_test' 'create'<br>
+              //为titles表建立全文索引数据元，pk_title为book表中由主键所建立的唯一索引，此参数必需。<br>
+              execute sp_fulltext_table 'book' 'create' 'ft_test' 'pk_title'<br>
+              //设置全文索引列名<br>
+              execute sp_fulltext_column 'book' 'title' 'add'<br>
+              execute sp_fulltext_column 'book' 'notes' 'add'<br>
+              //建立全文索引<br>
+              execute sp_fulltext_table 'book' 'activate'<br>
+              //填充全文索引目录<br>
+              execute sp_fulltext_catalog 'ft_test' 'start_full'<br>
+              go<br>
+              至此，全文索引建立完毕。<br>
+              全文检索<br>
+              SQL Server 2000提供的全文检索语句主要有CONTAINS和FREETEXT。<br>
+              CONTAINS语句的功能是在表所有列或指定列中搜索：<br>
+              ·一个字或短语；<br>
+              ·一个字或短语的前缀；<br>
+              ·与一个字相近的另一个字；<br>
+              ·一个字的派生字；<br>
+              ·一个重复出现的字。<br>
+              CONTAINS语句的语法格式为：“CONTAINS({column ｜ })，'&lt;contains_search_condition&gt;')”，其中column说明被搜索列，使用时说明对表中所有全文索引列进行搜索。Contains_search_condition用以说明CONTAINS语句的搜索内容，其语法格式为：“{&lt;simple_term&gt;｜ 
+              &lt;prefix_term&gt;｜&lt;proximity_term&gt;｜&lt;generation_term&gt; 
+              ｜&lt;weighted_term&gt;} {{AND｜AND NOT｜OR}&lt;contains_search_condition&gt;} 
+              …n”。<br>
+              下面就simple_term和prefix_term参数做一简要说明：<br>
+              simple_term指出CONTAINS语句所搜索的单字或短语，当为一个短语时，必须使用双引号作为定界符。其格式为：“{word 
+              ｜ “phrase”}”。<br>
+              prefix_term说明CONTAINS语句所搜索的字或短语前缀，其格式为：“{“word” ｜ “phrase”}。<br>
+              例如，下面语句检索book表的title列和notes列中包含database或computer字符串的图书名称及其注释信息：<br>
+              select title notes<br>
+              from book<br>
+              where containstilte 'database' or containsnotes 'database' 
+              or containstitle 'computer' or containsnotes 'computer'<br>
+              FREETEXT语句的功能是在一个表的所有列或指定列中搜索一个自由文本格式的字符串，并返回与该字符串匹配的数据行。所以，FREETEXT语句所执行的功能又称做自由式全文查询。FREETEXT语句的语法格式为：“FREETEXT({column 
+              ｜ } 'freetext_string')。其中，column说明被搜索列，使用时说明对表中的所有全文索引列进行搜索。Freetext_string参数指出所搜索的自由文本格式字符串。<br>
+              例如，下面语句使用FREETEXT语句搜索book表中包含 Successful Life字符串的数据行：<br>
+              select title notes<br>
+              from book<br>
+              where freetext 'Successful Life'<br>
+              本篇文章主要阐明了全文检索的功能，介绍了全文索引的建立 以及全文检索语句CONTAINS和FREETEXT的使用。希望能对大家有所帮助，有任何意见请联系：yuheng@public.yc.nx.cn<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

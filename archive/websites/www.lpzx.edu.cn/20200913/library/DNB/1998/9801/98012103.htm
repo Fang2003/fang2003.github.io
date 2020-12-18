@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Novell中危险的“\”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在MS－DOS操作系统中，“\”有两种意思，一是：“\”紧跟在盘符后面时表示根目录；二是：“\”在两个目录中间时，“\”只是目录的分隔符。<br>
+        　　如：C：\AA\BB;<br>
+        　　此例的第一个“\”表示根目录，第二个“\”是子目录AA与子目录BB的分隔符。在MS－DOS中，用“\”时，如用得不正确时，不要紧，最多是屏幕提示“BAD 
+        COMMAND OR FILES NAME.”它不会破坏你盘中的数据；但是，在NOVELL3.11或NOVELL3.12中，如果用得不当，它可能把你某个目录下的文件全部删除掉!<br>
+        　　那么，NOVELL操作系统在什么情况下不可以用“\”在什么情况下能用“\”呢?<br>
+        　　在给用户授权时，卷名与目录之间不能用“\”表示根目录，如：USER：\UCDOS；在其他情况下可以用“\”。具体说明如下：<br>
+        　　在一工作站以SUPERVISOR身份入网，运行SYSCON，选User Information,选Trustee 
+        Should Be Added”窗口下键入：<br>
+        　　SYS：\LOGIN<br>
+        　　将是非常危险的。你的本意是给某用户在系统卷SYS：的LOGIN目录授基本的访问权；但是，这样的写法是错误的，这是因为你在SYS：与LOGIN之间多了一个“\”！这时，你后悔都来不急!因LOGIN下的文件已全部被删除了！虽然屏幕有错误提示信息。正确的写法应是：<br>
+        　　SYS：LOGIN<br>
+        　　在目录映射时或在给用户建立注册文本时，以下的用法又是允许的：<br>
+        　　MAP F：=SYS:\LOGIN<br>
+        　　在工作站上执行DOS命令或NOVELL命令，也可以用“\”来表示根目录或父目录与子目录之间的分隔符。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

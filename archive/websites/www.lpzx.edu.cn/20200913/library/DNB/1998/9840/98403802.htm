@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VCD的复制<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp;&nbsp;VCD光盘因其具有特殊结构及不同的压制标准，许多人在复制VCD光盘时常常出现录制错误，归纳起来，主要是由VCD的特殊结构及不同的压制标准导致的。在这里介绍一些我在复制VCD时获得的一点实际操作经验，供大家探讨。<br>
+        一、VCD的光盘结构<br>
+        　&nbsp; VCD是多轨结构，第一轨是资料轨叫IndexTrack，属于CDROMXAMode2Form1，每个sector(扇区)可存2048bytes资料。不论怎样的VCD，这个轨都存在。接下来的轨叫ImageTrack，用于存储VCD音像，属于CDROMXAMode2Form2，每个sector可存2324bytes资料。把VCD放到电脑中看，我们可以看到必有MPEGAV和SEGMENT这两个目录，其中MPEGAV目录中存放的是以轨形式存放的MPG音像文件，其中每个DAT文件就是一个ImageTrack轨。SEGMENT目录中存放的是不以轨的形式存放的音像文件，如高清晰度静止画面等。其余还有一些目录是在制作中系统自动生成的。<br>
+        从制作的方法我把VCD分成两种：一种是市场上出售的VCD，是工厂压片生产的属DAO模式。另一种就是我们自己用VideoPack4.0等VCD制作软件自制的VCD，由于目前常用的VCD制作软件只支持TAO模式刻录，所以这类VCD属TAO模式，复制这两种VCD是有差别的，以下回详细论述。<br>
+        二、不同的光盘复制刻录软件<br>
+        　&nbsp; 目前常见的支持CDCOPY的刻录软件有EasyCDPro95、EasyCDCreator、Nero、WinONCD、DiscJuggler和CDRWIN，还有些其它软件，但一般很少用。在这些软件中只有Nero、WinONCD、DiscJuggler和CDRWIN支持DAO模式的CDCOPY，其中CDRWIN只支持SCSI的CDR和CD－ROM的CDCOPY。在这里我要向各位强烈推荐DiscJuggler，它不但支持SCSI和IDE的CDR而且还可以用内存模拟Cache，刻盘稳定性极佳，一边刻盘一边听MP3都没问题，一些加密盘用它都能复制。<br>
+        三、复制VCD<br>
+        　&nbsp; 是不是把VCD上所有的文件和目录COPY到一张CDR上就算复制VCD呢？当然不是！在这里我不打算具体介绍如何操作，我想操作大家不难学会，我想介绍的是用何种软件正确复制VCD，及复制VCD要掌握以下原则：<br>
+        　&nbsp; 1.工厂压片的VCD即DAO模式的VCD一定要用支持DAO模式的CDCOPY软件进行复制，如：Nero、WinONCD、DiscJuggler和CDRWIN，那么一旦用了只支持TAO模式CDCOPY的软件会怎样？我尝试过，复制出的VCD播放时是花屏，为什么会这样？原来用TAO模式复制的光盘与母片会有不同，中间多了GAP，所以后面的资料的位置都不对了，这样就造成播放问题了。而用DAO模式复制的光盘会和母盘一模一样，就不会有播放问题了。所以这类VCD千万不要用EasyCDPro95、EasyCDCreator来复制，推荐用DiscJuggler。<br>
+        　&nbsp; 2.对于用VideoPack4.0制作的VCD（TAO模式）复制就比较随意，用什么软件都行，我用EasyCDPro95、EasyCDCreator来复制都获成功，当然用Nero、WinONCD、DiscJuggler和CDRWIN支持DAO的软件来复制更是没问题。还有一点，如果你复制的VCD是拿到工厂去压片的话，你只能用支持DAO模式的CDCOPY软件进行复制，因为工厂只接受DAO模式的片子。<br>
+        　&nbsp; 3.在烧录时将onthefly功能DISABLE，此时系统在烧录时先将源盘资料在硬盘上做成ISO的文件格式，然后再烧录到CDR上，如果将其ENABLE，直接进行烧录，除非你可担保源盘没有一个坏点，否则你的CDR只能作“茶杯垫”了。因为CDR在烧录时要求资料持续提供，等不及CD－ROM来个反复读取或降速处理什么的。还有先将源盘做成Image文件，再将Image文件烧回CDR，也是个好方法。<br>
+        &nbsp;&nbsp;&nbsp; 4.先将VCD中的DAT文件用MPEGTool、DAT2MPG等软件转换成MPG文件，然后再用VideoPack4.0等做成VCD，严格地说这不是复制，但这种做法提供了更多的灵活性，我们可以对源盘进行编辑了，对有问题源盘可以进行处理后做成VCD了。<br>
+        最后要提醒一下，VCD也是有版权的，大家一定要自重。<br>
+        <br>
+        (上海周卫)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月19日第40期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

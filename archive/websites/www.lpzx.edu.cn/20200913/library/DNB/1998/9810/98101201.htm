@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>让C/C++图形程序独立运行<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　大家知道，C/C＋＋语言提供了十分丰富的图形函数，图形函数文件为Graphics.h，使用图形函数前须先将屏幕设置为图形模式，C/C＋＋语言提供了下面的函数：<br>
+        　　void far initgraph(int far ＊GD,int far ＊GM,char ＊P);<br>
+        　　其中，GD和GM分别表示图形驱动程序和图形模式，P指图形驱动程序所在的目录路径。<br>
+        　　图形驱动程序由Borland公司(对于Turbo C和Borland C＋＋)提供，同时C/C＋＋语言还提供了退出图形状态的函数closegraph()，格式为：<br>
+        　　void far closegraph(void);<br>
+        　　也许你经常在用C/C＋＋语言编写一些图形程序，但是总不能脱离C/C＋＋语言环境独立运行，我们怎样来解决呢?<br>
+        　　能否建立一个不需要驱动程序和字体文件也能独立运行的图形程序呢?笔者经过实践，得到了肯定的答案，下面是实现图形程序独立运行的具体步骤：<br>
+        　　1.将驱动程序EGAVGA.BGI转换成目标文件EGAVGA.OBJ：<br>
+        　　D:\BC\BGI&gt;BGIOBJ EGAVGA<br>
+        　　按同样的办法，将字体文件＊.CHR转换成目标文件＊.OBJ：<br>
+        　　D:\BC\BGI&gt;BGIOBJ TRIP<br>
+        　　D:\BC\BGI&gt;BGIOBJ LITT<br>
+        　　D:\BC\BGI&gt;BGIOBJ SANS<br>
+        　　D:\BC\BGI&gt;BGIOBJ GOTH<br>
+        　　2.将上述建立的OBJ文件加入到GRAPHICS.LIB库文件中，具体方法如下：<br>
+        　　D:\BC\BGI&gt;TLINK D:\BC\LIB\GRAPHICS.LIB＋EGAVGA<br>
+        　　D:\BC\BGI&gt;TLINK D:\BC\LIB\GRAPHICS.LIB＋TRIP<br>
+        　　D:\BC\BGI&gt;TLINK D:\BC\LIB\GRAPHICS.LIB＋LITT<br>
+        　　D:\BC\BGI&gt;TLINK D:\BC\LIB\GRAPHICS.LIB＋SANS<br>
+        　　D:\BC\BGI&gt;TLINK D:\BC\LIB\GRAPHICS.LIB＋GOTH<br>
+        　　也可以使用TLIB、PRJ程序代替TLINK。<br>
+        　　3.在程序中调用initgraph()函数前，应加上如下语句：<br>
+        　　registerbgidriver(EGAVGA－driver)；<br>
+        　　它通知连接程序把EGAVGA驱动程序装入用户的执行程序中，同样在装入字体文件之前要加上如下语句：<br>
+        　　registerbgifont(字体文件名)；<br>
+        　　4.通过上述处理后，编译连接后的执行程序就可以在任何目录下运行了。这时，将屏幕初始化为图形模式的函数可改写为：<br>
+        　　void InitGra(void)<br>
+        　　{int GD=DETECT,GM;<br>
+        　　registerbgidriver(EGAVGA_driver)；<br>
+        　　registerbgifont(triplex_font)；<br>
+        　　registerbgifont(small_font);<br>
+        　　registerbgifont(sansserif_font);<br>
+        　　registerbgifont(gothic_font);<br>
+        　　initgraph(&amp;GD,&amp;GM,&quot;&quot;);<br>
+        　　}<br>
+        　　按照以上步骤，就能实现图形程序的独立运行，笔者在Turbo C2.0、Borland 
+        C＋＋2.0、Borland C＋＋3.1下均运行通过。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

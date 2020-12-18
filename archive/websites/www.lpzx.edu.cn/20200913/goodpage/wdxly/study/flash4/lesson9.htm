@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif"><a name="top"></a>
+<div align="center">
+<p><font size="+2">第九课&nbsp;神奇的Alpha</font></p>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="66%">&nbsp;&nbsp;&nbsp;&nbsp;看过许多电影的片头吧，那些淡入淡出、幻影等文字特效是否很吸引人，你是否也想让自己的网页又这么酷的特效文字？OK，让Flash来帮你实现这个梦想吧，看了这课以后，你一定能做出不错的特效淡入淡出文字的（本课的例子如右）。废话不说了，Let's
+GO！
+<td width="34%"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/alpha.swf">
+<embed src="swf/alpha.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT>
+
+</table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="70%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;进入Flash后，还是按Ctrl+M把工作区设成300*100。在Layer1的第一帧写上一个大大的字——“网”（本例字体大小设为72），然后，在菜单中选Insert
+-&gt;Convert to Symbol或按F8键，把这个字转成符号(Symbol)。（如右图所示）
+<td width="30%"><img src="images/l9_01.gif" width="314" height="112">
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="63%">
+<table width="100%" border="01" cellspacing="2" cellpadding="0">
+<tr>
+<td width="52%"><img src="images/l9_02.gif" width="248" height="253">
+<td width="48%">在网字符号(Symbol)的框里单击右键弹出一个菜单，选择Properties...
+
+</table>
+
+<td width="37%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;现在，把第一帧复制到第二十帧，接下来，就是关键部分了。选中第一帧，在网字符号(Symbol)的框里单击右键弹出一个菜单，选择Properties...（属性）（如左图），然后又会弹出一个对话框，在这个对话框里，我们可以设置这个符号(Symbol)的各种属性。（如下图）
+
+</table>
+<img src="images/l9_03.jpg" width="510" height="249"><br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><br>
+&nbsp;&nbsp;&nbsp;&nbsp;我们看到，在这个对话框里，有两个标签，一个是Definition，在这个标签里可以选择当前修改的是哪个符号(Symbol)的属性，还可以通过修改右侧的Behavior栏中的值来确定这是图形(Graphic)符号、按钮(Button)符号还是电影(Movie
+Clip)符号，右下的Play Mode Options是设定该符号(Symbol)的播放模式；另一个标签是Color Effect，是该物体的颜色特效设置，在本课中我们要使用的Alpha特效就在其中，让我们点击第二个标签——Color
+Effect。
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="48%"><br>
+&nbsp;&nbsp;&nbsp;按下Color Effect标签后，出现了一个Color选项，现在里面默认设为None，即无任何特效。我们按下右面的向下的箭头，选择Alpha项，这是选项框下出现了一个滑条，通过滑条可以设置Alpha的值，我们把它设为0。见右图。
+
+<td width="52%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="45%"><img src="images/l9_04.gif" width="195" height="62">
+<td width="55%"><img src="images/l9_05.gif" width="218" height="88">
+
+<tr>
+<td width="45%">
+<div align="center">一个Color选项，默认设为None</div>
+
+<td width="55%">
+<div align="center">把Alpha的值设为0</div>
+
+
+</table>
+
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="50%">
+<div align="center"><img src="images/l9_06.gif" width="312" height="112"></div>
+
+<td width="50%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;按下确定钮，发现了没有，工作区里的“网”字消失了，只留下了一个空空的框（如左图）。其实，确切的说，这个字并没有消失而是变透明了。
+
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="48%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;现在，选中Layer1层的第20帧，这时，“网”字又出现了，这是因为在第20帧里，“网”字没有设任何特效。我们先在画图工具栏里选择箭头工具，然后在画图工具栏下部出现的4个小按钮中选择右下方的一个缩放按钮(Scale)。把这一帧中的“网”字用这个缩放按钮缩小到合适的大小，然后把它向上移到工作区高度的中间。如右图所示。同样，我们也要对这一帧里的“网”字设定Alpha特效，不过不同的是，把这个“网”字的Alpha值设为100。
+
+<td width="52%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="19%"><img src="images/l9_07.gif" width="87" height="106">
+<td width="81%"><img src="images/l9_08.gif" width="304" height="104">
+
+<tr>
+<td width="19%">
+<div align="center">缩放按钮(Scale)</div>
+
+<td width="81%">
+<div align="center">把这一帧中的“网”字用这个缩放按钮缩小到合适的大小，然后把它向上移到工作区高度的中间</div>
+
+
+</table>
+
+
+</table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><br>
+&nbsp;&nbsp;&nbsp;&nbsp;别忘了在Layer1层的第一帧的小方格里按鼠标右键，选择Properties... -&gt;
+Tweening -&gt;Motion 后按确定，使第一到第二十帧进行运动变形，好了，“网”字就OK了。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;接着，我们就要做剩下的三个字了，先新建一个层Layer2，在Layer2里做“页”字。同样，“之”字和“作”字也要分别做在Layer3和Layer4层里。这几个字的做法，基本上和“网”字相同，不同的是“网”字是在Layer1的第一帧就写上的，而“页”、“之”、“作”这三个字分别在第10、20、30帧时才开始写上（分别在Layer2、3、4层的第10、20、30帧下小方格点右键选择Insert
+a blank keyframe插入一个空帧，把这一帧当作Layer1层的第一帧操作，总之，每个字的变形帧数都为20帧），原因是每个字要在前一个字变形到一半时才开始出现。看到这里，你也许会问，为什么四个字要分在四层呢？原因嘛，是Flash规定一个层只能有一个符号(Symbol)有变形效果，所以只能麻烦一点啦。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;好了，还有最后一道工序，在所有层的第六十帧的小方格里都点右键，选Insert a keyframe，插入一个与前一关键帧内容相同的关键帧，这样做的目的是使所有的字从变形完后一直保留到最后一个字变形完毕后十帧再消失。做完这一工作后的层区和Timeline区应如下图所示。
+
+
+</table>
+<br>
+<img src="images/l9_09.gif" width="662" height="103"> <br>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;如果你想要让四个字最后都排在统一水平线上，你可以在创建各层第六十帧之前先选中Layer4的第50帧，用箭头工具把四个字都框起来（选中这四个符号(Symbol)），然后在菜单里选择Modify
+-&gt;Align，按照对话框里的图形提示选择好后确定，最后再按照上面的方法创建各层的第六十帧。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;好了，按下Ctrl+Enter看一下效果，很酷吧！更酷的还在后面呢，跟我走！下一课，我们要用层和Alpha特效来创造出幻影效果，<a href="lesson10.htm">GO!</a>
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson10.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

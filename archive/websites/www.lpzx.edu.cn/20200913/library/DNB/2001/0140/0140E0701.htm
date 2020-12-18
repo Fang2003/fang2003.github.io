@@ -1,0 +1,135 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="771" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第40期 </a>&gt;&gt;</font>办公自动化</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">用Excel 2000建立项目概算汇总表</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>一、功能需求分析<br>
+              项目概算汇总表主要涉及项目数量、概算价值、占总投资百分比及建筑技术经济指标等。我们根据有关规范及报批要求建立如下表格：<br>
+              不同工程的项目概算汇总表，列数固定，行数则随子项的多少而不同。最后一行为编制单位与姓名。<br>
+              项目的概算价值随着项目数量及经济指标的不同而变化，横向每一子项的概算价值需要合计，并且要计算出占总投资的百分比，纵向每一部分需要合计，以便直观明了，合理利用资金。<br>
+              二、功能实现<br>
+              (一)建立计算公式<br>
+              根据功能需求分析，我们需建立下列公式。<br>
+              1.概算价值(土建)=建筑技术经济指标(其中土建)×数量。即在F8格输入“=P8E8”，把公式复制到对应的单元格。<br>
+              2.合计(概算价值)=建筑工程(含土建、水、暖)+工艺设备+强电+弱电+其他。即在L7格用常用工具栏上的“自动求和”按钮输入“=SUM(F7：K7)”，再将公式从L8纵向复制到L26。<br>
+              3.第二部分其他费用，每项已给出占第一部分合计(L26)的百分比，因此直接输入公式就行了，即L28=L260.008，下面各单元格按照D列给出的比例相应输入。<br>
+              4.各小部分纵向求和。E7=SUM(E8：E12)，从F7横向复制到M7。同样，E13=SUM(E14：E18)，从F13横向复制到M13。L19=SUM(L20：L25)，复制到M19。<br>
+              5. 第一、二部分求和。L26=SUM(L7，L13，L19)，并复制到M26。L35=SUM(L28：L34)，并复制到M35。最后求总和，L36=SUM(L26，L35)，并复制到M36。<br>
+              6. 各项占总投资百分比=各项的合计L列/总投资L36 ×100。即在M8格输入“=L8/L36100”，在其他单元格对应输入。<br>
+              我们在复制公式时，可利用填充柄。<br>
+              (二)格式化工作表<br>
+              适当地将工作表显示的格式作一些灵活变换，这不但可以增加对用户的吸引力，而且可以使工作表看起来美观、容易阅读。<br>
+              1.增加边框<br>
+              用户在运用Excel制作表格时，如果不自己设置边框线，那么在屏幕上见到的报表样式，实质上是没有表格线的，所以必须增加数据的边框线或表格线。<br>
+              可先移动鼠标指针到A3单元格，单击该单元，以此为起始点选取增加表格线的活动单元格范围，拖动A3单元到终点R36单元，移动鼠标指针至菜单条，并单击“格式”选项，在其下拉菜单选项中选取“单元格”，单击该选项后，在单元格格式对话框中设置边框线即可。另外，在选取了设定范围后，也可通过使用“格式工具栏”上的“边框”命令按钮或右键弹出式菜单完成。<br>
+              给数据增加上边框线后，可以明确区分工作表中的各个范围。为了突出显示重点数据，我们还可以为数据添加颜色，使某些数据以阴影方式显示出来。选定第26行，即从A26单元到R26单元，按鼠标右键，在弹出式菜单设置单元格格式，选图案选项，选较淡的图案即可，然后用格式刷，把这一行的图案设置刷到第35、36行。<br>
+              2.设置字体<br>
+              为了突出显示每一部分的合计数据，使工作表更容易阅读，可使用字体加粗命令。选定A7单元到M7单元，单击格式工具是栏上的“B”加粗命令按钮即可，然后用格式刷，把一行的加粗字体设置刷到第13、19、26、35、36等行的相应位置。<br>
+              把概算价值及占总投资百分比的数据小数点后保留两位有效数字，可以使数据整齐、美观，易于阅读。选定F7单元到M36单元，点击格式工具栏上的增加或减少小数为即可。<br>
+              3.设置其他格式并准备打印<br>
+              由于我们要用A4纸进行打印，可进行页面设置，选择A4横向纸，进行打印预览。我们发现工作表被分成了若干页，这是由于字号及行和列较大造成的。我们应对其适当调整以便能正好打印1页或2页，当然有时也需要配合调整页边距。选定A2单元到R37单元，在格式工具栏上的字号大小框里输入“9”，在选住的同时按鼠标右键，在弹出菜单里选“行高”，在行高里输入“15”。列的宽窄宜用手工拖动，例如调整C列宽度，先移动鼠标指针至C列和D列交界处，并单击之，此时指针改变成一个带双向箭头的指针，点住该处指针不放，向右或向左拖动即可。<br>
+              三、使用工作表<br>
+              根据前面的功能需求分析，我们知道，对于不同工程项目的概算汇总表，纵向列数不变，变化的只是横向子项多少。我们只要建立好一个工作表后，其它项目的概算汇总表，只是增加或删除行的问题。由于公式是相对引用，删除行后，工作表里的公式相对变动，不需作任何改动就可使用。而增加工程子项，插入行后，相应的公式也可随时变动，需增加该项的公式并修改其所属部分的公式。<br>
+              当这个系统建立好后，我们只需输入单个项目的数量，概算价值里的水、暖、工艺设备、强电、弱电、其他及建筑技术经济指标里的单位土建造价，概算价值里的土建、每一子项及每一部分的纵向、横向合计及占总投资的百分比就会自动计算出来，不需人工计算及输入，可大大减轻我们的工作量，同时，也提高了工作表的正确性。 
+            </p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

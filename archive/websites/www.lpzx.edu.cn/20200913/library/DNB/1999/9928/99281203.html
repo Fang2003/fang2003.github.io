@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在Windows 98中打印磁盘文件列表几点说明</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>28 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 在Windows 98中打印磁盘文件列表几点说明</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在Windows 98中打印磁盘文件列表几点说明 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　《在Windows 98中打印磁盘文件列表》一文发表后（刊于今年6月28日25期《电脑报》12版），许多读者纷纷来函询问操作中的有关细节问题，现将这些问题归纳后一并答复如下：<br>
+　　<b>可添加到“PRNDIR.BAT”文件的DIR>PRN命令中的参数及其含义</b><br>
+　　这一问题对于那些从DOS时代走过来的读者来说，应该是非常简单的——在Windows 98中采用“DIR>PRN”命令打印磁盘文件列表实际上是借用DOS的DIR命令及转向功能，即将DIR的结果从显示器转向到打印机输出，几乎可以使用DIR命令的所有参数（／P除外），现将这些参数的作用简要介绍如下：<br>
+　　DIR／W>PRN，采用横排方式打印磁盘文件列表（一排显示5个文件）。<br>
+　　DIR／A>PRN，打印所有属性的文件（包括隐藏文件和系统文件）。<br>
+　　DIR／O[排序规则]>PRN，按照某种排序规则对相应目录进行排序后打印，若[排序规则]为N，即变为DIR/ON，则表示按文件名为序，[排序规则]还可为E、D、S、G等参数，具体含义可参考任何一本DOS书。<br>
+　　DIR／S>PRN，同时打印当前目录及其所有子目录下的磁盘文件列表。<br>
+　　DIR／L>PRN，采用小写方式打印磁盘文件列表。<br>
+　　DIR／B>PRN，打印磁盘文件列表时只打印目录名、文件名和扩展名，而不打印日期、时间、文件大小等辅助信息。
+　　另外我们在为DIR>PRN命令添加参数的过程中还应注意以下两点：<br>
+　　1. 可同时为DIR>PRN命令设置多个不同参数以更好的满足日常操作的需要。<br>
+　　2. 在打印磁盘文件列表的操作中不能使用DIR的／P（暂停显示）参数，否则系统将处于无限期的等待状态，并且没有任何提示，很容易让人误认为系统发生死机故障。<br>
+　　<b>将某个目录及其子目录下的所有文件名一并打印出来</b><br>
+　　上面已经提到，我们只要将“PRNDIR.BAT”文件的内容修改为“DIR／S>PRN”即可实现将当前目录及其所有子目录中的磁盘文件列表，全部一次性打印出来的目的，使用非常方便。<br>
+　　<b>如何使该程序打印中文文件名</b><br>
+　　采用DIR>PRN命令打印磁盘文件列表时，系统并没有使用Windows 98的打印驱动程序，而是在绕开Windows 98的基础上直接将打印信息传送到打印机中，这也就是采用此方式打印磁盘文件列表时速度比较快的原因，但同时它也导致极少数打印机不能正确打印中文文件名。<br>
+　　若用户使用的是带有汉字库的打印机（如AR3240、LQ1600K等），采用上述方法打印磁盘文件列表时就可直接打印中文文件名，不会出现任何问题；而当用户使用的是那些不带汉字库的打印机时（如某些低价位的激光、喷墨打印机），由于系统和打印机都没有提供对汉字的支持，因而该命令就不能直接打印中文文件名（所有的中文文件名都将显示为乱码）。对于这一问题，我们只需在打印前加载某种汉字系统及打印字库、为系统添加打印字库支持功能即可（如加载UCDOS、CCDOS等汉字系统）。假设某用户使用的是UCDOS，则我们应将“PRNDIR.BAT”文件修改为：<br>
+　　C:\UCDOS\RD16 ；读取显示字库<br>
+　　C:\UCDOS\KNL  ；加载UCDOS核心程序<br>
+　　C:\UCDOS\RDPS ；读取打印字库<br>
+　　C:\UCDOS\PRNT ；加载打印驱动程序<br>
+　　DIR>PRN       ；执行打印操作<br>
+　　C:\UCDOS\QUIT ；退出UCDOS<br>
+　　如何实现直接打印任何目录中的文件列表的目的<br>
+　　《在Windows 98中打印磁盘文件列表》一文所介绍的方法主要是针对某个具体文件夹操作的，也就是说我们只要在“资源管理器”或“我的电脑”中右击某个文件夹并执行快捷菜单上的“打印磁盘文件列表”命令即可将该文件夹中的磁盘文件列表全部打印出来，但有些用户反映不想先选择目录后打印，而希望采用某个简单的方法实现直接打印指定目录中的磁盘文件列表，这也是很容易办到的。我们只需将“PRNDIR.BAT”文件的内容修改为“DIR ％1>PRN”即可，此后用户需要打印磁盘文件列表时只需依次单击“开始”、“运行”，打开Windows 98的“运行”对话框，并在“打开”栏中输入“PRNDIR 欲打印目录名”命令即可达到目的。另外，我们在使用此方式时还应注意以下几点：<br>
+　　1. 欲打印的目录名中若包含有空格（如“C:\Program Files”），则用户在输入这些目录时一定要使用双引号将目录名括起来（即应采用PRNDIR“C:\Program Files”命令的形式），否则打印会出错。<br>
+　　2. 采用此方式后，原有的通过右击文件夹并执行“打印磁盘文件列表”命令的方式继续有效。<br>
+　　3. 利用此功能，我们不仅可打印任何目录，而且还能实现随意给DIR添加不同参数、实现根据需要随时自定义打印方式的目的。为此，我们应将PRNDIR.BAT文件的内容修改为“DIR ％1 ％2>PRN”形式，并按《在Windows 98中打印磁盘文件列表》一文介绍的内容进行其它有关设置即可。此后我们只需在“运行”对话框中输入“PRNDIR C:\Windows/s”命令，即可实行将Windows 98目录连同其下所有子目录中的文件，全部打印出来的目的。<br>
+<b>(湖北　胡锦承)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/28/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99281203.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

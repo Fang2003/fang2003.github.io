@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 通过修改注册表在NT中使用五笔输入法</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+通过修改注册表在NT中使用五笔输入法<br><br>&nbsp; &nbsp; 你可以通过修改Windows 2000注册表编辑器方法来完成。以Windows 2000和Windows 98 SE双系统为例：<br><br>&nbsp; &nbsp; 1.将Windows 98 SE装五笔型码输入法（版本4.0）系统安装目录的SYSTEM子目录下如下两个文件：WBX.IME和WBX.MB，直接拷贝到系统安装目录下的SYSTEM32子目录。<br><br>&nbsp; &nbsp; 2.在Windows 2000系统中运行注册表编辑器regedit，打开HKEY_LOCAL_MACHINE／SYSTEM／CurrentControlSet／Control／Keyboard Layouts分支，在此目录下添加一个新的主键，键名为E0200804。在这个主键下建立三个字符串值：IME file、Layout file、Layout text，键值分别为：WBX.IME 、kbdus.dll（注意：这个健值在Windows 98 SE中是kbdus.kbd）、王码五笔型。<br><br>&nbsp; &nbsp; 3.右击屏幕右下方输入法指示器，在输入法设置中进行添加，选出选项“王码五笔型”后确定即可。这样，Windows 2000中也就有了五笔型码输入法（版本4.0）。（浙江 许伟昆）
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20010423091657
+<div align="center"><a href="xwpl_871.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

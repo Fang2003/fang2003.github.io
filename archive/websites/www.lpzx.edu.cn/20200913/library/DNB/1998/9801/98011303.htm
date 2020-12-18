@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用QBASIC制作五彩缤纷的烟花<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> 
+        &nbsp; 该程序是用CIRCLE语句画出六个圆弧模拟烟花。为了使效果更逼真，使用一个一维数组存放圆弧半径，因此，烟花出现时，圆弧由小到大扩散，扩散速度由快到慢，圆环由厚到薄，最后消失。图案表现出多维变化的效果。<br>
+        　　程序清单如下：<br>
+        SCREEN 13<br>
+        DIM col(10)<br>
+        col(0)=9:col(1)=10:col(2)=11<br>
+        col(3)=12:col(4)=13:col(5)=14<br>
+        DIM a(150)<br>
+        b=150<br>
+        FOR i=1 TO 150<br>
+        b=b*0.95<br>
+        a(i)=150－b<br>
+        NEXT i<br>
+        rept:<br>
+        x=INT(319*RND(1))<br>
+        y=INT(100*RND(1))<br>
+        z=INT(6*RND(1))<br>
+        FOR i=1 TO 75<br>
+        IF i&gt;68 THEN GOTO sk<br>
+        CIRCLE (x,y),a(i),col(z),0,0.6<br>
+        CIRCLE (x,y),a(i),col(z),1.046,1.646<br>
+        CIRCLE (x,y),a(i),col(z),2.094,2.694<br>
+        CIRCLE (x,y),a(i),col(z),3.139,3.739<br>
+        CIRCLE (x,y),a(i),col(z),4.187,4.787<br>
+        CIRCLE (x,y),a(i),col(z),5.232,5.832<br>
+        sk:<br>
+        fOR k=1 TO 3000 STEP 10:NEXT k<br>
+        IF i&lt;10 THEN GOTO skip<br>
+        CIRCLE (x,y),a(i－10),0<br>
+        skip:<br>
+        NEXT i<br>
+        FOR k=1 TO 10000 STEP 1:NEXT k<br>
+        GOTO rept<br>
+        END</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

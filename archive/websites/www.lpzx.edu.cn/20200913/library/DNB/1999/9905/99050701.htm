@@ -1,0 +1,59 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>驱 动 程 序——让各种硬件正常工作的程序</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#480024"><font face="黑体" color="#004080"><p
+        align="center"></font><big><strong><font color="#FFFFFF"><big>驱 动 程 序</big>——让各种硬件正常工作的程序</font></strong></big></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　初涉电脑的人，可能遇到过这样的现象：将光盘放置光驱中，机器却找不到光驱，这是什么原因呢？原因很简单，就是光驱驱动程序没有安装。其实在我们平时使用电脑过程中，不仅仅只是光驱需要安装驱动程序，还有如声卡、显卡、解压卡、打印机等都需要安装驱动程序。<br>
+        　　一般来说，驱动程序的作用是为操作系统或应用程序提供控制硬件的能力。可以说没有合适的驱动程序我们根本不能发挥或不能充分发挥这些设备的功能。<br>
+        　　光驱的驱动程序在DOS下安装，作为一个可安装的设备驱动程序，它为DOS访问光驱提供接口，除了安装光驱的设备驱动程序外，还必须用MSCDEX.EXE来提供对光驱的访问。光驱的驱动程序是在CONFIG.SYS文件中通过DEVICE命令来调入的, 
+        MSCDEX.EXE程序可放在AUTOEXEC.BAT文件中，让它自动运行，这两个文件缺一不可。如果配置文件或自动批处理文件被删除或发生了改变，使光驱的驱动程序不能正确调入，就会出现找不到光驱的现象。此时要检查一下这两个文件是否存在，若不存在，可使用它们的备份文件(为安全起见,最好把CONFIG.SYS、AUTOEXEC.BAT两个文件备份)，若文件还存在，则检查一下文件的内容，是否正确调入了光驱的驱动程序，并运行了MSCDEX.EXE，你可以把光驱的驱动程序重新安装一遍或自己进行一些必要的修改，系统就会识别光驱了。 
+        <br>
+        　　声卡也必须安装驱动程序，这主要是针对WINDOWS的安装，声卡驱动涉及到硬件的设置问题， 
+        DOS下一般不需要驱动程序，玩游戏偶尔要求设置BLASTER变量，比如SET 
+        BLASTER=A 220 I5 D1。如果玩游戏时声卡不能发声，主要是声卡设置不对，如声卡类型、中断值、I/O端口和DMA值，如你对声卡类型不熟悉，可选择SOUND 
+        BLASTER试验一下，一般情况下是可以的。<br>
+        　　显示卡驱动程序的安装，主要是针对WINDOWS和一些流行的绘图软件，比如：AUTO 
+        CAD和3DS，WINDOWS驱动程序只需要安装一次，所有WINDOWS软件都使用统一的显卡驱动程序。笔者曾遇到过这样一种现象，安装了WINDOWS95后，立即就玩80分游戏，结果画面模糊不清，究其原因是没有安装显示驱动程序。现在的显示卡都是VGA兼容的，若不安装WINDOWS显示驱动程序，则使用VGA模式，它只有16色，而多媒体光盘几乎都是用256色以上，故画面就不清楚了，显示卡至少要附带WINDOWS下的驱动程序，它的应用是最广泛的。不同显示卡的驱动程序是不同的，一般来说，它们是不通用的，在WINDOWS下安装很简单，一般选择从磁盘安装再选自动安装方式，只要在WINDOWS中运行它们的安装程序就可以了。有些非自动安装方式，你要在WINDOWS设置程序中设定。而DOS下的安装是针对某一个程序的，不同软件有不同的驱动程序。相对WINDOWS下的安装DOS显示驱动程序的安装稍微麻烦一点，前提是必须随卡提供这方面的驱动程序。具体安装方法见参考显示卡说明书。<br>
+        　　解压卡同样需要驱动程序，它是随卡提供的，它的安装也很简单，运行自动安装程序就可以了。硬件设置为默认值（如中断值、DMA、视频I/O地址、声卡I/O地址等），若播放出现异常现象，比如画面缓慢不连续等，这一般是中断冲突引起的，你可能要检查一下是否是其它设备占了此中断值。值得注意的是，主板BIOS里关于PCI和PNP设置，你要参考主板BIOS设置详细内容。<br>
+        　　打印驱动程序，在WINDOWS下只需要安装一次，别的WINDOWS应用软件就可利用它了，打印机一般不提供DOS下的驱动程序，因为没有统一的标准，偶尔有些打印机会为一些软件提供驱动程序，如AUTOCAD。<br>
+        　　随着科学技术的日新月异的发展，软件和硬件也在飞速地向前发展，不断有新的产品出现，这也给我们带来了“驱动程序”问题，比如UCDOS软件，它虽附带了很多种打印机驱动程序，可还是很多不在其列。如果我们使用的打印机也不在这范围内，怎么办？可以选一和其打印机型号兼容的驱动程序，一般来说可以解决问题，如STAR 
+        AR340可选EPSON 1600K（笔者所使用的打印机就是这样处理的）。<br>
+        　　除了上面所提到的这些，还有些硬件需要驱动程序。硬盘之所以不需要驱动程序，是因为在主板BIOS里固化了控制（操作）硬盘的程序代码，软驱也是同样情况。<br>
+        　　驱动程序是和硬件多样化及迅速发展息息相关的，不用安装驱动程序当然方便，但却不能让我们及时享受新技术带来的方便与快捷，还是请做好心理准备吧，多学点，多懂点，多多益善。<strong>(江苏　许建华)</strong></span></font></p>
+        <p align="right"><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

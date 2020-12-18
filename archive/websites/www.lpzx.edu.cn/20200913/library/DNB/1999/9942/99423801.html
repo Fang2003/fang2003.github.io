@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 3D MAX神奇的Expression控制器</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 3D MAX神奇的Expression控制器</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 3D MAX神奇的Expression控制器 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Autodesk公司的3D MAX是一套功能强大的动画制作软件，让你在普通PC上就能做出工作站级的三维效果。它的Expression控制器是一个由用户自己定义数学表达式来决定它的输出的动画制作工具，几乎可应用于所有的动画参数。利用它可以很容易地做出一些用定义关键帧很难或根本不能想象的动画效果。<br>
+      　　<a href="images/381.gif" target="_blank"><img src="images/thm381.gif" width="100" height="60" align="left" alt="图1" border="0"></a>下面我们就用一个简单的例子来学习这个功能强大的控制器。在这个实例中，我们将制作一个简易的汽车模型，然后给汽车的车身赋予一个Expression控制器，让它在Z轴上的旋转受汽车方向盘的控制，产生用方向盘控制汽车前进方向的动画效果。由于主要是为了学习Expression控制器，所以本例中的汽车模型就用一个抽象的立方体来代替。<br>
+　　打开3D MAX,在TOP视窗中新建一个Length值为150,Width值为80,Height值为40的立方体BOX01作为车体，再生成一个Radius1值为30,Radius2值为2的圆环Torus1。单击工具行中的Align钮，在TOP视窗中点取刚生成的车身BOX01，在弹出的对话框中选取Align Position\x Position;Current Object\Center;Terget Object\Center等选项;单击OK退出。击活Left视窗，在Left视窗中生成一个R值为2,Height值为30的圆柱体Cylinder01,单击工具行中的Align钮，在TOP视窗中点取刚生成的圆环，在弹出的对话框中选取Align Position\x Position,Y Position,Z Position;Current Object\Pivot Point,Terget Object\Pivot Point等选项，并单击OK退出。选取圆柱体Cylinder01，单击工具行中的Select and Rotate钮，单击工具行中的Restrict to Z钮，再单击视窗底部的Angle Snap Toggle钮，再在TOP视窗中按住键盘上的Shift键旋转圆柱体120度，在随后弹出的Clone Options对话框中选取Object\instance，设置Number值为2,单击OK退出。<br>
+      　　<a href="images/382.gif" target="_blank"><img src="images/thm382.gif" width="100" height="79" align="left" alt="图2" border="0"></a>选中圆柱体Cylinder01，按住键盘上的Ctrl键，选取另外的两个圆柱体Cylinder02、Cylinder03,单击工具行中的Select 
+      and Link钮，在任意视窗中使这三个圆柱与圆环连结,在TOP视窗中生成一个Radius值为2,Height值为－40的圆柱体Cylinder04，单击工具行中的Align钮，在TOP视窗中点取圆环Torus01，在弹出的对话框中选取Align 
+      Position\x Position,Y Position;Current Object\Center;Terget Object\Pivot 
+      Point;单击OK退出。选取圆柱体Cylinder04，单击工具行中的Select and Link钮，在任意视窗中使圆柱体Cylinder04与圆环连结。<br>
+　　选取圆环，单击工具行中的Select and Move钮，再单击工具行中的Restrict to Y钮，在Front视窗中将圆环向上移动到方向盘的支撑轴Cylinder04没有露出车身的位置，在TOP视窗中将方向盘移动到车身1/3的位置。<br>
+      　　<a href="images/383.gif"><img src="images/thm383.gif" width="100" height="62" border="0" align="right" alt="图3"></a>单击工具行中的Select 
+      and Rotation钮，再单击工具行中的Restrict to X钮，在TOP视窗中将圆环旋转大约30度，单击工具行中的Select and 
+      Link钮，在任意视窗中与车身BOX01连结。现在我们已经制作了一个简单的汽车模型(图1)。<br>
+      　　下面我们将分别给汽车方向盘和车身指定相应的动画控制器。单击工具行中的Track View钮，弹出Track View编辑窗口，为了排除一些视觉上的干扰，我们隐藏一些不需要的项目。<br>
+　　单击左上角的Filter钮，设置如图2，单击OK退出。<br>
+　　在Track View的层级窗口中，选取Torus01\Transform\Rotation:TCB Rotation选项,单击工具行中的Assign Controllers钮，在弹出的对话框中选取Euler XYZ,单击OK退出。在层级窗口中选取Box01\Transform\Rotation:TCB Rotation,单击工具行中的Assign Controllers钮，再选取Euler XYZ,单击OK退出。<br>
+　　这样做的目的，是为了获取可存取单个坐标轴的控制器Euler XYZ。在层级窗口中展开Box01\Transform\Rotation:TCB Rotation\Euler XYZ,选取Z Rotation\Bezier Float,单击Assign Controllers钮，选取Float Expression,单击OK退出。<br>
+　　在层级窗口中选取Box01\Transform\Rotation:Euler XYZ/Z；Rotation:Float Expression,单击鼠标右键，选取Properties项，弹出如图3所示的Expression控制器的属性编辑窗口。<br>
+　　在Expression控制器中有两种变量可供使用，第一种是标量（Scaler)，另一种是向量（Vector）。在CreateVariables\Name中输入变量名，然后指定它是标量还是向量，单击Creat钮，变量名就出现在相应的区域中。如果它是标量，则初始值为0；如果它是向量，则初始值为[0，0，0]。在下面的两个按钮中，Assign to Constant钮赋予变量一个定值，Assign to Controller将把一个与变量值匹配的控制器输出值赋予变量，单击该钮后，弹出Track View Pick对话框，如果控制器输出数据类型与变量类型匹配，则相应的控制器用深色显示。Tick Offset参数指定变量的时间偏移量值，其值可正可负。Expression区域用于输入数学表达式;Description区域则可输入对该表达式的描述，下面区域是列出的能被Expression控制器调用的数学函数和Expression控制器的保留字，这几个保留字不能作为变量名（除此之外，还有e、pi、TPS不能作变量名,e表示常量变2718,pi表示常量31415,TPS表示每秒的tick数4800）。指定了相应函数后，单击Evaluate钮最后求值，如果表达式有错误，将弹出相应的警告框。<br>
+　　下面我们为车身指定一个具体的Expression值。在Creat Variables Name中输入a,选取Scalar项，在Tick Offset中输入“－480”（这将使其旋转滞后3帧），单击Create,再单击Assign to Controller,在弹出的Track View Pick中选取Torus01\Transform\Rotation:Euler XYZ/Z选项和Rotation:Bezier Float选项，单击OK，在Expression编辑窗中输入a/4,单击Evaluate。现在我们已经完成了整个Expression控制器的设置。<br>
+　　关闭Track View编辑窗口，选取圆环Torus01,单击工具行中的Select and Rotate钮，将坐标系锁定为Local坐标系，单击工具行中的Restrict to Z钮，在Top视窗中旋转圆环，你将看到除了圆环旋转外BOX01也跟着旋转。如果最后在Z轴为圆环的旋转指定一段动画，而为车身BOX01在Y轴的位移指定一段动画，你就会看到，车子在前进的同时，随着圆环在Z轴的旋转而旋转，车身的转速是圆环转速的1/4，且旋转滞后3帧。你也可以试将a/4改为a/2或别的函数来检验效果。<br>
+　　Expression的功能实在非常强大，用好了它许多问题都会迎刃而解。<br><b>(湖北　魏启明)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99423801.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

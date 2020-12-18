@@ -1,0 +1,103 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>趣味撞球--VB5应用程序一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; VisualBasic5.0(VB5)是一个功能强大的工具，它有一大特点就是易学易用，下面我们就通过写一个“趣味撞球”的程序来初步体会一下。<br>
+        &nbsp;&nbsp;&nbsp; 首先启动VB5，新建一个标准的EXE工程。此时可以看到，工程包括一个Form1框体。在Form1边框的右下角按住鼠标左键不放，拖动鼠标把Form1的面积改为适当大小，比如6930×4320。再在属性框中把Form1的ScaleMode属性改为3－Pixel，表明我们将以像素为我们的坐标计算单位，把Form1的StartUpPosition属性设为2－CenterScreen，使运行时窗体出现在屏幕正中。<br>
+        &nbsp;&nbsp;&nbsp; 现在，在控件面板上选取CommandButton（命令按钮）控件，为Form1添加Command1和Command2两个按钮控件，把它们的大小设为121×25，再在属性框中把Command1的Caption填为“＆GO”，把Command2的Caption填为“＆QUIT”，并把Command1放到框体的右上角，把Command2放到框体的右下角。<br>
+        &nbsp;&nbsp;&nbsp; 然后，在控件面板上选取Timer（时钟）控件，为Form1添加一个Timer1时钟控件。再在属性框中把它的Enabled属性改为False，Interval属性改为50，前一个值表示该时钟控件是否激活，后一个值决定该时钟控件产生Timer事件的间隔时间，我们将用它来控制小球的移动频率。<br>
+        &nbsp;&nbsp;&nbsp; 到此为止，我们已经完成了全部的界面设计工作。<br>
+        &nbsp;&nbsp;&nbsp; 接下来要做的全部工作就是填入程序代码了。<br>
+        &nbsp;&nbsp;&nbsp; DimBallXAsInteger<br>
+        &nbsp;&nbsp;&nbsp; DimBallYAsInteger<br>
+        &nbsp;&nbsp;&nbsp; DimAddXAsInteger<br>
+        &nbsp;&nbsp;&nbsp; DimAddYAsInteger<br>
+        &nbsp;&nbsp;&nbsp; DimHitXAsInteger<br>
+        &nbsp;&nbsp;&nbsp; DimWAsInteger<br>
+        &nbsp;&nbsp;&nbsp; DimHAsInteger<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubCommand1_Click()<br>
+        &nbsp;&nbsp;&nbsp; BallX=Int(Rnd(1)＊Form1ScaleWidth/10)＊5＋25<br>
+        &nbsp;&nbsp;&nbsp; BallY=Int((Form1ScaleHeight)/10)＊5<br>
+        &nbsp;&nbsp;&nbsp; AddX=－5<br>
+        &nbsp;&nbsp;&nbsp; AddY=－5<br>
+        &nbsp;&nbsp;&nbsp; Form_Paint<br>
+        &nbsp;&nbsp;&nbsp; Timer1Enabled=True<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubCommand2_Click()<br>
+        &nbsp;&nbsp;&nbsp; End<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_MouseMove 
+        &nbsp;&nbsp;&nbsp; (ButtonAsInteger,ShiftAsInteger,XAsSingle,YAsSingle)<br>
+        &nbsp;&nbsp;&nbsp; X=X－50<br>
+        &nbsp;&nbsp;&nbsp; IfX&amp;lt;15ThenX=15<br>
+        &nbsp;&nbsp;&nbsp; IfX&amp;gt;W－105ThenX=W－105<br>
+        &nbsp;&nbsp;&nbsp; HitX=X<br>
+        &nbsp;&nbsp;&nbsp; IfTimer1Enabled=TrueThen<br>
+        &nbsp;&nbsp;&nbsp; Line(16,H－5)－(W－6,H),＆HC0C0C0,BF<br>
+        &nbsp;&nbsp;&nbsp; Line(HitX,H)－(HitX＋100,H－5),0,BF<br>
+        &nbsp;&nbsp;&nbsp; EndIf<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_Paint()<br>
+        &nbsp;&nbsp;&nbsp; Cls<br>
+        &nbsp;&nbsp;&nbsp; W=Int((ScaleWidth－140)/5)＊5<br>
+        &nbsp;&nbsp;&nbsp; H=Int((ScaleHeight－10)/5)＊5<br>
+        &nbsp;&nbsp;&nbsp; BackColor=＆HC0C0C0<br>
+        &nbsp;&nbsp;&nbsp; Line(10,10)－(15,H),0,BF<br>
+        &nbsp;&nbsp;&nbsp; Line(W－5,10)－(W,H),0,BF<br>
+        &nbsp;&nbsp;&nbsp; Line(10,10)－(W,15),0,BF<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubTimer1_Timer()<br>
+        &nbsp;&nbsp;&nbsp; Form1Circle(BallX,BallY),4,＆HC0C0C0<br>
+        &nbsp;&nbsp;&nbsp; BallX=BallX＋AddX<br>
+        &nbsp;&nbsp;&nbsp; BallY=BallY＋AddY<br>
+        &nbsp;&nbsp;&nbsp; Form1Circle(BallX,BallY),4,0<br>
+        &nbsp;&nbsp;&nbsp; IfBallX&amp;lt;=20ThenAddX=－AddX<br>
+        &nbsp;&nbsp;&nbsp; IfBallY&amp;lt;=20ThenAddY=－AddY<br>
+        &nbsp;&nbsp;&nbsp; IfBallX&amp;gt;=W－10ThenAddX=－AddX<br>
+        &nbsp;&nbsp;&nbsp; IfBallY&amp;gt;=H－10Then<br>
+        &nbsp;&nbsp;&nbsp; IfBallX&amp;lt;HitXOrBallX&amp;gt;HitX＋100Then<br>
+        &nbsp;&nbsp;&nbsp; Timer1Enabled=False<br>
+        &nbsp;&nbsp;&nbsp; Form_Paint<br>
+        &nbsp;&nbsp;&nbsp; EndIf<br>
+        &nbsp;&nbsp;&nbsp; AddY=－AddY<br>
+        &nbsp;&nbsp;&nbsp; EndIf<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; 一旦程序代码输入完毕，你就可以按F5开始执行它，或是在File菜单里选取Make来生成EXE执行文件了，瞧，小球已经在你的屏幕上蹦来蹦去了。<strong>(重庆 
+        樊晓待)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月2日第42期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

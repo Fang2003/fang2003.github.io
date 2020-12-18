@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>WIN98与MVP3芯片组主板冲突的解决<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">最近，笔者在用大众VA503＋主板(VIA<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">MVP3芯片组)对K6－2/266CPU进行超频试验的过程中，遇到了WIN98与主板发生冲突的现象，引起声卡不能工作，并导致系统严重死机，后来费了一番周折，才发现问题所在。现将问题出现与解决的过程写出来，供大家参考。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">原来的Hot－569(TX430芯片组)主板与帝盟S70PCI声卡在WIN98下一直工作正常。后来为了测试K6－2/266CPU在100MHz外频下的性能，借了一块大众VA503＋的主板装到电脑中，此时未重装WIN98。启动系统后，不但没有听到进入WIN98时那熟悉的声音(表明声卡不工作)，而且还发生了死机。重装声卡的驱动程序后，在进行系统文件配置时发生死机。初步怀疑是在Hot－569主板下安装的WIN98的资源配置与VA503＋主板发生冲突，于是重装WIN98，同样在安装完声卡驱动程序后，系统在进行系统文件配置时发生死机；强行重新启动系统，提示放入声卡驱动程序的光碟，在安装完驱动程序后，重复上述的现象。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">为了查错，进入WIN98的安全模式中，可是从控制菜单的设备管理面板中找不到任何资源冲突的信息。又借了一块PCChips577主板(也是VIAMVP3芯片组)来试，依旧发生同样的问题。万般无奈之下，想到WIN95推出时间较久，兼容性好，不如装上WIN95试一试；果真不出所料，装上WIN95后，系统无任何问题，声卡一切正常。于是怀疑主板与WIN98是否有兼容性的问题，可看遍主板说明书和配送的光碟，没有任何关于这个问题的说明和补丁程序。会不会是主板上的BIOS太旧了，与WIN98有冲突，BIOS是否要升级才能解决这个问题?急忙上网进到大众的网址(www.fic.com.tw)，打开BIOS升级部分的链接页，一对照，目前该主板上的BIOS已是最新版了，唉，线索又断了。仔细查看主页上的条目，看到有关于主板工具和驱动程序的链接页，于是进入到该页面，上面有不少关于主板驱动程序、工具和补丁等内容，细看下来，见有一补丁，名为“VIAMINIPORTPATCHFORMsWIN98(602K)”，对应的注解说，WIN98对MVP3芯片组主板上的设备会误分配IRQ地址，该补丁就是纠正这个问题的，在威盛的网址上也有同名的文件供下载。看来这个补丁就是解决笔者系统问题的钥匙，于是毫不犹豫地将该补丁解压。重装WIN98后，先将这个容量为764K的补栋钉入”WIN98中，再安装声卡驱动程序，接下来是一路顺风，原来的问题一扫而光。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">至此，为了解决问题，已花费了不少时间和精力，可不明白，这么重要的补丁为什么不放在随主板的光碟上呢?不过值得一提的是，ISA接口的声卡在系统中不用这个补丁，也能在上述的情况下正常工作，可见这种问题并不是在任何的声卡中都发生。细想起来，PCI声卡和WIN98推出的时间都不久，与主板等在配合上可能还存在一些问题；其实PCI接口的声卡占用系统资源比ISA接口的声卡要多，它既占用了PCI部分的地址与中断口，同时为了使DOS下的游戏能发声，又要占用ISA接口声卡的地址与中断口，因此发生地址及中断口冲突的可能性就要大一些。</font></p>
+        <p class="ourfont"><font color="#369681"><br>
+        (广东Netbee)&nbsp; <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9845/1998/45/index.htm">《电脑报》1998年11月23日第45期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

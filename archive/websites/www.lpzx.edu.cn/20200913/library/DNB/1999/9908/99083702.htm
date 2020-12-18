@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>C 语 言 图 像 处 理 方 法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>C 语 言 图 像 处 理 方 法</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　1．图像平移<br>
+        　　图像平移只是改变图像在屏幕上的位置，图像本身并不发生变化。<br>
+        　　假设原图像区域左上角坐标为(x0, y0)，右下角坐标为(x1, y1)，将图像分别沿x和y轴平移dx和dy，则新图像的左上角坐标为(x0 
+        ＋ dx, y0 ＋ dy)，右下角坐标为(x1 ＋ dx, y1 ＋ dy)。坐标平移变换公式为：<br>
+        　　x′ = x ＋ dx<br>
+        　　y′ = y ＋ dy<br>
+        　　在屏幕上实现图像的移动分为四个步骤：<br>
+        　　⑴ 保存原图像到缓冲区。<br>
+        　　⑵ 擦除原图像。<br>
+        　　⑶ 计算平移后的新坐标。<br>
+        　　⑷ 在新的坐标位置重新显示原图像。<br>
+        　　其中，擦除原图像的方法与图形变换中擦除原图形的方法一致，在实现中仍采用XOR异或方式画图擦除原图像。对于新坐标值的计算还需要考虑边界情况，不要在图像平移后超出允许的屏幕范围。此外，如果采用C函数getimage()和putimage()来保存和恢复图像，则图像的大小不能超过64K。<br>
+        　　2．图像颠倒<br>
+        　　图像颠倒是指把定义好的图像区域上下翻转地显示在屏幕上。分析图像颠倒的过程，可发现每行的图像信息都保持不变，而只是改变了行的顺序，将第一行与最后的第n行相互交换，第二行与第n 
+        － 1行交换……，依此类推，从而实现了图像的颠倒。只需采用按行交换的方式，即可方便地修改缓冲区内容，实现图像的颠倒。基本步骤如下：<br>
+        　　(1) 用getimage()保存原图像，并擦除原图像。<br>
+        　　(2) 计算图像的高度，即行数height；计算图像宽度width；计算保存一行图像信息 
+        <br>
+        　　 height = bottom － top ＋ 1;<br>
+        　　width = right － left ＋ 1;<br>
+        　　linebytes = (width ＋ 7) ／ 8 ＊ 4;<br>
+        　　(3)利用行交换缓冲区linebuf在图像内存缓冲区中进行信息交换，即把第一行与最末行交换，第2行与第n－1行交换……，依此类推，直至全部交换完毕。<br>
+        　 (4)把交换后的图像缓冲区内容重新显示在屏幕上。<br>
+        　　3．图像镜像变换<br>
+        　　镜像变换是指将指定区域的图像左右翻转地显示在屏幕。分析镜像变换过程可以发现：每行图像信息的处理方式是相同的，而且行顺序不发生变化，只是每一行的像素信息按从左到右的顺序进行了左右颠倒，从而实现了镜像变换。因此，采用按行逐点变换的方式实现图像的镜像。<br>
+        　　首先，对于左上角为（left, top)，右下角为（right, bottom)矩形区域图像，给出其中任意点（x0, 
+        y0）镜像变换后的新坐标（x′, y′）的坐标变换公式：<br>
+        　　x′ = right － x0 ＋ left<br>
+        　　y′ = y0<br>
+        　　根据以上公式，对各个像素点计算新坐标后，直接把它显示在屏幕的相应位置上。<br>
+        　　如果完全逐点地进行交换，处理一个像素点就要读取一次像素值，从而降低了变换速度。由于像素点是顺序存放在各个bit位上，每读取一个字节就包含了8个像素点的信息，只需设置不同的位屏值bitmask，就可以获得不同像素点的信息。因此采用按行逐字节变换的方式，每读一次就进行8个像素点的变换，以提高变换速度。<br>
+        　　将一矩形区域的图像进行镜像变换的基本步骤如下：<br>
+        　　(1) 用getimage()把图像保存到内存缓冲区，并擦除原图像。<br>
+        　　(2) 计算图像高度，即行数高度height和宽度width；计算保存一行图像信息占用的字节数linebytes。计算公式如下：<br>
+        　　height = bottom － top ＋ 1;<br>
+        　　width = right － left ＋ 1;<br>
+        　　linebyte = (width ＋ 7) ／ 8 ＊4;<br>
+        　　(3) 对图像进行镜像。<br>
+        　　(4)释放内存图像缓冲区。<br>
+        　　4．图像旋转<br>
+        　　图像旋转是指把定义的图像绕某一点以逆时针或顺时针方向旋转一定的角度，通常是指绕图像的中心以逆时针方向旋转。<br>
+        　　假设图像的左上角为（left, top),右下角为（right, bottom)，则图像上任意点（x0, 
+        y0）绕其中心（xcenter, ycenter)逆时针旋转angle角度后，新的坐标位置（x′, 
+        y′）的计算公式为：<br>
+        xcenter = (right － left ＋ 1) ／ 2 ＋ left;<br>
+        ycenter = (bottom － top ＋ 1) ／ 2 ＋ top;<br>
+        x′ = (x0 － xcenter) cosθ － (y0 － ycenter) sinθ ＋ xcenter;<br>
+        y′ = (x0 － xcenter) sinθ ＋ (y0 － ycenter) cosθ ＋ ycenter;<br>
+        　　与图像的镜像变换相类似，也采用按行逐点变换的方式实现图像的旋转，其步骤如下：<br>
+        　　(1) 用getimage（）把图像保存到内存缓冲区，并擦除原图像。<br>
+        　　(2) 计算图像高度height，宽度width，及保存一行图像信息占用的字节数linebytes，计算公式与镜像变换的计算公式相同。<br>
+        　　(3) 对图像逐行进行旋转变换。<br>
+        　　(4) 释放内存图像缓冲区。<br>
+        　　值得指出的是，这种处理方法不够。为此可以采用另一种方法：先在图像变换缓冲区中处理完毕后，再将变换后的图像一次显示在屏幕上。这样可以取得较好的显示效果。</p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月01日第08期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table></center></div>
+</body>
+</html>

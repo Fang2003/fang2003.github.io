@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 我的系统优化</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'>目录</A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT  COLOR='#CC0000'>软件世界</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'>硬件周刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>33 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 我的系统优化</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 我的系统优化 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　想必有许多发烧友为了尽量挖掘整机潜力，动用各种方法优化Windows系统，比如修改CMOS设置、升级硬件驱动程序、动用优化软件、甚至深入注册表等。这样折腾下来，效果虽然是有一点，但耗去大量精力不说，其效果并不能持续很久，随着时间的推移和各种软件的增删，很快会发现Windows9x又不那么灵光了，系统运行的速度好象又变慢了，时不时还会蹦出蓝底白字的警告屏。相信许多朋友都被这些问题困扰，又没有好的解决方法，只好一遍又一遍地重装Windows9x。<br>
+　　我的优化方案是：安装两套操作系统Windows98＋WindowsNT 4.0。NT具有很多Win98不具有的优点，如NTFS文件系统、用户权限控制、强大的网络功能、超强的稳定性和多处理器支持等。安装Win98＋NT就是兼取Win98的游戏性能和NT稳定的工作性能，对你两方面的要求分别提供最佳平台。<br>
+　　现在大家的硬盘都不小，安装两套操作系统在空间上不成问题，下面以我实际经历为例，谈谈具体的步骤。<br>
+　　<b>1.分区</b><br>
+　　这是安装任何新系统之前都要做的工作。你可以按自己的实际需求划分，如果玩游戏多一些，那么给FAT多留一些，如果工作多一些，可给NTFS多准备些。在我的6.4G硬盘上是这样分的，C盘800M＋FAT16(必须是FAT16)，D盘2G＋FAT16(建议用FAT16),E盘2.2G＋NTFS(建议用NTFS)，剩下1G未分(准备留给Linux)。操作方法是：<br>
+　　进入DOS，用FDISK划分主分区C为800M的FAT16，将剩下所有空间划分为逻辑分区，在逻辑分区上划分2G的D区(FAT16)，剩下的空间以后再分。已经划分好的分区，如果想进行调整，得用PQMAGIC等无损分区软件，否则现有的数据统统丢失。另外如果C区已转化为FAT32，你也必须用PQMAGIC将它转化为FAT16。<br>
+　　<b>2.安装Windows98</b><br>
+　　相信这一步各位已驾轻就熟，但需要提醒的是在选择安装类型的时候选自定义方式，能不装的部件统统不装。如果是已安装好的Win98，可以下决心把Windows目录删除后重新安装。<br>
+　　<b>3.安装WindowsNT Workstation 4.0</b><br>
+　　NT的安装大有学问，建议初学者对照NT指导书，一步步进行。NTFS的分区也可以在安装时划分。安装完后应立即安装Service pack 5，可以解决很多问题。<br>
+　　别担心系统引导问题，NT安装完后会生成启动菜单，你可以选择是进入Win98还是NT。<br>
+　　<b>4.软件的安装</b><br>
+　　除游戏外的所有软件都应该安装在NT下（除非该软件不能在NT运行）。对已经安装在Win98下的软件，可以转移到NTFS分区，一般可以运行，实在不行可以在NT下再装一次。游戏软件自然都安装在Win98下。<br>
+　　<b>5.方便的使用</b><br>
+　　工作进行到这里，就已经对系统实施了优化，洁净的Win98保证了畅快淋漓的游戏，而稳重的NT则最大程度的保证你的工作不被破坏（NT已经为你做了大量的优化工作，不必再费劲搞什么优化）。如果是在家庭使用，还应考虑为其他人做以下事情：<br>
+　　(1)建立简明的启动菜单<br>
+　　去掉C:\boot.ini的只读属性，用记事本编辑，我的设置为：<br>
+　　[Boot Loader]<br>
+　　timeout=10<br>
+　　Default=C:\<br>
+　　[Operating Systems]<br>
+　　multi(0)disk(0)rdisk(0)partition(3)\WINNT=″如果你要编写公文、畅游网络，请进入NT Home工作室″ ／sos ／nodebug<br>
+　　multi(0)disk(0)rdisk(0)partition(3)\WinNT=″哎，伙计，如果你想考察眼睛对16色的忍耐程度，你可以试试这个″ ／basevideo ／sos ／nodebug<br>
+　　  C:\=″如果你想过关斩将、驰骋沙场，请进入Windows98游戏大世界″<br>
+　　(2)为NT建立自动登录<br>
+　　相信你的家人对NT一窍不通，让他们都学习NT的登录也是件麻烦的事，所以应该建立自动登录。过程如下：<br>
+　　1在用户管理器中添加1个隶属于user组的用户如　″1″，密码也设为″1″<br>
+　　2运行regedit.exe<br>
+　　3打开\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon子键<br>
+　　4双击DefaultUserName键，将其值改为刚才定义的用户名如″1″<br>
+　　5新建名为“DefaultPassword”字串值，其值取用户″1″的密码如″1″<br>
+　　6新建名为“AutoAdminLogon”字串值，其值取″1″<br>
+　　这样修改后，NT启动后自动进入用户″1″中，若想以其他账号登录，请在登录进程开始前按住″Shift″键。<br>
+　　(3)设置NTFS权限<br>
+　　可以设置开放式的权限规则，除了需要保护的文件外，其他不受保护。<br>
+　　(4)设置NTFS压缩<br>
+　　NTFS提供了文件级压缩，这样你可以把不常用的文件以压缩形式存放。<br>
+　　至此，优化工作基本完成。不论在NT下工作还是学习，都不会遇到烦人的一般保护性错误，更不会有突然死机带来的损失，若有软件图谋不轨，你可以用（Ctrl＋Alt＋Shift）将其杀灭。而用NT冲浪则更是它的专长，NT的拨号网络无须专门优化就可以工作得很好，再加上可以捆绑多猫同时上网，访问速度比Win98快多了。有NT负担工作的重压，Win98跑起游戏来可是不在话下，不仅运行速度会大幅提高，更可大大减少蓝屏出现的机率（我的Win98只玩游戏，启动时间只需18秒，关机更是只要1.65秒！P200、32M）。<br>
+　　当然，不论何种系统，装一个长驻内存的防毒软件还是必不可少的，既可避免CIH之类毁坏你的文件，又可防止BO之流开你的后门。<br><b>(陕西　励江)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/33/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99331201.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

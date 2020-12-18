@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 改变打包文件的图标 　　 </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+&nbsp; &nbsp; 当你做好了一个作品在朋友面前沾沾自喜时也许人家一眼就看出这是Authorware做的,因为它的图标一眼就看出来了。看了上面那条你该明白为什么Authorware生成独执行文件叫打包而不叫编译了吧！Authorware只是把你的文件接在RunA3W.exe之后记下偏移量罢了。所以打包后的文件图标就是RunA3W.exe的图标。要改这个图标只要找到Borland的Resource Workshop或其它语言的资源编辑工具打开RunA3W.exe,调出图标,改成你的样子再编译存盘,然后重新在Authorware中打包就行了。注意不要直接改打包后的文件,因为重新编译后的文件大小可能改变,影响了数据文件的偏移地址造成文件不能播放。第二个要注意的是现在的Windows程序有16位的,也有32位的,而32位的Resource Workshop我没见到,16位的RW改32位程序后不能正确编译回去。所以如果你要改的是3.5 RunA3W32.exe请试试Watcom C++ 11的Resource Editor或者用VC5.0/6.0在NT下进行资源编辑。 <br><br>
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001106100448
+<div align="center"><a href="xwpl_186.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

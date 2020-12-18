@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>发掘宝藏的好工具----ABOUTMYCACHE</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">发掘宝藏的好工具----ABOUTMYCACHE<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">当你上网时，为了提高效率，节约费用，通常是打开多个浏览器窗口，同时访问多个网址，你不仅要忙于在各个窗口之间来回切换，而且遇到重要内容还要马上存盘，忙得不可开交。这时你会想，如果浏览过的所有页面都能自动保存，在断开连接后从容不迫地翻阅，那该有多好!有的网友发现Netscape和IE都把所有下载的页面自动保存在硬盘的缓存目录中，但使用起来极不方便。于是这些缓存目录成了尚未开垦的宝藏，AboutMyCache(以下简称AMYC)的问世，为网友们提供了发掘宝藏的挖掘机!<br>
+        &nbsp;&nbsp;&nbsp; <strong>一、工作原理</strong><br>
+        &nbsp;&nbsp;&nbsp; Netscape的缓存功能使得用户可以离线浏览下载过的页面，但使用极不方便，用户若输入浏览过的网址，Netscape可以从Cache中调出页面，如果不记得网址，直接到Cache目录中打开HTML文件，则根本无法从文件名上判断其内容，因为Netscape将所有下载的文件都重新定义了唯一的文件名，以避免同名文件在Cache目录中相互覆盖，新文件名与旧文件URL资源地址的对应关系保存在Cache目录中的FAT.DB文件中，这是AMYC分析的对象。AMYC实际上是把所有访问过的URL资源地址写在Result.htm文件中，当用户用Netscape打开该文件，点击其中的地址时，Netscape将从缓存目录中恢复出原有的页面，这样用户就像联机上网一样重新浏览页面。AMYC只是巧妙地恢复了所有访问过的网址，而Netscape则真正负责离线浏览的工作。<br>
+        &nbsp;&nbsp;&nbsp; AMYC不像其它离线阅读工具那样具有预订网址、后台下载、定时查询更新等功能，严格地讲，AMYC并不是离线浏览器，它只是一个缓存分析工具。AMYC的这一思想，使得程序短小精悍，简单可靠，使用方便。<br>
+        &nbsp;&nbsp;&nbsp; <strong>二、安装与设置</strong><br>
+        &nbsp;&nbsp;&nbsp; AMYC被压缩成了一个ZIP文件，长度为53384字节，可以在网址http://www.imaginet.fr/～fcrevola/about/找到，其它很多共享软件站点也有。下载后要先将其展开到硬盘上，然后将其中的Ctl3dv2.dll文件拷贝到Windows下的System目录中。<br>
+        &nbsp;&nbsp;&nbsp; 运行程序Amyclle.exe，进入主菜单，点击Configuration(设置)按钮进入设置窗口，用户必须填写三个目录项： 
+        &nbsp;&nbsp;&nbsp; <br>
+        &nbsp;&nbsp;&nbsp; Cache directory:指Netscape的缓存目录Cache的完整路径名；<br>
+        &nbsp;&nbsp;&nbsp; Result directory:指AMYC生成的结果文件存放的目录名，默认是AMYC所在的目录；<br>
+        &nbsp;&nbsp;&nbsp; Run Netscape:指Netscape.exe所在的完整路径名，以便AMYC分析硬盘缓存文件后，调用Netscape程序供用户浏览。<br>
+        &nbsp;&nbsp;&nbsp; 输入路径时要注意，因为AMYC不支持长文件名，所以如果你的操作系统是WIN95，则不要在路径中输入长文件名，而要将长文件名改为缩写形式输入。比如Programfile改为Progra～1等等，否则程序将会警告出错。以上三个目录项必须正确无误，否则AMYC无法工作。<br>
+        &nbsp;&nbsp;&nbsp; 其它参数意义如下：<br>
+        &nbsp;&nbsp;&nbsp; Sortby:设定资源地址的排序方式，可以按日期、地址、地址加日期等方式排序；<br>
+        &nbsp;&nbsp;&nbsp; Showtype:在Result页面中显示文件类型，是HTML文件或JPEG、GIF文件；<br>
+        &nbsp;&nbsp;&nbsp; Showdate:显示浏览某页面的日期；<br>
+        &nbsp;&nbsp;&nbsp; Extracttitle:显示页面标题；<br>
+        &nbsp;&nbsp;&nbsp; Showlocalname:显示该文件在Cache目录中的文件名。<br>
+        &nbsp;&nbsp;&nbsp; 根据经验，显示日期、标题对浏览者的帮助很大。<br>
+        &nbsp;&nbsp; <strong> 三、使用方法</strong><br>
+        &nbsp;&nbsp;&nbsp; 设置好各项参数后，可以按主菜单中的StartAnalysis(开始分析)按钮，AMYC便开始分析Cache目录中的内容，并将结果写入Result.htm文件。<br>
+        &nbsp;&nbsp;&nbsp; 然后按RunNetscape(运行Netscape)按钮，启动Netscape并打开Result.htm，将Netscape的网络性能选项(NetworkPreference)中的缓存校验(CacheVerify)设定为Never,这时所有浏览过的URL地址都显示在页面中，你可以从容浏览了!<br>
+        &nbsp;&nbsp;&nbsp; AMYC提供了详细的帮助信息，均为HTML文件，展开在同一个子目录内，可用浏览器打开Index.htm文件以获得帮助。<br>
+        &nbsp;&nbsp;&nbsp; <strong>四、总结</strong><br>
+        &nbsp;&nbsp;&nbsp; AMYC作为一个Cache分析工具，具有精练、可靠、安装使用方便等优点，但也有其局限性，比如，用户感兴趣的主要是页面，对页面中的图形文件可在浏览器中直接处理，没有必要在Result页面中列出所有的非HTML文件(如JPEG、GIF)，因此AMYC应增加一个选项，在Result中只列出主页地址。当然，有兴趣的朋友完全可以再编写一个小程序，过滤掉Result.htm文件中的所有非主页资源的地址。<strong>(河南 
+        杨志宏)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

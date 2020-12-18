@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VB与VC混合编程中处理消息的方法</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.cpcw.com/'><IMG SRC='images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=link&user=issue-software&realm=software' TARGET='_blank'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-software&realm=software' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999'>1999 年</A> &gt; <A HREF='index.html'>26 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VB与VC混合编程中处理消息的方法</TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VB与VC混合编程中处理消息的方法 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现在越来越多的人采用VB与VC的混合编程：用VB快速开发出漂亮的界面以及外围处理程序，再用VC编写底层的各种操作，例如内存的操作、IO端口的操作等，VC中还可以嵌入汇编语言进行更底层的操作。<br>
+　　一般的做法是将VC程序编译成DLL，在VB中用Declare语句声明DLL中的函数，例如：<br>
+　　Declare Function SendCommand Lib  ″c:\program files\devstudio\wjfprojects\Hr0506dllMnsr\debug\Hr0506dllMnsr.dll″(CmdNum As Integer) As Boolean<br>
+　　声明以后，函数SendCommand 就可以当作VB自己的函数使用了。<br>
+　　但是，怎样将VC中的各种消息（例如各种底层的状态）及时通知VB并且VB能够及时处理呢？这是VB的一个缺陷：不能方便地处理自定义的Windows消息。例如在VC中自定义了两条消息：MW_TAPI_DATACOME，MW_TAPI_BUSY，在C语言中，用PostMessage（hWnd，MW_TAPI_CONNECTED，0，0）；语句可以很方便地将MW_TAPI_CONNECTED消息传递给窗体（窗体句柄为hWnd），在主回调函数中就可以处理了。但是要把这条消息传递给VB，并让VB处理这条消息，并不太容易。虽然在VB5.0以上的版本中，可以定义自己的事件（EVENT），但比较麻烦。这里介绍一种简单的方法，让VB巧妙地处理自定义的消息：<br>
+　　1．首先将VB窗体中TextBox控件Text1的句柄传递给DLL（注意：VB中的TextBox控件有hWnd属性）。<br>
+　　VB中：   ′声明DLL中的函数<br>
+　　Declare Function SendhWnd Lib   ″c:\program files\devstudio\wjfprojects\Hr0506dllMnsr\debug\
+Hr0506dllMnsr.dll″  ((ByVal hWnd As Long) As Boolean<br>
+　　′传递text1的句柄<br>
+　　SendhWnd（text1.hWnd）<br>
+　　VC中：//句柄接收函数<br>
+　　 declspec(dllexport) BOOL GethWnd(HWND hWnd1)<br>
+　　{  hWnd=hWnd1;<br>
+　　if (hWnd==NULL)<br>
+　　{  return FALSE; }<br>
+　　return TRUE;}<br>
+　　2．在VC中用API函数SetWindowText取代PostMessage直接发送消息给VB中的Text1控件：<br>
+　　SetWindowText(hWnd,″ MW_TAPI_DATACOME ″);<br>
+　　3．在Text1_Change事件中处理消息：<br>
+　　Private Sub Text1_Change()<br>
+　　Select case  Text1.text<br>
+　　case W_TAPI_DATACOME：<br>
+　　′消息处理语句<br>
+　　case   MW_TAPI_BUSY：<br>
+　　′消息处理语句<br>
+　　default:<br>
+　　′其他处理语句<br>
+　　End  Select<br>
+　　End Sub<br>
+　　以上方法在作者编写的“TAPI远程监控系统”中使用，效果很好。<br><b>(北京　吴俊峰)</b></TD></TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/26/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99261303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,118 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="771" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第40期 </a>&gt;&gt;<a href="wrapup.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">DMA也惹祸</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>故障现象：近日，低价购得一块火球八代8.4G硬盘。将其设为主盘，原来的3.2G硬盘设为从盘，以主从盘方式连接在第二个IDE接口上。开机后主板认出主从硬盘，硬件安装成功。重新分区后安装Windows98，一切顺利。接着按惯例装上显卡、声卡驱动程序以及主板VIA 
+              AGP驱动程序、VIA PCI IRQ Routing Miniport驱动程序以及磐英主板特有的Highpoint Xstore 
+              DMA驱动程序。按提示重新启动电脑，没想到在蓝天白云过后，硬盘灯长亮，屏幕再也没有反应。重复冷启动多次都不能进入Windows。查看Windows启动日志文件Bootlog.txt的最后一行，提示载入atapi.vxd失败，考虑可能是光驱连接线没有插紧。但重新检查所有接线后仍然不能进入Windows。<br>
+              故障分析：由于原来光驱均可正常使用，损坏的可能性不大，惟一的可能就是新装的硬盘引起死机。试着用安全模式启动，察看控制面板中的系统设置，没有任何冲突，但和原先不同的是磁盘驱动器中的两个硬盘不是显示具体的型号而都是显示“普通硬盘，类型47”，说明Xstore 
+              DMA驱动程序并没有起作用。反安装Xstore DMA程序后，Windows可以正常进入，但仍然不能将C盘设成DMA方式，可以肯定是DMA驱动程序造成Windows故障。<br>
+              故障处理：昆腾火球八代明明是可以支持DMA/66的，没道理不能使用DMA啊？带着这个疑问上网查询，在昆腾的主页发现火球八代DMA/66硬盘在使用1999年以前Award 
+              BIOS的主板上确实无法开启DMA功能。为解决该问题，昆腾在其主页上提供了一个小软件——Fbcrdma.exe，并说明在DOS下运行该软件可以将火球八代的DMA/66设置为DMA/33，必要时也可以再重新设为DMA/66。下载Fbcrdma.exe，重新启动进入DOS方式，运行软件后按提示将硬盘设为DMA/33，再进入Windows安装Xstore 
+              DMA，这下，系统设备中正确显示了硬盘的型号，并且可以将C盘设成DMA方式了，问题彻底解决。<br>
+              后记：由于早期的许多主板Award Bios不能提供对DMA/66的支持，有些甚至连DMA/33也不能开启。解决的方法有两个：一是在BIOS中关闭硬盘的DMA方式，不过这样一来硬盘只能使用PIO方式，性能要降低很多。另一个方法就是使用硬盘厂商提供的相关软件，将硬盘设成DMA方式。另外，升级主板BIOS也很重要，因为现在的硬盘和光驱都已完全支持DMA标准，而要想发挥出它们的优势，必须得到主板的有效支持。(北京 
+              杨凯英)<br>
+              编者注：通常有关硬盘的故障，我们可以在Bootlog.txt和Scandisk.log两个日志文件中查看启动时的记录，从中发现出问题的地方。还有一个地方就是在BIOS中开启S.M.R.A.T功能，让系统自动检查硬盘的故障所在。</p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

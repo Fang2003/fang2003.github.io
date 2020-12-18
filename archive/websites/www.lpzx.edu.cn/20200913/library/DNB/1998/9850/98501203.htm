@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在应用程序中获取调制解调器详细资料</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　开发一个利用调制解调器（以下简称为“猫”）进行串行口通信的应用程序，最大的麻烦莫过于如何面对牌号众多标准不一的猫。比如：每款猫都有各自厂家推荐的初始化命令、设置为硬件流控方式有的猫用“＆K3”，有的猫用“\Q3”等。一般的解决办法都是在程序中建立一个已知猫的数据库，放入对应的资料，运行时由用户选择一个适合（或兼容）自己型号的猫。用户觉得此法麻烦，开发者也疲于硬件资料的搜集和更新。<br>
+        　　实际上程序中利用Win95的注册表，可以得到本机猫的几乎所有资料,包括本机安装猫的个数、分别的名称及串口号、每只猫的厂家建议初始化串、命令前置码、命令结束符、命令回报、纠错控制命令、流量控制命令……得到了它们，程序便可准确地发送Modem控制命令及处理返回信息。<br>
+        　　注册表中存放Modem详细资料的位置在HKEY_LOCAL_MACHINE\System\Services\Class\Modem\XXXX\Settings与Responses等路径下，以下列举说明几个重要键值的含义：<br>
+        　　DriverDesc：调制解调器牌号名；<br>
+        　　AttachedTo：所连接的串行口号码；<br>
+        　　Prefix：调制解调器命令前置符，一般都为“AT”；<br>
+        　　FlowControl_Hard、Off、Soft：打开硬件或软件流控、关闭流控命令符；<br>
+        　　Compression_On、Off：打开或关闭数据压缩功能命令；<br>
+        　　Terminator：命令结束符，一般多为“&lt;cr&gt;”（回车符，程序中可用字符常量＃13）；<br>
+        　　SpeakerMode_Dial、Off、On：扬声器模式控制命令；<br>
+        　　SpeakerVolumn_High、Low、Med：扬声器音量控制命令；<br>
+        　　SpeedNegotiation_Off、On：串行口速率锁定或自动调整命令；<br>
+        　　\Answer下有Modem的摘机应答命令，\Hangup下有挂线命令，\Init下有最重要的Modem厂家建议初始化命令串，以及其它很多命令。<br>
+        　　VB、Delphi等可视化开发工具中都提供有对注册表的封装（如Delphi中的TRegistry，具体用法见在线帮助），利用它们可在程序中方便地查到上述各项之值，在此不多作说明。(湖北　马建国) 
+        &nbsp; <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月28日第50期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

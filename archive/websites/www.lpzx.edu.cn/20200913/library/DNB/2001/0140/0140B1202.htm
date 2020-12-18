@@ -1,0 +1,127 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>《电脑报》电子版CPCW.COM</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第40期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->数据库中参数化查询的实现<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->以VB为例，在数据库开发实例中我们知道，数据的查询共有两种，一种是直接使用SQL语句，如：在人事档案管理的实例中，可用“SELECT 
+              DISTINCT 文化程度 FROM TABEL1”这样的语句来查找出数据库中所有人员的文化程度，并且不会显示重复的这个字段。另外一种方法是定义一个QUERYDEF，实现参数化查询，方法如下：<br>
+              1.建立参数字符串，设置每个参数的名字和数据类型。首先用PARAMETERS子名说明参数，其格式是：<br>
+              PARAMETERS text datatype text datatype....<br>
+              其中text是一个字符串，它是参数的名字，如果参数名含有空格，则要用方括号括起来。datatype用来指定参数的数据类型，例如：<br>
+              SQL$=&quot;PARAMETERS 姓名 text职务 text文化程度 text&quot;<br>
+              这样就建立了一个可以按姓名、职务和文化程度查找人事档案中人员的参数，本例指定了三个参数，其数据类型都为text。<br>
+              注意，在PARAMETERS子句中，如果参数含有空格或圆点符号，则必须用方括号括起来。<br>
+              2.定义查询语句<br>
+              建立了参数字符串后，就可以定义查询语句，所定义的参数放在WHERE子句中，如：<br>
+              SQL$=SQL$&amp;&quot;SELECT  &quot; &amp; &quot;from tabel1&quot; 
+              &amp; &quot;where tabel1.姓名=姓名 &quot;&amp;&quot;andtabel1.职务=职务&quot;&amp;&quot;andtabel1.文化程度=文化程度&quot;<br>
+              3.建立QueryDef对象<br>
+              接下来，我们可以用上面的SQL语句建立一个QueryDef对象：<br>
+              Set QD=MyDB.createQueryDef&quot;Find Employee&quot;SQL$<br>
+              这样，通过上面的步骤，我们就建立了一个在VB中的参数化查询。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

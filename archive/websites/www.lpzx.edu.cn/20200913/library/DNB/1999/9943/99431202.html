@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- win98注册表应用三则</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; win98注册表应用三则</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 win98注册表应用三则 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　一、如何删除多余的DLL文件</b></p>
+　　在WIN98的System子目录下存有大量的DLL文件，这些文件可能被系统或应用程序共享。但是由于经常安装和卸载软件，就会在System目录下留下一些DLL垃圾文件。它们不但占用了硬盘空间，而且还降低系统的运行速度。删除它们的步骤如下：<br>
+　　1．运行“REGEDIT”， 打开注册表编辑器。<br>
+　　2．打开<br>
+　　HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\SharedDLLs分支。<br>
+　　这里SharedDLLs子键记录的就是有关程序共享的DLL信息，每个DLL文件的键值说明它已被几个应用程序共享。如果是二进制键值为“00 00 00 00”，则表明不被任何程序共享。（另外“0x00000001 （1）”是十六进制表示法）<br>
+　　3．System目录中删除对应的文件。
+<p><b>　　二、去掉桌面快捷方式的小箭头</b></p>
+　　在一些程序的安装过程中，会自动在桌面上创建该程序的快捷方式，方便了我们的使用。但是那个小箭头不太好看。我们可以利用修改注册表来去掉它。首先要注意此快捷方式是什么类型的，一般说来以.LNK居多，也有一些是.PIF（指向MS－DOS程序的快捷方式）。具体步骤如下：<br>
+　　1．运行注册表编辑器，打开HKEY_CLASSES_ROOT\lnkfile分支。<br>
+　　2．在lnkfile子键下面找到一个名为“IsShortcut”的键值，它表示在桌面的.LNK快捷方式图标上将出现一个小箭头。右键单击“IsShortcut”，然后从弹出的菜单中选择“删除”，将该键值删除。<br>
+　　3．关闭注册表编辑器，重新启动Win98，就可发现快捷方式图标上已经没有小箭头了。<br>
+　　同理，对指向MS－DOS程序的快捷方式（即.PIF）图标上的小箭头，则除了是打开HKEY_CLASSES_ROOT\piffile分支外，其余同上。
+<p><b>　　三、注册表的恢复法</b></p>
+　　1.重新启动并切换到MS－DOS方式。<br>
+　　2.进WINDOWS\COMMAND目录，键入SCANREG／RESTORE后回车。<br>
+　　3.进入界面后，可在五个注册表备份中选取所要恢复的，重新启动后即可。<br><b>（ 四川　傅炜）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99431202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

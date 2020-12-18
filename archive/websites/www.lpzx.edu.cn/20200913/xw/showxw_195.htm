@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 在Authorware中使用midi音乐 </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+&nbsp; &nbsp; 在用Authorware制作多媒体程序时，有时需要加入一些音乐做背景音乐，大多数的做法是使用一个声音图标，然后插入一个.wav的波形文件。但波形文件动辄几兆、几十兆，调用起来很慢，也占用了相当的磁盘空间。同时我们发现，midi音乐（.mid）旋律欢快，变化丰富，取材容易，而最令人欣喜的是其体积小，一首曲子只有几K至几十K。所以midi音乐非常适合做背景音乐。但是Authorware中不支持midi音乐，怎么办呢？这时你需要一些支持midi播放的外部函数库。在这里，我简单向大家介绍一下两种支持midi播放的库函数。 <br><br>&nbsp; &nbsp; 1.A4wmme.ucd(16位)或A4wmme.u32(32位) <br><br>&nbsp; &nbsp; 这两个文件是支持midi播放的外部库函数,一个是16位,一个是32位,把它们放在多媒体程序目录下，其使用格式为： <br><br>&nbsp; &nbsp; midiplay（″file″，tempo，wait） <br><br>&nbsp; &nbsp; midipause（） <br><br>&nbsp; &nbsp; midiresume（） <br><br>&nbsp; &nbsp; midistop（） <br><br>&nbsp; &nbsp; 其中file为要播放的midi文件的路径及其名称；tempo为播放的速率，若设为100即是100％的速率；wait应为T(true)或F(false) ，也可以是1或0，若为T时，则该midi音乐播放完毕后，再继续运行下一个图标，若为F时，则在播放midi音乐的同时运行下一个图标。midiplay为播放；midipause为暂停；midiresume为继续播放，用以恢复暂停； <br><br>&nbsp; &nbsp; midistop为音乐停止。 <br><br>&nbsp; &nbsp; 例：在D盘midi目录下有一文件名为music.mid的midi文件，首先拖一个计算图标至流程线上，双击打开,键入下列函数命令： <br><br>&nbsp;  （1） 播放 <br><br>&nbsp;  midiplay（″D:\\midi\\music.mid″,100,0） <br><br>注意要使用“\\”，而不是“\”，然后关闭计算图标时会弹出一个寻找支持midi播放的外部函数的对话框，选中要使用的函数库即可，本例中选的是A4wmme.u32。 <br><br>&nbsp;  （2） 暂停 <br><br>&nbsp;  midipause（） <br><br>&nbsp;  （3） 继续播放 <br><br>&nbsp;  midiresume（） <br><br>&nbsp;  （4） 停止 <br><br>&nbsp;  midistop（） <br><br>&nbsp;  2.midiloop.ucd或midiloop.u32 <br><br>&nbsp;  若是你想让midi音乐周而复始地播放，那就用这个外部函数吧！其格式为： <br><br>&nbsp;  loopmidi(″file″,tempo,wait) <br><br>&nbsp;  stopmidi() <br><br>&nbsp;  其用法和前者一样。 <br><br>&nbsp;  例： <br><br>&nbsp; (1)循环播放 <br><br>&nbsp;  loopmidi(″d:\\midi\\music.mid″,100,0) <br><br>&nbsp; (2) 停止 <br><br>&nbsp;  stopmidi() <br><br>&nbsp;  注意，这两种外部函数库的命令格式的写法不要搞混淆。至此，你就可以在你的程序中轻松使用midi音乐了。 <br><br>以上函数在Authorware4.0和Authorware5.0中调试通过。（完）
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001106100143
+<div align="center"><a href="xwpl_192.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

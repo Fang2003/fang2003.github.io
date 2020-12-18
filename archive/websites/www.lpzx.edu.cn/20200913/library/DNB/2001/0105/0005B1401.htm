@@ -1,0 +1,124 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>3D/MAX凹凸材质制作技巧</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{3D/MAX凹凸材质制作技巧}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 凹凸材质在三维动画制作中是常用的材质表现方式，但对初学者，此点却不易掌握。下面我们以制作鱼丸为例，教大家实现表面材质凹凸不平的方法和技巧。<br>
+              1.初始化场景，然后在视图中建一个Sphere球，到修改面板中制作，将球塌陷成NURBS物体。外观就这样完成了，各位可能会发现在NURBS球的两端有一点折皱，没有关系，因为真的鱼丸也是有折皱的。<br>
+              2.现在做材质，打开材质编辑器，从中选取一个样本球，将Ambient设为255250200；Specular设为白色，Specular 
+              Lever设为84，Glossiness设为42。现在按下Diffuse边的空白按钮，从窗口中选取Noise，按下OK，打开Noise 
+              Parameter卷展栏，将Color 1设置成255255235；color 2为白色。<br>
+              3.现在回到上一级菜单，我们要做鱼丸的凹凸表面了，进入Bump贴图通道，选择Mix，单击Color 1旁边的None按钮，选择Noise，在Noise 
+              Parameter里选取Turbulence，Low值设置为0.16。<br>
+              4.现在进入Mix的第二个贴图通道，也选Noise，将Size值设小一些，可以自己看着办，因为最终的效果可能不同。<br>
+              5.现在回到上一级的Mix材质，将Mix Amount设为50，我们看到样本球已经有凹凸感了，再回到最上级材质里，将Bump贴图拖到Displace贴图上，进行Instence关联复制，将Amount设为30，再把Bump贴图复制到Glossiness和Specular 
+              Lever上，也是Insternce关联复制，这样改其中的一个其它也会同时变化，提高了工作效率，这两个贴图的Amount值设为30。<br>
+              6.现在将材质赋予球体，渲染一下效果吧。因为没有碗和汤什么的，所以一粒鱼丸显得“孤独”了些，呵呵。<br>
+              7.我们再做一个汤勺，使这个画面也协调一些。先将鱼丸隐藏起来。然后在Front视图中画一个Circle圆，这是个二维图形，等一下我们将把它放样成汤勺的模样。<br>
+              8.到修改面板，将这个二维线条塌陷成NURBS线条，按下Sub-object打开次物体编辑，在Curve里选择它，按住Shift键，在Left视图里用Move向右边拖一点复制出一条曲线，在弹出的对话框中按OK，然后在Curve 
+              CV里将线条编辑。<br>
+              9.继续复制出许多线条，将它们形状调成样子，我们要将它作为横截面进行放样。<br>
+              10.调好后，按下NURBS工具栏里的ULoft按钮，然后从第一根线条开始选择，最后点取最后一条NURBS线条，我们看到汤勺的形状出来了，如果有线面相反的情况，勾选Flip 
+              Normal就行了。现在汤勺的头尾有个小洞，我们现将它补上，点取Create Cap Surface钮，就是刚才的ULoft左边的钮，然后点选破洞的线条就行了，如果面反了，同样勾选flip 
+              Normal就行了。<br>
+              11.现在打开材质编辑器，选取第二个样本球，在Shad Basic Parameter左边的下拉菜单里选择Phone，将Diffuse调成粉红色，高光为白色，Glossiness和Specular 
+              Lever调高一些，现在将它赋予物体，现在像一个塑料的汤勺了。最后将鱼丸移到汤勺中，渲染一下看看，挺有趣吧。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

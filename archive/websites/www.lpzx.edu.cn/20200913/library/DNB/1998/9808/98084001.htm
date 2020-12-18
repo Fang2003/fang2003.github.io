@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在MS5129主板上安装多能奔腾</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在《电脑报》的引导下，笔者于1996年9月份购得一台586多媒体兼容机，其配置是Pentium 
+        100 CPU、微星5129主板、16MB EDO内存、12G大脚硬盘、S3 Trio 64V＋ 1MB显卡、松下4倍速光驱、联讯MED2000声卡。因商家在外地配置，所以大部分资料都不全，特别是CPU没有任何资料能够说明为原包装，只见管脚面刻有IPP和四行说明是100的字迹。经过几个月的使用，没有发现什么问题，于是便大着胆子将其跳为Pentium 
+        120。开机启动PWIN32、PWIN95一切正常，再跳到Pentium 133却产生了频繁启动现象，看来此CPU只能跳高一档。跳在120MHz下使用了1个月没有发现问题，为了安全又跳回到100MHz。但在该CPU管脚面发现一块03mm2左右被碰起的漆膜。去年有很多文章介绍只要能刮下漆膜就是Remarked 
+        CPU。于是取下CPU，用螺丝刀在字迹上一刮，果然露出了原有字迹P75(Intel的CPU质量确实不凡，竟能跳高三档)。后同销售商交涉，将CPU退款，由此引来了CPU的升级。<br>
+        　　现在MMX CPU应为首选，本人的主板是MS－5129 V10版本，带有VER电压调查模块，使用多能奔腾应该没问题。但是，说明书上只介绍电压跳线为J7、J8、J9和J11两组，J7、J8全打开(Open)为338V，J8打开J7闭合(Close)为352V，J9、J11为将来备用。现在板上设置是J9的1－2闭合，J11全闭合。那么它是否支持低电压和MMX 
+        CPU所必需的双电源呢?看来要在J7、J8的跳法和J9、J11的使用上做试验了。首先对两只电压模块的输入输出端和跳线开关进行电阻测量。结果发现，当J11闭合时两只电压模块的输出端并联，J11打开时两输出端开路(双电压的条件具备了)。J9的1－2闭合时两模块的控制端并联，2－3闭合时两控制端开路，即一只模块(以下简称V1)控制端连接J7、J8和J9的1脚，另一只模块(以下简称V2)控制端连接J9的2脚。随后在未安装CPU的情况下进行通电检测，结果详见附表1(注：J9的2－3脚相连时J11必须打开，避免因V1、V2输出电压不同而相连损坏)，说明该主板支持双电源(当时误认为V2是CPU内核电源并由CPU自动调整)。因此购得一块盒装P166 
+        MMX CPU准备升级。<br>
+        　　首先将V1跳为338V(当时误认为V1是I/O电压)，V2的J9跳至2－3相连，J11全打开，频率跳为166，插上CPU启动电源，自检显示P166通过，装驱动程序却死机。此时立即检测V2电压，看是否由CPU自动调至28V，结果仍为36V，马上切断电源。为了安全又将V1跳为28V，V2与V1并联，即工作于单电源状态。再次启动，自检完成，但在安装光驱驱动程序时死机，删除光驱驱动程序，再次开机顺利通过。经一段使用，机内原有软件等均运行正常(单电压也能运行MMX 
+        CPU!)，但该主板能否支持要求的双电压，V1与V2哪个是CPU内核电源呢?于是又对主板V1、V2进行详细测量，见附图1。结果测得V2输出不但与CPU相连，而且还与板上高速缓存及其它芯片相连，而V1却只与CPU相连，这说明V1是CPU内核电源，V2才是I/O电源。现在V1可方便地设为28V，但V2固定在36V，能否使V2电压改为33V以达到CPU的正确要求成为关键。从附图上不难看出电压模块的输出电压受控于模块的外围线路，在不装CPU的情况下通电试验，当在V2控制端与共地端，即R196电阻上并联一只116K电阻时V2输出为33V，恰巧主板上J11跳线旁有一C180电容与R196并联，而该电容实际并没安装，该电容的焊盘正好用来安装增加的这只116K电阻。改装后重新跳线，安上CPU通电测试，电压已正确成为28V和33V，至此MS5129主板已适应多能奔腾的电源要求。但因原CPU使用单电源，V1、V2并联工作，现在CPU使用双电源低电压，所以V1的功耗增加，散热片很烫手，应在其上增加一小风扇强制散热或加大散热片面积，保证整机系统的稳定。<br>
+        　　现在主板虽已正常，可是光驱程序仍不能装载，怀疑原程序被破坏，重新安装，故障仍旧。后将CPU频率跳为50×2和55×2时装载成功，但总不能将CPU降级使用吧!新购CPU为锁频的，只能工作于2倍频和25倍频，并经几种软件测试均报为MMX型，因此不存在“假牌”问题。于是找来几十个光驱程序轮流试装，总算找到几个可以顺利装载并能正常工作的程序，其中TRICDSYS较理想，装载速度快，只占7K内存。<br>
+        　　此次的升级收获还是不小的，微机速度大幅提升，如装载一次PWIN95从开始到启动完毕仅需13分钟。再如原CPU工作在Pentium 
+        100时，PWIN32下的Xing 13解压速度为35帧/s，PWIN95的Xing 201解压速度为42帧/s，现在的Pentium 
+        166 MMX在PWIN32下升为48帧/s，PWIN95的Xing 201升为60帧/s，Xing 312为62帧/s。只是主板的BIOS版本较早，不认MMX 
+        CPU，只报Pentium 166。(辽宁　玉环)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期40版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

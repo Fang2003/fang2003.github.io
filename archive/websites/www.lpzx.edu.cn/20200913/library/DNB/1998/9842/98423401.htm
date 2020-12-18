@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>为什么安装WIN95失败<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp; 
+        　广西读者徐军来信问：我的电脑配置如下：Cyrix 6x86L－PR200＋ CPU、FYI－INTEL 
+        82430VX P55C主板(主板上的BIOS是Award modluer BIOS V4.51PG)、21G硬盘(自动侦测为：JTS 
+        CORPORATION CHAMPION C2100－2AF)、Trident 9600显示卡(1M显存)、ES1869声卡、16M内存、三洋8倍速光驱、索尼144M软驱。<br>
+        　　我的机子一直不能装上WIN95，主要问题是：安装WIN95后一旦重新启动时，就出现“安全关机”字样，格式化硬盘后安装也是这样，正常启动或在安全模式下启动都一样，在DOS下查看Bootlog.txt文件，发现C:\Windows\System\EMM32子目录下的EBIOSVXD文件不能成功安装，拔下声卡、光驱、软驱，安装时也是一样，请问是何原因，是否与BIOS版本有关，请专家给予解答。<br>
+        　　答：造成该故障有以下几种可能：<br>
+        　　1Award BIOS设置程序的BIOS FEATURES SETUP中有一个设置项：BootVirus 
+        Detection，当此项被设置为“Enabled”时，将防止程序写入硬盘引导扇区(给出警告)，其作用是防止病毒进入。但是安装WIN95时也要写入硬盘的引导扇区，如果该项被设置为“Enabled”，则无法正确安装WIN95。请你检查CMOS参数，若是这样，可把该项设置为“Disabled”，再安装WIN95。<br>
+        　　2光盘的安装文件有问题，更换光盘再试一试。<br>
+        　　3检查硬件，特别是检查内存条是否完全正常。曾经发现因为内存条故障致使WIN95不能正常安装的现象。<br>
+        　　4检查CPU工作是否正常。笔者曾遇到一例因CPU缺陷，安装WIN95或WIN97不能成功的例子，该机曾因为CPU风扇停转，造成CPU过热而受到损伤，在DOS下能够正常工作，而安装WIN95或WIN97均不能正常工作，与来信所说的现象相似。<br>
+        　　5是否有病毒作怪，也请你进行检查。<br>
+        &nbsp;&nbsp;&nbsp; 江西读者赵宁来信问：我有一台电脑(Pentium 133，内有传真卡，无光驱)。近来不知何故，从A驱能启动微机，也能转到C驱，但从C驱启动后就不能转到A驱，提示“A驱没有准备好”。<br>
+        　　答：高版本的DOS以及Windows系统在转入A驱动器时，要检查A驱动器中有无软盘存在，如果没有软盘(或者由于各种原因没有检测到已经装入驱动器中的软盘)，系统将给出A驱没有准备好的提示(软驱指示灯亮后熄灭)。如果你的软驱中的确插入了软盘，请检查软盘是否插好(可退出重新插入，听到“哒”声后说明插入到位)、软盘本身有无问题、软盘电源线和信号线、接口插座等是否接触良好。如果仍然不行，那么就要检查选盘电路了。如果选盘信号没有送达软驱，则故障出在软驱控制器，而如果有选盘信号，软驱不能接收(软驱指示灯不亮)，那么问题则可能出在软驱。在业余条件下不便检查选盘信号，可用交替法，即换一个软驱试一试。如果问题出在主板上的软盘控制器，可以另外插一块多功能卡连接软驱(注意修改CMOS参数)，如果是软驱的问题，则修理软驱即可<br>
+        &nbsp;&nbsp;&nbsp; 浙江温州读者陈继克问：我有一台兼容机，华硕TX97－E主板、16M 
+        EDO内存、Intel Pentium MMX 166 CPU、火球21G硬盘(分成：C盘11G，D盘和E盘各500M)、美上美6倍速光驱，操作系统为中文WIN97和MS－DOS 
+        6.22。<br>
+        　　1最近新购买了32M SDRAM，想问一下，在华硕TX97－E主板上可否将两种内存混用。如能用，能告诉我如何用吗?<br>
+        　　2最近机器上装了简体WIN98正式版，因贪便宜，把C盘转换成FAT32格式。发现在Windows状态下，光盘放入光驱后，只要一读光盘就死机(据我推测，可能是光驱进行死循环了)，只能重新启动。而在DOS状态下光驱却运行得很正常。我重装了光驱驱动程序和WIN98后，仍无法解决，请问怎样解决该问题?<br>
+        　　答：1无论72线(SIMM)还是168线(DIMM)的EDO内存，均采用5V电源，而SDRAM(168线)只采用3V电源。虽然主板上SIMM插槽和DIMM插槽 
+        的电源是分离的，但是它们的数据线却是相连的。由于大规模IC的闸间氧化层很薄，5V 
+        I/O信号将损伤3V的DIMM，所以在你的华硕TX97－E主板上不能混用这两种内存条。有的主板(如微星等)的DIMM插槽也支持5V的内存条，因此你可以同时使用SIMM和DIMM，但你也只能使用168线的EDO内存条而不能使用SDRAM。<br>
+        　　2估计你是把硬盘和光驱按照主、从方式连接在同一个IDE接口上。由于光驱只能在16位方式下工作，而你的系统又设置为32位模式，当然读光盘时就会出现问题。而在DOS环境下，由于都工作在16位方式下，则不会出现问题。在这种情况下，如果禁止使用IDE接口的32位模式，虽然可以解决问题，但是系统性能大大降低。请你把硬盘和光驱分别连接到两个IDE口(IDE1和IDE2)上，重新设置CMOS参数，这样就可以解决问题了。<br>
+        &nbsp;&nbsp;&nbsp; 湖北读者赵雄问：我的同学最近租了一台电脑，刚开始还正常，后来，在一次重新启动WIN95时，屏幕出现提示：“EMM386：Unrecoverable 
+        privileged operation error ＃01 － Press ENTER to reboot”，回车后却死机了，又重新启动，还是出现这样的情况，后来把Config.sys中的DEVICE=C:\WINDOWS\EMM386.EXE去掉，再重新启动却恢复正常了。机器的启动配置有：1. 
+        WIN95，2. GAME，3.DOS，只在选1时才出现上述情况，请问这是怎么回事？<br>
+        　　答：EMM386报错往往表示机器存在着硬件质量问题（内存的可能性最大）或软件冲突。你同学的机器在去掉EMM386后，WIN95能正常运行，说明内存应无问题，需要从软件方面来考虑。首先，WIN95与某些老版本的EMM386一起工作时会出问题，如果你来信中给出的Windows目录是Windows 
+        3.x的话，请更换使用WIN95自带的EMM386。然后在Config.sys中加入EMM386后重新启动机器，然后按F8键，选择BOOTLOG菜单，并用单步确认的方法启动WIN95，观察哪个步骤进行后EMM386报错，如果在调入Config.sys或Autoexec.bat中的某个程序时死机，可将该程序去掉或者调整EMM386的开关项，如果在启动WIN95的图形界面过程中死机，可在重新启动后打开C盘根目录下的BOOTLOG.TXT文件，查看最后几条记录，找出引起错误的程序，将之从System.ini或注册表中去掉。由于不了解你同学的机器出现错误的具体情况，上面介绍的只是解决问题的基本思路，供你参考。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月2日第42期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

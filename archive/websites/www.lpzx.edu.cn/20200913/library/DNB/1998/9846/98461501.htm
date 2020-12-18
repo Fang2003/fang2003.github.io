@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>ASP基础讲座（上）<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　各位“发烧级网虫”，你是否正在绞尽脑汁地完善自己的网页？你是否正费劲心思想要搞一个CGI程序？看到别人利用FOXWeb技术开发基于WWW的数据应用系统，你是否早已垂涎三尺？不用慌，我们将为大家提供最前沿的动态网页技术。今天为大家请来INTRANET＆ASP站点负责人LWW（地道的中国人哟）为大家先上一堂ASP基础课，包括最基础的交互界面设计及大家最关心的数据库访问技术，一起来看看吧。<br>
+        　　Active Server Pages (ASP，动态网页）是微软公司推出的一种用以取代CGI(通用网关接口,Common 
+        Gateway Interface)的技术。微软发布Win98时,同时推出了PWS4.0(个人WEB服务器,可在Win98光盘里的ADD－ONS目录里找到)，它本身支持对ASP2.0的解释执行,所以大家不用去找免费的服务器就可以体验一下ASP的简单和方便了。<br>
+        　　简单讲，ASP是位于服务器端的脚本运行环境，通过这种环境，用户可以创建和运行动态的交互式 
+        Web 服务器应用程序，如交互式的动态网页，包括使用 HTML 
+        表单收集和处理信息，上传与下载等等，就像用户在使用自己的CGI程序一样。但是他比CGI简单。更重要的是，ASP使用的ActiveX技术基于开放设计环境，用户可以自己定义和制作组件加入其中，使自己的动态网页几乎具有无限的扩充能力，这是传统的CGI等程序所远远不及的地方。使用ASP还有个好处，就在于ASP可利用ADO(Active 
+        Data Object,微软的一种新的数据访问模型,类似于DAO)方便地访问数据库,从而使得开发基于WWW的应用系统成为可能。<br>
+        <br>
+        　　<strong>如何使用ASP？ </strong><br>
+        　　还是让我们以一个例子来说明吧。我看到许多讲语言的书上都是以“Hello 
+        World”作为第一个例子，那么，就让我们也向世界问一声好吧。<br>
+        　　第一步：打开一个文本编辑器（比如，Notepad），输入以下代码：<br>
+        　　&lt;％ For i=3 To 7 ％&gt; <br>
+        　　&lt;FONT SIZE=&lt;％=i ％&gt;&gt; <br>
+        　　Hello World!&lt;BR&gt; <br>
+        　　&lt;％ Next ％&gt; <br>
+        　　然后以文件名Hello.asp存盘。由于.asp文件要由服务器端的ASP环境来解释，所以——<br>
+        　　第二步：你必须将它放在WWW服务器的目录下。在安装了PWS的Win98系统里,缺省路径是c:Wroot,你也可以自己建一个子目录,比如“asp”。<br>
+        　　第三步：打开浏览器，输入http://yourservername/asp/Hello.asp，浏览器上立即显示“Hello<br>
+        World”，就这么简单。<br>
+        　&nbsp; 现在，让我们回过头来分析一下上面的脚本，你会发现同HTML脚本比较，它多了两个符号&lt;％和％&gt;,这就是ASP的定界符，他将一般的HTML脚本同ASP代码分隔开来，中间的代码就是ASP“语言”，大家一定已经看到，他的语法跟Visual 
+        Basic差多。ASP的脚本语言可以是任何Script语言，不过你得提供相应的引擎。ASP本身支持VBScript和JavaScript，可以由你决定使用哪一种。你只需在使用ASP脚本前用一句&lt;Script 
+        LANGUAGE=“VBScript” RUNAT=“Server”&gt;或者&lt;ScriptLANGUAGE=“JavaScript” 
+        RUNAT=“Server”&gt;就行了。缺省语言是VBScript，微软的嘛。<br>
+        　　那么，asp的执行是怎样一个过程呢？当你从浏览器输入了.asp文件的地址后，浏览器就将这个URL请求发给服务器，如果服务器上装了ASP，他一看到是.asp后缀名，就调用ASP。ASP读出相应.asp文件，解释并执行命令后，将结果回传给WWW服务器，然后，WWW服务器再把结果发给浏览器。浏览器看到的是执行结果，他根本不知道.asp文件是怎么回事，因此，使用ASP不必考虑浏览器的差异。<br>
+        <br>
+        　　<strong>让ASP与Form一起工作</strong><br>
+        　　我们说ASP的目的是能让用户与页面之间交换信息,那么,怎样得到用户输入的这些信息呢?当然是用Form（表单）。不论是CGI、IDC、JAVA,还是其他的什么技术,都是通过嵌在WWW页面中的Form来让浏览器的用户输入信息,然后由Form执行提交动作,把数据传给服务器,服务器再把数据传给CGI或是其他的什么程序。既然Form如此重要,那么这次就让我们来看一看在ASP中,怎样得用户在Form中输入的数据,同时,我们还将学到ASP是怎样将结果返回到WWW页面的。<br>
+        　　首先,我们建立一个Form,他的HTML代码如下:<br>
+        　　&lt;HEAD&gt;&lt;TITLE&gt;定单&lt;/TITLE&gt;&lt;/HEAD&gt;<br>
+        　　&lt;BODY&gt;<br>
+        　　&lt;H2&gt;定单Form例子&lt;/H2&gt;<br>
+        　　&lt;P&gt;请向我们提供以下信息,然后单击“提交”:<br>
+        　　&lt;FORM METHOD=“POST” ACTION=“response.asp”&gt;<br>
+        　　&lt;P&gt;姓: &lt;INPUT NAME=“fname” SIZE=“48”&gt;<br>
+        　　&lt;P&gt;名: &lt;INPUT NAME=“lname” SIZE=“48”&gt;<br>
+        　　&lt;P&gt;称呼: &lt;INPUT NAME=“title” TYPE=RADIO VALUE=“先生”&gt;先生<br>
+        　　&lt;INPUT NAME=“title” TYPE=RADIO VALUE=“女士”&gt;女士<br>
+        　　&lt;P&gt;&lt;INPUT TYPE=SUBMIT VALUE=“提交”&gt;&lt;INPUT TYPE=RESETVALUE=“清除”&gt;<br>
+        　　&lt;/FORM&gt;<br>
+        　　&lt;/BODY&gt;<br>
+        　　这个表单是一个简单的定单例子,它接收用户输入的姓名,称呼,然后用POST方法将数据提交。我们知道,在HTML中表单(Form)提交数据常有两种方法,一种是GET,一种是POST。对于GET提交的数据,WWW服务器将把数据放在环境变量QUERY_STRING中；对于POST方法,数据被送到WWW服务器的STDOUT中，然后CGI从自己的STDIN中读取。使用传统的CGI方法，用户必须自己编程来处理这些数据。可是在ASP中，采用了面向对象的思想，所有从浏览器传来的数据都被封装进了对象Request中。Request有方法Form和Querystring,分别返回用POST方法和GET方法提交的数据。我们要得到表单提交的数据,只需用Request.Form(“表单域<br>
+        名”) 或Request.Querystring(“查询参数名”) 就可以了。<br>
+        　　好了,接下来就让我们建立.asp文件Response.asp来处理上面的表单提交的数据吧,这里,我们只是简单地将用户提交的数据返回给用户。<br>
+        　　&lt;％Title=Request.Form(“title”) <br>
+        　　LastName=Request.Form(“lname”)<br>
+        　　If Title=“先生” Then ％&gt;<br>
+        　　&lt;％=LastName ％&gt; 先生<br>
+        　　&lt;％ ElseIf Title=“女士” Then ％&gt;<br>
+        　　&lt;％= LastName ％&gt; 女士<br>
+        　　&lt;％ Else ＆&gt;<br>
+        　　&lt;％=Request.Form(“fname”) ＆ “ ” ＆ LastName ％&gt;<br>
+        　　&lt;％ End If ％&gt;<br>
+        　　上面这段代码有些难懂吧, 我们来分析一下它吧.首先,他的开头和结尾都和普通的HTML代码没有什么两样,关键是中间.如果略去定界符&lt;％和％&gt;,然后在前面没有东西的等号前加上‘Print’ 
+        ,它就变成了:<br>
+        　　Title=Request.Form(“title”)<br>
+        　　LastName=Request.Form(“lname”)<br>
+        　　If Title=“先生” Then<br>
+        　　print LastName 先生<br>
+        　　 ElseIf Title=“女士” Then<br>
+        　　print LastName 女士<br>
+        　　 Else<br>
+        　　print Request.Form(“fname”)＆“ ”＆ LastName<br>
+        　　End If<br>
+        　　这是不是VB?很简单吧?ASP就是应用这种方法，将用户自己编写的程序链入HTML中，使动态网页得以实现。<br>
+        　　有一点说明的是,.asp文件中,不在定界符之内的字符,当成普通的HTML解释，如上面没加定界符的“先生”,“女士”等，由服务器自己解释并显示。.asp自己的输出用一个等号加上对象名来实现(当然,ASP的代码在定界符之内).如上面的&lt;％=LastName％&gt;。其实,在.asp文件中,任何对象要作用到定界符之外就要用这种形式:&lt;％=对象名％&gt;。<br>
+        　　上面我们学了用ASP处理用POST方法提交的数据,那么,对于用GET法提交的数据,又怎样处理呢? 
+        其实,处理都是一样的,只不过取得表单数据的方法不同罢了,比如我们要取得“title”的值,就用:<br>
+        　　Request.Querystring(“title”)<br>
+        　　大家一定要注意,用什么方法调用的.asp文件,就应当用相应的方法接收查询数据。不过，不管他是用什么方法提交的，你也可以一律：Request(“title”)(系统将自行选择解释方案，只是在执行时速度会<br>
+        受到影响）。<br>
+        　 下期将介绍大家最感兴趣的数据库访问技术，敬请期待!&nbsp; <strong> 
+        (重庆　李文武)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/48/index.htm">《电脑报》1998年11月30日第46期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>《电脑报》电子版CPCW.COM</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0128/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0128/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第28期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->告诉我你的心事……——用VB实现控件移动一例 
+              <!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　不知大家在网上冲浪时是否见过这样一个小软件，软件界面很简单，一幅漂亮的背景上面有句问话:“你爱我吗？”然后是两个选择按钮:“是”与“否”，如果你选择“是”，那么程序会自动结束，但如果你要选择“否”的话，呵呵，哪怕你点上一天也点不上它——这个按钮会满屏幕跑（如图）！<br>
+              　　触景生情，笔者也用VB编了这么一个小东东，同时也浅谈一下VB中控件的移动问题。<br>
+              　　我们知道VB中控件的移动可以在MOUSE_MOVE事件中发生。以command控件为例，一种最简单的方法就是在该事件中改变command的坐标（这也是笔者今天要介绍的方法之一）。另外，一种方法就是利用VB中的容器控件，VB中可以作为容器的基本控件有picture（图片框）、frame（框架）和最常用的窗体form。这里笔者就介绍这两种不同的方法来制作这个小程序，下面是具体操作。<br>
+               一、利用容器控件<br>
+              新建工程1，将窗体caption属性改为“告诉我，你的心事……”，并把controlbox属性设置为false，目的是屏蔽窗口的关闭、最大、最小按钮。在窗体顶部位置添加标签label1，caption属性为“Do 
+              You Love Me？”在窗体内添加一picture控件数组（具体方法就不再赘述），index值分别为0、1、2、3。并将其borderstyle属性设置为0-none，这样图片框的边框就不可见了。然后在picture1（0）控件中添加command1控件，caption属性设置为“否”，另再添加command2控件，caption为“是”。然后就是编写代码的过程了。在编写过程中，利用了api函数SetParent来实现command1控件在各个图片框间的移动。其代码如下:(^28020501a^)<br>
+              Private Declare Function SetParent Lib ″user32″ _（ByVal hWndChild 
+              As Long，ByVal hWndNewParent As Long） As Long ＇利用api函数setparent实现控件的移动<br>
+              Private Sub Command1_MouseMove（Button As Integer，Shift As Integer，X 
+              As Single，Y As Single）<br>
+              Static w ＇w为picture1控件数组的索引号（即index）<br>
+              If w ＝ 3 Then w ＝ -1<br>
+              w ＝ w + 1<br>
+              Select Case w<br>
+              Case 0 ＇把command1从第一个图片框移到第二个内<br>
+              Call SetParent（Command1.hWnd，Picture1（1）.hWnd）<br>
+              Case 1 ＇把command1从第二个图片框移到第三个内<br>
+              Call SetParent（Command1.hWnd，Picture1（2）.hWnd）<br>
+              Case 2 ＇把command1从第三个图片框移到第四个内<br>
+              Call SetParent（Command1.hWnd，Picture1（3）.hWnd）<br>
+              Case 3 ＇把command1从第四个图片框移到第一个内<br>
+              Call SetParent（Command1.hWnd，Picture1（0）.hWnd）<br>
+              End Select<br>
+              End Sub<br>
+              Private Sub Command2_Click（）<br>
+              End ＇结束程序<br>
+              End Sub<br>
+              这个程序由于采用了多个图片框控件，所以其缺点是无法设置连续的背景图案，在笔者的这个程序里，是将其背景颜色全设为了黑色（是不是有点投机取巧＾_＾），并把command的style属性也设为了1-Graphical，设置了背景图案。这里顺便说一下，VB中设置的背景图案不一定要在程序的目录下，在生成.exe文件时，VB会自动加载。<br>
+              二、改变command1控件的坐标<br>
+              在这个方法里，我们要用到api函数GetCursorPos来取得鼠标的坐标。其窗体界面设置与第一种方法一样，就不再赘述了，下面就是编写代码过程:<br>
+              Private Declare Function GetCursorPos Lib ″user32″（lppoint As POINTAPI）As 
+              Long<br>
+              ＇Getcursorpos用于取得鼠标坐标<br>
+              Private Type POINTAPI ＇定义变量类型<br>
+              X As Long<br>
+              Y As Long<br>
+              End Type<br>
+              Private Sub Command1_MouseMove（Button As Integer，Shift As Integer，X 
+              As Single，Y As Single）<br>
+              Dim lppoint As POINTAPI<br>
+              ＇在不超出窗体范围的情况下改变command1的坐标值<br>
+              If Command1.Left ＜＞ Screen.Width And Command1.Top ＜＞ Screen.Height 
+              Then<br>
+              Command1.Left ＝ lppoint.X + 1000  （1 + Rnd） ＇rnd 取得的0到1之间的随机数<br>
+              Command1.Top ＝ lppoint.Y + 500  （1 + Rnd）<br>
+              End If<br>
+              ＇将command1按钮限制在form容器以内<br>
+              If Command1.Left ＝ Screen.Width Then<br>
+              Command1.Left ＝ lppoint.X - 1000  Rnd - 500<br>
+              End If<br>
+              If Command1.Top ＝ Screen.Height Then<br>
+              Command1.Top ＝ lppoint.Y - 500  Rnd - 250<br>
+              End If<br>
+              End Sub<br>
+              Private Sub Command2_Click（）<br>
+              End<br>
+              End Sub<br>
+              Private Sub Form_click（）<br>
+              Command1.Left ＝ 2880<br>
+              Command1.Top ＝ 1920 ＇单击窗体按钮command1回到原位置<br>
+              End Sub<br>
+              Private Sub Label1_Click（）<br>
+              Form_click<br>
+              End Sub<br>
+              这个程序与第一个相比，可以设置窗体的背景图案了，但所谓“尺有所短，寸有所长”，第一种方法的代码显然要简单些，对一个程序而言，这一点是相当重要的。<br>
+              至此，这个程序算是大功告成了。把它生成.exe文件，发给自己的梦中情人，嘿嘿，说不定还能有事半功倍的成效呢，呵呵（以上程序在Windows 
+              98中调试通过）！ <!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

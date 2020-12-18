@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Netware超级用户口令遗忘后的对策<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　入网口令限制是保证Netware系统安全的有力手段之一。但如果在使用过程中，网络管理员不慎把超级用户的口令遗忘了，就不能再对网络进行行之有效的管理和维护，其后果之严重是不言而喻的。<br>
+        　　笔者通过摸索和总结得出口令遗忘后的四种对策，现介绍给大家：<br>
+        　　1.如果你设置了几个超级用户，那事情就好办多了。用另一个超级用户登录后，运行SYSCON，修改该超级用户的口令即可（此方法适用于Netware 
+        2.X、3.X、4.X版本）。<br>
+        　　2.如果没有其它超级用户，可以用一些工具软件来解除超级口令或建立一个拥有超级权限的用户。例如：有一个Burglar.nlm的程序，它可以在服务器端创建一个拥有超级权限的用户，其具体用法是：<br>
+        　　（1）把该程序拷贝到一软盘上；<br>
+        　　（2）把此软盘插入到正在运行的服务器的软驱中；<br>
+        　　（3）退出正在运行的Monitor(或任何正在运行的程序)，直到你回到“：”提示符的状态下；<br>
+        　　（4）在提示符后输入“load a:\burglar.nlm super2”，这里的“super2”是要建立的用户名，可任意命名；<br>
+        　　（5）用“down”和“exit”命令重新启动服务器。<br>
+        　　这样就创建了一个新的超级用户super2了，它是没有口令的，用它登录后修改原超级用户的口令即可。注意：恢复系统后，别忘了把该用户删除或加上口令，以免被他人盗用。<br>
+        　　3.用系统内部的“debuger”使口令检查失效：<br>
+        　　（1）同时按下“左Shift”、“右Shift”、“Alt”、“Esc”，进入debuger状态；<br>
+        　　（2）输入“d VerifyPassword 6”后回车（注意大小写），屏幕显示6个数值，请用笔记在纸上，后面要用到；<br>
+        　　（3）输入“c VerifyPassword=B8 0 0 0 0 C3”（等号后6个值用空格分开）后回车，设置系统关闭口令检查；<br>
+        　　（4）输入“g”后回车，回到console（控制台）下；<br>
+        　　（5）在任一工作站上以超级用户“supervisor”登录，无口令检查，运行syscon修改超级用户口令后退出。<br>
+        　　（6）接下来一定要恢复系统的口令检查：<br>
+        　　 1同时按下“左Shift”、“右Shift”、“Alt”、“Esc”，进入debuger状态；<br>
+        　　 2输入“c VerifyPassword=＊ ＊ ＊ ＊ ＊ ＊ ”（等号后6个＊为先前记在纸上的6个数值，用空格分开）后回车；<br>
+        　　 3输入“g”后回车，回到console（控制台）下。<br>
+        　　（此方法不适用于Netware 4.X版本，在3.12版上测试通过）<br>
+        　　4.如果以上三个方法的条件都不成熟，或因为系统的口令文件系统被严重破坏导致任何用户都无法登录时，这时只有采取下面这种近乎“笨”的方法。<br>
+        　　不管是Netware 2.X还是3.X版本，系统在刚安装完时，超级用户是没有口令的。4.X版本看起来有点不同，但在初始化安装后它也允许任何用户登录。<br>
+        　　那么怎样才能使系统认为现在是刚安装完呢？很简单，只要你把包含加密系统的文件全部删除即可。对于2.X版本，所有的加密信息保存在两个文件中（netSbind.sys和netSbval.sys），3.X版本的所有的加密信息则保存在三个文件中（netSobj.sys、netSval.sys和netSprop.sys），新的4.X版本则把所有的用户名和密码保存在五个不同的文件中（partitio.nds、block.nds、entry.nds、valle.nds和uninstal.nds）。<br>
+        　　我们只需要一张DOS系统启动盘和Norton程序包中的DiskEdit程序即可达到目的：<br>
+        　　（1）启动服务器到DOS状态，必要时从DOS系统软盘A启动。<br>
+        　　（2）从A盘运行DiskEdit程序；<br>
+        　　（3）在主菜单中选择“Tools”，然后选择“Configuration”，把窗口中的“Read－Only”选择框中的“×”去掉，接下来的几步千万要仔细；<br>
+        　　（4）选择“Object”，然后选择“Drive”，在窗口中选择C盘并同时选择“physical 
+        drive”，然后就可以看到硬盘上的所有数据；<br>
+        　　（5）选择“Tools”，然后选择“Find”，这里输入需查找的文件名，对于2.X系统输入“netSobj.sys”,3.X系统输入“netSprop.sys”，4.X系统输入“partitio.nds”。有可能你找到的字符串不在Netware目录，如果文件名不是彼此相邻而是由一些不可读的代码隔开（至少32个字节），那么它不是你所需要的。你必须选择“Tools”菜单中的“Find 
+        again”继续查找下去；<br>
+        　　（6）一旦你找到了所需要的文件，你就可以修改它。你最好是把文件改名，而不是删除它，这可以避免文件结构的错误。只把文件的扩展名改为“OLD”是个不错的主意。千万要小心不要修改其他的任何东西；<br>
+        　　（7）选择“Tools”菜单中的“Find again”继续查找同一个文件名，因为Netware文件系统的目录信息存储在两个地方，你必须找到另外一个并用相同的方法修改它，这也避免了目录结构错误；<br>
+        　　（8）退出DiskEdit，重新启动服务器。对于2.X和3.X系统，这时你可以用“supervisor”登录，无口令检查；而对于4.X系统则要完成下一步；<br>
+        　　（9）运行4.X版本的安装程序（输入load install完成），选择“install 
+        the Directory Services”选项后，要求你确认Admin的密码。之后，你可以在任何一台工作站上以Admin用户登录，输入你刚才选择的密码即可。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　（广东　马军）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

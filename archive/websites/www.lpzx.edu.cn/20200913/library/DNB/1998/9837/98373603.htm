@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>改变CMOS设置解决硬件冲突<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 
+        现在家用电脑大多为多媒体配置，除了机箱内的种种插卡外，外部也有不少像MODEM、打印机等设备。这要求在装机过程中充分了解各配件的详细硬件信息和安装步骤。笔者就前几天遇到的问题叙述如下。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        说实话，起因是我乃一游戏迷，觉得丽台WinfastS600DX显示卡的加速效果实在不敢恭维，就趁最近Voodoo卡大跌之际，“捞”了一块中凌的HELIOS，画面之华丽、速度之流畅不愧巫毒大名，终于实现我多月之宿愿，但随之而来的问题便使我颇费周折。安装Voodoo卡后的前几天相安无事，后来先是执行WordCPU98程序屡屡花频，时常无故出错，便怀疑我的二倍速松下光驱已“寿终正寝”，不敢怀疑是巫毒卡的问题。接着执行各种程序均有异常，删除应用程序重装，故障依旧，运行磁盘查错时有未知的“LINK”发生，我便怀疑Windows95又旧病复发，也有可能受病毒骚扰，可用KV300扫描硬盘后未发现任何异常。无奈之下FDISK硬盘后重装Windows95，可系统设备有冲突发生，设备管理中感叹号重重，ALS007声卡与IDECONTROLLER冲突，系统不能执行光驱中的应用程序，时有“大蓝屏”出现，试着在设备资源中手工设置，可系统提示：“该硬件信息不可修改”，将冲突的设备删除后重新启动，可恶的Windows95又将这些设备重新拾回。重复多次故障依然，最终也不了了之。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        平时玩电脑自己觉得只要不是硬件毛病，无不手到擒来，这次可是大大跌了一个跟头了。无奈之下向电脑商求救，技术员机械地重复安装DOS、Windows95，待所有驱动程序安装完毕，恼人的冲突现象依然出现，于是又重复了我的遭遇。一个小时下来，一无所获。技术员说此症状乃平生之罕见，连连苦笑。正在无奈之际，我突然想到以前在CMOS中似乎有PCICONFIGRATION的选项，重新启动进入CMOS，一看各PCI插槽被分配了固定的中断号，将中断分配改为自动选择，存盘退出。启动Windows95进入设备管理，感叹号不复出现。装入各个程序运行，一切OK!Voodoo卡重新发威了。事情缘由一目了然，是由于巫毒卡占用了声卡的资源，使得声卡与硬件控制器冲突。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        这次故障整整花去我一天又半夜，但是回头想来收获颇丰。一是当计算机出现症状时，在排除情况下，注意点转向硬件时，先应查看CMOS的配置，原先的设置可能不适用于新硬件加入的场合(其实Windows95开始已提醒过我，“该硬件信息不可修改”，即不可以通过软件来修改该设备的设置，应转手查阅冲突设备的手册及卡上的中断跳线，只是惰性作怪，不高兴第三十次打开机箱)，那么相应修改CMOS的设定值，使之与外设的中断序号相同或让之自动选择，即可达到异曲同工的目的。二是遇到问题不可死盯硬缠，凭主观经验(比如问题的症结在于Voodoo卡的介入，但由于一开始问题没有反映出来而将之放行)。而是应略作休整，灵感说不定就冒出来了(当然也在于平时知识的积累)；否则很有可能劳而无功。(请本文作者速与本报编辑部联系) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

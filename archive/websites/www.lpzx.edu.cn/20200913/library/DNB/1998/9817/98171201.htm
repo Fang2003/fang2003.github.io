@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何制作成绩管理模板<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　制作模板并不难，可以说会使用Office97就会做模板。但制作一个理想、实用、功能较强的模板却不是一件易事。为激发你的灵感，调动你制作模板的兴趣，下面用Excel制作“成绩管理模板”为例，介绍制作具有一定功能模板的方法和步骤。<br>
+        　　<strong>一、建立工作表</strong><br>
+        　　1在A5:M5各单元格中依次输入“学号、姓名、语文、代数……总分”；在A1、A2、A3、J3单元格中分别输入“单县师苑高中”、“第一学期”、“班级：”、“年月日”。<br>
+        　　2合并A1:M1、A2:M2并设置格式为水平居中和垂直居中，合并A3:D3、J3:M3，设置为垂直居中，分别为水平靠左和靠右。其中隐藏第4行，便于成绩排序。<br>
+        　　3激活区域C6:M30，单击求和按钮。<br>
+        　　如果通过“另存为”类型为“模板”的文件，可在“Templates”中得到一个模板文件，显然这一模板的功能不够强。<br>
+        　　<strong>二、录制和修改宏</strong><br>
+        　　以C列的数字“整数”改为“一位小数”为例<br>
+        　　1．单击“工具”菜单“宏”下的“录制新宏”，出现“录制新宏”对话框，输入宏名——“格式1”并按“确定”后将开始录制。<br>
+        　　2．单击列标C，在“单元格格式”对话框“数字”选项卡中选择“数值”，设置“小数点后位数”为“1”；在“格式”菜单选择“列”的“最适合的列宽”后“停止录制”。<br>
+        　　3．单击“工具”菜单“宏”下的“宏”，出现“宏”对话框，选择“格式1”，单击“编辑”，在代码窗口显示如下代码：<br>
+        　　Sub格式1()<br>
+        　　Range(″A3:D3,A2:M2,A1:M1,C:C″)Select<br>
+        　　Range(″A1″)Activate<br>
+        　　SelectionNumberFormatLocal=″00_″<br>
+        　　SelectionColumnsAutoFit<br>
+        　　EndSub<br>
+        　　其中前两行代码表示录制过程中选择和激活的区域，为便于通用，将它们删除。选择工作区，执行修改后的宏，将使数值设置为“一位小数”并自动调节“最适合的列宽”。<br>
+        　　<strong>三、建立自定义工具栏</strong><br>
+        　　用鼠标右键单击任意一个工具栏，并从快捷菜单中选择“自定义”，显示“自定义”对话框。<br>
+        　　1．建立空的工具栏——“成绩管理”<br>
+        　　在“工具栏”选项卡中选择“新建”按扭，在“新建工具栏”对话框中输入栏名——“成绩管理”，单击“确定”后，则“成绩管理”工具栏在窗口中出现。<br>
+        　　2．添加新菜单——“组合工具”和宏按扭图标<br>
+        　　在“命令”选项卡的“类别”中，选择“新菜单”，将命令中的“新菜单”用左键拖到“成绩管理”工具栏上，再右击该菜单，在快捷菜单“命名”后输入“组合工具”。用同样的方法，将“内置菜单”中的常用“命令”拖到“组合工具”中；将“宏”中的“自定义按扭”拖到“成绩管理”工具栏上，右击该图标，在“命名”后输入按扭提示信息，单击“更改按扭图标”，再单击“指定宏…”，在“指定宏”对话框中选择或录制宏。<br>
+        　　3．将工具栏存入模板<br>
+        　　单击“工具栏”中的“附加…”，在“附加工具栏”对话框“自定义工具栏”的下面选择“成绩管理”，依次单击“复制…”和“确定”。<strong><br>
+        　　四、保存模板</strong><br>
+        　　通过“另存为”类型为“模板”的文件，可在“Templates”中得到一个模板文件(如图)，该文件集表格结构、宏命令及自定义菜单于一体，操作方便，便于交流，功能较强。　　<strong>（山东　盛守成）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月4日第17期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

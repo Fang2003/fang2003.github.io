@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 找回忘了的密码</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>40 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 找回忘了的密码</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 找回忘了的密码 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在Access数据库中，为了安全起见，可以为所建的数据库设置密码。但是，密码忘了怎么办?别急，这里介绍一种找回密码的方法。<br>
+　　用Access所建的数据库，在库文件的地址00000042处开始的13个字节是Access库的密码位。如果一个未加密的库，这13个字节原始数据依次为：86  FB  37  5D  44  9C  FA  C6 28  E6  13。事实上，当你设置了密码后，Access就将你的密码(请注意你所输入的密码是本文字符)的ACSII码与以上的13个字节数据进行异或操作，因此，从库文件的地址00000042开始的13个字节就变成了密钥了。例如，如果你设置的密码为abc，经过异或操作后，则从00000042处开始的13个字节的数据变成了E7  99  8F  37  5D  44  9C  FA  C6  28  E6  13。一个数据经过一次异或操作后，再一次经过同样的异或操作就可还原了。因此，对已经设置了密码的Access库，只要将13个密钥数据与原始的13个数据进行一次异或操作就可得到密码了。<br>
+　　以下是一个C语言的破解程序：<br>
+　　／＊假设加密后的Access库为myacc.mdb,并存放在C盘的根目录下＊／<br>
+　　＃include ″stdio.h″<br>
+　　main()<br>
+　　{FILE ＊ fp<br>
+　　char mm0[13]={0x86,0xfb,0xec,0x37,0x5d,0x44,0x9c,0xfa,0xc6,0x5e,0x28,0xe6,0x13}；<br>
+　　／＊这是13个原始数据＊／<br>
+　　char mml[13],mm2[13]；<br>
+　　／＊mm1用来存放加密后的13个密钥；mm2用来存放密码＊／<br>
+　　int i,k;<br>
+　　fp=fopen(″c:\\myacc.mdb″,″rb″)；<br>
+　　if(fp=NULL){<br>
+　　printf(″\n不能打开该库!″)；<br>
+　　exit(0);}<br>
+　　rewind(fp)；fseek(fp,0x42L,0)；<br>
+　　fread(mm1,13,1,fp);／＊读取密钥＊／<br>
+　　for(i=0;i&lt;13;i＋＋){<br>
+　　mm2[i]=mm0[i]^mm[i];＊／原始数据与密钥异或＊／<br>
+　　else<br>
+　　break；}<br>
+　　k=1；fclose(fp)；<br>
+　　if(k=0)<br>
+　　printf(″未设密码!″)；<br>
+　　else{printf(″\n密码是：\n″)；<br>
+      　　&lt;k;i＋＋)／＊打印密码＊／&gt; 　　for(i=0;ibr&gt; 　　printf(″％c,mm2[i]″)；}}<br>
+　　顺便提一句，Access库设置密码时，虽然允许输入最多14个密码字符，但只有前13个有效。<br>
+<b>(安徽　章昭辉)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/40/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99401301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

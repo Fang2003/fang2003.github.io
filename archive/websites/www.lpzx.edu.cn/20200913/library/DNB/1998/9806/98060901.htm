@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>最后的中文DOS</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">最后的中文DOS<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> </font><font
+        color="#004040"> </font><font color="#369681">各位发烧友们新年好!本人不大喜欢玩电脑游戏,但对各种实用软件总是要先尝为快。这里向大家介绍一个汉字操作系统CCDOS 
+        97。CCDOS 97的作者陈江宁曾是天汇3.0、3.1的策划者和主要作者,CCDOS出自名家手笔,自然不同凡响。相信很多人使用过天汇3.0的袖珍版,曾为它的功能叫好,但不曾料想到CCDOS 
+        97更加好用。本人拿到它的Beta2测试版时差一点疯掉(别慌，《电脑报配套光盘第四辑》上有CCDOS 
+        97 Beta 3版可以见识)!且听本人分五点慢慢道来。<br>
+        　　1.该系统占用极小的内存,这是其它任何汉字系统都无法相比的。CCDOS 
+        97装载了包括所有输入法、打印、字形、特显等全部功能,在EMM386 RAM方式下实现了真正的零内存占用,只占UMB30K。<br>
+        　　2.系统提供了GB/BIG5内码的动态切换功能,按 Ctrl＋F8即可。在BIG5码状态下同样支持各种汉字输入功能和DOS动态汉化功能,一点都不亚于UCDOS的CONVERT内码转换工具!经常上网的朋友是否又多了一个好选择呢？<br>
+        　　3.系统的API接口完全采用了全套的UCDOS的API方案,包括系统API、输入法接口、字形、特显、打印接口,都全部与UCDOS兼容,各种在UCDOS下开发的应用程序都可在CCDOS 
+        97下正常运行。如UCDOS6.0的UCCARD和UCDOS7.0的UCWORD。不过要先运行UCDOS的RDFNT或RDPS字库读取程序，并且需要SDK.DRV的支持。CCDOS 
+        97的图像命令除可显示PCX图像文件外,还可以显示BMP、ICO图像,与TWAY3.0相当。CCDOS 
+        97还可直接运行HD_COPY著名磁盘拷贝软件,无需按CTRL＋F7键切换显示方式,这一点似乎比UCDOS、中国龙等高出许多。<br>
+        　　4.与Windows 95/NT全兼容。由于Windows 95的普及，中文DOS平台与Windows的兼容性也变得越来越重要了。CCDOS 
+        97在这方面作了最完整的考虑，不仅提供了32位的Windows驱动程序，保证了与Windows的高度兼容性，并且将CCDOS 
+        97与Windows有机地融为一体，轻轻一点Windows 95桌面的“中文DOS方式”，即可自动进入CCDOS 
+        97。在资源浏览器中用右键点击目录，就可自动从此目录进入中文DOS方式。用右键点击批处理文件选择“自动”，则能在中文DOS方式下运行此批处理程序。<br>
+        　　5.极简洁的系统结构,取消了汉字系统的启动批处理,并把所有的驱动程序及系统的设置程序打包在一个文件中,系统仅有很少的几个文件。<br>
+        　　 主要文件列表:<br>
+        　　ccdos.exe CCDOS 97系统主程序(内<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 含系统设置等多种功能)<br>
+        　　ccdos.pkv CCDOS 97的系统驱动程序<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 包文件<br>
+        　　hzk16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16x16点阵汉字库<br>
+        　　dat\ccdos.cwd&nbsp;&nbsp;&nbsp; CCDOS的汉字输入法词<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 库(内含45000条词语)<br>
+        　　dat\ccdos.tab GB/BIG5内码转换表<br>
+        　　dat\ccdos.mb&nbsp;&nbsp;&nbsp;&nbsp; CCDOS的汉字输入法码<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 表(内含拼音,五笔码表)<br>
+        　　dat\ccdos.dat DOS动态汉化库文件<br>
+        　　winumb.com 用于Windows 95的DOS窗口实现零内存占用的工具(加在AUTOEXEC.BAT中, 
+        需要CCDOS 97的Windows驱动程序支持)<br>
+        　　当然，CCDOS 97测试版目前也有缺点，如突然死机，希望它的正式版将会有所改善。<strong>(浙　江　陈宏宇)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月16日第6期9版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>解决FOXPRO 在Win98应用程序下的运行问题</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><font face="黑体" color="#FFFFFF"><big><big>解决FOXPRO 在Win98应用程序下的运行问题</big></big></font></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><big><font color="#400000"><span
+        style="line-height: 1.5">　　装上Win98之后，感觉还不错，不过有一点令我头痛的是，作为一名财务工作者，本人日常工作中所使用的财务软件竟然只能在FoxPro 
+        for DOS下运行，这就使得我的日常操作变得非常麻烦，本人经过多方试验后终于发现，通过修改PIF文件即可实现在Win98中直接运行该程序的目的，从而极大地方便了日常操作。现将解决上述问题的办法介绍如下，以供大家参考。<br>
+        　　1. 在C盘根目录建立一个用于启动该财务软件的批处理文件KJ.BAT，文件内容如下：<br>
+        　　@ECHO OFF<br>
+        　　C:<br>
+        　　CD\<br>
+        &nbsp;&nbsp;&nbsp; C:\UCDOS\RD16<br>
+        　　C:\UCDOS\KNL<br>
+        &nbsp;&nbsp;&nbsp; C:\UCDOS\PY<br>
+        &nbsp;&nbsp;&nbsp; CD\KJ<br>
+        &nbsp;&nbsp;&nbsp; C:\FOXPRO25\FOXPRO\　KJ<br>
+        &nbsp;&nbsp;&nbsp; CD\<br>
+        &nbsp;&nbsp;&nbsp; EXIT<br>
+        　　2右击KJ.BAT文件，然后从弹出的快捷菜单中执行“属性”命令，打开“KJ属性”设置框。<br>
+        　　3. 选择“程序”选项卡。<br>
+        　　4. 在“命令行”对话框中输入“COMMAND.COM /K C:\KJ”，在“运行”列表框中选择“常规窗口”选项。<br>
+        　　5. 复选“退出时关闭”选项。<br>
+        　　6. 单击“高级”按钮，打开“高级程序设置”设置框。<br>
+        　　7. 复选“防止基于MS－DOS的程序检测Windows”选项，然后单击“确定”按钮，返回“KJ属性”设置框。<br>
+        　　8. 切换到“KJ属性”设置框的“内存”选项卡，将有关内存选项全部选择“自动”选项（注意，不同的应用程序对内存的要求可能不同，广大用户应根据实际情况加以选择）。<br>
+        　　9. 切换到“屏幕”选项卡，复选“全屏幕”选项。<br>
+        　　10. 切换到“杂项”选项卡，根据需要选择是否使用Alt＋Enter等Windows快捷键（若它们与相关DOS版应用程序的快捷键无冲突则应全部加以选择，以方便日常操作）。<br>
+        　　11. 在Win98的开始菜单和桌面上为刚刚生成的KJ.PIF文件建立一个快捷方式（注意，我们只能为KJ.PIF文件建立快捷方式，而不能为KJ.BAT建立快捷方式，否则无法成功）。<br>
+        　　至此，有关设置步骤即告结束，此后我们只需双击桌面上的“会计”图标（或执行开始菜单中的“会计”命令），系统即会自动以全屏方式进入Win98的DOS状态，并依次启动UCDOS、FoxPro以及本人所需运行的财务软件。而我们在退出该软件后，系统又会自动返回Win98图形界面，操作非常方便。<br>
+        　　你是不是也希望能在Win98图形界面下直接运行有关老版本的DOS程序，那不妨采用上述方法试试吧！<strong>(湖北　胡锦承)</strong></span></font></big></p>
+        <p align="right"><big><font color="#400000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>瞒天过海</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><big><strong>瞒天过海——Direct3D模拟OpenGL</strong></big></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p class="ourfont">　　微软Direct3D、OpenGL以及Glide是目前最重要的三大3D 
+        API应用程序接口，OpenGL作为3D图形应用上的一个跨平台、高性能的API，对于显卡厂商来说，OpenGL驱动程序的开发要比Direct3D驱动程序复杂得多，像MGA 
+        的G200从去年年中推出便一直等待它的OpenGL驱动程序，可到了年底才好不容易发表了一个1.0Beta版本的OpenGL 
+        ICD驱动程序，所以至今为止好多显卡开发商都还没有一个高质量的 
+        OpenGL驱动程序，3Dfx Banshee至今还没有OpenGL驱动程序。一些低端显示卡更是没有，要是你正在使用这样的显卡，恐怕像Quack、Quack2、SIN虚幻这样只支持OpenGL硬件加速的游戏就只有望而兴叹了，当然也可以软件方式运行，但画面的惨状实在有点不堪忍受。不过现在好了，笔者日前发现了两个利用Direct3D模拟OpenGL的仿真程序，现在你再也用不着为自己的显卡不支持OpenGL而愁眉苦脸了。<br>
+        　　原理：<br>
+        　　OpenGL Function  D3D Function 映射<br>
+        SciTech GLDirect 1.01版<br>
+        　　SciTech GLDirect 1.01版是SciTech软件公司发布的第二个版本OpenGL仿真程序，作为一个Windows95/98应用程序包，几乎可以在目前支持Direct3D 
+        6.X的所有显卡上仿真OpenGL，运行绝大多数OpenGL的游戏及部分应用程序。<br>
+        　　支持的显卡：<br>
+        　　*3Dfx Voodoo、Voodoo Rush、Voodoo2、Banshee<br>
+        　　*3DLabs Permedia、Permedia 2<br>
+        　　*ATI Technologies 3D Rage Ⅱ、Ⅱ＋、Ⅱ＋DVD、ⅡC、3D Rage Pro、Rage 128<br>
+        　　*Cirrus Logic CL－GD5462/64/65 Laguna VisualMedia<br>
+        　　*Intel i740<br>
+        　　*Matrox MGA Millennium Ⅱ、Mystique、Mystique 220、G100、G200<br>
+        　　*Number Nin“e Ticket 2 Ride、Ticket 2 Ride IV<br>
+        　　*nVidia RIVA－128、RIVA－128 TNT<br>
+        　　*Rendition Verite V1000、V2100、V2200<br>
+        　　*S3 ViRGE、ViRGE/DX/GX/VX、ViRGE/GX2、Trio3D、Savage3D<br>
+        　　*SiS 6326<br>
+        　　*Trident 3DImage 975、3DImage 985<br>
+        　　特性：<br>
+        　　*你可以选择Direct3D下软件渲染还是硬件渲染<br>
+        　　*利用ARB多材质扩展实现多材质贴图<br>
+        　　*通过DirectX 6的stencil buffer蜡板缓冲支持硬件stencil buffering蜡版缓冲<br>
+        　　尽管这个仿真程序我们感觉已经作得比较不错，支持的显卡相当丰富，从S3 
+        ViRGE、SiS 6326这样的低档卡到目前主流的RivaTNT、Banshee、Savage3D、G200。但在测试中我们还是发现了不少问题。在使用Voodooo卡时，你必须关掉GLQuake的控制项gl_ztrick，将其设置为0，否则运行Quake时将错误百出，另外在新近推出的一些OpenGL游戏中问题也比较多，像Unreal虚幻，我们在i740、Riva 
+        128以及G200上都发现贴图严重错误，整个画面暗淡，很多材质都没有帖上，而Half－Life半死不活也好不了多少。如果你还在用PowerVR 
+        PCX1这样的3D加速子卡，最好将“2D/3D Rendering”这个选项从“Optimized”设为“Standard” 
+        。另外，偶尔还会出现Primary Direct3D设备显示错误。<br>
+        　　从Direct3D仿真OpenGL的画面质量来看，应该说在大多数OpenGL游戏以及少数小型应用程序中的效果都还可以接受，只是有轻微的马赛克，在亮度上也稍微差一些，所以感觉游戏中各种建筑、山石的质感略差。<br>
+        ALT.SoftWare MESA 3.0<br>
+        &nbsp;&nbsp;&nbsp; ALT.SoftWare MESA 3.0 OpenGL仿真驱动程序和SciTech GLDirect 1.01版一样只能够在Direct3D 
+        6.0以上版本下才能够使用，不支持Direct3D 5.0，在显卡的支持数量上不及SciTech 
+        GLDirect，但效果却非常不错，甚至在我们的测试中还略好于SciTech 
+        GLDirect。在Sin“原罪”中，SciTech GLDirect仿真程序的画面非常糟糕，存在大量贴图错误，而ALT 
+        OpenGL仿真出来的效果却没有发现什么错误，非常棒，并且3D Max中也完全正确。ALT 
+        OpenGL声称甚至已经支持Viewperf这样的专业OpenGL测试软件，但我们在i740以及Riva 
+        128显卡上测试时，仍然没有能够正常完成测试。ALT OpenGL还会进一步改进，并不断推出更新的版本，以支持更多的显卡和OpenGL程序。<br>
+        　　支持的显卡：<br>
+        　　Matrox G200 AGP (all resolutions)<br>
+        　　ATI 3D Rage Ⅱ＋ PCI<br>
+        　　ATI 3D RagePro AGP 8M<br>
+        　　Diamond SteathⅡ (Intel i740) 8M AGP<br>
+        　　S3 Virge (VX/988)<br>
+        　　左表为我们在赛扬450、微星6163、128MBSDRAM、I740上测试的一组数据，可以看出两个仿真程序的执行效率都不及原OpenGL驱动程序，在Quack2的几个测试Demo中都相差好几帧，在640×480分辨率模式下差距大一些，而在800×600模式下差距却缩小了，从这两个仿真程序的效率来看，低分辨率下SciTech 
+        GLDirect 1.01的效率高一些，而高分辨率下，ALT OpenGL反而略占优势。</p>
+        <p align="right"><font color="#000000"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1999年3月01日第08期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Windows 
+        98下光驱“丢失”的处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 　　<strong>故障现象：</strong>一台PⅡ电脑，配置为：PⅡ233 
+        CPU、64M SDRAM、I740显卡、LX主板、4.3G硬盘、ASUB 34倍速光驱等。硬盘分为C、D、E三个分区，光驱盘符为F，操作系统为中文Windows98。一次，在安装了游戏后，重新启动计算机，发现找不到F盘。<br>
+        　　<strong>故障分析及处理：</strong><br>
+        　　1.该光驱以前一直正常，怀疑是游戏带有的病毒破坏了系统文件。用最新版的各种杀毒软件反复查找，并没有发现病毒的痕迹。<br>
+        　　2.打开“我的电脑\控制面板\系统”，点击“设备管理器”，发现其中没有光驱项。于是进入“我的电脑\控制面板”中，双击“添加新硬件”，让Windows自己搜索光驱，系统提示找到了新硬件并安装相应驱动程序。重新启动Windows98，但在“我的电脑”里并没有想象的那样出现光驱的盘符。<br>
+        　　3.在Config.sys中加上“LASTDRIVE=Z”一行，没有任何作用。<br>
+        　　4.重新进入“我的电脑\控制面板\系统”，点击“性能”，发现C、D、E盘均在使用MS－DOS兼容模式。本机中的设备并没有使用实模式驱动程序，没道理硬盘处于实模式工作状态呀!于是到“设备管理器”中逐项检查，打开“硬盘控制器”，见其中“Primary 
+        IDE Controller”和“Secondary IDE Controller”前面有黄色的“?”，查看这两个项目的“属性”，均显示“该设备没有正常工作……”。这两项是主板的两个IDE接口，看来故障原因在这里了。<br>
+        　　5.一般来说，只要从“设备管理器”中删掉“硬盘控制器”中的“Intel 
+        82371AB PCI Bus Master IDE Controller”(本例里是LX主板，其它类型主板可能不一样)，再重启动一次便能解决问题，但考虑到启动时有可能要求插入Windows98安装光盘，而此时光驱仍不能使用，看来只好先加载实模式驱动程序试试了。找来一通用光驱驱动程序CDROM.SYS拷入C盘，分别在Config.sys和Autoexec.bat中加入DEVICE=C:\CDROM.SYS／D:MSCD000及C：\WINDOWS\COMMAND\MSCDEX.EXE/D:MSCD000。重新启动后，“我的电脑”中已经出现F盘(光驱)。从“我的电脑\控制面板\系统\设备管理器\硬盘控制器”中删掉“Intel 
+        82371AB PCI Bus Master IDE Controller”，并重新启动Windows98。完成后，“硬盘控制器”中的各个项目已恢复正常，只有光驱仍在使用MS－DOS兼容模式。这时分别去掉刚才在Config.sys、Autoexec.bat文件中加入的两行，再一次启动电脑，光驱恢复正常。<br>
+        　　小结：<br>
+        　　1.在Windows95(98)中“丢失”光驱的故障时有发生(主要是一些“即插即用”类型的光驱)，这时不妨先使用实模式的驱动程序，让光驱能暂时运行，因为系统中许多设备的添加、删除往往需要Windows的安装光盘，没有光驱是不行的。<br>
+        　　2.如果发现硬盘在使用MS－DOS兼容模式的话，应及时查看“硬盘控制器”，这种情况下“硬盘控制器”项中出问题的可能性相当大。<br>
+        　 3.经常备份注册表，本例故障要是及时备份了注册表的话，解决起来就简单多了。<br>
+        (四川　李俊)<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

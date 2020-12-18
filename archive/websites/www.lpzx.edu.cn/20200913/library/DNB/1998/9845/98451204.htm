@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Win95中自启动命令隐身之所<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　 
+        凡电脑迷，都喜欢在机器中安装试用各类软件，因而常在Win95中积累下一些开机自动执行的文件，不但减慢了机器的启动速度，还占用了有限的内存。那么到哪去查找这些启动命令呢？让我们一起到以下几个地方来转转吧：<br>
+        　　<strong>1.autoexec.bat文件</strong>。最“古老”的执行方式，在For 
+        Win95的软件中采用此方式的已不多见，在我的机器中SoftICE3.0及UNIBVE曾在此挂过名。<br>
+        　　<strong>2.查看“开始”→“程序”→“启动”栏</strong>。在这里可找到一些启动程序的快捷方式，如《金山词霸》、CleanSweep的《Usage 
+        Watch》等,按需要将不用的删除即可。<br>
+        　　<strong>3.在win.ini文件中查找</strong>。有些程序会在win.ini的[windows]段内增加启动命令：“load（或run）=路径\程序名”，如中文之星、很多显卡的驱动程序均采用此启动方式。<br>
+        　　<strong>4.在system.ini文件中查找</strong>。很多应用软件在安装时都要这里增添一些内容，通常在[386Enh]段内增加“device=路径\程序名”命令行，如东方快车加载的CCDOS.EXE程序。除[386Enh]段外，[mci]、[drivers]、[drivers32]等都是被增添内容的对象，在出错时不妨按照开机所提示的“黑名单”仔细找找。<br>
+        　　<strong>5.到注册表中去查找</strong>。运行regedit，清除加载的自动执行命令到HKEY_LOCAL_MACHINE→SOFTWARE→Microsoft→Windows→CurrentVersion→Run及RunServices中查找,然后将该键值删除即可，如超级解霸的“自动探测器”、ZipMagic、WinHacker。在消除错误提示时不妨在注册表编辑器“编辑”中打开“查找”对话框，在“查找目标”内键入错误提示中指定的文件名，并把“主键”“键值”“数据”全部选上，回车后进行自动搜索，找到后按“Delete”键即可将其删除。<strong>(黑龙江　姜　彤)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月23日第45期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<html><!-- #BeginTemplate "/模板/hardware.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>软驱故障排除三例</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第09期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{软驱故障排除三例}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 故障一例<br>
+              故障现象：在软盘驱动器中插入软盘时，读、写操作正常，但如果插入另外的一张软盘，则无法进行读、写。即使用DIR命令查看软盘文件，屏幕上仍显示前一张软盘的内容，而对新插入的软盘根本不认识。如果抽出该盘，即软盘驱动器内没有任何软盘，然后对该驱动器执行任意一条命令如DIR，再次插入软盘，才能对该盘进行正常操作。<br>
+              故障分析及排除方法：从故障现象看，该驱动器在不换软盘时的操作一切正常，说明驱动器中有关选盘、零道、步进、方向、索引、寻道、读/写均正常；而在换软盘后就出现上述故障，故应重点考虑软盘换盘机构或换盘信号DISKCHANGE是否有问题。正常情况下，当新换软盘插入到检盘器光电耦合管的中间位置时，检盘器将产生更换软盘的信号，然后，此信号将被送给磁盘驱动器的控制器进行分析处理，从而完成更换软盘的工作。根据上述分析，可以判断：当软盘达不到正常位置时，检盘器使控制器发出了错误的换盘信号，软盘缓冲器刷新信号没有被送出，软驱不能做好读、写准备，从而产生上述故障。于是打开机箱，拆下软盘驱动器，仔细检查内部结构。结果发现：推动软盘的弹簧已经变了形。用一根新的小弹簧更换后，故障被排除。<br>
+              故障二例<br>
+              故障现象：将一张正常的软盘插入软驱后，在进行读、写操作时，屏幕出现以下错误提示信息：<br>
+              Sector not found error reading drive A Abort，Retry，Fail？<br>
+              故障分析及排除方法：根据以上故障现象，判断故障原因在于软盘驱动器本身。于是打开机箱，检查软盘驱动器读磁盘的操作过程。结果发现：磁头小车移动不正常。通常情况下，磁头小车的前后移动是靠步进电机带动钢带进行的，而磁头小车则沿着一条光滑的钢导轨来回滑动。由于长期没有对驱动器进行磁盘操作，导致钢带、导轨因积尘而使得磁头小车在来回移动的过程中受到的摩擦阻力增大，从而形成了上述故障。为了排除该故障，先关掉电源并卸下该驱动器，然后用脱脂棉球蘸上少量无水酒精清除钢带、导轨上的灰尘。重新装好驱动器，启动微机，该驱动器的读、写操作恢复了正常。<br>
+              故障三例<br>
+              故障现象：在对软盘驱动器中的软盘进行操作时，可以正常地读取文件，但却不能将别的文件拷贝到该盘上，也无法删除该盘上的文件和对该盘进行格式化操作，并出现下述写保护错误信息：<br>
+              Write protect error writing drive A<br>
+              Abort，Retry，Fail？<br>
+              但该软盘并没有处于写保护状态。更换软盘，反复试机，故障现象依旧。<br>
+              故障分析及排除方法：在软盘驱动器中，有些信号是通过光电耦合原理产生的，如写保护信号、索引信号、准备好信号。这些信号一般都是采用发光二极管和光敏三极管来实现发送和接收的。如果发光二极管发出的光线能有效地照射到光敏三极管上，则光敏三极管导通；反之，光敏三极管就截止。在格式化中，需要索引孔作为位置参照，用以标志信息是在第一个脉冲来了之后才被写到软盘上的。由于无索引信号送到软盘控制器中，导致软盘控制器无法确定写入信息的起始位置而不能进行格式化工作。由于发光二极管和光敏三极管损坏的可能性不大，一般是发光二极管和光敏三极管被灰尘覆盖所致。于是打开机盖并卸下驱动器，在取下驱动器前左侧的电路板后发现读写孔内灰尘较多，此时使用脱脂棉球蘸上少量无水酒精进行擦拭，然后装好驱动器及机箱，重新启动微机并对该盘驱动器内的软盘进行操作，结果再也没有发生类似的故障了。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>优化VB程序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; Visual Basic作为一种高级编程语言，它也有着不可避免的缺点——开发出的程序运行速度慢。如果我们能够对程序做一些优化，那么情况将会大大改善。<br>
+        &nbsp;&nbsp;&nbsp; 要优化程序运行的实际速度，常用的方法有三种：<br>
+        &nbsp;&nbsp; <strong> 1.尽量避免使用Variant变量</strong>。由于VB不能确定Variant变量的具体类型，所以它会给该类型变量分配16个字节的空间，而且在用变量进行运算时还要考虑到数据类型的转换。这既占用了内存，又影响了速度，会使涉及到复杂运算的程序变慢。注意，一个变量的缺省类型就是Variant，其它类型的变量要用Dim语句单独声明。<br>
+        &nbsp;&nbsp;&nbsp; <strong>2.在遇到整型数据时尽量使用Long变量</strong>。因为Long变量是32位CPU的本机数据类型，所以处理速度会很快，尤其是在循环体中。<br>
+        &nbsp;&nbsp;&nbsp; <strong>3.将控件的常用属性保存在变量中</strong>。一般控件存在于DLL或OCX之类的外部程序中。众所周知，调用DLL远比访问内存慢。所以对于那些放在循环体中的常用属性，如果将它们保存在变量中，那么速度将会有成百上千倍的提升。<br>
+        &nbsp;&nbsp;&nbsp; 我们在编写程序时应注意到，在进行长时间等待操作时，可以做一些动画之类的效果，好让用户知道程序运行正常。下面是几个常用优化方法：<br>
+        &nbsp;&nbsp;&nbsp; <strong>1.使用Splash屏幕</strong>。也就是我们常见的欢迎窗口。大的应用程序在启动时，往往会主动或被动地载入一大堆DLL，这要花费很长时间。所以我们在启动时可以先显示一个简单的窗口，上面只放一些作者、版权之类的信息，在这个窗口的Form_Load事件中用Load方法读入那些最常用的窗体模块。这样，虽然实际等待的时间延长了，但用户所看到的屏幕总是变化的，所以感觉上程序启动加快了。而且由于常用窗体模块事先已载入内存，以后只需用Show方法来显示它，跳过了载入过程，在程序运行过程中也会很快的。<br>
+        &nbsp;&nbsp;&nbsp; <strong>2.使用Timer控件</strong>。由于Timer控件的出现，使得后台作业有了可能。我们可以在每次Timer事件中完成一小部分任务。这样，由于Timer中的事件能够在很短的时间内完成，用户一般查觉不到速度的变化。如果一定要在一个循环内完成某个任务，那么不要忘了用DoEvents来释放用户。<br>
+        &nbsp;&nbsp;&nbsp; <strong>3.使用进度条</strong>。要使用进度条，需要事先知道数据量，所以它很适合用于对已知数据的操作，如数据库的排序。<br>
+        总之，优化程序要从自己、从用户等多方面考虑，使程序开发周期短，且高效易用。<strong>(陕西 
+        任沁明)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月26日第41期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

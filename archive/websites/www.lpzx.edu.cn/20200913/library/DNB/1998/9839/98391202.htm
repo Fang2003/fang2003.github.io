@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>教你使用Excel数组公式<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp;&nbsp; Excel中数组公式非常有用，尤其在不能使用工作表函数直接得到结果时，数组公式显得特别重要，它可建立产生多值或对一组值而不是单个值进行操作的公式。<br>
+        输入数组公式首先必须选择用来存放结果的单元格区域（可以是一个单元格），在编辑栏输入公式，然后按Ctrl＋Shift＋Enter组合键锁定数组公式，Excel将在公式两边自动加上花括号“{}”。注意：不要自己键入花括号，否则，Excel认为输入的是一个正文标签。<br>
+        选取数组公式所占有的全部区域先选中区域中任意一个单元格，然后按下Ctrl＋/键即可。<br>
+        编辑或删除数组公式编辑数组公式时，须选取数组区域并且激活编辑栏，公式两边的花括号将消失，然后编辑公式，最后按Ctrl＋Shift＋Enter键。选取数组公式所占有的全部区域后，按Delete键即可删除数组公式。<br>
+        数组常量的使用数组公式中还可使用数组常量，但必须自己键入花括号“{}”将数组常量括起来，并且用“，”和“；”分离元素。其中“，”分离不同列的值，“；”分离不同行的值。<br>
+        使用不在工作表中的数组有时，公式仅占用一个单元格时也需要以数组的方式输入。其具体原则是：一个公式使用了数组，并且这个数组不在工作表上，就应该使用数组的方式输入这个公式。<br>
+        下面介绍两个使用数组公式的例子。<br>
+        1有如图所示的工作表，需分别计算各商品的销售额，可利用数组公式来实现。<br>
+        单元格F2中的公式为：{=SUM(IF(A2:A11=″商品1″，B2:B11＊C2:C11,0))}。这个数组公式创建了一个条件求和，若在A2:A11中出现值“商品1”，则数组公式将B2:B11和C2:C11中与其相对应的值相乘并累加，若是其他值则加零。同时，虽然数组B2:B11和C2:C11均在工作表中，但其相乘的数组B2:B11＊C2:C11不在工作表中，因此必须使用数组公式。<br>
+        2假设要将A1:A50区域中的所有数值舍入到2位小数位，然后对舍入的数值求和。很自然地就会想到使用公式：=ROUND(A1,2)＋ROUND(A2,2)＋…＋ROUND(A50,2)。<br>
+        有没有更简捷的算法呢？有。因为数组ROUND(A1:A50,2)并不在工作表中，因此要使用数组的方式输入公式，即：{=SUM(ROUND(A1:A50,2))}。(江苏朱猛)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月12日第39期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

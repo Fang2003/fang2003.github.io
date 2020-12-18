@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">《战国美少女》修改大法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　先打开UltraEdit进入主界面，选择打开你要修改的存档（如SAVE00DAT），打开后即可开动我们的修改大法了。<br>
+        　　俗话说得好：“有钱能使鬼推磨。”让我们先来修改金钱，选择000008B0H这一行，从左向右数第13、14、15三格便是金钱的地址，改为A0BB0D你便拥有了900000金钱。接下来我们修改人物属性，找到00000530H这一行，第5、6两格为第一个人的等级，空两格，即第9、10两格为经验值，再空两格，即第13、14两格为当前体力值，再空两格，即是下一行的第1、2两格为最大体力值，再空两格，即第5、6两格为当前技力值，再空两格，即第9、10两格为最大技力值，再空两格，下面依次为当前术力值，最大术力值，攻击力，防御力，集中力，精力，敏捷度和回避力。从第一个人的等级的地址向下数9行，即000005C0H这一行，第13、14两格，便为第二个人的等级地址，下面依次便为第二个人的属性，依此类推，从第二个人的等级的地址向下数9行，便可以找到第三个人的属性地址了。在这里我要提醒各位一下，请不要把敏捷度改得太大，否则你会发现在你无与伦比的“光速”面前，敌人都变成了不会攻击的白痴了。最后让我们来研究研究物品的修改。战国美少女这个游戏的物品修改和其他游戏略有不同，请大家看仔细了。从000008C0H～00000930H，这八行为攻击类武器的地址，物品代码从00～29，00～0B为各种忍者刀，0D～16为各种手爪，17～1D为各种枪类，1E～26为各种小太刀，27～29为各种锁镰。每两种物品之间空一格（如有一个纪念手爪和一个小太刀，则物品代码为0D001E00，后两种物品修改时中间便没有间隔了，这点还要请大家注意）。<br>
+        　　从00000940H～00000970H，四行为各种护具的地址，其中包括护身符，衣服，手镯等等，物品代码从00～2B。<br>
+        　　从00000980H～000009B0H，这四行为普通物品的地址，其中包括药品，各种投掷武器等等，物品代码从00～2F。<br>
+        (河南王宁)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月19日第40期32版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

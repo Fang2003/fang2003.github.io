@@ -1,0 +1,140 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 让疯狂导演更加疯狂——为Director添加鼠标右键菜单</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 让疯狂导演更加疯狂——为Director添加鼠标右键菜单</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 让疯狂导演更加疯狂——为Director添加鼠标右键菜单 》</SPAN></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR><TD>　　众所周知，动画大导演Director在多媒体制作类软件中一直享有很高的声誉，是进行多媒体创作的极佳工具，与Authware、Action、方正奥思等多媒体著作软件相比，有其不可比拟的优势。<BR>
+      　　遗憾的是鼠标右键菜单在多媒体应用中就比较少见了（如Director、Vb、Vc等）。它的功能的确非常强大，未激活时处于隐藏<img src="images/381.gif" width="109" height="176" align="left" alt="图1">状态，不破坏画面，但必要时随时随地都能激活，用于实现一些特殊功能（如前后跳转、开关按钮、调用工具、切换显示等）极为方便。本人经过一段时间的摸索，运用Director独有的MIAW(Movie 
+      In A Window)技术很好地实现了鼠标右键菜单的功能。其具体步骤如下：<BR>
+      　　1创建两个Director文件。一个主程序文件，名为Maindir，另一个是右键菜单文件，名为Rightmenudir。为便于理解和简化操作，我们假定主程序文件是一个多媒体课件，它由四章组成，我们将用鼠标右键菜单实现各章之间的跳转。<BR>
+　　这样Rightmenudir文件样式如图1所示：<BR>
+      　　其中第一、二、三、四章区域可处理成按钮或热区，最好能响应鼠标移入（如字变亮、覆以蓝条等）和鼠标点击（此响应是必须的）两种操作。其尺寸适宜即可（如本实例为100×160)，单位为Pix），若要简单，可在Photoshop中做一张整图（如上所示），然后裁成四张长条图片，输入到Director演员表中，再分别拖到Score窗口，使之按顺序占据第1帧的1、2、3、4通道（此电影仅1帧）。在Stage中使它们重新拼合完整，调整Movie尺寸为100×160并居中。Maindir文件在各章的开始处需进行标记，如:Lesson1,Lesson2,Lesson3,Lesson4。修改Movie属性，使其在屏幕上的位置居中，两个文件放在同一路径。<BR>
+      　　2解决右键菜单定位问题。在Win98桌面上四处点一点右键，看看菜单的弹出，可以发现其弹出的形式有四种情况，如图2所示：<img src="images/38b1.gif" width="468" height="147" alt="图2"><BR>
+　　(注：图中圆圈所圈点代表鼠标定位点；MouserightS、MousebottomS分别为鼠标定位点距Main应用程序右边界和下边界的距离；Menuwidth、Menuheight分别为菜单的宽和高，本实例中分别设置为100Pix和160Pix。）<BR>
+　　A当MouserightS&gt;=Menuwidth且MousebottomS&gt;=Menuheight时，如图2中的2－1。<BR>&lt;Menuwidth且MousebottomS&gt;
+　　B当MouserightS=Menuheight时，如图2中的2－2。<BR>
+　　C当MouserightS&gt;&lt;Menuheight时，如图2中的2－3。&gt;=Menuwidth且MousebottomSBR&gt;&lt;menuwidth且mousebottomS&gt;
+　　D当mouserightSmenuheight时，如图2中的2－4。<BR>
+　　另外我们还必须清楚：我们所创建的应用程序（如Maindir、Menurightdir），其内部坐标系与外部的屏幕坐标系完全是两个概念，内部坐标系是电影内部各种角色以及鼠标定位的依据，而外部屏幕坐标系则是Director电影在屏幕上定位的依据，虽然有时两者相同（如应用程序尺寸等于屏幕分辨率时），但多数情况下是不同的，这里先假定Maindir尺寸为640×480（一般应用尺寸），计算机屏幕分辨率为1024×768，而右键菜单尺寸前面示例中为100×160（此尺寸用户自行掌握），则其位置关系如图3所示：<BR>
+      　　其中stageleft、stagetop、stageright、stagebottom分别为舞台距屏幕四边的距离；mouseh、mousev分别为鼠标定位点的横纵坐标。<a href="images/38b2.gif" target="_blank"><img src="images/thm38b2.gif" width="100" height="72" align="right" alt="图3" border="0"></a><BR>
+　　而鼠标定位以应用程序坐标原点为基准，右键菜单（实际是一个窗口电影）则以屏幕的坐标原点为基准，因此要正确定位右键菜单则必须根据以上图2中的四种情况进行必要运算，将鼠标定位点的坐标（相对于主程序）转化为右键菜单的坐标（相对于屏幕）。如图2中的2－1其鼠标右键菜单定位rect(left,top,right,bottom)分别是：<BR>
+　　left=the mouseh＋ the stageleft<BR>
+　　top=the mousev＋ the stagetop<BR>
+　　right=left＋100<BR>
+　　bottom=top＋160<BR>
+　　具体程序代码如下：<BR>
+　　（1）maindir脚本<BR>
+　　movie脚本：<BR>
+　　global rightmenuwindow<BR>
+　　on startmovie<BR>
+　　set rightmenuwindow to window ″rightmenu″<BR>
+　　set the filename of rightmenuwindow to ″rightmenudir″<BR>
+　　set the windowtype of rightmenuwindow to 2<BR>
+　　set the rect of rightmenuwindow to rect(0,0,0,0)<BR>
+　　open window rightmenuwindow<BR>
+　　close window rightmenuwindow<BR>
+　　end startmovie<BR>
+　　on rightmousedown<BR>
+　　set mouserightS=640－the mouseh<BR>
+　　set mouserightY=480－the mousev<BR>
+      　　if mouserightS&gt;=100 and mouserightS&gt;=160 then<BR>
+　　l=the mouseh＋the stageleft<BR>
+　　t=the mousev＋the stagetop<BR>
+　　else if mouserightS&lt;100 and mouserightS&gt;=160 then<BR>
+　　l=the mouseh－100＋the stageleft<BR>
+　　t=the mousev＋the stagetop<BR>
+　　else if mouserightS&gt;=100 and mouserightS&lt;160 then<BR>
+　　l=the mouseh＋the stageleft<BR>
+　　t=the mousev－160＋the stagetop<BR>
+　　else if mouserightS&lt;100 and mouserightS&lt;160 then<BR>
+　　l=the mouseh－100＋the stageleft<BR>
+　　t=the mousev－160＋the stagetop<BR>
+　　end if<BR>
+　　set the rect of rightmenuwindow to rect(l,t,l＋100,t＋160)<BR>
+　　set the visible of rightmenuwindow to true<BR>
+　　end rightmousedown<BR>
+　　on mousedown<BR>
+　　close rightmenuwindow<BR>
+　　end mousedown<BR>
+　　on stopmovie<BR>
+　　forget rightmenuwindow<BR>
+　　end<BR>
+　　(2)rightmenudir脚本<BR>
+　　movie脚本:<BR>
+　　on startmovie<BR>
+　　repeat with x=1 to 4<BR>
+　　puppetsprite x,true<BR>
+　　end repeat<BR>
+　　end<BR>
+　　frame脚本(第1帧)：<BR>
+　　on exitframe<BR>
+　　go to the frame<BR>
+　　end<BR>
+　　sprite脚本：<BR>
+　　sprite1(即第一章)：<BR>
+　　on mousedown<BR>
+　　tell the stage to go to ″lesson1″<BR>
+　　close window ″rightmenu″<BR>
+　　end<BR>
+　　sprite2,3,4脚本同上类似，只是把lesson1相应换成lesson2,lesson3,lesson4即可。<BR>
+　　再看一下，你的Director是不是更加完美了。<BR><b>
+　　(文/王文山)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99433802.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

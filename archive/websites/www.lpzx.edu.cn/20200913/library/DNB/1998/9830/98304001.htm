@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>冷冻你的“芯”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; &nbsp; CPU过热造成的危害已屡见报端，在此不再重复。本文仅介绍一下笔者是如何冷冻CPU并将它超频的!对了，本文的主角就是——半导体致冷器。<br>
+        &nbsp;&nbsp;&nbsp; 首先介绍一下这种特殊器件。我用的是TEC1－12703型半导体致冷片，外形尺寸40×40×5mm3，由127对温差元件组成，额定工作电压12V，电流3A，最大温差60℃，最大制冷功率Q≥34W，重25克。只要简单改变电源极性，就可将冷热端互换，也就是说它只有冷热端之分，而没有严格的电源极性。它的热端极限温度必须小于80℃，包括冷端变热端的温度。<br>
+        好了，在熟悉了上面的内容以后，就让我们进行下一步吧。为提高致冷器的使用寿命，使用前用胶将致冷器四周外露的PN结封闭。我用的是706单组室温固化橡胶，将其均匀地涂在致冷器四周，注意不要涂在端面上。这样一来，可提高致冷器寿命一倍以上。<br>
+        &nbsp;&nbsp;&nbsp; 正式安装之前，我们要找到致冷器的冷端，找一节15V干电池，接在致冷器两根引线上，就可感到一端明显发凉，这就是致冷器冷端，也只有这一端贴CPU安装。另一端就是热端，是要接散热风扇的。这一步要注意，不要在无散热器的情况下为致冷器长时间通电，否则会造成致冷器内部过热而烧毁。一般情况下，蓝白黑为负极，红为正极，个别型号除外。该致冷器价格大约70元/片，可在电子商店买到。<br>
+        &nbsp;&nbsp;&nbsp; 正式安装时，在致冷器两端均匀涂上导热硅脂，在冷端还要加一块40×40×5mm3的光滑平整的铝片做为储冷块。目的是将致冷器冷端的低温均匀传到CPU表面，如不加该储冷块会造成冷端过冷并结露，致冷效率降低的现象。这也是一处关键。CPU表面与储冷块也要涂上导热硅脂。将强力的(越大越好)散热风扇装在致冷器热端上，也许此时会有麻烦，风扇怎么也装不上吧!没关系，找一个女士盘头用的发卡(不知是不是这么叫^－^)，在那上面你可能会找到你需要的风扇卡子。装好风扇接上电源(一定注意极性，否则接反了会给CPU加热的)，现在你也别得意，如果你机箱电源小于250W，我劝你别接到机箱电源上，否则你的硬盘或光驱及其它什么东西会因电源功率不够，造成无法工作甚至死机的。我用的就是300W的电源，如果电源小于250W可用外接的电源(但我也用过230W电源而无任何问题)。<br>
+        &nbsp;&nbsp;&nbsp; 安装完成后，由上到下依次是：<br>
+        &nbsp;&nbsp;&nbsp; 像不像三明治?^－^<br>
+        &nbsp;&nbsp;&nbsp; 来，做一下超频试验。一台Pentium100MHzCPU、S3765(2M)显示卡、16M普通内存、230W电源的电脑，跳在66×25=166MHz，先在没有致冷片的情况下开机半小时，结果经常出错及死机，散热片极热。加致冷片后，工作在66×3=200MHz时依然十分稳定，运行《古墓丽影Ⅱ》等三维游戏一天，没有死机现象，致冷器风扇很热，但CPU依然冰凉。后来，在66×25=166MHz方式下工作四个月，每天接收股票行情，全天开机8小时左右，十分稳定。机箱温度尚可，致冷器没有发生结露现象。<br>
+        &nbsp;&nbsp;&nbsp; 另外一例：福扬VP3主板、K6233CPU、32MSDRAM、华硕1326AGP显示卡(SiS6326)，开机半小时，CPU风扇很热，超频至266MHz，CPU风扇烫手，运行大型三维游戏，40分钟后死机，加致冷块后，以266MHz运行，风扇依然烫手，但CPU冰凉，心里十分踏实。不过，机箱内的显卡散热片也十分热，遂找一块电路板，剥去铜箔，挖一个CPU风扇大小的洞，找一个CPU风扇，装到电路板上，将其插在显卡相邻的空PCI插槽上，使风扇直吹显卡散热片，这样一来解决了6326显示卡的发热问题，此法也非常适用于其它发热量大的显卡。<br>
+        &nbsp;&nbsp;&nbsp; 以上冷冻CPU是我几个月的真实实验结果，这种方法非常适用于发热量大的CPU及超频使用者。根据有关报刊报导，一家外国公司在将AMDK6233冷冻至－40℃后，可以使其工作在450MHz。<br>
+        &nbsp;&nbsp;&nbsp; 最后警告大家：不理智的给CPU超频是极端危险的!同时，我所在的东北地区，因空气湿度相对不大，试验中始终都未发生致冷器结露现象，并且在230W小功率电源上使用四个月也未发生任何异常。但在江南及沿海空气潮湿的地方，不知会不会如此?广大电脑爱好者，让我们共同实践吧!(黑龙江任涛) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期40版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

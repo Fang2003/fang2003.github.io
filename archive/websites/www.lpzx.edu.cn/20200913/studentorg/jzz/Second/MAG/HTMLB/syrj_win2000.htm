@@ -1,0 +1,224 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<style>
+<!--
+        A:link {text-decoration: none; color: "#000000"}
+        A:visited {text-decoration: none; color: "#000000"}
+        A:active {text-decoration: none}
+        A:hover {text-decoration: underline; color: 800000}
+-->
+</style>
+<title>Windows 2000 Professional（RC2）安装指南</title>
+</head>
+
+<body background="../images/background.jpg" bgcolor="#ffffff" topmargin="0" leftmargin="0">
+
+<table border="0" width="584" cellspacing="0" cellpadding="0"
+style="font-family: 宋体; font-size: 9pt">
+  <tr>
+    <a name="0"><td width="62"><img src="../images/blank.gif" width="60" height="0"
+    alt="blank.gif (63 字节)"></td>
+    <td width="522"><table border="0" width="98%" cellspacing="0" cellpadding="0"
+    style="font-family: 宋体; font-size: 9pt">
+      <tr>
+        <td width="100%"><table border="0" width="507" cellspacing="0" cellpadding="0"
+        style="font-family: 宋体; font-size: 12pt">
+          <tr>
+            <td width="289" bgcolor="#4F4F4F" align="center"></a><font color="#FFFFFF"><strong>Windows 
+            2000 Professional（RC2）安装指南</strong></font><a name="0"></td>
+            <td width="218" align="center" style="font-family: 宋体; font-size: 9pt"></td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%" style="font-family: 宋体; font-size: 9pt"></a><br>
+        <br>
+        <br>
+        <br>
+        继Windows 2000 Beta3和RC1之后，微软在今年9月15日又发布了Windows 2000 RC2（Release 
+        Candidate 2），即候选测试版2。它修正了RC1中发现的一万多个错误，还主要针对应用程序的兼容性和硬件兼容性做了进一步优化。Windows 
+        2000 RC2与RC1一样，仍包含Windows 2000 Professional、Windows 2000 Server和Windows 
+        2000 Advanced Server三个组件。<br>
+        其中，Windows 2000 Professional相当于Windows NT 5.0 Workstation版，适用于各种台式机和笔记本。它保持了Windows 
+        NT的安全性、稳定性和高性能等特点，又继承了Windows 9x系列简单易用、兼容性好的优点，是微软面向低端的新一代操作系统。<br>
+        Windows 2000 Server相当于Windows NT 5.0 Server版，适用于中小企业的服务器应用。Windows 
+        2000 Advanced Server相当于Windows NT Server 5.0 Enterprise版，适用于大型企业级服务器，支持多达四路的对称多处理器（SMP）。<br>
+        我们在获得Windows 2000 RC2之后，立即对它进行了安装试用。下面我们就把自己的安装心得做一些简要介绍，供大家参考。<br>
+        第一部、秣马厉兵<br>
+        Windows 2000 Professional的安装比较麻烦，前期的准备工作一定要做好，否则很难顺利安装成功。下面所介绍的准备情况也是我们在多次失败之后总结出来的，请大家一定要仔细看看。<br>
+        <br>
+        1.硬件配置<br>
+        我们用来安装Windows 2000 Professional的机器配置如下：<br>
+        CPU：PⅡ-400<br>
+        主板：升技BH6<br>
+        内存：LG 128MB<br>
+        显卡：小影霸TNT 16M<br>
+        显示器：三星 510b<br>
+        硬盘：钻石6代8G<br>
+        光驱：源兴36速<br>
+        网卡：D-Link DE220<br>
+        <br>
+        在安装前我们特意选取了这台配置不算太先进的机器，因为这更能代表目前大多数用户的基本配置状况。另外，为保证系统运行的稳定性，我们没有对CPU和显卡进行超频。<br>
+        需要说明的是，虽然我们在Windows 2000 Professional的官方安装说明中，看到系统的最低配置只需要32MB内存，但实际上我们在另一台K6-2 
+        350MHz、32MB内存的低档机器上安装Windows 2000 Professional RC2并运行之后，发现32MB内存对于Windows 
+        2000 Professional而言，实在是难以忍受。所以如果你的机器只有32MB内存，建议不要升级到Windows 
+        2000——除非你想体味在486上跑Win95的滋味。<br>
+        <br>
+        2.操作系统<br>
+        我们的硬盘上原来已经安装了Windows 98简体中文第二版。虽然Windows 
+        2000 RC2支持光盘直接启动的系统重新安装，但是考虑到多数用户即使愿意安装Windows 
+        2000 RC2，也会因为对微软的测试版不放心而希望保留原操作系统，所以我们推荐采用允许Windows 
+        2000 Professional与Windows 98简体中文版同时存在的双重启动安装。<br>
+        因为设置双重启动安装必须让Windows 2000 Professional与原操作系统分别安装在不同的硬盘分区，我们将硬盘的D分区清空，留出了2.8G的空间供Windows 
+        2000 Professional安装使用——我们推荐大家采取类似的措施，即清空一个磁盘分区来安装Windows 
+        2000 Professional。建议安装Windows 2000 Professional的分区要大于1GB，因为安装Windows 
+        2000 Professional本身就至少需要500到650MB左右的空间（视组件多少而定），而安装完后一般还有一些系统工具和其它文件需要更多的硬盘空间。注意，如果希望在Windows 
+        2000中访问压缩的硬盘分区，则必须对所有压缩的硬盘分区先解压，否则Windows 
+        2000无法访问压缩的硬盘分区。<br>
+        如果你已经安装了Windows 2000 Professional的早期版本如Beta 3版等，则在安装时可以选择升级（Update）。<br>
+        <br>
+        3.硬件兼容<br>
+        从理论上来说Windows 2000 Professional对硬件的兼容性应该比Win98要好，但因Windows 
+        2000是纯32位的操作系统，而很多厂商提供的较早的硬件驱动程序都是16位的，而且作为测试版肯定还有一些不完善的地方，所以在Windows 
+        2000 Professional的安装说明中，特意强调用户需要查对一下自己的硬件是否为Windows 
+        2000 Professional所支持。<br>
+        所有Windows 2000 Professional支持的硬件列表都注明在hcl.txt说明文件里，你可以在Windows 
+        2000 Professional光盘的Support文件夹下找到这个文件，查对一下你的所有硬件是不是被Windows 
+        2000 Professional兼容。另外，最新的硬件兼容说明文件可以在网上找到，网址是http://www.microsoft.com/hwtest/hcl。<br>
+        在Windows 2000 Professional安装说明中强调，硬件兼容性列表中没有包括的硬件，Windows 
+        2000基本上不支持。不过我们发现实际上情况要好得多，我们的源兴LTN-362光驱在hcl.txt文件中找不到，但实际上在安装程序检测时没有丝毫问题（如果光盘不能直接启动，不一定是Windows 
+        2000不支持这种光驱，可以在CMOS中设置引导顺序时将CD-ROM设为第一个引导设备后再试试）。<br>
+        当然，在一般情况下硬件确实不为Windows 2000所支持时，可以到硬件厂商的主页上找寻是否有支持Windows 
+        2000的最新驱动程序下载。如果还不行，那干脆还是用Win98吧，等到Windows 
+        2000正式版出来再说，也许到那时Windows 2000的兼容性得到了进一步改进，也许到时候你的硬件也已经升级了。<br>
+        <br>
+        好了，现在一切准备就绪，让我们出征吧！<br>
+        第二部、安装小记<br>
+        <br>
+        1.DOS下安装<br>
+        如果你希望在Windows 95/98下直接安装Windows 2000，可以略过这一节，直接参看下一节“Windows下安装”。<br>
+        在DOS下安装Windows 2000也可分为两种情况：软盘启动和光盘启动。<br>
+        一般情况下Windows 2000都可以自动进行光盘启动，如果你的主板和CMOS不支持光盘自启动，就只能用软盘启动来安装Windows 
+        2000了。<br>
+        要用软盘启动，首先需要创建安装启动盘，过程如下：<br>
+        ——先准备好4张已经格式化的1.44MB 3.5寸软盘；<br>
+        ——将Windows 2000 Professional光盘插入光驱；<br>
+        ——在DOS下进入Windows 2000 Professional光盘bootdisk目录下，运行makeboot批命令，注意要带参数，格式为：makeboot.bat 
+        a:〈回车〉；<br>
+        ——在安装程序指导下依次插入4张软盘，即可完成创建安装启动盘的操作。<br>
+        然后用安装启动盘启动机器，即可进行Windows 2000 Professional的安装。<br>
+        安装程序首先会将140多兆的内容从光盘拷贝到硬盘，这是下一步运行安装向导所需要的文件。文件拷贝完毕之后，需要重新启动，然后由硬盘直接启动后进入安装程序的第二步：文本导引安装。文本导引安装主要是完成Windows 
+        2000 Professional文件格式选择（FAT、FAT32或NTFS格式）和程序拷贝等操作。<br>
+        程序拷贝完成之后，进入图形引导安装，其过程步骤与Windows下安装基本相似，可直接参看第3节“程序安装”。<br>
+        <br>
+        2.Windows下安装<br>
+        如果你选择在Windows 95/98下直接安装Windows 2000，可以在当前操作系统下直接进入安装向导，相对于DOS下的安装界面，要直观简便得多。<br>
+        Windows 2000 Professional提供两种安装模式：重新安装或是升级。<br>
+        如果你所使用的是英文版Windows 95/98或Windows NT 3.51/4.0 Workstation版，或者已经安装了Windows 
+        2000 Professional Bate3/RC1等早期版本，都可以直接在Windows平台下升级，无需重新安装，这样可以很好地保留当前系统的设置。<br>
+        不过，因为我们一般都推荐建立双重启动配置，希望同时运行Windows 
+        2000 Professional和Windows 9x/NT，而建立双重启动配置就必须选择重新安装；另外，我们大多都是使用中文版的Windows 
+        9x或Windows NT，而Windows 2000 Professional RC2不支持直接从中文版的Windows 
+        9x/NT升级到Windows 2000，所以一般情况下用户都需要选择重新安装。<br>
+        将Windows 2000光盘插入光驱后，Windows 2000的安装向导将首先对当前的操作系统进行检测，发现当前操作系统不支持升级，即告警并提示用户Windows 
+        2000将重新安装系统（如图1）。然后安装向导提示用户选择安装选项（如图2）。<br>
+        首先可选择系统语言（如图3），在上面的选择栏中选择系统主语言（Main 
+        Language），我们当然选择Chinese（PRC）；在下面的选择栏中选择附加语言即你将可能用到的语言，按住Ctrl键点击鼠标，可以选择多种语言，将来Windows 
+        2000 Professional就可以支持这些语种的应用程序了。以前我们玩的日文游戏大多需要日文Windows来支持，让我们不得不在机器里再装一个平时很少使用的日文系统来防备万一，在Windows 
+        2000中这个问题得到了较好的解决。<br>
+        选择好语言之后，一定要进入“高级选项”（Advanced Options）进行设置。要建立双重启动配置，需要让Windows 
+        2000安装在与当前操作系统不同的硬盘分区内。一般情况下我们的操作系统都安装在C盘，而在默认状态下Windows 
+        2000安装程序也会把Windows 2000安装到C盘下。所以必须在“高级选项”中设置允许自定义Windows 
+        2000的安装分区（如图4）。<br>
+        如果希望通过网络或者硬盘安装，也必须在“高级选项”中自定义Windows 
+        2000的文件位置。另外，还可以选择将所有安装文件在安装Windows 2000的同时拷贝到硬盘中去，这样便于以后的安装升级。<br>
+        如果希望Windows 2000的安装多一些色彩，可以进到“易用选项”（Accessibility 
+        Options）中进行设置。如果眼睛不太好，可选择“放大镜”（Magnifier）放大安装过程中的提示信息，或选择“讲解员”（Narrator）来一路为你讲解安装信息，需要特别指出的是这是为盲人设计的，当然普通人一样可以享受，这也说明微软考虑得相当细致。<br>
+        <br>
+        3.程序安装<br>
+        安装设置完成后，安装向导将对机器和系统进行自检，内容包括CPU、主板、硬盘剩余空间和文件系统以及内存大小等等。如果自检不能通过，则安装向导会报错并终止安装。自检通过之后，就可以进入我们熟悉的安装进程了。因为一般的设置大家都很熟悉了，这里只把一些重要的设置作出特别说明。<br>
+        <br>
+        ——是否选择升级到Windows 2000的NTFS-5文件系统<br>
+        如果要建立双重启动配置，建议使用FAT/FAT32的文件系统，虽然Windows 
+        2000的NTFS-5文件系统具有更高效更安全等特点，但是Windows 9x和较早版本的Windows 
+        NT都不能很好地支持它。有关是否需要选择NTFS-5文件系统的问题，我们在后面再详细说明。<br>
+        ——设置管理员（Administrator）账号<br>
+        在安装过程中将创建一个管理员帐号。熟悉Windows NT的用户都知道这个管理员是干什么用的，而从未接触过Windows 
+        NT的用户可能就有点犯难了。其实简单地说，拥有管理员账号的用户是Windows 
+        2000中权限最高的用户，只有管理员才可以对机器进行全面设置和管理，创建其他用户的帐号、限制其他用户的权限等。不管怎么样，除非你的机器始终只有你一个人使用，才可以不设置Administrator账号的口令；否则一定要设置并记住Administrator账号的口令。注意，一旦机器Administrator账号的口令遗失或被人更改了，你就失去了对整个机器和系统的管理权力，要救回来可不容易哟！另外，如果是单用户机器，也可以在首次登录Windows 
+        2000时选择自动登录，这时Windows 2000会自动认定Administrator账号为唯一用户。Windows 
+        2000 与Windows 9x的安全管理机制完全不同，也许你还需要一点时间来适应。<br>
+        ——网络设置<br>
+        如果将来会有网络应用，则在安装过程中需要对网络进行设置，主要是设置“组”和“域”。如果几台计算机的“组”名称一样，那么这几台机器就是一个工作组。注意，凡是有网络应用则必须对“组”名进行设置。可以设置一个需要加入的已存在的“组”名，也可以设置一个新的“组”名。要加入“域”，则必须通过网络管理员获得这个“域”的一个账号。如果在安装时没有“域”的账号，可以先不加入“域”，在安装完成之后再通过Windows 
+        2000的“网络向导”十分方便地加入到“域”中。<br>
+        <br>
+        4.安装完成<br>
+        在程序拷贝完毕，安装向导结束后，计算机会重新启动多次，然后你就可以看到Windows 
+        2000的登录界面（如果是对Windows 2000升级，还可以直接使用以前的帐号和口令登录）。这时请登录进入Windows 
+        2000吧，安装完成了！<br>
+        <br>
+        第三部、高级应用<br>
+        <br>
+        1.用户帐号<br>
+        如果你的机器有多个用户，则需要通过管理员帐号及口令登录进入Windows 
+        2000 Professional之后，再创建自己和其他用户的帐号。<br>
+        在创建自己或者其他用户的帐号时请注意，Windows 2000 Professional的用户账号类型有两种：“本地用户账号”和“域用户账号”。如果是“本地用户账号”，则不能使用网络资源，只能使用本计算机上的资源；只有“域用户账号”才有权使用网络。另外，对于不同用户，你可以任意设定其使用权限。<br>
+        在“Documents and Settings”中每个用户的个人目录下，都有一个profile文件。这个大约5M大小的文件记录着该用户的所有配置和属性，这样每个用户建立和使用的文件、独特的配置以及个性化设置都可以相对独立互不干扰。<br>
+        Windows 2000 Professional的用户管理有着很好的安全性，现在你既不用担心人家在登录时按一个“ESC”就能进到你的机器里对系统进行任意操作修改，也不用担心其他未经授权的用户私自使用你的计算机——没有你授予的账号，其他人无法通过登录进入Windows 
+        2000。<br>
+        对于NTFS文件格式的分区，Windows 2000 Professional提供了非常完善的用户安全管理。我们在另一台机器的安装中建立了NTFS文件格式的分区并试用了一些功能，证实了NTFS文件格式的安全性。<br>
+        虽然在NTFS中每个文件和目录的默认状态是所有用户都有“完全访问权限”（这一点有待改进，Unix的文件属性默认状态是只有该用户具有完全访问权限，这样的默认状态更为安全），但是你可以通过更改文件/目录属性来限制其他用户的访问权限，这样其他用户无法访问和使用你的文件/目录。当然，你也无法任意访问和操作其他用户的个人文件/目录——即使你是管理员，也最多只能打开目录查看文件名，而无法打开其中的文件查看具体内容，这样每个用户的个人隐私都可以得到很好的保障。另外，Windows 
+        2000 Professional也为管理员提供了很方便的用户账号安全管理。对于任意的文件、目录以及程序，管理员都可以自行设定用户的使用权限，也可以授权哪几个用户有权使用，这样就保证了系统本身的安全——只有管理员一级的用户才有权删除、安装系统程序。管理员还可以通过设定用户个人空间的大小来限制用户侵占整个计算机的硬盘空间，如果你限制某一个用户的使用空间为100MB，就不用担心他会安装一个Office 
+        2000来挤满你的硬盘——他最多只能使用100MB的硬盘空间。<br>
+        需要特别说明的是，虽然Windows 2000 Professional提供了非常安全的用户访问权限设置，但如果你没有采用NTFS文件格式，就不能体会和享受到这些安全特性带给你的方便了。<br>
+        <br>
+        2.NTFS-5文件系统<br>
+        Windows 2000支持DOS的FAT格式、Windows 9x的FAT32格式和Windows NT的NTFS格式，而实际上Windows 
+        2000使用的文件格式与早期的NTFS格式不完全相同，是NTFS-5格式。因此，对于文件格式的选择有必要在此再做一些说明。<br>
+        NTFS-5文件系统是Windows 2000 Professional推荐使用的文件系统，它的优点主要有三点：具有良好的兼容性，向下兼容FAT/FAT32和早期版本Windows 
+        NT的NTFS文件系统；具有很好的安全性，可以任意设置文件访问权限和用户程序访问权限；具有更好的磁盘管理特性，支持最大高达2TB的海量硬盘，并对大容量硬盘提供更高的磁盘文件压缩比。<br>
+        NTFS-5文件系统有这样多的优点，我们是否就要无条件地选择使用NTFS-5文件系统呢？回答是不一定，用户还是要根据自己的具体应用要求来决定是否选择使用NTFS-5文件系统。<br>
+        如果你非常重视计算机使用和文件管理的安全特性，使用容量很大的硬盘，硬件配置较高，而且不要求访问原操作系统中的应用程序与文件，则不妨在安装时选择NTFS-5文件格式进行安装。当然，也可以在安装完成之后，通过运行磁盘格式转换程序（Convert.exe）将硬盘的FAT/FAT32或早期版本Windows 
+        NT的NTFS文件格式转换成为NTFS-5格式。<br>
+        而如果你对文件管理的安全性要求不是很高，更希望保持系统的稳定性和应用程序的兼容性，则建议采用FAT32文件格式。另外，如果硬件配置较低、系统运行速度慢、硬盘容量较小，也应该采用FAT32文件格式。<br>
+        <br>
+        3.双重启动设置的细节问题<br>
+        <br>
+        ——双重启动中NTFS-5文件系统的问题<br>
+        在Windows 2000 Professional的安装说明文件中强调，如果设置Win9x与Windows 
+        2000 Professional的双重启动，则建议用户不要采用NTFS-5格式，官方的解释是那样安装有可能导致增加文件格式的复杂性。也许这是因为NTFS-5格式与FAT32格式兼容性不是太好，而导致文件格式转换不稳定的缘故吧。<br>
+        实际上我们后来安装中文版Win98与Windows 2000的双重启动时，采用了NTFS-5文件格式，发现虽然有一些小小的问题，但是不能确认到底是Windows 
+        2000 Professional系统本身有Bug而引起的问题，还是NTFS-5文件格式引起的问题。所以，如果你的硬件配置较高，也可以在双重启动设置中采用NTFS-5文件格式。如果硬件配置较低，就不要采用NTFS-5文件格式了，因为在双重启动中同时存在FAT32和NTFS-5两种格式，增加了文件格式转换的复杂程度，会降低系统的执行效率，而且对硬件的依赖性较高。<br>
+        ——文件格式兼容性问题<br>
+        如果安装Win9x与Windows 2000的双重启动，而且选择在Windows 2000中使用NTFS-5文件格式，则要注意在Win9x中你将无法访问Windows 
+        2000的NTFS-5文件格式中的任何文件与程序。即使是选择Windows NT与Windows 
+        2000的双重启动，也只有NT 4.0 Service Pack4版本能够访问NTFS-5的文件格式，其它低版本的NT仍然无法访问NTFS-5文件格式。<br>
+        不过反过来倒是可以，你可以在Windows 2000中访问DOS的FAT格式、Windows 
+        9x的FAT32格式和Windows NT的NTFS格式等旧版的任意文件格式。NTFS-5格式的向下兼容性还是不错的。<br>
+        另外，如果设置Windows 2000 Professional与MS-DOS或Win95的双重启动配置，主分区必须采用FAT格式；设置Windows 
+        2000 Professional与Win95 OSR2或Win 98的双重启动配置，主分区必须采用FAT32格式，即双重启动设置的主分区不能采用NTFS格式。<br>
+        ——设置Windows NT双重启动<br>
+        如果要设置Windows NT和Windows 2000 Professional的双重启动配置，注意如果需要访问网络域，则在Windows 
+        2000 Professional的安装时，其计算机名称必须与Windows NT Workstation在这个域中的名称不相同，否则在网络应用中会发生冲突。另外，如果你的Windows 
+        NT使用了NTFS格式，建议在安装Windows 2000 Professional之前将Windows NT升级到Windows 
+        NT Service Pack4或更高版本，否则低版本的NTFS与Windows 2000 Professional的NTFS-5可能因为不兼容而增加系统的不稳定性。<br>
+        ——双重启动的安装顺序<br>
+        无论是设置哪一种双重启动，都建议在最后安装Windows 2000，这样可以防止Windows 
+        2000的系统文件被删除或覆盖而导致安装失败。<br>
+        另外，设置任何一种双重启动时无论采用何种文件格式，你都必须在Windows 
+        2000中重新安装所有的应用程序，Windows 2000可以向下兼容访问文件，但无法访问旧版操作系统的应用程序。<br>
+        <br>
+        以上就是我们安装Windows 2000 Professional RC2的安装实录和一些心得体会，供大家参考。因为条件和时间限制，疏漏之处在所难免，有问题请来信到wahaha1999@21-cn.com共同探讨。<br>
+        <br>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

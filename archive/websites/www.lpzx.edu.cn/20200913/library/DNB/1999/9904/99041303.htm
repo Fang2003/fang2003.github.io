@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>C++ Builder经验点滴</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">C++ 
+        Builder经验点滴<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　1.全编译的问题。在C＋＋ 
+        Builder 3.0下,如果不进行设置,那么程序是不完全编译的,运行时要用到Windows的System目录下的一些文件，如将这样编译所得的可执行文件拷到其它未装C＋＋ 
+        Builder 
+        的机子里将无法运行。如果想全编译可以通过设置完成。设置方法如下：按“Project”下“Option”，选中“Packages”页下角的“Build 
+        with runtime packages”即可。<br>
+        　　2.在线帮助的制作。一个完整的程序应该有在线帮助。制作在线帮助并不难,主要工作在制作帮助文件上，这需要一个帮助文件编译器，在C＋＋ 
+        Builder的“CBuilder3\Help\Tools&quot; 目录下就有一个帮助文件编译器HCW。实际上帮助编译器的作用就是将.rtf文件编译成.hlp文件。让我们来看一个最简单的例子，用Word随便写一个.rtf文件,启动HCW,先建一个项目；按窗体右边的“Files”按钮，把刚才做的.rtf文件添加进去；最后按右下角的“Save 
+        and Compile”按钮，这样在你的项目的目录下，将会出现一个和项目同名的.hlp文件。在程序中使用帮助文件如下：<br>
+        　　Application－&gt;HelpFile=″myhelp.hlp″ ;／／指定帮助文件<br>
+        　　Application－&gt;HelpCommand(HELP_Contents,0); ／／打开帮助窗体<br>
+        　　3.安装组件。C＋＋ Builder一个很吸引人的地方，就是它的组件。你不但可以利用系统中提供的丰富的组件，而且可以利用第三方提供的组件。安装组件的操作很简单，打开“Compoment”菜单下的“Install 
+        Compoment”，然后选中要安装的组件的文件就行了。<strong>(江苏　潘想)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

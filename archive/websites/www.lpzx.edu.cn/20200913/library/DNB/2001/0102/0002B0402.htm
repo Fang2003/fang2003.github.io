@@ -1,0 +1,266 @@
+<html><!-- #BeginTemplate "/Templates/soft.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>FDISK的隐藏参数开关</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+      
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第02期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;</font>软件世界</td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->FDISK的隐藏参数开关<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 　　编者按：FDISK是广为PC爱好者所熟知的磁盘分区程序，其体格小巧，功能强大，使用简便。虽然目前受到了PQMagic等无损分区软件的巨大挑战，但FDISK仍然是许多PC用户的首选分区程序。鉴于分区操作是对磁盘结构的重新划分，具有一定的危险性，所以开发FDISK程序的微软公司并没有将该程序的全部参数开关公布出来，于是FDISK的功能在一定程度上受到了限制。笔者通过与微软技术人员的联系，得到了一部分关于FDISK的未公开参数开关，在此介绍给大家，希望朋友们能更好地利用FDISK的全部功能。 
+
+              <br>
+
+              　　FDISK程序的命令行格式通用语法为：FDISK /参数开关 未公开的参数及功能说明如下：(按字母先后顺序排列) <br>
+
+              　　1． /ACTOK 参数功能：不检查磁盘表面是否有坏扇区 功能说明：用 /ACTOK参数可以不检查磁盘表面而加快分区操作。 
+
+              <br>
+
+              　　2． /CMBR 参数功能：重新建立指定磁盘的主引导记录 功能说明：其操作等同于 /MBR参数 不同之处是可以指定磁盘。 
+
+              <br>
+
+              　　3． /EXT 参数功能：建立扩展分区 功能说明：在当前磁盘上建立扩展分区(用来随后建立逻辑磁盘分区)。 <br>
+
+              　　4． /FPRMT 参数功能：在交互模式下询问 FAT16或FAT32 的使用 功能说明：当加上 /FPRMT 参数时不会出现是否支持大容量硬盘的询问画面，而是在每次建立一个新的分区时询问使用FAT16还是FAT32格式。 
+
+              <br>
+
+              　　5． /LOG 参数功能：建立磁盘逻辑分区 功能说明：用 /LOG来建立逻辑磁盘， /LOG 必须和 /EXT 同时使用。 
+
+              <br>
+
+              　　6． /LOGO 参数功能：使用 FAT16格式建立磁盘逻辑分区。 <br>
+
+              　　7． /MBR 参数功能：重新建立主磁盘的主引导记录(Master Boot Record) 功能说明：卸载WindowsNT或Windows2000后消除在主引导记录上记载的系统启动选择；当有病毒感染主引导记录时，用来清除病毒相当有效。 
+
+              <br>
+
+              　　8． /PRI 参数功能：建立主分区 并设定为激活形式 功能说明：在磁盘上建立主分区，分区会自动被设定为激活形式。 <br>
+
+              　　9． /PRIO 参数功能：使用 FAT16格式建立主分区并设定为激活形式。 <br>
+
+              　　10． /Q 参数功能：结束 FDISK时不重新启动计算机 功能说明：使用 /Q 参数将不用在改变分区表后重新启动计算机。 
+
+              <br>
+
+              　　11． /STATUS 参数功能：显示当前磁盘分区状况 功能说明：当磁盘扩展分区上没有进行逻辑分区时 扩展分区不会被显示出来。 
+
+              <br>
+
+              　　12． /X 参数功能：不使用 LBA 属性 功能说明：使用 /X 参数将不会产生带有 LBA 属性的分区。 <br>
+
+              　　有了这些参数，使用FDISK程序会更加得心应手。不过隐藏参数危险系数更大，需谨慎使用。(湖北 冰人) <!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

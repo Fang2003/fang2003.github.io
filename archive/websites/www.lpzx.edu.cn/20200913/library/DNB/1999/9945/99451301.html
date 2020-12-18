@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VB编程中如何锁定鼠标</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VB编程中如何锁定鼠标</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VB编程中如何锁定鼠标 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　锁定鼠标!什么意思?有人一定不明白了,好!让笔者先说明一下吧!锁定鼠标就是让你的鼠标不能移动,不能单击,当然也不能双击,不能做任何事,反正就是让鼠标本来应有的功能都失效,就跟坏了的一样,很有趣的。你也可以尝试编写一个和你的朋友开个小小的玩笑,不过，不要忘记还原啊!OK!就让笔者用VB编程为各位演示一下这个程序吧!<br>
+　　首先,新建工程,在FORM1上放上两个COMMAND命令按钮(即COMMAND1与COMMAND2),其属性都保持不变,然后请输入以下程序代码:<br>
+　　Private Declare Function ClipCursor Lib ″user32″ (lpRect As Any) As Long<br>
+　　Private Type RECT<br>
+　　Left As Long<br>
+　　Top As Long<br>
+　　Right As Long<br>
+　　Bottom As Long<br>
+　　End Type      ／／以上代码请从API函数浏览器中复制即可。<br>
+　　Dim DENG As RECT<br>
+　　Dim SS As Boolean  ／／是锁定或是释放的判断<br>
+　　－－－－－－－－－－－－<br>
+　　Private Sub Form_Load()  ／／作初始化设置。<br>
+　　SS = True<br>
+　　Command1.Caption = ″单击将锁定鼠标,锁定后按回车将被释放″。<br>
+　　Command2.Caption = ″结束程序″<br>
+　　Form1.Caption = ″锁定鼠标的演示程序″<br>
+　　End Sub<br>
+　　－－－－－－－－－－－<br>
+　　Private Sub Command1_Click()  ／／锁定鼠标<br>
+　　If SS = True Then  ／／如果鼠标没有被锁定则锁定它。<br>
+　　DENG.Left = 0：DENG.Top = 0  ／／必要设置,四个都为零。<br>
+　　DENG.Right = 0：DENG.Bottom = 0<br>
+　　ClipCursor DENG : SS = False  ／／锁定鼠标且重新赋值给SS。<br>
+　　Else  <br>
+　　ClipCursor ByVal 0＆ : SS = True  ／／释放鼠标且重新赋值给SS<br>
+　　End If<br>
+　　End Sub<br>
+　　－－－－－－－－－－－<br>
+　　Private Sub Command2_Click()<br>
+　　End    ／／结束程序。<br>
+　　End Sub<br>
+　　现在运行一下吧(按下F5),单击COMMAND1鼠标将被锁定,锁定后要释放请按下回车键即可。当然你也可以把上面的DENG的LEFT,TOP,RIGHT,BOTTOM值都改成100(或每个都不相同的值)再试一试,相信你一定会有其他新的收获!<br>
+　　注:以上程序在中文WINDOWS98, 中文VB5.0专业版中调试通过!<br><b>
+（上海　季昭君）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99451301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

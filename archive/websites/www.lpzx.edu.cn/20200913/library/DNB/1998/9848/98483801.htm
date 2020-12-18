@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>创造更丰富的音乐 CakeWalk中的音色设置</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>创造更丰富的音乐<br>
+        CakeWalk中的音色设置</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font face="黑体" color="#004080"><strong> 
+        &nbsp;&nbsp;&nbsp; </strong></font><font color="#369681">对于电脑音乐爱好者来说，他们对电脑音乐的热爱，一个很重要的原因是被那变化无穷、丰富多彩的音色所吸引。电脑音乐系统不单单可以再现几乎所有传统乐器、电声乐器的音色，还可以制造出一些绝妙的电子音色。借助于采样器，你可以把你钟爱的任何一种声音存入你的音源库中。因此，从理论上说，电脑音乐能创作的音色是无限的。</font><font
+        face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><br>
+        <font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">但是，对于具体的音源来说，音色数又是有限的。一般符合GM标准的声卡可以提供128种常用音色，对于业余玩家而言倒已足够。对于要求更高的专业音乐制作人，则可以使用GS或XG标准的音源，它不但提供了更多的内置音色，还增加了更多的音色控制参数。比如ROLAND公司出的高级音源JV2080，提供700多种美妙音色和丰富的控制参数，再如YAMAHA公司的软音源YXG50也提供了500多种XG标准音色和比GS标准更丰富的控制参数。</font><font
+        face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><br>
+        <font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">话说CakeWalk软件公司考虑到市场上音源型号众多，各有所长，光靠GM定义的区区128种音色又如何满足得了追求新音色无止境的电子音乐家们？于是，CakeWalk软件预先设置了16384个BANK（音色库），每个BANK可包含128种PATCH（音色），每种音色可包含128个NOTE（音符）。从理论上说，通过CakeWalk软件就可以控制16384×128=2097152种音色，话是这么说，可先别高兴得太早。地球上暂时还没有出现包含有这么多音色的音源。CakeWalk提供给我们的音色只不过是按数学计算可预留这么多位置，到底有多少种音色还得音源说了算。假如买了块高级音源，可千万别把那张不起眼的说明书给弄丢了，音源里有多少种音色、符合什么标准、该如何调用它们，可都在那上头写着呢！<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">以适合中国国情的软音源YXG50为例（软音源与硬音源原理一样），来说明如何调用里面XG模式的480种音色和11种鼓音色（如果采用TG300B模式，就有579种音色和10种鼓音色）。YXG50实在是款好音源，不只因为它不用花钱，还因为笔者觉得它的音色与近两千元的专业音源卡相比也毫不逊色，甚至比某些电子合成乐音色和打击乐音色还要更加美妙动听些。打开YXG50的帮助文件，可以找到它的音色列表（XGNormalVoiceList）。打开表中的PIANO(钢琴)乐器组（如图一）。<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">音色列表里面的钢琴音色丰富极了，达三十多种，远不止GM定义的区区八种。由表上看出，每种音色有四个参数：“Program＃”即音色编号，相当于CakeWalk软件中的PATCH参数“Bank＃”，即音色库编号VoiceName，乐器名称Element音色中复合元素的数目。<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">每个音色都是由前面两个参数决定的，后两个参数是关于音色特征的描述。下面我们来试试表中的PianoStr音色，它的Program＃是1,Bank＃是40,Element是2,即该音色是由PIANO和STRING两个复合音色迭加而成。<br>
+        接着，再回到CakeWalk软件主界面。自然，MIDIDevice应先添加上YXG50。在TRACK窗口中双击“PATCH”项，弹出TrackPorperties对话框<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">根据自己的软硬件设置好相应的Source、Port、Channel后，在BANK里填入40，在Patch里填入1即可。点“OK”返回。这时再用你的MIDI键盘或虚拟键盘弹几个音试试，听到什么了？你听到了在GM那128个音色中从来没有听到过的新的音色：用一种乐器就发出了钢琴和弦乐齐奏的效果。采用同样方法，我们就可以使用YXG50中提供的全部480种XG音色了。一切就这么简单！<br>
+        如果偏偏你的硬音源说明书找不到了，软音源帮助文件那满纸洋文你又懒得去看，怎么图三办？那就看你的音源是否已被CakeWalk考虑在内。在图二对话框的右下方，有个Assigninstruments按钮。用鼠标去点它，会弹出Assigninstruments对话框<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">在对话框右边的用户乐器（UsesInstrument）中找找看，有没有你买的那块音源型号？没有?！不要紧，再点右边的Define按钮，又会冒出来一个新的对话框：Defineinstrumentsandusers。上面有个“Import”按钮，拿鼠标点它，又会冒出一个对话框。最后冒出来的这个对话框列出了一些以ins结尾的乐器定义文件，包括了世界上主要的音源合成器制造商的乐器定义，比如你的音源是YAMAHA的，就选YAMAHA.INS文件，点完“OK”后再照着提示一路OK吧。总之，直到最后在Assigninstruments对话框中出现你的音源型号为止。把它赋给你选中的通道。再回到Trackproperties对话框，哈，这时BANK选项里面已经不像原来只有“。..”了，而是既有编号、又有名称，原来是个标准的XG音色库列表（如图四）。<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">你可以在里面选择合适的音色库，再在Patch中选择合适的音色就可以了。只要你前面定义的乐器组同你实际的音源相符，那你实际听到的声音应当同你选择的乐器名称相一致，而不会跑出莫名其妙的其他音色。<br>
+        鼓的设置同普通乐器的设置相类似，只不过要在Assigninstruments对话框里把相应的鼓组赋给通道10（只能是通道10）。然后，就可以在Trackproperties对话框的Patch项中选择鼓组的名称了。注意：每个Patch对应的是一个鼓组，比如JAZZ鼓组或是STANDARD鼓组，每个NOTE才是一件具体的打击乐器，如大鼓或军鼓。<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">你可以在里面选择合适的音色库，再在Patch中选择合适的音色就可以了。只要你前面定义的乐器组同你实际的音源相符，那你实际听到的声音应当同你选择的乐器名称相一致，而不会跑出莫名其妙的其他音色。<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">鼓的设置同普通乐器的设置相类似，只不过要在Assigninstruments对话框里把相应的鼓组赋给通道10（只能是通道10）。然后，就可以在Trackproperties对话框的Patch项中选择鼓组的名称了。注意：每个Patch对应的是一个鼓组，比如JAZZ鼓组或是STANDARD鼓组，每个NOTE才是一件具体的打击乐器，如大鼓或军鼓。<br>
+        </font><font face="黑体" color="#004080"><strong>&nbsp;&nbsp;&nbsp; </strong></font><font
+        color="#369681">其他型号的音源，不论软硬，其音色设置都可依此类推，道理是一样的。CakeWalk中的乐器设置看起来比较麻烦，弹出的一个又一个对话框容易把人搞得晕头转向，但只要搞清一点：所有的音色都是由音源、BANK号、PATCH号来唯一决定的，这样就不易出错了。<br>
+        <br>
+        (广州师勇sy263@263.net)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9848/1998/48/index.htm">《电脑报》1998年12月14日第48期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>在LotusNotes中设计可</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在LotusNotes中设计可<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　在LotusNotes中设计可“翻开”的书本式导航器在LotusNotes中打开它的帮助数据库，在弹出的窗口中：左边的视图窗口中有几本书，想查阅某个主题的内容只须单击相应的书本，指定的书本即自动“翻开”，右边窗口就会出现对应书本的内容，是不是很巧妙？其实，只要按照下面的步骤，你会发现自己也能轻而易举地做出这种界面。<br>
+        &nbsp;&nbsp;&nbsp; <strong>一、创建数据库</strong><br>
+        在LotusNotes界面中选择“文件/数据库/新建”，建立一个目标数据库。<br>
+        &nbsp;&nbsp; <strong>二、创建设计表单</strong><br>
+        打开新建的数据库，在主菜单中寻创建/设计/表单”。为了与指定的导航器相联，表单名要定为“＄＄NavigatorTempltefor&amp;lt;导航器名&amp;gt;”。这里要做4个主题，相应地要有4个导航器，分别定名为“Navg1”、“Navg2”、“Navg3”、“Navg4”，对应要创建4个表单，每个表单中加入4个域：＄＄NavigatorBody、＄＄ViewBody、Subject、TopicType，其中将“TopicType”域属性中的类型设为“关键字”，范围选择“输入关键字”，依次输入4个关键字：“key1”、“key2”、“key3”、“key4”，其余域的类型设为“文本”。<br>
+        &nbsp;&nbsp;&nbsp; <strong>三、创建视图</strong><br>
+        Notes通过视图组织数据库中的文档。在主菜单中寻创建/视图”，创建4个视图，名称分别为“主题一”、“主题二”、“主题三”、“主题四”。缺省状态下每个视图都包含所有的文档，为了使不同的视图只包含相应的内容，在视图“主题一”的设计窗格中，为“视图选项”输入公式：SELECT(TopicType=″key1″)将“＃”列定义为“无标题”，显示“Subject”域。<br>
+        对应地，将公式中的“key1”分别改为“key2”、“key3”、“key4”，为另外三个视图的“视图选项”输入公式并定义列。<br>
+        &nbsp;&nbsp;&nbsp; <strong>四、设计导航器</strong><br>
+        这一步用来实现书本的“翻开”效果。在主菜单中寻创建/设计/导航器”，分别为每个主题创建一个导航器，名称为“Navg1”、“Navg2”、“Navg3”、“Navg4”。<br>
+        &nbsp;&nbsp;&nbsp; 
+        在“剪贴板”中放入书本式样的图形（可在“画笔”中做），在设计导航器“Navg1”时，在主菜单中寻创建/图形背景”，即可加入“剪贴板”中的图形作为背景，注意图形中与自身主题对应的书本图形置为翻开式样，其它主题对应的书本图形置为关闭式样。<br>
+        &nbsp;&nbsp;&nbsp; 
+        为“书本”未打开的主题区域上加上“热点矩形”，并为“主题二”的“热点矩形”输入公式：<br>
+        &nbsp;&nbsp;&nbsp; @Command([OpenNavigator];″Navg2″)<br>
+        &nbsp;&nbsp;&nbsp; 将公式中的“2”改为“3”、“4”后为“主题三”、“主题四”的“热点矩形”输入公式。<br>
+        &nbsp;&nbsp;&nbsp; 同法设计另外3个导航器。<br>
+        &nbsp;&nbsp;&nbsp; 
+        好了，剩下的工作就是根据需要创建文档了。将要放入“主题一”书中的文档，关键字寻key1”，要放入“主题二”书中的文档，关键字寻key2”……<br>
+        &nbsp;&nbsp;&nbsp; 操纵鼠标看看，你的“书本”能不能翻阅自如了？<strong>(安徽 
+        &nbsp; 张友民)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月16日第44期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

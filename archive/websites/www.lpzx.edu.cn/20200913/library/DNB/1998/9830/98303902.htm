@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>显卡也疯狂</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; &nbsp; 
+        现在，许多电脑发烧友都知道超频CPU，在许多的BBS上和网站上都有交流超频的经验和技巧。但是你知不知道，原来显示卡也是可以超频的，更有一些高手已经制作了一些小程序以帮助超频显示卡，有一些显示卡是通过更改Win95中注册表的设置来实现超频。这里，介绍一些十分实用的显示卡超频方法。<br>
+        &nbsp;&nbsp;&nbsp; 注意：<br>
+        &nbsp;&nbsp;&nbsp; 虽然超频后，显示卡的性能有较大的提高，但是这可能会引起显示卡硬件上的损坏，请小心使用，而且注意不要超得太狠。另外，因为有时需要编辑Windows注册表文件，所以，一定要在更改之前做好注册表文件的备份。你下面要做的每一件事情都是有一定的风险的，也许会出现无法预料的事情，如果你的显示卡发生了什么硬件上的损伤，我可是不会负上任何的责任哦，请三思而后行。<br>
+        &nbsp;&nbsp;&nbsp; 现在我们就要进入正题啦，在我目前掌握的资料中，能超频的显示卡有以下几种。<br>
+        &nbsp;&nbsp;&nbsp; 3DfxVoodooGraphics<br>
+        &nbsp;&nbsp;&nbsp; 3DfxVoodooRush<br>
+        &nbsp;&nbsp;&nbsp; 3DLabsPermedia2<br>
+        &nbsp;&nbsp;&nbsp; ATIRageII<br>
+        &nbsp;&nbsp;&nbsp; CirrusLogicGD－546x<br>
+        &nbsp;&nbsp;&nbsp; MatroxMillennium/MillenniumII<br>
+        &nbsp;&nbsp;&nbsp; MatroxMystique<br>
+        &nbsp;&nbsp;&nbsp; nVidiaRiva128<br>
+        &nbsp;&nbsp;&nbsp; RenditionVeriteV1000series<br>
+        &nbsp;&nbsp;&nbsp; RenditionVeriteV2000series<br>
+        &nbsp;&nbsp;&nbsp; S3<br>
+        &nbsp;&nbsp;&nbsp; Trident<br>
+        &nbsp;&nbsp;&nbsp; TridentImagine9750<br>
+        &nbsp;&nbsp; Tseng<br>
+        &nbsp;&nbsp;&nbsp; 首先出场的是大名鼎鼎的VOODOO卡。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>3DfxVoodooGraphics</strong></font></p>
+        <p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 要超频Voodoo卡，你可以在autoexec.bat批处理文件中加入以下几行参数即可。<br>
+        SETSST_GRXCLK=XX(XX是速度值，缺省值是50,请不要超过58。在DIANMONDMONSTER3D卡中的“最大性能“值是57，对于许多其它VOODOO卡来说，这个值是安全的)SETSST_FASTMEM=1SETSST_FASTPCIRD=1SETSST_PCIRD=1SETSST_VIDEO_24BPP=1SETFX_GLIDE_SWAPINTERVAL=0SETSST_SCREENREFRESH=60SETSST_SWAP_EN_WAIT_ON_VSYNC=0如果你嫌这样做太麻烦的话，你还可以下载下面几个软件，更简单地超频你的VOODOO卡。<br>
+        &nbsp;&nbsp;&nbsp; TweakItComplete(710KB)和TweakItUpdate(133KB)。网址是：http://www.arctic.net/～bgalm/setuptweakit.exehttp://www.arctic.net/～bgalm/updatetweak.exe3DfxVoodooRushVoodooRush的超频方法和Voodoo一样，这里就不多说了。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>3DfxVoodoo2</strong></font></p>
+        <p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; Voodoo2的超频也和Voodoo,VoodooRush一样。另外还有一个叫Voodoo2Speed的软件，可以轻松地让你把Voodoo2超频到90MHz到100MHz之间。网址：http://www.fastgraphics.com/zip/v2speed.zip3DLabsPermedia2需要提醒你的是，一定要先备份好你的WIN95注册表文件，这个方法只适用于超频基于使用3DLabsPermedia2芯片的显示卡，这是利用更改注册表来更改显示芯片的系统时钟频率。首先打开注册表文件，寻找“systemclock&amp;quot;.缺省值是“53&amp;quot;(这些数值是十六进制数值),我的Permedia2成功地超到96MHz(60h)，没有问题，我的显示卡是CreativeGraphicsBlasterEXXtreme。后来我又给它加上了散热片和风扇，于是它可以很好地工作在100MHz下。建议：(1)在你的Permedia2卡上安装散热片和风扇。<br>
+        &nbsp;&nbsp;&nbsp; (2)如果你需要玩游戏请使用3dlabs的驱动程序。<br>
+        对于DiamondFireGL1000Pro(Permedia2)显示卡来说，通过更改Windows95注册表文件，可以提高你的显示卡的速度。打开注册表，找到下面这项：HKEY_LOCAL_MACHINE/SOFTWARE/Diamond/DirectX/Direct3D.HAL.NoDMA“0&amp;quot;在注册表增加这些键值(如果没有的话) 
+        &nbsp;&nbsp;&nbsp; HKEY_LOCAL_MACHINE/SOFTWARE/Diamond/Display/SystemClock_8MBorSystemClock_4MBATIRageIIRage2Tweaker这个实用程序允许你更换设置来提高ATIRAGE系列显示卡的性能。包括Rage2,Rage2＋，RageProTurbo.下载网址是：www－student.lboro.ac.uk/～conb/rage/Rage2twk.zip(注意区分大小写)CirrusLogic,S3,Tseng,Trident我们可以用一个叫MCLK的软件来超频基于CirusLogic,S3,Tseng,Trident图形芯片的显示卡，它是一个DOS下的应用程序。下载网址：http://www.fastgraphics.com/zip/mclk093b.zipCirrusLogicGD－546xGD－546x系列显示卡的超频方法：(1)运行“REGEDIT&amp;quot;，打开注册表；(2)寻找关键字“LAGUNA&amp;quot;；(3)你将会找到键名为：ClockSpeed(缺省值是16，默认最小值是16,最大是18）；Exotic(缺省是0)的项；(4)把Max设置到20；(5)把ClockSpeed设置到18或19；(6)把Exotic设为1；TridentImagine9750打开注册表文件，选择local_machine,再选择software,查找TridentMicrosystems目录，这时你将看D3DPerformance,打开这个文件夹，更换D3DPerf从“3&amp;quot;到“5&amp;quot;或“7&amp;quot;,更换CkBilinerOn从“1&amp;quot;到“2&amp;quot;,然后重新启动电脑。运行各种软件，你就会发现你的Trident9750卡性能至少提高了15％，在D3DPerf设置为5时，性能提高了20％。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>MatroxMystique</strong></font></p>
+        <p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 对于Mystique卡来说，也同样可以用MCLK这个软件来超频，下载MYSTCLK的网址：http://www.fastgraphics.com/zip/myck031.zip下载MYSTCLK图像用户接口扩充，网址：http://www.fastgraphics.com/zip/mystclkfe.zipMatroxMillennium/MillenniumII对于Millennium卡来说，也同样可以用MCLK这个软件来超频，网址http://www.fastgraphics.com/zip/mick022s.zipNvidiaRiva128新的Tweaks程序通过更改注册表设置来提供更快的3D性能。下载NV3TWEAK的网址：http://www.fastgraphics.com/zip/nv3tweak.zip。<br>
+        &nbsp;&nbsp;&nbsp; 另外一些程序如PowerStrip2.04，也允许你把Riva128显卡的SGRAM速度从100MHz超到110MHz。打开你的Windows文件夹寻找且打开文件Pstrip.cfg。你能找到一些关于显示卡的设置，寻找RIVA128字符：[Riva128＋]；－－－－－－－－－－－－－nVidiaRiva128plusMClk=90、110、100（90是最小，110是最大，100是正常）这时候，你可以把这个数字改得更大些(我设置为133)，保存更改内容。<br>
+        &nbsp;&nbsp;&nbsp; 在PowerStrip中选择“AdvancedOptions/AboutPowerStrip”，看看Performance，你会看到你刚才更改过的数字。<br>
+        &nbsp;&nbsp;&nbsp; 我的DIAMONDVIPERV330显示卡(Riva128)设置成133时，工作得很不错。<br>
+        RenditionVeriteV1000series<br>
+        &nbsp;&nbsp;&nbsp; 超频方法如下：<br>
+        &nbsp;&nbsp; (1)使用最新的Mirov2.0驱动程序。<br>
+        &nbsp;&nbsp; <a
+        href="mailto:(2)编辑CARD0020.INI文件(\windows\miro\timing\CARD0020.INI)(3)寻找分辨率设置值，例如：[1152＊864＊16@75Hz.VESA](4)增加一项“mclk=xxxxxx”xxxxxx的值是指显示卡的时钟频率">(2)编辑CARD0020.INI文件(\windows\miro\timing\CARD0020.INI)(3)寻找分辨率设置值，例如：[1152＊864＊16@75Hz.VESA](4)增加一项“mclk=xxxxxx”xxxxxx的值是指显示卡的时钟频率</a>。<br>
+        &nbsp;&nbsp;&nbsp; (5)你可以从100000开始一点一点地提高。<br>
+        &nbsp;&nbsp;&nbsp; 下面是一个例子：<br>
+        &nbsp;&nbsp;&nbsp; <a href="mailto:[1152＊864＊16@75Hz.VESA">[1152＊864＊16@75Hz.VESA</a>]<br>
+        &nbsp;&nbsp;&nbsp; mclk=130000<br>
+        &nbsp;&nbsp;&nbsp; pll=108000<br>
+        &nbsp;&nbsp;&nbsp; 好了，到现在已经介绍完了这些显卡的超频方法及软件，最后还是要再强调一下，在进行超频之前，你一定要备份好你的WIN95注册表，不要超得太高，下载的超频软件，一定要仔细看好它的说明，注意散热，最好是给你的显卡配上大散热片和风扇，最后，祝你好运气，体会真正的“芯跳”！(广东快刀浪子) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期39版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

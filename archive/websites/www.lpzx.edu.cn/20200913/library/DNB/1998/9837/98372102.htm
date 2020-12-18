@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Windows 
+        95工作站如何进入Novell网<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　Windows 
+        95以其简单、易用、功能强大的独特风格成为单用户微机的标准操作平台。Netware则以其高性能、高可靠性的优势占领着约三分之一的局域网操作系统市场。如何才能把Windows 
+        95工作站与Novell网相连呢?我通过实践掌握了操作方法，现把它介绍给大家。<br>
+        　　一、网络概况<br>
+        　　笔者所安装的网络配置如下：<br>
+        　　服务器：P166MMX，16M RAM，2.1G硬盘；使用Novell Netware 3.12网络操作系统（250个用户）。<br>
+        　　工作站为5台无盘工作站和1台有盘工作站；无盘站配置为：IBM 
+        PR200＋，8M RAM；有盘站配置为：P166MMX，32M RAM，2.1G硬盘，24×CD－ROM，已安装Windows 
+        95操作系统。<br>
+        　　网络拓扑结构采用星型网，使用一台D－LINK DE－809TC 8口HUB进行网络连接，每台工作站上均有C－NET单口网卡（RJ45口），服务器上使用C－NET双口网卡。<br>
+        　　二、连接过程<br>
+        　　1.在Windows 95工作站上安装网卡及网卡驱动程序。<br>
+        　　2.用双绞线将Windows 95工作站与HUB相连。<br>
+        　　3.启动Windows 95工作站至DOS状态，插入C－NET网卡驱动盘，执行驱动盘上的SETUP设置程序，先后执行菜单中的“Adapter 
+        Configuration”、“Change Configuration”，然后改变程序所列出的一系列参数配置，本例中的参数配置为：<br>
+        IO ADDRESS:340<br>
+        IRQ CHANNEL:IRQ 12<br>
+        BOOT ROM:DISABLE<br>
+        CHRDY CONTRAL:FROM IO<br>
+        OPERATION MODE:JUMPERLESS<br>
+        　　按“ESC”键退出后，选择保存硬件配置。<br>
+        　　4.重新启动计算机至Windows 95状态，依次点击“控制面板”、“网络”、“添加”、“适配器”、“添加”、“Novell/ANTHEM”、选择“NE2000 
+        COMPATIBLE”，等待计算机安装完毕回到“网络”程序时，点击“NE2000 
+        COMPATIBLE”、“属性”、“资源”、改变中断(IRQ)至“12”、I/O地址改至“340－35F”，最后点击“确定”退出“NE2000 
+        COMPATIBLE属性配置”，将“基本网络登录方式”改为“Netware网络客户”，点击“确定”退出后，依照提示插入“Windows 
+        95 CD－ROM”光盘，进行驱动程序的安装。<br>
+        　　5.安装完毕后重新启动计算机至Windows 95状态，这时屏幕上应出现“输入口令”的对话框，输入正确的用户名和密码，即可登录到Novell网络服务器上，打开“网上邻居”时，可以完整地列出Novell服务器上的目录树，并可将其映射成某个驱动器盘符，以更加方便地使用服务器上的文件。<br>
+        　　三、注意事项<br>
+        　　1.在C盘根目录上的CONFIG.SYS配置文件中应定义适当的LASTDRIVE变量，否则将不能映射Novell服务器为某个驱动器。<br>
+        　　2.如果不能正确上网，比如启动Windows 95时没有出现“输入口令”对话框，应仔细检查计算机的硬件配置。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(安徽　吴强)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

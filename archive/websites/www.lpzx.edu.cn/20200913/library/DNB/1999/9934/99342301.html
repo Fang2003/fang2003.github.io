@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 找回丢失的文件</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/databandbanner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>34 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 找回丢失的文件</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 找回丢失的文件 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一日，在将E盘的文件分配表从FAT16转换为FAT32时，PartitionMagic显示错误信息，表示不能继续进行转换，当时并没有在意，也没有看清楚显示的错误信息的详细内容。认为只要将E盘整理一下，重新转换就可以了，于是就重新启动，进入Win98，哪知E盘竟然失踪了，进入PartitionMagic中，发现原来的E盘格式变成了Other,既不是FAT16，也不是FAT32，而是成了PQRP。在Win98中，E盘成了光驱的盘符，看来是在PartitionMagic中出错后不能正常转换造成的结果，在PartitionMagic中对E盘的操作只有Format 以及Delete两个命令了，如果执行其中之一，E盘也许就会恢复，但是其中所有的内容也将一点不剩。而E盘中有很重要的文件及备份，有没有什么方法可以将E盘找回，且最大限度地找回文件呢？<br>
+　　 答案是肯定的，首先对硬盘分区表进行分析，已知硬盘的主引导记录在硬盘的0磁头0柱面1扇区。主引导记录由三部分组成：1.主引导程序；2.四个分区表；3.主引导记录有效标志。主引导记录结构详见表1。<br>
+　　分区结构信息是从偏移地址1BEH 处开始、1FDH处结束，每16字节为一个分区说明项，其中1BEH～1CDH为本分区信息，其余为后面分区的信息，表2即为这16字节的含意说明。<br>
+　　首先进入PartitionMagic中查看E盘的信息，可得到如下信息：<br>
+　　分区类型：3C（HEX）<br>
+　　第一物理扇区：5301513（330Cyl  Hd1  Sect1）<br>
+　　最后一个物理扇区：8385929（521Cyl  Hd254  Sect63）<br>
+　　总的物理扇区：3084417（1506.1）<br>
+　　对比C、D盘的信息，可知FAT32的分区类型为0B（HEX），FAT16的分区类型为04（HEX），看来，如果将E盘的分区类型改为04，也许就会找到了。说干就干，马上找出NU8，运行diskedit.exe，点击Object菜单的Physical Sector项，将330Cyl、Hd0、Sector1（即E盘的分区信息）读出，得到E盘的分区信息（自01BEH处开始）为： 00 01 41 4A 3C FE BF 09 3F 00 00 00 81 10 2F 00。<br>
+　　哈哈，原来系统标志果然是3C，别忙，先看看其它信息改变了没有，根据表2的含意一一核对，确信除了系统标志外，其余信息均完好。于是，将3C改为04（因从FAT16转换到FAT32时没有成功，所以没有改成0B），重新启动系统，进入Win98，开启资源管理器，哈哈，我差点要跳起来了，我可爱的E盘找回来了，打开它，咦，我的文件呢，我熟悉的文件夹全没了，只剩下一个DYN－ROOT目录，却打不开。这是怎么回事，仔细想想，原来在PartitionMagic中转换时进行到一半就出错了，看来我的文件还是会丢一些，没办法，只好请出Norton Utiltty 3.06，运行其中的磁盘医生，经过漫长的等待，磁盘医生终于找出错误并一一修复，打开E盘后，发现经磁盘医生修复后,所有文件夹均为Dir000X，所有文件均为Fil000X._dd,根据记忆，对部分文件进行恢复、改名，使大部分数据得以保留。<br>
+　　 至此，文件的拯救工作全部完成。由此也得到启发，即我们只需改变分区结构信息中的系统标志位，就可以使我们的硬盘隐藏起来，使用时只需改回系统标志位即可。<br>
+　　<b>(武汉　郑超)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/34/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99342301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

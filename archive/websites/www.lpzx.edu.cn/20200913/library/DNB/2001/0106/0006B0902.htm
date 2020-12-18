@@ -1,0 +1,122 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用Delphi实现图片浏览功能</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第06期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{用Delphi实现图片浏览功能}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 在ACDSee中使用上下箭头键浏览图片一定使大家觉得很方便吧，在这里我用Delphi模拟这一功能，方法如下：<br>
+              首先，新建一个工程，在窗体上放置DirveCombobox控件、DirectorxListBox控件、FileListBox控件、 
+              FilterCombox控件、Image控件各一个。在DirectorxListBox的FileList属性选择FileListBox1，在FilterComboBox的FileList属性选择FileListBox1，在DriveCombobox控件的Dirlist中选择DirectorxlistBox1，修改Image的Center属性为True并调节适当的位置和大小。在FilterComBox的文件过滤器Filter属性中添加.jpg、.bmp这里还可以添加其他的Image控件能识别的文件后缀。接下来就可添加代码了。<br>
+              双击FileListBox的onclick事件，添加如下代码：<br>
+              trx<br>
+              image1.Picture.LoadFromFilefilelistbox1.FileName<br>
+              except<br>
+              application.MessageBox＇文件格式不对＇＇提示＇0<br>
+              end<br>
+              其中trx...except语句是错误补捉语句，当文件的格式不对时，提示错误。<br>
+              现在按一下F9现在可以用上下件浏览图片了！注意：如果发现Image控件不能读jpg格式的文件，可以先在Image控件的picture中指定一个jpg图像。本程序在Win98、Delphi5中通过。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

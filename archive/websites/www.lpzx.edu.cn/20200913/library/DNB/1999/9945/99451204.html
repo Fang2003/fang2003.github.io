@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 误删WIN98字体文件的恢复</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 误删WIN98字体文件的恢复</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 误删WIN98字体文件的恢复 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　为使启动更快并兼硬盘减肥，我实施了一系列的“优化”措施，其中一项便是除保留了黑体、楷体、仿宋、宋体和小字体这五种字体之外，删除了Windows98中的外文字体文件。因为我觉得：外文不需要太多华贵的修饰，只要能看懂就行。<br>
+　　后来当我用《开天辟地背单词》来学英语时，发现所有的单词都变成了乱码。当时我所想到的还原方法有两种：1.重新安装Windows98；2.从别的机器上将误删的字体文件拷贝还原。后来我通过摸索，总结出了第三种方法，如下：<br>
+　　首先，在c:\Windows\inf目录下找到Windows98安装光盘的三个列表信息文件layout.inf、layout1.inf、layout2.inf并分别打开它们，在“搜索\查找”对话框的“查找目标”中分别键入轮廓字模和字库文件的后缀名称“.ttf”、“.fon”（注意：此对话框不支持＊、?等通配符），再点“找下一个”按钮，之后查找光标会停留在诸如“arial.ttf=45,,72476”的信息条上，它表明该字体文件在Windows98安装光盘的Win98_45压缩包中，记录下前一个数字45。然后依次点“打下一个”按钮并作好记录，直至搜索完毕。另外，需要说明一点的是：三个列表信息文件中，仅有layout1.inf中没有记录字体文体的资料，可不必理会该文件。<br>
+　　然后，将Windows98安装光盘放入光驱，打开其中的Win98目录，分别点击字体文件所在的压缩包（比如Win98_45），机器会自动调用我在硬盘中安装的winzip 7.0软件将其解压。需要说明一点的是：Windows98安装光盘中的压缩包是以cab形式存储的，在Windows98中内置了解压cab压缩包的程序，并不是非要winzip不可。<br>
+　　 因为在这些cab压缩包中不仅仅有ttf、fon等字体文件，或许还有vxd、exe、txt等文件在内，因此，要注意只选择ttf、fon字体文件，并用winzip 7.0将字体文件解压安装在c:\windows\fonts目录下。<br>
+　　至此，字体还原工作全部结束，点开《开天辟地背单词》，那只可爱而勤劳的小蜜蜂终于向我挥手了。 <br>
+　　最后提一句：以上方法并不仅囿于恢复字体，如果有一天你的机器出现：某个vxd（或者dll、exe等等）文件丢失，你不妨用上述方法一试。<br><b>
+　　（云南　徐庆学）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99451204.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

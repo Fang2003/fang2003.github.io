@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用PowerBuilder开发多媒体播放器</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/databandbanner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>34 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用PowerBuilder开发多媒体播放器</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用PowerBuilder开发多媒体播放器 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　PowerBuilder作为一种优秀的数据库前端开发工具，深受广大数据库开发者的青睐，现在的数据库涉及到多媒体应用越来越多，而PowerBuilder没有像VB、Delphi那样提供开发多媒体的控件，但并不是说利用PowerBuilder就不能开发多媒体。下面就介绍利用PowerBuilder开发多媒体的三种方法(以播放视频文件AVI为例)。<br>
+　　一、利用OLE方法。打开要播放的多媒体的窗体，点按OLE控件，系统弹出“Insert object”对话框，选择“CreateNew”页，选取视频剪辑，在窗体上放上该OLE控件，编写窗体Open事件的脚本(比如要播放的视频文件为sample.avi)：   ole_1.InserFile(“sample.avi”)运行该窗体，双击该OLE，视频就播放出来了。<br>
+　　二、利用MCI方法。这种方法要调用Windows的API函数MciSendStringA,因此，首先要声明该函数。选“Declare/Local External Functions”菜单项，弹出“Declare Local External Functions”对话框，声明局部外部函数：Function Long mciSendStringA(red string scommand,ref string returnstr,int ilength,UNITucallback)。在窗体上放上一个命令按钮cb_play，其Text为“播放”，在cb_play的Click事件输入脚本：<br>
+　　string ls_command,ls_buffer,ls_filename<br>
+　　filename=″sample.avi″<br>
+　　ls_buffer=fill(Char(0),255)<br>
+　　ls_command=″open″＋ls_filemane＋″type avivideo alias avi″<br>
+　　mciSendStringA(ls_command,ls_buffer,255,handle(parent))<br>
+　　ls_command=″play avi notify″<br>
+　　mciSendStringA(ls_command,ls_buffer,255,handle(parent))<br>v
+　　运行窗体,点击该按钮就可以播放视频了。<br>
+　　三、利用OCX控件。Windows95的系统提供了Amovie.ocx控件，该控件提供了很多属性和函数，可通过编程修改其属性和调用其函数来控制多媒体，开发出高质量的多媒体播放器。下面我们就以开发具有播放和停止功能的多媒体播放器为例。<br>
+　　在要播放的窗体上，点按OLE控件，系统弹出“Insert objet”对话框，选择“Insert control”页，“选取ActiveMovieControlObject”,在窗体上放上该定制OLE控件，然后在窗体上放两个命令按钮cb_play和cb_stop，其Text分别赋值为“播放”和“停止”。<br>
+　　在窗体的open事件输入脚本：<br>
+　　ole_1.Objet.Filename(″sample.avi″)<br>v
+       cb_play的Click事件的脚本为：<br>
+       ole_1.Object.play()<br>
+　    cb_stop的Click事件的脚本为：<br>
+　　ole_1.object.stop()<br>
+　　这样简单的多媒体播放器就开发好了，如果想对多媒体进行更多的控制，调用该控件相应的函数和修改其属性即可。至于Amovie.ocx控件有哪些事件、属性和函数，可通过点按Browser图标来查看。<br>
+　　<b>(河北　黄万璞)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/34/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99341302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用多重启动优化Novell无盘站的内存</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用多重启动优化Novell无盘站的内存<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        目前，Novell无盘工作站在教学网、证券交易网等局域网中仍占主导地位，随着各种应用软件的层出不穷，这就要求Novell无盘工作站以不同的内存配置来启动，以便适应不同的应用软件对内存的要求。本文就Novell无盘工作站运行Foxpro2.5 
+        for DOS等软件需要启动时配置扩充内存的情况和运行Windows3.2只需配置基本内存的情况进行了详细的阐述。<br>
+        　　首先，准备好一张空白盘，在其上建立自动批处理文件AUTOEXEC.BAT，内容如下：<br>
+        　　@ECHO OFF<br>
+        　　SET NWLANGUAGE=ENGLISH<br>
+        　　PROMPT ＄P＄G<br>
+        　　CLS<br>
+        　　GOTO ％CONFIG％<br>
+        　　:ODI－1<br>
+        　　LH LSL<br>
+        　　LH RPLODI<br>
+        　　LH NE2000<br>
+        　　LH IPXODI<br>
+        　　VLM<br>
+        　　GOTO EDN<br>
+        　　：IPX<br>
+        　　IPX<br>
+        　　NETX<br>
+        　　GOTO END<br>
+        　　：END<br>
+        　　F：<br>
+        　　LOGIN USER<br>
+        　　再在盘上建立系统配置文件CONFIG.SYS，内容如下：<br>
+        　　[MENU]<br>
+        　　MENUCOLOR=7，1<br>
+        　　MENUDEFAULT=ODI－1,10<br>
+        　　MENUITEM=ODI－1,ODI FOR EMM386.EXE NOEMS FOR FOXPRO25<br>
+        　　MENUITEM=IPX,FOR WINDOWS3.2<br>
+        　　[COMMON]<br>
+        　　DEVICE=HIMEM.SYS<br>
+        　　FILES=80<br>
+        　　BUFFERS=40,0<br>
+        　　STACKS=9,256<br>
+        　　[ODI－1]<br>
+        　　DEVICE=EMM386.EXE NOEMS<br>
+        　　DOS=HIGH,UMB<br>
+        　　LASTDRIVE=Z<br>
+        　　[IPX]<br>
+        　　DOS=HIGH<br>
+        　　LASTDRIVE=E<br>
+        　　这里，工作站中普通用户是用USER用户登录，网卡是NE2000。基本内存是用于IPX协议，扩展内存是用于IPXODI协议。再把一些必须的LSL、RPLODI、NE2000、IPXODI、IPX、VLM、NETX等网络文件及HIMEM.SYS、EMM386.EXE等DOS内存管理文件复制到这张软盘上。<br>
+        　　然后，在工作站上用超级用户SUPERVISOR登录，把做好的软盘插入软驱，在服务器的系统卷SYS的SYSTEM目录下运行DOSGEN，形成了新的启动文件NET＄DOS.SYS，把此文件移至LOGIN目录下，覆盖原来的启动文件；并把软盘上的AUTOEXEC.BAT文件拷至此目录覆盖原自动批处理文件，至此，大功告成。这时，启动工作站就会出现DOS启动菜单1.ODI 
+        FOR EMM386.EXE NOEMS FOR FORXPRO25,2.FOR WINDOWS3.2。由此，可以根据不同应用软件对内存的要求，通过选择菜单进入不同的内存配置环境。<br>
+        　　<strong>(湖南　文光斌)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年1月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

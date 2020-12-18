@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>　代理服务器软件的精彩世界<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　小型商业机构和企业内部的局域网一般采用总线方式连接成一个以太型对等网，网络软件一般为Windows95或WindowsNT，采用TCP/IP通讯协议。对等网络适合于联网终端数在2～20台的小型LAN网。要将LAN接入Internet，可为每台终端配备一台Modem和一条电话线，显然这种联网方式建设与运行费用都是较高的；另外也可通过路由器或专线介入Internet，这对于小型局域网而言，不仅维护复杂，成本高，而且显得有些大材小用。<br>
+        　　许多网关管理(gateway)软件能将LAN接入Internet，由美国Midcore公司出品的MidPoint代理服务器(proxy 
+        server)就是一个十分优秀的软件路由器，它可以实现一条电话线，一个Modem，即可让LAN中的最多20台计算机并发访问Internet，并可让每一个客户机拥有自己独立的电子邮件地址和账号。<br>
+        　　安装MidPoint之前，首先必须在局域网中的所有计算机上安装TCP/IP网络协议。假设用户配有NE2000网卡，Windows95和IE40，具体安装过程如下：<br>
+        　　1打开控制面板，双击“网络”图标，弹出网络对话框。<br>
+        　　2按下“添加”按钮，从“选定网络组件类型”对话框中选择“协议”，然后再按下“添加”出现选定网络协议，在“厂商”列表框中选择“Microsoft”。于右边的“协议列表框”中选定“TCP/IP”。<br>
+        　　3选定“TCP/IP→NE2000网络适配器”，点击“属性”，打开“TCP/IP”属性窗口，在“IP地址”标签上，选定“指定IP地址”，并输入“111001”，子网屏蔽输入“2552552550”，其余各项标签不变。<br>
+        　　4将其余各台计算机IP地址分别设置为“111002，111003，111004”等，子网屏蔽同上。<br>
+        　　选定一台拥有Modem和电话线的计算机(假设IP为111001)，安装并运行MidPoint，作为其余计算机的代理服务器。然后在每一台客户机上通过网络运行服务器上的客户机软件CLIENT 
+        SETUP，这样每一台客户机都会找到网络中的代理服务器的位置(IP)，并在HOSTS文件中记载下来。由于MidPoint支持1～4个通讯端口(电话线)同时接入Internet，因此安装前还必须安装微软最新的wsockupd和msdun12拨号网络软件12b升级版，以支持多线协议。<br>
+        　　运行MidPoint，选择View→Option→User标签，弹出参数设置窗口。在Your 
+        Name中输入作为服务器的计算机名，在User中输入各客户机的名称和IP地址，注意服务器的名称和地址也必须输入，因为它对Internet的访问也是通过MidPoint进行的。<br>
+        　　切换到Server标签，按要求在对话框中输入ISP提供的电子邮件STMP和POP3服务器地址以及所申请的E－mail全称，若ISP提供的话，还可输入NNTP地址。另外如果每个用户具有不同的E－mail地址，可以通过点击Properity按钮来设定各个用户的专用账号和地址。<br>
+        　　在服务器上启动IE40和Outlook浏览器，按下面步骤设置好各项参数。<br>
+        　　1打开IE40，进入“查看”菜单的“Internet选项”对话框，点击“连接”标签。<br>
+        　　2于“连接”单选框中点击“通过局域网连接到Internet”，在代理服务器中点击并选中“通过代理服务器访问Internet”复选框，并在地址中输入网络中作为服务器的计算机IP地址，这里应输入“111001”，按“确定”保存设置结果。<br>
+        　　3启动Outlook express，选择“工具”→“账号”，点击“邮件”的“属性”按钮，并选择“连接”标签，指定“使用局域网(LAN)连接到Internet”，按下“确定”。<br>
+        　　4依次在客户机上按步骤2、3设置好各自浏览器和邮件管理器选项。<br>
+        　　完成服务器和客户机的各项参数设置后，重新启动各计算机，在服务器上运行MidPoint后，局域网中用户即可从任意一台或几台计算机同时进入Internet和收录电子邮件。如果是需要的，可拥有自己独立的E－mail账号和地址。<br>
+        　　MidPoint可以在服务器上设置较大的Cache区，这样就可以让局域网上的所有用户共享任一用户已下载的信息，从而间接提高访问Internet的速度。另外它作为一个高级网关管理器，本身还是一个极好的防火墙，能有效地防止外面的非法用户进入公司的局域网窃取重要信息。<strong>(湖北　董泽华)</strong></font></p>
+        <p class="ourfont" align="center"><font color="#369681">　<strong>　WinGate</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681">　　用一部WIN95 PC，经由Modem连上ISP后，让同一个局域网的其他PC可通过这台WIN95 
+        PC连上Internet。<br>
+        　　在本文章里所用的软件是WinGate 1.3.06。<br>
+        　　系统需求：<br>
+        　　1.必须要有一台用Modem连上ISP的WIN95 PC，在此称为Gateway Machine。<br>
+        　　2.其他PC必须和这部WIN95 PC以网卡相连接，在此称为Workstation。<br>
+        　　WinGate软件只须在Gateway Machine上执行即可，在设定好Gateway的上的状态之后，你要在其他Workstations上的Internet应用程序设定成使用Proxies。<br>
+        　　在Gateway Machine上安装并规划WinGate软件。<br>
+        　　下载完WinGate之后，执行WGSetup程序，输入这部机器在ISP的POP3、SMTP（通常和POP3相同）、IRC、DNS服务器的地址，这些资料你可以向ISP取得。WinGate本身有一些服务的内定端口（Port），如果在Gateway 
+        Machine上还有执行像FTP或Web等服务器程序的话，你才须要手工修改这些Port的设定值。输入以上资料之后，按下OK钮，则WGSetup会自动在系统注册表里设定好。<br>
+        　　3. 设定在Gateway Machine上的TCP/IP。<br>
+        　　你必须为LAN上的所有机器设定IP地址，包括Gateway Machine，你可以由“控制面板”－&gt;“网络”，选择在真正网络上的TCP/IP的“内容”，而非“拨号网络适配器”。在这里有4个部份：<br>
+        　　IP地址：<br>
+        　　选择“指定IP地址”，然后在IP地址输入192.168.0.1，这个地址实际上在Internet上是不存在的，所以你可以让Gateway 
+        Machine使用这个地址（注：如果你的LAN有自己的合法IP地址，也可以使用其地址），接下来在“子网掩吗”输入255.255.255.0。<br>
+        　　WINS配置：<br>
+        　　选择“禁用WINS解析”。<br>
+        　　客户：<br>
+        　　使用预设值，Client for Microsoft Networks。<br>
+        　　DNS配置：<br>
+        　　选择“启动DNS”，在“主机”处输入你的User Name，而在“域”输入ISP的名称，像hinet.net等。在“DNS服务器搜索顺序”输入ISP的DNS 
+        Server地址，按“新增”。当你设定好以上设置资料之后，按下“确定”，WIN95会要求你重新开机，之后就算设定完成了。<strong>(江西　谢　海)<br>
+        </strong></font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>SyGate</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681"><br>
+        　　拿SyGate与广泛使用的WinGate相比，就会发现：这两个软件的设计出发点不同。通过SyGate软件监管的局域网，只要充当服务器的那台电脑通过拨号连入因特网后，网络中的每一台机器就能像单机上网那样，可以正常地直接使用WWW、FTP、News、Internet 
+        mail、MS chat、ICQ，Netmeeting，mIRC，RealAudio，NetShow等软件,不需要任何设置,而采用WinGate软件时的控制面板配置比较麻烦。<br>
+        　　安装步骤及设置:<br>
+        　　1.首先规划建设好局域网,这并不是本文要交代的话题,再此不多说了。建议采用WIN95 
+        OSR2操作系统并借助TCP/IP协议组成WIN95对等局域网,IP地址采用Internet保留的私有地址,具体分配规则如下所示:<br>
+        　　A类:10.0.0.0——10.255.255.255<br>
+        　　B类:172.16.0.0——172.31.255.255<br>
+        　　C类:192.168.0.0——192.168.255.255<br>
+        　　你可根据喜好而定,在较小的局域网中建议采用C类地址，子网掩码为255.255.255.0<br>
+        　　2.选一台档次较高的微机当作局域网服务器,CPU最好采用主频在233MHz以上的芯片,不低于64M的内存,33.6K或以上速率的调制解调器!本例中，网络服务器选用的静态IP地址为:192.168.0.1,这一组数字也确认为局域网中每一台电脑网络参数设置中TCP/IP协议的网关地址!<br>
+        　　3.先让服务器通过拨号网络实现单机拨号上网,然后在该机上安装SyGate软件。这个软件是一个可执行软件,安装及设置参数的过程都非常简单,其参数主要有三个需要设置,即拨号账户、密码及空闲多长时间挂断网络。<br>
+        　　4.在其他机器控制面板“网络”选项中的TCP/IP控制面板上设置网络参数:为网络中的每台机器分配一个唯一的IP地址，如192.168.0.2;192.168.0.3……；在网关项中填上192.168.0.1；在DNS选项中输入为你提供接入服务的ISP的DNS服务器地址,如北京数据通信局的DNS服务器地址为202.96.0.133；在主机名处输入唯一的名称,如PC01,PC02等，注意这一设置与IP地址的设置一样，绝对不能重复。设置完后，重新启动机器。<br>
+        　　5.此时已安装设置成功，你可在局域网上的每台机器上运行任何与网络有关的软件而不必受服务器的限制!<strong>(河南 
+        杨团结)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

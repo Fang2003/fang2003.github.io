@@ -1,0 +1,144 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>奥运伊斯坦布尔(2)</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/rmnsque/rmns1100-106.css"><meta name="Microsoft Theme" content="rmnsque 1100">
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="center"><font size="6"><strong><img border="0" src="images/Logo.jpg" width="174" height="101"><img src="_derived/new_page_15.htm_cmp_rmnsque100_bnr.gif" width="600" height="60" border="0" alt="奥运伊斯坦布尔(2)"></strong></font><br>
+<font size="7" face="华文新魏">北京<img border="0" src="_borders/gif1_2.gif" width="39" height="51"><img border="0" src="_borders/gif1_0.gif" width="51" height="51"><img border="0" src="_borders/gif1_0.gif" width="51" height="51"><img border="0" src="_borders/gif1_8.gif" width="51" height="51"></font></p>
+<p align="center"><font color="#003300"><a href="mailto:zxy_0321@chinese.com">奥运</a></font><font face="方正舒体"><a href="mailto:zxy_0321@chinese.com"><font color="#003300">E</font><font color="#336600">-mail:</font><font color="#999966">zxy_</font><font color="#CC9900">0321</font><font color="#FF9900">@</font><font color="#FF9999">chinese.com</font></a></font></p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<a href="index.htm"><img src="_derived/home_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="主页"></a><br><a href="new_page_20.htm"><img src="_derived/up_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="上一层"></a><br><a href="new_page_18.htm"><img src="_derived/new_page_18.htm_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="申奥日记"></a><br><a href="new_page_17.htm"><img src="_derived/new_page_17.htm_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="申奥城市大评估"></a><br><a href="new_page_8.htm"><img src="_derived/new_page_8.htm_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="奥运问答"></a><br><a href="new_page_10.htm"><img src="_derived/new_page_10.htm_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="自由空间"></a><br><a href="new_page_14.htm"><img src="_derived/new_page_14.htm_cmp_rmnsque100_vbtn.gif" width="140" height="60" border="0" alt="奥运史话"></a>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<DIV id=sohususpend style="LEFT: 0px; POSITION: absolute; TOP: 330px; VISIBILITY: visible;">
+<span style="position: absolute; left: 169; top: -166"><img src="images/istanbul.gif" border=0 width="85" height="82"></span>
+</DIV>
+<SCRIPT language=JavaScript>
+self.onError=null;
+currentX = currentY = 0;
+whichIt = null;
+lastScrollX = 0; lastScrollY = 0;
+NS = (document.layers) ? 1 : 0;
+IE = (document.all) ? 1: 0;
+function heartBeat() {
+if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+if(diffY != lastScrollY) {
+percent = .1 * (diffY - lastScrollY);
+if(percent > 0) percent = Math.ceil(percent);
+else percent = Math.floor(percent);
+if(IE) document.all.sohususpend.style.pixelTop += percent;
+if(NS) document.sohususpend.top += percent;
+lastScrollY = lastScrollY + percent;
+}
+if(diffX != lastScrollX) {
+percent = .1 * (diffX - lastScrollX);
+if(percent > 0) percent = Math.ceil(percent);
+else percent = Math.floor(percent);
+if(IE) document.all.sohususpend.style.pixelLeft += percent;
+if(NS) document.sohususpend.left += percent;
+lastScrollX = lastScrollX + percent;
+}
+}
+function checkFocus(x,y) {
+stalkerx = document.sohususpend.pageX;
+stalkery = document.sohususpend.pageY;
+stalkerwidth = document.sohususpend.clip.width;
+stalkerheight = document.sohususpend.clip.height;
+if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+else return false;
+}
+function grabIt(e) {
+if(IE) {
+whichIt = event.srcElement;
+while (whichIt.id.indexOf("sohususpend") == -1) {
+whichIt = whichIt.parentElement;
+if (whichIt == null) { return true; }
+}
+whichIt.style.pixelLeft = whichIt.offsetLeft;
+whichIt.style.pixelTop = whichIt.offsetTop;
+currentX = (event.clientX + document.body.scrollLeft);
+currentY = (event.clientY + document.body.scrollTop);
+} else {
+window.captureEvents(Event.MOUSEDOWN);
+if(checkFocus (e.pageX,e.pageY)) {
+whichIt = document.sohususpend;
+StalkerTouchedX = e.pageX-document.sohususpend.pageX;
+StalkerTouchedY = e.pageY-document.sohususpend.pageY;
+}
+}
+return true;
+}
+function moveIt(e) {
+if (whichIt == null) { return false; }
+if(IE) {
+newX = (event.clientX + document.body.scrollLeft);
+newY = (event.clientY + document.body.scrollTop);
+distanceX = (newX - currentX);    distanceY = (newY - currentY);
+currentX = newX;    currentY = newY;
+whichIt.style.pixelLeft += distanceX;
+whichIt.style.pixelTop += distanceY;
+if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+event.returnValue = false;
+} else {
+whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+return false;
+}
+return false;
+}
+function dropIt() {
+whichIt = null;
+if(NS) window.releaseEvents (Event.MOUSEDOWN);
+return true;
+}
+if(NS) {
+window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+window.onmousedown = grabIt;
+window.onmousemove = moveIt;
+window.onmouseup = dropIt;
+}
+if(IE) {
+document.onmousedown = grabIt;
+document.onmousemove = moveIt;
+document.onmouseup = dropIt;
+}
+if(NS || IE) action = window.setInterval("heartBeat()",1);
+</SCRIPT>
+
+<p>新闻二：</p>
+<p>国际奥委会评估团昨天抵达横跨亚欧大陆的伊斯坦布尔，开始对这个经历连续两次申办失败的土耳其城市展开实地考察。在欢迎的人群中有3次夺取奥运会金牌、有“袖珍大力士”之称土耳其著名举重运动员苏莱曼诺格鲁。<br>
+<br>
+由于土耳其最近爆发金融危机，货币在一个月中贬值了三分之一，所以伊斯坦布尔与其它4个申办对手相比，存在着资金不足的弱点。同时伊斯坦布尔还面临地理位置的问题，它与2004年奥运会东道主希腊雅典太接近。<br>
+<br>
+不过伊斯坦布尔的申办人士坚持认为他们仍有机会，强调他们已从申办2000年和2004年奥运会失败的过程中学到了许多东西。伊斯坦布尔申办委员会主席厄登姆说：“我们这次申办与过去两次大不相同，我们已实现了许多目标。”<br>
+<br>
+由17人组成的国际奥委会评估团将在为期4天的考察中参观伊斯坦布尔的体育设施，会见土耳其官员，然后将赴法国巴黎，并且完成对所有5个申办城市的考察工作。伊斯坦布尔申办官员将向评估团展示可容纳80000名观众的足球和田径场，以及可容纳22000名观众的篮球馆，这两个重要场馆的建设已接近完工。<br>
+<br>
+伊斯坦布尔对于申办的渴望也是不容置疑的，在最近的一次民意调查中，90％接受调查的人希望2008年奥运会在伊斯坦布尔举行。不过也有一些当地人认为，伊斯坦布尔的基础设施还不能应付主办奥运会。一些分析家还对伊斯坦布尔能否保障奥运会期间的安全提出疑问，库尔德人，伊斯兰极端分子过去曾在伊斯坦布尔制造爆炸案等恐怖活动。<br>
+&lt;&nbsp;&nbsp;&nbsp; 下一页&nbsp;&nbsp;&nbsp; <a href="new_page_1.htm">1</a>&nbsp;&nbsp;&nbsp;  
+2&nbsp;&nbsp;&nbsp; <a href="new_page_1.htm">上一页</a>&nbsp;&nbsp;&nbsp;  
+&gt;<br> 
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<marquee behavior="alternate" direction="right" style="color: #FF0000; font-family: 隶书; font-size: 24pt">预祝北京，申奥成功！</marquee>
+
+</td></tr><!--msnavigation--></table></body> 
+ 
+</html> 

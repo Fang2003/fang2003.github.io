@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="2.jpg">
+<table width="554" border="0" cellspacing="0" cellpadding="0" height="688" bordercolor="#FF0033">
+  <tr> 
+    <td width="498" height="44" bgcolor="#FFFFFF"><img src="xian.gif" width="498" height="24"></td>
+    <td width="56" height="44"><img src="angle.gif" width="70" height="60"></td>
+  </tr>
+  <tr> 
+    <td width="498" align="left" valign="top" height="27"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:116px; height:111px; z-index:1; left: -100px; top: 33px; overflow: hidden"><font color="#0000FF"><b><img src="book.gif" width="84" height="75" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><font color="#FF3366"><b><font color="#FF3333"><span class="mdd6">奥 
+            林 匹 克 运 动</span></font></b></font></p>
+        </div>
+      </div>
+    </td>
+    <td width="56" align="center" valign="middle" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="498" align="left" valign="top" height="519"> 
+      <p>　　<span class="mdd7">奥林匹克运动会起源于世界文明发源地之一的希腊首都雅典。而我们都知道，继承了希腊一罗马思维方式的这块欧洲大陆，自从公元一世纪基督教在这块土壤上诞生起，就逐渐开始占据了欧洲人和社会文化生活中的统治地位，并且在一些国家先后被宣布为国教。比如，在公元393年，罗马皇帝狄奥多西一世就宣布基督教为国教。基督教提倡禁欲主义，主张灵肉分开，也就是说它强调自我修行，有着严格的道德规范，故而它极力反对大众体育运动，认为运动场上的精神不符合基督对其信徒的要求。<br>
+        　　事实上，狄奥多西一世于公元394年就颁令禁止了奥运会的举行。因为在他看来，古奥运会有违基督教教旨，属异教徒活动。加上后来的战争以及地震等的破坏，奥林匹亚的一些体育设施遭到了彻底毁灭，故而奥林匹克运动会一度中止和沉睡了一千多年。在这漫长的奥林匹克黑暗时代，我们无法知道人们是如何盼望着奥运会的复兴！我们还无法知道又有多少人在为奥林匹克运动的复兴奔走、奋斗！但是，由于人们总是在不断地呼唤，也由于热爱奥林匹克运动的人总是在不停地努力，不久，在19世纪末，奥运会终于又得以重新出现于世界历史舞台。 
+        　　　　1892年11月25日，顾拜旦在“法国体育联合会”成立3周年的纪念大会上，发表了题为《复兴奥林匹克》的演说，他第一次正式提出了创办现代奥运会的倡议。<br>
+        　　为使这一倡仪得以迅速实现，顾拜旦提议“法国体育联合会”发起并召集一次由世界各国重要“体育联合会”代表参加的国际性体育会议，具体磋商复兴奥林匹克运动会的事宜。为此，成立了一个以顾拜旦为首的由英国、美国和法国社会知名人士组成的“筹委会”，进行一些具体的准备工作。在他的积极推动下，终于在1893年在巴黎召开了国际性的体育协商会议，讨论创办现代奥林匹克运动会的问题。<br>
+        　　经过顾拜旦多方筹措及其同代人的共同努力，巴黎国际体育会议终于在1894年4月16日胜利召开。与会的有法国、希腊、英国、美国，俄国、瑞典、意大利、比利时、波希米亚、阿根廷和新西兰的代表。6月23日，大会通过决议，成立国际奥林匹克委员会。这一天，对奥林匹克运动，世界体育运动的发展，具有划时代的意义。不少国家把这一天作为体育节，我国也于1986年将这天定为奥林匹克日。巴黎国际体育会议，还批准了顾拜旦制定的第一部奥林匹克宪章。宪章强调了奥林四克运动的业余性。规定在奥运会上只授予优胜者荣誉奖，不得以任何形式发给运动员金钱或其他物质奖励。大会选举了著名的希腊诗人维凯拉斯为国际奥委会第一任主席，顾拜旦为秘书长。大会还选举了14名国际奥委会委员。会议规定法语为国际奥委会的法定语言，沿袭古奥运会传统，每四年举行一次运动会。第一届奥运会原拟1890年在巴黎举行，后来考虑希腊为古奥运会发源地，在希腊举行比在巴黎意义更重大些，顾拜旦尊重了大家的意见。大会决定把第一届会期改在1896年，鉴于古典运会遗址奥林匹亚已成一片废墟。会址改设在希腊首都雅典。</span> 
+      </p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>在VB5.0中生成统计图形</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><big><strong>在VB5.0中生成统计图形</strong></big></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p class="ourfont">　　在用VB5进行数据库编程时，经常要生成统计图形。生成的方法有很多种，最简单的是利用VB5提供的MSChart控件。具体操作方法如下：<br>
+        　　1.首先在VB5“工程”→“部件”中找到“Microsoft Chart Control5.0”项，选中并应用，此时在工具面板中出现MSChart控件图标。选中它并在新工程的Form1中画一矩形，生成MSChart1,即出现缺省状态的直方图。设其ColumnCount属性为1。<br>
+        　　2.利用Access或VB5的可视化数据管理器生成一个example.mdb的数据库，在其中建一名为temp的数据表，包含“日期”和“数据”两个字段，并在表中输入一些记录。<br>
+        　　3.在Form1中生成一个Command1按钮，然后在Private Sub Command1_click()中写入以下代码：<br>
+        　　dim i as integer<br>
+        　 dim NewDyn as recordset<br>
+        　　dim OpenWs as Workspace<br>
+        　　dim OpenDB as DataBase<br>
+        　　set OpenWs=DBengine.Workspaces(0)<br>
+        　　set OpenDB=OpenWs.Opendatabase(app.path ＆ ″\example.mdb″)<br>
+        　　set NetDyn=OpenDB.Openrecordset(″select ＊ from temp″,dbOpenSnapShot)<br>
+        　　NewDyn.MoveLast<br>
+        　　NewDyn.Movefirst<br>
+        　　If NewDyn.RecordCount=0 then<br>
+        　　Msgbox″请在数据库中输入数据!″，vbCritical<br>
+        　　Exit sub<br>
+        　　End if<br>
+        　　With MSChart1<br>
+        　　.TitleText=″直方图示例″<br>
+        　　.RowCount=NewDyn.ReordCount<br>
+        　　For i=1 to NewDyn.RecordCount<br>
+        　　.Row=i<br>
+        　　.Data=NewDyn.Fields(″数据″)<br>
+        　　.Rowlabel=NewDyn.Fields(″日期″)<br>
+        　　NewDyn.MoveNext<br>
+        　　Next i<br>
+        　　End With<br>
+        　　NewDyn.Close<br>
+        　　4.运行时按Command1键即可生成统计图表了。<br>
+        　　如果想生成其他类型的图形，修改MSChart1的属性即可定制成其他各种二维或三维图表。<br>
+        <strong>(湖南　陈震晗)</strong></p>
+        <p align="right"><font color="#000000"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1999年3月01日第08期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

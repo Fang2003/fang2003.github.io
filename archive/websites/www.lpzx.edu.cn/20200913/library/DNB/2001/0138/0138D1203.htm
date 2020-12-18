@@ -1,0 +1,127 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0138/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0138/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第38期 </a>&gt;&gt;<a href="internet.html">网络与通信</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td height="11"> 
+            <div align="center">架设局域网时的小经验</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>2001年《电脑报》第30期D12版上，介绍了为无软驱电脑提高启动和运行速度的三条途径，但如果大家仔细留意一下，就会发现在WinME中，C盘根目录下的autoexec.bat却不是那么好修改的，如果单单在后面添加一条subst语句，保存退出，在重起或者注销后，并没有达到预期的目的——创建了虚拟软盘控制器，而是又恢复了默认的设置。在修改内容后把它改成只读属性？可仍旧无能为力，WinME的这种“安全性”的加强，实在令人叹服。就此屈服于系统的“安全性”？NO 
+              我们需要的是性能，“条条道路通罗马”，有做不到的事情吗？下面我就介绍三条途径，实现WinME下软盘控制器的虚拟：<br>
+              ##1一、使用Bat文件<br>
+              首先在C盘根目录下新建文件夹VirtualA，为防止误删而导致虚拟失败，修改其属性为只读、隐藏；然后新建文本文档，内容为：<br>
+              @echo off<br>
+              subst a:c:\virtualA<br>
+              保存为c:\subst.bat，同样修改其属性为只读、隐藏，为此bat文件创建快捷方式，把快捷方式放到“启动”菜单。这样，在启动subst.bat时就运行了subst命令创建了虚拟软盘控制器，@echo 
+              off的作用是在运行subst命令行后自动关闭那个令人讨厌的DOS窗口。<br>
+              ##1二、修改注册表<br>
+              可以有两种方法(效果完全一样)：<br>
+              直接修改注册表项，如果你对注册表较为熟悉，推荐用此方法比较直接。运行regedit，找到HKEY_LOCAL_MACHINE\-<br>
+              Software\Microsoft\Windows\CurrentVersion\Run，在右边点鼠标右键，新建字符串值，填入数值名称“subst”，双击填入数值数据为“subst 
+              a: c:\virtualA”；<br>
+              用注册表文件，如果注册表被系统管理员禁用，或者怕直接修改出现错误，就用这个方法吧，绝对安全！新建文本文档，内容为：<br>
+              REGEDIT4<br>
+              HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run<br>
+              “subst”=“subst a:c:\\virtualA”<br>
+              注意：REGEDIT4后面一定要空一行，subst命令行中的C:后一定是双斜线，另存为subst.reg，直接双击就可以添加到注册表。<br>
+              ##1三、Bat文件和修改注册表相结合<br>
+              如果不愿意在自己机器的开始菜单里的“启动”中出现一些莫名其妙的东西，或者变得臃肿不堪，而又需要一个可以随时修改的虚拟软盘控制器路径，就用这个方法吧。方法很简单，基本就是上述两种方法的叠加：创建subst.bat文件后，同样在注册表HKEY_LOCAL_MACHINE\Software<br>
+              \Microsoft\Windows\CurrentVersion\Run项中新建字符串值“subst”，数据为“c:\subst.bat”，重启之后，看看“系统属性→性能”，那熟悉的“已将系统设置成最优性能”是不是又回来了。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

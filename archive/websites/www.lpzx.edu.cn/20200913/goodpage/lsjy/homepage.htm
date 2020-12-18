@@ -1,0 +1,298 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>绿色家园</title>
+<style type="text/css">
+<!--
+p, b, a, ul, center, td, select, input, textarea { font-family: 宋体, 新宋体; font-size: 9pt; line-height: 20px }
+a:link       { text-decoration: none; color: #551A8B }
+a:visited    { text-decoration: none; color: #551A8B }
+a:active     { text-decoration: underline; color: #ff0000 }
+a:hover      { text-decoration: underline; color: #ff0000 }
+hr           { color: #488ac7 }
+//
+-->
+</style>
+<bgsound src="003.mid" loop="-6">
+<script language="JavaScript">
+<!--
+function makeRemote() {
+remote = window.open("http://www.nease.net/~loveu/music.htm","remotewin", "border=0,toolbar=no,scrollbars=no,width=196,height=109");
+}
+//-->
+var isNS = (navigator.appName == "Netscape");
+layerRef = (isNS) ? "document" : "document.all";
+styleRef = (isNS) ? "" : ".style";
+
+var queue = new Array();
+
+var NUM_OF_TRAIL_PARTS = 5
+
+for (x=1; x < 6; x++) { ///////////////Image Preload
+eval("trailSpriteFrame" + x + " = new Image(36,36);");
+eval("trailSpriteFrame" + x + ".src = 'trailg" + x + ".gif';"); 
+}
+
+////////////////////////////////////////////////The trail Object
+
+function trailSpriteObj(anID) {
+this.trailSpriteID = "trailSprite" + anID; //as before 
+this.imgRef = "trailSprite" + anID + "img"; //reference to the sprites image name
+this.currentFrame = 1; //the varible for looking after the frame
+this.animateTrailSprite = animateTrailSprite; //declare the objects method cycle
+}
+
+function animateTrailSprite() {
+if (this.currentFrame <6 ) { //if there are animation frames left, the change sprites the current frame
+if (isNS) { //Detect the browser and perform coresponding image switch
+eval("document." + this.trailSpriteID +".document['"+ this.imgRef + "'].src = trailSpriteFrame" + this.currentFrame + ".src");
+} else {
+eval("document['" + this.imgRef + "'].src = trailSpriteFrame" + this.currentFrame + ".src");
+}
+this.currentFrame ++; //and increase the objects current frame 
+} else { //the current frame has reached its limit so hide the sprite
+eval(layerRef + '.' + this.trailSpriteID + styleRef + '.visibility = "hidden"');
+} 
+}
+
+/////////////////////////////////////////////////////////////////
+
+function processAnim() {
+for(x=0; x < NUM_OF_TRAIL_PARTS; x++)
+queue[x].animateTrailSprite();
+}
+
+function processMouse(e) {
+currentObj = shuffleQueue();
+if (isNS) {
+eval("document." + currentObj + ".left = e.pageX - 10 ;");
+eval("document." + currentObj + ".top = e.pageY + 10;");
+} else {
+eval("document.all." + currentObj + ".style.pixelLeft = event.clientX + document.body.scrollLeft - 10 ;");
+eval("document.all." + currentObj + ".style.pixelTop = event.clientY + document.body.scrollTop + 10;");
+}
+}
+
+function shuffleQueue() {
+lastItemPos = queue.length - 1;
+lastItem = queue[lastItemPos];
+for (i = lastItemPos; i>0; i--) 
+queue[i] = queue[i-1];
+queue[0] = lastItem;
+
+queue[0].currentFrame = 1; //reset the objects frame number & make the sprite visible again
+eval(layerRef + '.' + queue[0].trailSpriteID + styleRef + '.visibility = "visible"'); 
+
+return queue[0].trailSpriteID;
+}
+
+function init() {
+
+for(x=0; x<NUM_OF_TRAIL_PARTS; x++) //fill array with trail objects
+queue[x] = new trailSpriteObj(x+1) ;
+
+if (isNS) { document.captureEvents(Event.MOUSEMOVE); }
+document.onmousemove = processMouse;
+
+setInterval("processAnim();",25);
+} 
+
+window.onload = init;
+</script>
+</head>
+
+<body>
+<div id="trailSprite1"
+style="position: absolute; height:36px; width:36px;z-index: 100; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/goodpage/lsjy/src" height="36" width="36" name="trailSprite1img"></dd>
+</div><div id="trailSprite2"
+style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/goodpage/lsjy/src" height="36" width="36" name="trailSprite2img"></dd>
+</div><div id="trailSprite3"
+style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/goodpage/lsjy/src" height="36" width="36" name="trailSprite3img"></dd>
+</div><div id="trailSprite4"
+style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/goodpage/lsjy/src" height="36" width="36" name="trailSprite4img"></dd>
+</div><div id="trailSprite5"
+style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/goodpage/lsjy/src" height="36" width="36" name="trailSprite5img"></dd>
+</div><!--webbot bot="HTMLMarkup" startspan tag="XBOT" --></SCRIPT><!--webbot bot="HTMLMarkup"
+endspan -->
+<script language="javascript">
+previous_index=1;
+function over_change(index,src,clrOver){
+	if(previous_index!=parseInt(index))
+		if (!src.contains(event.fromElement)) 
+	 		{src.style.cursor = 'hand';
+	 		src.bgColor = clrOver;}}
+function out_change(index,src,clrIn){
+	if(previous_index!=index) 
+		if (!src.contains(event.toElement))
+			{src.style.cursor = 'default';
+			src.bgColor = clrIn;}}
+function click_change(index,src,url){
+	index=parseInt(index);
+	if(previous_index>0) eval('document.all.b'+previous_index+'.bgColor="FFDB91"');
+	eval('document.all.b'+index+'.bgColor="#FDC250"');
+	if(index==4) parent.location=url;
+	else parent.parent.frames[1].location=url;
+	previous_index=index;}
+function onerror(aa,bb,cc)
+{alert(aa+"\n"+bb+"\n"+cc);}</script>
+<div align="center"><center>
+
+<table border="0" width="605" height="322" cellpadding="5">
+  <tr>
+    <td background="b1.jpg" width="605" height="27"><span
+    style="font-faimly:隶书；font-size:9pt"><marquee behavior="alternate" border="0"
+    scrolldelay="110">关注地球，珍爱生命！</marquee> </span></td>
+  </tr>
+  <tr>
+    <td width="605" height="20" background="bj1.gif"><div align="center"><center><table
+    border="0" cellspacing="3" width="550">
+      <tr>
+        <td width="85" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#aaf0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#aaffff&quot;)"><p align="center"><a
+        href="网页简介.htm"><span
+        style="font-color:#CC0066;font-family: 宋体; font-size: 9pt">网页简介</span></a></td>
+        <td width="85" bgcolor="#ddf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#bbf0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#bbffff&quot;)"><p align="center"><a
+        href="信息快递.html">信息快递</a></td>
+        <td width="85" bgcolor="#ccf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#ccf0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ccffff&quot;)"><span
+        style="font-family: 宋体; font-size: 9pt">&nbsp; <a href="政策法规.htm">政策法规</a></span></td>
+        <td width="85" bgcolor="#ccf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#ccf0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ccffff&quot;)"><p align="center"><a
+        href="环保问答.htm"><span style="font-family: 宋体; font-size: 9pt">环保问答</span></a></td>
+        <td width="85" bgcolor="#bbf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#ddf0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ddffff&quot;)"><p align="center"><a href="gh.htm">公害事件</a></td>
+        <td width="85" bgcolor="#hhf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#eef0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#eeffff&quot;)"><p align="center"><a href="zj.htm">拯救地球</a></td>
+        <td width="80" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#fff0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ffffff&quot;)"><p align="center"><a
+        href="mailto:yf1975@263.net">E-mail</a></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+  <tr>
+    <td width="605" height="107"><div align="center"><center><table border="0" cellspacing="3"
+    width="569" height="323">
+      <tr>
+        <td width="300" height="57" bordercolor="#0000FF" bordercolorlight="#0000FF"
+        bordercolordark="#0000FF" background="680074.jpg" align="center"
+        style="border-left: thin solid rgb(0,0,255); border-right: thin outset rgb(0,0,255); border-top: thin solid rgb(0,0,255); border-bottom: thin outset rgb(0,0,255)"><p
+        align="left">　</p>
+        <p align="right">　</td>
+        <td width="14" height="57" bordercolor="#0000FF" bordercolorlight="#0000FF"
+        bordercolordark="#0000FF" align="center"></td>
+        <td width="274" height="317" valign="top" rowspan="3" align="center"><p align="center"><img
+        src="http://www.lpzx.edu.cn/goodpage/lsjy/%CD%BC%C6%AC/zhb00000.gif" width="43" height="42" alt="zhb00000.gif (4157 字节)"><em><big><big><font
+        color="#008000"><big><big><span
+        style="font-color:red ;font-family: 隶书; font-size: 16pt">绿</span></big></big></font></big></big><span
+        style="font-color: red; font-family: 隶书"><font color="#FF00FF" size="6">色</font><font
+        color="#000000" size="5">的</font><font color="#FF00FF" size="6">家</font></span><big><big><big><big><span
+        style="font-color:red ;font-family: 隶书; font-size: 16pt"><font color="#339933">园</font></span></big></big></big></big></em><img
+        src="http://www.lpzx.edu.cn/goodpage/lsjy/%CD%BC%C6%AC/0031.gif" width="45" height="37" alt="0031.gif (11188 字节)"></p>
+        <table width="97%" border="1" cellspacing="1" cellpadding="2" align="right"
+        bordercolorlight="#B5D7FF" bordercolordark="#FFFFFF">
+          <tr valign="top" class="9ft">
+            <td><p align="center"><em><strong><u><font color="#8000FF" face="黑体">真情告白<script
+            language="JavaScript">
+                  if (document.all){
+                  document.writeln('<table align=center border=0 cellspacing=1 width="100%" height=100% cellpadding="1">')
+                  document.writeln('<tbody> ')
+                  document.writeln('<tr bgcolor="#FFFFFF"> ')
+                  document.write('<td align=middle>')
+                  document.writeln('<marquee direction=up height=160 scrollamount=1 scrolldelay=80 width="95%">')
+                  document.writeln('<span style="color:#0066cc; style=font-family: 隶书; font-size: 9pt">对于小学生来说，能够参加本次活动，我们感到万分的荣幸。我们只是六年级学生，对电脑还有许多地方不懂，希望能够得到大家的批评与指点，从而使我们对电脑理解更深，做得更好。</span><br><br>')
+                  document.writeln('<span style="COLOR:green;style=font-family: 隶书; font-size: 9pt">在制作网页过程中，得到了校长的关心、老师的培养、父母的支持和朋友们的帮助，在此，表示衷心的感谢！</span><br><br>')
+                  document.writeln('<span style="COLOR: #0066cc;style=font-family: 隶书; font-size: 9pt">请大家多提意见，多多帮助。欢迎大家的光临，把您的建议和感想一并塞进我们的信箱，伴我们成长！！</span><br><br>')
+                  document.writeln('<span style="COLOR: #aa0080;style=font-family: 隶书; font-size: 9pt">谨将本网页敬赠给所有关注环保的朋友们！</span><br><br>')
+                  document.writeln('<span style="COLOR: #ff0080;style=font-family: 隶书; font-size: 9pt">GOOD LUCK TO YOU !!</span><br><br>')
+                  document.writeln('<center><font color=blue>敬请光临绿色的家园主页</font>')
+                  document.writeln('</center>')
+                  document.writeln('</marquee></td>')
+                  document.writeln('</tr></tbody></table>')
+                  }
+                  else {
+                  document.writeln('<br><center>')
+                  document.writeln('<font color=red><span  class="9ft">此处为动态内容</span></font>')
+                  document.writeln('</center><center>')
+                  document.writeln('<font color=red><span  class="9ft">请用IE浏览器查看</span></font>')
+                  document.writeln('</center>')
+                  }
+               
+</script> </font></u></strong></em></td>
+          </tr>
+        </table>
+        <p>&nbsp;</td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+  <tr>
+    <td width="605" height="20" background="bj2.gif"><div align="center"><center><table
+    border="0" cellspacing="3" width="568" height="32">
+      <tr>
+        <td width="116" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#fff0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ffffff&quot;)" height="26" align="center"><a
+        href="su.htm"><span style="font-family: 宋体; font-size: 9pt">水污染</span></a></td>
+        <td width="115" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#fff0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ffffff&quot;)" height="26" align="center"><a
+        href="dq.htm"><span style="font-family: 宋体; font-size: 9pt">大气污染</span></a></td>
+        <td width="115" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#fff0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ffffff&quot;)" height="26" align="center"><a
+        href="lj.htm"><span style="font-family: 宋体; font-size: 9pt">垃圾污染</span></a></td>
+        <td width="115" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#fff0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ffffff&quot;)" height="26" align="center"><a
+        href="zs.htm"><span style="font-family: 宋体; font-size: 9pt">噪声污染</span></a></td>
+        <td width="115" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#fff0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#ffffff&quot;)" height="26" align="center"><a
+        href="sy.htm"><span style="font-family: 宋体; font-size: 9pt">酸雨</span></a></td>
+        <td width="88" bgcolor="#ggf0f8" id="b2"
+        onmouseout="out_change(2,this,&quot;#aaf0f8&quot;)"
+        onmouseover="over_change(2,this,&quot;#aaffff&quot;)" height="26" align="center"><p
+        align="center"><a href="sy.htm">温室效应</a></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+  <tr>
+    <td background="b1.jpg" width="605" height="27"><span
+    style="font-faimly:隶书；font-size:9pt"><marquee direction="left" border="0"
+    scrolldelay="110">地球——我们共同的绿色家园！</marquee> </span></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center" style="line-height: 5px; letter-spacing: normal">　 </p>
+
+<hr width="75%">
+
+<p align="center" style="line-height: 5px; letter-spacing: normal"><br>
+<font color="#FF00FF"><i><font size="3" face="EnglischeSchT">Copyright</font></i> </font>(c)<font
+color="#004080"> </font><font size="3" face="方正行楷简体" color="#004080">重庆市沙坪坝区新桥小学&nbsp;&nbsp;&nbsp;&nbsp;汪晓雯 
+马南</font></p>
+
+<p align="center" style="line-height: 5px; letter-spacing: normal"><br>
+<font size="3" color="#808080">建议使用800*600分辨率&nbsp;&nbsp;&nbsp; IE4.0以上版本观看！</font></p>
+</body>
+</html>

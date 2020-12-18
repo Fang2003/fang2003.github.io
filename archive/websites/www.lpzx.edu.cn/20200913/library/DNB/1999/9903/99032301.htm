@@ -1,0 +1,60 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">软硬兼施修硬盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　故障现象：一台兼容机上安装有CONNER 
+        CFS425A硬盘，每次开机自检到硬盘时，屏幕显示“HDD Controller Error(硬盘控制器故障)”后死机。此后在CMOS中无法对该硬盘进行正确的设置，用Norton、KV300等软件也无法找到该硬盘，更谈不上对该硬盘进行修复。<br>
+        　　故障分析与处理：经笔者仔细聆听，在自检硬盘时有磁盘旋转的声音，估计电路和主电机无故障，问题可能出在0磁道或磁头机械臂传动上，也可能二者都有问题。如果仅仅只是0磁道有问题，那么用Norton或KV300软件再加上一些特殊手段(下面将有介绍)一般都可修复。若磁头机械臂传动有故障，那只有将硬盘打开修理了。<br>
+        　　1.找一台硬盘完好而且所用操作系统完全相同的计算机(笔者使用的操作系统是DOS6.22)，打开机箱，原硬盘不动，将待修硬盘电源线接上，但信号线不接，跳线不变，即待修硬盘仍设置成“Master”(主盘)。<br>
+        　　2.正常开机后，用Norton8.0的DiskEdit(磁盘编辑器)软件进行修复：<br>
+        　　●运行DiskEdit后，从下拉菜单Tools(工具)中点取Configuration(配置)项，将Read 
+        Olny(只读)复选框中的“”取消后再选OK项，即取消只读属性；<br>
+        　　●从下拉菜单Object(对象)中点取Drive(驱动器)项，然后点取C:Hard 
+        Disk(C:硬盘)，将Type(类型)项设置成Physical Disks(物理磁盘)后点击OK；<br>
+        　　●从Object中点取Partition Table(分区表)项，即将完好硬盘的主引导记录(MBP)和分区表信息读取到内存中；<br>
+        　　●将完好硬盘上的信号线取下接到待修硬盘上；<br>
+        　　●从Tools中点取Write Object To(写对象到)项，选择To Physical Sectors(到物理扇区)后点取OK项，然后选择Hard 
+        Disk1后点击OK；从Write Object to Physical Sectors对话框中，将Cylinder(柱面)、Side(面)、Sector(扇区)分别设置成0、0、1后点取OK，当出现“警告”对话框时选择Yes项；<br>
+        　　●从Object中选择Exit后退出DiskEdit。<br>
+        　　3.重新启动计算机并进入CMOS设置界面，对修理后的硬盘进行设置，若硬盘只是0磁道的故障，此时已能对硬盘进行正确的设置。前面提到的特殊手段指的是第2项中的第4步。遗憾的是，笔者这次可没有上次那么幸运，用以上方法仍无法修复有故障的硬盘，笔者在万般无奈之下，只好采取非常手段，对硬盘“开肠破肚”了。<br>
+        　　4.在灰尘相对较小的环境中把硬盘拆开，将磁头机械臂从着陆区(内圈)小心翼翼地移到0磁道区(外圈)，然后将硬盘还原。在操作过程中千万注意不要接触盘面，否则整个硬盘有报废的危险。<br>
+        　　5.重复以上1～3项的操作，真是十分幸运，此次居然又获得了成功，不仅硬盘已能正常使用，而且数据完好无损。笔者当然不敢得意忘形，赶快将重要信息备份出来，这只硬盘嘛，只好用到哪天算哪天了。<br>
+        　　笔者虽然采用“软硬兼施”的办法修复了硬盘，但还是要忠告各位玩家，千万不要拿自己的“宝贝疙瘩”去修炼此道，否则，后果自负。另外，笔者所用的两只硬盘的分区是相同的，故在执行了以上操作后，不需要对修复的硬盘重建分区，否则，还要对修复的硬盘重建分区后才能最后恢复该硬盘，其方法请参看有关资料。<br>
+        (湖北　邵新社)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

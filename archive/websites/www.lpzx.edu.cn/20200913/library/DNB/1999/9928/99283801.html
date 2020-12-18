@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 载歌载舞——在Authorware中加载MIDI背景音乐</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>28 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 载歌载舞——在Authorware中加载MIDI背景音乐</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 载歌载舞——在Authorware中加载MIDI背景音乐 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在多媒体应用程序中，MIDI音乐文件由于其存储容量远远小于波形声音文件，常常用作背景音乐。但由于Authorware中的声音图标不支持MIDI文件，所以，通过调用相应的多媒体扩展函数来实现音乐播放不失为一个好方法。<br>
+      <img src="images/38-1.gif" width="256" height="122" align="right" alt="图1"> 
+      　　1．在流程线上放置一个“运算”图标，并命名为“Define Window”，设置如图1所示。<br>
+　　2．创建主界面图案。在流程线上放置一个“显示”设计按钮并命名为“Background”。双击打开，输入或创建相应的图片，如图2所示。<br>
+      <img src="images/38-2.gif" width="169" height="110" align="left" alt="图2"> 
+      　　3．加载多媒体扩展函数，这些函数是Authorware提供对多媒体设备支持的自定义函数，均是与Microsoft的媒体控制界面（MCI）相联系的，<img src="images/38-3.gif" width="91" height="186" align="right" alt="图3">MCI再直接与指定的多媒体硬件相联系，从而实现对多媒体设备进行控制。多媒体扩展函数放在一个DLL动态文件A4wmmeu32中，程序调用之前需加载这些函数。从菜单上选取“Window>Functions”选项或单击工具栏上“函数”按钮，进入“Functions”对话框。<br>
+      　　4．从“Category”区的下拉列表中选定本文件选项,如图3所示（本实例文件名是“设置MIDI背景音乐a4p”），此时“Functions”对话框中下面的“Load”按钮变为可执行状态。<br>
+　　5．单击“Load”按钮，进入“Load Function”对话框。选定A4wmmeu32文件(该文件未随Authorware 4.0一起发行，可从其站点下载)，单击“打开”按钮，弹出如图4所示“Custom functions in A4wmmeu32”对话框。<br>
+      　　<img src="images/38-4.gif" width="214" height="111" align="left" alt="图4">6．用鼠标选取所有以MIDI开头的函数，单击“Load”加载，加载完毕后返回至与“Funtions”同名的另一个对话框，在函数的显示窗口增加了加载的多媒体扩展函数。至此，准备调用的多媒体扩展函数加载完毕。<br>
+      　　7．在流程线上放置一“运算”图标，命名为“MIDI”，打开进入程序输入框，内容如图5所示。<br>
+      <img src="images/38-5.gif" width="282" height="56" align="right" alt="图5"> 
+      　　8．在流程线上放置一“交互作用”按钮，命名为“Control Panel”。<br>
+      　　<img src="images/38-6.gif" width="184" height="138" align="left" alt="图6">9．在“Control 
+      Panel”的右侧放置一“映射”图标，弹出“Response Type”对话框，选定“Hot Spot”按钮，设置为热区响应，单击“OK”按钮，并将该图标命名为“打开音乐”。<br>
+　　10．用以上的方法，设置“关闭音乐”热区响应映射图标。<br>
+      <img src="images/38-7.gif" width="205" height="53" align="right" alt="图7"> 
+      　　11．双击打开“Background”显示图标，按住Shift键，再双击打开“Control Panel”图标，在“Presentation 
+      Window”窗口中同时显示背景和热区的隐含状态，让“打开音乐”和“关闭音乐”图标的响应热区相同，并且覆盖工具条上的“音乐”位置。<br>
+　　12．双击“打开音乐”图标上面的交互按钮，进入“Properties:Response”对话框，在“Active If”区的正文输入框内输入“～MIDIplaying()”，但设置该图标的响应条件是当前的机器没有MIDI文件在播放。<br>
+      　　<img src="images/38-8.gif" width="183" height="140" align="left" alt="图8">13．用以上的方法，设置“关闭音乐”的响应，不同的是在“Active 
+      If”区的正文输入框内输入“MIDIplaying()”，且设置该图标的响应条件是有MIDI文件正在播放。<br>
+      　　<img src="images/38-9.gif" width="222" height="111" align="right" alt="图9">14．双击“打开音乐”图标进入程序设计框。在流程线上放置一“显示”图标，命名为“openpicture”，双击打开“Background”显示图标，按住Shift键，再双击打开“openpicture”图标，“Presentation 
+      Window”窗口中会显示“Background”对象，创建显示对象，如图6所示。在流程线上放置一“交互作用”图标，命名为“open”，在其右侧放置一“运算”图标，设置为热区响应，命名为“gotoMIDI”，双击打开，输入内容如图7所示，双击打开“openpicture”，按住Shift键，再双击打开“open”，进入“Presentation 
+      Window”窗口，设置“gotoMIDI”响应区域为覆盖“openpicture”中的对象，如图8所示。整个“打开音乐”映射图标逻辑流程如图9所示。<br>
+      　　<img src="images/38-10.gif" width="291" height="156" align="left" alt="图10">15．双击“关闭音乐”映射图标，进入程序设计框。在其流程线上放置一“显示”图标，命名为“closepicture”，双击打开“Background”显示图标，按住Shift键，再双击打开“closepicture”图标，<img src="images/38-11.gif" width="195" height="160" align="right" alt="图11">“Presentation 
+      Window”窗口中会显示出“Background”对象，创建图片对象。然后在流程线上放置一“交互作用”图标，命名为“close”，在其右侧放置一“映射”图标，设置为热区响应，命名为“closeMIDI”，双击打开进入新的程序设计框，在其流程线上放置一“运算”图标，<img src="images/38-12.gif" width="204" height="159" align="left" alt="图12">命名为“MIDIstop”，双击打开进入程序输入框，输入MIDIstop()。执行该语句时将关闭正在播放的MIDI文件。在其下面的流程线上放置一“擦除”图标，命名为“eraseclose 
+      picture”，双击打开进入“Erase Icon”对话框，如图10所示，从“Presentation Window”窗口单击“closepicture”中图片对象，选定擦除对象，该图标的作用是在执行关闭音乐的功能后自动擦除弹出的“关闭音乐”菜单。整个“关闭音乐”映射图标的逻辑流程图如图11所示。<br>
+      　　16．在“Control Panel”的右侧放置一“运算”图标，命名为“退出”，设置其响应的热区为覆盖工具条上的“退出”位置，双击打开进入程序输入框，输入quit()。<br>
+　　本实例程序逻辑流程(图12)。<br>
+　　至此，本实例制作完毕，让我们看看演示过程。单击“运行”按钮，开始出现的界面如图1所示，同时播放背景音乐，单击工具条上的“音乐”位置会弹出“关闭音乐”菜单，单击“关闭音乐”，音乐停止后，再单击工具条上的“音乐”位置，弹出“打开音乐”菜单，如图6所示，单击“打开音乐”，音乐开始播放，“打开音乐”菜单消失。还等什么，试一下吧。<br><b>（文/门槛工作室）</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/28/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99283801.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

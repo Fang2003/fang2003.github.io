@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VFP3.0中表格的应用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 表格是VisualFoxPro3.0(VFP)提供的一个非常强大的控件，灵活地运用它可以实现许多实用的功能，下面是笔者在编程时使用的一些技巧。<br>
+        &nbsp;&nbsp;&nbsp; 一、突出显示满足条件的记录<br>
+        &nbsp;&nbsp;&nbsp; 在对记录进行浏览或维护时，经常需要将某些记录或字段突出显示，例如：工资金额大于500元的字段。在VFP中，使用表格的INIT事件就能很容易地实现这些要求，具体步骤如下：(注：本文的所有例程均要求临时表的buffermodeoverride属性为5(“开放式表缓冲”))thisformgridlinit事件THISColumn4DynamicForeColor=;＆＆以Column4为例″IIF(金额&amp;gt;=500,RGB(255,0,128),RGB(0,0,0))″仅通过上面的一行语句，就可使得在浏览、维护记录时，“工资金额”大于500的项以红色突出显示，而且在修改时也能即时改变颜色。<br>
+        &nbsp;&nbsp;&nbsp; 我们还可以在程序运行时改变条件值，提高程序应用的灵活性，使得程序更完善实用，例如：使“工资金额”大于600的项显示红色等等。要达到这个目的，就要用到表格的refresh方法，它使表格按新值进行刷新。<br>
+        &nbsp;&nbsp;&nbsp; 新建一属性VALUE_1，用于接收和传递条件值，其初值为500，同时在表格的init事件中将500改为thisformvalue_1，再设置一组合框combo1，其rowsourcetype=1，rowsource=100,200,300……并在combo1.click事件中编写如下代码：fori=1tothisformcombo1listcountifthisformcombo1selected(i)thisformvalue_1=thisformcombo1list(i)thisformgridlrefreshendifendfor这样，使用起来就灵活多了。<br>
+        &nbsp;&nbsp;&nbsp; 二、突出显示被修改记录<br>
+        &nbsp;&nbsp;&nbsp; 在VFP中设计记录维护模块时，一般是通过设置“开放式表缓冲”使记录可以先修改再根据情况决定是否保存，但是在实际运用中，面对着一大堆数字，往往很难分清哪些已被修改了，哪些还未修改，从而直接影响到工作效率。为此，我们可以利用表格的afterrowcolchange事件配合“dynamicbackcolor”属性以及函数getfldstate()等来解决这个问题，当某个记录被修改而且还未保存时，就改变它的显示颜色以示区别，核对时就很方便了。<br>
+        gridlafterrowcol事件：<br>
+        thissetall(″dynamicbackcolor″，″iif(′2′＄getfldstate(－1),RGB(255,0,128),RGB(0,0,0))″，″column″)该事件中getfldstate()函数起着主要作用，它用于检测记录是否被修改，若被修改则按字段顺序返回字符2，否则返回1。例如有五个字段，则有可能返回11121(只有第四个字段被修改)，为了简化程序，使用了“＄”运算符，只判断在返回的字符串中是否有“2”，若有则表示该行的某个字段被修改了，该行就显示为红色(RGB(255，0，128))以示区别。<br>
+        &nbsp;&nbsp;&nbsp; 该程序在6X86/166、中文Windows95、VisualFoxPro3.0中文专业版中调试通过。(四川 
+        何俊峰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

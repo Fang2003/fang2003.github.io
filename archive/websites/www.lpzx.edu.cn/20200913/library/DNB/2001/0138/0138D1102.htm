@@ -1,0 +1,141 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0138/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0138/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第38期 </a>&gt;&gt;<a href="internet.html">网络与通信</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td height="11"> 
+            <div align="center">Web服务器的急救措施</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>编者按：Web服务器一旦发生异常，任何一名网管都希望在最短的时间内解决问题，让我们来看看高手是如何做的，从中我们可以学到一些基本的技巧。<br>
+              1.服务器响应缓慢<br>
+              如果服务器响应缓慢，需要做的第一件事情就是判断问题来自服务器还是网络，有一个工具就是Uptime软件。<br>
+              Uptime会显示服务器的平均负载，如果最后的这个数字高于2或者3，问题的原因就是一些进程占用系统太多资源。如果这个数字不是很高，你就需要考虑网络的因素了。<br>
+              负载过高时使用top命令来确定哪些进程在消耗系统资源。<br>
+              top命令缺省显示10条进程，当然你可以使用top N来指定需要查看的进程数。<br>
+              更加详细的进程列表可以使用ps -auxw命令。<br>
+              比较Web进程的“硬”限制(Apache编译时的限制)和“软”限制(httpd.conf的限制)，如果两者的数字接近，那么你就要考虑升级硬件或者重新编译Apache了。<br>
+              2.未授权登录<br>
+              如果担心有非法用户闯入系统，最简单的办法就是用w命令来检查。<br>
+              如果真的看到有非法用户在你的系统上，可以立即kill他的进程，例如用vipw命令把他的口令修改为“”或者把shell改为/sbin/nologin。<br>
+              3.服务不能启动或者崩溃<br>
+              如果Web服务器不能启动或者启动时崩溃，就需要使用apachectl命令来找原因。首先用apachectl configtest命令检查httpd.conf的合法性。但是apachectl并不是万能的。如果问题依然不能解决，我们就应该检查错误日志。另外，用apachectl检查/var/run/httpd.pid文件来找到原来的进程，如果进程号不同，则apachectl 
+              stop命令不会工作。在这种情况下就需要使用ps命令来kill对应的进程。<br>
+              4.网络检测<br>
+              查找因为网络问题引起的原因时，第一个简单的命令就是ping。<br>
+              如果ping的结果看起来很正常，或许就需要使用比较大的包来试一下，ping的缺省包大小为56字节，我们用-s指定包大小为2048字节来试一下。采用大的包之后，返回时间延长很正常，但是非常长的时间返回或者包丢失就显示网络有问题了。<br>
+              5.交叉信号<br>
+              如果怀疑服务器和交换机之间的网络配置有问题，可以采用netstat -finet命令来显示打开的端口以及连机的外部服务。<br>
+              如果你的服务器遭到攻击，就会显示内核的内存使用超常，可以采用netstat的-m参数来查看。<br>
+              如果你发现httpd的负载不是很重，但是网络资源占用的内存还是很大的话，可以考虑关闭一些服务和端口。<br>
+              6.网络问题<br>
+              如果网络发生了问题，就需要使用ifconfig命令来检查网卡是否正常。这个命令会显示网卡的IP地址、掩码、双工、速率等。<br>
+              常见的问题是网卡的速率或者双工设置和交换机端口不一致。特别是设置了“autosense”选项，但是却没有成功，可以采用ifconfig 
+              down eth0 options来关闭。<br>
+              7.权限问题<br>
+              有些稀奇古怪的问题很可能来自没有剩余空间。可以采用df命令来检查剩余的硬盘空间。一个简单的例子，就是PHP的session无效了，原因就是写入session的文件系统/tmp已经满了。<br>
+              有些问题则是没有设置好权限，常见的问题是没有为CGI脚本设置x权限，没有为一些目录设置rx权限。<br>
+              8.常见的怀疑对象<br>
+              如果有问题发生，其实第一件事就应该是检查系统日志/var/log/messages。<br>
+              如果有些日志文件不能在/var/log/目录找到，可以查看/etc/syslog.conf的配置。<br>
+              对于Apache来说，需要检查apache_dir/logs/error_log来确定不能启动的原因。<br>
+              以上是笔者使用Web服务器应急措施的一些个人经验，希望能起到一些抛砖引玉的作用。<br>
+              (上海 翁建元)</p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

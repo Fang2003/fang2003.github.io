@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>3DSMAX2.0使用技巧两则</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>3DSMAX2.0使用技巧两则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; &nbsp;3DSMAX2.0功能之强大，众所周知，用它可以实现你所能想像得到的任何三维模型及动画。但是，怎样才能优质高效地完成一件作品，这其中的确有着数不尽的技巧有待学习和开发。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; &nbsp;一、巧变二维背景为三维场景<br>
+        假设你已经建立了一个豪华轿车的三维模型，想让它奔驰于繁华的都市，你是不是真的要构筑一个街景呢?那太难啦!不妨试试这个：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 1.找一个合适的街景图片文件(必要的话，你可以出去现拍一张)；<br>
+        &nbsp;&nbsp;&nbsp; 2.用View/BackgroundImage将图片文件调入Camera视图；<br>
+        &nbsp;&nbsp;&nbsp; 3.建立一定数量的简单模型代替二维图片中可能受三维模型影响的建筑物和路面，调整简单模型和摄像机的位置及角度，使之与二维背景在透视关系上相吻合；<br>
+        &nbsp; 4.根据二维背景上阳光或灯光投射下的阴影，在场景中设置太阳光(Sunlight)或一定数量的聚光灯，使轿车的阴影能与背景图片的阴影乱真；<br>
+        &nbsp;&nbsp; 5.轿车必须包含反射贴图，以表现对周围环境的反射，使整个场景更加逼真；<br>
+        &nbsp;&nbsp; 6.怎样使轿车的阴影投射到背景图片上呢?其实，轿车的阴景是投射在简单模型上的，只不过简单模型没有在场景中显示出来而已。Matte/Shadow材质贴图便能完成这一功能，改变ShadowBrightness的值，可以调节阴影的亮度。<br>
+        &nbsp;&nbsp;&nbsp; 二、时光隧道的制作<br>
+        &nbsp;&nbsp;&nbsp; 
+        时光隧道或者普通的铁路、公路等隧道场景的制作，在实际应用中经常遇到。下面以一个圆形管状时光隧道为例简述隧道的制作方法：<br>
+        &nbsp;&nbsp;&nbsp; 1.用Circle在Front视图中绘出一个圆，用Line在Top视图中绘出一条直线或曲线；<br>
+        &nbsp;&nbsp;&nbsp; 2.用Loft生成隧道模型，在隧道内壁进行合适的材质或动化材质贴图；<br>
+        &nbsp;&nbsp;&nbsp; 3.生成一个Free摄像机；<br>
+        &nbsp;&nbsp;&nbsp; 4.生成一个Omni灯光；<br>
+        &nbsp;&nbsp;&nbsp; 5.选中Omni，在Motion面板中，扩展AssignController，设Transform为Position/rRotation/Scale，设定Position为Path。扩展PathParameters，单击PickPath，选1中的Line路径，并复选Follow，将第0帧的％AlongPath设为3(可据情况而定)，以使前方亮度更为真切；<br>
+        &nbsp;&nbsp;&nbsp; 6.同第五步，设置Camera的Path为1中的line,复选Follow，将第0帧的％AlongPath设为0，并调节其方向与Line相切。<br>
+        这样，渲染后的动画便是一条惟妙惟肖的时光隧道。 <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

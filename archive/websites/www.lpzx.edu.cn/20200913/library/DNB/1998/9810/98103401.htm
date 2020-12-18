@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　黑龙江读者盛利问：一台兼容机，Pentium 
+        133 CPU、16MB内存、540MB硬盘、日立4倍速光驱、“小精英”主板。在Windows 
+        3.1中运行《综合英语有声教学》光盘时，屏幕刚出现画面和音乐时就中止了，屏幕显示：“DMA缓冲区太小，在SYSTEM.INI的[386ENH]中SET 
+        ‘DMA BUFFERSIZE=027’，退出所有应用程序，并退出Windows，重新启动计算机”。<br>
+        　　该软件以前在Windows 3.1下运行正常，使用方便。这次是在重新安装系统之后出现上述故障的，请问如何解决?<br>
+        　　答：DMA缓冲区是系统在内存中开辟的一块专用的区域，在内存直接存取时，通过该缓冲区实现内存和外存储器之间的数据交换。不同的应用程序对这个缓冲区的大小需求不一定相同。从你的出错提示信息可以看出，当前设定的缓冲区太小，因此应该重新设置。在安装Windows 
+        3.1系统时，这个缓冲区的大小通常为其缺省值(16KB)，由于你没有重新设置，这个缺省值不能满足现有的应用程序的需要，所以出现上述现象。<br>
+        　　在“文件管理器”中选择“WINDOWS\SYSTEM\SYSEDIT”，即可进入配置文件编辑窗，再选择SYSTEM.INI文件中的[386ENH]节增加或修改：<br>
+        　　DMABUFFERSIZE=027<br>
+        一行即可。此时DMA缓冲区的大小为27KB，程序就能够正常运行了。<br>
+        　&nbsp; 广州读者李耀华问：我的计算机在使用“COPY”命令时有问题，从软驱拷贝文件到硬盘时正常，但从硬盘拷贝文件到软驱时就出错，屏幕显示：“Fail 
+        on int 24”。如果用“XCOPY”命令，则可以从硬盘拷贝文件到软驱，但是把拷贝的软盘拿到正常的计算机上一读就报告：“Sector 
+        not found reading drive A”。检查BIOS设置，没有发现问题，硬盘也没有病毒，而且从软盘启动一切正常。请问是何原因?如何解决?<br>
+        　　答：尽管你可能用某个查毒软件检查过硬盘，而且该软件也没有发现病毒，但笔者在这里仍然要说，你的这个问题肯定是由计算机病毒引起的。这种病毒属于引导区病毒，不能简单地用高级格式化的方式来清除。建议用KV300查一下，如果仍不能发现病毒并解决问题，则可以用EZ 
+        9.X版的硬盘管理软件重新分区或用高版本的低级格式化软件低级格式化硬盘后，再重新分区和装入软件。<br>
+        &nbsp;&nbsp;&nbsp; 河南读者赵红军问：一台Compaq 7180多媒体微机(Pentium 100 
+        CPU、16MB内存、S3显示卡)，操作系统为DOS 6.0、Windows 95、Windows 3.1并列安装。文字处理软件为Word 
+        7.0。因要处理WPS格式文件，安装了WPS NT 1.0。在启动WPS NT后，显示屏下方(大约占整个屏幕的1/3)黑屏，但WPS 
+        NT仍能在上半屏幕上正常操作，且UCDOS中的WPS系统也正常。这种情况是否是WPS 
+        NT的显示驱动程序与S3显卡驱动程序有冲突?如何解决?<br>
+        　　答：这种情况主要是WPS NT 1.0的显示驱动程序与S3显示卡驱动程序有冲突，因而在启动WPS 
+        NT时不能直接写屏。解决的方法是让WPS NT采用中断方式运行，即在SPDOS后面加上“/V”参数即可。由于UCDOS在S3显示卡上能够很好地直接写屏，因而，其带的WPS使用正常。<br>
+        　&nbsp; 湖北读者施鄂章问：1.一台组装的586计算机，硬盘分C、D两区，安装Windows 
+        95操作系统，在Aautoexec.bat文件中并没有“LH/L：1，40352 
+        c:\&gt;Pwin95\command\mscdex.exe/d:mscd000/m:12”这一句，为何从Windows 95进入DOS 
+        7.0时出现提示：<br>
+        　　c\&gt;LH/L:1,40352 c:\pwin95\command\mscdex.exe/d:mscd000/m:12<br>
+        　　file not found<br>
+        　　而c:\&gt;pwin95\command目录中又有mscdex.exe文件，而且在DOS提示符下可以进入E盘(光驱工作正常)。<br>
+        　　2.从Windows 95进入DOS后，回到Windows 95再进入DOS时，用mem/p/c查看内存，发现两个command文件(同样大小)被加载，重复几次就有几个同样的command被加载，是何原因?<br>
+        　　答：对于第一个问题，实际上是Windows 95加载时的顺序问题，而Windows 
+        95的Autoexec.bat文件在系统的启动过程中就已经执行了。那么从Windows 95进入DOS时执行的是哪个批处理文件呢?实际上执行的是c:\&gt;pwin95目录下的Dosstart.bat文件，而该文件一般包括了c:\pwin95\command目录下的mscdex.exe，至于提示中的“file 
+        not found”则是指Dosstart.bat中的下一句另外要执行的文件没有找到，否则就不可能正常地进入E盘，只要打开Dosstart.bat文件看一下就明白了。第二个问题则是由DOS返回Windows 
+        95时操作不正确产生的，我们知道command实际上是DOS的一个命令解释器，许多大的商用程序在不退出其它程序时，都可利用去除外壳的方式进入DOS，为了能执行DOS命令，这时就需要一个command的新拷贝，而在从DOS返回应用程序时则需要通过使用“Exit”命令来返回用户程序。对于Windows 
+        95也是如此，因此由DOS返回Windows 95时应该使用“Exit”命令，如果用“WIN”命令则会出现多个command拷贝的现象。<br>
+        　　 山东读者董辉军问：我买了一台联想微机，Pentium 133 CPU、16MB内存、17GB硬盘。现有一问题请教：装箱单上写的是17GB的硬盘，但是在“我的电脑”中查得只有158GB。是系统占用了空间，还是其它什么原因?联想作为国内电脑行业的“巨头”，这种失误不应该有吧!<br>
+        　　答：硬盘容量的测试值与厂商的标称值不同的问题，主要是计算方法不同产生的。厂商计算的每K字节是按照1000字节得出的，其1GB=1000×1000×1000=1000000000字节。但是测试程序则按每KB为1024字节计算，其1GB=1024×1024×1024=1073741800字节。这两者之间约有7％的误差，1000000000÷1073741800=0.93。你的硬盘标称值为17GB，实际测试值为158GB，两者之间的误差就是由此产生的，联想公司没有失误之处。(何宗琦)<br>
+        　　四川读者王楠问：Compaq原装机原来装的是英文版的Windows 95，后来改装中文版的Windows 
+        95(覆盖安装)，中文输入法增加了王码五笔字型。使用时出现如下问题：中文输入时提示汉字部分变成黑色块。安装中文IE40时提示语言不对，只能退出安装。《硬件大师》光盘在此微机上不能播放。按《电脑报》介绍的关于中文Windows 
+        95显示乱码的解决方法，查看并试着修改注册表和default fonts文件下的关键字，也不能解决问题。请问如何解决Compaq机使用中文Windows 
+        95出现的问题?<br>
+        　&nbsp; 山东读者董辉军问：我买了一台联想微机，Pentium 133 CPU、16MB内存、1.7GB硬盘。现有一问题请教：装箱单上写的是1.7GB的硬盘，但是在“我的电脑”中查得只有1.58GB。是系统占用了空间，还是其它什么原因?联想作为国内电脑行业的“巨头”，这种失误不应该有吧!<br>
+        　　答：硬盘容量的测试值与厂商的标称值不同的问题，主要是计算方法不同产生的。厂商计算的每K字节是按照1000字节得出的，其1GB=1000×1000×1000=1000000000字节。但是测试程序则按每KB为1024字节计算，其1GB=1024×1024×1024=1073741800字节。这两者之间约有7％的误差，1000000000÷1073741800=0.93。你的硬盘标称值为1.7GB，实际测试值为1.58GB，两者之间的误差就是由此产生的，联想公司没有失误之处。<br>
+        &nbsp;&nbsp;&nbsp; 四川读者王楠问：Compaq原装机原来装的是英文版的Windows 
+        95，后来改装中文版的Windows 95(覆盖安装)，中文输入法增加了王码五笔字型。使用时出现如下问题：中文输入时提示汉字部分变成黑色块。安装中文IE4.0时提示语言不对，只能退出安装。《硬件大师》光盘在此微机上不能播放。按《电脑报》介绍的关于中文Windows 
+        95显示乱码的解决方法，查看并试着修改注册表和default fonts文件下的关键字，也不能解决问题。请问如何解决Compaq机使用中文Windows 
+        95出现的问题?<br>
+        　　答：对于Compaq机，如果原配有英文Windows 95，则采用安装中文之星或四通利方等汉化系统软件的方法实现汉字操作比较好，问题也会少一些。如果一定要安装中文版的Windows 
+        95，则最好重新格式化硬盘，重新安装操作系统，并安装中文版Windows 
+        95。Compaq机并不一定要使用随机配置的“Compaq式”Windows 95，笔者遇到的几台原装Compaq机，格式化硬盘后，重新安装的中文版Windows 
+        95都可以正常地工作，IE4.0也能正常地安装使用。</font></p>
+        <p class="ourfont" align="left">　</p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月16日第10期34版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<link rel="stylesheet" href="images/epcw.css" TYPE='text/css'>
+<TITLE>电脑报电子版 -- windows 中隐藏光驱的两种方法</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-software&realm=software' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9937.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'></A></TD>
+<TD BGCOLOR='#FFCC66'>&nbsp;</TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9937.html'>37 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; windows 中隐藏光驱的两种方法</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 windows 中隐藏光驱的两种方法 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在单位里，我们经常会碰到某些同事喜欢趁别人不在的时候随意使用别人计算机的情况，有些用户不禁会想，要是我们能禁止别人使用光驱就好了！这并不是什么难事，本人在日常操作中就摸索出了几种在Windows中禁用光驱的方法，现介绍给大家：<br>
+　　<b>一、 手工在Windows 98中隐藏光驱。</b><br>
+　　Windows 98提供了隐藏某个磁盘驱动器（包括软驱、硬盘、光驱）的功能，我们只需手工对注册表数据库进行修改即可达到隐藏光驱的目的，当然也就同样达到了禁用光驱的目的。为此，可采用如下步骤：<br>
+　　1. 单击“开始”按钮，然后选择“运行”命令，打开“运行”对话框。<br>
+　　2. 在“运行”对话框的“打开”栏中输入“REGEDIT”，然后单击“确定”按钮，启动Windows 98的注册表编辑器。<br>
+　　3. 在注册表编辑器左边依次双击HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer，展开Explorer分支。<br>
+　　4. 右击注册表编辑器右边空白处，然后执行“新建”菜单中的“二进制值”命令，在Explorer主键下新建一个名为“新值 ＃1”的二进制值。<br>
+　　5. 右击该二进制值，然后执行快捷菜单中的“重命名”命令，将“新值 ＃1”二进制值改名为“NoDrives”。 该值就是用于设置是否隐藏某个驱动器的，它由四个二进制字节构成（缺省值为00 00 00 00），每个字节的每一位都分别对应一个磁盘驱动器的盘符，当某位为1时，资源管理器及“我的电脑”中的相应驱动器图标即会隐藏起来。具体来说，“NoDrives”的第一个字节代表从A到H的八个盘（其中01为A、02为B、04为C、08为D、10为E、20为F、40为G、80为H），第二个字节代表I到P；第三个字节代表Q到X；第四个字节代表Y和Z。<br>
+　　6. 双击NoDrives，系统弹出“编辑二进制值”对话框。<br>
+　　7. 根据自己光驱盘符的实际情况对“NoDrives”的值进行修改，若光驱盘符为D则应修改为08000000；若光驱盘符为E则应修改为10000000；若光驱盘符为F则应修改为20000000……（将“NoDrives”改为FF FF FF FF则可隐藏所有驱动器）。<br>
+　　8. 单击“确定”按钮，关闭“编辑二进制值”对话框。<br>
+　　9. 执行注册表编辑器“注册表”菜单的“退出”命令，关闭注册表编辑器。<br>
+　　10. 重新启动Windows 98。<br>
+　　这样，光驱的图标就会从Windows 98的图形界面中消失，我们无论是从资源管理器、我的电脑及打开文件、保存文件对话框中，还是在其他外挂文件管理器（如Windows Command等）中都无法发现这些隐藏了的光驱的踪迹，从而达到了禁止他人使用光驱的目的。<br>
+　　<b>二、 利用系统设置软件在Windows 98中隐藏光驱。</b><br>
+　　隐藏光驱最简单的方法莫过于使用有关系统设置软件。目前用于对Windows 98运行状态进行调整的系统设置软件较多（如常见的Tweak UI、WinBoost 98、Magic Set、Set Me Up、WindowBlinds等），它们大多具有隐藏光驱的功能，我们只需使用这些软件即可轻易地实现隐藏光驱的目的。现以Windows 98安装光盘中免费附带的Tweak UI为例（该软件位于Windows 98安装光盘的\TOOLS\RESKIT\POWERTOY目录中，右击该目录下的TWEAKUI.INF文件，然后从弹出的快捷菜单中执行“安装”命令即可将其安装到硬盘上），将利用系统设置软件隐藏光驱的步骤简介如下：<br>
+　　1. 在Windows 98的控制面板中双击“Tweak UI”图标，启动Tweak UI设置程序。<br>
+　　2. 单击Tweak UI的My Computer选项卡。<br>
+　　3. 此时Tweak UI就会将用户计算机上所有的磁盘驱动器（包括软驱、硬盘、光驱）全部列表显示出来，广大用户只需从“Drives”列表框中取消光驱图标旁边的小箭头即可。<br>
+　　4. 单击“确定”按钮，关闭Tweak UI设置程序。<br>
+　　5. 重新启动Windows 98。<br>
+　　经过上述步骤后，光驱图标就会从Windows 98的所有对话框中消失，从而满足了用户的需要（使用其它Windows 98系统设置软件隐藏光驱图标的步骤基本类似）。采用本方法的实质也是修改注册表数据库的“NoDrives”值，只不过它是由系统设置软件来实现，安全性要好一些。<br>
+<b>(湖北　胡锦承)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/37/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99371201.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

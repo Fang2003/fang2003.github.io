@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>QUICKMIS V5.0常见问题的解决方案</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>QUICKMIS 
+        V5.0常见问题的解决方案<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　自新版QUICKMIS 
+        V5.0上市以来，随着对系统使用的日益深入，对一些常见的使用问题总结如下：<br>
+        　<strong>　1有关多级口令的使用问题</strong><br>
+        　　多级口令是新版MIS的重要功能之一。系统根据用户名的不同，提供了十个级别的权限系统：USER0,USER1.... 
+        USER9。其中USER0级用户可使用系统的全部功能(即为超级用户)。在使用中,用户只需在“定义菜单项属性”对话框的权限选项上选择该菜单项对应的权限级即可。<br>
+        　　注意： 新版的实例程序仍使用以前版本的口令系统：用户名为user，口令为空。<br>
+        　<strong>　2录入中列函数的使用</strong><br>
+        　　在录入中使用列函数可实现一些统计功能，为报表和查询等模块提供方便。列函数使用中，需要注意的是参数的正确使用。现以下例来详细解释：<br>
+        　　在库存管理中常需计算库存量。一般的应有：<br>
+        　　商品库(SPK)和入库明细库(MXK)，入库明细库中的入库量(RKL)字段记录每一笔的入库数量。此时的字段库存量 
+        (KCL)应存于商品库(SPK)中，在录入中库存量(KCL)可使用公式录入，公式应为QM_SUM 
+        (″MXK″,″ MXK.RKL″,″MXK. 商品==～SPK.商品～″)，其中公式中用“～SPK.商品～”此变量用来取库中当前记录。<br>
+        　　<strong>3.用移植方式生成程序</strong><br>
+        　　在新版中，为方便程序的移植，提供了一种不同于以前的程序生成方式。在这种方式下，程序中不再记录库的绝对路径，而是从位于\prg\目录下的QUICK.SYS文件中动态提取。按此种方式生成程序，程序的中间文件(.app)的定位以程序本身的启动位置来定位，因此程序必须直接在FOXPRO中执行，而且必须将数据库所在目录写入QUICK.SYS中。<br>
+        　<strong>　4关于统计图形的问题</strong><br>
+        　　新版软件的统计图形模块是重新开发的，具有使用方便，图形方式多样，效果突出，独立性好的特点。唯一不足的是在生成程序时有一小问题：系统提示GSWDLL.DLL找不到。在查找后发现此文件在WINDOWS的系统目录下，将其拷贝到QUICKMIS目录下即可正常生成程序。 
+        <br>
+        　　以上是使用QUICKMIS时遇到的一些常见问题的解决方案，希望对广大用户有所帮助。　　<br>
+        　<strong>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月8日第22期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

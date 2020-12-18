@@ -1,0 +1,150 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Novell网上远程启动Win95<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　基于Windows 
+        NT的局域网中，以无盘工作站启动Win95这一技术已渐为人知。但在Novell网中（特别是操作系统为Netware4.1以上的Novell网），以无盘工作站远程启动Win95的技术却鲜为人知。现将这一技术的有关资料和细节公布如下，供大家参考。<br>
+        <strong>网络配置：</strong><br>
+        　　网络类型：总线型<br>
+        　　服务器：一台P200/32M/4.0G硬盘/PCI/NE2000兼容网卡，Netware4.1网络操作系统<br>
+        　　有盘工作站：一台P200MMX/2.0G硬盘/32M/ISA/NE2000兼容网卡/1.44M软驱，Win95操作系统<br>
+        　　无盘工作站：20台K5/133/8M/ISA/NE2000兼容网卡<br>
+        　　其它：五类双绞线，16口集线器两台（每台集线器连接10台无盘工作站），网络带宽10Mbps<br>
+        <strong>服务器设置：</strong><br>
+        　　服务器名：CEI<br>
+        　　硬盘划分为两个卷：系统卷SYS和数据卷HOME<br>
+        　　现存的CONTEXT：OU=STUDENT.O=HXX_WJS<br>
+        　　用户注册正本内容：<br>
+        　　MAP DISPLAY OFF<br>
+        　　MAP F:=SYS:\<br>
+        　　MAP H:=HOME:\<br>
+        　　SET COMSPEC=F:\LOGIN\COMMAND.COM<br>
+        　　MAP INS S1:=SYS:\LOGIN<br>
+        　　MAP INS S2:=SYS:\PUBLIC<br>
+        　　NET.CFG 内容：<br>
+        　　LINK DRIVE NE2000<br>
+        　　INT 3<br>
+        　　PORT 300<br>
+        　　FRAME ETHERNET_802.3<br>
+        　　NETWORK DOS REQUESTER<br>
+        　　FIRST NETWORK DRIVE=F<br>
+        <strong>操作步骤：</strong><br>
+        　　<strong>步骤一　安装Win95网络版并创建安装文件</strong><br>
+        　　1.在Win95中将服务器CEI上的HOME卷映射为H，然后将Win95光碟放入光驱开始安装，指定安装目录为H:\PWin95。安装完成后，Win95网络版共享文件（UNC格式）将存放于服务器的H:\PWIN95下。<br>
+        　　2.以超级用户身份登录上网，在H:\PWIN95下为Win95文件设置只读和共享属性：FLAG 
+        ＊.＊ ＋RO ＋SH /S，用文本编辑器建立MSBATCH.INF文件，该文件即为安装网络版Win95用户文件时需要的批处理文件。<br>
+        　　MSBATCH.INF内容：<br>
+        　　[SETUP]<br>
+        　　EXPRESS=0<br>
+        　　VERIFY=0<br>
+        　　CCP=0<br>
+        　　INSTALLTYPE=3<br>
+        　　PRODUCTID=<br>
+        　　PRODUCTTYPE=1<br>
+        　　UNINSTALL=0<br>
+        　　[NETWORK]<br>
+        　　WORKSTATIONSETUP=1<br>
+        　　DISPLAYWORKSTATIONSETUP=1<br>
+        　　DISPLAY=1<br>
+        　　HDBOOT=0<br>
+        　　RPLSETUP=0<br>
+        　　SAVESUBOOT=1<br>
+        　　<strong>步骤二　上网安装Win95用户文件前的准备</strong><br>
+        　　1.首先制作一张DOS6.22系统盘，再将Netware4.1客户上网文件拷贝到A盘，完成后A盘应包括以下文件：BIND.VLM、AUTO.VLM、LSL.COM、IPXODI.COM、NE2000.COM、NET.CFG、VLM.EXE、CONFIG.SYS、AUTOEXEC.BAT、HIMEM.SYS、EMM386.EXE。<br>
+        　　2.启动计算机并以超级用户身份上网。为避免不必要的冲突，先使用NETADMIN为Win95用户建立一个独立的组织单元OU=WINUSER，并建立Win95用户USER1；赋予用户USER1对H:\PWIN95拥有RF权限；在H:\建立Win95用户目录WINUSER\USER1，赋予用户USER1对该目录拥有RWCM权限；在H:\建立Win95用户数据存放目录WINDATA\USER1，赋予用户USER1对该目录拥有S权限。然后修改用户注册正本：<br>
+        　　MAP DISPLAY OFF<br>
+        　　MAP F:=SYS:\<br>
+        　　MAP H:=HOME:\<br>
+        　　MAP R K:=HOME:\STUDENT\LOGIN_NAME<br>
+        　　&gt;&gt;MAP R P:=HOME:\WINDATA\LOGIN_NAME<br>
+        　　&gt;&gt;SET COMSPEC=C:\COMMAND.COM<br>
+        　　MAP INS S1:=SYS:\LOGIN<br>
+        　　MAP INS S2:=SYS:\PUBLIC<br>
+        　　&gt;&gt;MAP INS S3:=HOME:\PWin95<br>
+        　　&gt;&gt;MAP INS S4:=HOME:\WINUSER\USER1<br>
+        　　&gt;&gt;MAP INS S5:=HOME:\WINUSER\USER1\SUBOOT<br>
+        　　（注：带“&gt;&gt;”行为被修改项，下同）<br>
+        　　<strong>步骤三　安装Win95用户文件</strong><br>
+        　　用上面制作的软盘启动计算机并以超级用户身份上网，在DOS状态下键入MAP 
+        INS S2=H:\PWIN95，也可在注册正本中先行映射。然后在H:\PWIN95下键入SETUP 
+        MSBATCH.INF /T：H：\WINUSER\USER\TEMP /S /I。<br>
+        　　在程序提示输入安装路径时键入H:\WINUSER\USER1（用户文件存放目录）；在系统提示即将搜索即插即用设备时，选择“更新文件列表”并取消所有硬件搜索选项；在选择网卡型号时选择NE2000兼容网卡并添加IPX/SPX协议。之后，插入一张空白软盘以制作Win95启动盘，完成后请不要重新启动，先将制作好的启动盘在其它计算机上复制一份并将源盘妥善保存，在另一台计算机上对复制的启动盘作一些改动：将Win95的COUNTRY.SYS和RAMDRIVE.SYS拷贝到A:\ 
+        ，并编辑A:\AUTOEXEC.BAT和A:\CONFIG.SYS文件，改动后的AUTOEXEC.BAT：<br>
+        　　@ECHO OFF<br>
+        　　&gt;&gt;COPY COMMAND.COM C:\ &gt;&gt;NUL<br>
+        　　&gt;&gt;SET COMSPEC=C:\COMMAND.COM<br>
+        　　LH LSL<br>
+        　　LH NE2000(网卡驱动程序)<br>
+        　　LH IPXODI<br>
+        　　&gt;&gt;COPY ＊.VLM C:\ &gt;&gt;NUL<br>
+        　　&gt;&gt;COPY VLM.EXE C:\ &gt;&gt;NUL<br>
+        　　&gt;&gt;C：<br>
+        　　&gt;&gt;VLM /MC(将VLM模块调入常规内存)<br>
+        　　F：<br>
+        　　CX OU=WINUSER.O=HXX_WJS<br>
+        　　LOGIN USER1<br>
+        　　改动后的CONFIG.SYS<br>
+        　　&gt;&gt;DEVICE=COUNTRY.SYS，001，437，A:\COUNTRY.SYS<br>
+        　　DEVICE=HIMEM.SYS<br>
+        　　&gt;&gt;DEVICE=EMM386.EXE<br>
+        　　&gt;&gt;DEVICE=RAMDRIVE 300 256 512 /A<br>
+        　　LASTDRIVE=Z<br>
+        　　&gt;&gt;FILES=100<br>
+        　　<strong>步骤四　进行Win95的最后安装工作</strong><br>
+        　　回到安装Win95的计算机上，用上面制作的软盘重新启动计算机，用USER1身份上网，Win95将会继续安装用户配置文件，安装完成后，重新启动计算机，按F8进入DOS状态，以超级用户身份上网进入H:\WINUSER\USER1后键入：<br>
+        　　ATTRIB ＊.DAT －S －R －H<br>
+        　　ATTRIB A:\＊.＊ －S －R －H<br>
+        　　COPY SYSTEM.DAT A:\<br>
+        　　然后建立目录F:\WINBOOT，拷贝A盘上的所有文件到F:\WINBOOT目录，修改用户注册正本，将A盘根目录映射为F:\WINBOOT目录（MAP 
+        R A:=SYS:\WINBOOT）。<br>
+        　　重新启动计算机以用户USER1身份上网进入Win95完成软盘启动。<br>
+        　　注意：完成软盘启动后，为保险起见，先将用户目录WINUSER中的Win95系统文件SYSTEM.DAT和USER.DAT作一备份,并将安装完成后H:\WINUSER\SYSTEM.DAT和USER.DAT拷贝至启动盘A:\，以后要安装新的应用程序则要由超级用户从软盘启动进入Win95安装，然后将改变后的＊.DAT拷贝到A:\并用该软盘重新生成无盘启动映像文件。<br>
+        　　<strong>步骤五　建立远程启动映像文件</strong><br>
+        　　用启动盘重新启动计算机，以超级用户身份上网。进入SYS:\SYSTEM生成Win95远程启动映像文件：DOSGEN 
+        A：WIN95.SYS；为远程启动映像文件加共享属性：FLAG WIN95.SYS ＋SH；复制WIN95.SYS到F:\LOGIN目录下：F:\SYSTEM\COPY 
+        WIN95.SYS F:\LOGIN；进入F:\LOGIN编辑AUTOCONF.SYS，指定工作站网络地址：<br>
+        　　F:\SYSTEM\CD..\LOGIN<br>
+        　　F:\LOGIN\EDIT AUTOCONF.SYS<br>
+        　　AUTOCONF.SYS内容：<br>
+        　　0x87654321,88cc104001=WIN95.SYS<br>
+        　　0x87654321,88cc103803=WIN95.SYS<br>
+        　　其中0x87654321为内部网络号，88cc104001为工作站网址。<br>
+        　　完成以上工作后再进入H:\PWIN95，修改SYSTEM.INI，在[386增强方式]一项中将PAGIN<br>
+        GFILE=H:\WINUSER\USER1\WIN386.SWP改为PAGINGFILE=P:\WIN386.SWP。<br>
+        　　重新启动无盘工作站以用户USER1身份上网即完成所有安装工作。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年39月39日第39期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

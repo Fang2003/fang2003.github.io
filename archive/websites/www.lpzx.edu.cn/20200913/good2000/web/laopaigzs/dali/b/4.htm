@@ -1,0 +1,226 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>年月日</title>
+<style type="text/css">
+  .spanstyle { position:absolute; visibility:visible; top:-50px; font-size:12; color:#FF0000; font-weight:bold;}
+</style>
+<bgsound src="../../images/dmh.mid" loop="1">
+</head>
+
+<body onLoad="makesnake()" background="../../images/bj.jpg" bgproperties="fixed">
+<script>
+var X, Y
+var step = 20
+var flag = 0
+var message = "欢迎来到老排工作室！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-50}
+function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1}
+function makesnake() {
+    if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+        for (i=0; i<message.length-1; i++) {
+            var thisspan = eval("span"+(i)+".style")
+            thisspan.posLeft=xpos[i]
+            thisspan.posTop=ypos[i]     }   }
+    else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+            for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+  thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<script language="JavaScript">
+var speed=100;
+function infoscroll(seed, looped)
+{  var msg="欢迎你来到老排工作室!        让我们一起推动中国网络进步！";
+  var putout = " ";
+  var c = 1;
+  if (seed > 100)
+  {  seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 100 && seed > 0)
+  { for (c=0 ; c < seed ; c++)
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 0){
+    if (-seed < msg.length)
+    { putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,speed);}
+    else
+    { window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,speed);}}}
+infoscroll(100,1)
+</SCRIPT>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="../a/images/a21.gif" width="15" height="20"><img border="0" src="../a/images/a23.gif" width="15" height="20"><img border="0" src="../a/images/a23.gif" width="15" height="20"><font size="4"><img border="0" src="../a/images/a23.gif" width="15" height="20"></font><font size="5"><b>年</b></font><img border="0" src="../a/images/a22.gif" width="15" height="20"><font size="5"><b>月</b></font><img border="0" src="../a/images/a21.gif" width="15" height="20"><font size="5"><b>日</b></font><font size="5"><b>&nbsp;&nbsp;&nbsp;      
+</b></font><a href="../a/3.htm"><img border="0" src="../a/images/a11.gif" width="96" height="36"></a>&nbsp;&nbsp;&nbsp;<font size="5"><b><a href="../../index.htm"><img border="0" src="../a/images/a16.gif" width="100" height="45"></a></b></font>&nbsp;&nbsp;&nbsp;&nbsp;<a href="5.htm"><img border="0" src="../a/images/a01`.gif" width="90" height="36"></a></p>    
+    
+<table border="0" width="683" height="37">
+  <tr>
+    <td width="228" height="37">
+      <applet code="fphover.class" codebase="./" width="224" height="24">
+        <param name="textcolor" value="#FFFFFF">
+        <param name="effect" value="glow">
+        <param name="color" value="#000080">
+        <param name="hovercolor" value="#0000FF">
+        <param name="text" value="扎染">
+        <param name="url" valuetype="ref" value="4.htm">
+      </applet>
+    </td>
+    <td width="228" height="37">
+      <applet code="fphover.class" codebase="./" width="225" height="24">
+        <param name="color" value="#000080">
+        <param name="hovercolor" value="#0000FF">
+        <param name="textcolor" value="#FFFFFF">
+        <param name="effect" value="fill">
+        <param name="text" value="蝴蝶泉">
+        <param name="url" valuetype="ref" value="5.htm">
+      </applet>
+    </td>
+    <td width="227" height="37">
+      <applet code="fphover.class" codebase="./" width="209" height="24">
+        <param name="color" value="#000080">
+        <param name="hovercolor" value="#0000FF">
+        <param name="textcolor" value="#FFFFFF">
+        <param name="effect" value="glow">
+        <param name="text" value="游后记">
+        <param name="url" valuetype="ref" value="6.htm">
+      </applet>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp; <i><font color="#0000FF">舒舒服服睡了一夜，醒来时主人一家已经开始忙碌了，随着数码相机的开启，古老的扎染制作工艺才得以展现在尊敬的评委面前。</font></i></p>       
+<p align="center"><img border="0" src="images/b03.jpg" width="462" height="57"></p>       
+<p>&nbsp;&nbsp;&nbsp; 扎染是我们大理白乡的一大特色。它是纯天然植物染成的，更重要的是它粗犷的风格中蕴藏着精致，极富民族特色。</p>          
+<div align="center">          
+  <center>          
+  <table border="0" width="657" height="129" cellspacing="0">          
+    <tr>          
+      <td width="96" height="129"><img border="0" src="images/b04.gif" width="118" height="59"></td>          
+      <td width="109" height="129"><img border="0" src="images/b05.gif" width="120" height="41"></td>          
+      <td width="303" height="129"><a href="../c/dl07.htm"><img border="0" src="images/b06.jpg" width="300" height="200"></a></td>         
+      <td width="116" height="129">&nbsp;&nbsp;&nbsp; 第一道工序是制版，就是把大而不拙，繁而不冗的图案印在白色的棉布上。</td>          
+      <td width="33" height="129">　          
+        <p>　</p>          
+        <p><img border="0" src="images/b18.gif" width="32" height="32"></p>          
+        <p><img border="0" src="images/b18.gif" width="32" height="32"></td>          
+    </tr>          
+  </table>          
+  </center>          
+</div>          
+<table border="0" width="715" cellpadding="0" cellspacing="0" height="121">          
+  <tr>          
+    <td width="551" colspan="3" height="53">          
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           
+        <img border="0" src="images/b08.gif" align="right" width="604" height="32">&nbsp;</p>          
+    </td>          
+    <td width="1" rowspan="3" height="121"></td>          
+    <td width="160" height="53">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="images/b18.gif" width="32" height="32"></td>          
+  </tr>          
+  <tr>          
+    <td width="132" rowspan="2" height="68">          
+      <p align="center">第三道工序—— <font size="5" face="楷体_GB2312">染</font></p>          
+    </td>           
+    <td width="72" rowspan="2" height="68"><img border="0" src="images/b09.gif" width="64" height="64"></td>          
+    <td width="343" rowspan="2" height="68">&nbsp;&nbsp;&nbsp; 第二道工序是扎花，在工业大生产的今天，也只有勤劳的白族妇女才能完成这道工序。她们按照图案旁映有的针法，用灵巧的双手顺着外廓把图案紧紧地扎缝起来。</td>         
+    <td width="160" height="44">&nbsp;<img border="0" src="images/b19.gif" width="32" height="32">&nbsp;      
+      <img border="0" src="images/b19.gif" width="32" height="32"></td>        
+  </tr>        
+  <tr>        
+    <td width="160" height="24"></td>        
+  </tr>        
+</table>        
+        
+<p>&nbsp; <img border="0" src="images/b10.gif" width="64" height="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="images/b01.jpg" width="578" height="37"></p>       
+<table border="0" cellpadding="0" cellspacing="0" width="100%">       
+  <tr>       
+    <td width="19%"><a href="../c/dl08.htm"><img border="0" src="images/b11.jpg" width="300" height="200"></a></td>      
+    <td width="67%">      
+      <p align="left">&nbsp;&nbsp;&nbsp; 扎染布的染料很特殊，不是化学染料，而是板兰根、刺黄连、麻栗树的树皮和果皮等天然植物混在一起用水煮沸做成染料。</td>        
+    <td width="8%">        
+      <p align="center"><img border="0" src="images/b21.gif" width="34" height="212"></td>        
+    <td width="38%">        
+      <p align="left">&nbsp;&nbsp;&nbsp;          
+      白色棉布经染色、晾干、漂洗、解扎后就成为精美的扎染布匹。</td>         
+    <td width="21%" rowspan="2">　         
+      <p>　</p>         
+      <p><img border="0" src="images/b12.gif" width="100" height="119"></td>         
+  </tr>         
+  <tr>         
+    <td width="136%" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>         
+  </tr>         
+  <tr>         
+    <td width="21%">　
+      <p>&nbsp;&nbsp;&nbsp; 再经机器加工，一件件让人爱不释手的扎染服饰走出农家，走向世界！</p>         
+        <p align="center">&nbsp;&nbsp; <img border="0" src="images/b13.gif" width="64" height="64"></td>          
+    <td width="136%" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+      <a href="../c/dl09.htm">         
+      <img border="0" src="images/b14.jpg" width="300" height="200"></a></td>        
+  </tr>        
+</table>        
+<table border="0" cellpadding="0" cellspacing="0" width="100%">        
+  <tr>        
+    <td width="20%"><a href="../c/dl10.htm"><img border="0" src="images/b16.jpg" width="300" height="200"></a></td>        
+    <td width="66%"><a href="../c/dl11.htm"><img border="0" src="images/b15.jpg" align="left" width="300" height="200"></a>&nbsp;&nbsp;</td>        
+    <td width="14%">　
+      <p>　</p>
+      <p>　</p>
+      <p><img border="0" src="images/b22.gif" width="100" height="48"></td>
+  </tr>
+</table>
+<img border="0" src="images/b02.jpg" width="753" height="37">
+<p>
+<font color="#0000FF"><i>
+还没等“马褂”缝好，我们就匆匆赶往蝴蝶泉采风。</i></font><a href="5.htm"><img border="0" src="images/b17.gif" width="133" height="37"></a>（点击进入）</p>
+<p>　</p>
+
+<p><img border="0" src="../../images/124.gif" width="645" height="16"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+老排工作室倾力制作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<a href="mailto:lr9528@21cn.com"><img border="0" src="../../images/mail.gif">&nbsp;&nbsp;    
+联系我们</a></p>   
+</body>   
+   
+</html>   

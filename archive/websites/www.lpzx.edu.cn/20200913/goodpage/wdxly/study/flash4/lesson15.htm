@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center">
+<p><font size="+2">第十五课&nbsp;在页面中加入FLASH动画</font></p>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;在这一课里，我们就要来学一下怎样把做好的FLASH动画放到你的页面里去了。呵呵，很激动吧，马上就可以看到自己的FLASH页面了。好，开工！
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="38%">&nbsp;&nbsp;&nbsp;&nbsp;要在HTML页面中插入FLASH动画，首先就要把FLASH动画输出成SWF文件（SWF是SHOCKWAVE
+FLASH的缩写）。做完一个FLASH动画后，在菜单栏里选择File -&gt;Export Movie...把FLASH动画保存成SWF文件（不会告诉我你忘了怎么打文件名呀）。如右图所示。然后一路点击OK（FLASH的默认设置还是可以的）。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;接下来，就要在HTML文件里加入这个SWF文件了。
+<td width="62%">
+<div align="center"><img src="images/l15_01.gif" width="353" height="211"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="33%">&nbsp;&nbsp;&nbsp;&nbsp;如果你使用了DREAMWEAVER 2（或DREAMWEAVER
+3）来制作主页的话，那么恭喜你，太简单了，先把光标用鼠标点到你想要插入FLASH动画的地方。然后，打开 DREAMWEAVER 的 Object
+（对象）窗口，选择Common栏，按下Insert Flash按钮，然后选中你的SWF文件就OK了，简单吧！（如右图）
+<td width="67%">
+<table width="98%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="51%">
+<div align="center"><img src="images/l15_02.gif" width="185" height="184"></div>
+
+<td width="49%">
+<div align="center"><img src="images/l15_03.gif" width="225" height="183"></div>
+
+
+<tr>
+<td width="51%">
+<div align="center">打开REAMWEAVER的Object（对象）窗口，选择Common栏</div>
+
+<td width="49%">
+<div align="center">按下Insert Flash按钮</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="49%">
+<div align="center"><img src="images/l15_04.gif" width="328" height="252"></div>
+
+<td width="51%">&nbsp;&nbsp;&nbsp;&nbsp;如果你用的是Front Page 2000的话，也很简单，在菜单里选择 插入 -&gt;高级 -&gt;插件（如左图）。在弹出的插件属性对话框里，在数据源一栏里填上SWF文件的路径和文件名。不过，用Front
+Page 2000比较麻烦的是不要忘了设定SWF文件的宽度和高度，Front Page是默认值是128 * 128。呵呵，到时你看到自己的动画只有豆腐那么大可别怪我没提醒你呀！（如下图）<br>
+<div align=center><img src="images/l15_05.gif" width="305" height="201"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td height="291">&nbsp;&nbsp;&nbsp;&nbsp;如果你不是用这两大流行的网页编辑起来做网页的，那么，Sorry，你只好象我这个代码狂一样，老老实实地在要加入SWF文件的地方写上以下HTML源代码了：<br>
+<br>
+<table width="50%" border="0" cellspacing="2" cellpadding="0" align="center">
+<tr bgcolor="#DDEEFF">
+<td width="50%">&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#4,0,0,0"
+width="这里填上SWF动画的宽度" height="这里填上SWF动画的高度"&gt;<br>
+<br>
+&lt;param name="SRC" value="填上SWF动画的文件名"&gt;<br>
+<br>
+&lt;param name=quality value=high&gt;<br>
+<br>
+&lt;embed src="填上SWF动画的文件名" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+type="application/x-shockwave-flash" width="这里填上SWF动画的宽度" height="填上SWF动画的文件名"&gt;<br>
+<br>
+&lt;/embed&gt;<br>
+&lt;/object&gt;
+
+</table>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;其中，&lt;object&gt;标签是IE支持的，而&lt;embed&gt;标签是NetScape支持的，所以为了让两种浏览器都能正确浏览你的FLASH动画，这两种标签一个也不能少。而&lt;object&gt;标签里的classid是告诉浏览器插件的类型，可别打错哦！&lt;object&gt;和&lt;embed&gt;标签里都有类似quality
+=high的记号，那时告诉浏览器以高质量浏览动画。呵呵，明白了吗？<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;试一下吧，把以前做的FLASH动画加到页面里去。好了，这一刻也该结束了，让我们进入《FLASH基础教程》的<a href="lesson16.htm">最后一课</a>——
+<a href="lesson16.htm">Cool!!! FLASH 3D!</a>
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson16.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

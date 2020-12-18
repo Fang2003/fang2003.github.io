@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center">
+<p><font size="+2">第七课&nbsp;符号(Symbol)的变形</font></p>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width=54%>&nbsp;&nbsp;&nbsp;&nbsp;在一般的动画中，符号(Symbol)是不能做形状变形的，符号只能作大小缩放、颜色改变等简单变化。但是，如果你想让一个物体边改变形状边按照你的预定轨迹移动，那么你就不得不把这个物体定义成符号(Symbol)，如何使符号变形，这被许多人认为是不可能的，但是，经过我的摸索，符号的确可以变形，那么，这节课我们就来让符号变形，GO!
+<td width="46%">
+<div align="center"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/morphs.swf">
+<embed src="swf/morphs.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT></div>
+
+
+</table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="51%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;好了，废话不说，新建一个工作区， 按Ctrl+M把工作区定义成300*100，按Ctrl+Shift+Alt+G打上格子，按Ctrl+Alt+G精确定位鼠标，然后按照右图画上一个圆，并把它定义成一个图形符号(Graphics
+Symbol)（按照第五课的方法），现在工作区应和右图一样了。
+<td width="49%">
+<div align="center"><img src="images/l7_01.gif" width="303" height="102"></div>
+
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width=53%>
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="77%">
+<div align="center"><img src="images/l7_02.gif" width="176" height="68"></div>
+
+<td width="23%">层区
+
+<tr>
+<td width="77%">
+<div align="center"><img src="images/l7_03.gif" width="248" height="65"></div>
+
+<td width="23%">Timeline区
+
+<tr>
+<td width="77%"><img src="images/l7_04.gif" width="303" height="101">
+<td width="23%">工作区
+
+</table>
+
+<td width="47%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;现在，为了做一个30帧的动画，我们在30帧下的小方格按右键，弹出菜单后选择Insert Keyframe，插入一个非空关键帧（如果插入的是一个空的关键帧，那么第三十帧将没有刚才定义的符号）。现在，我们的动画就有30帧了。为了加上轨迹，和第五课一样，在层区Layer1层上单击右键，弹出菜单后选择Add
+Motion Guide。选择Guide: Layer层，锁定Layer1层（在Layer1层的小所一栏按左键，出现一把锁，使操作不影响Layer1层），按Ctrl+Alt+G去掉鼠标定位，在Guide:
+Layer1层画上一条曲线，然后去掉Layer1层的那把小锁，象第五课那样把Layer1层的第一帧的符号的中心移到曲线开始部分，第三十帧的符号移到曲线末尾。然后在Layer1第一帧下的小方格按右键选择Properties...
+-&gt;Tweening -&gt;Motion，把 Orient to path direction 打上钩。这时，层区、Timeline区、工作区应如左图所示。（这些操作和第五课完全一样，可以参考第五课）如果你现在按Ctrl+Enter的话，看到的将是和第五课一样的结果。因此，这节课的关键就在下面，Attention!
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width=47%><br>
+&nbsp;&nbsp;&nbsp;&nbsp;接下来，我们就来把这个符号作变形效果。在Timeline区的右上方，即书签区的最右面有两个标签，左面一个是编辑场景标签，右面一个是编辑符号标签，我们在右面一个编辑符号标签上单击鼠标左键，选择刚才我们定义的唯一的一个符号（在本例中是用默认的Symbol1），进入编辑符号状态。如右图。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;进入编辑符号状态后，看到工作区变成无限大了吗，它的中心有一个十字架，那就是符号的中心。发现了没有，符号也有Timeline区的，在场景里的一帧的时间等同于符号里的一帧的时间。因此
+，我们可以修改符号的状态来使符号变形。在符号的Timeline区的第十五和第三十帧下的方格单击右键，选择Insert Blank Keyframe插入两个空的关键帧。在第十五帧用画线工具画一个三角形，在第三十帧画一个正方形，注意，它们的中心都应和十字对准。如右图。然后在第一帧、第十五帧下的方格内分别单击右键，选择Properties...
+-&gt;Tweening -&gt;Shape 象第三课一样让它们发生形变。
+<td width="53%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="32%"><img src="images/l7_05.gif" width="62" height="26">
+<td width="68%">书签区最右面的两个标签，左面一个是编辑场景标签，右面一个是编辑符号标签
+
+<tr>
+<td width="32%"><img src="images/l7_06.gif" width="120" height="57">
+<td width="68%">在右面一个编辑符号标签上单击鼠标左键，选择刚才我们定义的唯一的一个符号：Symbol 1
+
+<tr>
+<td width="32%">
+<div align="center"><img src="images/l7_08.gif" width="73" height="73"></div>
+
+<td width="68%">符号Symbol 1的第十五帧
+
+<tr>
+<td width="32%">
+<div align="center"><img src="images/l7_07.gif" width="110" height="74"></div>
+
+<td width="68%">符号Symbol 1的第三十帧
+
+</table>
+
+
+</table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td><br>
+&nbsp;&nbsp;&nbsp;&nbsp;好了，现在我们按Timeline区右上角书签区的编辑场景标签，选择唯一的场景Scene 1，回到原先的场景，按Ctrl+Enter，看，满意吧！下一节课，我们要讲一下如何在Flash动画中<a href="lesson8.htm">加入按钮(Button)</a>，It's
+very cool!
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson8.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

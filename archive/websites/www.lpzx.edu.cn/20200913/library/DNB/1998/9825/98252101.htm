@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何设置服务器的镜像磁盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　对Netware网络使用者来说，仅用一个磁盘存放数据是不安全的，因为任何一个物理设备都可能出故障或失效。那么，当你的服务器中只有一个硬盘时，你是否想过再添加一个硬盘来备份网络数据呢？<br>
+        　　磁盘镜像是指将两个硬盘接在同一个硬盘控制卡上，用一个硬盘控制卡来管理两个硬盘的技术。当用户向服务器写数据时，磁盘镜像技术就同时将数据写入两个硬盘中，这样一旦一个硬盘损坏，便可从另一个硬盘上获得数据，以维持网络的正常运行。<br>
+        　　<strong>一、安装并设置两个硬盘</strong><br>
+        　　1.对新增硬盘的要求<br>
+        　　新添加的硬盘称为从盘(Slave)，也即镜像磁盘；服务器中原有的硬盘称为主盘(Master)。从盘最好与主盘为同一厂家生产的同容量的硬盘。从盘的容量应大于主盘的容量，因为一般情况下大容量的硬盘可镜像小容量的硬盘，反之则不然。用大容量的硬盘镜像小容量的硬盘时，需调整Netware分区容量(Netware 
+        Partition Size)的大小，使两个硬盘网络分区的大小相同，否则会出现“Size 
+        Mismatch”的出错信息。为减少一些烦琐的操作和避免一些不必要的错误，笔者建议使用容量相同的硬盘。<br>
+        　　2.设置硬盘<br>
+        　　服务器第二硬盘的设置和安装与普通PC机安装第二个硬盘的方法和注意事项基本相同。先根据硬盘说明书上的跳线将新增加的硬盘设置为从盘，完成后，将从盘安装在机箱的硬盘支架上，接入电源接头（操作时一定要断开主机电源），再按要求将从盘接到连接主盘的同一条电缆线上。一条电缆线上一般有两个或两个以上的硬盘接头（IDE为40PIN接头，而SCSI为50PIN接头），建议将主盘接在最靠近硬盘控制卡的一个接头上，从盘接在紧靠主盘接头后面的接头上。如果安装的是SCSI接口的硬盘，每个50PIN接头旁都有一个终端电阻（一般为乳白色），当某个接头接入硬盘时，必须将旁边的终端电阻去掉。不管接几个硬盘，SCSI电缆线头尾两端一定要接上终端电阻，而IDE接口的硬盘就没有这些麻烦事了。当硬盘设置完成并安装好后，打开主机电源，进入CMOS状态，在Standard 
+        CMOS Setup选项中，设置两个硬盘的主从关系：将C盘设置为Master，D盘设置为Slave，并保存设置结果。<br>
+        　　3.硬盘分区并格式化<br>
+        　　用FDISK命令对从盘进行分区时，应注意从盘的分区应和主盘相同，即：从盘的DOS分区和非DOS分区的大小应和主盘一样。建议在对从盘分区时，先用FDISK命令查看主盘的分区信息。从盘分区结束后，再对从盘的DOS分区进行格式化。具体操作命令是：FORMAT 
+        D： /S/V。注意：一定要将从盘格式化成可启动的系统盘，这样当主盘损坏后，便可以用从盘启动服务器。从盘的分区和格式化完成后便可将主盘C：上的所有文件和目录全部原样复制到从盘D：上，这样可保证两个硬盘DOS分区中的信息完全相同。<br>
+        　　<strong>二、软件的设置</strong><br>
+        　　1.把Free Space建成Netware Partition<br>
+        　　当我们用DOS的FDISK命令对硬盘分区时，硬盘的绝大部分被划分为非DOS分区。非DOS分区的大小就是我们在进入网络操作系统后Free 
+        Space的大小。Free Space是无法被网络操作系统管理的，所以必须要将其转变为Netware 
+        partition，以便网络操作系统的调用。为此，可在服务器上加载Install文件：Load 
+        install，出现“Installation Options”的主窗口，选择主窗口中的“Disk 
+        Options”下的“ Partition Tables”选项，出现“Available Disk Drives”清单：<br>
+        　　＊Device ＃0 (5d001) Seagate 7345－SCSI<br>
+        　　 Device ＃1 (5d010) Seagate 7345－SCSI<br>
+        　　选择Device ＃0时，显示主盘的Free Space空间已成为Netware partition。选择Device 
+        ＃1，再选择窗口中的“Create Netware Partition”选项，将出现“Partition 
+        Information”的有关信息，按ESC键并选择“YES”进行确定，此时，第二个硬盘的Free 
+        Space变为Netware Partition，即第二台硬盘的非DOS分区已变成了可被网络操作系统使用的Netware 
+        Partition了。<br>
+        　　2.进行磁盘镜像<br>
+        　　紧接上一步的操作。在Install应用程序中，选择“Disk Options”下的“Mirroring”选项，将显示如下所示未镜像的有关信息：<br>
+        　　Not Mirrored:Non Mirrored Partition [24BD034A] ＃1<br>
+        　　Not Mirrored:Non Mirrored Partition [24BD034B] ＃3<br>
+        　　按回车后，将显示“Mirrored Netware Partition”的信息：<br>
+        　　In Sync－ Netware Partition ＃ 3 on Device ＃1<br>
+        　　表示第一个硬盘＃1已完成了“In Sync”的操作，按“INS”键出现“Available 
+        Partitions”的窗口，其显示信息为：<br>
+        　　Netware Partition ＃1 on Device ＃0<br>
+        　　再按回车键后，又出现“Mirrored Netware Partitions”的窗口，其显示信息为：<br>
+        　　In Sync－ Netware Partition ＃1 On Device ＃0<br>
+        　　In Sync－ Netware Partition ＃3 On Device ＃1<br>
+        　　按“INS”键后，出现“Partition Mirroring Status”的信息窗口：<br>
+        　　Partition Logical Partition [24BD034A] ＃1<br>
+        　　表示磁盘镜像已完成。<br>
+        　　<strong>三、验证磁盘镜像的效果</strong><br>
+        　　从工作站以Supervisor的身份登录，并任意拷贝一个文件（TEST.TXT）到服务器。让工作站Logout后，再关掉服务器，打开机箱并经跳线改变原来两个硬盘的主从关系，将原来的主盘设置为从盘，将原来的从盘设置为主盘，或干脆拆掉原来的主盘，将从盘设置为主盘，并对CMOS进行重新设置。启动服务器，从工作站再以Supervisor登录，查看是否有前面拷入的文件（TEST.TXT），若有，说明镜像成功。验证磁盘镜像效果的另一个办法是使用Monitor检测程序。当从服务器上键入Load 
+        monitor命令后，选择“Available Options”窗口的“Disk Information”选项，查看“Mirror 
+        Status”的状态如果是“Mirrored”，表示磁盘镜像成功。<br>
+        　　<strong>四、镜像磁盘的应用</strong><br>
+        　　在服务器的运行中，当主盘发生物理故障或主盘中的数据损坏后无法恢复时，可以将镜像盘（从盘）改为主盘，以独立的一个盘来使用，具体办法为：拆掉原来的主盘，将从盘跳线后设置为单一的硬盘C：，并进行CMOS相关参数的设置后启动服务器，运行Install程序，取消原来从盘的“Mirrored”，将其变为“Not 
+        Mirrored”状态，以后这台服务器就可以以单硬盘方式工作了。同时，为了防止故障再次发生，建议尽快修复已损坏的硬盘。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　(江苏　王群)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

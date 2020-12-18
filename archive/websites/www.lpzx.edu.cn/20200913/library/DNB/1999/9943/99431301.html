@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- PowerBuilder编程俱乐部</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; PowerBuilder编程俱乐部</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 PowerBuilder编程俱乐部 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好！PowerBuilder编程俱乐部自第一期推出以来，受到广大PB爱好者的热烈欢迎，每天都有大量的读者来信，在这里版主真诚感谢朋友们的关心和支持，PB编程俱乐部将一如既往地为大家服务。各位可到俱乐部主页http:／／kjx.126.com或http:／／pb70.yeah.net的BBS讨论区去提交问题或解答问题，如你平时编程有何经验与心得，也可拿出来与大家共享，俱乐部的原信箱同时开放。你的支持和参与就是我们前进的动力！<br>
+　　不少网友来信询问有哪些学习PowerBuilder编程的好站点，今后PB编程俱乐部将不定期的向大家推荐一些国内优秀的PowerBuilder网站。今天向大家介绍的是“PB能量建造者”http:／／pb7.126.com，站长：潘亚、鹿寒。一个非常出色的PB个人主页，新建不久但内容详实，而且更新很快。有PB专题、技巧、文摘、下载和讨论区等栏目，收录优秀的PB专题文章、讲座、教材， 有包括Datawidow、API调用、数据库等在内的大量编程技巧，并且提供文档、数据库驱动和PB例程下载。该站还定期举办PB网友网上聚会，网友见面认识，交流心得，疑难问题嘉宾现场交流解答，是PB爱好者学习、交流的好地方。
+<p><b>　　一、问：我想做一个数据窗口的组合条件查询，要得到数据窗口中的所有列名及其text的文字说明，请问怎样才能取得？</b></p>
+　　答：Describe()函数可以得到数据窗口的多项属性值，用它实现如下：<br>
+　　long   ll_column_count<br>
+　　long   ll_i<br>
+　　string  ls_column[]  ／／列名<br>
+　　string  ls_column_text[]  ／／text的名字<br>
+　　／／得到数据窗口的总列数<br>
+　　ll_column_count = long(dw_1.Describe(″DataWindow.Column.Count″)) <br>
+　　／／循环依次读取<br>
+　　for ll_i = 1 to ll_column_count <br>
+　　ls_column[ll_i] = dw_1.Describe(″＃″＋string(ll_i)＋″.Name″)<br>
+　　ls_column_text[ll_i] = dw_1.Describe(ls_column[ll_i] ＋ ″_t.text″)<br>
+　　next<br>
+　　说明：数组ls_column[]保存当前数据窗中所有列名<br>
+　　数组ls_column_text[]保存当前数据窗中列对应的text的文字说明。<br>
+　　注：数据窗口dw_1的对象（DataObject）中text命名须用默认值，即列名＋ _t的形式，如列名为“name”，则其对应text应取名为“name_t”，否则返回值不正确。
+<P><B>　　二、问：在应用程序运行时，数据库Sysbase SQL Anywhere 5.0启动后在系统状态条上会有图标，有时用户会不小心将其关闭，造成系统出错。请问如何隐藏Sysbase SQL Anywhere 5.0在系统状态条上的的图标？</b></p>
+　　答：可以通过更改系统注册表来实现。以Powersoft Demo DB V6 为例：<br>
+　　运行注册程序regedit，找到注册表中HKEY_CURRENT_USER\Software\ODBC\ODBC.INI\Powersoft Demo DB V6中名为Start的项目，如其原值为“C:\Program Files\Sybase\SQL Anywhere 5.0\Win32\dbeng50.exe”，在其后加上参数 －Q，改为“C:\Program Files\Sybase\SQL Anywhere 5.0\Win32\dbeng50.exe －Q”即可。 <br>
+　　对于自己创建的其它Sysbase SQL Anywhere 5.0数据库可用同样方法实现。
+<p><b>　　三、问：一般用鼠标单击窗口右上角的“X”时，窗口立即关闭，但有的程序在退出时会弹出一个确认窗口供用户确认，这是如何实现的？</b></p>
+　　答：可以利用窗口的CloseQuery事件在用户关闭窗口时进行确认。在CloseQuery事件中加入脚本：<br>
+　　long ll_return<br>
+　　ll_return = MessageBox(″提示信息″,″确认退出吗?″, Question! , YesNo! , 1 )<br>
+　　if ll_return = 2 then <br>
+　　Return 1 ／／不关闭窗口<br>
+　　else<br>
+　　Return 0 ／／关闭窗口<br>
+　　end if
+<p><b>　　四、问：怎样得到程序运行时的路径？</b></p>
+　　答：用API函数GetModuleFileNameA()可实现。<br>
+　　在global external functions声明：<br>
+　　Function uLong GetModuleFileNameA(long hinstModule, Ref String lpszPath, uLong cchPath) Library ″kernel32.dll″<br>
+　　使用：<br>
+　　string   ls_AppPath<br>
+　　int li_ret<br>
+　　ls_AppPath = Space (128) <br>
+　　li_ret = GetModuleFileNameA (Handle (GetApplication ()), ls_apppath, 128) <br>
+　　说明：要编译成可执行文件.exe才可用，否则得到的是Powerbuilder的pb60.exe或PB050.exe的路径。程序路径保存在变量ls_AppPath中。
+<p><b>　　五、问：我编写的脚本忘了在哪个窗口了，怎么办？总不能让我把几十个窗口逐个打开，每个事件中来查找吧。</b></p>
+　　答：同时选中这几十个窗口，点Entry菜单，再点击Serach菜单项，输入你要查找的脚本内容，点确定即可。系统将列出所有符合要求的窗口、控件、事件及脚本所在的行数。<br>
+　　查找同样适用于函数、菜单、用户对象等。
+<p><b>　　六、问：请问怎样限制应用程序只运行一次？</b></p>
+　　答：提供两种实现方法（用于32位操作系统）：<br>
+　　1．首先在global external functions声明外部函数如下: <br>
+　　FUNCTION long FindWindowA( ulong Winhandle, string wintitle ) Library ″user32″ <br>
+　　然后在application的 Open 事件中加入如下代码: <br>
+　　ulong l_handle, lu_class<br>
+　　string ls_name<br>
+　　ls_name = ″我的系统″ ／／ 此处ls_name为系统主窗口的标题Title<br>
+　　l_handle = FindWindowA(lu_class, ls_name)<br>
+　　if l_handle &gt; 0 then<br>
+　　MessageBox(″提示信息″, ″应用程序″ ＋ This.AppName ＋ ″已经运行,不能多次启动！″)<br>
+　　Halt Close<br>
+　　else<br>
+　　open(w_main) ／／ 此处为系统主窗口<br>
+　　end if<br>
+　　这种方法是PowerBuilder联机帮助中的一个例子，是以系统主窗口的标题Title作为判别依据，若有其它与此Title同名应用程序在运行，再想启动此程序也会报应用程序已经运行。你可以将Title设为“计算器”，然后启动Windows附件中计算器程序，再运行你的PB应用程序试试。<br>
+　　2．声明外部函数：<br>
+　　function ulong CreateMutexA (ulong lpMutexAttributes, int bInitialOwner,  ref string lpName) library ″kernel32.dll″ <br>
+　　function ulong GetLastError () library ″kernel32.dll″ <br>
+　　然后在application的 Open 事件中加入如下代码: <br>
+　　ulong ll_mutex, ll_err <br>
+　　string ls_mutex_name <br>
+　　if handle (GetApplication (), false) &lt;&gt; 0 then <br>
+　　ls_mutex_name = this.AppName ＋ char (0) <br>
+　　ll_mutex = CreateMutexA (0, 0, ls_mutex_name) <br>
+　　ll_err = GetLastError () <br>
+　　if ll_err = 183 then <br>
+　　／／ 程序已经运行<br>
+　　MessageBox (″提示信息″, ″程序已经运行了！″) <br>
+　　Halt close <br>
+　　else <br>
+　　／／ 程序未运行<br>
+　　open(w_main)<br>
+　　end if <br>
+　　else ／／开发模式<br>
+　　open(w_main)<br>
+　　end if <br>
+　　这种方法必须在应用程序编译成可执行文件.exe后才有效。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99431301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

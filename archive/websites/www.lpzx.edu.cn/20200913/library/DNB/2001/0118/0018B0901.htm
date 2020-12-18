@@ -1,0 +1,235 @@
+<html><!-- #BeginTemplate "/Templates/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>powerbuilder的问与答</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->powerbuilder的问与答<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->大家好！SYBASE已推出PB8BetaIV版，相对于前几个版本有不少改进。感兴趣的读者可以到http://www.sybase.com/powerbuilder_drp 
+              或ftp//reserver3.sybase.com/pub/PB8Beta/public 下载或了解相关信息。另外，大家还可到http://pbclub.ok100.net 
+              去提交或解答问题。下面，我们对这段时间，PowerBuilder编程爱好者提出的一些典型问题作出答复。<br>
+              问题一、如何在PB中实现精确的时间控制如使用延时控制？timer函数只能使用一次，idle函数只能是在没有任何键盘和鼠标动作的时候才生效，还有其他函数可以用吗？<br>
+              答：用API函数Sleep可以解决，此函数用于通知操作系统忽略当前进程指定时间数，参数为时间(千分之一秒)。<br>
+              声明函数：<br>
+              SUBROUTINE Sleepuint cMilliSeconds LIBRARY &quot;KERNEL32.dll&quot;<br>
+              调用：<br>
+              Sleep2000//延时2秒<br>
+              PB8中新增了对应的函数：Sleep  seconds 。<br>
+              问题二、PB中怎样实现在循环时通过点击按钮终止循环﹖ 就像在VB的循环中用DoEvent实现的一样。<br>
+              答：这当然要用Yield函数了。如：<br>
+              integer n<br>
+              //sb_interrupt 是共享变量<br>
+              sb_interrupt=false<br>
+              for n=1 to 3000<br>
+              yield<br>
+              if sb_interrupt then<br>
+              //sb_interrupt的值在&quot;取消&quot;按钮的Clicked事件中修改为true<br>
+              MessageBox&quot;我不干了&quot;&quot;你真坏！&quot;<br>
+              sb_interrupt=false<br>
+              exit<br>
+              else<br>
+              //其它处理，在单行编辑器中显示当前n值<br>
+              sle_1.text = stringn<br>
+              //....<br>
+              end if<br>
+              next<br>
+              问题三、如何关闭打开的DOS窗口？ 如在PB中调用run.bat函数，该函数运行完毕后有一个打开的DOS窗口，怎样在程序中关闭？<br>
+              答：定义API：<br>
+              Function ulong FindWindowA String lpClassName  String lpWindowName 
+              Library &quot;user32.dll&quot;<br>
+              Function ulong CloseWindow ulong hwnd  Library &quot;user32.dll&quot;<br>
+              脚本：<br>
+              long ll_Handler<br>
+              string ls_Class<br>
+              string ls_title<br>
+              SetNullls_Class<br>
+              ls_title = &quot;ms-dos 方式&quot; //DOS窗口标题，根据具体情况改<br>
+              ll_Handler = FindWindowAls_Class ls_title <br>
+              If ll_Handler &lt;&gt; 0 Then<br>
+              Sendll_Handler 160 0<br>
+              End If<br>
+              如用CloseWindowll_Handler 替换Sendll_Handler 160 0 一句则是将指定标题窗口最小化。<br>
+              以上方法同样适用于其它类型窗口。以前有网友问过用API函数DestroyWindow，DestroyWindow只适用于关闭PB本身的窗口(对象)，不适用于外部窗口，如在一个button的clicked事件中加上：DestroyWindowhandleparent则关闭button所在窗口。DestroyWindow的声明格式是：<br>
+              FUNCTION ulong DestroyWindowulong hwnd LIBRARY &quot;user32.dll&quot;<br>
+              问题四、数据窗口的多表更新问题：我的数据窗口数据源来自两个表，当修改该数据窗口数据项时，怎样做到两个table都能更新？<br>
+              答：数据窗口数据源来自两个或两个以上的表，相当于多个表连接建立的一个视图，对于这种数据窗口，PB默认是不能修改的。当然我们可以通过设置它的Update 
+              属性，数据窗口的Update Properties用来设置数据窗口是否可Update、可Update的表、可Update列等，但不能同时设置两个表可更新；所以当修改它的数据项时，不能简单地用dw_1.update来更新table，我们可以在程序中设置数据窗口可更新的一个表A(及其可更新列)，其他表为不可更新，更新完表A后，再设置另一表B为可更新，表A设置为不可更新，依次类推。<br>
+              以PowerBuilder7自带的EAS Demo DB V3数据库为例：<br>
+              1、新建一个数据窗口d_grid_dep_emp，它的Select语句为<br>
+              SELECT department.dept_id<br>
+              department.dept_name<br>
+              employee.emp_id<br>
+              employee.emp_fname<br>
+              employee.emp_lname<br>
+              FROM department employee<br>
+              WHERE employee.dept_id = department.dept_id<br>
+              2、设置数据窗口d_grid_dep_emp的属性，将列的taborder改为非0值；并点击菜单Rows→Update Properties，设置此数据窗口Allow 
+              Updates，Table to Update设为department，Updateable Columns设为department.dept_id，department.dept_name。<br>
+              3、在窗口中更新数据窗口按钮的clicked事件编写脚本：<br>
+              long ll_rtn<br>
+              // 修改Department表Department表在第2步已设置为可更新<br>
+              ll_rtn = dw_1.updatetrue false<br>
+              If ll_rtn = 1 then<br>
+              //关闭对Department表的修改<br>
+              dw_1.Modify&quot;department_dept_name.Update = 'No'&quot;<br>
+              dw_1.Modify&quot;department_dept_id.Update = 'No'&quot;<br>
+              dw_1.Modify&quot;department_dept_id.Key = 'No'&quot;<br>
+              //设置Employee表成为新的可修改表<br>
+              dw_1.Modify&quot;DataWindow.Table.UpdateTable = 'employee'&quot;<br>
+              dw_1.Modify&quot;employee_emp_id.Update = 'Yes'&quot;<br>
+              dw_1.Modify&quot;employee_emp_fname.Update = 'Yes'&quot;<br>
+              dw_1.Modify&quot;employee_emp_lname.Update = 'Yes'&quot;<br>
+              dw_1.Modify&quot;employee_emp_id.Key = 'Yes'&quot;<br>
+              //修改Employee表<br>
+              ll_rtn = dw_1.Update<br>
+              IF ll_rtn = 1 THEN<br>
+              COMMIT USING SQLCA<br>
+              dw_1.retrieve<br>
+              messagebox'提示信息''更新成功！'<br>
+              ELSE<br>
+              ROLLBACK USING SQLCA<br>
+              MessageBox'提示信息' '更新失败！'<br>
+              END IF<br>
+              //重置修改标志<br>
+              dw_1.Modify&quot;department_dept_name.Update = 'Yes'&quot;<br>
+              dw_1.Modify&quot;department_dept_id.Update = 'Yes'&quot;<br>
+              dw_1.Modify&quot;department_dept_id.Key = 'Yes'&quot;<br>
+              dw_1.Modify&quot;DataWindow.Table.UpdateTable = 'department'&quot;<br>
+              dw_1.Modify&quot;employee_emp_id.Update = 'No'&quot;<br>
+              dw_1.Modify&quot;employee_emp_fname.Update = 'No'&quot;<br>
+              dw_1.Modify&quot;employee_emp_lname.Update = 'No'&quot;<br>
+              dw_1.Modify&quot;employee_emp_id.Key = 'No'&quot;<br>
+              ELSE<br>
+              ROLLBACK USING SQLCA<br>
+              MessageBox'提示信息' '更新失败！'<br>
+              END IF<br>
+              我们还可以将以上功能作成一个函数，在必要的时候调用即可。<br>
+              问题五、如何在非PB窗口中实现键盘按键和鼠标点击动作的检测？有很多屏幕捕捉软件都可以在非本软件窗口中实现热键响应事件。<br>
+              答：首先调用API函数RegisterHotKey为窗口注册热键。当热键按下后，Windows发送wm_hotkey消息给窗口，这时我们可以在PB窗口的other事件中处理。<br>
+              定义窗口实例变量：<br>
+              long atomid<br>
+              constant integer MOD_ALT = 1 //ALT键<br>
+              constant integer MOD_CONTROL = 2 //CTRL键<br>
+              constant integer MOD_SHIFT = 4 //SHIFT键<br>
+              定义API函数：<br>
+              FUNCTION Integer GlobalAddAtomref string lpString LIBRARY &quot;kernel32.dll&quot; 
+              ALIAS FOR &quot;GlobalAddAtomA&quot;<br>
+              FUNCTION ulong RegisterHotKeyulong hwndulong idulong fsModifiersulong 
+              vk LIBRARY &quot;user32.dll&quot;<br>
+              在窗口的open事件编写脚本：<br>
+              //注册热键<br>
+              long ll_RC<br>
+              string ls_atomid<br>
+              ls_atomid = 'myatomid'<br>
+              atomid = GlobalAddAtomls_atomid<br>
+              //得到惟一的ID，保证不和其他应用程序发生冲突<br>
+              ll_RC = RegisterHotKeyHandlethis atomid MOD_CONTROL  70<br>
+              //注册的热键为Ctrl+F ，70为'F'<br>
+              //如果组合键，可用MOD_CONTROL + MOD_ALT等<br>
+              if ll_RC = 0 then messagebox&quot;Error&quot;&quot;热键注册错误&quot;<br>
+              //热键注册冲突<br>
+              在窗口的other事件编写脚本：<br>
+              //处理系统热键<br>
+              IF wparam = atomid THEN<br>
+              //处理<br>
+              messagebox'hello''你好！'<br>
+              END IF<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

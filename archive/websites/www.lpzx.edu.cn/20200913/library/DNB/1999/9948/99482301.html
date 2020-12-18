@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 串口故障导致鼠标失灵的处理</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 串口故障导致鼠标失灵的处理</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 串口故障导致鼠标失灵的处理 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一台“老奔”，服役三载有余，曾在多次展览和比赛中立下汗马功劳。一次,有事要使用该机,当按下“POWER”键时，启动正常，顺利进入Windows 98，声音还算悦耳，图像也还算清晰，并无大碍，可是一动鼠标，坏了，指针不听使唤，任我在左、中、右三键上单击、双击、拖曳，均无反应。重新启动，进入DOS 6.22，启动Windows 3.2，症状如前。看来得给“老奔”做次全面体检了。<br>
+　　先查查“软”毛病吧。进入Windows 98，在键盘上经过一番艰难摸索，找到“控制面板”，查看“系统”项，依次打开“设备管理／端口／通信端口	COM1（或COM2）／属性”，设置无误。在Windows 3.2下，从“控制面板”中查看“端口”项，同样设置无误。看来软故障的可能性基本上排除了。没有鼠标的日子可真别扭，用键盘操作Windows，估计和洋人用筷子吃饭的感觉差不多！这只鼠标也是久经考验的，难道气数已尽？我不甘心，于是回到DOS6.22，运行mouse.com，屏幕上居然显示“mouse driver installed”，再运行msd.com，在mouse项中，显示“Mouse IRQ:4”、“Mouse com port:com1”、“Mouse com port address:02F8H”，一切正常！难道鼠标没坏？问题真有点扑朔迷离。<br>
+　　还是从鼠标本身寻找答案吧。将鼠标“开肠破肚”，取出滚动球，里里外外搞了一次大扫除，再用万用电表测量各按键的接触情况和连线的通断情况，均无异常。启动机器进入Windows 98 ，故障依然存在。“案情”仍无进展，还是用最简单、最有效的方法检查吧，拔下鼠标，接入另外一台电脑，工作正常，可以肯定鼠标没坏。难道“老奔”得了“大病”？为了确诊，我翻箱倒柜，找到了鼠标的配套软盘，运行其自带的驱动程序，屏幕上显示“Can not find COM:port,Error”，再运行msd.com，在mouse项中未找到鼠标。检查到此，可以断定串口部分有问题，看来DOS 6.22的mouse.com也有BUG。近期上级有令，要求电脑人人考级，本单位的“电脑爱好者”突然增多，很可能有人对鼠标进行了热拔插，导致串口电路“烧坏”。<br>
+　　要修理损坏的串口（包括相关电路、芯片）可不是一件容易的事，说不定老故障未排除，新故障又产生了，弄不好主板要完蛋。本人才疏学浅，不敢轻举妄动，但要“医活”鼠标，还是有办法的。鼠标原来连在“老奔”的COM1上，如今COM1坏了，那就接到COM2上试试。COM1是9针接口，COM2是25针接口，由于手头没有9－25针转接头，所以直接将鼠标连在COM2上行不通，只好打开机箱，将COM1、COM2到主板的连线调换一下，这样，COM1变成了25针接口，COM2变成了9针接口。将鼠标连到COM2上，启动电脑，在DOS6.22下，运行mouse.com和鼠标自带的驱动程序，均出现正常提示信息，用msd.com检测，鼠标工作正常；启动Windows 3.2，鼠标指针仍然不能移动，原因是Windows 3.2中有关鼠标的设置仍为COM1，此时可用键盘操作，打开“控制面板”，转到“端口”项，将COM1、COM2的“I／O端口地址”及“中断请求号”两项数据调换，重新启动Windows 3.2即可；至于Windows 98，确实比Windows 3.2“牛”一些，可自动检测鼠标所连接的端口，启动后鼠标就OK 了。<br><b>
+(湖南　唐清华)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99482301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

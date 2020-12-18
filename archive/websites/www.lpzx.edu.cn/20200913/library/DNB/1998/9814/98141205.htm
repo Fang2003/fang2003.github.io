@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>让JFF管理你的磁盘</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>让JFF管理你的磁盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　 
+        一些应用程序在执行过程中常会产生一些临时文件，为了优化磁盘，我们需要到处搜索，删除这些文件。<br>
+        　　有时我们想把某个目录及以下各级子目录的某一类型文件集中起来，拷到软盘上带走，或作其他处理。如果目录层次较多，这类工作做起来也相当麻烦。<br>
+        　　其实，如果有JFF.EXE，就一点也不难了。JFF是一个共享软件，只有36K。<br>
+        　　<strong>一、JFF的命令格式</strong><br>
+        　　JFFEXE的使用很简单，只需在DOS提示符下键入：<br>
+        　　JFF 盘符；文件名；[DOS命令]<br>
+        　　1盘符：可以省略，省略后默认为查找当前盘当前目录及以下各级子目录；也可以输入多个盘符，JFF将连续查找。<br>
+        　　2文件名：可以使用通配符，并可以指定多个或多种文件。<br>
+        　　3DOS命令：必须用方括号括起来。其中用到文件名时用＃1替换。<br>
+        　　以上三项中间应以分号隔开。<br>
+        　　<strong>二、JFF的运用举例</strong><br>
+        　　1C:\&gt;JFF ＊.EXE<br>
+        　　查找C盘上的全部EXE文件，列出所在目录，并计算总字节数。与DOS命令 
+        DIR/S ＊.EXE作用相同。<br>
+        　　2C:\&gt;JFF D:\TOOL\＊.EXE，D:\TOOL\＊.COM<br>
+        　　查找D盘TOOL子目录及其以下各级子目录中的EXE文件和COM文件，并计算总字节数。<br>
+        　　3C:\&gt;JFF ＊.BMP；[COPY ＃1 C:\BMP]<br>
+        　　查找整个C盘上的位图文件，并全部拷贝到C:\BMP中。<br>
+        　　4C:\&gt;JFF C,E－G;＊.TMP,＊.BAK;[DEL ＃1]<br>
+        　　查找C盘及E、F、G盘上的TMP文件和BAK文件，并全部删除。<br>
+        　　5JFF C－F;＊.BAK,＊.TMP;[DEL ＃1]<br>
+        　　我们可以把JFF放在启动文件AUTOEXEC.BAT中，这样每次启动时，都会自动清除各盘上的临时文件。<strong>(河北　郑其标)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月13日第14期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

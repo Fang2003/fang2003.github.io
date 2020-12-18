@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>轻松实现Win98和dos6.22双启动 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 　在安装了Win98之后，是否真的要彻底告别DOS6.22了呢？其实鱼和熊掌可以兼得。你只要按照我介绍的操作步骤，花上几分钟时间，即可轻松实现Win98与MSDOS6.22的双启动。<br>
+        　　首先，请你准备好MS－DOS 6.22和Win98的系统启动软盘各一张。假定现在你已经安装好了Win98，就请在Win98中点DOS的图标，回到MSDOS方式下，然后在C盘根目录进行如下操作：<br>
+        　　ATTRIB －H －R －S MSDOS.SYS<br>
+        　　ATTRIB －H －R －S IO.SYS<br>
+        　　ATTRIB －R －S COMMAND.COM<br>
+        　　REN MSDOS.SYS MSDOS.W40<br>
+        　　REN IOSYS IOW40<br>
+        　　REN COMMAND.COM COMMAND.W40<br>
+        　　ATTRIB ＋H ＋R ＋S IO.W40<br>
+        　　ATTRIB ＋R ＋S COMMAND.W40<br>
+        　　做完以上操作后，使用EDIT编辑MSDOS.W40文件。在该文件的[Options]一节中加入下面两行：<br>
+        　　BootMulti=1<br>
+        　　BootKeys=1<br>
+        　　这两行的意思分别是，允许Win98进行多重启动和允许Win98引导时使用系统功能键。添加好这两句后存盘退出。然后插入MSDOS6.22系统盘，从软盘重新启动，执行下列操作：<br>
+        　　SYS C:<br>
+        　　C:<br>
+        　　ATTRIB －H －R －S MSDOS.SYS<br>
+        　　ATTRIB －H －R －S IO.SYS<br>
+        　　ATTRIB －R －S COMMAND.COM<br>
+        　　REN MSDOSSYS MSDOS.DOS<br>
+        　　REN IO.SYS IO.DOS<br>
+        　　REN COMMAND.COM COMMAND.DOS<br>
+        　　ATTRIB ＋H ＋R ＋S MSDOS.DOS<br>
+        　　ATTRIB ＋H ＋R ＋S MSDOS.W40<br>
+        　　ATTRIB ＋H ＋R ＋S IO.DOS<br>
+        　　ATTRIB ＋R ＋S COMMAND.DOS<br>
+        　　在运行以上命令时，应保证C盘根目录中有DOS6.22的ATTRIB.EXE可执行文件，否则会出现错误提示。做完这些工作，在A:驱中插入Win98的启动盘再次引导系统，并用“SYS 
+        C:”命令传送系统文件至硬盘。假如你在Win98下和DOS6.22下的CONFIG.SYS和AUTOEXEC.BAT要求不同，那么可以把在Win98中使用的文件改名为CONFIG.W40、AUTOEXEC.W40，DOS6.22中的改为CONFIG.DOS、AUTOEXEC.DOS。<br>
+        　　好了，现在你已经完成了所有工作，请试试Win98与MSDOS6.22的双启动功能吧。当电脑准备引导系统时，按下F4键就进入DOS6.22，如果什么键都不按,就进入Win98。值得注意的是，倘若你在安装Win98时进行了FAT32文件分配表的转换，你将完全丧失用MSDO6.22启动电脑的可能。这是因为DOS6.22无法识别和管理FAT32文件分配表。<br>
+        　　(作者联系地址：yhl@263.net)(四川　杨海凌)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

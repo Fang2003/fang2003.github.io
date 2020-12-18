@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>　用Delphi实现超级链接 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　<strong>　</strong>在许多程序的“关于”对话框中，我们常可以看到“超级链接”式的标签，只须轻轻一点，就能立即启动电子邮件程序给作者写信,或者启动浏览器观看某主页，或者远程登录，或者自动链入新闻组……<br>
+        　　如果你苦于找不到实现这些功能的Delphi控件，又无法在帮助文件中找到相关主题，那不妨参照下文，亲手一试！<br>
+        　　别看上述的“超级链接”功能繁多，其实用一条函数就能完成，那就是ShellAPI单元中的ShellExecute。不要误以为它只能执行外部的exe文件，其实它可管用了。它的参数为hWnd:Integer;Operation:PChar;File:PChar;Parameters:PChar;Directory:PChar;ShowCmd:Integer，依次表示父窗口的句柄（handle）、操作类型（缺省时为open）、文件名、启动参数、缺省目录、窗口显示方式。在制作超级链接时，第2、4、5项参数都不需填。窗口显示方式一般填SW_ 
+        SHOWNOACTIVATE或者SW_ SHOWNORMAL。其中最关键的就是文件名一项了。<br>
+        　　当它以“mailto：”开头时（不需引号），启动的是邮件程序；以“http：//”、“ftp：//”或“gopher：//”开头，启动网络浏览程序；以“news：”开头，启动新闻讨论程序；以“telnet：”开头，启动telnetexe。<br>
+        　　举例来说，若要调用程序给《电脑报》发e－mail，可以这样写：ShellExecute(handle,nil,pchar(′mailto:dnbcpw@publicctacqcn′),nil,nil,SW_SHOWNORMAL);<br>
+        　　最后提醒一句，别忘了在uses句中加入ShellAPI。以上程序在Delphi3中调试通过。 
+        <strong>(上海　汪　箴)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

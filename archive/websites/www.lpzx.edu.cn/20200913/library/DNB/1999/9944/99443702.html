@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 数据库设计的基本方法</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>44 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 数据库设计的基本方法</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 数据库设计的基本方法 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　数据库设计是建立数据库及其应用系统的核心和基础，它要求对于指定的应用环境，构造出较优的数据库模式，建立起数据库应用系统，并使系统能有效地存储数据，满足用户的各种应用需求。一般按照规范化的设计方法，常将数据库设计分为若干阶段：<br>
+　　系统规划阶段主要是确定系统的名称、范围；确定系统开发的目标功能和性能；确定系统所需的资源；估计系统开发的成本；确定系统实施计划及进度；分析估算系统可能达到的效益；确定系统设计的原则和技术路线等。对分布式数据库系统，还应分析用户环境及网络条件，以选择和建立系统的网络结构。<br>
+　　需求分析阶段要在用户调查的基础上，通过分析，逐步明确用户对系统的需求，包括数据需求和围绕这些数据的业务处理需求。通过对组织、部门、企业等进行详细调查，在了解现行系统的概况、确定新系统功能的过程中，收集支持系统目标的基础数据及其处理方法。<br>
+　　概念设计阶段要产生反映企业各组织信息需求的数据库概念结构，即概念模型。概念模型必须具备丰富的语义表达能力、易于交流和理解、易于变动、易于向各种数据模型转换、易于从概念模型导出与DBMS有关的逻辑模型等特点。<br>
+　　逻辑设计阶段除了要把E－R图的实体和联系类型，转换成选定的DBMS支持的数据类型，还要设计子模式并对模式进行评价，最后为了使模式适应信息的不同表示，需要优化模式。<br>
+　　物理设计阶段的主要任务是对数据库中数据在物理设备上的存放结构和存取方法进行设计。数据库物理结构依赖于给定的计算机系统，而且与具体选用的DBMS密切相关。物理设计常常包括某些操作约束，如响应时间与存储要求等。<br>
+　　系统实施阶段主要分为建立实际的数据库结构；装入试验数据对应用程序进行测试；装入实际数据建立实际数据库三个步骤。<br>
+　　另外，在数据库的设计过程中还包括一些其他设计，如数据库的安全性、完整性、一致性和可恢复性等方面的设计,不过，这些设计总是以牺牲效率为代价的,设计人员的任务就是要在效率和尽可能多的功能之间进行合理的权衡。</TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99443702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>CPCW网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

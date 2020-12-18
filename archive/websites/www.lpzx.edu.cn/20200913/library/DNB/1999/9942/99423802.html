@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- AutoCAD图形打印技巧</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; AutoCAD图形打印技巧</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 AutoCAD图形打印技巧 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　众多使用过AutoCAD的朋友都知道，AutoCAD2000的打印功能较以前的版本已大有提高。如果您想打印出一幅图（譬如A3幅），但是您的打印机只能打印A4幅，这时您只有用打印功能里的窗选功能手工选择打印。为了以后图形的拼接方便，您还得手工给出窗选点的坐标，实在烦琐。笔者用Visual Lisp编了个小程序，能够实现从A3图幅到A4图幅的自动打印，稍加改动能够实现A1图幅到A3图幅的打印等，限于篇幅，这里不在详细介绍。原程序如下：<br>
+　　(Defun c:a34();;;打印主程序<br>
+　　(Command ″layer″ ″on″ ″＊″ ″″)<br>
+　　(initpt)<br>
+　　(Command ″Plot″ ″w″ (ret1 pt 1 0) (ret2 pt 2 1) ″n″)<br>
+　　(Command ″Plot″ ″w″ (ret1 pt 0 0) (ret2 pt 1 1) ″n″)<br>
+　　(Command ″qsave″ ″y″)<br>
+　　)<br>
+　　;;;－－－－－－－－－－－;;;<br>
+　　(Defun initpt()<br>
+　　(SetQ ptmax (Getvar ″extmax″)<br>
+　　a1 (Car ptmax)<br>
+　　a2 (Cadr ptmax)<br>
+　　ptmin (Getvar ″extmin″)<br>
+　　b1 (Car ptmin)<br>
+　　b2 (Cadr ptmin)<br>
+　　s3 0<br>
+　　lengthx (－ a1 b1)<br>
+　　lengthy (－ a2 b2)<br>
+　　factor (/ 2850 1980)<br>
+　　unitx (/ lengthx 2)<br>
+　　unity (＊ unitx factor)<br>
+　　)<br>
+　　(If (&lt; (/ lengthx 2) (＊ lengthy factor))<br>
+　　(Progn (SetQ unity (/ lengthy 2)<br>
+　　unitx (/ unity factor)<br>
+　　)<br>
+　　)<br>
+　　)对瘦长的图形进行长宽对调<br>
+　　);;;确定图形的范围并对瘦长的图形进行“处理”；；；<br>
+　　;;;－－－－－－－－－－－－;;;<br>
+　　(Defun ret1 (Pt numx numy)<br>
+　　(SetQ s1 (＊ unitx numx)<br>
+　　s1 (＋ s1 b1)<br>
+　　s2 (＊ unity numy)<br>
+　　s2 (＋ s2 b2)<br>
+　　s3 0<br>
+　　pt (List s1 s2 s3)<br>
+　　)<br>
+　　);;;求窗选点1<br>
+　　;;;－－－－－－－－－－－－;;;<br>
+　　(Defun ret2 (Pt numx numy)<br>
+　　(SetQ s1 (＊ unitx numx)<br>
+　　s2 (＊ unity numy)<br>
+　　s1 (＋ b1 (＊ s1 101))<br>
+　　s2 (＊ s2 101)<br>
+　　s3 0<br>
+　　pt (List s1 s2 s3)<br>
+　　)<br>
+　　);;;求窗选点2；；；<br><b>
+(国家建材局地质工程勘察研究院：张文明)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99423802.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,614 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>信息技术实习总体任务</title>
+<script src="sx.js"></script>
+</head>
+
+
+<body bgcolor="#FFFFCC">
+<div align="center">
+  <center>
+  <table border="0" width="700">
+    <tr>
+      <td width="100%">
+        <p align="center"><b><font face="隶书" color="#FF0000" size="6">
+        信息技术实习总体任务<a name="top"></a></font></b></p>
+		<p align="center"><font color="#FF0000"><b>VB实习部分</b></font></p>
+		<p><b>实习任务7</b></p>
+		<p><b>在窗体或控件中显示钻石图案</b></p>
+		<p>说明：<font color="#FF0000"><b>窗体中应该有一个文本框，根据文本框内的数字，确定钻石图案中的节点数</b>，</font>书本上的示例是15节点。</p>
+		<p><b>检查通过方法：</b>在文本框内输入15，应该能得到节点数是15的钻石图案；输入10应该能得到节点数是10的钻石图案。分别用15和10来对程序进行测试。</p>
+		<p>代码参考：书本44页，或上课时老师给的代码</p><hr>
+		<p><b>实习任务6</b></p>
+		<p><b>在窗体中打印九九乘法表</b></p>
+		<p>要求打印出来的乘法表整齐规范</p>
+		<p>如果出现不整齐现象，主要原因是乘积有些大于10，有些小于10，所以显示不整齐。</p>
+		<p>解决方法：可以考虑选用以下几种方案输出数据：</p>
+		<p><font color="#FF0000">注意“&amp;”的左边和右边应该保留一个空格</font></p>
+		<p>①print i &amp; &quot;*&quot; &amp; j &amp; &quot;=&quot; &amp; i*j &amp; &quot; &quot;;</p>
+		<p>&nbsp;&nbsp; if i*j &lt; 10 then </p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print &quot; &quot;;</p>
+		<p>&nbsp;&nbsp; end if</p>
+		<p>②print TAB(j*7-6); i &amp; &quot;*&quot; &amp; j &amp; &quot;=&quot; &amp; i*j &amp; &quot; &quot;;</p>
+		<p>③print i &amp; &quot;*&quot; &amp; j &amp; &quot;=&quot; &amp; left( i*j &amp; &quot; &quot;,2) &amp; &quot; &quot;;</p>
+		<p>④print i &amp; &quot;*&quot; &amp; j &amp; &quot;=&quot; &amp; right(&quot; &quot; &amp; i*j,2) &amp; &quot; &quot;;</p>
+		<hr>
+		<p align="left"><b>实习任务5</b></p>
+		<p align="left"><b>解一元二次方程</b></p>
+		<p align="left">参考界面：</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 其中lblshow控件的AutoSize应该设置为True，并与下面的按钮适当保留一点距离，因为输出方程的解可能用到若干行文字；平方符号应该单独应用一个label，并设置其字号小一些，移动到X的右上角即可。</p>
+		<p align="center"><img border="0" src="10.jpg" width="537" height="383"></p>
+		<p align="left">参考程序：</p>
+		<p align="left"><img border="0" src="10.gif" width="806" height="507"></p>
+		<p align="left">请分别用（0，0，0），（0，0，1），（0，1，1），（1，1，1），（1，1，-9）五组数来测试方程的求解情况</p>
+		<hr>
+		<p align="left"><b>实习任务4</b></p>
+		<p align="left">书本P31，实践的第（1）题</p>
+		<p align="left">参考代码（<font color="#FF0000">其中红色的文字是控件的名称，应该根据自己设计的界面，改为自己实际的名称</font>）</p>
+		<p align="left">Private Sub <font color="#FF0000">平方</font>_Click()</p>
+		<p align="left">&nbsp;&nbsp; Dim a</p>
+		<p align="left">&nbsp;&nbsp; a = Val(<font color="#FF0000"> 文本框</font>.Text 
+		) </p>
+		<p align="left">&nbsp;&nbsp; <font color="#FF0000">第二行的Label</font>.Caption 
+		= &quot;该数的平方数为：&quot; &amp; a * a&nbsp;&nbsp;&nbsp;&nbsp; '计算平方</p>
+		<p align="left">End Sub</p>
+		<p align="left">其它开方按钮和绝对值发钮的代码参考平方按钮，退出按钮代码只有一个 End。</p><hr>
+		<p align="left"><b>实习任务3</b></p>
+		<p align="left">编写一个袖珍计算器程序，参考界面如P28图2-17所示</p>
+		<p align="left">程序运行要求</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 
+		a.单击“+”按钮，把第1文本框的数值和第2文本框的数值相加，结果显示在第3文本框，并把运算符号改为“+”<br>
+&nbsp;&nbsp;&nbsp; b.单击“-”按钮，把第1文本框的数值和第2文本框的数值相减，结果显示在第3文本框，并把运算符号改为“-”<br>
+&nbsp;&nbsp;&nbsp; c.单击“×”按钮，把第1文本框的数值和第2文本框的数值相乘，结果显示在第3文本框，并把运算符号改为“×”<br>
+&nbsp;&nbsp;&nbsp; d.单击“÷”按钮，把第1文本框的数值和第2文本框的数值相除，结果显示在第3文本框，并把运算符号改为“÷”<br>
+&nbsp;&nbsp;&nbsp; e.单击“清除”按钮，清除第1文本框内容，清除第2文本框内容，清除第3文本框内容，把运算符号改为“+”</p>
+		<p align="left">参考步骤</p>
+		<p align="left">1、绘制如P28页图2-17的界面，并适当地修改各控件的名称。</p>
+		<p align="left">2、编写代码（<font color="#FF0000">其中红色的文字是各控件的名称，应该根据自己设计的界面，改为自己
+		设计窗体实际的名称</font>）</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 双击“+”按钮，代码大体如下</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; Private sub <font color="#FF0000">按钮1</font>_Click()</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<font color="#FF0000">第3文本框</font>.text = 
+		Val(<font color="#FF0000">第1文本框</font>.text) + Val(<font color="#FF0000">第2文本框</font>.text)</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		'Val函数的作用是把字符串转换成数值，可参考书本P32</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<font color="#FF0000">运算符号</font>.caption = &quot;+&quot;</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; end sub</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 其它“－”、“×”、“÷”按钮的代码参考“+”的代码。</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 清除按钮的参考代码如下</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; Private Sub <font color="#FF0000">按钮5</font>_Click()</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<font color="#FF0000">第1文本框</font>.text = &quot;&quot;</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<font color="#FF0000">第2文本框</font>.text = &quot;&quot;</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<font color="#FF0000">第3文本框</font>.text = &quot;&quot;</p>
+		<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<font color="#FF0000">运算符号</font>.caption = &quot;+&quot;</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; End Sub</p><hr>
+		<p align="left"><b>实习任务2</b></p>
+		<p align="left">1、完成书本上第16页<font color="#FF0000">“打字测试软件”</font>程序的调试和运行</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 请按照图2-16可视化编程的一般步骤进行</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 设计程序界面→编写程序代码→调试、运行程序</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 其中“设计程序界面”应该包含设置对象初始属性（表2-1）</p>
+		<p align="center">
+		<img border="0" src="vbsx2.jpg" width="696" height="338"></p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 
+		<b>成功特征：程序运行后，单击“开始”按钮，输入若干文字，再单击“结束”按钮，能计算显示出打字的速度。</b></p>
+		<p align="left">2、完成书本上第18页<font color="#FF0000">“表2-3 对象的属性在VB中的含义”</font>的填写</p>
+		<p align="left">&nbsp;&nbsp;&nbsp; 其中属性含义的填写可参考属性的英文意思、书本附录、VB属性解释、互联网查询。</p>
+		<hr>
+		<p><b>实习任务1</b></p>
+		<p>1、完成书本上第10页的时钟程序的调试和运行</p>
+		<p>&nbsp;&nbsp;&nbsp; 
+		成功特征：程序运行后，在窗口右上角显示当前系统时间，单击显示时间，显示时间变化暂停，再次单击，时间显示重新变化，双击之，则退出程序。</p>
+		<p>&nbsp;&nbsp;&nbsp; 参考步骤：<br>
+&nbsp;&nbsp;&nbsp; A.&nbsp; 在窗体Form1中绘1个Label控件，1个Timer控件<br>
+&nbsp;&nbsp;&nbsp; B.&nbsp; 设置窗体的BorderStyle属性为0；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 设置Label控件的名称为lblshow；设置其Font的属性，让文字变大一点；设置其AutoSize属性为True；设置其BackStyle属性为0；<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 设置Timer控件的名称为tmrclock；设置其InterVal属性为500<br>
+&nbsp;&nbsp;&nbsp; C. 输入书本上第10页到第11页的代码，调试运行</p>
+		<p>2、完成书本上第12页的程序设计语言对比表格的填写 </p>
+		<p>&nbsp;&nbsp;&nbsp; 参考答案</p>
+		<p>程序设计语言发展经历的阶段&nbsp;&nbsp; 机器语言 汇编语言 高级语言<br>
+		低级语言：&nbsp; 机器语言&nbsp; 汇编语言<br>
+		高级语言：&nbsp; BASIC&nbsp; C&nbsp; Pascal COBOL <br>
+		分类：&nbsp; 解释型语言&nbsp; 编译型语言<br>
+		解释型： QBASIC&nbsp; LISP<br>
+		编译型： C/C++&nbsp; Pascal&nbsp; VB<br>
+		编辑程序、编译程序的区别：编辑程序 
+		是指程序代码、界面等的输入、构建，编辑等，在这期间，开发工具会对输入的代码进行一般的语法检查等，在可视化以前的开发环境下，主要是指代码的输入、编辑。编译是指开发工具的编译程序对编辑过的代码进行转换，以便生成可以执行的代码文件，在可视化以前的开发环境下，编译都是在编辑工作完成以后进行的。<br>
+		可执行程序的生成步骤：编写的源程序用编译程序先翻译成机器语言的目标程序，然后再由装配程序进行连接装配、生成可执行程序。</p><hr>
+		<p align="center" ><font color="#FF0000"><b>信息技术基础实习部分</b></font></p>
+		<p ><b>实习任务D——PhotoShop初步</b></p>
+        <p >&nbsp;&nbsp;&nbsp; 应用提供的图片素材，完成书本98页至102页图像加工任务，得到图5-25的成果。</p>
+        <p ><a href="Photoshop素材.zip">下载图片素材&nbsp; 下载</a></p>
+		<p >&nbsp;&nbsp;&nbsp; 写意生活CD封面下的文字</p>
+		<p >&nbsp;&nbsp;&nbsp; 
+		夏天，阳光总是很好，风，在树梢绕过，拨弄，嬉闹。在影子下的水泥池，是一种喧嚣、吵闹，一个皮革的球体，飞来飞去，激起黑色的白色的无色的尘土、汗水，黑色的手印，在沉默的篮板上镂刻一个一个记号。楼梯很矮，我们很近，树上的絮绵总是忍不住的往下掉，我们脏脏的手握在一起，叫喊到……</p> 
+        <p >&nbsp;&nbsp;&nbsp; 把下载的文件保存在自己的个人文件夹，在下载到的文件上击右键，再单击“解压到当前文件夹”即可得到三张图片素材。</p>
+        <hr>
+        <p ><b>实习任务C——图片初步&nbsp; 把结果记录在网页的表单上</b></p>  
+        <p>目的：体会不同的存储格式，所占用磁盘空间的体会&nbsp;</p>
+        <p>使用 所有程序/附件/画图 程序</p>  
+        <p>制作300*200的图片，绘制简单图形，保存为BMP321，保存类型&quot;24位位图(*.bmp,*.dib)&quot;&nbsp;<br>
+        制作300*200的图片，绘制稍复杂图形，保存为BMP322，保存类型&quot;24位位图(*.bmp,*.dib)&quot;&nbsp;<br>
+        制作400*300的图片，绘制简单图形，保存为BMP431，保存类型&quot;24位位图(*.bmp,*.dib)&quot;&nbsp;<br>
+        制作400*300的图片，绘制稍复杂图形，保存为BMP432，保存类型&quot;24位位图(*.bmp,*.dib)&quot;</p>
+        <p>使用画图程序</p>
+        <p>打开BMP321，另存为JPG321，保存类型&quot;JPEG(*.JPG;……)&quot;&nbsp;<br>
+        打开BMP322，另存为JPG322，保存类型&quot;JPEG(*.JPG;……)&quot;<br>
+        打开BMP321，另存为GIF321，保存类型&quot;GIF(*.GIF)&quot;&nbsp;<br>
+        打开BMP322，另存为GIF322，保存类型&quot;GIF(*.GIF)&quot;</p>
+        <p class="Default"><span style="font-size:14.0pt;mso-bidi-font-size:12.0pt;
+font-family:宋体">记录各文件的需要的磁盘存储空间的大小<span lang="EN-US"><o:p>，<b><font color="#FF0000">精确到字节</font></b>
+        </o:p>
+        </span></span></p>
+        <form>
+        <table border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;
+ border:none;mso-border-alt:solid windowtext .5pt;mso-padding-alt:0cm 5.4pt 0cm 5.4pt" id="table6">
+          <tr>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span style="font-size:14.0pt;mso-bidi-font-size:12.0pt;
+  font-family:宋体">文件名<span lang="EN-US"><o:p>
+              </o:p>
+              </span></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span style="font-size:14.0pt;mso-bidi-font-size:12.0pt;
+  font-family:宋体">大小<span lang="EN-US"><o:p>
+              </o:p>
+              </span></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span style="font-size:14.0pt;mso-bidi-font-size:12.0pt;
+  font-family:宋体">文件名<span lang="EN-US"><o:p>
+              </o:p>
+              </span></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span style="font-size:14.0pt;mso-bidi-font-size:12.0pt;
+  font-family:宋体">大小<span lang="EN-US"><o:p>
+              </o:p>
+              </span></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">BMP321<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC01" size="20"></o:p></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">JPG321<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC05" size="20"></o:p></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">BMP322<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC02" size="20"></o:p></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">JPG322<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC06" size="20"></o:p></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">BMP431<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC03" size="20"></o:p></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">GIF321<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC07" size="20"></o:p></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="148" valign="top" style="width:110.7pt;border:solid windowtext .5pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">BMP432<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC04" size="20"></o:p></span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default"><span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+  12.0pt;font-family:宋体">GIF322<o:p>
+              </o:p>  
+              </span></p>
+            </td>
+            <td width="148" valign="top" style="width:110.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext .5pt;border-right:solid windowtext .5pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt">
+              <p class="Default">
+				<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体">
+				<o:p>
+              <input type="text" name="LXC08" size="20"></o:p></span></p>
+            </td>
+          </tr>
+        </table>
+        <p>&nbsp;结论：&nbsp;<br>
+        1、BMP图片文件的存储空间大小与分辨率<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体"><o:p><input type="text" name="LXC09" size="5"></o:p></span>（有或无）关，与图形的复杂程度<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体"><o:p><input type="text" name="LXC10" size="6"></o:p></span>（有或无）关。&nbsp;</p>
+        <p>2、JPG文件和GIF文件的存储空间大小与图形的复杂程度<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:12.0pt;font-family:宋体"><o:p><input type="text" name="LXC11" size="6"></o:p></span>（有或无）关。</p>
+		<p align="center"><input type="button" value="提交检查答案" name="B2" onclick="checkitC()"></p>
+        </form>
+		<p>　</p>
+        <p>&nbsp;&nbsp;&nbsp; 你观察到保存为JPG文件或GIF文件时，图片颜色的失真现象了没有？   
+        你认识到JPG文件和GIF文件的压缩功能的作用了没有？</p>
+        <hr>
+        <p><b>实习任务B——EXCEL的筛选 排序 分类汇总和图表</b></p> 
+        <p><b>&nbsp;&nbsp;&nbsp; </b>本实习在实习A任务的文件上继续完成，要求筛选出所有成绩都及格的同学；制作出男女同学在各科成绩的平均分对比图表。观察各科平均分的差异，
+		并比较得出男同学和女同学各在哪个学科上更有优势。</p> 
+        <p>参考步骤：</p>
+		<p>1、打开上次实习保存的工作簿，把Sheet1工作表的内容复制一份到Sheet2。<font color="#FF0000">（解释：因为无法把筛选和分类汇总制作在同一张工作表内，所以拟在Sheet1工作表做筛选，在Sheet2工作表做其它工作）</font></p> 
+        <p>2、在Sheet1工作表内对成绩进行筛选，筛选出所有成绩都及格的学生，其中语数英是90及以上为及格，其它科目60分及以上为及格。</p>
+		<p>以下的操作在工作表Sheet2内完成</p>
+		<p>3、以性别为关键字排序</p> 
+        <p>4、分类汇总</p> 
+        <p><b>分类字段</b> 性别&nbsp;<br>     
+        <b>汇总方式</b> 平均&nbsp;<br>     
+        <b>选定汇总项</b> 政治、语文、数学等所有考试科目</p>      
+        <p>5、选定制作图表的数据</p> 
+        <p>6、图表向导，制作图表（柱状图，可以对比男女学生的各科平均成绩）</p>
+		<p><font color="#FF0000">其中第5步的操作也可以在第6步中的选择数据步骤中操作。</font></p> 
+        <p>参考文件：<span lang="EN-US" style="font-size:14.0pt;mso-bidi-font-size:
+12.0pt;font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA"><a href="no24.htm">http://www.lpzx.edu.cn/weiji/wj/no24.htm</a>&nbsp;</span></p> 
+        <hr>
+        <p><b>实习任务A——EXCEL的条件格式、公式及函数应用</b></p> 
+        1、下载并保存对应班的成绩表，保存在自己的个人文件夹中
+        <p><b>参考步骤：</b><font color="#ff0000">右击以下链接，单击目标另存为…，保存位置设定为自己的个人文件夹，再单击确定。<b>请勿直接左键单击打开，否则有某些工具无法使用。</b></font></p>
+        <table width="100%" border="1" id="table4">
+          <tbody>
+            <tr>
+              <td width="16%"><a href="EXCEL/0701.xls">高一01班成绩</a></td>
+              <td width="16%"><a href="EXCEL/0702.xls">高一02班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0703.xls">高一03班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0704.xls">高一04班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0705.xls">高一05班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0706.xls">高一06班成绩</a></td>
+            </tr>
+            <tr>
+              <td width="16%"><a href="EXCEL/0707.xls">高一07班成绩</a></td>
+              <td width="16%"><a href="EXCEL/0708.xls">高一08班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0709.xls">高一09班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0710.xls">高一10班成绩</a></td>
+              <td width="17%"><a href="EXCEL/0711.xls">高一11班成绩</a></td>
+              <td width="17%">　</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>2、打开该文件，在后面增加<b><font color="#FF0000">总分、平均分和名次</font></b>三列<br>
+		3、用条件格式设置不及格的成绩用红色显示，其中语数英是150分满分，其它科目100分满分。<br>
+        4、计算每位学生的总分、平均分和名次<br>
+        5、保存文件</p> 
+        <p>本实习可参考:&nbsp; <a href="no21.htm">http://www.lpzx.edu.cn/weiji/wj/no21.htm</a>，<br>       
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        <a href="no22.htm">http://www.lpzx.edu.cn/weiji/wj/no22.htm</a>&nbsp;</p> 
+        <hr>
+        <p><b>实习任务9——EXCEL初步 （<font color="#FF0000">答案写在网页的表单上，做好后等待老师检查</font>）</b></p>
+		<p><img border="0" src="2301.jpg" width="794" height="568"><br>  
+        <form>
+        1、工作表中，第5行第5列单元格的名称是<input type="text" name="LX911" size="6">，第2行第27列单元格的名称是<input type="text" name="LX912" size="7">，有没有一个名称是AK47的单元格<input type="text" name="LX913" size="7">（有或无），工作表的单元格共有<input type="text" name="LX914" size="6">列，最后一列的名称是<input type="text" name="LX915" size="8">，工作表的单元格共有<input type="text" name="LX916" size="8">行。</p> 
+        <p>2、单元格中的数据常见的类型是文本型，数值型，日期型，在单元格中输入以下信息，观察并把结果记录在表格中。其中第一行student是例子，完成表格中其它空格的填写。（注意题中的单引号是英文的单引号，不能使用中文的单引号）</p>
+		<p><font color="#FF0000">
+		注：本题的操作非常重要，其记录的结果对以后操作具有指导意义，记录在书本上时请同样以表格的形式的记录，其中第一个数据“student”是例子。</font></p> 
+        <table border="1" width="100%" id="table3">
+          <tr>
+            <td bgcolor="#00FFCC">输入信息</td>
+            <td bgcolor="#00FFCC">单元格显示</td>
+            <td bgcolor="#00FFCC">编辑栏显示</td>
+            <td bgcolor="#00FFCC">默认对齐方式</td>
+          </tr>
+          <tr>
+            <td><font color="#FF0000"><b>student</b></font></td>
+            <td><font color="#FF0000"><b>student</b></font></td>
+            <td><font color="#FF0000"><b>student</b></font></td>
+            <td><font color="#FF0000"><b>居左</b></font></td>
+          </tr>
+          <tr>
+            <td>中国人</td>
+            <td><input type="text" name="LX9211" size="15"></td>
+            <td><input type="text" name="LX9212" size="15"></td>
+            <td><input type="text" name="LX9213" size="15"></td>
+          </tr>
+          <tr>
+            <td>125</td>
+            <td><input type="text" name="LX9221" size="15"></td>
+            <td><input type="text" name="LX9222" size="15"></td>
+            <td><input type="text" name="LX9223" size="15"></td>
+          </tr>
+          <tr>
+            <td>7212743</td>
+            <td><input type="text" name="LX9231" size="15"></td>
+            <td><input type="text" name="LX9232" size="15"></td>
+            <td><input type="text" name="LX9233" size="15"></td>
+          </tr>
+          <tr>
+            <td>07737212743</td>
+            <td><input type="text" name="LX9241" size="15"></td>
+            <td><input type="text" name="LX9242" size="15"></td>
+            <td><input type="text" name="LX9243" size="15"></td>
+          </tr>
+          <tr>
+            <td>'07737212743</td>
+            <td><input type="text" name="LX9251" size="15"></td>
+            <td><input type="text" name="LX9252" size="15"></td>
+            <td><input type="text" name="LX9253" size="15"></td>
+          </tr>
+          <tr>
+            <td>450331199805210021</td>
+            <td><input type="text" name="LX9261" size="19"></td>
+            <td><input type="text" name="LX9262" size="19"></td>
+            <td><input type="text" name="LX9263" size="15"></td>
+          </tr>
+          <tr>
+            <td>'450331199805210021</td>
+            <td><input type="text" name="LX9271" size="19"></td>
+            <td><input type="text" name="LX9272" size="19"></td>
+            <td><input type="text" name="LX9273" size="15"></td>
+          </tr>
+          <tr>
+            <td>6/20</td>
+            <td><input type="text" name="LX9281" size="15"></td>
+            <td><input type="text" name="LX9282" size="15"></td>
+            <td><input type="text" name="LX9283" size="15"></td>
+          </tr>
+          <tr>
+            <td>'6/20</td>
+            <td><input type="text" name="LX9291" size="15"></td>
+            <td><input type="text" name="LX9292" size="15"></td>
+            <td><input type="text" name="LX9293" size="15"></td>
+          </tr>
+          <tr>
+            <td>=6/20</td>
+            <td><input type="text" name="LX92A1" size="15"></td>
+            <td><input type="text" name="LX92A2" size="15"></td>
+            <td><input type="text" name="LX92A3" size="15"></td>
+          </tr>
+        </table>
+        <p>一般说来，<input type="text" name="LX92B1" size="6">型数据默认左对齐，<input type="text" name="LX92B2" size="6">和日期型数据默认右对齐。</p> 
+        <p>3、填充柄的使用</p> 
+        <p>在A1单元格输入1，在A2单元格输入2，选择A1:A2，拖拽填充柄至A9，从A3到A9的单元格中数据分别是<input type="text" name="LX931" size="39">（数据间用“、”分隔）。</p> 
+        <p>在B1单元格输入3，在B2单元格输入5，选择B1:B2，拖拽填充柄至B9，从B3到B9的单元格中数据分别是<input type="text" name="LX932" size="39">（数据间用“、”分隔）。</p> 
+        <p>在C1单元格输入10/30，拖拽填充柄至C3，C2和C3显示的数据是：<input type="text" name="LX933" size="39">（数据间用“、”分隔）。</p> 
+        <p>在D1单元格输入“甲”，拖拽填充柄至D4，D2:D4中的数据是<input type="text" name="LX934" size="39">（数据间用“、”分隔）。</p> 
+        <p>在E1单元格输入“子”，拖拽填充柄至E5，E2:E4中的数据是<input type="text" name="LX935" size="39">（数据间用“、”分隔）。</p>
+		<p align="center"><input type="button" value="提交检查答案" name="B1" onclick="checkit()" ></p>
+        </form>
+        <hr>
+        <p><b>
+        实习任务8——Word中的图文混排</b><br>
+        参考&nbsp; <a href="sx07/index.htm">http://www.lpzx.edu.cn/weiji/wj/sx07/index.htm</a></p>          
+        <hr>
+        <p><b>实习任务7——Word中结构形象化的表达 表格</b></p>
+		<p align="center"><b>制作如下图所示的课程表</b></p>
+		<p align="center"><img border="0" src="07.gif" width="613" height="581"></p>
+		<p>&nbsp; 要求<br>
+&nbsp; 1、班级实际的课程<br>
+&nbsp; 2、行列整齐均匀合理<br>
+&nbsp; 3、文字居中，包括左右居中和上下居中<br>
+&nbsp; 4、颜色填充合理<br>
+&nbsp; 5、边框是文武线，内细外粗</p>
+		<hr>
+		<p><b>实习任务6——Word中结构形象化的表达 流程图</b><br>
+        &nbsp;&nbsp;&nbsp;
+        在WORD中制作书本上P69页,图4-9 桂林市中考招生报名流程图，制作好的文件保存在个人文件夹中，名称为流程图。</p>
+		<p>&nbsp;&nbsp;&nbsp; 注意：流程图的开始和结束应该使用<font color="#FF0000">圆角矩形</font>框，过程使用<font color="#FF0000">矩形</font>框，判别应该用<font color="#FF0000">菱形</font>框；Y和N的标志也可以用矩形框来制作，但应该把其填充颜色设为<font color="#FF0000">无填充颜色</font>，线条颜色设为<font color="#FF0000">无线条颜色</font>。</p>
+		<p>&nbsp;&nbsp;&nbsp; 
+		技巧1：为了使得流程线保持竖直，可考虑先作一个竖直的直线，其它元素与这根直线对齐，到最后再把该直线删除。</p>
+		<p>&nbsp;&nbsp;&nbsp; 技巧2：为了使得每一个框图与其它框图距离一致，绘制的箭头应该用复制的办法。</p>
+		<p>&nbsp;&nbsp;&nbsp; 技巧3：可以使用键盘的上下左右键来调整元素的位置，如果需要微调位置，可按住CTRL键</p>           
+        <hr>
+        <p><b>
+        实习任务5&nbsp;——Word简单文本段落格式</b></p>
+		<p>在WORD中完成以下作品——请假条.doc，保存在个人文件夹中，<font color="#FF0000">内容和格式</font>要求如下：</p>
+		<p><font color="#FF0000">页面设置：A4纸，纵向，上下页边距2.5厘米，左右页边距3厘米</font></p>
+		<p>请假条<font color="#FF0000">(段落格式：居中；字体格式：黑体,二号字，中间可适当加空格)</font><br>
+        XXX老师：<font color="#FF0000">(段落格式：居左或两端对齐；字体格式：宋体,三号字)</font><br>
+  我因……，敬请批准。<font color="#FF0000">（段落格式：两端对齐，首行缩进2字符；字体格式：宋体，三号字；说明请假原因，请假的时间，本段文字至少2行）</font><br>
+        <font color="#FF0000">（隔一行）</font><br>
+        此致<font color="#FF0000">（段落格式：居左或两端对齐；字体格式：宋体，三号字）</font><br>
+        敬礼！<font color="#FF0000">（段落格式：居左或两端对齐，首行缩进2字；字体格式：宋体，三号字）</font><br>
+        请假人：XXXX<font color="#FF0000">（段落格式：居右；字体格式：宋体，三号字；XXX处写真实姓名）</font>&nbsp;<br>
+        2017年XX月XX日<font color="#FF0000">（段落格式：居右；字体格式：宋体，三号字；XX处写真实日期）</font>
+        </p>
+		<p>提示：本实习中的文字几乎没有应用到空格键，用回车键（Enter）来进行隔行和分段处理。</p>
+        <hr>
+        <p><b>
+        实习任务4——人工智能</b><br>
+        1.利用http://fanyi.baidu.com (百度在线翻译)或其它翻译工具翻译“<font color="#FF0000"><b>一般而言，数据库中收录的信息资源专业性较强，主题明确，检索的相关性非常高。资源入库前进行了严格的定向筛选，质量比较高，具有较高的权威性。</b></font>”成英文，记录在书上，把翻译出来英文再次翻译成中文，记录在书本上。</p>
+		<p>记录内容</p>
+		<p>a.你所使用的翻译工具或网站地址<br>
+		b.中文翻译成英文的文字<br>
+		c.英文翻译成中文的文字</p>
+		<p>常见的在线翻译网站或地址，如果使用以下链接无法翻译，可考虑使用百度搜索其它在线翻译网站。</p>
+        <table border="1" width="100%" id="table2">
+          <tr>
+            <td width="21%">百度翻译：</td>
+            <td width="79%"><a target="_blank" href="http://fanyi.baidu.com">http://fanyi.baidu.com</a></td>
+          </tr>
+          <tr>
+            <td width="21%">爱词霸翻译：</td>
+            <td width="79%"><a target="_blank" href="http://fy.iciba.com/">http://fy.iciba.com/</a></td>
+          </tr>
+          <tr>
+            <td width="21%">有道翻译</td>
+            <td width="79%"><a target="_blank" href="http://fanyi.youdao.com/">http://fanyi.youdao.com/</a></td>
+          </tr>
+          <tr>
+            <td width="21%">谷歌翻译：</td>
+            <td width="79%">
+			<a target="_blank" href="http://translate.google.cn">http://translate.google.cn&nbsp;</a></td>
+          </tr>
+        </table>
+        <p>2．访问<a target="_blank" href="http://i.xiaoi.com/">http://i.xiaoi.com/</a>  ，和机器人小i聊天，
+		鉴定小i的学识水平。</p>
+		<p>把记录在书上的内容和聊天的记录展示给老师看。</p>
+        <hr>
+        <p ><b>实习任务3——编程解决问题初步</b><br>
+        完成书本上P46  VB6程序的调试</p>           
+        <p >大体的步骤：<br>
+        (1)运行VB6&nbsp;<br>
+        (2)新建一个程序&nbsp;<br>
+        (3)绘制程序运行的窗口 </p>
+		<p >&nbsp;&nbsp;&nbsp; 本程序设计运行时, 单击按钮,          
+        则在图形框中画抛物线图。则可知，<b><font color="#FF0000">程序运行的窗口一定包含有picturebox和commandbutton两个控件</font></b>。</p>
+		<p >(4)编写程序运行的代码 </p>
+		<p >&nbsp;&nbsp;&nbsp; 双击command1按钮，输入P46页的代码，或复制&nbsp;</p>
+		<p >Private Sub Command1_Click()<br>
+		Dim x, y As Single<br>
+		Picture1.Scale (-10, 25)-(10, -25)<br>
+		Picture1.Line (-10, 0)-(10, 0), RGB(0, 0, 255)<br>
+		Picture1.Line (0, 25)-(0, -25), RGB(0, 0, 255)<br>
+		For x = -10 To 10 Step 0.0001<br>
+		y = x ^ 2<br>
+		Picture1.PSet (x, y), RGB(255, 0, 0)<br>
+		Next x<br>
+		End Sub<br>
+		<br>         
+        (5)调试运行程序 </p>
+		<p >&nbsp;&nbsp;&nbsp; 菜单&nbsp;&nbsp; 运行/启动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		再单击“command1”按钮</p>
+		<p >如果出错，单击&quot;调试&quot;，找到出错的语句，单击&quot;停止&quot;，修改有错的语句，再次运行程序，直至完成。</p>          
+        <hr>
+		<p>
+        <b>
+        实习任务2——网络文件的下载</b><br>
+        a.从网络上下载广西2020年高考试题，要求下载至少2个科目的试题，保存在自己的个人文件夹中。</p>
+		<p>
+        &nbsp;&nbsp;&nbsp; 提示：网络上很多资源的下载需要注册会员、付费，如果自己没有相应的会员资格，<font color="#FF0000">应该尽量选用免费的资源</font>。</p>
+		<p>
+        b.从网络上下载2首音乐文件，保存在自己的个人文件夹中。</p>
+		<p>
+        &nbsp;&nbsp;&nbsp; 提示：网络上很多音乐的下载需要会员，付费等，建议使用千千音乐(原百度音乐)下载歌曲。</p>
+		<p>
+        &nbsp;&nbsp;&nbsp;
+        <b><font color="#FF0000">
+		打开自己所建的个人文件夹，里面应该能看到保存好的2份MP3文件和2份试卷文档。</font></b></p><p class="MsoNormal">
+		个人文件夹要求创建在D盘，格式： [班级][姓名]，如：202003张三<hr>
+		<p><b>实习任务1——网络搜索</b><br>
+        <font color="#FF0000">在网络上搜索以下答案，把答案记录在书本上，让老师检查正确则通过实习任务1。</font><br>
+        1、 2013 年 11 月 14 日，卡罗莱纳死神刷新了吉尼斯世界纪录，成为世界上最辣的辣椒。美国农夫艾德·卡瑞花费了 10 
+		年时间，终于培育出了自己梦寐以求的“武器品质辣椒”——卡罗莱纳死神的平均辣度比警用辣椒喷雾的辣度还高。辣椒辣的单位是__________，它的指数越高，代表越辣。</p>
+		<p>2、世界上第一台通用计算机于1946年在美国宾夕法尼亚大学诞生。发明人是美国人莫克利（JohnW.Mauchly）和艾克特（J.PresperEckert）。该计算机的名称是___________。</p>
+		<p>3、由于教会的迫害，苏格拉底被迫饮用一杯毒药致死，该毒药的主要植物成分是__________。</p>
+		<p>4、成语填空 天（__）马（__） （__）屯（__）聚</p>
+		<p>
+		5、据说，恐龙灭绝于6500年前的一次小行星冲击地球造成的巨大地质灾难，该小行星造的陨击坑发现于_________（填国家名)的尤卡坦半岛。</p>
+		<p>6、联想集团是国内著名的IT企业集团，现在英文名称是Lenovo，这个名称是2004年才用的，她以前的英文名称是___________。</p>
+		<p>7、2016年3月，AlphaGo与围棋世界冠军、职业九段棋手李世石进行围棋人机大战，以4比1的总比分获胜；AlphaGo由________(填著名IT公司名称)旗下DeepMind公司戴密斯·哈萨比斯领衔的团队开发。其主要工作原理是“深度学习”。</p>
+		<p>8、世界第一枚邮票出现在：______&nbsp;(填国家名)</p>
+		<p>9、衡量网络上数据传输速率的单位是bps，其含义是____________。&nbsp;</p>
+		<p>10、1984年举办第23届夏季奥运会的城市是____________。 </p>
+        <p class="MsoNormal">　
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+</body>
+
+</html>

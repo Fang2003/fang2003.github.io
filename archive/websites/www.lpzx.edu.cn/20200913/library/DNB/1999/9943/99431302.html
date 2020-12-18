@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用C＋＋ Builder编程实现串行通信</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用C＋＋ Builder编程实现串行通信</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用C＋＋ Builder编程实现串行通信 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　用C＋＋ Builder来编写串行通信程序，我们需要用到几个Windows API函数而不像在DOS下那样直接操作串口和中断芯片。这几个函数有OpenFile、CloseFile,GetCommState、SetCommState等。Microsoft的Visual Basic 中有一个OCX控件MSComm32,在VB中用它做串行通信程序很方便，将它装入Builder 3中，它的Input和Output属性是UnKnown，即Builder 3不认识MSComm32的这两个属性，我们升级到Borland 的C＋＋ Builder4.0，在Object Inspector中将不再看到这两个属性，但它们仍然存在，这两个属性的类型是OleVariant，也就是Ole万能变量，使用这种类型方法如下：<br>
+　　在要发送数据时，我们声明一个发送数据缓冲区,然后重置它的大小，填充它的元素，发送它，例如：<br>
+　　buff[200];／／请声明为全局变量<br>
+　　OleVariant TxBuff;／／声明一个OleVariant 变量<br>
+　　TxBuff=VarArrayCreate(OPENARRAY(int,(0,n)),varByte);／／重置它的大小，为0～n,int 为n的类型。<br> 
+　　／／varByte为TxBuff每一个元素的类型。<br>
+      　　&lt;n＋1;i＋＋)TxBuff.PutElement(buff[i],i);&gt;<br>
+      　　for(int i=0;ibr&gt; 　　 ／／填充元素，其中buff为你定义的一个固定数组，其中有你要发的数据。<br>
+　　MSComm1－&gt;Output=TxBuff;／／发送数据，MSComm1为你放在窗体上的一个MSComm32控件。<br>
+　　按收数据时请看下面的例子：<br>
+　　int buff[200];／／声明一个存储接收数据的缓冲区，全局变量<br>
+　　int ByteNum;／／收到的字节数<br>
+　　int BuffPtr;／／接收缓冲区的指针，请声明为全局变量，<br>
+　　OleVariant RxBuff;／／一个用于接收的OleVariant变量，<br>
+　　if(MSComm1－&gt;InBufferCount&gt;0)RxBuff=Communica1－&gt;Input;／／如果缓冲区中有多于一个字节的数据<br>
+　　ByteNum=RxBuff.ArrayHighBound(1);／／将实际读的字节数取出<br>
+      &lt;ByteNum＋1;i＋＋){buff[BuffPtr＋＋]=RxBuff.GetElement(i);}／／将接收数据读入自己的缓冲区&gt; 
+      　　for(int i=0;ibr&gt;<br>
+      　　在Object Inspector的Event标签中只有一个事件OnComm，这个事件在MSComm32控件收到数据时会被调用，但你必须设置RThreshold属性。这是一个门槛，表示收到几个字节就发送通知消息，如果为零，就不发送通知消息，这样你的OnComm函数就不会得到执行，TThreshold是发送门槛，不要忘记Settings。<br>
+　　另外值得注意的是MSComm32的OnComm事件不是很准确，有时候会丢失，你不能过分依赖这个事件，否则，经常发生的不是发不出数据，就是接收不到数据,最好的办法是使用一个定时控件，需要的时候就去读MSComm32控件的缓冲区。<br><b>
+（武汉　刘纪锋）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99431302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

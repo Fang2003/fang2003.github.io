@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(3);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document["Layer1"];
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(1, 20, 40, 60);
+    document.MM_Time[0][0].values = new Array(2);
+    document.MM_Time[0][0].values[0] = new Array(661,665,670,675,679,684,689,694,698,703,707,711,715,718,722,724,727,729,730,730,729,726,722,717,712,706,700,695,689,684,679,673,667,661,655,649,643,639,639,641,647,654,662,670,679,689,699,709,720,732,743,755,767,779,791,803,815,827,838,850);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(429,415,401,388,374,361,347,333,319,306,292,279,266,253,241,228,216,205,193,182,174,167,161,156,151,148,145,142,140,138,136,134,132,129,126,123,118,111,103,95,85,75,66,56,47,38,28,19,9,-1,-11,-21,-31,-41,-50,-60,-70,-80,-90,-100);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 2;
+    if (ns)
+        document.MM_Time[0][1].obj = document["Layer2"];
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 20, 40, 60);
+    document.MM_Time[0][1].values = new Array(4);
+    document.MM_Time[0][1].values[0] = new Array(75,75,75,75,75,75,75,75,75,75,76,76,76,76,76,76,76,76,76,77,76,75,74,74,73,72,72,71,70,70,69,68,67,67,66,65,65,64,63,63,62,62,62,62,62,62,61,61,61,61,61,61,61,60,60,60,60,60,60,60);
+    document.MM_Time[0][1].values[0].prop = "width";
+    if (!ns)
+        document.MM_Time[0][1].values[0].prop2 = "style";
+    document.MM_Time[0][1].values[1] = new Array(67,67,67,67,67,67,67,68,68,68,68,68,68,69,69,69,69,69,69,70,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,70,70,70,70,70,70,70,71,71,71,71,71,71,72);
+    document.MM_Time[0][1].values[1].prop = "height";
+    if (!ns)
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    document.MM_Time[0][1].values[2] = new Array(2,7,13,18,24,30,36,41,47,52,58,63,68,72,76,80,84,86,88,89,88,85,82,77,71,66,60,54,48,42,37,31,25,19,14,9,4,0,-3,-4,-4,-3,-1,1,4,7,10,14,18,22,26,31,35,40,44,49,54,58,63,67);
+    document.MM_Time[0][1].values[2].prop = "left";
+    document.MM_Time[0][1].values[3] = new Array(-80,-70,-61,-51,-42,-33,-23,-14,-4,5,15,24,34,43,53,62,71,81,90,100,108,115,121,127,132,136,140,144,148,151,155,158,162,167,172,177,183,191,199,207,217,228,239,249,260,271,283,294,306,317,329,341,353,365,377,389,400,412,424,436);
+    document.MM_Time[0][1].values[3].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[2].prop2 = "style";
+        document.MM_Time[0][1].values[3].prop2 = "style";
+    }
+    document.MM_Time[0][2] = new String("behavior");
+    document.MM_Time[0][2].frame = 61;
+    document.MM_Time[0][2].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 61;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+@import "mdd5.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="299">
+  <tr align="center" valign="middle"> 
+    <td height="7" width="12%">&nbsp;</td>
+    <td height="7" width="76%"> <b><font color="#CC33CC"><img src="dividef.gif" width="604" height="29"> 
+      </font></b></td>
+    <td height="7" width="12%"><b><font color="#FF6633"><a href="index_autch2.htm" class="mdd5">下一页</a><img src="next1-3.gif" width="21" height="21"></font></b></td>
+  </tr>
+  <tr align="center" valign="middle"> 
+    <td height="286" width="12%">
+      <div id="Layer2" style="position:absolute; width:75px; height:67px; z-index:2; left: 2px; top: -80px"><img src="qiu.gif" width="69" height="81"></div>
+    </td>
+    <td height="286" width="76%" valign="top"> 
+      <table width="100%" border="1" cellspacing="1" cellpadding="1" bordercolorlight="#6699FF" bordercolordark="#6699FF" bordercolor="#6699FF">
+        <tr> 
+          <td width="279" height="161"><img src="chg1.png" width="273" height="157"></td>
+          <td width="25" height="161" align="center"> 
+            <div align="center"><b><font color="#FF0066" class="mdd6">奥<br>
+              <br>
+              体<br>
+              <br>
+              中<br>
+              <br>
+              心</font></b></div>
+          </td>
+          <td width="280" height="161" valign="middle"><img src="chg2.png" width="270" height="157"></td>
+          <td width="25" height="161">
+            <div align="center"><b><font color="#FF0066" class="mdd6">奥<br>
+              体<br>
+              中心体育场</font></b></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="279" height="142"><img src="chg3.png" width="273" height="157"></td>
+          <td width="25" height="135"><b><font color="#FF0066" class="mdd6">奥<br>
+            体<br>
+            中心体育馆</font></b></td>
+          <td width="280" height="135"><img src="chg4.png" width="270" height="157"></td>
+          <td width="25" height="135"><b><font color="#FF0066" class="mdd6">奥<br>
+            体<br>
+            中心垒球场</font></b></td>
+        </tr>
+      </table>
+    </td>
+    <td height="286" width="12%">&nbsp; </td>
+  </tr>
+</table>
+<div id="Layer1" style="position:absolute; width:61px; height:76px; z-index:1; left: 661px; top: 429px"><img src="qiu.gif" width="69" height="81"></div>
+</body>
+</html>

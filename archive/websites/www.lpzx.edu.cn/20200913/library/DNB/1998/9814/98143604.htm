@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Windows 
+        95下打印机不能正常打印的故障处理</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台奔腾<br>
+        133 CPU、8M内存、1.2G硬盘的兼容机，安装有Windows 95 OSR2操作系统，连接一台Epson 
+        LQ—1600KⅡ打印机，在Windows 95下打印机工作异常，打印测试页时空走纸或打印一些非正常字符。<br>
+        　　故障分析与排除：Windows 95下打印机不能正常打印，其原因可能是多方面的。受病毒感染、打印机驱动程序受损或不匹配、并行打印口及打印机设置不当、接口电缆和主机打印卡有问题、打印机本身有故障等都会造成打印机不能正常工作。<br>
+        　　1.首先退回DOS下，使用“Print Screen”功能，打印机工作正常。说明打印机无硬件故障，打印接口电缆及主机打印卡没有问题。<br>
+        　　2.用KV300＋＋版软件对硬盘进行检测，没有发现病毒，确定硬盘未受感染。<br>
+        　　3.怀疑打印机驱动程序安装有误，于是启动Windows 95，进入桌面上“我的电脑”窗口，打开“打印机”文件夹，双击“添加打印机”图标，然后按照“打印机安装向导”提示，从安装盘对打印机进行重新安装，在“打印机列表”里选择“Epson 
+        LQ—1600K”，打印机端口设置为“LPT1：”，安装成功后，选择“打印测试页”，打印机故障同样存在。<br>
+        　　4.由于安装光盘不久前用过，排除打印机驱动程序遭到破坏的可能。<br>
+        　　5.仔细查看系统设备，没有“资源冲突”。<br>
+        　　6.检查后台打印设置，把后台打印的EMF数据格式更改为RAW数据格式，打印机故障依然存在；选择“直接输出到打印机上”，关闭后台打印功能，打印机故障依然存在。确定故障与后台打印设置无关。<br>
+        　　7.仔细查看打印机属性中的“详细资料”标签，看到<br>
+        　　打印到以下端口(P)：<br>
+        　　　　LPT1：(ECP打印机端口)<br>
+        字样，于是想到故障可能与CMOS里的并行口设置有关系。<br>
+        　　重新启动进入CMOS，打开INTEGRATED PERIPHERALS(集成外设端口设置)菜单，找到有关并行口的设置如下：<br>
+        　　Onboard Parallel Port:378/IRQ7(主板上并行口工作设置)<br>
+        　　Onboard Parallel Mode:ECP (主板上并行口工作模式)<br>
+        　　ECP Mode Use DMA:1(ECP模式使用的DMA号)<br>
+        　　“Onboard parallel port:”设置无误，查看“Onboard parallel Mode:”，有<br>
+        　　ECP(Extended capabilities port 扩展型并行口)<br>
+        　　EPP(Enhanced parallel port 增强型并行口)<br>
+        　　ECP/EPP(扩展型/增强型并行口)<br>
+        　　SPP(Standard parallel port 标准型并行口)<br>
+        四种类型，其中ECP和ECP/EPP模式使用的DMA号有“1”和“3”两种选择。<br>
+        　　把“Onboard parallel Mode:”设置修改为SPP(标准模式)(注：某些打印机不支持ECP和EPP模式!)，存盘退出，重新启动进入Windows 
+        95后，选择“打印测试页”，OK!测试页正确打印。故障排除。<br>
+        <br>
+        (云南 汪吉)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月13日第14期36版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<html><!-- #BeginTemplate "/Templates/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>简易rpm套件的制作</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->简易rpm套件的制作<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->在使用Linux的过程中可能可能需要安装新的软件升级已安装的软件或删除已安装的软件这就或多或少要用到rpm。<br>
+              rpm是Redhat公司开发的一种源代码和二进制代码封装的方式。这种封装的方式能让用户轻松地进行软件包的管理包括软件包的安装、升级、删除、查询等。由于采用rpm方式安装软件包无论是从二进制和源代码方面来讲都比用.tar.gz的方式要简单得多。故采用rpm安装软件成了Linux下安装软件的一个标准。对于有志于在Linux下编程的程序员来说掌握简易rpm套件的制作方法，对于推广自己的程序非常有用。<br>
+              rpm套件的制作大致可分为以下几步：<br>
+              1.取得.tar.gz格式的软件源程序和补丁文件。<br>
+              2.制作rpm套件的spec规格文件。<br>
+              3.执行rpm -ba 产生并测试rpm套件。<br>
+              整个包装rpm套件的重心就在于如何定义完整的rpm套件规格文件specification以及包装后的测试工作。制作rpm套件之前必须先了解整个系统文件的目录结构与运行。因为某些rpm套件的制作会常常牵扯到系统运行的问题比如安装了某种新的shell就必须在/etc/shells中加入该shell的可执行文件路径和名称才能正确使用该shell。为了免除这个顾虑可以先从无关系统运行的应用软件做起等对Linux系统相当熟悉了再尝试涉及系统运行的rpm套件制作。<br>
+              rpm的spec就如同编译程序时的Makefile定义制作rpm包的所有文件信息及制作流程其主要工作是将源程序解压缩为源程序打补丁编译源程序包装二进制码rpm包包装源代码rpm包清除包装过程在Build目录产生的临时目录。<br>
+              它山之石可以攻玉。多看看他人已经编好的spec文件是学习spec文件编写的捷径可以用以下命令将spec文件取出。<br>
+              $rpm -qlp *.src.rpm<br>
+              $rpm2cpio *.src.rpm｜cpio -ivh *.spec<br>
+              首先执行rpm -qlp查询得知该套件中有几个.spec文件再执行rpm2cpio将rpm文件转换成cpio文件格式并将转换结果输出给cpio程序把source 
+              rpm套件中的sepc文件解压取出。<br>
+              打开一个spec文件可以发现它可以分为以下几个段 %define、 %description、%prep、%build、%install、%clean、%files、%changelog。<br>
+              %define段主要用来做一些全局定义，如：版本号Version；简单的概要：Summary；程序的名称：Name；版权：Copyright；软件所属的组：Group；Source名称是最重要的位置，这里定义Source的来源一些tar.gz文件和一些补丁文件若该软件的Source不仅只有一个文件可以指定多重源程序只需要将“Source”和“Patch”标签编号依次指定即可，用户必须把该文件放在/usr/src/redhat/SOURCES目录下，rpm才可以进行包装工作；icon指名该套件的图标，必须是一个gif文件，且位于/usr/src/redhat/source目录下常常在安装某些软件是会出现某些依赖关系信息告诉用户必须先安装某些套件才能安装这个rpm套件的情况需要制作这种功能的rpm套件就是依赖“Requires”这个标签 
+              Requires共有&lt;、&gt;、&lt;=、 =、 &gt;=这五种。若某软件同时需要用到三四个函数库则Requires标签就必须定义三四行。或用逗号隔开写成一行，如 
+              Requires kdesupport。当然 %define段的标签还有几个不过不常用这里就不再多说了。<br>
+              %description段较为简单主要是对该软件的一个简要的介绍。<br>
+              %prep 段是spec的准备段该段主要执行包装rpm包的准备工作检查标签语法是否正确检查/usr/src/redhat/SOURCES目录是否存放源程序及补丁文件删除旧的软件源程序并替程序做untar、patch等工作。当然，这些工作可以写一些shell 
+              script来进行指定的工作，但是如果真的写shell script来进行这些准备工作，可能会令人苦恼。于是rpm开发人员为用户提供了%setup和%patch这两个命令来替用户处理这些繁杂的准备工作。<br>
+              %setup 不加任何选项，仅将软件包打开。<br>
+              %setup -n newdir 将软件包解压在newdir目录。<br>
+              %setup -c 解压缩之前先产生目录。<br>
+              %setup -b num 将第num个source文件解压缩。<br>
+              %setup -T 不使用default的解压缩操作。<br>
+              %setup -T -b 0 将第0个源代码文件解压缩。<br>
+              %setup -c -n newdir 指定目录名称newdir，并在此目录产生rpm套件。<br>
+              %patch 最简单的补丁方式，自动指定patch level。<br>
+              %patch 0 使用第0个补丁文件，相当于%patch -p 0。<br>
+              %patch -s 不显示打补丁时的信息。<br>
+              %patch -T 将所有打补丁时产生的输出文件删除。<br>
+              %build 段主要是用来完成程序的编译，通常情况下是一个make命令用来完成编译。<br>
+              %install 这个段较为复杂，该段主要执行安装的工作，在这里你可以写一些脚本将程序加入菜单栏中，由于各个发行版不同，各个脚本也不通用，最简单的就是执行make 
+              install来完成程序的安装(视不同程序的安装而定)。<br>
+              %clean段是spec的删除段，它是使用rm -f命令删除编译时的临时目录，一般用rm -rf $RPM_BUILD_ROOT即可。<br>
+              %files、%changelog段分别用来告诉用户软件安装的地方和软件的一些更新的日志等。<br>
+              做完这些后，一个spec文件就完成了，执行rpm -ba 产生并测试rpm套件，如果没出什么错的话，就会产生相应的二进制rpm包和源代码的srpm包。它们分别位于/usr/src/Redhat/RPMS和/usr/src/Redhat/SRPMS目录下(注：我使用的是Redhat 
+              7.0不同的发行版本路径有差别)。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

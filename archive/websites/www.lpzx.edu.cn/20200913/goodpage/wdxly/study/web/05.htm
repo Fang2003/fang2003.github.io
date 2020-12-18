@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>如何制作移动的浮动层</title>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td width="100%">
+<table border="0" width="100%">
+<tr>
+<td width="100%"><p align="center"><span style="color: rgb(252,177,3)" class="text11">如
+何 制 作 移 动 的 浮 动 层 </span></p>
+
+
+</table>
+<table border="0" width="100%">
+<tr>
+<td width="100%"><small><span style="color: rgb(125,125,125)" class="text"><font
+color="#663366">&nbsp;&nbsp;</font>□ 作者 ： 阿 捷<br>
+<br>
+许多网友问，有的站点上浮动的LOGO图标是如何实现的，这里有一个简单教程。
+
+<br>
+<br>
+第一步，请将下列原代码加入html文件的&lt;html&gt;和&lt;/html&gt;之间：
+<br>
+<br>
+<font color="Teal">&lt;style type=&quot;text/css&quot;media=&quot;screen&quot;&gt;<br>
+#floater {<br>
+position: absolute;<br>
+left: 500;<br>
+top: 146;<br>
+width: 125;<br>
+visibility: visible;<br>
+z-index: 10;<br>
+}<br>
+--&gt;<br>
+&lt;/style&gt;</font><br>
+<br>
+第二步，请将下列原代码加入body的任何地方（建议最后）:<br>
+<br>
+<font color="#408080">&lt;div ID=&quot;floater&quot;style=&quot;left:
+590px;top:
+58px&quot;&gt;<br>
+<br>
+&lt;p align=&quot;center&quot;&gt;&lt;img
+SRC=&quot;</font><font color="Red">../pic/logo1.gif</font><font
+color="#408080">&quot;alt=&quot;网页制作大宝库&quot;WIDTH=&quot;80&quot;
+
+HEIGHT=&quot;30&quot;&gt;&lt;br&gt;&lt;/p&gt;<br>
+&lt;/div&gt;&lt;script LANGUAGE=&quot;JavaScript&quot;&gt;<br>
+self.onError=null;<br>
+currentX=currentY=0;<br>
+whichIt=null;<br>
+lastScrollX=0;lastScrollY
+=0;<br>
+NS=(document.layers) ? 1 :
+0;<br>
+IE=(document.all) ? 1: 0;<br>
+&lt;!-- STALKER CODE --&gt;<br>
+function heartBeat() {<br>
+if(IE) {diffY=document.body.scrollTop;
+diffX=document.body.scrollLeft;
+}<br>
+if(NS) {diffY=self.pageYOffset;
+diffX=self.pageXOffset;}<br>
+if(diffY !=lastScrollY) {<br>
+percent=.1 * (diffY - lastScrollY);<br>
+if(percent &gt;0) percent=
+Math.ceil(percent);<br>
+else percent=Math.floor(percent);<br>
+if(IE) document.all.floater.style.pixelTop
++=percent;<br>
+if(NS) document.floater.top +=
+percent;
+<br>
+lastScrollY=lastScrollY + percent;<br>
+}<br>
+if(diffX !=lastScrollX) {<br>
+percent=.1 * (diffX - lastScrollX);<br>
+if(percent &gt;0) percent=
+Math.ceil(percent);<br>
+else percent=Math.floor(percent);<br>
+if(IE) document.all.floater.style.pixelLeft
++=percent;<br>
+if(NS) document.floater.left
++=percent;<br>
+lastScrollX=lastScrollX + percent;<br>
+} <br>
+}<br>
+&lt;!-- /STALKER CODE --&gt;<br>
+&lt;!-- DRAG DROP CODE --&gt;<br>
+function checkFocus(x,y) {<br>
+stalkerx=document.floater.pageX;<br>
+stalkery=document.floater.pageY;<br>
+stalkerwidth=document.floater.clip.width;<br>
+stalkerheight=document.floater.clip.height;<br>
+if((x &gt;stalkerx &amp;&amp;
+x
+&lt;(stalkerx+stalkerwidth))
+&amp;&amp;
+(y &gt;
+stalkery &amp;&amp;y &lt;(stalkery+stalkerheight)))
+return true;<br>
+else return false;<br>
+}<br>
+function grabIt(e) {<br>
+if(IE) {<br>
+whichIt=event.srcElement;<br>
+while (whichIt.id.indexOf(&quot;floater&quot;)
+==-1) {<br>
+whichIt=whichIt.parentElement;<br>
+if (whichIt==null) {return
+true;
+}<br>
+}<br>
+whichIt.style.pixelLeft=whichIt.offsetLeft;<br>
+whichIt.style.pixelTop=whichIt.offsetTop;<br>
+currentX=(event.clientX + document.body.scrollLeft);<br>
+currentY=(event.clientY + document.body.scrollTop);
+<br>
+} else {<br>
+window.captureEvents(Event.MOUSEMOVE);<br>
+if(checkFocus (e.pageX,e.pageY))
+{<br>
+whichIt=document.floater;<br>
+StalkerTouchedX=e.pageX-document.floater.pageX;<br>
+StalkerTouchedY=e.pageY-document.floater.pageY;<br>
+} <br>
+}<br>
+return true;<br>
+}<br>
+function moveIt(e) {<br>
+if (whichIt==null) {return
+false;
+}<br>
+if(IE) {<br>
+newX=(event.clientX + document.body.scrollLeft);<br>
+newY=(event.clientY + document.body.scrollTop);<br>
+distanceX=(newX - currentX);
+distanceY
+=(newY - currentY);<br>
+currentX=newX;currentY=newY;<br>
+whichIt.style.pixelLeft +=distanceX;<br>
+whichIt.style.pixelTop +=distanceY;<br>
+if(whichIt.style.pixelTop &lt;
+document.body.scrollTop)
+whichIt.style.pixelTop=
+document.body.scrollTop;<br>
+if(whichIt.style.pixelLeft &lt;
+document.body.scrollLeft)
+whichIt.style.pixelLeft=
+document.body.scrollLeft;<br>
+if(whichIt.style.pixelLeft &gt;
+document.body.offsetWidth
+- document.body.scrollLeft -
+
+whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft
+=document.body.offsetWidth -
+
+whichIt.style.pixelWidth - 20;<br>
+if(whichIt.style.pixelTop &gt;
+document.body.offsetHeight
++ document.body.scrollTop -
+whichIt.style.pixelHeight - 5) whichIt.style.pixelTop
+=document.body.offsetHeight
++
+document.body.scrollTop - whichIt.style.pixelHeight
+- 5;<br>
+event.returnValue=false;<br>
+} else {<br>
+whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);<br>
+if(whichIt.left &lt;0+self.pageXOffset)
+whichIt.left=0+self.pageXOffset;<br>
+if(whichIt.top &lt;0+self.pageYOffset)
+whichIt.top=0+self.pageYOffset;<br>
+if((whichIt.left + whichIt.clip.width)
+&gt;=(window.innerWidth+self.pageXOffset-17))
+
+whichIt.left=((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;<br>
+if((whichIt.top + whichIt.clip.height)
+&gt;=(window.innerHeight+self.pageYOffset-17))
+
+whichIt.top=((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;<br>
+return false;<br>
+}<br>
+return false;<br>
+}<br>
+function dropIt() {<br>
+whichIt=null;<br>
+if(NS) window.releaseEvents (Event.MOUSEMOVE);<br>
+return true;<br>
+}<br>
+&lt;!-- DRAG DROP CODE --&gt;<br>
+if(NS) {<br>
+window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);<br>
+window.onmousedown=grabIt;<br>
+window.onmousemove=moveIt;<br>
+window.onmouseup=dropIt;<br>
+}<br>
+if(IE) {<br>
+document.onmousedown=grabIt;<br>
+document.onmousemove=moveIt;<br>
+document.onmouseup=dropIt;<br>
+}<br>
+if(NS || IE) action=window.setInterval(&quot;heartBeat()&quot;,1);<br>
+&lt;/script&gt;</font><br>
+<br>
+　　修改上面红色显示的语句，改为你自己的图片路径，并且修改图片的大小，OK!
+
+　</span></small>
+
+</table>
+
+
+</table>
+<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></center>
+</div>
+</body>
+</html>

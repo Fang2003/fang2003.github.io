@@ -1,0 +1,167 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0130/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0130/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第30期 </a>&gt;&gt;<a href="software.html">软件世界</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td height="2"> 
+            <div align="center">BeOS 5多系统设置祥解</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>BeOS 5 Personal Edition是在Windows下安装的，它建立了一个叫image．be的虚拟分区文件，在启动BeOS以后，一切的工作都是在这个虚拟分区里进行的。但是这个虚拟分区最大只有500MB，启动也不太方便；而BeOS 
+              5 Pro Edition则是安装在独立的BFS分区里，它在安装后可以通过多重引导程序来进行快速引导。其实个人版也可以和Pro版一样安装在独立的BFS分区里。<br>
+              一、将BeOS 5 Personal Edition安装在独立的BFS分区<br>
+              1．首先，用PQ Magic或其它分区软件在硬盘上划出一个新的空白分区，使用FAT或FAT32格式，容量不要小于250MB。<br>
+              2．然后在Windows下安装BeOS 5 Personal Edition(如果已经安装了，你可以跳过这一步)。<br>
+              3．启动BeOS，运行Deskbar＞Applications＞Installer(BeOS中的安装程序)。在Onto下选择刚才建立的新分区(如图)。然后点击Begin安装，BeOS会自动将分区格式化为BFS格式然后安装系统。(^30020902a^)<br>
+              4．从/boot/beos/bin/bootman中启动Bootman，这是一个多重引导管理程序。在这里，你可以将C盘和刚刚建立的BFS分区选中，至于其它的扩展分区就不要选了。当然你可以为它们改名，这样在开机选择分区时会一目了然。然后，点击Next，选择你要启动的默认分区，再选择启动菜单等待时间，最后完成。你的BeOS 
+              5 Pro Edition就被安装在BFS分区了。<br>
+              5．此后，你可以卸载安装在Windows下的BeOS。<br>
+              假如你不愿意将BeOS安装到一个独立的分区中，那就要从Windows中入手了。下面向大家介绍BeOS 5 Personal 
+              Edition与Win9x/ME、WinNT/2000/XP的多重启动设置。<br>
+              二、BeOS 5 Personal Edition与Win9x/ME的多重引导设置<br>
+              在BeOS 5 Personal Edition的安装目录中，你会发现一个名为LoadBeOS．com的文件，这并不是一个Win32程序，而是一个不折不扣的DOS命令。Win98就是通过这个命令进入BeOS的。因为这是一个DOS命令，我们可以直接从DOS进入BeOS。当然，光一个命令是不行的，在这个目录下还有一个叫Zbeos的文件，这是BeOS引导扇区的镜像文件。拥有这两个文件，下面我们就来进行多重引导设置。<br>
+              首先，我介绍一下BeOS与Win9x/ME的双启动设置。Win9x/ME是一款使用DOS启动的操作系统，如果要将它与BeOS形成双启动，必须先设置将它与MS 
+              DOS双启动。<br>
+              1．打开C:＼下的Config．sys文件，将其中的内容全部删除，然后填入以下内容：<br>
+              [menu]<br>
+              menuitem=win，MS Windows<br>
+              menuitem=beos，BeOS 5<br>
+              menudefault=win，30<br>
+              menucolor=7，0<br>
+              [win]<br>
+              [beos]<br>
+              [COMMON]<br>
+              lastdrive=z<br>
+              2．编辑自动批处理文件Autoexec．bat：<br>
+              @ECHO OFF<br>
+              IF“%config%”==“win” GOTO win<br>
+              IF“%config%”==“beos” GOTO beos<br>
+              ：win<br>
+              GOTO END<br>
+              ：beos<br>
+              cls<br>
+              cd BeOS<br>
+              LoadBeOS<br>
+              GOTO END<br>
+              3．在C:＼下建立一个文件夹BeOS(如果你的BeOS安装在C盘，就无须建立了)，将LoadBeOS．com和Zbeos拷入即可。在启动时会出现一个启动菜单，让你来选择。<br>
+              三、BeOS 5 Personal Edition与WinNT/2000的多重引导设置<br>
+              用过WinNT/2000的朋友都知道，Win NT/2000可以和Win9x双启动。我前面已经说过，Win9x是从DOS启动进入的。因此WinNT 
+              NT/2000也可以和DOS形成双启动，同理和BeOS也可以。<br>
+              1．在一台装有WinNT的系统中拷入Io．sys、Command．com文件。当然，先要确保BOOTSECT．DOS文件存在，否则无法实现。<br>
+              2．修改boot．ini文件：<br>
+              [boot loader]<br>
+              timeout=30<br>
+              default=multi(0)disk(0)rdisk(0)partition(2)＼WIN2000<br>
+              [operating systems]<br>
+              multi(0)disk(0)rdisk(0)partition(2)＼WIN2000=“Microsoft WindowsNT”/fastdetect<br>
+              C：＼=“BeOS 5 Personal Edition”<br>
+              完成后，就形成了WinNT与DOS的双启动。<br>
+              3．在C：＼下建立一个文件夹BeOS，将LoadBeOS．com和Zbeos拷入。<br>
+              4．在C：＼下建立Autoexec．bat文件：<br>
+              @ECHO OFF<br>
+              cls<br>
+              cd beos<br>
+              LoadBeOS<br>
+              GOTO END<br>
+              这样，你就可以像启动Win98一样启动BeOS了。如果你的系统是Win9X、WinNT、BeOS三系统的话，你可以将上述两种方法结合使用。<br>
+              四、从WinME中启动BeOS<br>
+              最后，我来介绍一下从WinME中启动BeOS的方法。使用WinME的朋友都知道，WinME是不支持DOS实模式的，也就是说在WinME中无法使用BeOS 
+              5 Personal Edition的启动程序LoadBeOS．com。现在，这个问题已经解决了。你可以去BeOS At China(http：//www．beos．0163．com/)下载一个BeLoad 
+              for WinME 1．0的程序，拷贝到BeOS安装目录即可。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

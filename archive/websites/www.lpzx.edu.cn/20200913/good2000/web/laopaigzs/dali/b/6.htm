@@ -1,0 +1,196 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>大理是一首诗</title>
+<style type="text/css">
+  .spanstyle { position:absolute; visibility:visible; top:-50px; font-size:12; color:#FF0000; font-weight:bold;}
+</style>
+<bgsound src="../../images/als.mid" loop="-1">
+</head>
+
+<body onLoad="makesnake()" background="../../images/bj.jpg" bgproperties="fixed">
+<script>
+var X, Y
+var step = 20
+var flag = 0
+var message = "欢迎来到老排工作室！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-50}
+function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1}
+function makesnake() {
+    if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+        for (i=0; i<message.length-1; i++) {
+            var thisspan = eval("span"+(i)+".style")
+            thisspan.posLeft=xpos[i]
+            thisspan.posTop=ypos[i]     }   }
+    else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+            for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+  thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<script language="JavaScript">
+var speed=100;
+function infoscroll(seed, looped)
+{  var msg="欢迎你来到老排工作室!        让我们一起推动中国网络进步！";
+  var putout = " ";
+  var c = 1;
+  if (seed > 100)
+  {  seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 100 && seed > 0)
+  { for (c=0 ; c < seed ; c++)
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 0){
+    if (-seed < msg.length)
+    { putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,speed);}
+    else
+    { window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,speed);}}}
+infoscroll(100,1)
+</SCRIPT>
+
+<p>&nbsp;&nbsp;&nbsp; <a href="5.htm"><img border="0" src="../a/images/a11.gif" width="96" height="36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;<font color="#0000FF" size="7">      
+<b>游后记</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<b><font size="5"><a href="../../index.htm"><img border="0" src="../a/images/a16.gif" width="100" height="45"></a></font></b></p>   
+   
+<table border="0" width="683" height="37">     
+  <tr>     
+    <td width="228" height="37"><applet code="fphover.class" codebase="./" width="224" height="24">     
+          <param name="textcolor" value="#FFFFFF">     
+          <param name="effect" value="glow">     
+          <param name="color" value="#000080">   
+          <param name="hovercolor" value="#0000FF">   
+          <param name="text" value="扎染">     
+          <param name="url" valuetype="ref" value="4.htm">     
+        </applet>     
+    </td>     
+    <td width="228" height="37"><applet code="fphover.class" codebase="./" width="225" height="24">     
+          <param name="color" value="#000080">     
+          <param name="hovercolor" value="#0000FF">     
+          <param name="textcolor" value="#FFFFFF">     
+          <param name="effect" value="fill">    
+          <param name="text" value="蝴蝶泉">    
+          <param name="url" valuetype="ref" value="5.htm">    
+        </applet>    
+    </td>    
+    <td width="227" height="37"><applet code="fphover.class" codebase="./" width="209" height="24">    
+          <param name="color" value="#000080">    
+          <param name="hovercolor" value="#0000FF">    
+          <param name="textcolor" value="#FFFFFF">    
+          <param name="effect" value="glow">    
+          <param name="text" value="游后记">    
+          <param name="url" valuetype="ref" value="6.htm">    
+        </applet>    
+    </td>    
+  </tr>    
+</table>    
+   
+<p>　</p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td width="50%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="images/b27.jpg" width="204" height="310"></td>     
+    <td width="50%">     
+<p>大理是一首诗；</p>     
+<p>大理是一曲歌；</p>     
+<p>大理是滇西的一方瑰宝；</p>     
+<p>大理是人间的一个美梦。</p>     
+<p>&nbsp;&nbsp;&nbsp; 她咏唱出苍山洱水的灵秀；</p>       
+      <p>&nbsp;&nbsp;&nbsp; 她抒发着古城今貌的风韵；</p>       
+<p>&nbsp;&nbsp;&nbsp; 她是历史文化精髓的永驻；</p>      
+<p>&nbsp;&nbsp;&nbsp; 她是人与自然和谐的写实；</p>      
+<p>&nbsp;&nbsp;&nbsp; ……。</p>       
+      <p>　</td>     
+  </tr>     
+</table>     
+<table border="0" cellpadding="0" cellspacing="0" width="100%">  
+  <tr>  
+    <td width="16%"></td>  
+    <td width="120%">  
+      <p style="line-height: 200%">&nbsp;&nbsp;&nbsp;&nbsp; <font color="#006699">“美是无处不在的，人们缺少的只是发现美的眼睛。”这几年来，虽身在大理，但每天“两点一线”，匆匆往返于学校和家之间。思想放在学习上，眼睛盯在书本上，闲暇时也看电影，踢足球，玩电脑，可是在不知不觉中已有2、3年未曾探访大理古城。此番“故地”重游，飞入寻常百姓家，感触颇深。两日来，我们漫步于苍洱之间，攀高山，访名胜，入深巷，宿民宅。领略大理风光，体味民族风情，这里的每一寸土地，都渗透着白族人民辛勤的汗水。我们伟大的祖国孕育出伟大的人民，伟大的人民创造出优秀的民族文化。聪明勤劳的白族人民创造出了扎染布。祖国，她用五千年的时间，创造出那么多优秀的民族文化遗产。那是多么博大精深。可现在，仍有很多人崇洋媚外，无论什么总以为是外国的好。其实真正好的，就在中国，就在我们身边，那就是我们的民族文化，她是什么也替代不了的。</font></td>  
+    <td width="14%"></td>  
+  </tr>  
+</table>  
+<p><img border="0" src="images/b29.gif" width="365" height="13"></p>    
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="237">    
+  <tr>    
+    <td width="61%" height="136">    
+<p><font color="#0000FF" size="2">老排：“半个月亮爬上来，爬上老排的工作台……”</font></p>    
+<p><font color="#800080" size="2">&nbsp;&nbsp; LR：“别瞎唱，快给这一幅加 KPT     
+，要朦胧效果。”</font></p>    
+<p><font color="#0000FF" size="2">老排：“对面的金花看过来，看过来……”</font></p>    
+<p><font color="#800080" size="2">&nbsp;&nbsp; LR：“认真做图，白天还没看够吗？”&nbsp;     
+</font></p>    
+    </td>    
+    <td width="39%" height="136"><font size="2">&nbsp;&nbsp; <img border="0" src="images/b30.gif" width="140" height="104"></font></td>    
+  </tr>    
+  <tr>    
+    <td width="100%" colspan="2" height="36"><font color="#0000FF" size="2">老排：“我是真的想要睡了，你却还要我继续做，边框我也插上了，夜已深了，我……”</font></td>    
+  </tr>    
+  <tr>    
+    <td width="61%" height="65">    
+<p><font color="#800080" size="2">&nbsp; LR：“Zz Zz Zz Zz Zz …………” </font></p>     
+<p><font color="#0000FF" size="2">老排：“啊？！      
+你倒先睡着了！”</font></p>     
+    </td>     
+    <td width="39%" height="65">    
+<b><font size="5"><a href="../../index.htm"><img border="0" src="../a/images/a16.gif" width="100" height="45"></a></font></b>     
+    </td>     
+  </tr>     
+</table>     
+     
+<p><img border="0" src="../../images/124.gif" width="645" height="16"></p>  
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+老排工作室倾力制作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<a href="mailto:lr9528@21cn.com"><img border="0" src="../../images/mail.gif">&nbsp;&nbsp;   
+联系我们</a></p>  
+     
+</body>     
+     
+</html>     

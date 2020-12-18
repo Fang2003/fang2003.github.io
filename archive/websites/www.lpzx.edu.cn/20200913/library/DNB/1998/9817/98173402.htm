@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>为何不能进入PWIN97<br>
+        ——对第12期《专家坐堂》的补充<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp; 
+        &nbsp;&nbsp; 关于启动PWIN97时，按下F4键进入DOS 622，出现PWIN97不能启动的情况，笔者认为专家的解决方法有待商榷。其实，在装有PWIN97的计算机上，都存在上述问题，其原因是由于安装PWIN97时，PWIN97会将原DOS的启动文件、系统配置文件及自动批处理文件的扩展名均更名为dos。在用硬盘启动计算机时，若按下F4键进入原DOS 
+        622，系统将对PWIN97的启动文件进行更名，从而导致上述故障，因此可用装有DOS 
+        622系统文件的软盘启动电脑，然后运行Pctools 5.0，按F10键改变路径到C：\下，将Io.sys、Msdos.sys、Command.com、Config.sys、Autoexec.bat的扩展名均更名为dos，然后再将Jo.sys、Msdos.w40、Command.w40、Config.w40、Autoexec.w40的文件名改为正常文件名。最后退出Pctools 
+        5.0，并重新启动计算机后，即可正常启动PWIN97了，但这只是治标不治本的办法，这时应在Windows中制作PWIN97的应急启动盘，然后退出PWIN97，用应急启动盘启动计算机，在DOS提示符下用SYS 
+        C：命令向C盘传送系统文件。这样即可完全解决该问题。<br>
+        　　若无Pctools 5.0，可改用DOS命令Attrib和Ren进行更名操作。为方便操作，也可将上述操作编成自动批处理文件Fixwin97.bat，程序文档如下：<br>
+        　　path c:\dos<br>
+        　　attrib －h －s －r io.sys<br>
+        　　ren io.sys io.dos<br>
+        　　attrib ＋h ＋s ＋r io.dos<br>
+        　　attrib －h －s －r msdos.sys<br>
+        　　ren msdos.sys msdos.dos<br>
+        　　attrib ＋h ＋s ＋r msdos.dos<br>
+        　　ren command.com command.dos<br>
+        　　ren config.sys config.dos<br>
+        　　ren autoexec.bat autoexec.dos<br>
+        　　attrib －h －s －r jo.sys<br>
+        　　ren jo.sys io.sys<br>
+        　　attrib ＋h ＋s ＋r io.sys<br>
+        　　attrib －h －s －r msdos.w40<br>
+        　　ren msdos.w40 msdos.sys<br>
+        　　attrib ＋h ＋s ＋r msdos.sys<br>
+        　　ren command.w40 command.com<br>
+        　　ren config.w40 config.sys<br>
+        　　ren autoexec.w40 autoexec.bat<br>
+        　　另外，虽然专家提到的补丁程序Fix95B.com能解决进入DOS 622后不能启动PWIN97的问题，但据笔者经验，在运行fix95B后，会出现一些莫名其妙的管理长文件名方面的错误，且系统不太稳定，最终只能重装PWIN97。虽然上述问题与运行Fix95Bcom不一定有必然联系，但笔者认为还是小心为妙。<br>
+        <br>
+        (贵州　黄建刚　江苏　徐代忠)</p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年5月4日第17期34版</font></a></span><font
+        color="#369681"></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

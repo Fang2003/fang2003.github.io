@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 升级主板BIOS时“内存不足”处理一例</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>47 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 升级主板BIOS时“内存不足”处理一例</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 升级主板BIOS时“内存不足”处理一例 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　看了1999年11月1日第43期《电脑报》上《在Windows下升级BIOS》一文，大有同感，因为笔者也遇到过升级主板BIOS时“内存不足”（ Insufficient Memory）的问题，但后来解决的办法跟陈军作者不同。<br>
+　　笔者的主板是较少见的耕宇5VPA，是支持K6－2的Super7主板，BIOS是Award BIOS v4.51PG，因买得比较早，其BIOS比较陈旧，日期是1998年5月份的，把K6－2识别为K6 3D，虽说不影响使用，但总觉得不舒服。<br>
+　　根据有关文章介绍，升级BIOS的步骤是：1.在纯DOS环境下，用format  a：／s 命令格式化一张空白软盘。2.把BIOS升级文件和刷新程序Awdflash.exe拷入这张软盘。3.用这张盘引导电脑进入DOS，然后执行刷新程序。 我不敢怠慢，严格按照这个次序按部就班地做。先按照要求，格式化好一张软盘；再去一熟人处上网，从耕宇的主页上下载最新的BIOS升级文件，拷到这张软盘上；然后再从原来买主板时附送的驱动光盘上拷下来刷新工具Awdflash.exe 。万事俱备，只在最后一搏。<br>
+　　用这张软盘启动电脑，进入DOS实模式，在A：\&gt;后键入awdflash ，按Enter键，进入BIOS更新程序，一切似乎都很顺利，在光标闪动处(File Name to Program：－－)小心翼翼地键入BIOS升级文件名5VPA14.bin ，回车，先是出现“checksum：4699H” 的字符，然后在屏幕下方红色的错误信息处出现白色的“Insufficient Memory”的提示，并不停闪烁，紧接着回到A：\&gt;状态，不能升级。内存不足！奇怪，我的内存可是160MB，怎么会内存不足呢？这跟内存有什么关系？我由忐忑不安一下子变成大惑不解。原来总怕升级失败，但现在不能升级又让我十分不甘心：这些天来岂不是白忙活了！为解决这个问题，我又重装了一遍Win98，无效；杀毒，没用；用一些工具软件如Norton Utilities 、Regclean、Clean System等处理，情况依旧。依照一些报刊介绍的在CMOS中把“Video BIOS Cacheable”和“System BIOS Cacheable”都设为“Disabled”，可还是不行。<br>
+　　再重新启动电脑，当在出现“Starting Windows98”字样后，按F8键，进入启动选项菜单，选第六项“Safe Mode command prompt only" ，即绕过Config.sys和Autoexec.bat两文件的执行。这种方式系统不推荐，推荐的方式都是那种用事先制作的软盘来引导。但现在不管那么多了，死马当活马医。重新启动电脑，如前所述，进入C：\&gt;状态，转入A：\&gt; awdflash，进入刷新程序界面，键入5VPA14.bin ，回车，又出现“checksum：4699H” ，紧接着提示“Do You Want To Save Bios  (Y／N)”，有门儿，选“Y”，这时又出来“File Name to Save：－－”框，让操作者给原来的BIOS取个名字保存起来，以备升级失败后用来恢复，我老老实实地按标准格式取名为5VPA11.bin，因为我原来的版本是1.1，回车，保存旧BIOS ，然后又提示“Are you sure to program (Y／N)”， 选“Y”，这时看到“Programming Flash Memory”字样，紧接着下面是用条状图显示出进展过程。大约10秒钟后，出现了提示：“Reset System or power off to accomplish update process!   F1 Reset  F10 Exit ！” 意思是让使用人重启系统或关机再开机以使新BIOS发挥作用。按F1键，重新启动电脑，短暂的黑屏后先是显示显卡的信息，紧接着是显示主板BIOS信息，这时看到5VPA的版本已变成v1.4，下面的版本日期也由原来的5／8／1998变为11／11／1998，CPU的信息也变成K6－2／300，而不再是K6 3D了。按Del键进入BIOS设置，发现有不少新变化，调至最佳状态，至此升级BIOS大功告成。<br><b>
+(重庆　杨拂玄)     </b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99472302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

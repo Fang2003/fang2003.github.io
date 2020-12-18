@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 硬盘也会嫁祸于人</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/databandbanner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>34 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 硬盘也会嫁祸于人</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 硬盘也会嫁祸于人 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　前几日，一同事匆匆赶来找我，说办公室里的一台机器坏了，不能启动了，要我去看看。一听不能启动，我便顺手拿了一张DOS6.22的安装盘跟他去了。走到一看，不得了，硬盘灯不亮，一个5英寸软驱的灯也不亮，启动后屏幕显示:“Flopy Disk Failure 40”，按一下F1键，便死机了。<br>
+　　于是，接下来采用我惯用的“伎俩”，先拿CMOS开刀。看看软驱是否被修改，哪知反复调整型号及顺序均不行，后来干脆将硬盘类型设置为“NONE”，还是不行，怎么做屏幕都是显示一句：“Flopy Disk Failure 40”。看来不来点厉害的不行了，得拿出我的绝招来：把机器大卸八块，从零做起，逐个分析。拆开机箱一看，差点没把我鼻子气歪，原来5英寸软驱根本就没用，电源和数据线都没接！不过，总算排除了一个因素。接下来，将硬盘连线通通拔掉，又看了看小软驱的连线是否牢固，重新插拔了一遍，然后开机将启动顺序改为“A: C:”，重新启动，屏幕显示：“Starting MS－DOS...”，哈哈，成功有望了。不过不能高兴得太早了，先试试硬盘再说吧，于是接上硬盘的电源（这次多了个心眼，换了一个插头）和信号电缆，将类型改为原类型。拿出软盘重启后，显示到“Updating ESCD ...”又趴窝了。再插入软盘启动，进入C盘，发现C盘的内容完好无损，看来是引导系统出了问题，战略中心需要转移了。<br>
+　　仔细查看系统文件，发现有IO.W40、MSDOS.W40和COMMAND.W40文件，这应该是给Win95设置双重启动时进入DOS6.22后产生的文件。同时又没有＊.DOS文件,说明有人在使用时，进入了Win95启动菜单，选择了DOS6.22启动，但由于双启动设置不当，之后未能再启动进入Win95将其文件名改过来。同时同事告知，这台机器前一段时间由几个实习的学生使用，后来就没再动过，直到今天开机时才发现问题，原因很可能就在这儿。既然有了思路，那就动手吧。由于手头上没有工具，只好手工操作，用A盘的ATTRIB命令将几个系统文件的系统和隐含属性全部去掉，将IO.SYS、MSDOS.SYS和COMMAND.COM的扩展名改为DOS，将IO.W40改成IO.SYS，MSDOS.W40改为MSDOS.SYS，COMMAND.W40改为COMMAND.COM，然后再拿出软盘重新启动，“Starting Windows 95”终于出现了！提示因非正常关机需要SCANDISK，运行完毕，终于出现了“蓝天白云”，系统完全正常了！<br>
+<b>(山东　李飚)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/34/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99342302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

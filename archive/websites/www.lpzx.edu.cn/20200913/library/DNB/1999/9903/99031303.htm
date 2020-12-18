@@ -1,0 +1,98 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>VB编程俱乐部</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">VB编程俱乐部<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　主持人：<a
+        href="99031305.htm">庞一鸣</a><br>
+        　　问：我在学习VB过程中遇到一个问题，如源代码： <br>
+        　　SndPlaySound(″c:\MyWork\beep.wav″) <br>
+        　　在制成安装盘后，安装到其它机器中不同目录下就不能执行，必须安装到C:\ 
+        MyWork下才能执行。怎样在源代码中识别，或有更好的办法。<br>
+        　　答：这是初学者经常忽略的一个小问题。在打开文件、调用程序时喜欢使用绝对文件路径。其实，只要使用相对路径，就完全可以避免这个问题。在Windows下，某个程序一旦运行，除非特别指定了工作目录，一般该程序文件所在的目录就是工作目录，其他目录可以用工作目录为参照系。例如，上述问题中，程序被安装到了MyWork目录下，那么在MyWork 
+        目录下的所有文件就不必用路径全称了，可以直接 SndPlaySound(″Beep.wav″)。以此类推，如果要播放 
+        C:\MyWork\Sound\ABC.Wav 文件，就可以SndPlaySound(″Sound\ABC.wav″)。以后无论应用程序安装在何处，都可以避免这一问题。<br>
+        　　问：VB5.0生成的Exe文件能不能在一台从没装过VB5.0的机器上运行，如不能应如何做? 
+        <br>
+        　　答：当然可以。你只要运行VB5带的“应用程序安装向导”就可以了。向导自动把应用程序及其依赖的DLL、OCX、DAO驱动程序等打包，形成一个安装程序。分发这个安装包就一切搞定了。<br>
+        　　问：假设表A有一字段B(文本型，8个字符），当我在表中进行输入时超过8个字符，系统就会禁止我输入，这没有什么问题。但当我在VBA中使用DAO编辑这个字段时，我遇到了麻烦。<br>
+        　　答：可以通过DAO提供的 Recordset或 TablDef 对象来得到字段B的长度，然后，根据情况把你的值直接赋予它或截断后赋值。例如：<br>
+        　　Dim db as Database,rs as Recordset<br>
+        　　Dim iSize as Integer,S as String<br>
+        　　set db = DBEngine.OpenDatabase(″XXX.mdb″)<br>
+        　　set rs = db.OpenRecordset(″TableA″)<br>
+        　　iSize = td(″FieldB″).Size ′ 字段长度<br>
+        　　……<br>
+        　　′ 下面准备赋值<br>
+        　　S = ″ABC中DE国FGEGHG″<br>
+        　　set rs = db.OpenRecordset(″TableA″)<br>
+        　　rs.Edit<br>
+        　　If iSize &gt;= LenB(strconv(S,vbFromUnicode )) Then<br>
+        　　rs(″FieldB″) = S ′ 直接赋值<br>
+        　　Else<br>
+        　　rs(″FieldB″) = LeftB(strconv(S,vbFromUnicode ),iSize) ' 截断赋值<br>
+        　　EndIf<br>
+        　　rs.Update<br>
+        　　……<br>
+        　　请注意，VB或VBA中字符串默认以 vbUnicode 
+        格式保存，所以要转换后再比较运算。请参阅函数 StrConv()，参数:vbFromUnicode,vbUnicode，及Byte 
+        数组,和以‘B’结尾的函数。<br>
+        　　问：我写了个应用程序，第一次进入时想要求用户输入密码，并将密码保存（有什么方法别人看不到）。下次进入时提示输入密码。应如何完成呢？<br>
+        　　答：可以把密码保存到 INI 
+        文件或注册数据库。一般应用级的用户是不会去看这些密码的。为了防止像你我这样的人观看，比较好的是使用如 
+        DES、RC5等加密算法或自行设计一个加密算法，这样才能够达到一个较高的密级。本人设计有一个以 
+        DES 和 自制加密算法混合工作的DLL，如果有兴趣，请与我联系。<br>
+        　　问：如何生成一个透明窗体？使得可以看到窗体后面的内容？<br>
+        　　答：用如下代码可生成透明窗体，若要显示其他信息，可做一个背景透明的图案为窗体背景。<br>
+        　　Me.AutoRedraw = True<br>
+        　　hBitmap = CreateCompatibleBitmap(Me.hdc, 0, 0)<br>
+        　　SelectObject Me.hdc, hBitmap<br>
+        　　Me.Refresh<br>
+        　　感谢ZhuangYong提供解答<br>
+        　　问：在 Access 97 中如何实现代码输入？　<br>
+        　　答：在Access97中的代码输入解决方案是我见过中的比较好的一种。Accesss97至少提供了两种场合使用的代码输入方式。<br>
+        　　其一、在表结构设计窗口，选中指定字段，单击“查阅”标签，改显示控件为组合框或列表框，根据情况选择“行来源”类型为“表/查询”或“值列表”，然后选择代码表或输入候选值即可。这样的设置在“数据表”状态体现最完美：显示代码Name，挑选代码ID列表；其二、在设计 
+        Form 
+        时对指定控件做上述设定，其效果稍逊。运行时，输入框中仅可显示代码ID，却无法显示代码Name。<br>
+        　　其实，关键是三个要素：1、控件显示的内容；2、和控件相关的数据源的字段；3、代码表。把握好这三者的关系就真正抓住了问题的关键。建议读者看看 
+        Delphi 或 C＋＋Builder 的 DBLookup 
+        控件，它的解决方法非常好，我希望能看到提供给VB、Access使用的短小精悍的代码输入控件也能做到这一点。<br>
+        　　讨论VB问题用E－mail地址：<a href="mailto:VBForums@126.com">VBForums@126.com</a> 
+        或 <a href="mailto:VBForums@usa.net">VBForums@usa.net</a><br>
+        　　主页：<a href="http://VBForums.yeah.net">http://VBForums.yeah.net</a></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

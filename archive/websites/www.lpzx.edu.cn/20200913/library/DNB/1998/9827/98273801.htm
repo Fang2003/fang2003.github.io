@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>车过留痕----3DMAX的特效制作实例</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　 &nbsp; 
+        本文介绍的是赛车在紧急发动时，车轮胎与地面磨擦产生出痕迹的效果。在这一制作中，可以使用ParticleCombustion或Particle两个Plugins(插件)来加强画面制作的效果，当然，这可不是3DSMAX内挂插件，不过，这两个插件可在我的主页www.3donline.yeah.net上下载。<br>
+        　&nbsp; 本例中用到的汽车模型，可以在3DSTUDIO3＆4的WorldToolkitCdrom中免费得到，当然，也可以自己绘制一个。<br>
+        　&nbsp; 1.运行3DSTUDIOMAX，用鼠标单击菜单，选中File/Import命令，从Cdrom中调入赛车模型。然后将赛车各个部分选中，再次用鼠标单击菜单，选中Group/Group命令，在弹出的对话框中输入名字：Car后，单击Ok按钮，将赛车各部分组成一个整体。这样在以后的动画制作中，你就可以轻松地移动整辆赛车了。<br>
+        　&nbsp; 2.单击命令面板中的Create按钮，选中下方的Geometry按钮，在ObjectType中选Box，在编辑窗口的Top视图中创建一个面积大而厚度薄的四方体作为地面。并将它移到赛车的下方，使其刚好与赛车的车轮接触。<br>
+        　&nbsp; 3.选中Create命令面板中的Helper按钮，将ObjectTtype选为Dummy制作一个虚拟物体，将其与赛车的左后轮对齐。选中工具栏中的Link按钮，将其与赛车联结。<br>
+        　&nbsp; 4.再次单击Box按钮，创建两个狭长的薄板，作为车轮的磨擦地面时产生的轨迹。将这两片薄板紧贴于地面，调整薄板的位置，使其位于车轮的正下方，薄板的后端与车轮的后端对齐。<br>
+        　&nbsp; 5.选中两块薄板，单击鼠标右键，在弹出的快捷菜单中选Properties命令，将CastShowder属性取消，不让它产生阴影。<br>
+        　&nbsp; 6.单击命令面板的Modify按钮，在Modifiers命令栏中选EditMesh命令，继续选中Sub－Object按钮，使其处于凹陷状态，准备对薄板进行端点操作。<br>
+        　&nbsp; 7.选择薄板前端的端点，然后对它进行LinkedXform操作。也许大家可能会问，在Modify命令面板上没有LinkedXform命令按钮呀，怎么进行操作呢？其实很简单，你只要单击命令面板上的More按钮，就会弹出所有Modify命令的列表。<br>
+        　&nbsp; 8.再次调整赛车的位置，务必要将后轮与薄板的后端对齐。<br>
+        　&nbsp; 9.单击命令面板中的PickControlObject按钮，选中前面创建的虚拟物体，将虚拟物体作为车胎轨迹的控制体。这时如果你移动赛车的话，轨迹会随着车体的移动方向而被拉伸。<br>
+        　&nbsp; 10.选中Modify命令面板中的EditMesh按钮，再次对薄板进行EditMesh操作，现在要给薄板确定贴图轴的类型。不过这次要将Sub－Object按钮关闭，即单击Sub－Object按钮，将它处于凸起状态就可以了。然后再选中面板中的UvwMap命令，将Mapping（贴图轴类型）设为Planar（平板型），并单击Fit命令按钮，这时轨迹的贴图就能够完全与轨迹相匹配，这样就不会出现当轨迹被拉长时，贴图无法覆盖轨迹而出现漏色现象。<br>
+        Ok！到此为止你的汽车差不多可以发动了，不过要想得到烟尘翻滚的画面，你还得跟着我往下走。<br>
+        　&nbsp; 11.现在要做的是为地面赋予贴图，我选用Asphalt.jpg作为地面的Bump贴图。调用贴图的方法很简单，只要打开MateralEditor窗口，选中Materia＃2材质，然后在其下方的Maps命令栏中单击Bump（凹凸）贴图按钮，在弹出的对话框中选择Bmp类型得贴图，再选中Asphalt.jpg这个文件就可以了。<br>
+        　&nbsp; 12.车胎轨迹贴图的制作也很类似，不过你要选择的贴图通道是Diffuse，即在Maps命令栏中选中Diffuse贴图按钮，在随后弹出的对话框中选中Noise（噪声）类型的贴图，然后在Opacity（透明）贴图通道中选择Gradient（渐层）贴图。这时会弹出如下图所示的属性窗口。按下图的提示对各个属性值进行调整。<br>
+        注意，要将Coordinates属性中的U、V的Tiles（重叠）设为0。<br>
+        　&nbsp; 13.紧接着要做车轮后飞扬尘土的效果。在赛车左、右两个轮胎的的后面建两个Particles＋（粒子）系统，并将它绕Z轴旋转20度，使其稍稍向上抬起一点。并将粒子系统的参数按图一所示进行如下设置：Count：80Render：TetraheadronEmitterShaper：RectabgularSpeed：10,0Variantion：2,0Tumble：1,0TumbleRate:2,0Falloff：1.0Secondary：1,0StreamMotion：OnStart：0Life：40设好后，再将这两个粒子系统与赛车相连结。<br>
+        　&nbsp; 14.眼看大功就告成了，不过还要为尘土加上一些特效，增加其真实性。选中两个粒子系统，执行下拉式菜单中的Rendering/Environment命令，并在Atmosphere属性中为粒子系统增加ParticlesAtmospher效果。在不同的帧数将Phas设置成不同的值，使其产生动感。<br>
+        　&nbsp; 15.最后，你还可以在场景中加入灯光与摄像机，并调整到最佳的角度，好了，现在可以对其进行着色处理。如果你还想精益求精的话，你还可以给粒子系统施加GravitySpace（重力）和WindSpace（风力）的影响，这样尘土飞扬的效果就会显的更加真实。<br>
+        　&nbsp; 这样，一个真实感极强的赛车发动的场景就制作完成了(图二)。经历了这一实践，相信朋友们也能够制作其它的物体磨擦产生的痕迹特效。(福建林刚) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9827/1998/27/index.htm">《电脑报》1998年27月27日第27期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

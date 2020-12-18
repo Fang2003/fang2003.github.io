@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>轻松控制开始菜单中的“文档”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp;<strong> </strong> 
+        我们知道，在Windows95操作系统中保存有一个最近使用文件列表(MRU)，通过使用Windows95任务栏的开始菜单中的“文档”，我们可以访问最近使用文件列表，在这里打开一个文件。<br>
+        　　在Visual Basic 5.0中要实现对Windows95任务栏的开始菜单中的“文档”内容的控制，通过调用Win32 
+        API中的SHAddToRecentDocs函数我们就可以轻松地做到这一点。SHAddToRecentDocs函数原型如下：<br>
+        　　Private Declare Sub SHAddToRecentDocs Lib ″shell32.dll″(ByVal uFlags As 
+        Long,ByVal pv As String)<br>
+        　　使用SHAddToRecentDocs，我们可以任意添加自己需要的文件名到“文档”中，或删除“文档”中的全部文件名。如果我们把pv设置为一个空字符串，“文档”中就为空，如果pv是一个带全路径文件名的字符串，那么“文档”中将添加该文件名。<br>
+        　　让我们一起来实践一下吧：<br>
+        　　1首先在VB5中创建一个新的工程，窗体使用缺省值Form1。<br>
+        　　2在Form1窗体中加入两个Commandbutton按钮，名为Command1和Command2。<br>
+        　　3在Form1窗体的通用声明中加入如下代码：<br>
+        　　Const SHARD_PATH=2<br>
+        　　Private Declare Sub SHAddToRecentDocs Lib ″shell32dll″_<br>
+        　　(ByVal uFlags As Long,ByVal pv As String)<br>
+        　　4在Command1的Click事件中加入如下代码：<br>
+        　　Private Sub Command1_Click()<br>
+        　　Dim AddNewFile As String<br>
+        　　AddNewFile=″c:\windows\calcexe″<br>
+        　　Call SHAddToRecentDocs(SHARD_PATH,AddNewFile)<br>
+        　　End Sub<br>
+        　　5在Command2的Click事件中加入如下代码：<br>
+        　　Private Sub Command2_Click()<br>
+        　　Call SHAddToRecentDocs(SHARD_PATH,vbNullString)<br>
+        　　End Sub<br>
+        　　运行程序，单击Command1发现Windows95任务栏的开始菜单中的“文档”内容添加了一个名为calc的文件，单击Command2你会发现Windows95任务栏的开始菜单中的“文档”内容全部没有了。<strong>(释　月)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9830/issue/1998/30/index.htm">《电脑报》1998年8月10日第30期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

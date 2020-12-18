@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>AGP显示卡全攻略</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp; 　目前，市面上采用AGP接口的显示卡越来越多了，不少玩家已经把AGP显示卡“武装到牙齿上了”，各种媒体更是把AGP炒得火热，看来AGP显示卡成为主流是必然的。<br>
+        　　有人认为，在Windows95平台下AGP显示卡的性能不能得到充分的发挥，因为Windows95还不支持AGP的特性，必须使用Windows98操作系统才行。而有的人则把AGP显示卡按普通PCI显示卡的安装方式进行安装，以为这样就OK了。<br>
+        　　实际上，目前的软件环境虽已完全支持AGP的特性，可完全发挥AGP的威力，却也不是像安装PCI显示卡那样简单。要想在Windows95下充分发挥AGP显示卡的性能，在软件上必须有相应的配置。<br>
+        　　现在先来讲一下AGP的基本特征，AGP相对于PCI有很多优势，但对性能提升最有影响的只有两个——更高的总线速度和DIME（DIrect 
+        Memory Execute，直接内存执行），DIME可以把系统内存当作显示内存使用。其中，总线速度作为纯硬件特性，只要你的主板和AGP显示卡都正常工作的话，它在运行软件时就会起作用。而DIME由于涉及到对内存的管理，就必须有操作系统的支持，而Windows95本身并不支持DIME，如果按照普通PCI显示卡的方式安装AGP显示卡的话，就无法发挥DIME这一关键特征，而没有使用DIME的AGP显示卡与PCI显示卡在性能上并没有明显差别。由于Windows98内置了对DIME的支持，所以才有“只有Windows98才能充分发挥AGP显示卡性能”的说法。<br>
+        　　虽然Windows95没有内置DIME的支持，但是可以通过打“补丁”的方式使它具备这种能力（所谓的Windows97就是打了个“大补丁”的Windows95，而Windows98恐怕也可以这么说——它并没有多少新意），那么这个重要的补丁怎么打呢？<br>
+        　　首先，你必需有USBSUPP.EXE这个程序，它包含在Windows95 OSR2.1中，这也是华硕AGP3000显示卡中提到必须使用Windows95 
+        0SR2.1的原因。其实只是要USBSUPP.EXE，在Windows95 OSR2.0或别的Windows95版本中装上USBSUPP.EXE，就相当于Windows95 
+        OSR2.1了。如果你找不到Windows95 OSR2.1的话，就上网找吧(注意：要看清USBSUPP.EXE的语言版本，如果你在中文Windows95上装了英文版的USBSUPP.EXE的话，你恐怕得重新装一遍Windows95)。怎么才知道Windows95是否是Windows95　OSR2.1呢？看看光盘的根目录下，OSR2.1有个子目录USB，USBSUPP.EXE就在其中,它是单独安装的。实际上,我们需要USBSUPP.EXE,并不是要它对USB的支持，而是要它在解压后得到的虚拟设备驱动（VxD）文件VMM32.VxD。由于采用DIME技术的AGP显示卡使用了系统内存和显示内存这两部分物理上互不相关的内存，就需要一个用来管理虚拟内存空间的虚拟设备驱动文件VMM32.VxD。<br>
+        　　第二步，像以前的TX芯片主板一样,因为Windows95不支持TX芯片组，所以就出了个PATCH(补丁)程序,现在带AGP接口的主板也有个PATCH程序，叫 
+        AGP DRIVE。令人吃惊的是，使用INTEL 440LX芯片组的主板往往没有这个至关重要的程序！怎么办呢？还是去网上找吧，程序的关键词是VGART。不过用华硕AGP3000显示卡的玩家有福了，AGP3000的随卡光盘里有这个宝贝，就在VGART目录下，而采用VIA 
+        VP3芯片组的主板都有个磁盘，内附这个程序。VGART当然也与DIME有关了，它是Virtual 
+        Graphics Address Remapping Table（虚拟图形地址重映射表）的缩写，起到把原来的显示内存空间和被AGP使用到的系统内存空间Remapping(重新映射)到DIME使用的虚拟内存空间中的作用。<br>
+        　　第三，就是安装显示卡驱动程序，这跟PCI的显示卡一样。不过要留意一下驱动程序的版本。由于AGP接口的显示卡仍是新生事物，驱动程序更新比较快，而早期的驱动程序往往有Bug，如果你现在的驱动程序有问题，只好再上网去Down新版本的驱动程序了。真是何以解忧，唯有上网。<br>
+        　　第四，必需安装DirectX 5.0。只有DirectX5.0才加入了对AGP的支持，而DirectX3.0 
+        是不支持DIME这个特性的。DirectX的语言版本也要与操作系统一致。<br>
+        　　好了，大功告成，Windows95下的AGP平台环境已搭构完毕。用3D 
+        Winbench 98中真正考验AGP显示卡的大场景（Large Texture Scene）进行测试，在1024×768分辨率下、纹理达到6.1M时，没有打补丁的AGP显示卡的每秒帧数与PCI显示卡（同种显示芯片）基本相同，而打补丁后的AGP显示卡的每秒帧数是前者的一倍以上。买了AGP显示卡却没打补丁的朋友快拿起针线吧。<br>
+        　　(上面提到的USBSUPP.EXE及AGP补丁程序可在《电脑报配套光盘之PC世界第1期》中找到)<br>
+        <br>
+        （北京 风林火山）</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月20日第15期33版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

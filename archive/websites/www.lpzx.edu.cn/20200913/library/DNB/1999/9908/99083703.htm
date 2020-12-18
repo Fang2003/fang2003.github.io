@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>VB 过 程 中 的 参 数 传 递</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>VB 过 程 中 的 参 数 传 递</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　在学习编VB程序的过程中，学员常常会对过程中参数的数据类型和传递方式感到难以理解，下面就此问题作出说明。<br>
+        　　VB的代码通常需要某些关于程序状态的信息才能完成它的工作。信息包括在调用过程时传递到过程内的变量。当将变量传递到过程时，称变量为参数。<br>
+        　　1. 参数的数据类型<br>
+        　　过程的参数被缺?/猇ariant数据类型。不过，也可以声明参数为其他数据类型。例如，下面的函数接受一个字符串和一个整数：<br>
+        　　Function WhatsForLunch(WeekDay As String, Hour As Integer) As String<br>
+        　　If WeekDay = ″Friday″ Then ′根据星期几和时间，返回午餐菜单<br>
+        　　WhatsForLunch = ″Fish″<br>
+        　　Else<br>
+        　　WhatsForLunch = ″Chicken″<br>
+        　　End If<br>
+        　　If Hour &gt; 4 Then WhatsForLunch = ″Too Late″<br>
+        　　End Function<br>
+        　　2. 按值传递参数<br>
+        　　按值传递参数时，传递的只是变量的副本。如果过程改变了这个值，则所作变动只影响副本而不会影响变量本身。用ByVal关键字指出参数是按值来传递的。<br>
+        　　例如：<br>
+        　　Sub PostAccounts(ByVal intAcctNum as Integer)<br>
+        &middot;<br>
+        　　&middot;′这里放语句<br>
+        　　&middot;<br>
+        　　End Sub<br>
+        　　3. 按地址传递参数<br>
+        　　按地址传递参数，使过程用变量的内存地址去访问实际变量的内容。因此，将变量传递给过程时，通过过程可永远改变变量值。按地址传递参数在VB中是缺省的。<br>
+        　　如果给按地址传递的参数指定数据类型，就必须将这种类型的值传递给参数。可以给参数传递一个表达式，而不是数据类型。VB计算表达式，如果可能的话，还会按要求的类型将值传递给参数。<br>
+        　　把变量转换成表达式的最简单的方法就是把它放在括号内。例如，为了把声明为整数的变量传递给过程，该过程以字符串为参数，则可以用下面的语句：<br>
+        　　Sub CallingProcedure()<br>
+        　　Dim intX As Integer<br>
+        　　intX = 12 ＊ 3<br>
+        　　Foo(intX)<br>
+        　　End Sub<br>
+        　　Sub Foo(Bar As String)<br>
+        　　MsgBox Bar ′Bar的值为字符串′36′<br>
+        　　End Sub</p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月01日第08期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</body>
+</html>

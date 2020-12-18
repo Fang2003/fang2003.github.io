@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在单机上建立Web服务器</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'>目录</A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'>软件世界</A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'>硬件周刊</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT  COLOR='#CC0000'>大众网络</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>33 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 在单机上建立Web服务器</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在单机上建立Web服务器 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现在越来越多的朋友在网上建立了自己的个人主页，让没有条件上网的朋友眼谗不已。其实，利用Windows 98提供的PWS（个人Web服务器），你也能在单机上设立自己的网站，调试自己的主页。<br>
+　　Windows 98的PWS与NT上的Web服务器IIS类似，只是定位较低，在功能上也做了简化，例如不支持FTP服务，安全性差一些等。但它同样支持FrontPage Server Extentions、ASP以及ADO。因此,我们可以利用它来在本地调试主页(例如察看FrontPage活动元素的效果或调试ASP程序)，是微软提供PWS的目的之一。<br>
+　　<b>一、建立Web服务器的步骤</b><br>
+　　1. 添加TCP/IP协议<br>
+　　运行“控制面板”中的“网络”。在“配置”标签页的“已经安装了下列网络组件”列表框中察看是否存在“TCP/IP”项。如果存在，则已经安装TCP/IP协议，可跳到下一步骤。如果没有，点击“添加”→“协议”→ “Microsoft”→“TCP／IP”，最后选择“确定”，开始安装TCP/IP协议，然后重新起动计算机。<br>
+　　2.配置TCP/IP协议<br>
+　　运行“控制面板”中的“网络”。选择“配置”标签页“已经安装了下列网络组件”列表框的“TCP/IP”项，再单击“属性”按钮，出现“TCP/IP”窗口。在“IP地址”标签页中单击“指定IP地址”。在本例中，将IP地址设为213.213.213.223，子网掩码设为255.255.255.0。重新启动计算机。<br>
+　　3. 安装PWS<br>
+　　将Windows 98光盘插入光驱中，运行add－ons\pws目录下的setup.exe，选择安装方式和Web服务的主目录后即开始安装PWS。安装完成后，c:\inetpub\wwwroot为缺省的主目录（起始页default.asp或default.htm所在的目录），wwwroot目录下的default.asp或default.htm则为缺省主页。<br>
+　　安装完成后，启动浏览器。在地址栏内输入http://213.213.213.223。回车后，浏览器窗口内出现缺省主页画面。调试主页时，将你制作的主页复制到wwwroot目录下，并将起始页改名为default.htm，浏览时的效果就像真的在远程访问主页一样。<br>
+　　<b>二、个人Web服务器的管理</b><br>
+　　当个人Web服务器安装后，每次进入Win 98后，在系统提示栏会出现个人Web服务器的小图标，双击它则弹出个人Web服务器管理窗口。可以进行缺省目录和缺省主页的设置，虚拟目录的增加和删除，利用个人主页向导制作主页等工作。
+　　借助Win 98的个人Web服务器，圆你主页梦。<br>
+<b>(重庆　雨风)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/33/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99332702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

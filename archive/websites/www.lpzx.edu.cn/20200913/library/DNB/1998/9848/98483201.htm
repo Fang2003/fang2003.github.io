@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">《极品飞车Ⅲ》车辆创作工具<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在电脑上玩赛车游戏的玩家恐怕不会对《极品飞车》系列感到陌生吧。这个经典的赛车游戏现在已经发展到第三代，对于三代而言，最吸引人的也许不是游戏那华丽的画面，也不是紧张激烈的警车追逐，而是EA会在网页上不断地提供新车下载。最重要的是任何人都可以通过EA官方的创作工具自己做出想要的新车来！但要想做出一辆赛车并不是一件很容易的事，除了要有好的想象力和毅力外，熟练的掌握创作工具的所有功能也是最重要的。笔者在下面就会介绍《级品飞车Ⅲ》的创作工具Cartool，在讲解如何使用创作工具之前，先让大家了解《极品飞车Ⅲ》的赛车文件及格式。<br>
+        <strong>一、获得赛车文件</strong><br>
+        　　在《级品飞车Ⅲ》中，每一辆赛车的格式都是以car.viv文件存储的。由于文件名相同，所以被放在游戏目录所在的各个子文件夹中，你可以在nfs3\gamedata\carmodel（游戏目录）下找到这些文件夹。接下来的工作是用另一个工具将car.viv文件进行解包。这样的工具很多，如在DOS环境下的vivdecenc。以下就以vivdecenc为例，讲述如何对viv文件解包。<br>
+        　　1.在《极品飞车Ⅲ》的目录中找到一个你想修改的viv文件，如：C：\Games\NFS3\GameData\CarModel\Amd7\car.viv。<br>
+        　　2.新建一个文件夹，将car.viv及vivdec.exe和vivenc.exe两个解压包及打包程序拷入其内。<br>
+        　　3.在DOS下以VIVDEC.EXEcar.viv为命令对其进行解包。解包后会产生诸如carp.txt、car.fce、car00.tga等文件。创作工具的目标就是car.fce文件，这是赛车的模型文件。<br>
+        　　4.如果将车型修改好后，可以用vivenc命令打包成完整的car.viv文件。格式：VIVENC.EXEcar.vivcarp.txtcar.fcecar00.tgafedata.frefedata.itafedata.brifedata.gerfedata.fshfedata.spafedata.swefedata.engcar.bnkocard.bnkocar.bnkscar.bnkdash.qfs。　　由于命令太长，在DOS下这条命令可能不能成立，如果遇到这种情况你可以建一个批处理命令进行解压。<br>
+        <strong>二、编缉车型文件</strong><br>
+        　　得到car.fce文件后就可以用EA官方的创作工具Cartool进行编辑了。将创作工具Cartool解包后，文件夹内会生成一个Countach子目录，里面有car.3dx及car.art两个文件，这是必须的文件。将要修改的fce文件拷入覆盖原例子fce文件就可运行Mrc.exe来进行编辑了。不过在动手之前你还应该了解一下主要的快捷键：ESC：回到上一画面或保存一个文件。<br>
+        E：编辑一个部分。<br>
+        U：取消上次操作。<br>
+        F1：帮助菜单。<br>
+        F2：改变背景色。<br>
+        1：以X轴移动网格体。<br>
+        2：以Y轴移动网格体。<br>
+        3：以Z轴移动网格体。<br>
+        鼠标右键缩放。<br>
+        　　进入FuseParts，选择赛车的各个部分，如车身（body），车窗（windows），前后轮（front/rearwheel）等，之后用箭头键选取你想移动的部分。按住Shift键，移动这个部分或者是向下按键做标记。继续这样工作直到在轮胎旁有一个分离的部分。你还可以用F键进行多个部分的选龋进入VerticeTweeker，将看到上次你选择的部分，用方向键选取你想编辑的部分，当这个部分被选取后你就按“E”键进行编辑。在编辑窗口，你可以任意旋转、设计和修改车的任何一部分。按住Ctrl键后用鼠标点击一部分，就像一个魔术棒，可选取任意位置的点。配合Shift键，用鼠标可以移动到任何你点击的点处进行拉伸修改。当编辑结束后，按ESC键保存退出。可以知道，这步就是修改外形的关键，所以要以很长的时间多加练习才能得到你想要的设计。<br>
+        　　进入DummyObjects，你可以在这儿定义车的灯光应该放的位置。具体如下：HFLO（左前灯）、HFRE（右前灯）、TRLN（左后灯）、TRRN（右后灯）、SMLN（左警灯）、SMRN（右警灯），你可以用F1键来查看，用方向键进行选取并移动，ESC键存盘返回。<br>
+        　　进入TexturePage贴图区。首先说明此页并不能让你在此作图或者是显示模型内部让你来进行剪贴，这页功能好像只能让你显示出车型的当前颜色及贴图。如你是要修改游戏中已经做好的赛车，那不必进行此步。但如果是一辆修改过的车，则有必要做这一步。先按P键保存当前设置，在文件夹下会建立mini.art及mini.fce两个文件。fce文件是局部图形文件，而art则是图形和贴图文件。这时fce文件就是你刚才改动过的赛车文件。现在退出程序，找到mini.fce及mini.art文件，另建一文件夹，将这个文件拷进去后分别更名为car.fce及car.art，然后再将所有的carXX文件拷进去，如car00。你还必须将car.3dx文件也拷进去才能正常工作。这时如再编辑车身将会出现你指定的贴图，关于贴图方法，你可以参照每个viv文件里的car00.tga图形文件，这就是说要改变贴图就是改变这个文件。<br>
+        　　关于UVTweeker这步，在未对赛车进行大改动之前，没有必要进行这步，这是修改照明的。<br>
+        　　进入Smoothing，它的作用是允许你对改变一部分的某个表面的颜色及贴图。按“E”键进行编辑，你在右边会看到一列数字，但不是所有的数字对你都有用。仅仅需要改变其中前几个数值，例如Group1notchromed，意思就是1这个部分（红色的选取部分）的区域内将不会让它光泽（也就是让它有影子）。你可以用方向键对数字进行选择，如果要对一个部分全选可用“S”键，取消选择用“C”键。<br>
+        　　进入CarColor，选取车身的颜色。你可以在左上边看见两栏色值，一个是主色，一个是次色。你可以用“A”键进行切换，用方向键进行修改，如果想要切换下方的色值，可以用“C”键。配合Shift键加方向键，你可每次以10个单位进行增减值。<br>
+        　　最后一步，进入Normals，你可以在这儿对你编辑的车做最后的工作，主要的是增加车辆的效果，如给车身增加条纹等。选择要编辑的部分按“E”键进行编辑，按住Ctrl键及鼠标选择车体部分的点或线，选取后放下Ctrl键，再按住Shift键＋Mouse进行修改。用“U”键可以取消此操作，可以用“H”键来隐藏所有的红线和蓝线。<br>
+        以上就是编辑一辆车的步骤，最后按照开始时介绍的打包方法将所有的文件打包成一个viv文件就行了。一开始肯定是会有点疑问的，多试试就行了。但是要做出一辆拟真度极高的赛车来是很不容易的，也许会花上几周甚至一月，但当你的成果被别人认同时，你会认为所有的一切都是值得的。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月14日第48期32版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

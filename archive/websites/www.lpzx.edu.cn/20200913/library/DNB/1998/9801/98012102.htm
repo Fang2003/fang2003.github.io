@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">应用NET.CFG提高Novell工作站性能<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　NetWare ODI工作站软件由四部分组成：链路支持层lsl、lan驱动程序、网际包交换开放数据链路接口ipxodi、NetWare 
+        Dos请求者(包括vlm.exe和相关vlm文件)。登录上网时，工作站软件将读取默认配置文件net.cfg各项值设定网络环境。net.cfg是一个纯文本文件，可用dos下edit或windows下记事本编辑。<br>
+        　　按以下措施配置net.cfg中有关参数，可有效提高工作站性能。<br>
+        　　一、设置包突发(Packet Burst)。包突发协议建立于IPX协议之上。它用于在网上有效传输多个信息包。当应用程序请求写多个物理数据包时，工作站将自动建立包突发服务，包突发服务使工作站不需要得到目的方对每个包的确认而连续发送一组包，并且协议自动检测丢失的包进行重发。包突发连续建立可使服务器更快响应工作站突发的大数据量请求。在NetWare 
+        Dos Request标题下加入pbbuffer=非零，设置包突发，取消包突发置pb 
+        buffer=0。<br>
+        　　二、设置大网际包(LIP)功能。大网际包功能下，操作系统将在服务器和工作站之间协商一个最大长度的包。如果该包能被所有经过的路由器接受，LIP将保证大包顺利到达目的地。大包的传送减少了数据分割、打包、确认等处理时间，提高 
+        了网桥 、路由器的吞吐率。在DosRequest标题下加入Large Internet Packet=ON，为OFF则取消大网际包功能。<br>
+        　　三、增加本地高速缓存缓冲区(Cache Buffers)和fio.vlm使用的高速缓存区(Cache 
+        Buffer Size)。工作站使用本地高速缓存缓冲区缓存非共享、非事务跟踪文件。当应用程序打开多个文件读写数据时，本地缓冲区能同时缓存多个文件数据的读／写，大网际包的读／写，增加该类缓冲区，将相应提高数据响应速度。Cache 
+        Buffers系统默认值5块，Cache Buffer Suize系统默认值512字节。读者可根据机器配置增加。<br>
+        　　四、将连接管理器模块conn.vlm和ipx传输协议执行模块装入常规内存。连接管理器覆盖了dos 
+        request请求者的重定向层，服务协议层，传输协议层。传输协议层执行模块负责维持连接，提供连接间的包传输，两者与其它模块频繁的数据交换，使得把它们装入常规内存能有效提高工作站性能。在DOS 
+        Request请求者下设置load low conn on、load lowipxncp on将对应模块装入常规内存。<br>
+        　　五、在对网络安全性要求不高的情况下，去掉NCP签字功能。NCP指netware核心协议，它保证操作系统识别、接收、回答工作站的请求。为了防止仿造NCP包非法侵入网络，该设置要求工作站和服务器对每个ncp包签字，包签字占用了cpu时间。如果不使用包签字，还可不装载securily.vlm节省内存。设置signature 
+        level=0表示工作站不用签名包，但如果服务器签名级设为3，工作站将不能登录。<br>
+        　　工作站上网软件必须以lsl.com,landrive,ipxodi.com,vlm,exe顺序运行，否则不能加载。下面给出带ne2000网卡的工作站上net.cfg配置文件例子供参考。<br>
+        　　Link Driver NE 2000<br>
+        　　 PORT 300<br>
+        　　FRAME Ethernet_802.2<br>
+        　　NetWare DOS Requester<br>
+        　　first network drive=f<br>
+        　　netware protocol=nds<br>
+        　　large internet packets=on；设置大网际包功能<br>
+        　　pb buffers=1；设置包突发功能<br>
+        　　signature level=0；取消ncp签名<br>
+        　　cache buffers 30；设置本地高速缓存<br>
+        　　cache buffers size 1024；设置fio.vlm模块高速缓存<br>
+        　　load low conn on；装入conn.vlm,ipxncp.vlm<br>
+        　　load low ipxncp on；到常规内存<br>
+        　　use defaults off<br>
+        　　vlm=conn.vlm<br>
+        　　vlm=ipxncp.vlm<br>
+        　　vlm=tran.vlm<br>
+        　　vlm=nds.vlm<br>
+        　　vlm=bind.vlm<br>
+        　　vlm=nwp.vlm<br>
+        　　vlm=fio.vlm<br>
+        　　vlm=general.vlm<br>
+        　　vlm=redir.vlm<br>
+        　　vlm=print.vlm<br>
+        　　vlm=netx.vlm<br>
+        　　上面取消了security.vlm模块</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

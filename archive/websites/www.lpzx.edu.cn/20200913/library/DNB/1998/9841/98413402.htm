@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>WIN95为何总是报告显示驱动程序错误<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; &nbsp;河北读者焉海波问：我单位有台IBM 
+        Pentium 75电脑、16M内存、1GB硬盘、带光驱、A驱和B驱分别为5寸软驱和3寸软驱、显示卡已集成到主板上，后又装有声卡、解压卡和电视卡，一切都很正常，原机装有PC－DOS 
+        7.0和Windows 3.1。问题如下：1.显示卡型号为Cirrus Logic CL－GD 
+        5426/28/29/30/34/36 Series，在未装WIN95前显示模式为640×486、256色，后装上WIN95后，每次开机启动都出现显示驱动程序错误，且显示模式变为16色。后来从朋友那里借来一张驱动程序光盘，利用安装向导安装了Cirrus 
+        Logic GD5434 for Win95的驱动程序，重新开机后故障依旧，请问这种情况如何解决？<br>
+        　　2.同样是这台电脑，由于其他人使用，某日开机后，在WIN95下两个软驱都不能用，但硬盘和光驱可用，而且系统速度明显降低。后重新启动到PC－DOS 
+        7.0，两个软驱却能正常使用。于是又重新进入WIN95，在“控制面板/系统/性能”对话框的提示框中看到C盘和D盘正在使用MS－DOS兼容方式的文件系统，我按照提示查看了Config.sys文件，里面没有非法的驱动程序和文件，请问该如何解决这个问题？<br>
+        　　答：1.WIN95在启动时提示显示卡驱动程序错误，表明你没有安装正确的显示卡驱动程序，打开“控制面板/系统/设备管理”，可以发现显示适配器下的设备带黄色惊叹号，或者该设备为标准VGA，真正的显卡被列在了“其它设备”中。你后来安装的GD5434 
+        For Win95驱动程序是针对5434 PCI显卡的，不能用于CL－GD 5426/28/29/30/34/36 
+        Series，你可试试安装WIN95自带的Cirrus Logic驱动程序，如Cirrus Logic通用驱动程序、Cirrus 
+        Logic 5429/30/34驱动程序等，如果你的WIN95是较老的版本，可升级到WIN95 
+        OSR2，并安装DirectX 5.0。DirectX 5.0的安装程序只会更新系统中已经存在的驱动程序，而不会检测显卡的具体型号并安装新的驱动程序，为此可在它显示安装完毕的对话框时运行资源管理器，把WIN95\Temp目录下的一个名叫Ixp000.tmp的子目录作一份拷贝，然后单击DirectX 
+        5.0对话框的确定按钮，DirectX 5.0在退出前会自动删除掉临时目录（这就是要作拷贝的原因），你可以运行“添加新硬件向导”，从拷贝的目录下选取并安装合适的驱动程序。如果这些驱动程序都不行，你可考虑屏蔽掉主板上集成的显卡，安装一块新的PCI显卡。<br>
+        　　2.致使硬盘或光驱工作在MS－DOS兼容方式的原因主要有以下几点：Config.sys或Autoexec.bat中装载了多余的实模式驱动程序；机器感染上了某些接管磁盘读写中断的病毒；安装了错误的IDE控制器驱动程序或主板驱动程序。根据你叙述的情况，笔者估计极有可能是病毒在作怪，建议你首先重点检查机器是否感染了病毒，用最新版的杀毒软件从干净软盘引导系统，检查硬盘和使用过的软盘。如果没有发现病毒，可以用覆盖方式重新安装一次WIN95，安装程序会检查IDE控制器的型号并装入正确的驱动程序。估计当C盘和D盘的问题解决后，两个软驱也应恢复正常。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月26日第41期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

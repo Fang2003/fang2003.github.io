@@ -1,0 +1,123 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/oa.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>把AutoCAD图形输出为位图</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0115/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0115/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> <br>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="oa.html">OA专刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->把AutoCAD图形输出为位图<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 以前，我看过一些关于把AutoCAD图形输出为位图的文章，但都不是专业的输出图形的方法。下面，我分别介绍在AutoCAD 
+              R14英文版和AutoCAD 2000中文版中的操作步骤。在AutoCAD R14中一次最多可以输出8000×8000像素大小的图片，而在AutoCAD 
+              2000中几乎是无限制的。 ##1 一、在AutoCAD R14中 1.首先输入Config命令或选择菜单Tools(工具)/Preferences...系统配置进行打印机配置，出现Preferences对话框，选择Printer标签，一般在打印机列表中会有一个User-defined名称的打印机，单击它说明栏会出现Raster 
+              files export ADI 4.3-by Autodesk，Inc(光栅文件输出)的说明。我们将用它来进行图形文件的输出。这时我们可以单击Modify(修改)按钮，在出现的Reconfigure 
+              a Printer对话框中单击Reconfigurer按钮来进行用户配置。 2.如果没有User-defined名称的打印机，单击New...按钮，在Add 
+              a Printer对话框的Available printer driver列表中选Raster files export ADI 
+              4.3-by AutodeskInc选项。单击OK之后系统会弹出文本窗口要你进行配置。 3.首先设置分辨率的大小，如列表中没有合适的，输入11进行用户配置，分别输入宽度方向和长度方向的像素数值大小，接下来选择文件类型和颜色类型。最后系统会提示是否进行其它改变，按N不进行改变。按OK完成。 
+              4.输入Plot命令或选择菜单File/Print...，出现Print/Plot Configuration对话框，单击Device 
+              and Default Selection...按钮，在出现的对话框中选择User-defined项，按OK返回，单击File 
+              Name...按钮输入文件名后，即可打印为图形文件了。 ##1 二、在AutoCAD 2000中 1.选择菜单工具/选项…，在出现的选项对话框中的打印机标签下单击添加打印机按钮，在出现的窗口中双击添加打印机向导图标，在向导中按下一步进行到打印机型号步骤时，在生产商列表中选择光栅文件格式，型号列表中选择你所要输出文件格式，例我们选择TIFF 
+              Version6不压缩，按下一步到端口项时，选打印到文件项，继续按下一步进行到完成项时，可以单击编辑打印机配置进行配置，也可以直接单击完成，以后在打印时进行配置。 
+              2.输入Plot命令，出现打印对话框，选择打印机配置/名称项下拉列表中刚才定义的“TIFF Version6不压缩.pc3”项，单击特性按钮进行配置。在设备和文档设置标签下进行一些用户设定，单击用户定义图纸尺寸与标准项下的自定义图纸尺寸项设定分辨率大小。单击添加按钮，选创建新图纸，在介质边界对话框中输入需要的尺寸大小，完成设置后可以单击另存为按钮进行保存。最后输入文件名进行打印。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,135 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/zt.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>磁盘的文件系统</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0123/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0123/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> <br>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第23期 <!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="zt.html">专题版</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->磁盘的文件系统<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->经常听高手们说到FAT16、FAT32、NTFS等名词，朋友们可能隐约知道这是文件系统的意思。可是，究竟这么多文件系统分别代表什么含义呢？今天，我们就一起来学习学习：<br>
+              1．什么是文件系统？<br>
+              所谓文件系统，它是操作系统中藉以组织、存储和命名文件的结构。磁盘或分区和它所包括的文件系统的不同是很重要的，大部分应用程序都基于文件系统进行操作，在不同种文件系统上是不能工作的。<br>
+              2．文件系统大家族<br>
+              常用的文件系统有很多，MS-DOS和Windows 3．x使用FAT16文件系统，默认情况下Windows 98也使用FAT16，Windows 
+              98和Me可以同时支持FAT16、FAT32两种文件系统，Windows NT则支持FAT16、NTFS两种文件系统，Windows 
+              2000可以支持FAT16、FAT32、NTFS三种文件系统，Linux则可以支持多种文件系统，如FAT16、FAT32、NTFS、Minix、ext、ext2、xiafs、HPFS、VFAT等，不过Linux一般都使用ext2文件系统。下面，笔者就简要介绍这些文件系统的有关情况：<br>
+              (1)FAT16<br>
+              FAT的全称是“File Allocation Table(文件分配表系统)”，最早于1982年开始应用于MS-DOS中。FAT文件系统主要的优点就是它可以允许多种操作系统访问，如MS-DOS、Windows 
+              3．x、Windows 9x、Windows NT和OS/2等。这一文件系统在使用时遵循8．3命名规则即文件名最多为8个字符，扩展名为3个字符。<br>
+              (2)VFAT<br>
+              VFAT是“扩展文件分配表系统”的意思，主要应用于在Windows 95中。它对FAT16文件系统进行扩展，并提供支持长文件名，文件名可长达255个字符，VFAT仍保留有扩展名，而且支持文件日期和时间属性，为每个文件保留了文件创建日期/时间、文件最近被修改的日期/时间和文件最近被打开的日期/时间这三个日期/时间。<br>
+              (3)FAT32<br>
+              FAT32主要应用于Windows 98系统它可以增强磁盘性能并增加可用磁盘空间。因为与FAT16相比，它的一个簇的大小要比FAT16小很多，所以可以节省磁盘空间。而且它支持2G以上的分区大小。朋友们从附表中可以看出FAT16与FAT32的一不同。<br>
+              (4)HPFS<br>
+              高性能文件系统。 OS/2的高性能文件系统HPFS主要克服了FAT文件系统不适合于高档操作系统这一缺点，HPFS支持长文件名，比FAT文件系统有更强的纠 
+              错能力。Windows NT也支持HPFS，使得从OS/2到Windows NT的过渡更为容易。HPFS和NTFS有包括长文件名在内的许多相同特性，但使用可靠性较差。<br>
+              (5)NTFS<br>
+              NTFS是专用于Windows NT/2000操作系统的高级文件系统，它支持文件系统故障恢复，尤其是大存储媒体、长文件名。NTFS的主要弱点是它只能被Windows 
+              NT/2000所识别，虽然它可以读取FAT文件系统和HPFS文件系统的文件，但其文件却不能被FAT文件系统和HPFS文件系统所存取，因此兼容性方面比较成问题。<br>
+              (6)ext2<br>
+              这是Linux中使用最多的一种文件系统，因为它是专门为Linux设计，拥有最快的速度和最小的CPU占用率。ext2既可以用于标准的块设备(如硬盘)，也被应用在软盘等移动存储设备上。现在已经有新一代的Linux文件系统如SGI公司的XFS、ReiserFS、ext3文件系统等出现。<br>
+              小结：虽然上面笔者介绍了6种文件系统，但占统治地位的却是FAT16/32、NTFS等少数几种，使用最多的当然就是FAT32啦。只要在“我的电脑”中右击某个驱动器的属性，就可以在“常规”选项中(如图)看到所使用的文件系统。<br>
+              <!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

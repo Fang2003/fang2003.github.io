@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 小巧实用的WWW服务器</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 
+      &gt; 1999 年 &gt; <A HREF='index.html'>46 期</A> &gt; <A HREF='internet.html'>大众网络</A> 
+      &gt; 小巧实用的WWW服务器——OmniHTTPd</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 小巧实用的WWW服务器——OmniHTTPd 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　上网时间长了，许多网虫都不满足于只有一个个人网页，如果能拥有自己的服务器该有多好，哪怕只是在自己的机器上虚拟的也行，微软的NT＋IIS虽然能帮我们实现这个梦想，但那样强大的软件对很多个人电脑用户来说，确实是实用性不佳。<br>
+　　其实，除了微软，我们并非别无选择，一些专为个人用户和学习者提供的类似软件，功能实用，小巧别致，能让用户在完全不改变配置的情况下享受新技术带来的心动感觉,这里介绍的OmniHTTPd 就是这样一个软件。OmniHTTPd是一个运行在Win95下的服务器软件，不仅可以供个人用户模拟WWW服务器发布和调试个人网页、编写CGI程序，也可以组建一个小型的Intranet；由于它支持通过拨号方式的PPP连接，借助它的IP地址捕获功能，可以把你上网时的动态IP地址告诉朋友们，你的机器就真的变成一台存在于互联网上的服务器了，除了你只拥有临时IP地址外，与真正的服务器没什么区别。令人高兴的是，你的这台服务器是运行于Win95 平台上的，可以不必为运行它而多花人民币去升级硬件。下面，我就来介绍如何用该软件建立个人WWW服务器。<br>
+　　在使用之前必须去下载一个完全免费的OmniHTTPd软件，目前版本为1.0，软件容量只有900多K。这个软件是个自解压程序，直接运行它就可以开始安装了。安装结束后，运行OHTTPd.EXE，一个地球图标就出现在屏幕下方的任务栏中了，而相应的服务器已开始运行在后台，等待本机或外界的HTTP请求。为了让它能正常工作，我们还需作些设置：<br>
+　　1．打开属性设置。单击任务栏上的图标，就会弹出一个监控窗口，它的控制菜单很简单，主要内容都在“Admin”菜单项下(图1)，其中的“Properties”是属性设置，单击这一选项，随后出现属性设置框；<br>
+　　2．设置“Network”标签(图2)。这一项用于设置网络参数，一般用默认值就行，如果机器较慢，可把“Receive”和“Send”改大些；右边的一个数据框里是填写允许同时连接的客户数的，默认为16，如果你的机器性能绝佳的话，还可以设置更多。<br>
+　　3．设置“Server”标签(图3)。这一项关系到服务器能否正常运行。<br>
+　　“Site Address”项填写“127.0.0.1”代表本服务器，这是TCP/IP协议中用于标识服务器本身的标准IP地址，等会儿从这台机器上自己访问自己的时候敲入它就行了，但如果要想让别人能从网上访问到你的机器，这里就得填实际分配给你的IP地址了。<br>
+　　“Server Root”项填写你准备用作服务器的根目录的磁盘路径，如“C： \MYSERVER\ROOT”之类的，由自己建好后填写即可，这里就是你的服务器上网页和程序的藏身之处；<br>
+　　“Default Index”项填写默认的首页文件名，一般是“index.html”；最后是联系地址，不准备连入网络的话就无所谓了，如果入网的话，当用户访问你的站点出错时，会告诉用户通过这个E－mail与管理员联系，怎么样，是不是开始有点儿Master的感觉了？<br>
+　　“Lookup Site Address”项是准备通过拨号连接成为网上的一台服务器，就必须选中的选项。<br>
+　　“Enable DNS Name ResoluTion”不必选，“Send Version Information”也不必选；旁边的单选钮里，是决定将多少系统性能分配给服务器程序的，如果是自己用，设少点无妨，如果既要让别人能访问，自己又要在这上面运行浏览器，则至少要设到High。<br>
+　　4．设置运行CGI程序。如果你不准备在这台服务器上运行或调试CGI 程序，系统设置就基本完成了。接下来，你可以关闭OHTTPd的监控窗口，打开浏览器，在浏览器的地址栏里输入http://127.0.0.1回车，如果你刚才设置的路径和文件都存在的话，你就可以从自己的浏览器上浏览运行在同一台机器里的服务器上的内容了，从外表看，这没什么不同，可是，它可不同于我们平时在浏览器里打开本地文件的过程，它是一个不折不扣的HTTP请求响应过程，这一点你从下面要讲到的CGI 程序运行就可以看出来了。<br>
+　　为了在这台服务器上运行CGI程序，你还必须去找一个支持CGI的程序解释器，像PERL之类的，OHTTPd对PERL支持得很好，将下载来的解释器安装在本机硬盘里就行了，再打开OHTTPd的属性框，单击“Advanced”标签，在前面的四个复选项中，选中第二项“Enable PERL CGI Support”，再在最下面的“PERL CGI Command Line”中填入PERL解释器的磁盘路径。最后，在Standard CGI标签里，加入一个存放CGI 脚本的虚拟路径映射，这是告诉服务器，存放在虚拟路径下的程序要到相应的实际硬盘地址去找，这样你的CGI 程序里用到路径的地方就可以按照虚拟地址来编写，而不必考虑是在实际环境下。最后，把你的脚本程序存在对应的实际磁盘目录里，一切就都齐了。你再回到浏览器里，在地址框里敲入http://127.0.0.1/cgi－bin/myserver.pl 回车，浏览器将会运行这个程序，并返回结果，这真的是一个服务器吧！<br>
+　　5．设置入网服务。这是给其他用户使用这台服务器提供的设置。<br>
+　　“Site Address”。前面说过要让其他人找得到你这台机器，用“127.0.0.1”这个地址就不行了，你必需有一个唯一分配给你的IP地址，如果你是通过专线上网的，你只需问清楚自己这台机器的IP地址，并把它填入该项就行了；如果你是通过电话拨号上网，由于你每次上去的时候，电信局给你的IP地址都不一样，你可以先空着它或填写“127.0.0.1”。<br>
+　　“Lookup Site Address”：为了能在你每次拨号上网后能获得自己的IP地址，OHTTPd提供了动态IP地址反查功能，将这一项选中，以后每次你一启动OHTTPd，它就会自动帮你查知你的临时IP地址并把它显示在前面提到的监控窗口内；你也可以不选，而等以后启动它时在Admin菜单里点“Resolve Dynamic IP”手动查报。<br>
+　　“Bounce Site”。为了完成IP地址反查功能，OHTTPd需要同一个已存在的网站交换数据，这一项就是作这方面设置的，在“IP Address”栏里填一个肯定能访问到的站点如微软等，下面的Port栏里一般就是80。至此，为入网服务所做的工作就全结束了，然后拨号上网，运行OHTTPd，在弹出的监控窗口里，就会看到你现在的IP地址赫然在目，打开浏览器敲入这个地址，你的站点就跃然眼前。不过可别太得意，如果访问者太多，千万记住赶快在“Admin”菜单下点“Shutdown Server”关机大吉。<br>
+　　这个小巧别致的服务器软件，功能精当、设置简单、完全运行于后台、本身占用系统资源极少而且很多设置修改后不必重新运行即可生效，另外它对PERL的支持也很到位，我就是用它在486/Win95/420M硬盘/16M内存的环境下调试CGI程序的，速度可比在网上调试快多了。<br><b>
+（安徽　Wolfking）</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99462901.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Visual FoxPro编程技巧（二）
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　<strong> 一、自动停放工具条</strong><br>
+        　　工具条已成为Windows程序的标准配置。VFP在制作工具条方面也做得相当不错：只需将工具条类从类库中拖动到表单集中，定义若干按钮之类控件，再定义相应按钮的功能就可以了。但不知你是否注意到一个小问题：缺省状态下，做好的工具条是“悬浮”在表单集中的，运行时要人工“停靠”在菜单栏下，这显然会影响使用效率，同时更有碍美观。解决办法极其简单：在该工具条的Activate或Init事件中，加入如下一行代码：<br>
+        　　This.Dock(0)<br>
+        　　建议将此代码加入到你的工具条类中去。<br>
+        　　<strong>二、协调表单、菜单、工具条</strong><br>
+        　　菜单、工具条、表单，无疑使我们的应用程序呈现出一派极“友好”的界面。但是，要使这些“花里胡哨”的东西协同一致地工作，的确要费些神。设现在有一个为DataInputscx的数据录入表单集，其表单Form1上有一名为CmdAdd的表单按钮，Caption为“新增”，与之对应的工具条上亦有一“新增”工具条按钮，而对应的菜单上还有一“新增”菜单项，如何使这三者协同工作呢?以下方法可供参考。<br>
+        　　以表单按钮为基准，首先定义好其挂接的功能，即在其Click事件中加入相应的代码。然后，在工具条按钮的Click事件中，加入以下代码：<br>
+        　　=ThisFormSet.form1.CmdAdd.Click()<br>
+        　　在菜单设计器中，打开“新增”菜单项，在其挂接的命令中加入一句：<br>
+        　　=DataInput.form1.CmdAdd.Click()<br>
+        　　这样，三者就可以“步调一致”地工作了。当然上述情形仅是最简单的一种，实际使用中还要协调其他一些东西：按钮的Enabled属性，菜单项的set 
+        skip等等。按钮、菜单一多，就更显麻烦，以至于有时不得不专门在表单集中设立一个新方法用于协调这些东西。附带指出，与Visual 
+        Basic的菜单不同，VFP的菜单依旧保留FoxPro 2.x的非“对象”化特色，并无Enabled之类属性和Click事件。希望VFP的下一版本会将菜单也“对象”化。<br>
+        　　<strong>三、小改Combo Box</strong><br>
+        　　Combo Box名称的由来就是因其兼有文本框和列表框的功能，按理讲应可以输入列表中没有的项目。但是实际中发现，若输入的是列表中不存在的项目，则光标移出该Combo 
+        Box后其输入框中仍是一片空白，而与其绑定的字段中也并未存储输入的值，由此看来，Combo 
+        Box的“文本框”功能似并未体现出来。这时需要我们自己来给Combo Box加些手工“补丁”。好在Combo 
+        Box属性甚多，这个“补丁”也不太难加。在该Combo Box的LostFocus事件中加入如下两句：<br>
+        　　This.Value=This.DisplayValue<br>
+        　　This.DisplayValue=This.Value<br>
+        　　然后在该Combo Box的GotFocus事件中加入一句：<br>
+        　　This.DisplayValue=This.Value<br>
+        　　此法将Value及DisplayValue两属性颠来倒去，看上去犹如玩文字游戏一般，实际上也只解决了绑定字段录入及显示，而对Combo 
+        Box本身的RowSource未作修改，因而并非良策。欲将新增数据录入RowSource，还得视RowSourceType具体设置情况手工再“补”，这样怕是又要费些周折了。<strong>(湖北　李雄文)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年26月26日第26期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

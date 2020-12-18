@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>认识Win95引导文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　 Win95系统引导文件主要有IO.sys、Msdos.sys、Config.sys、Autoexec.bat、Bootlog.txt。<br>
+        　　二进制文件IOsys管理另外3个引导文件Msdos.sys、Config.sys和Autoexec.bat。IO.sys支持缺省设置有：提供UMA内存管理的语句dos=high,umb以及指定文件缓冲数的语句files=60及buffers=30，如果要设置这些值，一定要大于缺省值。<br>
+        　　Msdos.sys是一个文本文件，包括[Options]和[Paths]两节内容。[Paths]设置内容主要有：<br>
+        　　WinDir=Path，安装时指定Win95目录。<br>
+        　　WinBootDir=Path，引导Win95所需文件的位置。<br>
+        　　HostWinBootDrv=Path，指定引导盘根目录。<br>
+        　　[Options]设置内容主要有：<br>
+        　　BootDelay=n，显示Win95启动画面秒数，缺省时为2。<br>
+        　　BootFailSafe=1或0，表示是否使用失败——安全模式引导(按F6或F8)。<br>
+        　　BootGUI=1或0，1表示自动引导Win95、GUI和整个OS，设为0值时引导实模式Win95命令状态。<br>
+        　　BootKeys=1或0表示是否允许引导过程使用功能键F4、F5、F6和F8。<br>
+        　　BootMeun=1或0，是否自动显示引导菜单。<br>
+        　　BootMenuDefault=＃，指定引导菜单项，缺省为1(Normal)；当使用失败——安全模式时，缺省为4(网络支持的安全模式)。<br>
+        　　BootMulti=1或0，表示是否允许用户引导以前的DOS版本(通过F4键)。<br>
+        　　BootWin=1或0，是启动Win95还是旧版本的DOS。<br>
+        　　Dblspace=1或0，是否允许加载Dblspace.bin。<br>
+        　　DoubleBuffer=1或0，是否为SCSI适配卡提供缓冲。<br>
+        　　DrvSpace=1或0，是否禁止加载DrvSpace.bin。<br>
+        　　LoadTop=1或0，是否将Command.com或者DrvSpace.bin加载到UMA即640KB以上高端内存。<br>
+        　　Logo=1或0，是否显示Win95标志。<br>
+        　　Network=1或0，是否加载网络驱动程序。<br>
+        　　再谈Config.sys与Autoexec.bat。Win95自身并不需要Config.sys，只是当用到实模式驱动程序或要改变某些IO.sys设置时才需要。有些硬件不被Win95的32位驱动程序支持也可由Config.sys加载设备提供的实模式驱动程序。若系统含有一个可引导DOS版，那么当前文件总有Config.sys；系统引导Win95时Config.w40会更名为Config.sys；当引导DOS时config.dos又更名为Config.sys。这些均由Win95完成。而主要用于控制软件环境的文件Autoexec.bat的大多数功能在Win95中均可由IO.sys代理。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期7版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

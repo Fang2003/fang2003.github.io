@@ -1,0 +1,140 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Visual 
+        Foxpro使用技巧两则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　近来，笔者在利用Visual 
+        Foxpro 5.0开发软件中，总结了几点开发经验，在此愿与广大软件爱好者探讨。<br>
+        　　<strong>一、灵活运用信息对话框</strong><br>
+        　　几乎所有的操作系统与应用软件都含有大量的类似“警告”、“提示”等信息对话框。运用信息对话框，可以灵活、及时的提示或警告用户，使用户界面友好。<br>
+        　　信息对话框的语法是：MESSAGEBOX(cMessageText[,nDialogBoxType[,cTitleBarText]])<br>
+        　　cMessageText：指定信息框显示的文本，可用chr(13)分行。<br>
+        　　nDialogBoxType：指定显示的按钮和图标。它的具体使用规范如下：</font></p>
+        <table border="1" cellpadding="0" cellspacing="0" width="189" height="118">
+          <tr>
+            <td width="187" height="2"><p class="ourfont" align="left"><font color="#369681">数值 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对话框按钮</font></td>
+          </tr>
+          <tr>
+            <td width="187" height="17"><p class="ourfont" align="left"><font color="#369681">0 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 只有确定按钮</font></td>
+          </tr>
+          <tr>
+            <td width="187" height="17"><p class="ourfont" align="left"><font color="#369681">1 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 确定和取消按钮</font></td>
+          </tr>
+          <tr>
+            <td width="187" height="17"><p class="ourfont" align="left"><font color="#369681">2 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 终止，重试和忽略按钮</font></td>
+          </tr>
+          <tr>
+            <td width="187" height="17"><p class="ourfont" align="left"><font color="#369681">3 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 是、否和取消按钮</font></td>
+          </tr>
+          <tr>
+            <td width="187" height="17"><p class="ourfont" align="left"><font color="#369681">4 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 是和否按钮</font></td>
+          </tr>
+          <tr>
+            <td width="187" height="17"><p class="ourfont" align="left"><font color="#369681">5 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 重试和取消按钮</font></td>
+          </tr>
+        </table>
+        <p class="ourfont" align="left">　</p>
+        <table border="1" cellpadding="0" cellspacing="0" width="128">
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">数值 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 图标</font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">16 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 停止符号</font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">32 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 问号</font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">48 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 惊叹号</font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">64 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 信息（i）图标</font></td>
+          </tr>
+        </table>
+        <p class="ourfont" align="left">　</p>
+        <table border="1" cellpadding="0" cellspacing="0" width="128">
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">数值 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 缺省按钮</font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">0 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第1个按钮 </font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">256 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第2个按钮</font></td>
+          </tr>
+          <tr>
+            <td width="126"><p class="ourfont" align="left"><font color="#369681">512 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 第3个按钮</font></td>
+          </tr>
+        </table>
+        <p class="ourfont" align="left"><font color="#369681"><br>
+        <br>
+        cTitleBarText：指定标题文本。<br>
+        　　下面试举一例说明：<br>
+        　　(1)在Form(窗体)上加控件TextBox(文本框)，设置TextBox.Maxlength=4。这样在输入4位数字后，TextBox自动LostFocus(失去焦点)。<br>
+        　　(2)双击该TextBox，编辑Text1.LostFocus事件程序如下：<br>
+        　　if val(this.value)&gt;1998　＆＆函数val()使字符量转成数字量<br>
+        　　=messagebox(″对不起!″＋chr(13)＋″您的代码超出范围″,1＋48,″错误信息″)<br>
+        　　endif<br>
+        　　这样在TextBox中输入的4位数字大于1998时，就会自动弹出对话框进行提示。<br>
+        　　<strong>二、ComboBox(组合框)的选择性输出</strong><br>
+        　　控件ComboBox综合了TextBox(文本框)和ListBox(列表框)的特性，可显示一列项目。但要在ComboBox中对Table(表)中的某个Field(字段)的内容进行选择性输出却较为困难。现利用Foxpro的Query，举出一种解决办法：<br>
+        　　(1)设置Combo1的Style属性为2－Dropdown List(下拉列表框)。<br>
+        　　(2)设置Combo1.Rowsourcetype为4－Query(.QPR)查询文件。<br>
+        　　(3)设置Combo1.Rowsource为符合要求的查询文件。<br>
+        　　如：Select Sinfor.name　＆＆选择表中的字段<br>
+        　　From Database!Sinfor　＆＆标明表所在的数据库<br>
+        　　Where Sinfor.name IN(″王″)<br>
+        　　OR(Sinfor.name IN(″李″))<br>
+        　　这样便能在数据库Database中的表Sinfor的字段name中找出姓王和姓李的名字，并在ComboBox中输出。此外，查询文件可利用Foxpro的Query自动生成。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

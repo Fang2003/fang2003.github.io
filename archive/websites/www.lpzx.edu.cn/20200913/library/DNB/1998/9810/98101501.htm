@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>电子邮件乱码巧解<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 　 
+        遇到乱码邮件，首先要判断产生的原因。<br>
+        　　出现乱码的原因很多，其中一种可能是由于Internet上的某些邮件主机不支持8位（非ASCII码格式）传输造成的。具体的说，在直接发送中文双字节或二进制等非ASCII码格式的邮件（如中文双字节文件、图片文件.jpg、可执行文件.exe或压缩文件.zip等二进制文件）时，邮件主机无法处理，便把信件中每个字符的第八位都过滤掉（截去第八位），从而使此信息和初始信息截然不同，造成邮件信息的失真或损坏。因此，在发送8位格式的文本文件时，必须事先进行编码，将文件转换为7位ASCII码或更少位数的格式，然后才能保证文件的正确传送。收件人收到7位或更少位格式的邮件之后，可以再转换为8位的格式，这样就可以阅读了。<br>
+        　　一般电子邮件系统的“附件”功能可以自动对信件先进行编码，然后送出。而如果收信人的电子邮件系统（如Netscape 
+        Email、Pegasus、Eudora、Accacia、MS Internet Mail等)能够区别信件的编码方式，则可以自动将信件解码。然而由于各种电子邮件软件的默认配置不同，收件人和发件人自己定制的一些选项也会各不相同，所以在收到编码的信件后，系统不一定能识别出信件所用的编码方法。识别不出编码方法，系统自然无法自动解码，这样当你查看信件内容时，就会出现所谓的乱码，使收信人无法阅读该文件。<br>
+        　　其次，就是要判断关键字符，去判断其编码方法。<br>
+        　　不同的乱码，在不同的平台上有不同的解决方法，因此解码前必须先看一下文件的内容，根据特征对文件可能的编码方式（Uuencode、Base64 
+        encode、QP－encode或其它编码方式）进行判断。请注意，Uuencode格式与Base64 
+        encode格式非常相似，它们的差别仅仅在于“信头”部分的不同。<br>
+        　　<strong>第一种编码方法：Uuencode</strong>这是很早以前在UNIX上就有的编码程序，主要用户都集中在UNIX环境的使用者中，目前使用者已经很少。这种软件内部所用的算法为base64。其大体格式为：<br>
+        　　begin 644 kk.zip M1G)O;2!I;&amp;EN＋F)B3T!C(VEE＋FYC='4N961U＋G1W(%=E9&quot;!.;W8@(#8@,3(ZM,SDZ,C4@,3DY－@I296－E:79E9#H@9G)O;2!F;&amp;%B;6%I;&quot;YF;&amp;%B＋F9U:FET…..............。<br>
+        　　end<br>
+        　　说明：<br>
+        　　&middot;在乱码前面含有“begin xxx”，后面紧接着编码之前原始文件的名称<br>
+        　　&middot;接着是已经过编码的信件的内容<br>
+        　　&middot;在乱码内容后面，即最后一行为“end”<br>
+        　　<strong>第二种编码方法：BASE64 encode</strong>这种编码方式是将3个字节（8位）用4个字节（6位）表示，由于编码后的内容是6位的，因此可以避免第8位被截掉，其大体格式为：<br>
+        　　MIME－Version：1.0<br>
+        　　Content－Type：text/plain; charset=&quot;us－ascii&quot;<br>
+        　　Content－Transfer－Encoding:base64<br>
+        　　Status：R<br>
+        　　SGmhQbF6pm6hSafapmK69Lj0pFexb6q＋sXqsT6Skp OWrSKXzsN3DRLFNrmGhQQ0Kq1＋sTqq6vdCx&lt;BR&gt;0LF6tFit07Ddw0ShRw0KDQqtuqX9p2m2RLF6p9qoz6XOIE 
+        1Py3Jvc29mdCuiBJbnRlcm5ldCBN……。<br>
+        　　说明：<br>
+        　　Base64编码信件的乱码前一般有如下几部分“信头”：Content－Type(内容类型)、charset(字符集)及Content－Transfer－Encoding(内容传输乱码方式)。<br>
+        　　判断的依据比较明显。<br>
+        　　<strong>第三种编码方法：QpencodeQP</strong>编码全名为“Quoted－Printable 
+        Content－Transfer－Encoding”。由于用这种格式表示的信息，其内容主要都是ASCII字符集中可以打印的字符，因此名称中含有printable。其大体格式为：<br>
+        　　=A1A=B1z=A6n=A1I=A7=DA=A6b=BA=F4=B8=F4=A4W=B1o……<br>
+        　　=E5==ABH=A5=F3=B0=DD=C3D=B1M=Aea=A1A……<br>
+        　　说明：<br>
+        　　采用QP（Quoted－Printable）编码方式的信件很容易进行判别，因为它的内容通常有很多等号“=”，因此不需要看“信头”也可以判断是否为QP编码。<br>
+        　　第三，根据所用的操作系统选择相应的软件程序，然后进行解码。<br>
+        　　判断出乱码信件的编码方法后，再根据自己所拥有的软件种类，选取合适的解码软件。由于不同平台上不同的软件程序使用方法差别很大，作者无法在此一一说明，只能由读者自己参照程序附带的Help、Readme等文件的说明，自行对乱码邮件进行解码。这里着重介绍DOS和Windows下的编 
+        /解码程序的大体优缺点，供读者下载程序时参考，见表一。<br>
+        　　如果尝试过上述步骤后仍然无法解决问题，则可能有另外的原因：<br>
+        　　1.该邮件采用了其它的编码方法，如Binhex或XXencode编码等。只要乱码前面有“信头”信息（一般显示了该邮件所用的编码方式），即可用Xferp111或其它“智能型”Windows程序将其解码。<br>
+        　　2.是否在中文环境内。如果你所用的操作系统是英文环境，而你又没有外挂中文系统（如中文之星）或未切换为中文（如RICHWIN四通利方或南极星等）编码方式，则你自然看不到中文，而只能看到乱码。注意，双字节字符有中文简/繁体的GB和BIG5码及日文的JIS、EUC和朝鲜文的KSC码等，在GB码环境下看其他双字节字符时也只能看到乱码。<br>
+        　　3.一封邮件的内容中第8位字节被滤掉了。这种情况下的邮件几乎无法还原。<br>
+        　　总之，如果上述措施都难以解决问题的话，只好请教发件人了。<br>
+        　　为了尽量避免出现乱码问题，下面给出几点建议：<br>
+        　　●利用“附件”功能发送文件<br>
+        　　使用Netscape、Eudora或Pegasus等邮件系统附加这类非标准ASCII码格式的文件时，附加文件通常可以自动进行“base64”方式编码（仅对附件部分进行编码）。在用“附件”方式发送邮件之前，无需进行编码；如果编码的话，将会给解码带来很多麻烦，意即收件人必须再一次进行解码。一般来说收件人都可以成功解码这类“附加”文件，因此强烈建议你采用这种方法发送中文类邮件。<br>
+        　　●如果无法以附件方式发送文件，则必须在正文中发送中文或二进制文件<br>
+        　　如果发/收件人之间远隔万里，如在中国和美国之间，则传送过程中，第八位将可能被截掉。这时最好先在正文中用中文给收件人发一封测试信，并了解对方能否正确收到邮件正文。如果第八位被截掉，则收件人将会看到一些乱码，而不是上述的uu/b64/Qp等格式，而且这种信件几乎不可恢复。这种情况的解决方案是，在Netscape、Eudora或Pegasus 
+        Mail等你所使用的邮件系统中，选择其首选项或选项配置中的“Quoted 
+        Printalbe”或“MIME encoding”。<br>
+        　　●发送重要信息时先发测试信<br>
+        　　发送重要信息时，为了确认是否无须编码即可发送正文，应该先发送测试信。而且还应确定收件人能否对附件文件进行解码。如果发送已经编码的邮件，则最好添加足够的“信头”信息，以便收件人知道所需的解码方法。建议对uuencode/UUDeview编码方式用uuencoding作信头，对mpack编码方式用base64 
+        encoding作信头。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

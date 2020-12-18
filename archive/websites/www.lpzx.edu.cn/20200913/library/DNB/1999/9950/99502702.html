@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 多变主页</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 多变主页</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 多变主页 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　不少网友发E－mail问我：“怎么每次去你的主页，看到的图片都不一样，难道你时时刻刻都在更换图片吗？”天啊，我哪有那么多钱支付电话费？我只不过用了JavaScript的小技巧做了个“随机图片”而已。其HTML源代码为：<br>
+　　&lt;!随机图片开始&gt;<br>
+　　&lt;script language=″JavaScript″&gt;<br>
+　　&lt;!－－<br>
+　　imglink=new Date();<br>
+　　var thisimg=″1.jpg″;<br>
+　　if(imglink.getSeconds()&lt;54){var thisimg=″2.jpg″;}<br>
+　　if(imglink.getSeconds()&lt;46){var thisimg=″3.jpg″;}<br>
+　　if(imglink.getSeconds()&lt;39){var thisimg=″4.jpg″;}<br>
+　　if(imglink.getSeconds()&lt;32){var thisimg=″5.jpg″;}<br>
+　　if(imglink.getSeconds()&lt;24){var thisimg=″6.jpg″;}<br>
+　　if(imglink.getSeconds()&lt;17){var thisimg=″7.jpg″;}<br>
+　　if(imglink.getSeconds()&lt;9){var thisimg=″8.jpg″;}<br>
+　　document.write(″&lt;img src=″＋thisimg＋″ border=0 alt=″每次打开本页，看到的图片都不同！″&gt;″);<br>
+　　//－－&gt;<br>
+　　&lt;/script&gt;<br>
+　　&lt;!随机图片结束&gt;<br>
+　　在这个例子中，设置了8张图片，与网页放置于同一目录下。当浏览器打开此网页时，立即从电脑里读取时间，并根据秒数的不同选择不同的图片。<br>
+　　我们也常常埋怨在网页里插入的图片与网页背景不能很好地融合在一起，如果图片周围有一圈朦胧的过渡色该多好！用Photoshop制作图片当然能实现这个效果。其实还有更好的办法：在网页中用 CSS 滤镜来实现！<br>
+　　&lt;p style=″line－height:0pt;filter:Glow<br>(Color=＃FFFFFF,Strength=36);height:auto;position:relative;padding:21pt″&gt;<br>
+　　&lt;img src=″1.jpg″ border=0&gt;<br>
+　　&lt;/p&gt;<br>
+　　其中，“Color=＃FFFFFF”是定义阴影的颜色，“Strength=36”是定义阴影宽度。怎么样，图片是不是有了“月朦胧，鸟朦胧”的感觉？<br>
+　　如果你不喜欢“温馨浪漫”的主页类型，这里还有一款“魔幻豪放”派的——<br>
+　　在&lt;head&gt;&lt;/head&gt;中加入以下内容：<br>
+　　&lt;!开始定义变色函数&gt;<br>
+　　&lt;script language=″JavaScript″&gt;<br>
+　　&lt;!－－hide<br>
+　　function RandomNumber(max) //定义随机函数<br>
+　　{var today=new Date();<br>
+　　var num=Math.round((Math.abs(Math.sin(today.getTime()))＊1000))％max＋1;return num;}<br>
+　　function makearray(n)<br>
+　　{this.length=0;for(var i=1;i&lt;n;i＋＋)this[i]=0;return this;}function changecolor()<br>
+　　{clearTimeout();<br>
+　　linkarray=new makearray(10); //用linkarray数组定义十种常用颜色<br>
+　　linkarray[1]=″＃ff0000″;<br>
+　　linkarray[2]=″＃ffff00″;<br>
+　　linkarray[3]=″＃00ff00″;<br>
+　　linkarray[4]=″＃0000ff″;<br>
+　　linkarray[5]=″＃8000ff″;<br>
+　　linkarray[6]=″＃ff00ff″;<br>
+　　linkarray[7]=″＃004000″;<br>
+　　linkarray[8]=″＃808000″;<br>
+　　linkarray[9]=″＃ff8000″;<br>
+　　linkarray[10]=″＃ff0000″;<br>
+　　document.bgColor=(linkarray[RandomNumber(10)]); //利用随机函数从十种颜色中任选一种作为网页背景色<br>
+　　setTimeout(″changecolor()″,1000); //设置时钟，让背景色每秒变换一次<br>
+　　return;}<br>
+　　//－－&gt;<br>
+　　&lt;/script&gt;<br>
+　　&lt;!定义变色函数结束&gt;<br>
+　　然后在中调用changecolor()函数即可：&lt;body OnLoad=″javascript:changecolor()″&gt;<br>
+　　网页背景颜色每秒钟变换一次，够酷吧？<br>
+　　如果把“document.bgColor=(linkarray[RandomNumber(10)]);”一句中的“bgColor”换成“fgColor”，也能实现网页文字不断地变色。此外，你也可以自己定义变色的时间周期，改变“setTimeout(″changecolor()″,1000);”中的“1000”即可。　<br><b>　（河北　漠鹰）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99502702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

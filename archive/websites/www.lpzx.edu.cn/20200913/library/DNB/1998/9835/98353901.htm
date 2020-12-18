@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何识别PC100 
+        SCRAM<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　随着100MHz主频主板的大量涌现，100 
+        MHz主频正在成为主流。主频从过去的66MHz提升到100MHz的确使系统性能提高不少， 
+        但我们过去使用的PC66 SDRAM内存条（能够在66MHz主频下稳定运行）要在100MHz下运行也显得勉为其难，即便有少数质量较好的内存条跑上了100MHz，也可能不稳定。所以现在购买内存条，最好购买符合PC100规范的SDRAM内存条，也就是我们平时所说的PC100内存条。<br>
+        　　100MHz的主频对内存条的要求非常高，要求制作工艺比普通PC66内存条复杂。如何来鉴别它们呢? 
+        <br>
+        识别SDRAM内存条的容量<br>
+        　　目前的PC100 SDRAM 内存条都是使用主板上的168线DIMM内存插槽，比我们过去使用的72线EDORAM长不少。从容量上看主要有16MB、32MB、64MB以及128MB几种(256MB的已经面世)，符合PC100规范的16MB内存条极少，PC100的32MB内存条则很普遍， 
+        64MB的由于价格较高购买的人相对较少，而128MB的则更少了，多半是较高档的服务器、工作站才会配。我们可以通过观察内存条上SDRAM芯片的型号以及数目来识别其容量。<br>
+        　　目前主要使用两种型号的SDRAM芯片，一种是2Mb×8的SDRAM芯片，每颗的容量是2MB，用在16MB、32MB的内存条上，另一种是2Mb×8×4Bank的SDRAM芯片，每颗的容量是8MB，主要用在64MB和128MB的SDRAM内存条上。从外观上看2Mb×8的SDRAM芯片比2Mb×8×4Bank的SDRAM芯片短（如图一所示），是TSOP－II封装44双引线。而外形上略长的2Mb×8×4Bank的SDRAM芯片为TSOP－II封装54双引线。<br>
+        　　再来看SDRAM芯片的数目。目前的SDRAM内存条有双面和单面两种设计，并且每一面采用8颗或者9颗（多出的一颗为ECC效验）SDRAM芯片。16MB和64MB的SDRAM内存条通常是单面的，16MB的采用2Mb×8的SDRAM芯片，单面8颗，共8×2MB=16MB。而64MB的则采用2Mb×8×4Bank型号的SDRAM芯片，单面8颗，共8×8MB=64MB。32MB和128MB的SDRAM内存条则是双面的（如图二、三所示）。32MB的采用与16MB内存条相同的SDRAM芯片，只是两面都有罢了，所以容量是16MB的2倍，为32MB；128MB则是64MB的双面形式。<br>
+        　　什么是ECC效验？<br>
+        　　上面提到SDRAM内存条单面有8或者9颗SDRAM芯片，9颗中多出的一颗便是用于ECC（Error 
+        Correction Code）错误纠正代码。当内存数据发生错误时，错误纠正代码就可以起到检查纠正1位错误的作用。 
+        <br>
+        　　ECC效验是PC100所要求的，但目前市面上仍然很少见到带ECC的内存条，因为增加用于ECC的SDRAM芯片无疑将提高内存条的生产成本，在内存条价格竞争异常激烈的今天，商家是能省便省了。如果是用在重要的服务器或工作站上，还是建议你想方设法找到带ECC效验的内存条。<br>
+        不可缺少的SPD<br>
+        SPD即Serial Presence Detect，是SDRAM内存条的新规范。它是一个8引线的EEPROM芯片，位置通常在内存条靠右边的SDRAM芯片附近（如图二所示）。内存条制造商将该内存条所使用的芯片基本信息预先写入这颗EEPROM。使PC系统可以通过SPD知道该内存条的基本信息，正确地识别，从而确定使用正确的方法来驱动它。如果没有SPD，系统BIOS只得通过检测或猜测的方法来识别该内存芯片组的基本信息，这样做的结果往往是驱动方式的不恰当从而造成系统不稳定。<br>
+        6层印刷电路板<br>
+        　　PC100要求SDRAM内存条必须使用6层的印刷电路板，而且对每一层之间的距离以及印刷电路之间的距离都有严格的规定，这样才能很好地解决线路之间的电子干扰，保证在100MHz高速运行下稳定工作。不过要凭肉眼看出内存条印刷电路板的层数，实在不容易，所以笔者建议你带一块4层电路板的普通内存条，两相对比还是可以看出区别的，也可以用手掂 
+        量一下，6层的当然比4层的重一些。 <br>
+        10ns以内的时钟周期＋CAS 2<br>
+        　　PC100的 SDRAM内存条要求在主板时钟频率设置在100MHz下,并且在主板的BIOS选项中CAS设置为2时,该SDRAM能稳定地与100MHz主板外频同步工作。虽然有不少质量较好的普通SDRAM内存条在CAS设置为3的情况下可以跑到100MHz，而PC100 
+        SDRAM则要求必须设置为2时稳定工作。如果CAS设置为3将降低速度。<br>
+        　　100MHz对应的时钟周期是10ns。尽管PC100要求10ns以内的SDRAM，但在笔者看来，10ns只是最低要求，如果生产厂家在生产工艺上稍有欠缺，便很难保证能够稳定工作在100MHz。更何况对于我们的超频玩家来说，超到133正在成为新的追求目标！所以笔者建议购买7ns、8ns的，7ns的稳定工作频率可以达到142MHz，跑133MHz自然不在话下，而8ns 
+        的稳定工作频率为125MHz，也是超频的好料。说到这里不得不纠正目前正流行的一种说法，有不少读者包括商家（不知是有意还是无意）都认为内存芯片上标志为－10的便是10ns，－7、－8的就是7ns、8ns。其实这种认识并不完全正确，因为并没有规定在PC100 
+        SDRAM内存条芯片上的－x标记一定代表工作频率，而且笔者查阅了各大芯片厂家的技术资料，标志为－7而只有10ns时钟周期的芯片比比皆是。而且即使是10ns的SDRAM，如果其他指标达不到PC100的要求同样不能够算是PC100的内存条。要知道有不少商家就是从这种内存条中挑选出质量较好能够超频的向你推荐，说是7ns的，叫你多掏100多元。从目前市场情况来看，我们现在能买到的SDRAM一般是LG或现代的，有少量三星（SAMSUNG）、东芝（TOSHIBA）、MICRON、NEC以及三菱（MITSUBISHI）等公司的。下面是笔者从磐英Epox（http://www.epox.com/support/general/pc100.html）以及各SDRAM芯片厂家的网站上收集到的资料，作了非常仔细的整理，仅作参考。需要说明的是，其中有几款SDRAM虽然在CAS为3时才能稳定工作在100MHz，但仍通过 
+        PC100认证，也许是其他指标很好的缘故吧。<br>
+        　　●现代HYUNDAI(见表一)<br>
+        　　网址：http://www.hei.co.<br>
+        kr/english/product/products.htm<br>
+        　　现代电子的PC100 SDRAM应该有ATC这三个字母的。如果没有这三个字母不是PC100的。<br>
+        　　●LGS（Goldstar）(见表二)<br>
+        　　网址：http://www.lgs.co.kr/dram/sdram/sdram.htm<br>
+        　　许多商家把LG的7K或7J当成了7ns的SDRAM来卖，一定小心哟！<br>
+        　　● MITSUBISH(见表三)<br>
+        　　网址：http://www.mitsubishichips.<br>
+        com/data/datasheets/psgindex.html<br>
+        　　三菱下面三款SDRAM都不是PC100 SDRAM。<br>
+        　　● MT (MICRON)(见表四)<br>
+        　　网址：http://www.micron.com/mti/msp/html/adsdram.html<br>
+        　　● NEC(见表五)<br>
+        　　网址：http://www.ic.nec.co.jp/english/products/memory/memory_doc.html<br>
+        　　后缀是A10－9JF的不是PC100的SDRAM，A80－9JF的才是。<br>
+        　　● SEC (SAMSUNG)(见表六)<br>
+        　　网址：http://www.usa.samsungsemi.<br>
+        com/buy/decoder/sdramcomp.htm<br>
+        　　市面上真正支持7ns的SDRAM就只有三星的 KMXXXSXXXXBT－G7，但也只能是CAS为 
+        3时才稳定工作。<br>
+        　　● TOSHIBA(见表七)<br>
+        　　网址：http://www.toshiba.com/taec/nonflash/indexproducts.html&#26;（重庆 
+        &nbsp; 小东）<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期39版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

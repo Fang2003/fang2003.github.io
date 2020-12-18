@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Delphi中用Sender参数实现代码重用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        面向对象的编程工具的特点之一就是要提高代码重用性(Reuse)，作为新一代可视化开发工具，Delphi中的代码重用性相当高。我们知道，在Delphi中，大部分程序代码都直接或间接地对应着一个事件，此程序称为事件处理句柄，它实际上就是一个过程。从应用程序的工程到表单、构件和程序，Delphi强调的是其开发过程中每一层次的重用性，可以通过编写某些构件常用的事件处理句柄来达到程序重用目的。你可以在属性窗口的Events页上将A事件的处理句柄指向B事件的处理句柄，这样A事件和B事件就共享了一个过程段，从而达到了重用的目的。如果共享的程序段与发生该事件的控件无关，如ShowMessage(′hello,world′)，那这种共享是最简单的。但一般来说，代码段间的共享都跟发生该事件的控件有关，需要根据控件类型做出相应的处理，这时就要用到Sender参数。<br>
+        　　每个过程段的开头都类似procedure TForm1FormClick(Sender:TObject)；其中的Sender是一个TObject类型的参数，它告诉Delphi哪个控件接收这个事件并调用相应的处理过程。你可以编写一个单一的事件处理句柄，通过Sender参数和IF…THEN…语句或者CASE语句配合，来处理多个构件。发生事件的构件或控件的值已经赋给了Sender参数，该参数的用途之一就在于：可以使用保留字IS来测试Sender，以便找到调用这个事件处理句柄的构件或控件的类型。例如，将表单中编辑框和标签的Click事件的处理句柄都指向表单的xxx过程，编辑框和标签对Click事件有不同的反应：<br>
+        　　procedure TForm1xxx(Sender:TObject);<br>
+        　　begin<br>
+        　　if(sender if Tedit) then<br>
+        　　showmessage(′this is a editbox′);<br>
+        　　if(sender is Tlabel) then<br>
+        　　showmessage(′this is a label′);<br>
+        　　end;<br>
+        　　Sender参数的第二个用途是结合AS操作符进行类型转换，将若干个派生于某一父类的子类强制转换成该父类。例如表单中有一个TEdit类控件和一个TMemo控件，它们实际上都派生于TcustomEdit类，如果你要为二者的某一事件提供同样处理，可以将二者事件句柄都指向自定义的过程yyy:<br>
+        　　Procedure TForm1.yyy(Sender:TObject);<br>
+        　　begin<br>
+        　　(sender as TcustomEdit).text:=′This is some demo text′;<br>
+        　　end;<br>
+        　　在过程中，AS操作符将TEdit类和TMemo类均强制转换成TcustomEdit类，再对TcustomEdit类的属性赋值。注意这种转换必须符合Delphi中类的层次关系。<br>
+        　　使用Sender参数可以通过单一过程段处理多类控件，真正体现了Delphi面向对象的重用性。　　<strong>(河北　王　俊)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9830/issue/1998/30/index.htm">《电脑报》1998年8月10日第30期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

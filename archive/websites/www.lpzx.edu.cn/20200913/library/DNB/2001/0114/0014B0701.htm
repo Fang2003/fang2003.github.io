@@ -1,0 +1,153 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>在Linux下配置打印机</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | 
+      <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="457" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="139" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第14期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{在Linux下配置打印机}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 时下，Linux以开放的源代码，强大而稳定的网络功能著称于世！然而，美中不足的是：虽然Linux支持的硬件非常多，支持的打印机类型不少，但Linux版本甚多，打印机的种类也不少，难免会有Linux与打印机“牛头不对马嘴”的情况。例如我的Red 
+              Hat 5.0就不支持我的HP Deskjet 950C。无奈，我在网上搜遍了Linux资源网站，终于在一家专门提供Linux下打印机驱动程序的网站：http://www.student.infomatik.thdarmstadt.de/wosch/pub/bubbletools/announce.html找到了驱动程序，希望在Linux下使用打印机但找不到驱动的朋友可以去试试。下面我把如何在Linux下设置打印机做一般性的介绍，这也是配置其他硬件的规范步骤，对大家学习使用Linux能起到触类旁通的作用。<br>
+              一、确认Linux内核已加入了支持lp设备的语句<br>
+              首先，用modprobe命令查看是否可以加载lp.o模块，即/sbin/modprobe lp  若显示Cant locat 
+              lp module则须重新编译内核按下面介绍即可。若可以看到类似lpo at 0x0378(polling)的语句，说明系统已探测到并行接口，设备文件为/dev/lpo，可跳过下文。<br>
+              1.打开源程序包。在/usr/src目录下键入：tar zxvf Linux-x.x.xx.tar.gz或tar xvf Linux-x.x.xx.tar视你的内核是.tar.gz文件还是.tar文件而定。x.x.xx是你所用的Linux版本号若不清楚可用uname 
+              -a 命令查看。<br>
+              2.选定支持打印机的端口。在Linux目录下执行make menuconfig(以菜单形式配置)在展开的菜单中查找General 
+              setup，选中其中的Parallel port support和PC-style hardware选项；另外在Character 
+              devices中选中Parallel printer support(支持并行接口)和Standard/generic serial 
+              support(支持标准串行接口)。选定了上面四项，无论你的打印机是串行接口还是并行接口都可以顺利安装打印机了(注意：启动系统前应接好打印机，以便Linux内核可探测到)。<br>
+              二、配置打印驱动和系统打印文件<br>
+              1.在安装Linux时应将Linux发行套件中包含的BSD打印系统一并装入。BSD中包含GhostScript和NenScript两个文件，其中NenScript用于将普通文件转换成应用极为广泛的PostScript文件，而GhostScript除用于打印文本文档外，还提供了一系列图形格式转换和过滤工具，是打印图像文件不可缺少的软件。Red 
+              Hat Linux中包含有NenScriptSlackware Linux不包含它你可以到ftp//sunsite.unc.edu/pub/Linux/system/printing/ 
+              下载并编译它。<br>
+              2.进入GhostScript的安装目录，用gs -help命令查看系统上的GhostScript支持哪些设备，在Available 
+              device中查找是否有你的打印机型号，若找不到，只有先安装打印机驱动才能进行下面的工作，以我安装驱动为例：将下载的驱动程序HP-djet950c.tar.gz拷贝到/tmp目录下在该目录下解压：<br>
+              cp HP-djet950c.tar.gz /tmp/<br>
+              cd /tmp<br>
+              tar zxvf HP-djet950c.tar.gz<br>
+              此时将产生HP-djet950c-install文件以root身份运行它<br>
+              ./ HP-djet950c.tar.gz<br>
+              之后一路点Accept接受各种协议系统让你选择存放路径时应选择/usr/local/share/ghostscript这样打印驱动程序就安装完毕了。若安装过程中提示你“你的系统已加载了打印驱动程序模块(原先不支持你的打印机的模块)，是否删除。选择“删除”就可以了。在Linux下在安装新的硬件驱动程序时，经常会遇到这种情况。<br>
+              3.此时，可向打印机发送打印命令：cat testfile &gt;/dev/lp0若无法打印说明系统没有自动配置打印文件还需我们手工操作。打印配置文件为/etc/printcap下面简单介绍一下各命令行的含义以便大家配置适合自己的打印机<br>
+              #Local djet950c &quot;#&quot;后为文本注释<br>
+              lp｜djet950c｜PostScript\ #在此行填入打印机名称<br>
+              lp=/dev/lp0\ #指定本地打印机接口在此为第一个并行接口lp0<br>
+              sd=/var/spool/lpd/djet950c\ #制定打印机缓存目录名<br>
+              mc#0 mx#0\ #设置最多打印份数和最大打印尺寸；0表示不限制<br>
+              if=/var/spool/lpd/djet950c/filter #制定输入过滤器；若无表示用缺省/usr/sbin/lpf过滤器<br>
+              sh#不打印标题<br>
+              说明：对于串口打印机还要设置串口波特率打印机的说明书会有这一参数的详细说明设置方法：在上述文件末尾再加入一行：&quot;br#波特率数值\ 
+              &quot;。<br>
+              三、配置打印过滤器<br>
+              上文打印配置文件/etc/printcap中if域制定的是打印过滤器路径，所有的文件都要先经过打印过滤器在传送到打印机上。在Linux发行软件包中包含有打印过滤器文件，我们只需安装即可。除此之外，还可以到网上下载最新版本，以获得最好的打印效果。我推荐大家使用APS打印过滤器，它支持直接打印PostScript、text、gif、dvi等格式文件。下载地址：ftp//sunsite.unc.edu/pub/Linux/system/printing/aps-513.tar.gz<br>
+              安装方法：下载完毕后，将它拷贝到/tmp目录，解压，将解压文件拷贝到if域制定的文件夹中，具体如下：<br>
+              cp aps-513.tar.gz /tmp<br>
+              cd /tmp<br>
+              tar zxvf aps-513.tar.gz<br>
+              cp aps-513 /var/spool/lpd/djet950c/filter<br>
+              打印机过滤器就设置完成了！要使用打印机，必须先重新启动打印机守护进程(lpd)：我们可用lpc命令强行阻断旧lpd进程，并实现重启：lpc 
+              restart all。OK！接下来，用lpr命令就可以打印了。怎么样？轻轻松松，一切搞定！如果大家有什么问题可以和我联系，愿与各位共勉：windowsnt@371.net。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

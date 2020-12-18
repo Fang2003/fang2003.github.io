@@ -1,0 +1,104 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NOVELL网上收发E-Mail的两种方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　随着网络技术的不断发展,网络成本的不断减少,越来越多的企业应用局域网（LAN）来管理他们的经营事务。Internet的火爆发展使得他们有机会与世界联通,进行大量的信息交换。在这一过程中又涌现出许多问题,其中之一就是局域网用户的电子邮件收发问题,由于成本的原因及企业机密信息安全保密的要求,专线接入Internet或由局域网用户独立拨号上网收发E－MAIL在当前还难以被大多数企业所接受。大多数企业采取的都是由一个特定的部门专门负责E－MAIL收发,通过一条电话线拨号上网,其它部门需要收发E－MAIL时要到那一个部门申请并由那一部门收发,效率很低。效率很低的原因倒不是由拨号上网引起的,而是由于E－MAIL信件太多,对于申请人的接待登记占用了绝大多数时间,用户难以及时地发送邮件,有时需要等待很长时间,这给用户带来了极大的不便。而对于到来的邮件又难以及时分发,若将收到的邮件全部打印下来则成本太高且无法准确估计。若增加服务人员又浪费了人力且增加了成本,这对企业来讲是十分不利的,那有没有更好的方法呢？答案是肯定的。可以利用已有的局域网资源，进行适当的管理、应用，效率还是可以有较大提高的。<br>
+        　　下面我就以NOVELL NETWARE局域网为例,介绍两种可行的方法供大家参考。<br>
+        　　<strong>一、利用NETWARE提供的邮件服务（FirstMail）的文件挂送功能</strong><br>
+        &nbsp;&nbsp;&nbsp; NETWARE提供的邮件服务（FirstMail）有一种文件挂送的功能,即在邮件中可以挂带文件,挂带文件的类型不限,这一功能十分有用,用户可以自己在OUTLOOK 
+        EXPRESS(MICROSOFT在其IE4.0软件包中提供的电子邮件工具)中编辑邮件,填好收件人、抄送人等内容,通过FirstMail发送给服务人员,服务人员接收该文件后,直接在WINDOWS 
+        95下双击该文件即可发送。其实现方法如下：<br>
+        　　1.服务人员向网络管理员申请对邮件用户的管理权限或者网络管理员自己就是服务人员。<br>
+        　　2.建立NETWARE邮件服务。<br>
+        　　3.为各个邮件用户建立信箱,为服务人员建立两个信箱,一个用于处理紧急信件,另一个用于处理一般信件。<br>
+        　　4.用户用OUTLOOK EXPRESS创建邮件并通过FirstMail发送给服务人员。<br>
+        　　5.服务人员用“文件”菜单项接收邮件,并把挂带的文件存到一个固定的目录中。<br>
+        　　6.在Windows 95下将该目录中的文件全部选中,按ENTER键可同时打开所有选中的文件,对于每一个打开的文件,进行必要的内容检查,然后选择“文件”菜单项里的“以后发送方式”，最后打开OUTLOOK 
+        EXPRESS里的“发件箱”一起发送。发送完后,立即删除刚才选中的文件。<br>
+        　　7.收件时,服务人员作相反的操作,即用“文件”菜单项里的“另存为”选项将邮件变为扩展名为EML的文件,也以文件挂送的方式通过FirstMail发给用户。<br>
+        　　<strong>二、利用NETWARE的目录共享</strong><br>
+        　　这种方法不仅适用于NOVELL网络,而且对于Windows 95网络、Windows NT网络也同样适用。它的思想就是共享,在邮件用户与服务人员之间不需要任何邮件系统,利用最基本的网络功能和权限管理手段实现。其实现方法如下：<br>
+        　　由网络管理员在网络中的服务器上为邮件服务开辟一定的磁盘空间,创建若干目录，这些目录是供所有邮件用户和服务人员存储和读取文件使用的。每个用户两个目录,一个为发件目录,一个为收件目录。 
+        对于用户来讲,发件目录为读写权限,收件目录为只读权限；对于服务人员则对所有用户的发件目录有只读权限,对收件目录有读写权限。这样,用户只要用OUTLOOK 
+        EXPRESS创建邮件并将之“另存”到发件目录即可,而服务人员只要将该文件读出至一个固定的目录,然后用上一种方法中全选的方法即可完成多封邮件的发送。接收时服务人员将邮件“另存”到收件用户的收件目录,用户即可收到邮件。<br>
+        　　为了方便读者比较这两种方法,现作一下总结。<br>
+        　</font></p>
+        <div align="center"><center><table border="1" width="80%">
+          <tr>
+            <td><p class="ourfont"><font color="#369681">　　　　　　　　 </font></td>
+            <td><p class="ourfont"><font color="#369681">文件挂送方法　　</font></td>
+            <td><p class="ourfont"><font color="#369681">目录共享方法</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">服务人员操作　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">较复杂　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">简单</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">多封邮件发送　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">支持　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">支持</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">安全性　　　　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">较好　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">一般</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">邮件用户操作　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">较简单　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">简单</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">是否需要邮件系统　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">需要　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">不需要</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">用户平台最低要求　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">Windows 95　　</font></td>
+            <td><p class="ourfont"><font color="#369681">Windows 95</font></td>
+          </tr>
+          <tr>
+            <td><p class="ourfont"><font color="#369681">是否可以发送超文本邮件　</font></td>
+            <td><p class="ourfont"><font color="#369681">可　　　　　　　</font></td>
+            <td><p class="ourfont"><font color="#369681">可</font></td>
+          </tr>
+        </table>
+        </center></div><p class="ourfont"><font color="#369681">　　(北京　王伟光)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

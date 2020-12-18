@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用pcAnywhere实现远程控制</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>44 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用pcAnywhere实现远程控制</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用pcAnywhere实现远程控制 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　随着计算机技术的快速发展，计算机的管理及技术支持，特别是远程办公的需要，远程操作及控制技术越来越引起人们的关注。对于网络管理员、技术服务人员来说，远程控制提供了一种便捷、高效的手段，而pcAnywhere就是远程控制软件中的佼佼者，其最新中文版本为9.0，相较8.0版本有着连接配置方便、控制性能强、文件传输快、安全性高等特点。
+<p><b>　　功能简介</b></p>
+　　用作远程被控主机：由一台机器作为控制端，另一台作为被控制的计算机。首先启动需要被遥控的计算机上的pcAnywhere，选择作为被控机，再选择相应的远程控制方式（通过本地网、MODEM、串口直连线等）。作为被控制的计算机，一旦选择了进行被控选择，窗口立刻最小化，成为一个小的计算机图标，放置到systemtray中。<br>
+　　用作远程控制主机：要对远程计算机进行控制，首先应在控制机上启动pcAnywhere，选择通过网络远程控制计算机（本文中的远程控制是基于局域网的控制实例，所用协议为TCP/IP）。如果用户事先没有配置要远程控制计算机，则控制端会自动从网络上查询，它可以找到网络上目前正在运行pcAnywhere的所有计算机。找到后，它将列出所有可被控制的计算机清单，供管理员选用。<br>
+      　　<a href="images/1502.gif" target="_blank"><img src="images/thm1502.gif" width="100" height="100" align="left" border="0"></a>远程控制：查看远程计算机的配置情况，对远程计算机进行正确地配置。可以通过以下方式连接远程计算机：拨号连接、专线方式、局域网方式、Internet方式。<br>
+　　文件传输：pcAnywhere 9.0支持在远程及本地之间进行双向文件传送，操作过程如同在两个不同的磁盘中进行一样，同时还有文件管理功能。<br>
+　　用作网关：安装pcAnywhere的计算机同时还可以用作网关（pcAnywhere 9.0支持双向网关），一旦接入远程网络或Internet，局域网内外的用户都可以通过它进行资源共享。<br>
+　　远程工作站：远程计算机通过MODEM拨号进入局域网，地位同所拨入的局域网中的一台工作站，对网络内的资源进行按权限存取。<br>
+　　其他：由于pcAnywhere支持TCP/IP协议，所以支持通过Internet对远程计算机进行控制。例如：你在北京，而你朋友在上海，他要求你对他新安装的某一个新的软件进行配置。那么只要你朋友的计算机已接入Internet并且也已经运行了pcAnywhere，你只要通过拨号上本地ISP，通过Internet就可以找到他的计算机，对他刚装入的软件进行配置。而此时你所付的费用仅为本地电话费。想想看，这多好！
+<p><b>　　注意事项</b></p>
+　　为了加速远程PC图像在本地的显示，应取掉远程主机的屏幕壁纸、屏幕保护、取掉显示器的节能设置、将屏幕颜色设置为16色，这样可以减少许多不必要的数据传输。<br>
+　　pcAnywhere的评估版可以在http://www.symantec.com处下载，评估时间为30天。<br><b>
+（浙江　薛启康）</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99441502.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>CPCW网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

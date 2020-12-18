@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">获得多个库结构的小程序</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 众所周知，在FoxPro中可以利用LIST STRU和DISP STRU命令来显示数据库结构。但是当数据库很多时，这样的操作就很繁琐。而我们在分析某一 
+        MIS(管理信息系统)时，常常需要知道系统中众多数据库的结构。下面的小程序可以解决这个问题。它可以将指定目录下所有数据库的库结构保存到根目录下的 
+        strutxt文件中。<br>
+        &nbsp;&nbsp;&nbsp; 源程序如下： <br>
+        &nbsp;&nbsp;&nbsp; CLEAR <br>
+        &nbsp;&nbsp;&nbsp; CLOSE ALL <br>
+        &nbsp;&nbsp;&nbsp; path=′　′ <br>
+        &nbsp;&nbsp;&nbsp; @1，1 SAY　′请输入数据库文件所在路径：′ <br>
+        &nbsp;&nbsp;&nbsp; @1,col()＋2 GET path <br>
+        &nbsp;&nbsp;&nbsp; read <br>
+        &nbsp;&nbsp;&nbsp; set default to alltrim(path) <br>
+        &nbsp;&nbsp;&nbsp; dbf_num=ADIR(dbf_name,′＊dbf′,′H′)<br>
+        &nbsp;&nbsp;&nbsp; IF dbf_num=0 <br>
+        &nbsp;&nbsp;&nbsp; WAIT WINDOW　′指定路径下找不到数据库文<br>
+        &nbsp;&nbsp;&nbsp; 件!′ NOWAIT <br>
+        &nbsp;&nbsp;&nbsp; RETURN <br>
+        &nbsp;&nbsp;&nbsp; ENDIF <br>
+        &nbsp;&nbsp;&nbsp; =fopen(′c:\strutxt′,2) <br>
+        &nbsp;&nbsp;&nbsp; FOR i=1 TO dbf_num <br>
+        &nbsp;&nbsp;&nbsp; USE dbf_name(i,1) <br>
+        &nbsp;&nbsp;&nbsp; LIST STRU TO FILE <a href="file:///c:/tmptxt">c:\tmptxt</a> <br>
+        &nbsp;&nbsp;&nbsp; !copy c:\strutxt＋c:\tmptxt <a href="file:///c:/strutxt">c:\strutxt</a> 
+        <br>
+        &nbsp;&nbsp;&nbsp; !del <a href="file:///c:/tmptxt">c:\tmptxt</a> <br>
+        &nbsp;&nbsp;&nbsp; ENDFOR <br>
+        &nbsp;&nbsp;&nbsp; 其中，ADIR(dbf_name,′＊dbf′,′H′)函数将指定目录下所有后缀为dbf的文件(包括隐含文件 
+        )的文件信息存入数组&nbsp;&nbsp;&nbsp; dbf_name中，并返回文件个数。ADIR()存入数组中的信息是：文件名，文件长度，建立文件的日期，时间和文件的属性。如数组不存在，FoxPro将自动建立它。 
+        <br>
+        &nbsp;&nbsp;&nbsp; 本程序已在 FoxPro25b中调试通过。 <strong>(重庆 
+        &nbsp; 何庆)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月12日第2期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>虚拟盘的安装和使用</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">虚拟盘的安装和使用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        所谓“虚拟盘”是指用计算机的随机存储器(RAM)部分来模拟一个硬盘驱动器，执行一般的文件存储操作。该设备驱动程序则必须在你的CONFIG.SYS文件中设置：<br>
+        　　DEVICE=C:\DOS\HIMEM.SYS<br>
+        　　DEVICE=C:\DOS\RAMDRIVE.SYS 　容量大小 扇区大小 目录大小 参数<br>
+        　　其中，容量大小指的是要设置的虚拟盘的大小，单位是K字节，其值介于16至4096之间，缺省时取值为64。扇区大小用来指定每个扇区的大小，其值只能在128、256、512、1024中任选一个，单位是字节，缺省时取值为512。目录大小则表示目录中可以容纳的文件及子目录的个数，其值在2到1024之间选择，缺省时取值为64。参数为/E时表示把虚拟盘安置在扩展内存中，参数为/A时表示把虚拟盘安置在扩充内存中(对配有扩充内存的计算机有效)。<br>
+        　　由于计算机从内存读取信息的速度要比从硬盘的读取速度快，所以虚拟盘的其它运行速度也要比硬盘快得多。而且虚拟盘可以像硬盘一样地使用。<br>
+        　　</font><font color="#004040">特别提醒注意的是：真正的硬盘和虚拟盘两者间最重要区别就是虚拟盘仅存在于内存中，当你关机或重新启动计算机时，虚拟盘上的信息将被丢失，所以在关机或重新启动计算机前，一定要及时把在虚拟盘上的重要的数据存放到真正的硬盘中。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

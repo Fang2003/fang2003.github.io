@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<link rel="stylesheet" href="images/epcw.css" TYPE='text/css'>
+<TITLE>电脑报电子版 -- 让IE4.0支持繁体中文</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-internet&realm=internet' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9937.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'></A></TD>
+<TD BGCOLOR='#FFCC66'>&nbsp;</TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9937.html'>37 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 让IE4.0支持繁体中文</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 让IE4.0支持繁体中文 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在Windows98的默认安装中，IE4.0是不具备繁体支持能力的，这给我们的日常使用带来了很大的不便。当你浏览台湾网站，或者玩一些台湾汉化了的游戏时，不得不启动各种内码转换程序。可是，这样一来加重了系统负担，引起性能下降，更令人头痛的是由此可能引起IE出错，导致浏览窗口关闭。<br>
+　　最简单的解决办法当然是安装IE的语言支持包了，但是，这个支持包不易找到。其实，只要找到一个Big5码的字体文件，再对系统进行一些设置就可以解决这个问题。<br>
+　　下面，就以《电脑报配套光盘》1998年第3期B盘上附带的UnionWay软件为例，介绍如何为IE4.0添加繁体支持。<br>
+　　第一步，安装UnionWay。假设一切使用默认设置，UnionWay会将字体文件安装到C:\UWFont目录下。<br>
+　　第二步，向系统添加字体。选择：“控制面板”→“字体”→“文件”→“安装新字体”，向系统添加UWCXMF.ttf字体文件。<br>
+　　第三步，进行IE的语言设置。“查看”→“Internet选项”→“常规”→“语言”→“添加”，选择“繁体中文(中国台湾地区)[zh－tw]”。确定后在“常规”选项页中选择“字体”→“繁体中文”，将“非等宽字体”设置为UWCXMF(Big5)。<br>
+　　第四步，卸载UnionWay。注意，此时不能一路“OK”。首先，选择“Custom”。在随后出现的一系列选择窗体中，Win.ini文件中的“C:\UWFont\UWCXMF.TTF=”项不能选择，注册表中与UWCXMF字体有关的选项不能选择，其余选项都可选择。<br>
+　　第五步，修改Win.ini文件。查找[uwfont]项，将C:\UWFont\UWCXMF.TTF=UWCXMF(Big5)改为C:\Pwin98\Fonts\UWCXMF.TTF=UWCXMF(Big5)，当然，系统目录要与你的目录一致。<br>
+　　至此，安装步骤全部完成，重新启动系统后，你会发现IE“查看”菜单下的“字体”子菜单中多出了“繁体中文(Big5)”。当你浏览台湾站点出现乱码时，只须一点，立即恢复正常。更妙的是，当运行《大富翁Ⅳ》、《异尘余生Ⅱ》中文版等台湾游戏时，会发现不需要任何内码转换平台支持，就已经是正确的中文显示了!而且，可以长期正常使用，不用担心软件过期了。此方法也适用于Netscape浏览器。<br>
+　　其实，只要能找到Big5码的字体文件，也可以直接对Win.ini文件和系统注册表进行修改，同样可以达到上述目的。同理，我们还可以为IE添加更多的字体支持，在此就不再重复了。<br><b>(四川　李涛)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/37/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99372804.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

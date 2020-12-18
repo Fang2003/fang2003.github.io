@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong><br>
+        专家坐堂 </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp; 
+        　河南读者凌涛问：一台微机，配置为：微星6117主板、PⅡ 300 CPU、微星MS－4419 
+        AGP显卡、64M内存。在WIN95中安装显示卡时，系统提示：“You must install 
+        Microsoft′s‘USBSUPP.EXE’”。不管是用显卡驱动程序的Autorun.EXE安装，还是在添加新硬件里选择F：\Intel\I740\WIN95安装，怎么样也装不上。请问USBSUPP.EXE是什么文件，到哪才可以找到它？<br>
+        　　答：USBSUPP.EXE是将WIN95 OSR 2.0升级为WIN95 OSR 2.1的升级程序(不支持早期的WIN95版本)，该程序为升级后的WIN95 
+        OSR 2.1提供了对USB和AGP接口的支持，必须运行该升级程序，才能在WIN95 
+        中安装AGP显卡驱动程序。在http:∥ww.see.online.sh.cn／CH、http:∥audi.nchu.edu.tw／～s8239040／p55－vp3／p55－vp3f.htm或http:∥WWW.MICROSOFT.COM／KB均可下载到该程序。《电脑报配套光盘之PC世界1998.1期(总第六期)》提供了中、英文版(4.03.1214版)的USBSUPP.EXE，在\HARDWARE\AGP\OSR21目录中可找到。运行USBSUPP.EXE后，不但能在升级后的WIN95 
+        OSR 2.1中安装 AGP显卡驱动程序，完全发挥AGP DIME的性能，而且还能修正“控制面板／系统／系统属性单／设备管理标签”设备列表中USB、PCI 
+        CARD等项目的“？”和“！”，好处多多，快去找来试试。<br>
+        &nbsp;&nbsp;&nbsp; 江西读者姜涛问：微机配置为：Pentium 133 CPU、SL－586主板、A3 
+        MPEG显示卡。为了改善WIN95中软解压的播放效果，将光驱的数据线由原来的第一IDE接口“从方式”改为第二IDE接口“主方式”，播放VCD效果确实提高了不少。但启动后经常找不到光驱，在“控制面板／系统／系统属性／设备管理标签”的列表中删除光驱后，重新启动可以找到光驱，下次启动时光驱又不见了，重新拔插了一下也不见效。改回原来的方式，即硬盘为第一IDE接口“主方式”，光驱为第一IDE接口“从方式”，又能找到光驱，能正常读写。再改回前述方式，又找不到光驱。百思不得其解，盼给予解答。<br>
+        　　答：故障是WIN95未能正常识别光驱接口变更造成的，请用下述方法试试：选择“开始”,单击“运行”,在“运行”对话框中键入“REGEDIT”,进入注册表编辑器。用注册表编辑器“编辑菜单”的“查找”和“查找下一个”命令，查找并删除与字符串“CD－ROM”相关的所有“键值”或“主键”，退出注册表编辑器,重新启动。<br>
+        &nbsp;&nbsp;&nbsp; 福建读者林诚问：一台微机，配置为：华硕TX－97E主板、Pentium 
+        MMX 200 CPU、32M内存、2.1G硬盘、TATUNG24速光驱。光驱读盘时，常会突然降速并重新启动，此时如果不退出光盘，启动进入WIN95时又会重新启动，不知是何原因?<br>
+        　　答：产生这种现象的原因大致有以下三个：<br>
+        　　1.华硕TX－97系列主板使用Intel 430TX芯片组，该芯片组支持Ultra DMA 
+        33传输方式，但无论是WIN95、还是 WIN95 OSR2版本都不支持Ultra DMA 33传输方式，华硕TX－97主板自带的Intel 
+        Bus Master Driver提供了对Ultra DMA 33的支持，但由于该Bus Master Driver的版本较老，或说对有些光驱支持不好，会产生读光驱时死机、无法播放VCD或硬盘速度变慢的现象。建议卸载Bus 
+        Master driver，重新安装 Microsoft 的IDE Controller (dual－fifo)试试，如果问题解决，则是Bus 
+        Master Driver与光驱不兼容导致的。<br>
+        　　如果你的硬盘不支持Ultra DMA33，问题就解决了；如果支持，考虑更新Bus 
+        Master Driver，在《电脑报配套光盘之PC世界1998.1期》的\HARDWARE\BOARD\INTELTX370B目录中提供了Triones 
+        PⅡX Bus Master IDE Drivers 3.70B版,该程序为430FX、430HX、 430TX、430VX、440FX和440LX等芯片组提供了对Ultra 
+        DMA 33传输方式的支持，并修正了以前版本的错误，你可以找来试试。如果还不能解决问题，参见本报1998年第32期36版《光驱与430TX主板不兼容的处理》一文所述方法解决。<br>
+        　　2.电源过载能力差也会造成你所描述的现象，由于光驱读盘时，电机提速旋转，电流突然增大，电源过载能力差会使电源保护电路动作，导致断电，断电后光驱电机逐渐降速，电源负载减轻，电源恢复供电重新启动。由于未取出光盘，进入WIN95后系统检测到光盘，光驱又开始提速准备读盘，又重新使电源过载导致重新启动。可考虑换只电源试试。<br>
+        　　3.光驱电机起动时，冲击电流过大也是导致此现象的原因之一，一般情况下，电机启动电流是正常工作电流的3倍以上，如果电机驱动电路性能不良，此冲击电流还可能增大，可用电流表测量光驱12V组供电电流，如光驱读盘提速时，该组电流变化超过2A，则须检查光驱的相应电路。<br>
+        　&nbsp; 读者谢一静问：一台微机，配置为：华硕TX97－LZ主板、Pentium 
+        166 MMX CPU、昆腾2.1G硬盘、32M同步内存、S3 Trio64＋显卡(1M显存)、WTA2000声卡，现装有：DOS6.22，PWIN98(版本号4.10.1998)。使用时常出现提示：“该程序执行非法操作，请关闭……”。按“详细资料”按钮后，显示发生致命异常错误“OE”，按回车键后，显示“Explorer在003：00008e4的模块AD9501.DRV中导致常规保护错误”，关闭后回到Windows桌面，此时，单击鼠标右键，出现“该程序执行非法操作，请关闭”提示，且PWIN98(以前为PWIN97)不能正常使用，打开任何东西，均会出现提示：“该程序出现非法操作……”重新启动计算机也不能恢复，只有重新安装PWIN98（以前为PWIN97）后，使用正常，但此问题经常出现，令我十分困惑，至今更换了同型号的主板、内存条，但问题仍然存在，使用瑞星80版杀毒软件，显示无病毒。究竟是机器硬件配置有问题？还是其它原因？<br>
+        　　答：屏幕显示的是设备驱动程序AD9501.DRV执行了非法操作，估计是注册表中有错误数据，出现这种情况后，重新安装WINDOWS有时不能解决问题，你可使用注册表编辑器删除错误数据试试，操作步骤如下：选择“开始/运行”，在“运行”对话框中键入“REGEDIT”，进入注册表编辑器；用注册表编辑器“编辑菜单”中的“查找”和“查找下一个”命令查找并删除与字符串“AD9501”相关的所有“主键”和“键值”；退出注册表编辑器，重新启动。<br>
+        　　在大多数情况下，系统提示设备驱动程序DRV执行了非法操作或虚拟设备驱动程序VXD非法动态链接，在注册表中用上述方法删除与提示内容相关的字符串（如本例的“AD9501”）均可解决。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>围城感受</title>
+<style type="text/css">
+<!--
+td {  font-size: 9pt; color: #000080}
+a:link {  line-height: normal; text-decoration: none}
+a:visited {  color: #CCCCCC; text-decoration: none}
+a:hover {  font-weight: bold; color: #FFFFCC; text-decoration: none}
+-->
+</style>
+</head>
+
+<body background="new_pa7.gif">
+<script language="JavaScript1.2">
+  var snowsrc="leabul1e.gif"
+  // Configure below to change number of snow to render
+  var no = 15;
+
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+
+  var dx, xp, yp;    // coordinate and position variables
+  var am, stx, sty;  // amplitude and step variables
+  var i, doc_width = 800, doc_height = 600;
+  
+  if (ns4up) {
+    doc_width = self.innerWidth;
+    doc_height = self.innerHeight;
+  } else if (ie4up) {
+    doc_width = document.body.clientWidth;
+    doc_height = document.body.clientHeight;
+  }
+
+  dx = new Array();
+  xp = new Array();
+  yp = new Array();
+  am = new Array();
+  stx = new Array();
+  sty = new Array();
+  
+  for (i = 0; i < no; ++ i) {  
+    dx[i] = 0;                        // set coordinate variables
+    xp[i] = Math.random()*(doc_width-50);  // set position variables
+    yp[i] = Math.random()*doc_height;
+    am[i] = Math.random()*20;         // set amplitude variables
+    stx[i] = 0.02 + Math.random()/10; // set step variables
+    sty[i] = 0.7 + Math.random();     // set step variables
+    if (ns4up) {                      // set layers
+      if (i == 0) {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><a href="goodpage/stsj/zhuanti/1st/%5C%22http:/dynamicdrive.com/%5C%22"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></a></layer>");
+      } else {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></layer>");
+      }
+    } else if (ie4up) {
+      if (i == 0) {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href="goodpage/stsj/zhuanti/1st/%5C%22http:/best.163.com/%7Egujun%5C%22"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></a></div>");
+      } else {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></div>");
+      }
+    }
+  }
+  
+  function snowNS() {  // Netscape main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/10;
+        sty[i] = 0.7 + Math.random();
+        doc_width = self.innerWidth;
+        doc_height = self.innerHeight;
+      }
+      dx[i] += stx[i];
+      document.layers["dot"+i].top = yp[i];
+      document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+    }
+    setTimeout("snowNS()", 10);
+  }
+
+  function snowIE() {  // IE main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/10;
+        sty[i] = 0.7 + Math.random();
+        doc_width = document.body.clientWidth;
+        doc_height = document.body.clientHeight;
+      }
+      dx[i] += stx[i];
+      document.all["dot"+i].style.pixelTop = yp[i];
+      document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+    }
+    setTimeout("snowIE()", 10);
+  }
+
+  if (ns4up) {
+    snowNS();
+  } else if (ie4up) {
+    snowIE();
+  }
+</script>
+<!-- ImageReady Slices (snownight.psd) --> 
+<table width="749">
+<td width="745" height="97" align="left"><font size="5" color="#000080">围城感受——</font><font color="#000080" size="4">随便说说之四</font>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 我们被圈在学校数日,接受军训的洗礼.尽管学校很大,像一个小型公园,但是所有人心中,都隐藏着渴盼飞出校门的念头:十五六岁的少年,有谁愿意天天受人约束,终日关在一个郊外的&quot;花园&quot;呢!</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  是夜.月亮在深邃的天幕中闪现着冷漠的光辉.我们一起集合在中心广场学唱军歌.此时,我一眼望见了城市迷人的夜景:一排闪耀着明亮光芒的路灯,如一条轻逸的飘带,蜿蜒伸向远方;闪烁的灯箱,浪漫的霓虹灯,神秘的探照灯,把深蓝的天幕映照的五彩缤纷——外面的世界多好!我不禁在心里喊,更有一种要冲出去的欲望.蓦的,我的心感到深深的悲凉:我被牢牢地拴在这个城墙中,我是出不去的.莫名奇妙的,想到了钱钟书的《围城》,竟然悄悄的潸然泪下.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  围城里的人总想跳出这令人窒息的城墙,但围城外的人却想方设法进到围城之中……想当初,满怀激情地发誓一定要跨进二中高中的大门,憧憬着妙趣横生的住校生活,如今,当我以中考二中高中第7名的优异成绩走进二中,真正开始体验的时候,竟然想跳出二中的大门.问问周围的人,谁都有这个心思.再想想有多少考生为了进二中,花钱,找关系托人情,挤破了头,也未能如愿以偿,但我,却在此时恨不能飞出二中的门,去感受这个城市的繁华和美丽,呼吸清新的有点海味的空气!</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  训练间断的休息,看见鸟儿自由自在地在空中飞翔,它们可以飞到它们要去的地方,但是,我飞不出去.我只能看见校园高楼围成的四角的天空.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 我在围城之中.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 其实,这世上所有的人,未尝不都生活在各种各样的围城中,而又生活在不同种类的围城之外?</font></p>
+  <p><font color="#000080">&nbsp; &nbsp; 
+  还记得小的时候,总盼望自己快快长大,成为一个&quot;大人;随着岁月的流逝,从儿童的围城走出又陷入青少年\成年\老年的围城之中,未尝不想重温儿童时幸福的时光,找回那颗隐藏在内心最深处的纯洁的童心?</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  有些围城可以推倒.就像中年和青年两代人,可以打破某种隔阂,平等\自由的对话.在某些方面,围城没有存在的理由.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  有些围城是自寻烦恼.有的人愿意把自己封闭在属于自己的围城中,甘受围城的孤独和苦恼.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  有些围城已经深深地铸造在人们的思想之中,贯穿于日常生活中,形成统一的风俗习惯,被人们认可.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  有些围城是客观存在的.只要世界存在一天,它的城墙不会倒塌.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  我们生活在围城中.我们也生活在围城外.当我们跳入某一个围城或跳出某一个围城后,我们仍在围城之中.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  围城总给人们带来这样那样的欲望.围城外的人或是另一个围城的人,因为一定的理由,愿意挤进某个围城;而围城永远是围城,里面的人总有感到烦闷\厌恶的那一天,所以,他们想尽方法,跳出去,却不知不觉到了另一个围城,为他们所不熟悉的围城.</font></p>
+  <p><font color="#000080">&nbsp;&nbsp;&nbsp; 
+  我在围城之中.正是这形形色色的围城,构成了我的生活,组成了我的人生.</font></p>
+  <p>　</p>
+  <p><font color="#000080">P.S:唱军歌时的胡思乱想,我知道我走神了.对不起,教官!</font></p>
+  <p>　</p>
+  <p>　
+</table>
+</body>
+
+</html>

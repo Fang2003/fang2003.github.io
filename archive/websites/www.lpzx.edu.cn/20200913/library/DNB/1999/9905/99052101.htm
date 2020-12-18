@@ -1,0 +1,72 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>老牛拉快车</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">老牛拉快车<br>
+        </strong></font><font color="#369681">　　　　　　　　</font><font face="黑体"
+        color="#004080"><strong><small>——T2P4上板上K6-2实战记</small><br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　自从本报去年33期一篇文章中提到有人用T2P4上了K6—2 
+        300后，许多读者都来信询问怎样设置T2P4的跳线，使其能上K6—2。华硕的T2P4可算是当时这一系列的大哥级主板，支持率极高，现在可能还有不少玩家在用这只“老牛”。因此，我们特意刊出这篇文章，希望各位的T2P4都能再显“青春”。<br>
+        笔者1996年攒了一台兼容机，配置为：华硕T2P4主板（V3.0）、奔腾P133CPU、昆腾1.2G硬盘、32MEDO内存、丽台S280显卡（后更换为丽台 
+        S600DX/2M）、SONY 8倍速光驱、15英寸数控彩显。这是当年的主流配置。自以为可以三五年内不用操心升级。谁知刚进1997年，MMXCPU登场了，摸摸刚掏空的钱包，一闭眼装没看见。1998年就更热闹了，PⅡ铺天盖地而来，下半年K6－2和赛扬打得难解难分，竞相降价。升级吧，除了软驱，什么都得换，等于重装一台。不升吧，实在挡不住广告的诱惑，心里痒得不行。朋友，你有这样的感觉吗？<br>
+        　　一天，在《电脑报》1998年的第33期一篇文章里看到一句话：“现在已有DIY玩家使华硕T2P4支持到了K6－2 
+        300”。精神登时为之一振：是啊，不换主板只升CPU，再对付它两年，等200MHz主板出来了再全面升级。心动不如行动，立即上网收集资料。熬过几个不眠之夜，终于见到庐山真面目。为了使暂时没有上网条件的朋友也能心想事成，请接着往下看。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>基础篇</strong></font></p>
+        <p class="ourfont"><font color="#369681">　　目前市面上的K6－2系列CPU核心电压均为2.2V，I/O电压为3.3V。只要主板支持2.2V电压，且倍频能满足CPU的内频，即可上K6－2。 
+        当然还有别的因素，这里只说电压和倍频。<br>
+        　　先说电压，T2P4主板的说明书上虽然说支持双电压，但内核电压只有2.5V、2.7V、2.8V、2.9V和Reserved，没有我们需要的2.2V。其实通过改变跳线，主板可支持2.0V～3.5V的内核电压，其中2.0～2.3V电压组合见表一。<br>
+        　　再说倍频，T2P4主板的说明书上介绍其倍频只有1.5×、2.0×、2.5×、3.0×四种。其实倍频还隐含了一种3.5×，即与1.5×的跳线相同。如此看来，不作任何改造，主板可支持的CPU内频最高为83×3.5=290.5MHz。<br>
+        　　通过改造，主板可支持最高5.5×的倍频。主板的倍频关系见表二<br>
+        　　说到这里，有朋友会问，这BF2是啥玩意？它是CPU插座上的一只引脚。怎么才能找到它呢?<br>
+        　　面对主板背面（印刷电路板面），CPU缺口位于左下方。在右上方从上往下数，便可很容易找到，BF0 
+        在第8脚处（第8行左第1列），在它的右下方依次为BF1、BF2、 Ground 
+        在第9脚处（左第4列）。参照图一，应该找得到了吧！<br>
+        　　用万用电表的欧姆档来测量验证，Ground 
+        脚应与主板的电源接地线接同一条。测量方法，主板的电源线应该有12脚，中间第六脚与第七脚就为接地脚，主板说明书有明确说明。用红表笔接触上图中Ground脚，把黑笔接触第六或第七脚上，指针应指向 
+        0 欧姆。同样道理配合JP11 与 JP12测量 BF0、BF1，JP11的2脚应与BF0脚相通，JP12的2 
+        脚应与BF1脚相通。<br>
+        　　在动手升级之前，先把主板的BIOS升级到0205版，这样计算机才能识别K6－2。目前T2P4主板的BIOS最高版本为0207(0207与0205相比，解决了千年虫问题)。无上网条件的爱好者可在《电脑报》配套光盘第三辑上找到0205版的升级程序。有条件上网的朋友可在华硕的网站下载。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>实战篇</strong></font></p>
+        <p class="ourfont"><font color="#369681">　　万事俱备，可以动手了。我买的是K6－2 
+        266。参照表一设好内核电压，参照表二设好倍频。本着先易后难的原则，先不对主板进行扩频改造。频率设置有三种选择:83×3=250MHz，75×3.5=262MHz，83×3.5=290MHz。<br>
+        　　开机系统自检后显示CPU为K6－2，进入PWIN98后查看系统属性显示为AMD－K6 
+        3D processor。看来系统已接受这块K6－2 266了。我试验的结果是75×3.5最稳定，用《超级解霸5》播放VCD，测试速度为77帧／秒。83×3时，玩《极品飞车Ⅲ》时进不去，系统出错。用《超级解霸5》播放VCD，测试速度为81帧／秒。83×3.5时，系统就不大稳定了，有时进Pwin98报出错。<br>
+        　　如果还想对主板进行扩频改造，如前所述，只要将BF2脚接地即可。在做这一步之前，必须将主板上所有板卡的拔除，拆下CPU，放掉身上静电，电烙铁要可靠接地或利用余热焊接。将BF2脚接地方法有两种：一是用焊锡直接将BF2脚与Ground脚相焊，此法的缺点是倍频只能是4.0×～5.5×；二是用一条短导线将BF2脚与Ground脚相焊，要恢复原来的倍频时将导线剪断即可。强烈建议：此法较危险，焊接功夫不高或眼神不好者切勿试！否则损坏主板后果自负。<br>
+        　　至于K6－2 266的超频，《电脑报》已有文章介绍过，不再重复。通过升级CPU而不换主板，在花费较少的情况下使系统性能获得较大提高，应该说是物有所值。值得一试。<strong> 
+        （长沙 汤玉其）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

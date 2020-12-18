@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>EMM386在启动WIN95过程中报错并死机<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp; 　湖北读者赵雄问：我的同学最近租了一台电脑，刚开始还正常，后来，在一次重新启动WIN95时，屏幕出现提示：“EMM386：Unrecoverable 
+        privileged operation error ＃01 － Press ENTER to reboot”，回车后却死机了，又重新启动，还是出现这样的情况，后来把Config.sys中的DEVICE=C:\WINDOWS\EMM386.EXE去掉，再重新启动却恢复正常了。机器的启动配置有：1. 
+        WIN95，2. GAME，3.DOS，只在选1时才出现上述情况，请问这是怎么回事？<br>
+        　　答：EMM386报错往往表示机器存在着硬件质量问题（内存的可能性最大）或软件冲突。你同学的机器在去掉EMM386后，WIN95能正常运行，说明内存应无问题，需要从软件方面来考虑。首先，WIN95与某些老版本的EMM386一起工作时会出问题，如果你来信中给出的Windows目录是Windows 
+        3.x的话，请更换使用WIN95自带的EMM386。然后在Config.sys中加入EMM386后重新启动机器，然后按F8键，选择BOOTLOG菜单，并用单步确认的方法启动WIN95，观察哪个步骤进行后EMM386报错，如果在调入Config.sys或Autoexec.bat中的某个程序时死机，可将该程序去掉或者调整EMM386的开关项，如果在启动WIN95的图形界面过程中死机，可在重新启动后打开C盘根目录下的BOOTLOG.TXT文件，查看最后几条记录，找出引起错误的程序，将之从System.ini或注册表中去掉。由于不了解你同学的机器出现错误的具体情况，上面介绍的只是解决问题的基本思路，供你参考。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月2日第42期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

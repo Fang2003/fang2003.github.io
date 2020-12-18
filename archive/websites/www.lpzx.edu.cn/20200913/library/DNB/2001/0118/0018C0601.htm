@@ -1,0 +1,128 @@
+<html><!-- #BeginTemplate "/Templates/hardware.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>磁盘缓存优化高手——Cacheman</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0118/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0118/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->磁盘缓存优化高手——Cacheman<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->电脑在运行一段时间后速度有时会很慢，这除了和内存的容量有关外，还可能是系统对磁盘高速缓存管理不善造成的。因为电脑在运行较大的程序之后，Windows为硬盘配置的磁盘高速缓存就会占据大量的物理内存(有时高达60%～80%)，并很难全部释放出来，这时一款磁盘缓存优化软件就显得非常重要了，笔者今天就向大家推荐这样一款工具——Cacheman。<br>
+              Cacheman介绍<br>
+              Cacheman是一款优秀的磁盘缓存优化软件，它的大小只有624KB， 最新版本是4.1版，适用于Win95/98/Me操作系统。该软件的下载地址是：http://www.esoftware.com.cn/file/system/sysimpro/2001031301.shtml，它可以根据用户的不同要求对系统的磁盘缓存进行优化。<br>
+              Cacheman用法<br>
+              一、查看系统资源<br>
+              启动Cacheman后，首先可以看到它的Information(系统信息)标签页(如图)，Cacheman通过五个曲线图和数据来反映用户电脑系统当前的基本情况：1.Free 
+              Physical Memory：系统当前空闲的物理内存容量。2.Disk Cache：磁盘高速缓存的大小。3.Virtual Memory 
+              Usage：虚拟内存的使用情况。4.Free GDI Resources：可用图形资源的百分比(低于10%，系统可能变得不稳定)。5.Free 
+              User Resources：可用系统资源的百分比。(^18030401a^)<br>
+              二、缓存优化设置<br>
+              对当前的系统情况有了了解之后，你就可以点击“Settings”(磁盘高速缓存设置)标签页，进入缓存优化设置窗口。Cacheman采用了智能优化设置方法，即它会自动替用户对磁盘高速缓存进行优化设置。前提条件是：用户必须先根据自己的实际情况，在“Preset”(预先设置)菜单中先选择操作系统(Win95/98/Me)，再选择用户的使用类型，Cacheman一共提供五种用户类型：<br>
+              1.Average System：适用于一般用户。<br>
+              2.3D Games：适合于游戏玩家，特别是内存容量小于128MB的玩家，它可以帮助你避免在进行3D游戏时出现停顿现象。<br>
+              3.CD Writer：适用于拥有CD刻录机的用户，Cacheman会将磁盘高速缓存中的最大值和最小值的设置得相同。<br>
+              4.Lower Memory System ：适用于系统内存较少的用户。<br>
+              5.Multimedia：适用于经常使用多媒体软件的用户。使用多媒体软件需要大量的内存空间，当然也需要更大的磁盘高速缓存。<br>
+              6.Power User：如果你需要同时运行多个大型程序，可选用这种用户类型。经过Cacheman的优化，你会感到系统的反应速度更快。<br>
+              7.Sound Recording：如果你经常使用电脑进行录音和音乐制作，请选择此用户类型。Cacheman会设置比其他用户类型都要大的磁盘高速缓存，使硬盘的运转稳定快速。<br>
+              三、Cacheman基本设置<br>
+              完成高速缓存的优化设置工作，点击“Options”(选项)标签页，进入Cacheman的基本设置窗口。在这里，你可以设置“Refresh 
+              Intervals”(更新时间间隔)，“Load Cacheman with Windows”(开机时是否自动启动Cacheman)等选项，或者选择软件的默认选项。<br>
+              相信有了Cacheman这一磁盘缓存优化工具，你的系统一定会“健步如飞”！<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

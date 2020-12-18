@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="2.jpg">
+<table width="554" border="0" cellspacing="0" cellpadding="0" height="688" bordercolor="#FF0033">
+  <tr> 
+    <td width="552" height="52" bgcolor="#FFFFFF"><img src="xian.gif" width="498" height="24"></td>
+    <td width="17" height="52"><img src="angle.gif" width="70" height="60"></td>
+  </tr>
+  <tr> 
+    <td width="552" align="left" valign="top" height="31"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:116px; height:111px; z-index:1; left: -100px; top: 33px; overflow: hidden"><font color="#0000FF"><b><img src="book.gif" width="84" height="75" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><font color="#FF3333"><b class="mdd6">历　界　奥　委　会　主　席</b> </font></p>
+          </div>
+      </div>
+    </td>
+    <td width="17" align="center" valign="middle" rowspan="2"><img src="right.gif" width="63" height="395"></td>
+  </tr>
+  <tr>
+    <td width="552" align="left" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="33%"> 
+            <div align="center"><img src="zx1.jpg" width="77" height="105"></div>
+          </td>
+          <td width="33%"> 
+            <div align="center"><img src="zx2.jpg" width="77" height="105"></div>
+          </td>
+          <td width="34%"> 
+            <div align="center"><img src="zx3.jpg" width="77" height="105"></div>
+          </td>
+        </tr>
+        <tr class="mdd7"> 
+          <td width="33%" valign="top"> 
+            <div align="left">第一届国际奥委会主席<br>
+              泽麦特里乌斯 · 维凯拉斯<br>
+              (Demetrius ViKelas) 1835-1908.7.20</div>
+          </td>
+          <td width="33%" valign="top">第二届国际奥委会主席<br>
+            皮埃尔·德·顾拜旦(Pierre de Coubertin)<br>
+            1863.1.1-1937.9.2</td>
+          <td width="34%" valign="top">第三届国际奥委会主席<br>
+            享利·德·巴耶－拉图尔<br>
+            Henri de Baillet-Latour<br>
+            1876.3.1-1942.1.6</td>
+        </tr>
+        <tr> 
+          <td width="33%"> 
+            <div align="center"><img src="zx4.jpg" width="77" height="105"></div>
+          </td>
+          <td width="33%"> 
+            <div align="center"><img src="zx5.jpg" width="77" height="105"></div>
+          </td>
+          <td width="34%"> 
+            <div align="center"><img src="zx6.jpg" width="77" height="105"></div>
+          </td>
+        </tr>
+        <tr class="mdd7"> 
+          <td width="33%">第四届国际奥委会主席<br>
+            西格弗里德·埃德斯特隆<br>
+            (Sigfried Edstrom)<br>
+            1870.11.21-1964.3.18</td>
+          <td width="33%" valign="top">第五届国际奥委会主席<br>
+            艾弗里·布伦戴奇<br>
+            (Arery Brundage)<br>
+            1887.9.28-1975.5.7</td>
+          <td width="34%">第六届国际奥委会主席<br>
+            迈克尔·莫里斯·基拉宁<br>
+            Mihael orris Killanin<br>
+            1914.7.30</td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div align="center"><img src="zx7.jpg" width="77" height="105"></div>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3"> 
+            <div align="center"><span class="mdd7">第七届国际奥委会主席 胡安·安东尼奥·萨马兰奇<br>
+              (Juan Antonio Samaranch, 1920.7.17-)</span></div>
+            <div align="center"></div>
+            <div align="center"></div>
+          </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

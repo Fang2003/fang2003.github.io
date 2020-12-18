@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">电池漏液导致主板故障一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台LEO8000 
+        486DX4－100工控微机，开机不能启动，电源指示灯不亮，风扇不转，但显示器无问题。<br>
+        　　故障分析与排除：显示器无问题说明220V交流电已进入电源盒，风扇不转说明＋12V直流电供电有问题，因此故障可能出在电源盒上。打开机箱，在＋5V端与接地端并上万用表，开机，发现＋5V端的电压只有0.1V，好像是保护电路动作。拔去给主板、软驱、硬盘供电的插头，在电源＋5V端接上一25W的2Ω电阻作为“假负载”，给电源盒单独加电，再测四组输出电压均正常，说明故障出在主板、软驱或硬盘上。在另一台机器上测试软驱和硬盘是好的，可以肯定故障出在主板上。拔去主板上CN4插座上的两个电源插头，测得CN4插座上四组电压端对地的阻值如下表所示，＋5V端对地阻值比正常值小许多，几乎对地短路。为了逐步缩小故障范围，依次拔去主板上的网卡、显卡、主板卡(该机采用冷底板，主板是一块ISA总线的插卡)的同时，检测＋5V端对地的阻值。当拔去主板卡时，发现阻值变为正常值10Ω，说明主板卡的＋5V端对地短路。经检查发现给CMOS供电的电池已严重漏液，导致电池周围的电路被腐蚀，取下电池，用酒精清洗电路后，测主板卡接口的1、3脚(即＋5V与地)间的阻值已升至2Ω，但仍比正常值偏小。后再仔细检查，发现元件C41下方的一个贴片式电容已被电池漏液腐蚀呈黑色，测其两端阻值也为2Ω，很有可能就是此电容被电池漏液腐蚀后，导致＋5V端几乎对地短路。用镊子一碰电容就断为两截，因一时难以找到此种贴片电容，用一1000P的瓷片电容代替，此时再测＋5V端对地阻值，恢复正常，将卡插回机箱，加电，故障排除。(浙江 
+        仲玉芳)<br>
+        </font></p>
+        <p align="right"><font color="#369681"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1998年1月19日第3期36版</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

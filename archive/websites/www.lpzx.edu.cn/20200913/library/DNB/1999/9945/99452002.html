@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用主板为TNT换脑</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 用主板为TNT换脑</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用主板为TNT换脑 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　很早就听说一些TNT显卡能用Diamond的驱动程序，使性能大幅提高。我买了一块杂牌的显示卡，能否用帝盟的驱动程序呢？能，但首先要为它换“芯”。<br>
+　　我首先下载了Diamond的BIOS文件，在电脑城一问说要五十大元才给我一块BIOS芯片,太贵了吧，买回去我的显示卡能否用上还是个问题。后来我就决定去“垃圾”店买一块1M的主板用的BIOS芯片回家(是Winbond的)。网上找了几个主板通用的擦写程序，就试着用最危险的方法——热插拔的方法去写Flash ROM。首先启动机器，小心地拔出主板上的Flash ROM芯片，换上新买的Winbond芯片，然后我就试着把帝盟的195c0500.rom文件写入，但出现了文件大小与芯片的容量不同的提示，但我还是试着把文件写入，却发现写了很长时间都没有什么反应（没有死机)，胡乱动了几下键盘又回到了DOS状态，拔出芯片插回显示卡上，开机“一片乌黑”——失败了。<br>
+      　　后来又想出了一个新办法：把原来TNT上的名为MX29f001TPC的Flash ROM（256k）放进主板，用Uniflash读出，并且生成一个文件存入磁盘，结果是Uniflash把256k的ROM识别为1Mbit的ROM，生成128k大小的文件。再用UltraEdit一看,成功的念头在我的脑海浮现了，因为我发现位于3F00H之后的字节内容全为空（00），只要把Diamond 
+      BIOS文件195c0500.rom的内容覆盖掉刚刚生成的文件的前半部分，其余部分保持为空值(00)。用UltraEdit5.0的时候，分别两次拷贝前后两个部分。这样把文件存盘后再检查文件大小是不是128k，用Uniflash写回1M 
+      bit的Flash ROM后（当然用热插拔法啦）,再把Flash ROM放回显示卡。一开机，Diamond的字样出现了。就是这么简单!!<img src="images/20b1.gif" width="468" height="266"><br>
+　　接下来下载Diamond Viper550（采用TNT芯片）的驱动程序，安装过程很顺利，还增加了一些特别的软件如InControl Tools。然后我做了各项性能测试，总体上有了大的提升(用WinTune测试)，特别是2D性能提高了差不多40％（正常的文字处理正需要这个），D3D和OpenGL性能都有一定的提高。<br>
+　　我的机器是赛扬366超频到550MHz、LGS64M内存、杂牌主板（采用VIA 693芯片组）。<br>
+　　除了有些危险外，我发现一些较新的主板比一般的编程器功能更强。各种Flash ROM放下去用Awdflash.exe（Award主板的写BIOS程序）都能读出它的牌子、型号，连编程器都不一定有这个功能。但有个缺点：Awdflash.exe只能写进Award的BIOS文件，所采用AMI BIOS的朋友只好用Uniflsah.exe (可以到http://topage.126.com找Uniflash)。最后补上一句，各位DIYer小心你的每一步操作！<br><b>
+（广东　陈健锋）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99452002.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">VC++编程问题二则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　问题1: 
+        用一个软件打开一已存在的文件以供读写，发现有如下怪现象,对于大多数文件都能正确操作,但对于少部分文件提示非法操作,尤其是HTML文件都出错,严重时甚至会死机,当时程序为:<br>
+        　　pFile.Open(lpszPathName,CFile::modeReadWrite,＆exception)<br>
+        　　后来在调试中发现文件在打开时exception有异常,想到HTML文件大多是只读文件，将modeReadWrite改为modeRead后问题就解决了(或先修改属性再打开)。<br>
+        　　问题2: 这个问题比较怪一点,先将一字串读入CString对象中,用GetBuffer(GetBufferLength())返回缓冲区长度后与取得的字模相乘,送入SetScrollSizes()函数中重新设定文档大小(重载OnUpdate()函数),发现有时打开文档会出错,且该错误不能被忽略。.后来在查阅资料时，发现有些文献上用(－1)去乘返回的字模(debug时,字模乘以字数有时的确是一个负数),我试以(－1)相乘,仍不能解决问题。但发现SetScrollSizes()第一个参数的.cx和.cy的值有时很大,甚至达到了9位十进制数,这使我想到是否是因为数字太大而引起错误。结果不出所料，在CSize或SIZE中.cx和.cy都是整型数(int型),我代入一个带符号的整形数进行测试,发现.cx最大只能为32767(01111111b高8位),而.cy的值却可以大于32767,特别是.cy的上限被超过时,程序并不会报错,仅仅是不能滚动到文件末(近三千行),所以常被忽略(一般文档不会超过五百行)。<strong>(上海　邹伸)</p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<html>
+<head>
+<title>蓉儿悲绪</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+p, b, a, ul, center, td, select, input, textarea { font-family: 宋体, 新宋体; font-size: 9pt; line-height: 20px }
+a:link       { text-decoration: none; color: #551A8B }
+a:visited    { text-decoration: none; color: #551A8B }
+a:active     { text-decoration: underline; color: #ff0000 }
+a:hover      { text-decoration: underline; color: #ff0000 }
+hr           { color: #488ac7 }
+//
+</style>
+<bgsound src="003.mid" loop="-6">
+<script language="JavaScript">
+var isNS = (navigator.appName == "Netscape");
+layerRef = (isNS) ? "document" : "document.all";
+styleRef = (isNS) ? "" : ".style";
+var queue = new Array();
+var NUM_OF_TRAIL_PARTS = 5
+for (x=1; x < 6; x++) { ///////////////Image Preload
+eval("trailSpriteFrame" + x + " = new Image(36,36);");
+eval("trailSpriteFrame" + x + ".src = 'trailgif" + x + ".gif';"); 
+}
+
+////////////////////////////////////////////////The trail Object
+
+function trailSpriteObj(anID) {
+this.trailSpriteID = "trailSprite" + anID; //as before 
+this.imgRef = "trailSprite" + anID + "img"; //reference to the sprites image name
+this.currentFrame = 1; //the varible for looking after the frame
+this.animateTrailSprite = animateTrailSprite; //declare the objects method cycle
+}
+function animateTrailSprite() {
+if (this.currentFrame <6 ) { //if there are animation frames left, the change sprites the current frame
+if (isNS) { //Detect the browser and perform coresponding image switch
+eval("document." + this.trailSpriteID +".document['"+ this.imgRef + "'].src = trailSpriteFrame" + this.currentFrame + ".src");
+} else {
+eval("document['" + this.imgRef + "'].src = trailSpriteFrame" + this.currentFrame + ".src");
+}
+this.currentFrame ++; //and increase the objects current frame 
+} else { //the current frame has reached its limit so hide the sprite
+eval(layerRef + '.' + this.trailSpriteID + styleRef + '.visibility = "hidden"');
+} 
+}
+
+/////////////////////////////////////////////////////////////////
+
+function processAnim() {
+for(x=0; x < NUM_OF_TRAIL_PARTS; x++)
+queue[x].animateTrailSprite();
+}
+
+function processMouse(e) {
+currentObj = shuffleQueue();
+if (isNS) {
+eval("document." + currentObj + ".left = e.pageX - 10 ;");
+eval("document." + currentObj + ".top = e.pageY + 10;");
+} else {
+eval("document.all." + currentObj + ".style.pixelLeft = event.clientX + document.body.scrollLeft - 10 ;");
+eval("document.all." + currentObj + ".style.pixelTop = event.clientY + document.body.scrollTop + 10;");
+}
+}
+
+function shuffleQueue() {
+lastItemPos = queue.length - 1;
+lastItem = queue[lastItemPos];
+for (i = lastItemPos; i>0; i--) 
+queue[i] = queue[i-1];
+queue[0] = lastItem;
+
+queue[0].currentFrame = 1; //reset the objects frame number & make the sprite visible again
+eval(layerRef + '.' + queue[0].trailSpriteID + styleRef + '.visibility = "visible"'); 
+
+return queue[0].trailSpriteID;
+}
+
+function init() {
+
+for(x=0; x<NUM_OF_TRAIL_PARTS; x++) //fill array with trail objects
+queue[x] = new trailSpriteObj(x+1) ;
+
+if (isNS) { document.captureEvents(Event.MOUSEMOVE); }
+document.onmousemove = processMouse;
+
+setInterval("processAnim();",25);
+} 
+
+window.onload = init;
+</script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<div id="trailSprite1" style="position: absolute; height:36px; width:36px;z-index: 100; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/good2000/web/rongersx/src" height="36" width="36" name="trailSprite1img"></dd>
+</div>
+<div id="trailSprite2" style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/good2000/web/rongersx/src" height="36" width="36" name="trailSprite2img"></dd>
+</div>
+<div id="trailSprite3" style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/good2000/web/rongersx/src" height="36" width="36" name="trailSprite3img"></dd>
+</div>
+<div id="trailSprite4" style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/good2000/web/rongersx/src" height="36" width="36" name="trailSprite4img"></dd>
+</div>
+<div id="trailSprite5" style="position: absolute; height:36px; width:36px;z-index: 10; left: 600px; top: 5px; visibility: hidden">
+<dd><img "http://www.lpzx.edu.cn/good2000/web/rongersx/src" height="36" width="36" name="trailSprite5img"></dd>
+</div><!--webbot bot="HTMLMarkup" startspan tag="XBOT" --><!--webbot
+bot="HTMLMarkup" endspan -->
+
+
+
+
+<SCRIPT language=javascript>
+previous_index=1;
+function over_change(index,src,clrOver){
+	if(previous_index!=parseInt(index))
+		if (!src.contains(event.fromElement)) 
+	 		{src.style.cursor = 'hand';
+	 		src.bgColor = clrOver;}}
+function out_change(index,src,clrIn){
+	if(previous_index!=index) 
+		if (!src.contains(event.toElement))
+			{src.style.cursor = 'default';
+			src.bgColor = clrIn;}}
+function click_change(index,src,url){
+	index=parseInt(index);
+	if(previous_index>0) eval('document.all.b'+previous_index+'.bgColor="FFDB91"');
+	eval('document.all.b'+index+'.bgColor="#FDC250"');
+	if(index==4) parent.location=url;
+	else parent.parent.frames[1].location=url;
+	previous_index=index;}
+function onerror(aa,bb,cc)
+{alert(aa+"\n"+bb+"\n"+cc);}</SCRIPT>
+
+
+
+
+
+
+
+
+<div align="center">
+<center>
+<table border="0" width="605" height="322" cellpadding="5">
+ <tr>
+  <td background="b1.jpg" width="605" height="27">
+  <span style="font-faimly:隶书；font-size:9pt">
+  <marquee behavior="alternate"><font color="purple">蓉儿，茫茫人海中的一粟！！</font></marquee>
+  </span></td>
+ </tr>
+ <tr>
+  <td width="605" height="50" colspan="3" background="bj1.gif">
+  <div align="center">
+  <center>
+  <table border="0" cellspacing="3" width="550">
+   <tr>
+    <td width="85" bgcolor="#ggf0f8" id="b2" onmouseout="out_change(2,this,&quot;#aaf0f8&quot;)" onmouseover="over_change(2,this,&quot;#aaffff&quot;)">
+    <p align="center"><span style="font-color:#CC0066;font-family: 宋体; font-size: 9pt"><a href="myself.htm">个人简介</a></span></td><td width="85" bgcolor="#ddf0f8" id="b2" onmouseout="out_change(2,this,&quot;#bbf0f8&quot;)" onmouseover="over_change(2,this,&quot;#bbffff&quot;)">
+    <p align="center"><a href="wm.htm"><span style="font-family: 宋体; font-size: 9pt">外貌描述</span></a></td><td width="85" bgcolor="#ccf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ccf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ccffff&quot;)">
+    <span style="font-family: 宋体; font-size: 9pt">&nbsp; <a href="jstn.htm">金色童年</a></span></td><td width="85" bgcolor="#ccf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ccf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ccffff&quot;)">
+    <p align="center"><span style="font-family: 宋体; font-size: 9pt"><a href="myhome.htm">我的家庭</a></span></td><td width="85" bgcolor="#bbf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ddf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ddffff&quot;)">
+    <p align="center"><span style="font-family: 宋体; font-size: 9pt"><a href="study.htm">我的学习</a></span></td><td width="85" bgcolor="#hhf0f8" id="b2" onmouseout="out_change(2,this,&quot;#eef0f8&quot;)" onmouseover="over_change(2,this,&quot;#eeffff&quot;)">
+    <p align="center"><span style="font-family: 宋体; font-size: 9pt"><a href="school.htm">我的学校</a></span></td><td width="80" bgcolor="#ggf0f8" id="b2" onmouseout="out_change(2,this,&quot;#fff0f8&quot;)" onmouseover="over_change(2,this,&quot;#ffffff&quot;)">
+    <p align="center"><span style="font-family: 宋体; font-size: 9pt"><a href="mailto:zengcongyi@263.net">E-MAIL</a></span></td> </tr>
+  </table>
+  </center></div></td>
+ </tr>
+ <tr>
+  <td width="605" height="107">
+  <div align="center">
+  <center>
+  <table border="0" cellspacing="3" width="550">
+   <tr>
+    <td width="92" height="87">
+    <p align="center"><a href="http://"><img src="rr01.jpg" alt="蓉儿思绪，岁月如风……" width="360" height="216"></a></td><td width="180" heght="216">
+    <p align="center"><td width="29%" height="170" valign="top" colspan="2" rowspan="4">
+    <div align="center">
+    <table width="96%" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+      <td height="25">
+      <div align="center"><span style="font-color:red ;font-family: 隶书; font-size: 16pt"><i><font color="#FF0080">蓉</font></i></span><font color="#FF00FF" size="3"><span style="font-color: red; font-family: 隶书"><i>儿</i></span></font><font color="#000000" size="1"><span style="font-color: red; font-family: 隶书">的</span></font><span style="font-color: red; font-family: 隶书"><font size="3" color="#FF00FF">思</font></span><span style="font-color:red ;font-family: 隶书; font-size: 16pt"><font color="#339933">绪</font></span></div></td>
+     </tr>
+    </table>
+    </div>
+    <table width="97%" border="1" cellspacing="1" cellpadding="2" align="right" bordercolorlight="#B5D7FF" bordercolordark="#FFFFFF">
+     <tr valign="top" class="9ft">
+      <td>
+                  <script language=JavaScript>
+                  if (document.all){
+                  document.writeln('<table align=center border=0 cellspacing=1 width="100%" height=100% cellpadding="1">')
+                  document.writeln('<tbody> ')
+                  document.writeln('<tr bgcolor="#FFFFFF"> ')
+                  document.write('<td align=middle>')
+                  document.writeln('<marquee direction=up height=160 scrollamount=1 scrolldelay=80 width="95%">')
+                  document.writeln('<span style="color:#0066cc; style=font-family: 隶书; font-size: 9pt"> 对一个中学生来说，能够参加本次活动感到万分的荣幸。我只是初一学生，对电脑还有许多地方不懂，希望能够得到大家的批评与指点，从而使我对电脑理解更深，做得更好。</span><br><br>')
+                  document.writeln('<span style="COLOR:green;style=font-family: 隶书; font-size: 9pt">    在制作网页过程中，得到了校长的关心、老师的培养、父母的支持和朋友们的帮助，在此，表示衷心的感谢！</span><br><br>')
+                  document.writeln('<span style="COLOR: #0066cc;style=font-family: 隶书; font-size: 9pt">请大家多提意见，多多帮助。欢迎大家的光临，把您的建议和感想一并塞进我的信箱，伴我成长！！</span><br><br>')
+                  document.writeln('<span style="COLOR: #ff0080;style=font-family: 隶书; font-size: 9pt">	GOOD LUCK TO YOU !!</span><br><br>')
+                  document.writeln('<center><font color=blue>敬请光临蓉儿主页</font>')
+                  document.writeln('</center>')
+                  document.writeln('</marquee></td>')
+                  document.writeln('</tr></tbody></table>')
+                  }
+                  else {
+                  document.writeln('<br><center>')
+                  document.writeln('<font color=red><span  class="9ft">此处为动态内容</span></font>')
+                  document.writeln('</center><center>')
+                  document.writeln('<font color=red><span  class="9ft">请用IE浏览器查看</span></font>')
+                  document.writeln('</center>')
+                  }
+               
+</script>
+      </td>
+     </tr>
+    </table>
+    <p>&nbsp;</p>
+    </td>
+   </tr>
+  </table>
+  </center></div></td>
+ </tr>
+ <tr>
+  <td width="605" height="50" colspan="3" background="bj2.gif">
+  <div align="center">
+  <center>
+  <table border="0" cellspacing="3" width="568" height="32">
+   <tr>
+    <td width="75" bgcolor="#ggf0f8" id="b2" onmouseout="out_change(2,this,&quot;#fff0f8&quot;)" onmouseover="over_change(2,this,&quot;#ffffff&quot;)" height="26">
+    <p align="center"><span style="font-family: 隶书; font-size: 9pt"><a href="teacher.htm" target="_parent">我的老师</a></span></td><td width="83" bgcolor="#hhf0f8" id="b2" onmouseout="out_change(2,this,&quot;#eef0f8&quot;)" onmouseover="over_change(2,this,&quot;#eeffff&quot;)" height="26">
+    <p align="center"><span style="font-family: 隶书; font-size: 9pt"><a href="student.htm" target="_blank">我的同学</a></span></td><td width="81" bgcolor="#bbf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ddf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ddffff&quot;)" height="26">
+    <p align="center"><span style="font-size: 9pt"><a href="jyz.htm" target="_blank">小小</a></span><a href="jyz.htm" target="_blank"><span style="font-size: 9pt">邮册</span></a></td><td width="86" bgcolor="#ccf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ccf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ccffff&quot;)" height="26">
+    <p align="center"><span style="font-family: 隶书; font-size: 9pt"><a href="hope.htm" target="_blank">我的理想</a></span></td><td width="90" bgcolor="#ddf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ddf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ddffff&quot;)" height="26">
+    <font color="#004080" size="2">&nbsp; </font><a href="gold.htm"><font color="#004080">蓉儿影集</font></a></td><td width="86" bgcolor="#ddf0f8" id="b2" onmouseout="out_change(2,this,&quot;#ddf0f8&quot;)" onmouseover="over_change(2,this,&quot;#ddffff&quot;)" height="26">
+    <p align="center"><span style="font-family: 隶书; font-size: 9pt"><a href="kn.htm" target="_blank"><font color="#004080">我的苦恼</font></a></span></td><td width="75" bgcolor="#f8e8fe" id="b2" onmouseout="out_change(2,this,&quot;#fff0f1&quot;)" onmouseover="over_change(2,this,&quot;#eeff01&quot;)" height="26">
+    <font color="#004080">
+    <p align="center"><span style="font-family: 隶书; font-size: 9pt"><a href="interest.htm">我的兴趣</a></span></font></td><td width="88" bgcolor="#ggf0f8" id="b2" onmouseout="out_change(2,this,&quot;#aaf0f8&quot;)" onmouseover="over_change(2,this,&quot;#aaffff&quot;)" height="26">
+    <p align="center"><a href="http://www.cinews.net/book/yfrong/index.html"><span style="font-size: 9pt">请</span></a><span style="font-family: 隶书; font-size: 9pt"><a href="http://www.cinews.net/book/yfrong/index.html">您留言</a></span></td>
+   </tr>
+  </table>
+  </center></div></td>
+ </tr>
+ <tr>
+  <td background="b1.jpg" width="605" height="27">
+  <span style="font-faimly:隶书；font-size:9pt">
+  <marquee direction="left"><font color="Navy">蓉儿，网络世界中的&quot;小网虫&quot;……</font></marquee>
+  </span></td>
+ </tr>
+</table>
+</center></div>
+<p align="center">　
+<table border="5" bgcolor="#ff0080" cellspacing="0" cellpadding="3" bordercolorlight="#FFCC00">
+ <tr>
+  <td>
+  </td>
+ </tr>
+</table>
+<p align="center"><br>
+<font color="#FF00FF"><i><font size="3" face="EnglischeSchT">Copyright</font></i> 
+</font>(c)<font color="#004080"> <font size="3" face="方正行楷简体">江西省永丰县恩江中学&nbsp;&nbsp;&nbsp;&nbsp; 
+蓉儿</font></font><br>
+</body>
+</html>

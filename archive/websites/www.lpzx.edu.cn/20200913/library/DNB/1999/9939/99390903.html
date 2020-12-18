@@ -1,0 +1,113 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Delphi编程俱乐部</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/loga.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>39 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; Delphi编程俱乐部</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Delphi编程俱乐部 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好！Delphi编程俱乐部又与大家见面了，我们已和国内最好的Delphi网站建立了联系，由这一期开始，将由他们来主持“Delphi编程俱乐部”栏目，该网站名为：“Delphi世界之大富翁论坛”，网址是：http://www.gislab.ecnu.edu.cn/delphibbs/，论坛的主题是：“注重参与者的思想、形象和荣誉”。这里聚集了一群最为优秀的 Delphi 程序员。这些中国程序员的精英散布在大富翁论坛的每个角落，在这里，每个成员在积极地为别人提供信息的同时也可以得到自己所需的资料，最终也得到了自己形象和荣誉的体现。<br>
+　　为了方便与大家的交流，欢迎各位到该论坛去提交问题，从中学到知识。互相学习、共同进步是Delphi编程俱乐部的宗旨，热切希望爱好Delphi编程的读者加入到Delphi编程俱乐部来！<br>
+　　<b>问题一：怎样实现电影字幕的效果，即在关于窗口中，使版权信息徐徐上行？</b><br>
+　　<b>答案</b>：字幕效果实际上是控件向上滚动。可以：<br>
+　　procedure TForm1.Timer1Timer(Sender: TObject);<br>
+　　begin<br>
+　　Label1.Top:=Label1.Top＋1;<br>
+　　end;<br>
+　　如果出现闪烁很厉害的话可以用 TStaticText 避免闪烁！也可以用两个 Label 交替显现，能减少点闪烁。<br>
+　　<b>问题二：Delphi 中如何参考32位 API 函数的联机帮助？</b><br>
+　　<b>答案</b>：其实在编辑状态下按 [F1]，可以获得此 API 函数的帮助，但这个函数并不在 Delphi 帮助里，而在 \Program Files\Borland\Delphi 3\HELP\win32.hlp 以及 \Program Files\Borland\Delphi 3\HELP\win32s.hlp 里。原因是所有权问题。Delphi 按顺序搜索。在 Delphi 4 的程序组里有单独列出的 API 索引。<br>
+　　<b>问题三：用什麽方法得到鼠标当前所在的窗口句柄？（当前鼠标所在的窗口句柄: 是指 Screen 中的任意窗口的句柄）</b><br>
+　　<b>答案</b>：建议你先最小化窗体（Application.Minimize；），然后取得鼠标的位置（GetCursorPos(P1);），此后再用过 Handles := WindowFromPoint(Point(x,y)); 语句取得鼠标所在窗口的句柄。另外需要说明的是 WindowFormPoint 返回的是一个 hWnd 的 ID，也就是一个 Windowed Control 的句柄，这个 hWnd 可能是一个 EditBox、ListBox、ClientArea 或者 Button，这要根据当前点下面的窗体而定，所以当鼠标在同一个窗口中移动（X, Y 改变）时，WindowFromPoint() 的返回值是一个变量。桌面上不同的窗体中只有一个是 Enabled 的，Enabled 窗体是指那些能够接受键盘鼠标输入的窗体。WindowFromPoint 可以得到所有可见的 Window。相关的 Window 可以用下面的函数查询到：<br>
+　　function GetWindow(Wnd: hWnd; uCmd: byte): hWnd;<br>
+　　其中:<br><br>
+　　Wnd  ／／ 当前 Window<br>
+　　uCmd ／／ 关系标志常数，取值范围如下<br>
+　　GW_CHILD     －－ 子窗体<br>
+　　GW_HWNDFIRST －－ 同级窗体中的最前面的<br>
+　　GW_HWNDLAST  －－ 同级窗体中的最后面的<br>
+　　GW_HWNDNEXT  －－ 下一个<br>
+　　GW_HWNDPREV  －－ 前一个<br>
+　　GW_OWNER     －－ 父窗体<br>
+　　<b>问题四：在 Delphi 4 中用 TDatabase，参数如下：<br>
+　　Database1.DataBaseName － mydatabase<br>
+　　Database1.DriverName － ORACLE<br>
+　　其它属性都是default的。<br>
+　　连接时，输入的用户名，口令都正确，但出现<br>
+　　'Can not load an idapi service library.<br>
+　　File:SQLORA8.DLL<br>
+　　alias:mydatabase'<br>
+　　用一个 ODBC 的别名来设置这个 Database 又可以。但我觉得用 Delphi 4 本身的 Oracle 应该会更快一些。安装 Delphi 时选的支持 Orcacle 8。请问是何道理？（数据库是 NT 下的 Oracle73）<br></b>
+　　<b>答案</b>：Oracle 8 和 Oracle 7.3 用的不同的驱动，SQLORA8.DLL 是 Oracle8.0 的驱动程序。当你用 Delphi 自己的 Oracle 驱动连接数据库时当然需要针对 Oracle 的链接库了！SQLORA8.DLL 应该就是 BDE 自带的 Oracle 驱动程序。所以不论用 BDE 别名还是自己指定参数都需要这个文件。如果用 ODBC 数据源作为别名进行连接，就不需要 BDE 自己的驱动程序了，因为一切都由 ODBC 负责了，当然这种情况需要 Oracle 的 ODBC 驱动程序，实际上是一样的。安装 BDE 的时候选定对 Oracle 的支持即可，或者去拷一个 SQLORA8.DLL 来也可以。<br>
+　　<b>问题五：如何控制 ATX 主板让计算机关机呢？</b><br>
+　　<b>答案</b>：调用 Win95 的关机 API 就可以了。如果主板支持自动关机，Win95 会替你关掉的。这个 API 是 ExitWindowsEx()， 它可以注销 Windows 用户、关闭计算机或关闭计算机并重新启动。在 Delphi 中的声明如下：<br>
+　　function ExitWindowsEx(uFlags: UINT; dwReserved: DWORD): BOOL; stdcall;<br>
+　　参数说明如下：<br>
+　　uFlag － 指定关闭系统的操作，必须是以下值的组合：<br>
+　　EWX_FORCE  强制关闭进程，若设置该标志，Windows 不会向当前运行的应用程序发送 WM_QueryEndSession 和 WM_EndSession 消息，导致应用程序丢失数据。因此只能在紧急情况下使用这个标志。<br>
+　　EWX_LOGOFF 关闭所有与调用 ExitWindowsEx 函数的进程相关的应用程序，然后注销当前用户。<br>
+　　EWX_POWEROFF 关闭系统，并关闭电源。系统必须支持关闭电源的特性。<br>
+　　Windows NT: 调用者必须拥有 SE_SHUTDOWN_NAME 特权。<br>
+　　Windows 95: 不需要安全权限。<br>
+　　EWX_REBOOT 关闭系统，并重起计算机。<br>
+　　Windows NT: 调用者必须拥有 SE_SHUTDOWN_NAME 特权。<br>
+　　Windows 95: 不需要安全权限。<br>
+　　EWX_SHUTDOWN 关闭系统，进入可安全关闭电源的状态。所有的文件缓冲区都被更新到磁盘。所有运行中的进程都结束。<br>
+　　Windows NT: 调用者必须拥有 SE_SHUTDOWN_NAME 特权。<br>
+　　Windows 95: 不需要安全权限。<br>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/39/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99390903.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

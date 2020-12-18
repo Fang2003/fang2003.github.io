@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>标题栏跑马灯</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+.12px24px {font-family: "宋体";font-size: 12px;line-height: 24px;}
+.12px {font-family: "宋体";font-size: 12px;}
+.15px {font-family: "宋体";font-size: 15px;}
+.top {font-family: "宋体";font-size: 12px;line-height: 18px;text-decoration: none;}
+body {font-family: "宋体";font-size: 12px;line-height: 16px;text-decoration: none;}
+td {font-family: "宋体";font-size: 12px;line-height: 16px;text-decoration: none;}
+A:link {text-decoration: none;color: #0000A0;}
+A:visited {text-decoration: none;color: #0000A0;}
+A:active {text-decoration: none;}
+A:hover {text-decoration: underline;color: Red;}
+.a a:link {text-decoration:none;color: #c1eaff;}
+.b a:visited {text-decoration:none;color: #c1eaff;}
+.c a:active {text-decoration:none;color: #c1eaff;}
+.d a:hover {text-decoration:none;color: #80FF80;}
+-->
+</style>
+<script language="JavaScript">
+var msg="欢迎访问javascript栏目";
+var speed=300;
+var msgud=" " + msg;
+function titleScroll() {
+if (msgud.length <msg.length) msgud +=" - " + msg;
+msgud=msgud.substring(1, msgud.length);
+document.title=msgud.substring(0, msg.length);
+window.setTimeout("titleScroll()", speed);
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" background="http://www.lpzx.edu.cn/goodpage/wdxly/study/web/177fb-b-bg01.gif"
+onload="window.setTimeout('titleScroll()', 500)">
+<div align="center"><center>
+
+<table border="0" cellPadding="0" cellSpacing="0" width="451">
+<TBODY>
+<tr>
+<TD width="451" align="left">
+<ul>
+<ul>
+<ul><font color="#D587FA" face="黑体"><b><big>　　　标题栏跑马灯</big></b></font></ul>
+</ul>
+<br>
+<font color="Black">将下代码copy入你网页的&lt;head&gt;和&lt;/head&gt;中的合适地方即可。</font>
+<br>
+<br>
+&lt;SCRIPT LANGUAGE=JAVASCRIPT&gt;<br>
+&lt;!-- <br>
+var msg=&quot;欢迎访问javascript栏目&quot;;<br>
+var speed=300;<br>
+var msgud=&quot;&quot;+ msg;<br>
+function titleScroll() {<br>
+if (msgud.length <msg.length) msgud +=" - " + msg;<BR>msgud=msgud.substring(1, msgud.length);
+<br>
+document.title=msgud.substring(0,
+msg.length);<br>
+window.setTimeout(&quot;titleScroll()&quot;,
+speed);<br>
+}<br>
+--&gt;<br>
+&lt;/SCRIPT&gt;<br>
+<br>
+<font color="Black">将你Html文件的&lt;body&gt;改为如下： <br>
+&lt;BODY onload=&quot;window.setTimeout('titleScroll()',
+500)&quot;&gt;　　　　 </FONT></ul>
+
+
+</TBODY></table>
+</center></div>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+</html>

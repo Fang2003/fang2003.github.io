@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong><br>
+        在SCOUNIX系统中使用光驱<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">随着计算机技术的突飞猛进，用于计算机的存储介质也由原来的软磁盘发展到今天的大容量软磁盘、各种规格各种容量的磁带、一写多读光盘CD－R和可反复多次读写光盘CD－RW。<br>
+        一、CD－ROM驱动器的安装<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">在SCOUNIX5.0操作系统中，CD－ROM驱动器可被自动识别，无需配置。而在SCOUNIXODT3.0及以下版本、XENIX操作系统中，必须进行配置。具体步骤如下：<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">1.进入单用户系统维护状态<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">2.安装驱动程序(对于IDE接口，必须安装，而SCSI接口可省略)：＃custom<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">3.配置光驱＃mkdevcdrom选择增加一个CD－ROMDriver，并输入支持这个设备的卡的型号、控制器号ID(0～7)、主适配器(0～1)、逻辑单元号LUN(一般为0)，重链核心即可。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">4.使用CD－ROM光盘<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">在使用CD－ROM盘片时，必须把CD－ROM盘作为文件系统安装到系统中：＃mount/dev/cd0/mnt使用后卸下光盘，才能取出光盘：＃umout/mnt二、多次可读写光盘驱动器的安装及使用安装一个可读写CD－RW光驱，相当于增加一个硬盘驱动器，一片CD－RW盘则相当于一个硬盘。在安装完CD－RW光盘驱动器后，还必须对CD－RW盘片进行分区、格式化、创建文件系统，并将创建的文件系统加入到系统中才能使用。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">1.CD－RW光盘驱动器的安装<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Panasonic的AVA－5210型光驱SCSI卡的硬件跳线设置：I/Oportaddress=140hSCSIparity=EnableSCSIID=7IRQchannel=11光盘驱动器硬件设置：ID=4软件设置方法：<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">a.进入单用户系统维护状态。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">b.用custom命令安装驱动程序(UNIX系统省略该步)。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">c.＃mkdevhd→2.AddaharddisktoSCSIController。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">d.InputhostSCSIadaptertype:spad(不同卡的类型不同)。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">e.InputSCSIhostadapternumber(0～1):0。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">f.inputhostSCSIadapterIDnumber(0～7):4(与光驱跳线同)。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">g.InputLUNnumber(0～7):0<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">重构核心并重启机器。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">2.对CD－RW盘片的初始化<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">对每一张新的CD－RW盘片必须进行如下操作，才能使用。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">a.＃mkdevhd→2.AddaharddisktoSCSIController。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">b.重复光驱设置的d到g四步。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">f.显示fdisk菜单对光盘进行分区(选择将整个光盘划分给UNIX)，并激活分区。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">g.显示badtrk菜单对分区进行坏道扫描，创建坏磁道表。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">h.显示divvy菜单，把分区划分为文件系统，指定名称和起始、终止块号，并创建文件系统。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">i.为能访问新的文件系统，须执行“增加新的文件系统”命令来创建文件系统本身，为文件系统创建目录即安装点，命令为：＃mkdevfs根据提示输入文件系统的安装点目录，如cd－rom。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">3.CD－RW盘片的使用<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">在使用CD－RW盘片时，先要把它安装到系统中，然后才能使用：＃mount/dev/cdrom/cdrom使用完后必须卸下光盘：＃umout/cdrom只要把CD－RW盘mount到系统上以后，对它的操作就像在硬盘上一样方便快捷。可多次在盘片上进行创建、读写、修改、复制和删除操作。由于它的容量很大，还可以作为系统后援，备份整个硬盘。<br>
+        <br>
+        (广西唐云荔)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

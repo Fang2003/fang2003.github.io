@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>实现GIF图形快速显示<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp;&nbsp; GIF图形的动态显示，使应用程序活泼，平添几分轻松气氛。在VB5程序设计中，有好几种加载GIF图形方法，如使用AnimationGIFActiveX20控件等。AnimationGIFActiveX20控件易用、功能也很强大，但每次加载时都会显示版本信息，有点不堪忍受。如果只为了显示GIF图形，下面介绍的方法简单易行，并且每帧图片间没有停顿，速度很快。<br>
+        &nbsp;&nbsp;&nbsp; 假设在VB5程序中有一个名为Form的窗体。以下代码先声明一个窗体级Picture型数组，在Form_Load过程中，用LoadPicture函数将GIF图形加载到Picture型数组，然后在需要显示动态GIF图形的过程中用PaintPicture实现。<br>
+        &nbsp;&nbsp;&nbsp; DimobjPics(12)AsPicture<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_Load()<br>
+        &nbsp;&nbsp;&nbsp; DimintIAsInteger,strGifNameAsString<br>
+        &nbsp;&nbsp;&nbsp; ForintI=0To12<br>
+        &nbsp;&nbsp;&nbsp; strGifName=″c:\xxqvbprogram\vbgif\″＆intI＆″。gif″′<br>
+        &nbsp;&nbsp;&nbsp; 注：变量strGifName存放图片的路径和名称<br>
+        &nbsp;&nbsp;&nbsp; SetobjPics(intI)=LoadPicture(strGifName)<br>
+        &nbsp;&nbsp;&nbsp; NextintI<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_Paint()<br>
+        &nbsp;&nbsp;&nbsp; DimintIAsInteger,intJAsInteger,dblTempAsDouble<br>
+        &nbsp;&nbsp;&nbsp; ForintJ=1To10<br>
+        &nbsp;&nbsp;&nbsp; ForintI=0To12<br>
+        &nbsp;&nbsp;&nbsp; PaintPictureobjPics(intI),0,0<br>
+        &nbsp;&nbsp;&nbsp; NextintI<br>
+        &nbsp;&nbsp;&nbsp; NextintJ<br>
+        &nbsp;&nbsp;&nbsp; EndSub <strong>(陕西 徐新强)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月19日第40期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

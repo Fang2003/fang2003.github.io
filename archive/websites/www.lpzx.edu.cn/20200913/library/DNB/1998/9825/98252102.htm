@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">上好Netware 
+        3.12的安全阀<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　随着计算机的广泛应用和不断普及，越来越多的单位建立了自己的局域网。但在实际使用中，网络安全问题也日益突出。本文结合笔者的实际经验，和大家探讨一下如何给Netware 
+        3.12上好安全阀。<br>
+        　　<strong>一、在注册安全方面</strong><br>
+        　　用户一般都设置了Netware的账户名（即用户名）核对和密码核对功能。不过Netware在注册安全方面还有重名核对（即不得用相同账户名同时登录）、指定的工作站核对、上网时间核对、账户余额核对、锁定可疑登录者等功能，合理运用这些功能可以大大提高系统的安全性。<br>
+        　　<strong>二、在目录和文件方面</strong><br>
+        　　管理员可以设置目录和文件的使用权限，从而限定用户的可访问范围。不过为了加强系统的安全性，管理员须注意：<br>
+        　　1．不要轻易把SYSTEM和PUBLIC目录向普通用户开放。若用户需要某些PUBLIC下程序，如LOGOUT等，可有选择性地把它们拷贝到用户公用目录下，供用户使用。<br>
+        　　2．某些应用软件中的文件，若不授予适当的权限，就无法运行。授权过多，又可能会遭到破坏。因此对重要的应用程序，一定要采用网络版。若还不能达到效果（如UCDOS 
+        5.0网络版中的PY.OVR文件)，则应将可能遭到破坏的文件做一备份，以便出现问题时随时恢复。<br>
+        　　<strong>三、在服务器方面</strong><br>
+        　　Netware 3.12提供了网络监视程序MONITOR、控制台键盘锁定、控制台安全程序SECURE 
+        CONSOLE以及安全检查程序SECURITY等。<br>
+        　　为了充分利用这些安全机制，可以采取以下措施：<br>
+        　　1．在控制台装入INSTALL模块，在AUTOEXEC.NCF文件中写入SECURE CONSOLE命令。<br>
+        　　这里要特别说明一下运行SECURE CONSOLE的目的：<br>
+        　　（1）从服务器退出后，就需重新启动系统，不再退回DOS。这样就可防止未经授权者在控制台DOS状态进行破坏活动。<br>
+        　　（2）防止从任何非SYSTEM目录下加载可安装模块，从而有效杜绝非法模块驻留内存。<br>
+        　　（3）防止非控制台操作员改变日期和时间。<br>
+        　　（4）防止一般用户进入Netware的DEBUG状态。Netware的DEBUG状态，可通过LOAD 
+        －D &lt;可安装模块名 &gt;命令或同时按左SHIFT、右SHIFT、ALT、ESC四键进入。这是NOVELL留给专业人员进行DEBUG的一道“暗门”，但未经许可的进入，对系统则是极其危险的。<br>
+        　　2．服务器启动后，应装入MONITOR模块，并锁定控制台键盘。<br>
+        　　3．在工作站端将SYSTEM目录下的INSTALL.NLM文件改名存放（请记录好更改后的文件名备用），以防止非管理人员从控制台随意进入INSTALL模块。<br>
+        　　4．定期运行SECURITY程序。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　（湖南　杨军）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VB中用Multimedia MCI控件开发多媒体应用</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='software.html'>软件世界</A> &gt; VB中用Multimedia MCI控件开发多媒体应用</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VB中用Multimedia MCI控件开发多媒体应用 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　VB是微软公司开发的32位Window开发工具软件，它控制多媒体的手段灵活和多样，如在VB 中调用Multimedia MCI控件就容易实现集成音乐和视频。
+<p><b>　　一、Multimedia MCI控件的调用及说明</b></p>
+　　在调用Multimedia MCI控件之前，须要执行“工程\部件”菜单命令，将Microsoft Multimedia Controls前的方框选中，在工具箱中便会出现Multimedia 控件图标。把 Multimedia 控件添加到窗体上。当你打开有效的多媒体设备并且控件可用时,系统会自动完成相应工作。按钮被分别定义为：Prev、 Next、 Play、 Pause、 Back、 Step、 Stop、 Record 和 Eject。你可以为某一个按钮编写程序，从而为其增加特殊功能，但一般情况，缺省的按钮功能就能很好地播放音乐和视频。<br>
+　　在引用控件时，你须要指定控件的Device Type 属性，也可以缺省，对于复杂的MCI设备和播放CD音乐你必须要说明。格式是MMControl1.Device Type=Devname。下表列出了Multimedia控件支持的多媒体设备。 <br>
+　　在Multimedia控件中非常有用的一个属性是Command，它在运行过程中向多媒体设备发出命令。格式是：MMControl.Command = cmdstringS,其中cmdstringS变量与每一个按钮的定义名称一致。此外，还有Mode、Wait、Shareable、Notify、UpdateInterval、Position、Length等属性和Done、StatusUpdate事件是我们经常用到的。
+<p><b>　　二、示例程序</b></p>
+　　下面是一个用Multimedia控件集成音乐和视频的应用程序，它可播放＊.wav、＊.mid、＊.avi文件，可显示打开文件的时间长度和在播放时的进度，并在状态栏里有相关的说明。编程如下：<br>
+　　1．设计窗体<br>
+　　新建工程，在部件中分别引入Multimedia控件、Common Dialog Control 、Windows Common Control，在窗体中分别加入CommonDialog、MMControl、Slider、Status Bar、CheckBox。Label（1－3）分别放在Slider 下的左端、中间和右端，并在窗体上加一个菜单。将Slider的SelectRange的复选框选定，设置Smallchange和Maxchange为10，TickFrequengcy为20。在Status Bar的属性中的Panels项用鼠标点击Insert Panels 5 次。Index有5项，在Index第一项、第三项的Text项中分别输入“剩余时间”、“总时间”，适当设置每一项的Minimun Width(可参见后面对Panels的控制)。将CheckBox的Caption改为“循环”，把3个Label的Caption都改为空字符串。最后进入菜单编辑器，设置标题为“文件”，名称MnuFile；在“文件”下设立子菜单标题分别为“＆Open”、“＆Close”、“＆Exit”，名称分别为MnuOpen、MnuClose、MnuExit（在MnuExit_Click()事件填完代码后，要将其设为无效）。设计后如图1所示。<br>
+<p><b>　　2．控件代码</b></p>
+　　本示例的源程序如下：<br>
+　　Private Sub MnuOpen_Click()<br>
+　　′ 设定打开文件类型<br>
+　　CommonDialog1.Filter = ″MIDI音乐序器＊.mid|＊.mid|声音＊.wav|＊.wav|Widows视频＊.avi|＊.avi″<br>
+　　CommonDialog1.ShowOpen<br>
+　　MMControl1.Notify = False<br>
+　　MMControl1.Wait = True<br>
+　　MMControl1.Shareable = False<br>
+　　′由系统默认设备类型<br>
+　　MMControl1.DeviceType = ″″ <br>
+　　MMControl1.filename = CommonDialog1.filename<br>
+　　′ 打开 MCI 设备。<br>
+　　MMControl1.Command = ″Open″<br>
+　　MnuClose.Enabled = True<br>
+　　Slider1.Visible = True<br>
+　　End Sub<br>
+　　Private Sub MMControl1_StatusUpdate()<br>
+　　On Error GoTo Erropen<br>
+　　′设置文件长度以毫秒形式返回，<br>
+　　MMControl1.TimeFormat = 0<br>
+　　Slider1.Max = MMControl1.Length ／ 1000<br>
+　　If MMControl1.Position &lt;&gt; MMControl1.Length Then<br>
+　　Slider1.Value = MMControl1.Position ／ 1000<br>
+　　Else<br>
+　　MMControl1.Command = ″Prev″<br>
+　　Slider1.Value = 0<br>
+　　End If<br>
+　　′调用Tstring函数计算剩余时间和总时间<br>
+　　StatusBar1.Panels(2) = Tstring(MMControl1.Length － MMControl1.Position)<br>
+　　StatusBar1.Panels(4) = Tstring(MMControl1.Length)<br>
+　　Label1.Caption = ″00:00″<br>
+　　Label2.Caption = Tstring(MMControl1.Length ／ 2)<br>
+　　Label3.Caption = Tstring(MMControl1.Length)<br>
+　　′ 由Mode返回不同值并在状态栏经出相应的提示<br>
+　　Select Case MMControl1.Mode<br>
+　　Case 524<br>
+　　StatusBar1.Panels(5) = ″ 未打开设备……″<br>
+　　Case 525<br>
+　　StatusBar1.Panels(5) = ″停止状态……″<br>
+　　Case 526<br>
+　　StatusBar1.Panels(5) = ″正在播放……″ ＆ CommonDialog1.FileTitle<br>
+　　Case 527<br>
+　　StatusBar1.Panels(5) = ″正在录音……″<br>
+　　Case 528<br>
+　　StatusBar1.Panels(5) = ″正在搜索……″<br>
+　　Case 529<br>
+　　StatusBar1.Panels(5) = ″暂停播放……″<br>
+　　Case 530<br>
+　　StatusBar1.Panels(5) = ″设备就绪……″<br>
+　　End Select<br>
+　　Erropen:<br>
+　　′ 放弃打开文件<br>
+　　End Sub<br>
+　　′ 自定义将毫秒转化为分、秒Tstring函数<br>
+　　Private Function Tstring(sm As Long) As String<br>
+　　s = (sm ／ 1000 ／ 60) Mod 60<br>
+　　m = (sm ／ 1000) Mod 60<br>
+　　Tstring = Format(s, ″00″) ＆ ″;″ ＆ Format(m, ″00″)<br>
+　　End Function<br>
+　　Private Sub MMControl1_Done(NotifyCode As Integer)<br>
+　　MMControl1.UpdateInterval = 100  ′ 间隔100毫秒<br>
+　　End Sub<br>
+　　Private Sub MnuClose_Click()<br>
+　　MMControl1.Command = ″Close″<br>
+　　MnuClose.Enabled = False<br>
+　　End Sub<br>
+　　Private Sub MnuExit_Click()<br>
+　　MMControl1.Command = ″Close″<br>
+　　End<br>
+　　End Sub<br>
+　　Private Sub Check1_Click()<br>
+　　If Check1.Value = 1 Then<br>
+　　MMControl1.Command = ″Play″  ′ 继续播放<br>
+　　End If<br>
+　　End Sub<br>
+　　此外，欲在当前窗口播放＊.avi文件，可在窗体加一个PictureBox，在Private Sub MMControl1_StatusUpdate()中加入MMControl1.hWndDisplay = Picture1.hWnd一句。运行时如图2。<br>
+（本程序在VB5.0，PⅡ350中通过）<br><b>
+　　（黑龙江　王晓东）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99481301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

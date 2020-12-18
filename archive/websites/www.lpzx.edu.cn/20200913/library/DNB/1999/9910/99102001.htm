@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>用两颗廉价赛扬自制高档服务器</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>用两颗廉价赛扬自制高档服务器</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="center"><strong>多CPU系统</strong></p>
+        	    <p align="left">&nbsp;&nbsp;&nbsp; 　　通常，我们的主机内会有一枚中央处理器（CPU），而一些网络服务器和图形工作站上，往往会有两枚、四枚甚至是八枚CPU。<br>
+		      &nbsp;&nbsp;&nbsp; 　　如果用一般的测试软件来测试，多CPU系统的性能不是单纯的等于1×N个CPU(N为CPU数目)的性能，而是通常比单CPU高不了多少，那么，这么多的CPU用来干什么？装多CPU系统的人不是傻子，这种应用了多路对称原理的多CPU系统往往在某些特定的操作系统中能发挥比单CPU更高的性能。如在网络服务器的应用中，单CPU系统由于数据处理量太大，CPU机往往被全部占用，系统性能急剧下跌。这时候，如果我们使用对称的多处理器系统，就能使数据并行处理，大大缓解数据流拥塞的状况，使系统性能不至于有太大的下降，这就显示出了多CPU系统的性能优势。现有的通用测试程序都不能有效地反映多CPU系统的优势，因此，我们不能因为这些评测就否认了多CPU系统的性价比。<br>
+        　　就目前来看，如果不是用WinNT、Unix、BeOS、Linux等支持多处理器的操作系统的话，那么多CPU真的是一点用处都没有，再者，就算你是使用以上的操作系统，而没有使用能充分发挥双CPU优势的软件，也不能把系统性能充分发挥。不过按现在操作系统的发展来看，将来Win2000（NT5）和Linux都是支持双CPU的，而且随着软件对CPU的依赖性越来越大，多CPU是能真正体现出它的价值的。</p>
+        <p align="center"><strong>用赛扬行吗?</strong></p>
+        	    <p align="left">&nbsp;&nbsp;&nbsp; 　　现在的商用PC系统中，至今只有Intel的Pentium系列(Pentium、Pentium 
+		      Pro、PⅡ、PⅢ)CPU能支持多路对称CPU体系，也就是只有这种CPU能安装多枚。Celeron(赛扬)也是应用了PⅡ的核心，事实上它是换了128K同步二级CACHE的PⅡ。但是，Intel深深明白有多少钱办多少事这个道理，看看它卖得天价的服务器CPU 
+		      Pentium Ⅱ Xeon(至强)就知道了，以Celeron的价格，当然会有性能或功能上的缺陷，这就是它不支持双CPU系统。那么，用便<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-1.gif" width="223" height="223" alt="20-1.gif (4061 字节)" align="right">宜的Celeron来组装双CPU系统的想法就要泡汤了吗？我们想想，Celeron就是PⅡ，因为成本问题，Intel不可能对生产线进行专门改造来生产Celeron，所以，我们有理由相信Intel在CPU的外围进行了特定的设置，从而使Celeron不支持多处理器系统。还记得Intel用B21引脚的电阻来限制CPU的外部时钟频率吗？Intel也可能是采用了同样的手法来对Celeron进行改造（这应该是最省钱的办法）。我们查看了在Intel网页上CPU的引脚介绍文件，发现PⅡ和Celeron的引脚不同的是：在Celeron中一只名为BR1＃的CPU引脚没有和SECC接口板上的B75引脚相连，也就是说，在PⅡ上二者是相连的。然而，事情没有那么简单，因为根据来自Intel的参考文件，只有＃BR1引脚的电平为1.5V时，CPU的多路对称处理器机制才被允许，而Celeron的BR1＃引脚被接上了2.0V电压，也就是说，我们同时要处理两个问题，一是把BR1＃引脚连到SECC接口电路板的B75引脚上，二是要把CPU上BR1＃引脚的电平固定为1.5V。<br>
+        　　我们不可能外接一个1.5V的电源给该引脚（也不是不可能，只是太麻烦了），于是，我们在Celeron上找到了一处能提供1.5V电压的地方，它就是RP6电阻引脚(如图一)。</p>
+        <p align="center"><strong>改造基于Solt1插槽的赛扬</strong></p>
+        <p align="left">　　好，现在我们按图一步一步来，先切断BR1＃到VCC_CORE的连接。<br>
+        &nbsp;<img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-2.gif" width="247" height="154" alt="20-2.gif (7260 字节)"
+        align="left">&nbsp;&nbsp; 找到BR1＃引脚，看见了吗，是在SECC板的A面右手边的引脚阵列（就是右下角的那一片），中间一列靠缺口处向下数的第五个引脚(如图二)。<br>
+        　　说得可能不很明白，仔细看看图就应该知道，千万别搞错了！<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-3.gif" width="222" height="120" alt="20-3.gif (5650 字节)" align="right"><br>
+        　　先用0.5mm的钻将BR1＃引脚与VCC核心电压层连接的那一部分钻断，如图三那样就行了，目的就是要把BR1＃引脚与2V的核心电压层分开。钻的时候要小心，别碰伤了邻近的引脚和接线，深度要适中。<br>
+        <img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-4.gif" width="164" height="120" alt="20-4.gif (3745 字节)"
+        align="left">　　好，现在我们连接BR1＃引脚到RP6电阻处。如图四，要把<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-5.gif" width="266" height="196" alt="20-5.gif (10388 字节)" align="right">左面三个引脚焊接到一起。<br>
+        　　图五是焊接好的样子。注意，要用尽量细的导线和电烙铁，较细的线在把Celeron插到SECC槽中时会好办得多，而小的电烙铁用起来不容易焊伤其它部件。最好在导线经过的地方与PCB板间贴上绝缘胶布！<br>
+        　　好，现在连接BR1＃到B75引脚。Celeron不是有四个用来安装散热片用的孔吗，把导线通过这个孔穿过比直接飞线过去好，飞线是很容易弄断的。<br>
+        　　图六上面的那个孔就是钻好的BR1＃孔了，而下面的就是B75引脚，就是当Celeron的B面对着你的时候中间的缺槽向左数第二只引脚。<br>
+        　　插进Slot1时一定要小心，我就因为几次插CPU的时候把都该接线弄掉了，开机时显示只安装了一个CPU，还以为失败了呢(如图七)。</p>
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="39%" align="center"><img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-6.gif" width="192" height="182"
+            alt="20-6.gif (9906 字节)"><br>
+            图6</td>
+            <td width="34%" align="center"><img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-7.gif" width="226" height="138"
+            alt="20-7.gif (11387 字节)"><br>
+            图7</td>
+            <td width="43%" align="center"><img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-8.gif" width="216" height="164"
+            alt="20-8.gif (14524 字节)"><br>
+            图8</td>
+          </tr>
+        </table>
+        <p align="left"><br>
+        　　装好了两枚Celeron的机器就是这个样子<img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-9.gif"
+        width="273" height="163" alt="20-9.gif (10551 字节)" align="right">（我们使用的是技嘉 
+        GA－6BXD双PⅡ主板）(如图八)。<br>
+        　　开机显示见图九。<br>
+        　　检测到了两枚Celeron,好了，再把它们都超到450MHz,这样，一台服务器级主机就完工了，花的钱比一个PⅡ300还要便宜。</p>
+        <p align="center"><strong>改造基于Socket 370插槽的赛扬</strong></p>
+        <p align="left">&nbsp;&nbsp;&nbsp; 现在的Celeron还有的采用PPGA封装，也就是使用的是Socket370接口，这种Celeron在使用了接口转换板后，仍能在Slot1主板上使用，那么这种Celeron能否实现双CPU系统呢？<br>
+        　　答案是肯定的，而且使用转换板的话，CPU的处理更为容易，因为我们只需在转换板上动手脚，而无须“伤害”到“昂贵”的Celeron，对于那些不敢试的朋友，现在的风险和难度都小很多了，还不动手试一下？<br>
+        　　图十<img src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-10.gif" width="238" height="132"
+        alt="20-10.gif (12770 字节)" align="left">是一块标准的转换卡，按原理，我们还是要把CPU的BR1＃引脚和2V的VCC核心电源分开，再接到1.5V电源和B75引脚上。<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-11.gif" width="169" height="167" alt="20-11.gif (8513 字节)" align="right"><br>
+        　　我们来看看PPGA Celeron的BR1＃引脚(如图十一)。<br>
+        　　转换卡上的CPU插槽中，BR1＃又是接哪里呢？这一次接到了PPGA转换卡的CPU插座中的AN15引脚了如图十二，也就是说，我们只要把AN15引脚和B75引脚连在一起，当然，还要提供一个1.5V电压给BR1＃，好就好在PPGA的Celeron因为使用的是转换卡，<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-12.gif" width="238" height="176" alt="20-12.gif (6088 字节)" align="left">该BR1＃没有接任何电压源，而转换卡上的B75引脚也正好接了一个1.5V的电压源，哈哈，这可给我们省下了不少功夫。也就是说，我们要做的只有一件事，就是用一条电线把AN15引脚和B75引脚连接起来。这还不容易？(如图十三)<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9910/image/20-13.gif" width="219" height="149" alt="20-13.gif (10660 字节)"
+        align="right"><br>
+        　　这不就弄好了，很容易吧，而且冒的风险也相对来说小了。所以我们极力推荐那些真的想装双Celeron的朋友，使用PPGA封装的Celeron会使你更容易地办到，除非你真的想试试自己的实力，但是可千万要小心哦！<br>
+        　　欢迎访问飞翔鸟硬件资讯站：http：//birds.east.net.cn<br>
+        　　（本文经测试后刊登，文章内容属实，但本文不对读者所做的任何行为所造成的损失负责）<br>
+        <strong>(飞翔鸟)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月15日第10期</a></font> 
+        </td>
+      </tr>
+      <tr>
+        	  <td>相关站点:<a href="http://birds.east.net.cn">http：//birds.east.net.cn</a></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

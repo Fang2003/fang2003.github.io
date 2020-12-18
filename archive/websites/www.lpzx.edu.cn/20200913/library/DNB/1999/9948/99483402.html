@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Excel函数的魅力</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='oa.html'>OA专刊</A> &gt; Excel函数的魅力</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Excel函数的魅力 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　笔者曾在一本电脑杂志上看到这样一道有关编程的比赛题，即已知一个有序数组a，其中有n个元素（整数），a中相同的元素全部集中在一起，形成一个个“平台”。要求设计一个算法，求出a中最大平台的长度。例如，a中元素依次为：2 2 2 2 3 3 3 3 3 1 1 1 1 1 1 1 1 1 4 4，则它的最大平台的长度为9（即元素“1”的个数）。编程语言不限。<br>
+　　笔者经常使用Excel，深感其内置函数的功能十分丰富，因此试着用Excel函数解决了这个问题，觉得非常简单可行，根本无须编程。当然，这可能违背了赛题的初衷，但笔者介绍此法的目的仅在于能引起读者对Excel的兴趣，以便充分利用Excel函数，领略其高效、便捷之处。<br>
+　　以上面比赛题为例，具体方法为：<br>
+　　如图1所示，在A列中依次输入数组a的20个元素，即2 2 2 …… 1 4 4，然后在C1单元格中输入数组公式{=MAX(COUNTIF(A1:A20,A1:A20))}，即可求出最大平台的长度为9，非常简单。<br>
+　　几点说明：<br>
+　　1.数组a不要求一定是有序的，打乱输入各元素一样能得到正确的结果。<br>
+　　2.本例中，COUNTIF函数用于返回一个数值数组。它通常采用2个参数：一个区域（range）和一个判断准则（criteria），其中判断准则是一个简单测试，COUNTIF函数依给定准则计算区域中非空白且符合准则单元格的数目。本例巧用区域本身作为判断准则，依次统计每个元素在区域中的出现次数，因而函数必须按数组方式输入。输入数组公式时，不要自己键入花括号“{}”，而应该在输入公式后按“Ctrl＋Shift＋Enter”组合键锁定数组公式，Excel将在公式两边自动加上花括号。<br>
+　　3.为通用起见，可将公式中的区域设置大一点，如A1:A100或者更大，从而避免数组a中元素个数n不同时修改公式。<br>
+　　4.本例还可用来判断一个数组中元素是否唯一，只须将公式改为：{=MAX(COUNTIF(A1:An,A1:An))=1}，其中n为大于等于数组元素个数的数值。若此公式返回TRUE，说明数组中元素是唯一的，返回FALSE则说明数组中元素不唯一。<br>
+　　下面笔者再举几个巧用Excel函数的例子，以求抛砖引玉。<br>
+<p><b>　　【例1】巧用VLOOKUP函数实现“自动更正”功能</b></p>
+　　Word用户都知道，利用Word的“自动更正”功能可以实现数据的快速输入，即只需键入代码就可以快速输入诸如单位名称、通信地址等数据。但在Excel中却没有类似“自动更正”功能的菜单命令。其实，使用VLOOKUP函数可以巧妙地解决这一问题。举例如下：<br>
+　　假如在sheet1中建有物品领用登记表，“领料单位”一列往往要输入大量同一单位的名称。为了简化输入，可先在B列前插入一新列，再在B1单元格内输入“代码”，如图2所示。然后，在另一工作表sheet2中建立如图3所示的代码表，依次输入各领料单位的名称及相应的代码(本例假设有30个单位)。要注意的是，代码必须按升序排列。为直观起见，可双击sheet2，将其改名为“代码表”。最后，单击sheet1，在C2单元格内输入公式{=VLOOKUP(B2,代码表！ A  2:  B  31,2)}，并拖动C2单元格的填充句柄向下复制公式。以后，只要在B2、B3、b4、…单元格中输入各领料单位的代码（如1、2、3、…），C2、C3、C4、…单元格中即自动输入了相应的领料单位名称。<br>
+<p><b>　　【例2】巧用INDIRECT函数</b></p>
+　　如何计算单元格中数值的每位数字的和？假设A1单元格的数值为51432，怎样用函数来求这5位数字的和？通用的方法是使用数组公式：<br>
+　　{=SUM(1＊MID(A1,ROW(INDIRECT(“1:”＆LEN(A1))),1))}<br>
+　　其中，因为Excel不允许使用ROW(1:LEN(A1))这样的公式，所以巧用函数INDIRECT(“1:”＆LEN(A1))来产生需要的自然数组，以便据此数组从A1中逐个截取数字进行求和。<br>
+<p><b>　　【例3】巧用IS函数“俘获”出错值</b></p>
+　　Excel提供了三个专用的IS函数：ISERR、ISERROR和ISNA，它们测试一个参数或单元格的值，以判断是否含有出错值。巧用这些函数能有选择地“俘获”出错值，避免它们进入到工作表中。例如，图4中的工作表C列中若使用形如“=A1/B1”的公式时，C3单元格将返回错误值“＃DIV/0！”。避免这种情况的方法是使用以下公式：<br>
+　　{=IF(ISERROR(A1/B1),“”,A1/B1)}<br>
+<p><b>　　【例4】利用FREQUENCY函数分析数据分布</b></p>
+　　利用FREQUENCY函数可以进行频度分析。如图5所示，D2:D51中为50名学生的成绩，若想分析在60分、70分、80分、90分、100分以内各有多少人，可先在F2:F6中输入相应的分数区间，然后选择G2:G6区域，输入数组公式：{=FREQUENCY(D2:D51,F2:F6)}，完成后G2:G6区域将显示出成绩的分布情况。<br>
+<p><b>　　【例5】创建随机测试数据</b>&lt;/ p&gt;
+　　有时，为了测试工作表，可能需要一些有代表性的随机测试数据。以下方法供参考：<br>
+　　给定范围的随机数：=RANDBETWEEN(1,100)<br>
+　　某年内的随机日期：=“1/1/98”＋INT(RAND()＊365)<br>
+　　随机地区或名单：=CHOOSE(INT(RAND()＊6)＋1,“淮阴县”，“涟水县”，“淮安市”，“洪泽县”，“盱眙县”，“金湖县”)<br>
+<p><b>　　【例6】巧用函数计算单元格中的单词数</b></p>
+　　Excel中可以利用Len函数方便地计算单元格中的字符串长度，但没有提供计算单元格中的单词数的函数。其实，可以使用公式计算出出现在字符串内部的空格（ASCII码为32）数，加上1即得到字符串中的单词数。例如，使用下述数组公式可以计算出单元格B2中的单词数：<br>
+{=SUN(IF(MID(TRIM(B2),ROW(  A  1:OFFSET(  A  1,LEN(TRIM(B2))－1,0)),1)=CHAR(32),1,0))＋1}
+　　说明：<br>
+　　1使用Trim函数消除B2单元格字符串中多余的空格字符，包括前导空格、后随空格以及中间多余的空格（只在单词之间保留一个空格符）。<br>
+　　2Offset函数返回从基  A  2单元格开始向下的单元格区域引用，其单元格数目为B2单元格字符串长度减1。<br>
+　　3Row函数引用了单元格  A  1产生一个以1开始和以B2单元格字符长度结尾的连续递增的整型数组该数组作为Mid函数的第二个参数。<br>
+　　4使用Mid函数从B2单元格字符串中逐个截取字符，判断是否为空格，并进行累计。最后，将此累计数加1即得单词数。<br><b>
+　　(江苏　朱猛)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99483402.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

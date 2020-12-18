@@ -1,0 +1,171 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>奥运城市新闻</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<style fprolloverstyle>A:hover {color: #FF0000; text-decoration: overline; font-family: 华文新魏}
+</style>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!-- Begin
+var ver  = navigator.appVersion;
+var dom  = document.getElementById ? 1 : 0;
+var ie5  = (ver.indexOf("MSIE 5") > -1 && dom) ? 1 : 0;
+var n  = (document.layers);
+var ie = (document.all);
+
+var sparksAflyin = 0;
+var totalSparks = 0;
+var sparksOn = 1;
+function initMouseEvents() {
+document.onmousedown = mouseDown;
+if (n) document.captureEvents(Event.MOUSEDOWN | Event.MOUSEMOVE);
+}
+function mouseDown(e) {
+if (sparksOn) {
+var mousex = (n) ? e.pageX : event.x+document.body.scrollLeft;
+var mousey = (n) ? e.pageY : event.y+document.body.scrollTop;
+if (!sparksAflyin) {
+for (var k = 0; k <= 9; k++)
+   eval('SHOW("sDiv'+k+'")');
+sparksAflyin = 1;
+totalSparks = 0;
+for(i = 0;i <= 9; i++)
+eval('moveTo('+i+',0,'+mousex+','+mousey+')');
+      }
+   }
+}
+function moveTo(i,j, mousex, mousey){
+if (j < eval('anim_'+i+'_x.length') ){
+var tempx = eval('anim_'+i+'_x[j]+mousex');
+var tempy = eval('anim_'+i+'_y[j]+mousey');
+if (ie) {
+if(tempy+30 > (document.body.offsetHeight+document.body.scrollTop))
+tempy = document.body.offsetHeight+document.body.scrollTop-30;
+if(tempx+30 > (document.body.offsetWidth+document.body.scrollLeft))
+tempx = document.body.offsetWidth+document.body.scrollLeft-30;
+eval('document.all.sDiv'+i+'.style.left = tempx;');
+eval('document.all.sDiv'+i+'.style.top  = tempy;');
+}
+if (n) {
+eval('document.layers.sDiv'+i+'.left = tempx;');
+eval('document.layers.sDiv'+i+'.top  = tempy;');
+}
+j++;
+//  timeout: 50 = fireworks speed, larger number = slower speed
+    setTimeout("moveTo("+i+","+j+","+mousex+","+mousey+")",50)
+}
+else {
+eval('HIDE("sDiv'+i+'")');
+totalSparks++;
+}
+if (totalSparks == 10) {
+sparksAflyin = 0;
+totalSparks  = 0;
+   }
+}
+function SHOW(divName){
+if (document.all)
+eval('document.all.'+divName+'.style.visibility = "visible";');
+else if (document.layers)
+eval('document.layers["'+divName+'"].visibility = "visible";');
+}
+function HIDE(divName){
+if (document.all)
+eval('document.all.'+divName+'.style.visibility = "hidden";');
+else if (document.layers)
+eval('document.layers["'+divName+'"].visibility = "hide";');
+}
+anim_0_x=new Array(20,20,10,0,0,0,0,0,0,0,0,0);
+anim_0_y=new Array(-20,-40,-60,-80,-60,-40,-20,0,20,40,60,80);
+anim_1_x=new Array(20,20,17,36,60,78,90,92,93,98,108,120,133,152,181);
+anim_1_y=new Array(-20,-20,-33,-38,-38,-27,-2,25,51,84,113,141,162,212,253);
+anim_2_x=new Array(20,20,2,3,4,5,6,7,8,9,10,12,13,15,18);
+anim_2_y=new Array(-20,-20,-33,-38,-38,-27,-2,25,51,84,113,141,162,212,253);
+anim_3_x=new Array(-20,-20,-2,-1,7,10,18,35,60,102,94,94,93,97,108,111,117,127);
+anim_3_y=new Array(-20,-25,-64,-89,-104,-150,-173,-197,-213,-199,-151,-101,-66,-17,27,87,140,189);
+anim_4_x=new Array(-20,-20,-10,-39,-30,-69,-64,-138,-154,-200,-181,-209,-191,-207,-203,-213,-202,-221,-211);
+anim_4_y=new Array(-20,-20,-28,-51,-79,-100,-135,-154,-193,-183,-149,-134,-89,-60,8,51,107,157,201);
+anim_5_x=new Array(-20,-29,-51,-72,-105,-133,-164,-189,-209,-229,-247,-270,-279,-282,-283,-283,-285,-286,-288);
+anim_5_y=new Array(-20,-55,-86,-116,-154,-183,-205,-217,-217,-198,-169,-120,-44,-8,40,87,144,190,248);
+anim_6_x=new Array(-20,-20,-7,14,44,79,143,186,217,226,234,244,250,259,265,274);
+anim_6_y=new Array(-20,-21,-72,-113,-139,-166,-188,-181,-126,-68,-3,54,134,187,215,257);
+anim_7_x=new Array(20,20,-3,-9,-13,-27,-33,-44,-54,-66,-77,-95,-107,-136,-150,-160,-164,-168,-171,-172,-172,-176,-175);
+anim_7_y=new Array(-20,-26,-43,-63,-89,-116,-145,-169,-201,-222,-240,-253,-254,-245,-220,-195,-160,-124,-81,-53,-26,19,68);
+anim_8_x=new Array(-20,20,-35,39,0,45,-1,24,-15,14,-20,35,-18,38,-11,16,49,64,81,93,100,103,109);
+anim_8_y=new Array(-20,-20,-32,-42,-62,-76,-89,-107,-132,-147,-173,-180,-192,-209,-236,-193,-119,-73,-24,51,95,130,188);
+anim_9_x=new Array(-20,-51,-89,-110,-165,-191,-228,-240,-259,-271,-277,-281,-287);
+anim_9_y=new Array(-20,-20,-35,-37,-34,-16,10,47,105,150,189,227,273);
+//  End -->
+</script>
+
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=3)">
+<meta http-equiv="Page-Exit" content="revealTrans(Duration=1.0,Transition=4)">
+<!--mstheme--><link rel="stylesheet" type="text/css" href="_themes/expeditn/expe1111-106.css"><meta name="Microsoft Theme" content="expeditn 1111">
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body OnLoad="initMouseEvents()"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="center"><font size="6"><strong><img border="0" src="images/Logo.jpg" width="174" height="101"><img src="_derived/new_page_20.htm_cmp_expeditn110_bnr.gif" width="600" height="60" border="0" alt="申奥城市新闻"></strong></font><br>
+<font size="7" face="华文新魏">北京<img border="0" src="_borders/gif1_2.gif" width="39" height="51"><img border="0" src="_borders/gif1_0.gif" width="51" height="51"><img border="0" src="_borders/gif1_0.gif" width="51" height="51"><img border="0" src="_borders/gif1_8.gif" width="51" height="51"></font></p>
+<p align="center"><font color="#003300"><a href="mailto:zxy_0321@chinese.com">奥运</a></font><font face="方正舒体"><a href="mailto:zxy_0321@chinese.com"><font color="#003300">E</font><font color="#336600">-mail:</font><font color="#999966">zxy_</font><font color="#CC9900">0321</font><font color="#FF9900">@</font><font color="#FF9999">chinese.com</font></a></font></p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload("_derived/home_cmp_expeditn110_vbtn.gif"); MSFPnav1h=MSFPpreload("_derived/home_cmp_expeditn110_vbtn_a.gif"); }
+// --></script><a href="index.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/home_cmp_expeditn110_vbtn.gif" width="140" height="50" border="0" alt="主页" name="MSFPnav1"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload("_derived/new_page_18.htm_cmp_expeditn110_vbtn.gif"); MSFPnav2h=MSFPpreload("_derived/new_page_18.htm_cmp_expeditn110_vbtn_a.gif"); }
+// --></script><a href="new_page_18.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/new_page_18.htm_cmp_expeditn110_vbtn.gif" width="140" height="50" border="0" alt="申奥日记" name="MSFPnav2"></a><br><img src="_derived/new_page_20.htm_cmp_expeditn110_vbtn_p.gif" width="140" height="50" border="0" alt="申奥城市新闻"><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload("_derived/new_page_17.htm_cmp_expeditn110_vbtn.gif"); MSFPnav3h=MSFPpreload("_derived/new_page_17.htm_cmp_expeditn110_vbtn_a.gif"); }
+// --></script><a href="new_page_17.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/new_page_17.htm_cmp_expeditn110_vbtn.gif" width="140" height="50" border="0" alt="申奥城市大评估" name="MSFPnav3"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload("_derived/new_page_8.htm_cmp_expeditn110_vbtn.gif"); MSFPnav4h=MSFPpreload("_derived/new_page_8.htm_cmp_expeditn110_vbtn_a.gif"); }
+// --></script><a href="new_page_8.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/new_page_8.htm_cmp_expeditn110_vbtn.gif" width="140" height="50" border="0" alt="奥运问答" name="MSFPnav4"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload("_derived/new_page_10.htm_cmp_expeditn110_vbtn.gif"); MSFPnav5h=MSFPpreload("_derived/new_page_10.htm_cmp_expeditn110_vbtn_a.gif"); }
+// --></script><a href="new_page_10.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/new_page_10.htm_cmp_expeditn110_vbtn.gif" width="140" height="50" border="0" alt="自由空间" name="MSFPnav5"></a><br><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload("_derived/new_page_14.htm_cmp_expeditn110_vbtn.gif"); MSFPnav6h=MSFPpreload("_derived/new_page_14.htm_cmp_expeditn110_vbtn_a.gif"); }
+// --></script><a href="new_page_14.htm" language="JavaScript" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/new_page_14.htm_cmp_expeditn110_vbtn.gif" width="140" height="50" border="0" alt="奥运史话" name="MSFPnav6"></a>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<p><font size="5" face="方正姚体">欢迎阅览奥运城市新闻。大家知道：申奥城市有五个，分别是：北京（中国）、多伦多（加拿大）、巴黎（法国）、伊斯坦布尔（土耳其）和大阪（日本）。请关注以下连接：</font></p>
+<p><font size="5" face="方正姚体"><a href="new_page_4.htm">1、北京</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<a href="new_page_5.htm"> 2、多伦多</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="new_page_6.htm">3、巴黎</a></font></p>   
+<p><font size="5" face="方正姚体"><a href="new_page_1.htm">4、伊斯坦布尔</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<a href="new_page_7.htm">5、大阪</a></font></p>   
+<p><font size="5" face="方正姚体">此外还安排了一个<a href="new_page_9.htm">星级新闻</a>，欢迎光顾！</font></p>   
+<p><a href="new_page_4.htm"><img border="0" src="images/aoyunlogo.gif" width="85" height="96"></a><a href="new_page_1.htm"><img border="0" src="images/istanbul.gif" width="83" height="85"></a><a href="new_page_7.htm"><img border="0" src="images/Japan.gif" width="68" height="100"></a><a href="new_page_6.htm"><img border="0" src="images/paris1.gif" width="84" height="98">   
+</a> <a href="new_page_5.htm">   
+<img border="0" src="images/dld.gif" width="89" height="90">  
+</a>  
+<div id="sparks">  
+<div id="sDiv0" style="position:absolute; visibility: hidden;"><font face="arial black" color="red">a</font></div>  
+<div id="sDiv1" style="position:absolute; visibility: hidden;"><font face="arial black" color="yellow">b</font></div>  
+<div id="sDiv2" style="position:absolute; visibility: hidden;"><font face="arial black" color="blue">c</font></div>  
+<div id="sDiv3" style="position:absolute; visibility: hidden;"><font face="arial black" color="red">d</font></div>  
+<div id="sDiv4" style="position:absolute; visibility: hidden;"><font face="arial black" color="orange">e</font></div>  
+<div id="sDiv5" style="position:absolute; visibility: hidden;"><font face="arial black" color="white">f</font></div>  
+<div id="sDiv6" style="position:absolute; visibility: hidden;"><font face="arial black" color="green">g</font></div>  
+<div id="sDiv7" style="position:absolute; visibility: hidden;"><font face="arial black" color="skyblue">h</font></div>  
+<div id="sDiv8" style="position:absolute; visibility: hidden;"><font face="arial black" color="yellow">i</font></div>  
+<div id="sDiv9" style="position:absolute; visibility: hidden;"><font face="arial black" color="white">j</font></div>  
+</div>  
+  
+　<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<marquee behavior="alternate" direction="right" style="color: #FF0000; font-family: 隶书; font-size: 24pt">预祝北京，申奥成功！</marquee>
+
+</td></tr><!--msnavigation--></table></body>
+
+</html>

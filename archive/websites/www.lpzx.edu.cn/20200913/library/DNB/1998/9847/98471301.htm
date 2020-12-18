@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VB中OLE调用的优化方式<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; VB5.0中大量使用，对象的正确使用对于开发一个高效的应用程序是非常关键的。因此，笔者想谈一谈OLE调用的优化。<br>
+        &nbsp;&nbsp;&nbsp; <strong>一、利用WITH语句减少重复调用</strong>。为了设置单个对象的多个特性，可以使用WITHENDWITH减少激活引用链设置特性的次数，在这种情况下，甚至不需要定义对象类型的临时对象。例如：DBEngineWorkSpace(0)Databases(0)RecordSetFields(0)Name=″jx″<br>
+        &nbsp;&nbsp;&nbsp; DBEngineWorkSpace(0)Databases(0)RecordSetFields(0)Height=″175″<br>
+        &nbsp;&nbsp;&nbsp; 可以这样赋值：WITHDBEngineWorkSpace(0)Databases(0)RecordSetFields(0)Name=″jx″<br>
+        &nbsp; .Height=″1.75″<br>
+        &nbsp;&nbsp;&nbsp; END WITH<br>
+        &nbsp;&nbsp;&nbsp; 很明显，减少了执行赋值所必须做的OLE对象查询的次数。<br>
+        &nbsp;&nbsp;&nbsp; 二、使用可以提供的最特定的对象。在VB中访问任何对象的模型通常要求重复使用OBJECTPROPERTY语句，那么这个引用链将变得很长。<br>
+        &nbsp;&nbsp;&nbsp; DBEngineWorkSpace(0)Databases(0)RecordSetFields(0)Name<br>
+        &nbsp;&nbsp;&nbsp; 在上面这个序列中每个点代表VB为了访问下一个元素要求的OLE查找。如果将这样一条语句放到循环中，会产生大量不必要的查找：<br>
+        &nbsp;&nbsp;&nbsp; 例如ForI％=0TODBEngineWorkSpace(0)Databases(0)RecordSetFieldCount－1<br>
+        &nbsp;&nbsp;&nbsp; PrintDBEngineWorkSpace(0)Databases(0)RecordSetFields(I％)Name<br>
+        &nbsp;&nbsp;&nbsp; Next<br>
+        &nbsp;&nbsp;&nbsp; 如果通过使用可用的最特定的对象类型，可以大大减少同一个循环的开销。程序变换如下： 
+        &nbsp;&nbsp;&nbsp;&nbsp; <br>
+        &nbsp;&nbsp;&nbsp; DIM X AS Fields<br>
+        &nbsp;&nbsp;&nbsp; DIM Y AS Field<br>
+        &nbsp;&nbsp;&nbsp; SET X=DBEngine.WorkSpace(0)Databases(0)RecordSetFields(0)<br>
+        &nbsp;&nbsp;&nbsp; FOR EACH Y IN X<br>
+        &nbsp;&nbsp;&nbsp; PrintFName<br>
+        &nbsp;&nbsp;&nbsp; Next<br>
+        &nbsp;&nbsp;&nbsp; <strong>三、最小化跨进程OLE调用</strong>。OLEAutomation对程序内的对象的调用总是比跨进程调用要快，如果处理可以在一个程序内完成，就会比调用另一个应用程序快。如果进行跨进程OLEAutomation，一个硬输入的(DIMXASSPECIFICTYPE)而不是“ASOBJECT”的对象会大大减少开销，因为只需一个跨进程调用。<br>
+        &nbsp;&nbsp;&nbsp; <strong>四、使用进程内而不是进程外的OLE服务器。</strong>进程外OLE服务器(使用MAKEEXE建立的OLE服务器)比进程内OLE服务器(使用MAKEDLL建立的OLE服务器)慢得多。<strong>(湖南 
+        姜兴)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月7日第47期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

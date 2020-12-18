@@ -1,0 +1,160 @@
+<html><script LANGUAGE="JavaScript">
+var clipTop=0;
+var clipBottom=clipTop+60;
+var clipLeft;
+var clipRight;
+var isNS;
+if (document.layers) { (isNS=true) }
+var HIDDEN = (isNS) ? 'hide' : 'hidden';
+var VISIBLE = (isNS) ? 'show' : 'visible';
+var imgSeconds;
+var imgMinutes;
+var imgHours;
+var imgClock;
+var textDate;
+var textDay;
+var textLink;
+var clipHours="";
+var clipMinutes="";
+var clipSeconds="";
+var startLeft=-5;
+var startTop=85;
+var tunePosHour =0;
+function initObjects() {
+	if (document.all) {
+		imgSeconds = document.all.imgSeconds.style;
+		imgMinutes = document.all.imgMinutes.style;
+		imgHours = document.all.imgHours.style;
+		imgClock = document.all.imgClock.style;
+		textDate = document.all.textDate.style;
+		textDay = document.all.textDay.style;
+		textLink = document.all.textLink.style;		
+		startLeft=-5;
+		startTop=50;
+		imgHours.posTop=startTop;
+		imgMinutes.posTop=startTop;
+		imgSeconds.posTop=startTop;	
+		textDate.posTop = 145;
+		textDate.posLeft = 107;
+		textDay.posTop = 145;
+		textDay.posLeft = 124;
+		textLink.posTop = 190;
+		textLink.posLeft = -9;	
+		imgSeconds.visibility=VISIBLE;
+		imgMinutes.visibility=VISIBLE;
+		imgHours.visibility=VISIBLE;
+		imgClock.visibility=VISIBLE;
+		textDate.visibility=VISIBLE;
+		textDay.visibility=VISIBLE;
+		textLink.visibility=VISIBLE;
+		tickIE();
+	}
+	if (document.layers) {
+		imgSeconds = document.imgSeconds;
+		imgMinutes = document.imgMinutes;
+		imgHours = document.imgHours;
+		imgClock = document.imgClock;
+		textDate = document.textDate;
+		textDay = document.textDay;
+		textLink = document.textLink;		
+		startLeft=-3;
+		startTop=78;		
+		imgHours.top=startTop;
+		imgMinutes.top=startTop;
+		imgSeconds.top=startTop;	
+		textDate.top = 102;
+		textDate.left = 85;	
+		textDay.top = 102;
+		textDay.left = 40;		
+		textLink.top = 190;
+		textLink.left = -10;		
+		imgSeconds.visibility=VISIBLE;
+		imgMinutes.visibility=VISIBLE;
+		imgHours.visibility=VISIBLE;
+		imgClock.visibility=VISIBLE;
+		textDate.visibility=VISIBLE;
+		textDay.visibility=VISIBLE;
+		textLink.visibility=VISIBLE;	
+		tickNS();
+	}	
+}
+function tickIE() {
+	var now = new Date();
+	var nowHours = now.getHours();
+	var nowMinutes = now.getMinutes();
+	var nowSeconds = now.getSeconds();
+	if (nowHours >= 12) {nowHours=nowHours-12}
+	imgHours.posLeft=-(nowHours*60*5+((Math.round(nowMinutes/12))*60)+startLeft+tunePosHour);
+	clipLeft = -(imgHours.posLeft)+30;
+	clipRight= clipLeft+60;
+	clipHours ="rect("+clipTop+" "+clipRight+" "+clipBottom+" "+clipLeft+")";
+	imgHours.clip=clipHours;
+	imgMinutes.posLeft=-((nowMinutes)*60+startLeft);
+	clipLeft = -(imgMinutes.posLeft)+30;
+	clipRight= clipLeft+60;
+	clipMinutes ="rect("+clipTop+" "+clipRight+" "+clipBottom+" "+clipLeft+")";
+	imgMinutes.clip=clipMinutes;	
+	imgSeconds.posLeft=-((nowSeconds)*60+startLeft);
+	clipLeft = -(imgSeconds.posLeft)+35;
+	clipRight= clipLeft+60;
+	clipSeconds ="rect("+clipTop+" "+clipRight+" "+clipBottom+" "+clipLeft+")";
+	imgSeconds.clip=clipSeconds;	
+	var runClock = setTimeout("tickIE()", 100);
+}
+function tickNS() {
+	var now = new Date();
+	var nowHours = now.getHours();
+	var nowMinutes = now.getMinutes();
+	var nowSeconds = now.getSeconds();	
+	if (nowHours >= 12) {nowHours=nowHours-12}
+	imgHours.left=-(nowHours*60*5+((Math.round(nowMinutes/12))*60)+startLeft+tunePosHour+2);
+	clipLeft = -(imgHours.left)+30;
+	clipRight= clipLeft+60;
+	imgHours.clip.left = clipLeft;
+	imgHours.clip.right = clipRight;
+	imgHours.clip.top = clipTop;
+	imgHours.clip.bottom = clipBottom;	
+	imgMinutes.left=-((nowMinutes)*60+startLeft);
+	clipLeft = -(imgMinutes.left)+30;
+	clipRight= clipLeft+60;
+	imgMinutes.clip.left = clipLeft;
+	imgMinutes.clip.right = clipRight;
+	imgMinutes.clip.top = clipTop;
+	imgMinutes.clip.bottom = clipBottom;	
+	imgSeconds.left=-((nowSeconds)*60+startLeft);
+	clipLeft = -(imgSeconds.left)+35;
+	clipRight= clipLeft+60;
+	imgSeconds.clip.left = clipLeft;
+	imgSeconds.clip.right = clipRight;
+	imgSeconds.clip.top = clipTop;
+	imgSeconds.clip.bottom = clipBottom;
+	var runClock = setTimeout("tickNS()", 100);
+}
+</script>
+<head>
+<STYLE>
+  .imgall {position:absolute; visibility:hidden; FONT-SIZE:9pt}
+</STYLE>
+<title></title>
+</head>
+<body topmargin="0" leftmargin="0">
+<DIV ID = "imgClock" CLASS = "imgall"><img src="back.gif"></DIV>
+<DIV ID = "imgHours" CLASS = "imgall"><img src="hours.gif"></DIV>
+<DIV ID = "imgMinutes" CLASS = "imgall"><img src="minutes.gif"></DIV>
+<DIV ID = "imgSeconds" CLASS = "imgall"><img src="seconds.gif"></DIV>
+<DIV ID = "textLink" CLASS = "imgall"></DIV>
+<SCRIPT LANGUAGE = "JavaScript">
+var heute = new Date();
+var wochentag = heute.getDay();
+var heuteDatum = heute.getDate();
+if (wochentag==0) { wochentag = "SAM" }
+else if (wochentag==1) { wochentag = "MON" }
+else if (wochentag==2) { wochentag = "TUE" }
+else if (wochentag==3) { wochentag = "WED" }
+else if (wochentag==4) { wochentag = "THU" }
+else if (wochentag==5) { wochentag = "FRI" }
+else if (wochentag==6) { wochentag = "SUN" }
+document.write('<DIV ID = "textDate" CLASS = "imgall"><font color="#FFFFFF">'+heuteDatum+'</font></DIV>');
+document.write('<DIV ID = "textDay" CLASS = "imgall"><font color="#FFFFFF">'+wochentag+'</font></DIV>');
+initObjects();
+</script></body></html>

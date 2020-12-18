@@ -1,0 +1,130 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<style>
+<!--
+        A:link {text-decoration: none; color: "#000000"}
+        A:visited {text-decoration: none; color: "#000000"}
+        A:active {text-decoration: none}
+        A:hover {text-decoration: underline; color: 2B07F1}
+-->
+</style>
+<title>从Voodoo1到Voodoo5（二）</title>
+</head>
+
+<body background="../images/background.jpg" bgcolor="#ffffff">
+
+<table border="0" width="584" cellspacing="0" cellpadding="0"
+style="font-family: 宋体; font-size: 9pt">
+  <tr>
+    <td width="62"><img src="blank.gif" width="60" height="0" alt="blank.gif (63 字节)"></td>
+    <td width="522"><table border="0" width="273" bgcolor="#444444" cellspacing="0"
+    cellpadding="0">
+      <tr>
+        <a name="1"><td width="273" style="font-family: 宋体; font-size: 12pt"><p align="center"><font
+        color="#FFFFFF"><strong>从Voodoo1到Voodoo5（二）</strong></font></td>
+      </tr>
+      </a>
+    </table>
+    <table border="0" width="97%" cellspacing="0" cellpadding="0"
+    style="font-family: 宋体; font-size: 9pt">
+      <tr>
+        <td width="100%"><img src="blank.gif" width="1" height="35" alt="blank.gif (63 字节)"></td>
+      </tr>
+      <tr>
+        <td width="100%"><strong>&nbsp;</strong>&nbsp;&nbsp;&nbsp;<br>
+        终于取得了成功……<br>
+        成本问题和生产问题都已经解决了，似乎 Voodoo将取得胜利，不过还有一个很重要的问题就是如何取得游戏开发者的支持。正如所有玩家都明白的，软件优化是硬件销售的最终驱动力，而Voodoo刚刚推出那时并没有多少好游戏软件可供运行。最早为Voodoo设计的游戏软件都是一些比较一般的游戏的3D改造版，比如Gremlin 
+        Interactive公司的两款作品“VR Soccer '96”和“Whiplash”。为了抓紧推出的时间，这类游戏只经过仓促的3D程序编写，虽然已经可以超过当时其他游戏，不过仍然不合Sellers的意：它们还没有把Voodoo的能力尽情发挥出来。因为在这以前已经有过创新的3D 
+        Blaster和帝盟的Edge失败的例子，所以Sellers非常明白，如果Voodoo想取得全面的市场胜利，还必须有更多更好的游戏软件的支持，而且他希望能在最短的时间内做到这点。为了实现计划，公司添加了一位雇员，他的名字叫Brian 
+        Bruning（布朗&middot;布洛宁）。<br>
+        <br>
+        Bruning负责3dfx的公共关系部门，在游戏界内推广他们的Voodoo芯片以及它专用的API——GLIDE。API即“应用程序界面”，是游戏编程接口，当时的API如SGI的OPEN 
+        GL和微软的Direct3D由于相对繁琐，还没有广泛应用于游戏制作中，而Voodoo所专用的GLIDE却是一个简单易用的API。Bruning的主要任务就是告诉游戏开发者们GLIDE的种种优点。<br>
+        <br>
+        他的努力非常有效，游戏制作者大都愉快接受了Voodoo的先进技术和GLIDE编程方式，且觉得GLIDE用起来比较方便。最早使用GLIDE编写的游戏就是CORE 
+        Designs公司的Tomb Raider（“古墓丽影”！）。前一段时间很流行的主视角射击游戏《虚幻》（Unreal）刚刚推出时只能在Voodoo或Voodoo2卡上才能稳定运行，其他卡总是BUG多多，直到很长时间后才靠PATCH干过了Voodoo2。也正是由于使用GLIDE编程的简易性，很多游戏刚上市时只有3dfx的产品才能正常运行，其他显卡都要等待PATCH的推出。<br>
+        <br>
+        可惜ID还是对GLIDE不感兴趣，部分原因是Quake一直对Rendition卡提供支持，不愿使用其他芯片的技术，这对3dfx来说是很不幸的，因为他们知道自己的Voodoo需要Quake这样的优秀游戏来支持。后来他们分析到，ID能否使用SGI公司著名的3D通用API：OpenGL来编写Quake呢？这样的话，3dfx只要搞出一个能够让Voodoo使用的OpenGL的驱动就万事俱备了（不过到现在他们搞出的也只是一个MINI 
+        GL）。令Sellers兴奋的是ID的Quake开发人员同意了这个建议，更让人不可思议的是3dfx的工程师仅花费了一个周末的时间就写出了供Voodoo运行的OpenGL驱动。在有了OPEN 
+        GL驱动的Voodoo卡上运行的Quake终于把Rendition打倒了！当时很多玩家就是因为看到了GL 
+        Quake和Tomb Raider，才去选择了3dfx的加速卡。<br>
+        <br>
+        由于性能出色及宣传到位，Voodoo的口碑越来越好，大量专门为GLIDE优化的游戏出现，3dfx产品开始变成3D游戏的标准配置，而且那时市场上摆出的所有支持3D卡的游戏包装盒上几乎都有“3Dfx”标志，无论是正版还是D版皆如此。这时期，Sellers 
+        和Bruning等也在全球范围内铺天盖地地宣传“3Dfx”公司和其引以为荣的Voodoo品牌。当时几乎已经赶上了Intel对其“Pentium” 
+        CPU的宣传力度，因为Sellers一直相信对于3dfx来说，品牌的知名度和技术优势同样重要，因为对品牌的大量宣传可以取得游戏开发商对Voodoo的更多支持，也可以提高Voodoo产品在3D游戏迷心中的地位，从多角度给NVidia等竞争对手以极大压力。<br>
+        <br>
+        大家还记得与Voodoo同期的另一款3D芯片Power VR吗？它由日本NEC公司设计制造，是一块名副其实的“鸡肋”。Why？Power 
+        VR在性能上的确超过计划Voodoo的产品，不过其市场占有率却比Voodoo低了数倍，选择它的玩家少得可怜。原因之一，就是其市场推广者没有像3dfx的Bruning那样做好宣传工作。和Voodoo有其自己的API“GLIDE”一样，Power 
+        VR也有自己专门的开发程序“SGL”，但对于游戏开发人员，SGL的编程代码比GLIDE繁琐得多，很难熟练使用。所以在Power 
+        VR诞生后的很长一段时间内几乎没有多少游戏去支持它，比如大家熟知的EA著名赛车游戏“极品飞车2 
+        -特别版”，就只支持Voodoo的GLIDE，连D3D都不理睬。Power VR失败的例子不但再次证明了软件优化和API的重要性，同时足以表明市场宣传是多么的关键：如果当时生产Power 
+        VR芯片的厂商向游戏开发商们大量推广其技术并努力使他们接受SGL编程语言的话，Power 
+        VR也许会有另一个命运。<br>
+        <br>
+        在Voodoo取得全面市场成功的时候，Sellers等发现3dfx开始面临严峻的考验：所有竞争对手都致力于提高技术和宣传力度，3dfx必须扩展其业务范围才能保持市场优势。因为Voodoo是子卡设计，必须配合常规2D显卡才能工作，所以玩家都认为3dfx的产品只是纯娱乐性工具。为了改变大伙的这个看法，Sellers决定推出既有强悍的3D能力又有一定2D的显卡，那就是我们后来看到的Voodoo 
+        Rush，它通常配有6MB显存，然后和另一块2D芯片集成在一个PCB板上，整个显卡上有好几块大芯片和12片EDO显存，看起来极其笨拙。由于要兼顾2D性能，所以Rush的3D游戏性能大概只有Voodoo子卡的70%。<br>
+        <br>
+        后来，Sellers发现Voodoo Rush简直是个“大灾难”，不但销售极为不理想，而且还使3dfx在玩家心目中的形象受到了不小的影响，很多人都认为：3dfx应该老老实实地去造他们的Voodoo芯片和子卡，来All 
+        in one（2D/3D全内置显卡）市场捣什么乱！不过Sellers并没有因为Rush的失败而气馁，他相信3dfx总有一天还会在这一市场取得立足之地，这就是下文要出现的Voodoo 
+        Banshee和Voodoo3。<br>
+        <br>
+        由于Voodoo在PC三维游戏领域的成功，电子游戏机制造商也逐渐被它优秀的性能所吸引，日本著名的SEGA（世嘉）公司就是其一。但一切都不如人们想象的那样顺利，世嘉因为最终价格问题没有采用Voodoo来生产其新一代游戏主机而采用了另一家日本公司NEC的Power 
+        VR芯片。虽然在PC游戏领域Power VR输给了Voodoo，不过这次NEC却胜利了。后来3dfx把世嘉等一起推向了法庭……。<br>
+        <br>
+        这次交易的失败对3dfx来说是个打击，因为世嘉没有采用他们的技术，3dfx蒙受了不小的研发损失，但Sellers却一直对记者们保持乐观的态度，告诉他们3dfx不在乎这点损失。为什么他再次表露当年狂妄的个性呢？因为此时3dfx还没有拿出致命武器，足以击溃所有对手和反对者的武器，那就是不可一世的Voodoo2！！<br>
+        <br>
+        Voodoo2的设计保持了上代产品的重要特点：仍然是子卡，不和其他2D/3D显卡商直接竞争。除此之外，3dfx又在Voodoo2中使用了很多革新的技术，首先是时钟频率的提高。Voodoo的芯片/显存一直运行在50/50MHz上，而Voodoo2一下把速率提高到90/90MHz，比Voodoo增加了近一倍。但这还不能保证Voodoo2足够快，真正厉害的是3dfx在其上使用了第二个纹理贴图单元，使Voodoo2在相同时钟周期内能比Voodoo多处理一倍的数据，同时色彩也将变得更好。对于那时流行的Quake2来说，Voodoo2绝对是速度加画质之王，主要原因就是因为Quake2使用每周期两次贴图设计，正好应了Voodoo2的这个先进特点，同时每周期使用两次纹理也会使画面更逼真、自然。技术上的另一点进步就是显存数量的大幅增加，Voodoo2从Voodoo的4MB一下扩充到了8或12MB，其中帧缓冲单元有4MB可用，另两个纹理缓冲可以为2、2或4、4（分别对应8MB版和12MB版）。<br>
+        <br>
+        不要认为Voodoo2只有这些优势，它除了上面提到的自身性能提高外，还有一种号称“SLI”的工作模式（Scan 
+        Line Interface，隔行交错扫描）。它允许两块V2以隔行的方式工作，比如当你用1024*768的分辨率玩游戏时，第一块卡处理1、3、5……1023行数据，第二块则处理2、4、6……1024行数据，这样下来，能使游戏的帧数又（理论）提升近一倍（当然您的CPU必须足够快）。Voodoo2改进不大的地方是它的设计仍然没有集成化：板上密密麻麻排了三颗主芯片、RAMDAC芯片及16或24片的EDO显存。<br>
+        <br>
+        随着驱动的完善和价格的降低，V2 SLI成了顶级游戏发烧友的配置方案，经过统计，买过一块Voodoo2的用户中又有约30%买了第二块。即使今天看来，我宁愿用两块Voodoo2玩游戏也不想用Voodoo3，V3为了能在测试中取得高一些的FPS数，在驱动中降低了画面质量，使人看到它的贴图效果后感到不能接受。<br>
+        <br>
+        Voodoo2的推出使3dfx的霸主地位更加不可动摇，后来连狂妄的世嘉都不得不在暗地里妥协，使他们的游戏支持3dfx的产品。对于3dfx，这种辉煌的时光一直持续了几个月……。<br>
+        历史车轮是前进的，<br>
+        技术进步是永恒的……<br>
+        进入1998年，世界各大显卡商纷纷努力，为了和Voodoo2一比高低都拿出了新的“利器”，首先登场的是加拿大Matrox公司的G200，使用双64BIT总线设计（组合为高效率的128BIT宽度），两条64BIT总线分别负责数据的读、写操作，支持8-16MB的SDRAM或SGRAM显存，芯片主频也和Voodoo2相差不大（G200为89MHz，V2为90MHz）。遇到使用D3D编程的游戏时G200与V2的差距已经不大，而且当时CPU价格还比较高，PMMX和低端PII（233-266MHz）为主流配置，此时恰好G200的SRA结构设计使其有很低的CPU占用率，这样对Voodoo2更为不利。<br>
+        <br>
+        随之登场的是3dfx的美国同胞NVidia公司的Riva TNT，它不但有和Voodoo2和G200相差不多的频率（90MHZ）、16MB显存，更具备了以前只有Voodoo2才有的“单过程-双纹理”能力，这是V2所向披靡的关键技术所在。所不同的是，V2用两块单独的芯片处理这两次纹理，而TNT却把所有功能都集成在了一块单一芯片中，提高了显存利用率同时节省了成本。Riva 
+        TNT的推出再次对Voodoo2构成了严重威胁（TNT气得Sellers曾起诉NVidia，理由是“单过程-双纹理”为3dfx的专利技术）<br>
+        <br>
+        除此之外，MGA G200和Riva TNT还有着超强的2D能力和OPEN GL驱动（G200的OPEN 
+        GL ICD推出晚一些），使3dfx感到在这一市场他们已经落后。所幸的是，Voodoo2仍然有很高的销量，因为G200只有一个纹理单元，3D速度上比Voodoo2稍慢；TNT的D3D能力虽然很强，但当时微软的D3D接口还不完善，使用它的游戏还不多，做得好的更少，但竞争对手和其差距已经明显缩小了。<br>
+        进军新的市场……<br>
+        <br>
+        失去了家用游戏机市场，又被G200和TNT突击过后的3dfx，如果想继续发展，就必须继续开拓，此时的Sellers看中了OEM市场，他希望HP、DELL等PC制造商能采用3dfx的加速卡。但想实现这个目标并不容易，首先只有3D游戏能力的Voodoo（2）子卡是决不可能的，必须还有很好的2D平面能力，既可以加速Photoshop和Word，也可以运行AutoCAD、3Dmax等。但是曾经有过Voodoo 
+        Rush失败的例子，所以这次Sellers更加谨慎，因为再次的失败将意味着无法挽回，3dfx会被Matrox、ATi等踢出OEM市场。<br>
+        <br>
+        新的产品被命名为“Voodoo Banshee”，不同于Rush，Banshee像G200、TNT一样为整合设计，单一芯片中集成了2D/3D单元。Banshee与Voodoo2的本质不同在于它有很强的2D处理能力。在3D方面，Banshee去掉了一个纹理单元，所以速度上落后于有两个单元的TNT。当然，落后于TNT不等于失败，在绝大多数以Direct3D为基准的游戏中，Banshee超过了自家的Voodoo2和Matrox的G200，因为很多D3D游戏都只使用“单纹理”贴图方式，那时只有TNT才可以在一个时钟周期内完成两次操作。而Voodoo2的两个纹理单元是分开的，只有运行Quake2这种在单周期内使用了多重纹理的游戏才会起作用。外加Banshee采用了新的128BIT总线接口和更高带宽的SDRAM或SGRAM存储器，所以其综合执行效能还是非常理想（当然这个结论不对应Quake2或Quake3这类双纹理游戏）。除了总线和显存的改进外，Banshee在当时还有一个关键性的优势：它能以Voodoo系列的GLIDE模式运行游戏。由于那时的D3D标准还没有完全成熟，市面上用GLIDE编写的游戏还占有很大的份额，因此有很多注重使用的玩家选择了Banshee。不过事实证明，Banshee的GLIDE兼容性并没有3dfx宣称的那样好，很多游戏必须靠开发商重新为Banshee编写PATCH才得以正常运行。<br>
+        <br>
+        由于研发工作没有想象中的顺利，Banshee直到98年9月才问世（中关村到12月才出来），比计划的时间整整晚了半年，这对OEM市场来说是个不小的损失。好在Banshee最终取得了一定成功，没有像Rush那样惨，同时也改变了3dfx在人们心目中的形象，“3dfx也可以制造整合显卡了，而且性能还不错。”<br>
+        <br>
+        由于长期处于3D霸主地位和Banshee后来出色的2D效果，3dfx的知名度青云直上，Scott 
+        Sellers也开始不满足于现状，他要实现当初的诺言，“仅依靠出售芯片谋取利润不应该是3dfx的最终发展方向，提高品牌知名度和增加业务范围也同样重要”。因此（下转33页）（上接30页）Sellers决定推出3dfx自己品牌的显示卡，这样玩家可以更清楚3dfx是干什么的。以前，人们很熟悉帝盟的Monster 
+        3D、中凌的Hellios 3D、创新的Blaster 3D这些牌子，而游戏包装和广告上却到处都是“3Dfx 
+        Voodoo”的标志，“究竟是众多显卡品牌重要还是3dfx的产品更重要呢？”为了让消费者弄明白，Sellers决定不再向帝盟、创新等其他板卡商出售3dfx的芯片，而改为自家生产以3dfx为品牌的3D加速卡。<br>
+        <br>
+        于是，发达了的3dfx以1.41亿美元收购（股票交换）了另一家著名的板卡制造商STB公司，因为Sellers认为它有很好的OEM市场关系。从此，3dfx也将用新的Voodoo3芯片自行生产显示卡，停止了和以前盟友的合作关系。“化友为敌”是一个既滑稽又危险的决定，创新、华硕、ELSA等以后不得不和3dfx的主要竞争对手NVidia更紧密地合作在一起。<br>
+        <br>
+        Sellers这一步走对了吗？他能像Bill Gates那样有制胜的把握吗？3dfx能否和微软一样从此变成高利润的大型垄断企业呢？让我们在下期中从Voodoo3的技术特点和微软D3D的发展情况来分析吧。BYE！<br>
+        <br>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"><p align="left"><img src="blank.gif" width="1" height="45"
+        alt="blank.gif (63 字节)"></td>
+      </tr>
+      <tr>
+        <td width="100%"><p align="center">[<a href="Yjpx_v1tov52.htm#1">返回顶部</a>] <a href="yjpx.htm">[返回目录]</a> 
+        <a href="medil.htm">[返回总目录]</a></td>
+      </tr>
+    </table>
+    <p><br>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

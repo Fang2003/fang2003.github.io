@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- S3纹理压缩（S3TC）</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='../../../../www_lpzx_edu_default.html'><IMG SRC='http://www.lpzx.edu.cn/images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=link&user=issue-hardware&realm=hardware' TARGET='_blank'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-hardware&realm=hardware' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9938.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9938.html'>38 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; S3纹理压缩（S3TC）</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 S3纹理压缩（S3TC） 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　纹理贴图是应用在3D物体上的位图，在3D场景中被用作增加物体的表面细节。纹理可以是任何东西，如木质纹理、大理石纹理等，可以合成复杂的图像如人、建筑物、树等。为了模仿现实生活的场景，就需要巨大数量的细节纹理，因而存放这些数据的地方大小（主内存或显示内存）是很重要的，但为了适应有限制的存储量和带宽，程序开发者不得不使用较少数量的纹理细节。<br>
+　　虽然AGP使系统可以从主内存中读取纹理数据，从而提高了总体存储量，但是AGP和主内存的接口是共享的资源，除了纹理数据，AGP还被用于传输几何数据，同时系统内存还要被操作系统和其他应用程序使用。因此，纹理数据的读取不可能占有所有的的主内存带宽，但最大限度地使用带宽对图形子系统来说非常重要。<br>
+　　S3TC纹理压缩技术可以帮助解决这两方面的问题，允许存储更多的纹理数据，同时减少了对带宽的要求，且压缩后图像质量仍然很好。<br>
+　　微软已经把S3TC作为DirectX6.0中的标准压缩技术，它可以把数据容量压缩到原先的1/6。本质上可以通过存储更多的材质数据，使芯片的帧缓存大小加倍，再加上Savage4采用AGP4×,，从而使Savage4达到超强的3D性能。
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/38/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99382402.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

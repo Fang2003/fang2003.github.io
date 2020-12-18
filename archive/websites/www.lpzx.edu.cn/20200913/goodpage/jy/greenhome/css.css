@@ -1,0 +1,32 @@
+<STYLE type=text/css>A {
+	TEXT-DECORATION: none; TEXT-TRANSFORM: none; text-color: #000000
+}
+A:hover {
+	COLOR: #ff00ff; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #0099ff
+}
+A:unknown {
+	COLOR: #00cccc
+}
+A:unknown {
+	COLOR: #ff99ff
+}
+SMALL {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 9pt
+}
+PRE {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 10.5pt
+}
+BODY {
+	FONT-SIZE: 9pt; bgcolor: "#FFFFFF"
+}
+DIV {
+	FONT-SIZE: 9pt
+}
+TD {
+	FONT-SIZE: 9pt
+}
+</STYLE>
+<style fprolloverstyle TYPE="text/css"><!--A:link{text-decoration:none}A:visited{text-decoration:none} -->A:hover {color: #ff00ff}</style>

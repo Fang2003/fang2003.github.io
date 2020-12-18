@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- #BeginTemplate "/Templates/samplefiletmp.dwt" -->
+<head>
+<!-- #BeginEditable "dochead" -->
+<title>Mouse Tracker 鼠标轨迹跟踪脚本</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+td {font-size: 9pt;}
+body {font-family: "宋体";font-size: 9pt;margin-top: 5px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;}
+.pt9 {font-size: 9pt;font-family: "宋体";}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<TABLE border="0" cellspacing="0" cellpadding="0" align="center">
+<tr valign="top">
+<TD width="779" align="center" height="1670">
+<table width="100%" border="1" cellspacing="1" cellpadding="1" bordercolor="#009999" bgcolor="#F5F5F5">
+<tr valign="top">
+<TD width="82%" height="14" colspan="2" align="center"><!-- #BeginEditable "title" --><font size="3" color="#FF3333">Mouse
+Tracker 鼠标轨迹跟踪脚本</font><!-- #EndEditable -->
+
+<tr valign="top">
+<td colspan="2"><!-- #BeginEditable "mainbody" -->
+<p>首先，将如下代码加入&lt;head&gt;和&lt;/head&gt;之间：</p>
+<p>&lt;STYLE TYPE=&quot;text/css&quot;&gt;<br>
+&lt;!--</p>
+<p>BODY{<br>
+overflow:scroll;<br>
+overflow-x:hidden;<br>
+}</p>
+<p>.s1<br>
+{<br>
+position : absolute;<br>
+font-size : 12pt;<br>
+color : blue;<br>
+visibility: hidden;<br>
+}</p>
+<p>.s2<br>
+{<br>
+position : absolute;<br>
+font-size : 20pt;<br>
+color : red;<br>
+visibility : hidden;<br>
+}</p>
+<p>.s3<br>
+{<br>
+position : absolute;<br>
+font-size : 16pt;<br>
+color : gold;<br>
+visibility : hidden;<br>
+}</p>
+<p>.s4<br>
+{<br>
+position : absolute;<br>
+font-size : 14pt;<br>
+color : lime;<br>
+visibility : hidden;<br>
+}<br>
+--&gt;<br>
+&lt;/STYLE&gt;</p>
+<p>然后，将如下代码加入HTML的&lt;body&gt;区：</p>
+<p>&lt;body bgcolor=&quot;#FFFFFF&quot;&gt;<br>
+&lt;DIV ID=&quot;div1&quot;CLASS=&quot;s1&quot;&gt;*&lt;/DIV&gt;<br>
+&lt;DIV ID=&quot;div2&quot;CLASS=&quot;s2&quot;&gt;*&lt;/DIV&gt;<br>
+&lt;DIV ID=&quot;div3&quot;CLASS=&quot;s3&quot;&gt;*&lt;/DIV&gt;<br>
+&lt;DIV ID=&quot;div4&quot;CLASS=&quot;s4&quot;&gt;*&lt;/DIV&gt;</p>
+<p><br>
+&lt;script language=&quot;javascript&quot;type=&quot;text/javascript&quot;
+class=&quot;s5&quot;&gt;</p>
+<p>var nav=(document.layers);<br>
+var tmr=null;<br>
+var spd=50;<br>
+var x=0;<br>
+var x_offset=5;<br>
+var y=0;<br>
+var y_offset=15;</p>
+<p>if(nav) document.captureEvents(Event.MOUSEMOVE);<br>
+document.onmousemove=get_mouse;</p>
+<p>function get_mouse(e)<br>
+{<br>
+x=(nav) ? e.pageX : event.clientX+document.body.scrollLeft;<br>
+y=(nav) ? e.pageY : event.clientY+document.body.scrollTop;<br>
+x +=x_offset;<br>
+y +=y_offset;<br>
+beam(1);<br>
+}</p>
+<p>function beam(n)<br>
+{<br>
+if(n&lt;5)<br>
+{<br>
+if(nav)<br>
+{<br>
+eval(&quot;document.div&quot;+n+&quot;.top=&quot;+y);<br>
+eval(&quot;document.div&quot;+n+&quot;.left=&quot;+x);<br>
+eval(&quot;document.div&quot;+n+&quot;.visibility='visible'&quot;);<br>
+} <br>
+else<br>
+{<br>
+eval(&quot;div&quot;+n+&quot;.style.top=&quot;+y);<br>
+eval(&quot;div&quot;+n+&quot;.style.left=&quot;+x);<br>
+eval(&quot;div&quot;+n+&quot;.style.visibility='visible'&quot;);<br>
+}<br>
+n++;<br>
+tmr=setTimeout(&quot;beam(&quot;+n+&quot;)&quot;,spd);<br>
+}<br>
+else<br>
+{<br>
+clearTimeout(tmr);<br>
+fade(4);<br>
+} <br>
+} </p>
+<p>function fade(n)<br>
+{<br>
+if(n&gt;0) <br>
+{<br>
+if(nav)eval(&quot;document.div&quot;+n+&quot;.visibility='hidden'&quot;);<br>
+else eval(&quot;div&quot;+n+&quot;.style.visibility='hidden'&quot;);
+<br>
+n--;<br>
+tmr=setTimeout(&quot;fade(&quot;+n+&quot;)&quot;,spd);<br>
+}<br>
+else clearTimeout(tmr);<br>
+} </p>
+<p>// --&gt;<br>
+&lt;/script&gt;</p>
+<p>&lt;/body&gt;</p>
+
+
+</table>
+<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN>
+
+</TABLE>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 分解Director的“动作”</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 分解Director的“动作”</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 分解Director的“动作” 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　使用Director内建的Lingo脚本语言可以使电影具有良好的交互性，而6.0版本后出现的“动作”（Behaviors）却能够让不熟悉Lingo脚本语言的创作者也能制作出一些常见的交互效果，很奇妙吧！对刚接触Director的人来说，“动作”是一个让人既爱又怕的家伙，今天我们就一起来“肢解”它们，让大家把“分解动作”看个清清楚楚。
+<p align="center"><b>一、理解动作</b></p>
+　　什么是动作呢？动作是一个以可重复使用、可定制的对象形式出现的小型预建Lingo模块，动作的集合称为动作库（Behaviors Library）。这样说也许过于抽象，简单地说，动作是一小段Lingo程序，能够完成某一项特定的功能，如在当前帧暂停，将它拖到某一帧上时，电影播放到该帧就会停下来。从这个意义上讲动作有点儿类似于Word中的宏，懂不懂VBA都一样可以使用现成的宏。像宏可以进行编辑和创建一样，我们在Director中也可以自己编辑、修改和创建动作。<br>
+　　还是举一个例子来说明吧。假如有一个片段，人物从屏幕右侧向中间行走，长度为28帧，现在我们要让他在第15帧处停下来。<br>
+　　1执行“Window/Behaviors Library”（在Director 6X中该命令位于Xtras菜单中），在出现的动作库Library面板左上角方形按钮上单击并选择“Navigation”类。<br>
+　　2找到动作“Hold on Current Frame”，用鼠标将它拖动到分镜表（Score）脚本通道的第15帧处，该帧就出现一个蓝色的小H字样，如图1所示。<br>
+　　3播放，到第15帧电影就自动停了下来。<br>
+　　没要你动手Lingo就让电影在你想停的地方停了下来，很简单吧！当然这只是最简单的应用，下面我们来实际“表演”几个动作。
+<p align="center"><b>二、使用动作</b></p>
+　　从“Library”面板上的弹出式菜单中我们可以看出Director内建的动作库有Animation、Control、Text等七大类，其中每一类中又有数量不等的动作。当鼠标指向某一动作时，旁边会出现相应的文字说明，添加动作一般用下面两种方法：<br>
+　　1将动作拖到分镜表的脚本通道中（帧动作，如上例）；<br>
+　　2将动作拖到舞台或分镜表中的演员上（演员动作）。<br>
+　　这两种方法在操作时没有什么区别，但要注意对于一帧只能使用一个动作，动作对该帧处所有的演员都起作用，重复使用时后来的动作将替换掉原先使用的动作；在一个演员上则可使用多个动作，如在出场后暂停、鼠标单击后跳转到某帧等，几个动作就可以同时使用在一个演员上。<br>
+　　除了暂停（Hold on Current Frame）等几个特别简单的动作外，一般在使用动作时都会出现一个参数设置对话框，如我们在刚才的电影上加入一个按钮“演员退回去”，设定电影暂停后单击该按钮就退回到第一帧，使用“Library”面板Navigation类中的“Go to Frame”动作就会出现一个参数对话框，你只要选择目标帧、事件（鼠标按下、弹起等）和响应方式即可。<br>
+　　常用的事件主要有以下几种：<br>
+　　mouseUp：松开鼠标；<br>
+　　mouseDown：按下鼠标；<br>
+　　mouseEnter：鼠标移到演员上；<br>
+　　prepareFrame：即将进入新帧时；<br>
+　　enterFrame：进入下一帧；<br>
+　　exitFrame：离开当前帧。<br>
+　　响应方式主要有：<br>
+　　Go to…：从当前帧跳转到另外一帧、某一标记、其它电影或Internet上的某一URL；<br>
+　　Beep：播放系统喇叭声；<br>
+　　Play……（and Return）：播放指定的帧、声音动画演员、外部声音动画文件、电影等（完成后返回当前帧）；<br>
+　　Change Cast Member：切换不同的演员等等。<br>
+　　当一个演员上有多个动作时，有时我们必须对各个动作的执行顺序进行设定，这就需要用到动作检查器（Behavior Inspector）。还是以上面的电影为例，如“退回去”按钮，演员就同时有两个动作：“Go to Frame”和“Sound Play Castmember ”，选中演员后执行“Windows/Inspector/Behavior”，出现图2所示的动作检查器窗口，选中动作列表中的动作后通过右上角向上（下）的小三角形按钮可以调整它们的先后次序。
+<p align="center"><b>三、修改动作和创建动作</b></p>
+　　像Word中可以直接用录制的方法创建简单的宏一样，我们不需要了解Lingo就可以修改和创建一些简单的动作（编辑和创建复杂的动作则必须用到Lingo语言），工具就是上面提到过的动作检查器“Behavior Inspector”。<br>
+　　其窗口主要由三个部分组成：上面是动作列表区，单击左上角带小＋号的方按钮可以新建一个动作，下面分别是事件（Events）和响应方式区（Actions）。<br>
+　　这里的事件和前面使用动作时的事件种类差不多，响应方式则分成了下面几类：<br>
+　　Navigation：一组用于跳转的Lingo命令，其中的Exit是结束脚本运行；<br>
+　　Wait：等待鼠标单击、按任意键或持续一段时间；<br>
+　　Sound：控制和播放内外部声音文件和设置音量；<br>
+　　Frame：改变速率、过渡等一般要用特殊通道才能控制的内容；<br>
+　　Sprite：改变舞台上演员的位置、切换演员和改变颜色；<br>
+　　Cursor：改变和恢复鼠标外形。<br>
+　　对一个动作进行修改或创建时，先在左侧选择事件如（MouseUp），选中该事件后在右侧选择该事件的响应方式就行了，有兴趣的话还可以自己定义一些新的事件和响应方式。<br>
+　　分解动作说了半天，我们最后还是来一套“组合拳”自己创建一个完整的动作吧。在刚才加入了暂停的电影上建立一个“演员退回去”的按钮，鼠标移动到按钮上就变为手指形状，移开则又还原，单击则人物回到最开始时的位置。<br>
+　　选中按钮后打开动作检查器，新建一个动作；<br>
+　　选择响应事件MouseEnter，对应的响应方式依次选择“Cursor\Change Cursor\Fingle”（在Actions中显示为Change Cursor to 280）；<br>
+　　选择事件MouseLeave和响应Cursor\Restore Cursor；<br>
+　　选择事件MouseUp和响应Navigation\Go to Frame…，在弹出的对话框中键入目标帧数1。<br>
+　　OK！我们自己的动作就完成了，播放看看效果怎么样！是不是特别方便简单，而这一切一丁点儿都没让我们感觉到跟Lingo有什么关系，这就是动作的奇妙之处。心动了吧，还不快把我们这里的“分解动作”串起来编织你自己的多媒体电影创作“套路”去！<br>
+　　最后要补充说明的一点是如果你是在中文操作系统中使用Director 70 ，使用“动作”时可能会碰到一点小麻烦：那些需要输入参数的动作如果直接拖动到目标上时会报错，在英文操作系统中却不会出现类似情况，这是Director 70的一个小BUG。网上有朋友说用中文或日、韩等语种的Library替换掉原来的英文Library就行，这种方法笔者没有试过，倒是从一个台湾网站中学了一招手工修复的方法：<br>
+　　原理：报错的原因是续行符在作怪，Lingo中如果一句太长，可以用Shift＋Enter换行，执行时程序会自动把这一句连起来解释运行，在中文操作系统下Director 70却无法正确处理内建“动作”续行符，参数设置对话框也就弹不出了。<br>
+　　解决方法：用16进制编辑器（如UltraEdit）打开Director 7\Libs文件夹（包括子文件夹）中的＊cst文件，查找Shift＋Enter的16进制代码C20D替换为2020，再试，一切OK！<br><b>
+　　(文：简武)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99503802.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

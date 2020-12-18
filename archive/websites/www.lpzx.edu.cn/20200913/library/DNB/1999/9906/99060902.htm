@@ -1,0 +1,94 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>浏览器——“虫虫”的滋生地</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font color="#FFFFFF">浏览器——“虫虫”的滋生地</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　号称软件史上第一富有创造力的软件Netscape 
+        Communicator和全力出击的Internet Explorer之间，为了争夺Internet这块肥肉而展开的浏览器之争，应该是1998年IT界最热闹的事了。<br>
+        　　很难说哪套软件较好一点，以三公子的习惯而言，Internet Explorer最顺手，但是陈三也有不少的朋友至今仍死守Netscape的阵地。所以，这期三公子选择了浏览器这个软件类别，试图在不抱偏见的态度下，从纯技术角度来看看浏览器中的Bug。由于浏览器的Bug一直是关注焦点，国内报道较多。陈三决定从细节入手，在这个专题中，你可以看到部分Bug出现时的现象、原因等详细资料。<br>
+        　　对了，陈三终于找到了一个知音，这位朋友在给我的信中说，他心中的程序英雄不是Bill，也不是求大侠，而是Norton 
+        Utilities的作者：Peter Norton。<br>
+        　　 浏览器的Java问题<br>
+        Bug:意大利Web开发人员Fabio Ciucci发现微软Internet Explorer 4.x以及Internet 
+        Explorer 5.0的一个可以导致浏览器自身甚至使Windows全面崩溃的Bug。微软认为问题出在Internet 
+        Explorer 4.X For Windows 95/98以及Windows NT等使用的DirectDraw Java 
+        基本类库中。<br>
+        　　其示例页可以在<a href="http://www.anfyjava.com/iebug/">http://www.anfyjava.com/iebug/</a> 
+        找到。<br>
+        　　让你丢掉密码的Bug<br>
+        　　Bug：这个Bug影响到几乎所有的Internet Explorer。<br>
+        　　Web Master (中文叫做网络管理员)可以通过使用交叉框架的方法来获取你硬盘上的文件。由于很多重要文件的位置可以非常容易地猜出来，比如Windows的密码存放文件（这儿可是包括了几乎所有的Windows内部密码，对于我们最敏感的上网密码，如果在拨号窗口选择了保存密码，也就存放在这个文件中的）等。这个安全漏洞的示例页……（哎呀，差点说漏嘴了，这个东西可不能让人看，会做主页的人可是一学就会的）。<br>
+        　　补丁：<a href="http://www.microsoft.com/ie/security/xframe.htm">http://www.microsoft.com/ie/security/xframe.htm</a>如果你不愿意去国外下载，大一点的国内软件下载基地，一般也有，比如电脑之家（<a
+        href="http://www.pchome.net">http://www.pchome.net</a>）软件下载单元中专辟的微软补丁部分。<br>
+        　　地址长了也出错<br>
+        　　Bug:这个Bug由一个黑客组织第一次发现，当IE 4.0解释一条RES://的地址时，如果该地址长度长度超过256个字符时就会出错。RES://的本意是用来直接调用执行一个本地的资源，比如.DLL文件，IE4.0组件大量使用了这种方式来进行各个部分之间的协调。该问题只会在安装了Windows 
+        95系统下的IE4.0中发作。<br>
+        　　补丁：<a
+        href="http://http://www.microsoft.com/ie/security/?/ie/security/buffer.htm">http://www.microsoft.com/ie/security/?/ie/security/buffer.htm</a><br>
+        　　Cuartango Hole——别让网管偷信息<br>
+        　　Bug:这个奇怪的名字来自于它的发现者，西班牙网络开发者Juan 
+        Carlos Cuartango。微软证实了这个安全漏洞能够让一个恶意的网管从任何一个访客的电脑中窃取文件。Cuartango 
+        Hole验证了Internet Explorer 4.01中的脚本工具，具有剪贴和复制函数。在这些函数的辅助下，你可以轻而易举地绕过微软在IE 
+        4.01中对文件传送进行的安全保护控制。<br>
+        　　该问题的示范可以在<a
+        href="http://pages.whowhere.com/computers/cuartangojc/cuartangoh1.html">http://pages.whowhere.com/computers/cuartangojc/cuartangoh1.html</a>看到。<br>
+        　　根据PharLap Software的Richard Smith的说法，这个讨厌的安全问题也会在使用OutLook 
+        Express处理HTML格式的电子邮件时发作，也许你在看一封信的时候，你的私人信息已经被偷偷地送到了黑客的手中。该漏洞在Internet 
+        Explorer 5.0的预览版本中也存在。<br>
+        　　微软的女发言人说，至今还没有收到用户被黑客使用该安全漏洞攻击的报告。<br>
+        　　补丁：<a
+        href="http://www.microsoft.com/windows/ie/security/?/windows/ie/security/xframe.htm">http://www.microsoft.com/windows/ie/security/?/windows/ie/security/xframe.htm</a><br>
+        用另一种方法访问站点Bug<br>
+        Bug:这个Bug可能会绕过Internet Explorer对Internet站点设置的最高级安全限制。<br>
+        　　我们知道Internet上一般用一些比较容易理解的英文字母组合来代表站点的DNS(比如<a
+        href="http://www.cpcw.com">http://www.cpcw.com</a>)，所有的网址在最后将会被转换解释为数字结构的IP地址。一般，IP地址是由四组分离的数字构成的，比如165.90.15.14。一个站点可以通过其网络地址或者IP地址进行访问，并且但是所有的IP地址最后还要被计算成一个单独的数字，这是大部分网虫所不知道的。这儿简单的说一下计算方法：第一部分数据乘以2563,第二部分乘以2562，第三部分乘以256 
+        ，第四部分不变，然后加在一起。使用这个方法计算出来的数字也能够带你进入该站点。有兴趣的朋友可以试试将上面的地址转换一下，看看能不能进入《电脑报》的站点。<br>
+        　　现在的问题是Internet Explorer 4认为不包含“.”的网址是一个Intranet地址，并且据此进行安全保护。由于大部分时候对Intranet的安全等级设定低于对Internet站点进行的安全设定。所以，有可能降低Internet站点的安全性。<br>
+        　　对于一个IE4的用户，设定默认Intranet Secutiry zone的安全设定为高级是相当重要的。当然，你通过代理服务器（Proxy）来上网，也可以从该Bug的威胁中解脱出来。<br>
+        　　补丁：<a href="http://support.microsoft.com/support/kb/articles/q168/6/17.asp">http://support.microsoft.com/support/kb/articles/q168/6/17.asp</a> 
+        <br>
+        　　IE 4.0 Mac(苹果机)版本上的Bug<br>
+        　　Bug:三公子在网上看到了一个中文的MAC机站点，想想报了这么多时间的Bug，也该为这些MAC机用户做点事了，恰巧这次做这个专题，看到了一条关于IE 
+        4.0 For Mac的Bug消息。发布这条消息的文字非常有趣：“微软Internet 
+        Explorer 4.0发布了一个For Mac版本，现在，MAC用户也可以享受困扰Windows 
+        Internet Explorer用户数月之久的系列安全漏洞了”。该Bug威胁了使用Secure 
+        Sockets Layers 2来对在线交易进行保护的站点，可惜的是我没有找到进一步的相关详细资料。据说还有一些其他的Bug，但是都没有得到微软的证实，这些Bug中还包括了一些会使系统崩溃的大虫子。<br>
+        　　补丁：<a href="http://www.Microsoft.com/ie/security/?/ie/security/mac128.htm">http://www.Microsoft.com/ie/security/?/ie/security/mac128.htm</a><strong>( 
+        陈三公子)</strong></span></font></p>
+        <p align="right"><big><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月8日第06期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

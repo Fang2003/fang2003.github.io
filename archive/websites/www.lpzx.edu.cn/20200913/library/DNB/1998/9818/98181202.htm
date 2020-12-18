@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ARJ异用--删文件、释放染毒文件 ? </title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>ARJ异用--删文件、释放染毒文件 
+        &nbsp; <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　一、清除“垃圾”文件<br>
+        　　计算机在使用过程中往往会产生一些临时文件、备份文件等(Windows产生的.TMP文件、WPS产生的.BAK文件)，这些文件在通常情况下没有什么用处，反而占用了硬盘空间，成为令人讨厌的“垃圾”文件。为了节省和维护计算机的系统资源，往往需要依次删除每个子目录下的“垃圾”文件，这无疑是一件费时的事情。为了实现一次性清除某个驱动器上所有的“垃圾”文件，可以首先利用ARJ压缩软件的M、－R参数，在生成一个.ARJ文件的同时自动删除每个子目录下的“垃圾”文件，最后再删除生成的.ARJ文件即可。下面是一次性清除C：盘上所有的.TMP类型“垃圾”文件的操作过程：<br>
+        　　ARJ M －R TMP C:\＊.TMP<br>
+        　　DEL TMP.ARJ<br>
+        　　二、释放被病毒感染的自动解包文件<br>
+        　　笔者在使用ARJ压缩软件的过程中，当压缩生成的.ARJ文件长度不超过一张软盘的容量时，经常喜欢再加上－JE1参数将.ARJ压缩包转变成.EXE自动解包文件，使得在没有ARJ压缩软件的情况下也能够正常释放压缩包中的文件，从而给日常操作带来许多方便。但是，一旦被病毒感染而使这些.EXE文件无法自动解压时，操作不当，会带来一些损失。笔者在实际操作中发现，为了释放这种情况下的.EXE自动解包文件，可以首先利用DOS系统的REN命令将该.EXE文件改名为.ARJ文件(或者使用COPY命令将该.EXE文件复制为另外名称的.ARJ文件)，然后再使用ARJ压缩软件的X、－Y参数来对此时的.ARJ文件直接进行正常解压，即可彻底地消除无法释放被病毒感染的自动解包文件的烦恼。下面是释放LSL.EXE自动解包文件的操作过程：<br>
+        　　REN LSL.EXE LSL.ARJ<br>
+        　　(或者COPY LSL.EXE LUO.ARJ)<br>
+        　　ARJ X －Y LSL<br>
+        　　(或者ARJ X －Y LUO.ARJ）(江苏&nbsp; 罗松林）<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月11日第18期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

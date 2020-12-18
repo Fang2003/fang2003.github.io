@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Visual 
+        FoxPro报表事件的应用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在Visual 
+        FoxPro中有一类不太引人注意的事件——报表带区事件，在报表设计器中每一带区都有两类事件，入口事件和出口事件。<br>
+        　　<strong>1使用方法</strong><br>
+        　　进入报表设计器，双击报表带区分隔条，打开报表带区对话框，在“On 
+        Entry”输入触发进入带区事件的函数名，在“On Exit”输入触发离开带区事件的函数名，注意这两个输入框，只能输入方法名或函数名，其他语句Visual 
+        FoxPro会忽略。<br>
+        　　<strong>2举例说明</strong><br>
+        　　例1：在每页报表的尾部常常要求打印某些信息，如制表人，制表时间，每页小计等。用报表设计器非常容易做到，在页注脚带区设置相应的控件即可。问题是在报表的最后一页，常常不会满页，这样最后打印的数据与页注脚之间存在一段空白，很不美观，特别是数据使用了分隔线时更觉别扭。下面利用报表带区事件把最后一页页注脚带区的内容移到细节带区之后。打开过程文件，新增下列函数：<br>
+        　　FUNCTION EndPrint()<br>
+        　　EndPrint=.T.<br>
+        　　EndFunction<br>
+        　　或建立ENDPRINT.PRG文件,内容为<br>
+        　　EndPrint=.T.<br>
+        　　打开报表设计器，设计好各带区，或打开已有的报表文件，当然页注脚带区应有内容，否则，下面的做法毫无意义。全选页注脚带区各控件，复制到剪贴板，在“Report”菜单下选“Title/Summary”菜单项，在出现的窗口中选“Summary 
+        band”后，单击“OK”。把剪贴板的内容粘贴到总结带区，调整好位置，这时用打印预览可见最后一页数据后，紧接着输出页注脚，它们之间不存在空白，但页尾出现重复数据，退出预览，新增报表变量EndPrint，初始值为.F.，报表输出后释放。双击总结带区分隔条，在“Summary”对话框的“On 
+        Exit”中键入EndPrint()，退出后，分别双击注脚带区各控件，在弹出的对话框中单击“Print 
+        When”后，在“Print Only When Expression is True”中输入EndPrint=.F.，单击“OK”即可。<br>
+        　　例2：Visual FoxPro报表设计器的数据分组功能非常强大和灵活，但分组的数量（组数）无法直接得到，例如以客户名分组数据，各客户的相关项数和合计金额以及全部客户的总计金额都容易得到，但客户的数量却无法直接统计。下面利用报表带区事件统计分组组数。打开过程文件，新增下列函数：<br>
+        　　FUNCTION GroCount()<br>
+        　　GroCount=GroCount＋1<br>
+        　　EndFunction<br>
+        　　或建立GROCOUNT.PRG文件,内容为<br>
+        　　GroCount=GroCount＋1<br>
+        　　打开报表设计器，设计好各带区，或打开已有的报表文件。新增报表变量GroCount，初始值为0，报表输出后释放。双击注脚带区分隔条，在弹出的对话框的“On 
+        Exit”中键入GroCount()，退出对话框，在“Report”菜单下选“Title/Summary”项，在打开的对话框中选“Summary 
+        band”复选框，单击“OK”。在总结带区添加客户数标签控件和字段控件，输入字段控件表达式为GroCount，调整好大小和位置即可。<strong>(广东　李伟明)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月23日第11期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

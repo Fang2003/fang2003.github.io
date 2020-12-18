@@ -1,0 +1,128 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Authorware实现图像背景透明三法</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第09期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{Authorware实现图像背景透明三法}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 一、 直接变化法<br>
+              该方法直接使用了Authorware自身的图像背景透明工具。<br>
+              首先，按“Ctrl＋Shift＋D”打开文件属性设置窗口，设置文件背景为黑色。然后在Authorware的流程框中插入一个Display图标，双击该图标，在打开的窗口中插入一幅事先准备好的图片。双击图像工具栏中的“Pointer”工具，在出现的图像模式工具箱中选择“Transparent”，这时你会发现插入的图片背景已经由原先的白色变得透明了。<br>
+              但用这种方法实现的透明效果在许多情况下都会在图像边缘留下难看的白边，只有在颜色较少且色彩反差比较大的GIF图像中效果才会比较满意。而且使用这种方法时还要注意一点，图片的背景色一定要是白色，不然的话Authorware将无法使背景变为透明。为了解决这一问题，于是就有了第二种方法。<br>
+              二、预先处理法<br>
+              在用这种方法之前大家先要准备一款制作GIF动画的软件，我这里以GIF Movie Gear为例来介绍。<br>
+              首先，在GIF Movie Gear中打开一幅图片，选中该图片，按下Toggle Transparency按钮，如图1。在出现的窗口中用吸管在背景色上吸一下。选OK确定，然后将图片保存成GIF格式备用。<br>
+              在Authorware流程框中将手形光标移到最后一个图标的后面，选择菜单命令Insert→Media→Animated GIF...在出现的窗口中选Browse按钮，找到并双击你刚才做好的图片文件，然后点OK确定。回到流程框中你会发现多了一个名叫Animated 
+              GIF...的图标，双击它。此时会出现一个设置属性的窗口，选择Display面板，在Mode下拉条中选择Transparent点OK确定。这时，你运行一下程序看看，图像背景是不是已经变得透明啦？<br>
+              使用这种方法有两个明显的优点：一是解决了方法一中图片的背景色一定要是白色的限制，不管背景用什么颜色，用方法二可以统统搞定。二是你可以随意设定图像的透明部位，你可以利用方法二将图片中间的颜色设为透明，从而制作出镂空的效果。<br>
+              不过这种方法只在Authorware5.0及其以上版本才有效，如果用的是4.x的版本，你也不用愁，接下来我介绍的方法三也能包你满意。<br>
+              三、转换格式法，此法需要将图片的格式作必要的转换<br>
+              从4.0版开始Authorware支持了一种叫PNG格式的图像，也许它不像JPG和GIF那样名扬天下，但是你可千万别小看了它哟！我们今天的目标可全要靠它来实现。要处理PNG图片需要用到Authorware的同胞兄弟Fireworks。我们将会用到它的图像输出功能，不会用Fireworks的朋友也不用怕，跟我一步一步去做，同样可以实现既定的目标。Let’s 
+              go<br>
+              首先，启动Fireworks，打开一幅图片，打开Optimize面板，在其中选择Optimize选项卡；选择图像类型为PNG8，按一下Matte右边的小方块。这时鼠标会变成吸管的样子，用吸管在图像窗口中选择你想使之变为透明的颜色，把面板中的Color设为128，Dither可调的大一些（该值越大，所选的透明色的范围就越大）。透明方式选择Index 
+              Transparency，然后用File菜单中的Export...命令导出PNG文件备用，该文件在Authorware和Flash中均可以显示为透明。如果你想让底色（新建文件时选择为背景色的颜色）透明的话，透明方式可选择Alpha 
+              Transparency。然后，按照方法一的步骤插入制作好的PNG图片，并用Authorware的图像模式工具箱使图像背景透明。<br>
+              三种方法介绍完了，朋友们可以根据具体情况任选一种，我想其中必有一种适合你。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

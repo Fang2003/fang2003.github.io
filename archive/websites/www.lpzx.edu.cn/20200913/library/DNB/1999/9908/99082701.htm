@@ -1,0 +1,140 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>小程序 大作用——让你的主页更COOL</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><big><strong>小程序 大作用——让你的主页更COOL</strong></big></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p class="ourfont">　　如今，上网冲浪已经是一件很时髦的事情，在网上安“家”的虫虫们也越来越多。为了使自己的“家”更有特色，吸引更多的人参观，往往是“八仙过海，各显神通”。而使用得最多的就是应用一些JaveScript小插件。本文就向各位网友提供比较常用的小程序。<br>
+        　　使用方法很简单，拷贝＋粘贴即可。如果你稍懂一些HTML语言和JaveScript插件语法则更好。<br>
+        　　1.欢迎对话框<br>
+        　　一进入网友的“家”，冷不丁蹦出来一个问好的对话框，是不是感到很亲切?没错，实现这效果的程序就是下面的几行：<br>
+        　　&lt;SCRIPT LANGUAGE=&quot;JAVASCRIPT&quot;&gt;<br>
+        　　alert (&quot;\n &quot;既来之，则安之&quot;\n\n 欢迎您光临我的主页\n\n 
+        别犹豫 \n\n LET'S GO！&quot;);<br>
+        　　&lt;/SCRIPT&gt;<br>
+        　　 (注：\n 的作用是在对话框中换行)<br>
+        　　2.停留时间<br>
+        　　网友进入你的“家”，抬头一看，有一个计时钟在不停地跳动，显示他的来访时间，很有趣吧!程序如下：<br>
+        &lt;HTML&gt;<br>
+        &lt;HEAD&gt;<br>
+        &lt;META HTTP－EQUIV=&quot;Content－Type&quot; 
+        CONTENT=&quot;text/html;CHARSET=gb2312&quot;&gt;<br>
+        &lt;TITLE&gt;停留时间&lt;/TITLE&gt;<br>
+        &lt;/HEAD&gt;<br>
+        &lt;SCRIPT LANGUAGE=&quot;JAVASCRIPT&quot;&gt;<br>
+        &lt;!－－<br>
+        var ap_name = navigator.appName;<br>
+        var ap_vinfo = navigator.appVersion;<br>
+        var ap_ver = parseFloat(ap_vinfo.substring(0,ap_vinfo.indexOf(′(′)));<br>
+        var time_start = new Date();<br>
+        var clock_start = time_start.getTime();<br>
+        var dl_ok=false;<br>
+        function init ()<br>
+        {<br>
+        if(ap_name==&quot;Netscape&quot; ＆＆ ap_ver&gt;=3.0)<br>
+        dl_ok=true; <br>
+        return true;<br>
+        7}<br>
+        function get_time_spent ()<br>
+        { <br>
+        var time_now = new Date();<br>
+        return((time_now.getTime() － clock_start)/1000); <br>
+        }<br>
+        function show_secs () // show the time user spent on the side<br>
+        { <br>
+        var i_total_secs = Math.round(get_time_spent()); <br>
+        var i_secs_spent = i_total_secs ％ 60;<br>
+        var i_mins_spent = Math.round((i_total_secs－30)/60); <br>
+        var s_secs_spent = &quot;&quot; ＋ ((i_secs_spent&gt;9) ? i_secs_spent : &quot;0&quot; 
+        ＋ i_secs_spent);<br>
+        var s_mins_spent = &quot;&quot; ＋ ((i_mins_spent&gt;9) ? i_mins_spent : &quot;0&quot; 
+        ＋ i_mins_spent);<br>
+        document.fm0.time_spent.value = s_mins_spent ＋ &quot;:&quot; ＋ s_secs_spent;<br>
+        window.setTimeout(′show_secs()′,1000); <br>
+        }<br>
+        // －－&gt;<br>
+        &lt;/SCRIPT&gt;<br>
+        &lt;BODY onLoad=&quot;init(); window.setTimeout(′show_secs()′,1);&quot;&gt;<br>
+        &lt;form name=&quot;fm0&quot; onSubmit=&quot;0&quot;&gt;<br>
+        &lt;font size=&quot;－1&quot;&gt;&lt;I&gt;&lt;FONT COLOR=&quot;＃888888&quot;&gt;停留时间:&lt;/FONT&gt;&lt;/I&gt;&lt;/font&gt;&lt;br&gt;<br>
+        &lt;INPUT type=&quot;text&quot; name=&quot;time_spent&quot; size=7 
+        onFocus=&quot;this.blur()&quot;&gt;<br>
+        &lt;/form&gt;<br>
+        &lt;/BODY&gt;<br>
+        &lt;/HTML&gt;<br>
+        3.跑马灯<br>
+        　　这是最常用的一种。在浏览器下面的状态条上，常看到主人不断地问候。程序如下：<br>
+        &lt;SCRIPT LANGUAGE=&quot;JavaScript&quot;&gt;<br>
+        &lt;!－－<br>
+        function scroll(seed)<br>
+        {<br>
+        var msg=&quot;欢迎您光临我的HomePage！^_^特别建议您使用800×600的分辨率参观。如有任何问题请发E－mail告之，不胜感激！&quot;;<br>
+        var out = &quot; &quot;;<br>
+        var c = 1;<br>
+        if (seed &gt; 100) {<br>
+        seed－－;<br>
+        var cmd=&quot;scroll(&quot; ＋ seed ＋ &quot;)&quot;;<br>
+        timerTwo=window.setTimeout(cmd,100);<br>
+        }<br>
+        else if (seed &lt;= 100 ＆＆ seed &gt; 0) {<br>
+        for (c=0 ; c &lt; seed ; c＋＋) {<br>
+        out＋=&quot; &quot;;<br>
+        }<br>
+        out＋=msg;<br>
+        seed－－;<br>
+        var cmd=&quot;scroll(&quot; ＋ seed ＋ &quot;)&quot;;<br>
+        window.status=out;<br>
+        timerTwo=window.setTimeout(cmd,100);<br>
+        } else if (seed &lt;= 0) {<br>
+        if (－seed &lt; msg.length) {<br>
+        out＋=msg.substring(－seed,msg.length);<br>
+        seed－－;<br>
+        var cmd=&quot;scroll(&quot; ＋ seed ＋ &quot;)&quot;;<br>
+        window.status=out;<br>
+        timerTwo=window.setTimeout(cmd,100);<br>
+        }<br>
+        else {<br>
+        window.status=&quot; &quot;;<br>
+        timerTwo=window.setTimeout(&quot;scroll(100)&quot;,7);<br>
+        }<br>
+        }<br>
+        }<br>
+        timerONE=window.setTimeout(′scroll(100)′,50);<br>
+        //－－&gt;<br>
+        &lt;/SCRIPT&gt;<br>
+        　　这段程序请加在&lt;body&gt;语句的后面，var msg=&quot; &quot;语句中的问候内容可自由发挥。<br>
+        　　好了，快将这些小程序粘贴到你的HomePage里面试一试，看看效果如何。同时也欢迎访问我的“家”：http://yc－dev.hb.cninfo.net/～pcworld 
+        ^_^<br>
+        <strong>(湖北　船　长)</strong></p>
+        <p align="right"><font color="#000000"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1999年3月01日第08期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

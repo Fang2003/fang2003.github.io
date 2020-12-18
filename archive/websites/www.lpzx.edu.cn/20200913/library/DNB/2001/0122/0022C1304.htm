@@ -1,0 +1,124 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/hardware.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>热拔插恢复被CIH病毒破坏的BIOS</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0122/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0122/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0122/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第22期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->热拔插恢复被CIH病毒破坏的BIOS<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->今年4月27日，一位朋友找我，说他的电脑从4月26日中午打开后，出现黑屏，连续数十次，请我帮助诊断。本人用交换法取下黑屏电脑(该机主板为华硕VX97)的内存、显卡、硬盘、CPU，接入本人正常工作的电脑(此机主板为华硕TX97-E)，开机可以显示，但硬盘无法启动，用KV3000查杀病毒，发现该硬盘有CIH病毒，并破坏了数据和硬盘分区表。杀掉病毒重建硬盘分区表，恢复数据。由此断定4月26日CIH病毒破坏了BIOS芯片数据，针对此类情况，本人采取“热拔插法”，进行了修理，现将过程记述如下：<br>
+              1．用一张未格式化的磁盘放入A驱，然后在纯MS-DOS提示符下键入FORMAT A：/S，制作一张没有AUTOEXEC．BAT与CONFIG．SYS的系统启动盘；<br>
+              2．在华硕网站http//www．asus．com．cn下载aflasn．zip67KB)，内含aflash．txt、aflash．exe、cmos．exe、aflash．eng及Clrcmos．ese五个文件，属华硕主板刷写BIOS数据专用工具程序；<br>
+              3．在网址为http//www．gather．sohu．com/it/quote的网站下载华硕主板VX97 BIOS档案数据文件tv5v204b．zip101KB解压缩后为0204V．012(128KB)；<br>
+              4．将下载的aflash．exe和0204v．012两个文件分别拷贝到用第1、2项制作好的磁盘中；<br>
+              5．打开主板为华硕VX97的待修的电脑主机箱，取下BIOS芯片；<br>
+              6．用经第4项准备好的磁盘启动主板为华硕TX97-E的正常工作的电脑，当出现A＼提示符后，用绝缘工具轻轻取出该机BIOS芯片，然后将待修华硕VX97主板上取下的BIOS芯片轻轻插入华硕TX97—E主板的BIOS插座上(注意：此过程在通电状态下进行，必须保证电脑接有地线，人体无静电，插入BIOS芯片时，方向千万别插反，BIOS芯片有缺口的一端一定要对准BIOS插座的一端，否则将烧毁主板和BIOS芯片，同时必须保证供电正常，中途断电，会造成BIOS数据更新失败)；<br>
+              7．在A：＼提示符下键入aflash并回车，显示提示选择备份原始BIOS数据或更新、升级BIOS数据项。<br>
+              8．选择显示信息中的2．Update BIOS including ROOT Block and ESCD项，更新BIOS数据，按下Enter，提示输入要更新的BIOS数据路径及文件名，在Please 
+              Eenter File Name for NEW BIOS：后键入“A＼0204V．012”，按下Enter键，显示一些有关信息后，提示是否确认更新。在Are 
+              You SureY/N﹖后，选择Y，按下Enter键，就开始将华硕主板VX97 BIOS数据写入BIOS芯片中，并出现华硕主板VX97 
+              BIOS的有关信息，此时按ESC键退出，关闭电脑，取下刷写好的BIOS芯片；<br>
+              9．将刷写好的BIOS芯片安装在华硕VX97的主板上，连接其它硬件，重新启动，按DEL键确认硬盘参数，存盘退出之后，再启动，Win98显现眼前，大功告成。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

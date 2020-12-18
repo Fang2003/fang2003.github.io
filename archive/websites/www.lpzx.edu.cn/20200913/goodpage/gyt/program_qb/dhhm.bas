@@ -1,0 +1,21 @@
+10 CLS : INPUT "电话号码数:", Z: DIM A$(Z, 2), B(Z)
+20 FOR I = 1 TO Z: READ A$(I, 1), A$(I, 2): NEXT
+30 FOR E = 1 TO Z: S$ = LEFT$(A$(E, 1), 1): BE = ASC(S$): NEXT
+40 FOR F = 1 TO Z - 1
+50 FOR G = 1 TO Z - 1
+60 IF B(G) < B(G + 1) THEN 80
+70 SWAP B(G), B(G + 1): SWAP A$(G, 1), A$(G + 1, 1): SWAP A$(G, 2), A$(G + 1, 2)
+80 NEXT G, F
+90 INPUT "列表(1),检索(2),结束(3)。请输入1,2,3:", X
+100 IF X = 3 THEN END
+110 IF X = 1 THEN CLS : GOTO 170
+120 CLS : INPUT "姓名:", T$: PRINT
+130 FOR R = 1 TO Z
+140 IF T$ = A$(R, 1) THEN PRINT T$, A$(R, 2): PRINT : GOTO 90
+150 NEXT
+160 PRINT "没有这个名字!": PRINT : GOTO 90
+170 PRINT "姓名"; TAB(40); "号码"
+180 FOR Q = 1 TO Z: PRINT A$(Q, 1); TAB(40); A$(Q, 2): NEXT: PRINT : PRINT
+190 GOTO 90
+200 DATA 郭杰,0353-7024050,郭宇霆,0353-7024150
+

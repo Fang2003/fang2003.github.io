@@ -1,0 +1,62 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>VB中调用Windows API的注意事项</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font color="#FFFFFF">VB中调用Windows API的注意事项</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　Visual Basic (VB)作为一种高效编程环境，它封装了部分Windows 
+        API函数，但也牺牲了一些API的功能。调用API时稍有不慎就可能导致API编程错误，出现难于捕获或间歇性错误，甚至出现程序崩溃。要减少API编程错误，提高VB调用API时的安全性，应重点注意下列八个问题：<br>
+        　　(1)指定“Option Explicit”<br>
+        　　编程前最好将VB编程环境中的“Require Variable Declaration(要求变量申明)项选中。如果该项未被指定，任何简单的录入错误都可能会产生一个“Variant”变量，在调用API时，VB对该变量进行强制转换以避免冲突，这样一来，VB就会为字符串、长整数、整数、浮点数等各种类型传递NULL值，导致程序无法正常运行。<br>
+        　　(2)注意VB整数和Win32整数的区别<br>
+        　　在VB环境下，涉及到的所有integer(整型数)，都是16位，而一旦涉及C／C＋＋Win32文档时，则是32位，阅读与Windows 
+        API函数或与32位动态链接库有关的资料或应用程序时，尤其要注意分析理解环境背景，以利于分清数据类型和数据结构，正确地声明API函数。<br>
+        　　(3)减少和避免使用As Any<br>
+        　　虽然用As Any的方法声明库，可使Windows API函数能接受多种类型的参数，但更严重的是，即使是一个很小的错误，比如遗漏类型标识符或错误地使用了ByVal关键字，都可能导致系统崩溃或很难发现的其他数据错误。<br>
+        　　(4)注意检查参数类型<br>
+        　　API错误中，除了因遗漏ByVal关键字导致的错误外，大约有50％是因为声明中有不正确的参数类型。在Win32环境下，无论是8位、16位，还是32位数值变量都是以32位传递，如果同时使用，则很难发现其中错误。如果声明的参数类型不同，被VB视为Variant传递给API函数，会出现“错误的DLL调用规范”的消息。<br>
+        　　(5)勿忘ByVal,确保函数声明的完整性<br>
+        　　ByVal是“按值”调用，参数传递时，不将指向DLL的指针传递给参数变量本身，而是将传递参数值的一份拷贝传递给DLL。比如传递字符串参数时，VB与DLL之间的接口支持两种类型的字符串，如未使用ByVal关键字，VB将指向DLL的函数指针传递给一个OLE2.0字符串(即BSTR数据类型)，而Windows 
+        API函数往往不支持这种数据类型，导致错误。而使用ByVal关键字后VB将字符串转变换成C语言格式的“空终止”串，被API正确使用。<br>
+        　　(6)重新检查函数名<br>
+        　　在Win16环境下，API函数的名字不要求区分大小写，而在Win32环境下，则有此要求。在一个DLL函数里找不到声明的函数时，有必要检查一下函数名，对于管理字符串的函数，是否遗漏了A和W前缀。<br>
+        　　(7)预先初始化字符串，以免造成冲突<br>
+        　　如果API函数要求一个指向缓冲区的指针，以便从中载入数据，而此时传递的是字符串变量，应该先初始化字符串长度。因为API无法知道字符串的长度——API默认已为其分配有足够的长度。没有初始化字符串，分配给字符串的缓冲区有可能会不足，API函数将有可能在缓冲区末尾反复改写，内存里字符串后面的内容将会改写得一塌糊涂。程序表现为突然终止或间歇性错误。<br>
+        　　(8)跟踪检查参数、返回类型和返回值<br>
+        　　VB具有立即模式和单步调试功能，利用这个优势，确保函数声明的类型明确(API不返回Variant类型)，通过跟踪和检查参数的来源及类型，可以排除参数的错误传递。许多API函数都有返回结果，指出自己是否执行成功。你若要对返回结果进行测试，用VB的Err对象的LastDllError方法可查阅这些信息，对错误可针对API函数调用，取回API函数GetlastError的结果，以修改声明，达到正确调用API函数之目的。<strong>(安徽　何长冬　王学军)</strong></span></font></p>
+        <p align="right"><big><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月8日第06期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何将FAT16转换成FAT32 
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        &nbsp;&nbsp; 
+        天津读者小东问：最近我遇到一些问题，请专家指点：如何将FAT16转换成FAT32?使用FAT32分区表后，DOS下的程序是否还能继续运行?还有没有别的办法能解决FAT16不支持大于21GB分区的问题?<br>
+        　　答：运行Windows95 OSR2(400950B版，即所谓Windows97)中的FDISK程序，可以把FAT16转换成FAT32。在运行FDISK时，如果检测到用户的硬盘容量超过512MB，系统就会给出有关提示，询问用户是否同意使用FAT32系统。同时告知用户：在使用了FAT32系统之后，将会导致其它的操作系统无法访问保存在FAT32驱动器上的信息，或某些不是为FAT32设计的磁盘实用程序不能在FAT32驱动器上使用等。如果用户回答“Y”，则所创建的所有超过512MB的分区都将使用FAT32文件系统。而用FDISK创建分区之后，仍然要进行磁盘格式化操作。这样一来，原来硬盘中的数据也就被“洗白”了。幸运的是，在Windows98中提供了一个FAT32转换器，现在你可以在不破坏硬盘原有数据的前提下，把现有的FAT16转换成FAT32了。具体操作也很简单：在“开始”菜单中选择“程序 
+        ／附件 ／系统工具／FAT32转换器”即可。但是该程序也会同样警告你：使用该工具进行转换之后，将无法使用以前的操作系统对该硬盘分区进行访问。因此，要使用DOS进行访问就不可能了。<br>
+        　　此外，笔者目前尚不知道有别的办法能够解决FAT16不支持大于21GB分区的问题。(钟原)<br>
+        　&nbsp;&nbsp; 江苏读者曹非问：我的机器配置为：AMD 5X86－133 CPU、16MB内存、9680显示卡(2MB显存)、TM－858声卡、华硕主板。最近在安装Windows95 
+        OSR2中文版时，声卡出现了一些问题。具体是这样的：在安装完Windows95 
+        OSR2后，系统自测新硬件。当检测到声卡时，要求输入正确的驱动程序路径，我用声卡自带的驱动程序磁盘来安装。在安装结束后重新启动，进入桌面后，突然出现一个错误信息框：“MSGSRV32产生了一般保护错误，位于模块SB16SNDDRV……”，关闭此对话框后，Windows95 
+        OSR2运行正常，只是进入“控制面板”窗口时出现错误，以前从未出现过这种事情。另外，Windows95 
+        OSR2中除了与声卡有关的程序不能使用外，其他均正常，甚至VCD播放也正常，但声卡自带的播放器不能使用。在“控制面板”中的“系统 
+        ／设备管理”中删除有关驱动程序，再安装仍是如此。此声卡在DOS 622中使用正常。<br>
+        　　答：MSGSRV32EXE是Windows95 OSR2中文版的信息服务程序，即Windows95 
+        OSR2的所有的信息都由该程序管理。从你提供的现象来看，SB16SNDDRV驱动程序在启动Windows95 
+        OSR2时发出了非法请求(即该程序与Windows95 OSR2不兼容)，从而使MSGSRV32产生异常情况，从而使Windows95 
+        OSR2运行不正常。因此，你必须提供与Windows95 OSR2完全兼容的声卡驱动程序。从SB16SNDDRV文件名来看，你所提供的声卡驱动程序与声卡(Sound 
+        Blaster Pro 16)兼容，而声卡驱动程序已经在Windows95 OSR2中提供了。根据此分析，笔者认为，可按下面方法进行处理：<br>
+        　　1.首先进入“控制面板”窗口的“系统对话框”中，单击“设备管理”选项。<br>
+        　　2.将“声音卡、影像卡与视频卡”选项下面的声卡驱动程序删除。<br>
+        　　3.再进入“控制面板”窗口，双击“添加新硬件”图标，由Windows95 
+        OSR2自动搜索新硬件，在找到声卡后，再插入Windows95 OSR2安装光盘，安装Windows95 
+        OSR2提供的声卡驱动程序。(曹国钧)<br>
+        　&nbsp;&nbsp; 重庆读者付先波问：我有一台Pentium 133微机，1.2G硬盘、16MB内存、CMI8330声卡、Sony四速光驱、Trident9680显示卡。硬盘、光驱分别接在不同的IDE口上，一次因系统感染病毒，格式化硬盘并重装Windows95后，其它运行正常，但进入Windows95时无声，而进入Windows 
+        3.2时有声。检查“控制面板”中的“声音”选项，设置均正确，但播放VCD无声(声卡驱动程序是照说明书上安装的)，重装前声卡一切正常。<br>
+        　　答：这种情况笔者也曾遇到过，究其原因，一般有两种可能，一是商家提供的声卡驱动程序有问题，看似安装正常，而实际上Windows95并没有认可声卡，因此，最好重装声卡驱动程序。方法是从“控制面板”开始，利用“添加新硬件”重新安装声卡的驱动程序(注意：一般不要让Windows95为你查找新硬件，最好手动安装)。另一种可能是Windows95为声卡分配的IRQ与别的硬件有冲突或分配的I／O地址与声卡实际设置的不符，这些都可通过“控制面板/系统/设备管理”栏查看。如果在设备的“资源”列表中有IRQ冲突，则需手动为声卡重新分配一个空闲的IRQ。如果设备“资源”列表中没有冲突，且“驱动程序”也正常，而在“通用”项的设备状态中表明该设备没有正常运转，则基本上可以肯定是声卡的实际I／O地址与系统分配的不符，这时可查看声卡的说明，看一看声卡的I／O地址(一般有两种，与声卡本身的跳线有关)，再在“资源”项中手动为声卡分配与实际情况相符的I／O地址。<br>
+        　&nbsp;&nbsp;&nbsp; 湖北读者大狼问：我在用Netscape 4.04下载软件时，开始速度很快，但几分钟后速度就降下来，而且往往会出现很长时间只能下载几个字节的情况，但系统并未死机，这是为什么?我的微机有32MB 
+        SDRAM内存，Modem为Hayes 336。<br>
+        　　答：应该说，出现这种情况是很正常的，分析如下：由于在上网时，下载软件通常使用FTP协议或者HTTP协议，这两个协议使用的低层协议都是TCP／IP协议，根据TCP协议的规定，服务器向客户机发送每个数据包时，都需要客户机对其进行应答。当网络出现阻塞，就可能使得数据包或应答信号丢失，如果服务器连续发送几个数据包后，超过规定的时间仍未收到应答或应答不完整，服务器就要降低发送的频率进行重发，这将使得下载速度由快变慢，甚至中断。这种现象一般出现在网络带宽小而用户较多的情况下，另外，如果客户机速度太慢，无法及时处理网络数据时，也可能出现类似情况。建议：1.选择合适的时间上网，避开网络使用的高峰期；2.使用CuteFTP、GetRight、NetVampire等支持断点续传的软件进行下载，并适当减小超时中断的时间值，当一段时间没有收到数据就自动重连；3.如果是ISP的网络带宽太小的话，可考虑更换ISP。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9820/1998/20/index.htm">《电脑报》1998年5月25日第20期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 变废为宝修内存</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 变废为宝修内存</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 变废为宝修内存 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一日，朋友在电话里用沮丧的语气说他的32M内存条坏了，已过了质保期，我叫去帮他看一下。<br>
+　　这是一根2MB×16片的杂牌PC－100内存条，板子上没有SPD，不过朋友说居然可以上112MHz的外频，看来品质还行。插在我的机器上，自检为32768KB，进入WIN98通过，在运行大型程序时死机，估计内存条上某一个内存芯片有坏点。用WIN98的HIMEM.SYS和DOS6.22的HIMEM.SYS检测内存报错，错误地址一致为01C30000。多次启动机器后，出现每次自检容量发生变化的现象，一会儿是28304KB，一会儿是28100KB。而且只要自检不是32768KB，WIN98启动就会失败，系统报“保护错误”。至此，基本可以认定是内存条损坏。<br>
+　　现在内存条价格大涨，32M内存条已经要五六百元了，坏的内存条扔掉损失太大，心里实在不甘，“死马当活马医”，试试看能否修好。<br>
+　　要修，先要找到是哪一个芯片坏了，HIMEM.SYS报错地址为01C30000，可以通过它推算出来。打开WIN98的计算器，选择科学型计算器，使用十六进制，输入01C30000，再按十进制选项，换算出十进制的错误地址为29556736。再连除两个1024，得到28.1875，这是错误点的具体兆位。由于这根内存条单芯片容量是2MB，再除以2得14.0937，这是具体的芯片位置。得数大于14，也就是说是第十五块芯片有坏点。现在只要换上好的内存芯片就行了，可是要找到一块好的同容量的内存芯片实在太难，而且32MB内存芯片比64MB芯片要短，引脚更密，表面焊接工艺要求更高，个人业余焊接水平实在难以办到。看来，这个方法不行。<br>
+　　不过，因为前16MB是完好的，能不能将这根内存条改造为16MB的内存条呢？这需要将内存条反面的8块芯片屏蔽掉，让系统认为这是16MB的内存条。我换上尖头烙铁将反面第一块芯片的第一引脚和最后一根引脚焊开，并用针挑起。上机测试，结果显示器不亮，系统不自检。取下反复观察内存条的金手指和板上的线路走向，发现有的线路引脚在通向反面的芯片引脚前，需要先通过反面的一些表面焊接的小元件，系统可能以此来确定是否是32MB条。把它们先焊下来，让线路中断，看看有没有结果。这些表面焊接的电阻电容只比芝麻大一点，且一般有两个焊点，用尖头烙铁一个焊点一个焊点地焊实在不行。我把普通的电烙铁头用磨石磨平，大小大约与元件相当。烧热后拔掉电源插头，将烙铁磨平的一面与元件侧面接触（不可太用力，否则会损坏焊盘和线路）。这时元件两个焊点被同时熔化，元件被烙铁粘起。立即用镊子取下，以免长时间高温损坏元件（不可用力甩，否则你满地去找那个“芝麻”吧）。将反面全部11个元件焊下后，用棉签蘸无水乙醇将板上残留的松香洗净，再检查一下有没有小锡珠残留在芯片引脚间。等乙醇挥发完后，用毛刷将挂在芯片角上的棉纤维扫去。上机测试，16384KB一闪而过，运行HIMEM.SYS测试无错误，运行WIN98/NT一切正常。至此，总算挽救了16MB的内存。<br>
+　　将焊下的元件按位置用胶带粘在纸卡上，妥善保存，如果有一天搞到一根坏的32M内存条，“拆东墙补西墙”，还有修复全部32MB的可能。<br>
+　　不过，这根“16MB内存条”兼容性不行，在有的机器上仍无法开机，估计有些地方还没有完善，望“老鸟”们指点一二。<br><b>(重庆　张　桅)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99422302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

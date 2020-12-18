@@ -1,0 +1,553 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>校园英语网</title>
+<style>
+<!--
+#iewrap{
+position:relative;
+height:30px
+}
+
+#iewrap2{
+position:absolute
+}
+
+#dropmenu03{
+filter:revealTrans(Duration=1.5,Transition=12)
+visibility:hide
+}
+-->
+</style>
+
+<style><script>
+}
+}
+}
+scrollit_r2l(100);
+// -- End of JavaScript code -->{  }
+{  }
+#Layer0      { height: 60px; left: -100px; position: absolute; top: -100px; width: 60px; 
+               z-index: 10 }
+#Layer1      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 20 }
+#Layer2      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 30 }
+#Layer3      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 40 }
+#Layer4      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 50 }
+#Layer5      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 60 }
+#Layer6      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 70 }
+#Layer7      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 80 }
+#Layer8      { height: 60px; left: -100px; position: absolute; top: -100px; width: 40px; 
+               z-index: 90 }
+
+body, p, td  { font-size: 9pt; word-spacing: normal; line-height: 13pt }
+</style>
+<SCRIPT language=JavaScript>
+xfirst = new Array(80,150,220,310,400,590,680);	//初始x位置
+yfirst = new Array(0,180,70,10,50,30,140); 	//初始y位置
+xcoor = new Array(80,150,220,310,400,590,680);  
+ycoor = new Array(0,180,70,10,50,30,140);
+xdirec= new Array(1,-1,1,-1,1,-1); //初始方向 -1 为左 and 1 为右
+var ns = navigator.appName == "Netscape";
+function doplay()
+{
+    var x,y,i,j,w,h;
+	w = window.screen.width - 100;
+//	w = document.body.clientWidth - 100;
+	h = window.screen.height - 100;
+//	h = document.body.clientHeight - 50;
+    for(j=0;j<7;j++){
+    	i=Math.random();  				 //随机改变运动方向
+    	if (i > 0.95) xdirec[j] = 0 - xdirec[j];  
+    	x=Math.floor(10*Math.random());
+    	y=Math.floor(5*Math.random());	//x和y方向上的随机增量
+    	if ( xdirec[j] == 1 ) xcoor[j] = xcoor[j] + x;
+    	else xcoor[j] = xcoor[j] - x;
+    	ycoor[j] = ycoor[j] + y;  		//x越界则变向,y越界则返回
+    	if ( xcoor[j] >= w ) {xcoor[j]=w;xdirec[j]=-1;}
+    	if ( xcoor[j] <= 0 ) {xcoor[j]=0;xdirec[j]=1;}
+    	if ( ycoor[j] >= h ) {xcoor[j]=xfirst[j];ycoor[j]=yfirst[j];}
+        if (!ns){ eval('document.all'+'["Layer'+j+'"]'+'.style.left='+xcoor[j]);
+		eval('document.all'+'["Layer'+j+'"]'+'.style.top='+ycoor[j]);}
+        else {  eval('document.layers'+'["Layer'+j+'"]'+'.left='+xcoor[j]);
+		eval('document.layers'+'["Layer'+j+'"]'+'.top='+ycoor[j]);}
+	}
+    setTimeout('doplay()',100);  
+}
+</SCRIPT>
+<script language="JavaScript">
+<!--
+	function chsex1(list)
+	{ var listText='';
+	   if((list.selectedIndex != -1)&&(list.selectedIndex != 0))
+	   { listText = list.options[list.selectedIndex].value; }
+	  document.forms.cgi.usersex.value=listText;
+	}
+	function chact(list)
+	{ var listText='/cgi-bin/chat.cgi';
+	   if((list.selectedIndex != -1)&&(list.selectedIndex != 0))
+	   { listText = list.options[list.selectedIndex].value; }
+	  document.forms.cgi.action=listText;
+	}
+
+	function chsex2(list)
+	{ var listText='';
+	   if((list.selectedIndex != -1)&&(list.selectedIndex != 0))
+	   { listText = list.options[list.selectedIndex].value; }
+	  document.forms.mud.usersex.value=listText;
+	}
+function submitform(chatURl,chatID){
+var today = new Date();
+var seconds = today.getSeconds();
+var chatWin='etchatWin'+seconds+chatID;
+chatURl.target=chatWin;
+window.open('',chatWin,'left=0,top=0,width='+(screen.width-9)+',height='+(screen.height-76)+',status=no');
+chatURl.submit();
+}
+
+//-->
+</script>
+
+
+
+<base target="_blank">
+
+
+
+</head>
+
+<body marginwidth="0" marginheight="0" onload="doplay()" background="http://www.lpzx.edu.cn/goodpage/xyyyw/gif/bg.gif" bgcolor="#9FCB74">
+
+<div id="Layer0">
+  <dd> <img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer1">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer2">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer3">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer4">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer5">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer6">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer7">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<div id="Layer8">   
+  <dd><img src="images/buterfl1.gif" width="17" height="19"></dd>   
+</div>   
+<table border="0" width="100%" height="1">   
+<ilayer id="dropmenu01" height=35px>   
+<layer id="dropmenu02" visibility=show>   
+<span id="iewrap">   
+<span id="iewrap2" onClick="dropit2();event.cancelBubble=true;return false">   
+<font face="宋体"><a href="index.htm#">点这里察看本周"<font color="#FF0000">英语之星</font>"</a></font>   
+</span>                                          
+</span>                                          
+</layer></ilayer><SCRIPT language=javascript><!--                                          
+var enableeffect=true                                          
+                                          
+var selection=new Array()                                          
+selection[0]='<font face="宋体"><a href="yyzhx/yyzhx.htm">慈懋林</a></font><br>'                                          
+selection[1]='<font face="宋体"><a href="yyzhx/yyzhx.htm">张慧婷</a></font><br>'                                          
+selection[2]='<font face="宋体"><a href="yyzhx/yyzhx.htm">周展</a></font><br>'                                          
+selection[3]='<font face="宋体"><a href="yyzhx/yyzhx.htm">仪珊</a></font><br>'                                          
+selection[4]='<font face="宋体"><a href="yyzhx/yyzhx2.htm">高倩倩</a></font><br>'                                          
+selection[5]='<font face="宋体"><a href="yyzhx/yyzhx2.htm">张扬旸</a></font><br>'                                          
+selection[6]='<font face="宋体"><a href="yyzhx/yyzhx2.htm">王超</a></font><br>'                                          
+selection[7]='<font face="宋体"><a href="yyzhx/yyzhx2.htm">梁婧</a></font>'                                          
+                                          
+if (document.layers)                                          
+document.dropmenu01.document.dropmenu02.visibility='show'                                          
+                                          
+function dropit2(){                                          
+if (document.all){                                          
+dropmenu03.style.left=document.body.scrollLeft+event.clientX-event.offsetX                                          
+dropmenu03.style.top=document.body.scrollTop+event.clientY-event.offsetY+18                                          
+if (dropmenu03.style.visibility=="hidden"){                                          
+if (enableeffect)                                          
+dropmenu03.filters.revealTrans.apply()                                          
+dropmenu03.style.visibility="visible"                                          
+if (enableeffect)                                          
+dropmenu03.filters.revealTrans.play()                                          
+}                                          
+else{                                          
+hidemenu()                                          
+}                                          
+}                                          
+}                                          
+                                          
+function dropit(e){                                          
+if (document.dropmenu03.visibility=="hide")                                          
+document.dropmenu03.visibility="show"                                          
+else                                          
+document.dropmenu03.visibility="hide"                                          
+document.dropmenu03.left=e.pageX-e.layerX                                          
+document.dropmenu03.top=e.pageY-e.layerY+19                                          
+return false                                          
+}                                          
+                                          
+function hidemenu(){                                          
+if (enableeffect)                                          
+dropmenu03.filters.revealTrans.stop()                                          
+dropmenu03.style.visibility="hidden"                                          
+}                                          
+                                          
+function hidemenu2(){                                          
+document.dropmenu03.visibility="hide"                                          
+}                                          
+                                          
+if (document.layers){                                          
+document.dropmenu01.document.dropmenu02.captureEvents(Event.CLICK)                                          
+document.dropmenu01.document.dropmenu02.onclick=dropit                                          
+}                                          
+else if (document.all)                                          
+document.body.onclick=hidemenu                                          
+                                          
+                                          
+//-->                                          
+                                          
+                                          
+</SCRIPT>                                          
+                                          
+<div id="dropmenu03" style="position:absolute;left:10;top:0;layer-background-color:seashell;background-color:seashell;width:100;visibility:hidden;border:1px solid black;padding:0px">                                          
+<script language="JavaScript1.2">                                          
+if (document.all)                                          
+dropmenu03.style.padding='6px'                                          
+for (i=0;i<selection.length;i++)                                          
+document.write(selection[i])                                          
+</script>                                          
+</div>                                         
+  <tr>                                         
+    <td width="25%" height="1">              
+    <img border="0" src="images/title.gif" align="right" width="409" height="97"></td>                                         
+    <td width="75%" height="1" valign="bottom">                                         
+      <p align="center">              
+      <!--webbot bot="HitCounter" u-custom i-image="4" i-resetvalue="0" PREVIEW="&lt;strong&gt;[Hit Counter]&lt;/strong&gt;" i-digits="0" startspan --><img src="http://www.lpzx.edu.cn/goodpage/xyyyw/_vti_bin/fpcount.exe/C:/WINDOWS/Desktop/cew/?Page=index.htm%7CImage=4" alt="站点计数器"><!--webbot bot="HitCounter" endspan i-checksum="3554" -->　</p>
+      <p align="center"><script language="JavaScript">
+                 document.write("<font color='#000000' font size='-1' font face='宋体'>")
+                 var mydate=new Date()
+                 var year=mydate.getYear()
+                 if (year<2000)
+                     year += (year < 1900) ? 1900 : 0
+                     var day=mydate.getDay()
+                     var month=mydate.getMonth()
+                     var daym=mydate.getDate()
+                 if (daym<10)
+                     daym="0"+daym
+                     var dayarray=new Array("星期天","星期一","星期二","星期三","星期四","星期五","星期六")
+                     var montharray=new Array("元月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月")
+                     document.write("&nbsp;"+year+"年, "+montharray[month]+""+daym+"日,&nbsp;"+dayarray[day]+"&nbsp;&nbsp;")
+                     document.write("</b></i></font>")
+                 </script></p>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%" height="1%" cellspacing="0" cellpadding="0" bgcolor="#9FCB74">
+  <tr>
+    <td width="101%" height="1" colspan="10" bgcolor="#9FCB74">　</td>
+  </tr>
+  <tr>
+    <td width="101%" height="1" colspan="10"></td>
+  </tr>
+  <tr>
+    <td width="12%" height="1" bgcolor="#9FCB74">
+      <p align="right"><span style="z-index: 2"><img border="0" src="images/a4.gif" width="11" height="23"></span></td>
+    <td width="11%" height="1" bgcolor="#FEC001" align="center"><a href="dengji.htm">等级英语</a></td>
+    <td width="11%" height="1" bgcolor="#FEC001" align="center"><a href="mingpian.htm">英语名篇</a></td>
+    <td width="11%" height="1" bgcolor="#FEC001" align="center"><a href="yule/4.htm">英语娱乐</a></td>
+    <td width="11%" height="1" bgcolor="#FEC001" align="center"><a href="geguo.htm">异域风情</a></td>
+    <td width="11%" height="1" bgcolor="#FEC001" align="center"><a href="chat/default.htm">英语聊天室</a></td>
+    <td width="12%" height="1" bgcolor="#FEC001" align="center"><a href="disc6_frm.htm">英语论坛</a></td>
+    <td width="12%" height="1" bgcolor="#FEC001" align="center" bordercolorlight="#FEC001"><a href="guanhuai.htm">领导关怀</a></td>
+    <td width="2%" height="1" bgcolor="#9FCB74" align="center" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+      <p align="left"><img border="0" src="images/2.gif" align="bottom" width="8" height="23"></td>
+    <td width="7%" height="1">
+    <img border="0" src="images/jia.gif" align="bottom" width="34" height="19"></td>
+  </tr>
+  <tr>
+    <td width="104%" colspan="10" height="1%" valign="top">
+      <hr color="#008000" noshade style="position: relative; top: 0; vertical-align: -10">
+    </td>
+  </tr>
+</table>
+<table border="1" width="100%" height="171" cellspacing="0" cellpadding="0" bordercolor="#FCFEC9">
+  <tr>
+    <td width="105%" height="13" bgcolor="#FFFF99" colspan="4" nowrap bordercolor="#FFFF99" bordercolorlight="#FFFF99" bordercolordark="#FFFF99">
+      <marquee scrolldelay="100">欢 迎 进 入 校园 英 语 网 ！</marquee>                                                                                              
+    </td>                                                                                              
+  </tr>                                                                                              
+  <tr>                                                                               
+    <td width="20%" height="281" bgcolor="#FFFF99" nowrap bordercolor="#FFFF99" bordercolorlight="#FFFF99" bordercolordark="#FFFF99">                                                                               
+      <p align="center"><img border="0" src="images/hua.jpg" width="120" height="90">                                                                              
+      <div align="right">                                                                             
+        <table border="1" width="108" height="433">                                                                             
+          <tr>                                                                             
+          <td height="81" width="66">                                                                              
+            <p align="center"><img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="mmm/m1.htm">名人名言</a>                                                                           
+          </td>                                                                            
+            <td width="1" height="81"></td>                                                                          
+          </tr>                                                                          
+          <tr>                                                                          
+          <td height="81" width="66">                                                                           
+            <p align="center"><img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="yingyuxiyu/x1.htm">英语习语</a>                                                                           
+          </td>                                                                            
+            <td width="1" height="81"></td>                                                                          
+          </tr>                                                                          
+          <tr>                                                                          
+          <td height="81" width="66">                                                                           
+            <p align="center"><img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="daianna.htm">原文泛读</a></p>                                                                          
+          </td>                                                                           
+            <td width="1" height="81"></td>                                                                         
+          </tr>                                                                         
+          <tr>                                                                         
+          <td height="81" width="66">                                                                          
+            <p align="center"><img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="kouyu.files/kouyu.htm">实用口语</a></p>                                                                          
+          </td>                                                                           
+            <td width="1" height="81"></td>                                                                         
+          </tr>                                                                         
+          <tr>                                                                         
+          <td height="81" width="66" align="center">                                                                         
+            <p align="center"><img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="shigexinshang.htm">双语诗歌</a></p>                                                                         
+            </td>                                                                          
+            <td width="1" height="81"></td>                                                                         
+          </tr>                                                                         
+          <tr>                                                                         
+          <td height="82" width="66" align="center">              
+          <img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="qiaowenmd/qiaowenmd.htm">巧问妙答</a></td>                                                                          
+            <td width="1" height="82"></td>                                                                         
+          </tr>                                                                         
+          <tr>                                                                         
+          <td height="82" width="66" align="center">              
+          <img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="shuxin.htm">英语书信</a></td>                                                                          
+            <td width="1" height="82"></td>                                                                         
+          </tr>                                                                         
+          <tr>                                                                         
+          <td height="82" width="66" align="center">              
+          <img border="0" src="index.files/BD15170_.gif" width="12" height="12"><a href="shiti/shitijijin.htm">试题集锦</a></td>                                                                         
+            <td width="1" height="82"></td>                                                                        
+          </tr>                                                                        
+          <tr>                                                                         
+          <td height="82" width="66" align="center">              
+          <img border="0" src="images/email.gif" width="50" height="50"></td>                                                                        
+            <td width="1" height="82"></td>                                                                       
+          </tr>                                                                       
+          <tr>                                                                        
+          <td height="82" width="66" align="center">                                 
+            <p align="center">请你留言                                                 
+            <p align="center"><font color="#F273EC">Email:</font><a href="mailto:kccew@163.com"><font color="#FF0000">kccew@163.com</font></a></td>                                                                      
+            <td width="1" height="82"></td>                                                                     
+          </tr>                                                                     
+          <tr>                                                                      
+          <td height="82" width="66" align="center"><a href="yule/4.htm">              
+          <img border="0" src="images/music.gif" width="90" height="78"><font color="#000080">songs</font></a></td>                                                                     
+            <td width="1" height="82"></td>                                                                    
+          </tr>                                                                    
+        </table>                                                                    
+      </div>                                                                    
+    </td>                                                                                   
+    <td width="32%" height="146" bgcolor="#C8DBF9" nowrap bordercolor="#FFFF99" bordercolorlight="#FFFF99" bordercolordark="#FFFF99">                                                                    
+      <p align="left">&nbsp;　</p>
+      <div align="center">
+        <table border="0" width="95%" height="104">
+          <tr>
+            <td width="100%" height="36" bgcolor="#FCFEC9">     
+      <p align="left"><b><font color="#000080" size="4">&nbsp;</font><font size="4" color="#F29CFA">对话</font></b></td>                                                
+          </tr>                                                
+          <tr>
+            <td width="100%" height="62">     
+      <p align="center"><i> <font size="3">Never forget</font>                                                                     
+      </i>                                                                     
+        <center>                                                                     
+      <p align="left"><font size="3"><i>A:                                                                                                  
+      Remember last year when I was<br>                                                                                                 
+      broke, and you helped me out, and I said<br>                                                                                                 
+      I’d never forget you?<br>                                                                                                 
+      B: Yes.<br>                                                                                                 
+      A: I’m broke again.</i><br>                                                                                                
+      </font>                                                                                                
+      <br>                                                                                                
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;永不忘记</p>                                                                                      
+      <p align="left">A: 去年我破产时,你帮我渡过了难关.我说过永<br>                                                                                                 
+      不忘记你,还记得吗?<br>                                                                                                 
+      B: 记得.<br>                                                                                                 
+      A: 我又破产了。</center>                                  
+      <p>　</td>                                                                                  
+          </tr>                                                                                  
+        </table>                                                                                  
+      </div>                                                                                  
+      <p align="left"><img border="0" src="images/new1.gif" width="28" height="11"></p>                                                                                    
+      <p align="left"><font color="#ff0000" size="4"><a href="clinton.htm">威廉姆·杰斐逊·克林顿</a></font></p>                                                                                   
+      <p align="left"><font color="#ff0000" size="4"><a href="clinton.htm">在北京大学的演讲&nbsp;</a></font><br>                                
+      <br>                                
+      </p>                                                                                   
+      <table border="0" width="100%" cellspacing="6" cellpadding="0" height="81">                                                                               
+        <tr>                                                                               
+          <td width="104%" height="33" bgcolor="#F4F7DB"><b><i><font face="华文行楷" color="#F29CFA" size="5">开心一点</font></i></b></td>                                                                               
+        </tr>                                                                               
+        <tr>                                                                               
+          <td width="100%" height="36" bgcolor="#C8DBF9"><span class="p1"><b><a href="goodpage/xyyyw/youme/lisuodr.htm">理所当然</a></b></span></td>                                                                              
+        </tr>                                                                              
+        <tr>                                                                              
+          <td width="100%" height="36" bgcolor="#C8DBF9"><span class="p1"><b><a href="goodpage/xyyyw/youme/luojitl.htm">逻辑推理</a></b></span></td>                                                                              
+        </tr>                                                                              
+        <tr>                                                                              
+          <td width="100%" height="36" bgcolor="#C8DBF9"><span class="p1"><b><a href="youme/keshuizhe.htm">瞌睡者</a></b></span></td>                                                                              
+        </tr>                                                                              
+        <tr>                                                                              
+          <td width="100%" height="36" bgcolor="#C8DBF9"><span class="p1"><b><a href="goodpage/xyyyw/youme/zhishyige.htm" target="_blank">只剩一个引擎</a></b></span></td>                                                                              
+        </tr>                                                                              
+      </table>                                                                              
+      <p align="left">　</p>                                                                                  
+      <div align="center">                                                                              
+        <center>                                                                              
+        <table border="0" width="44%">                                                                              
+          <tr>                                                                              
+            <td width="100%">                                                                              
+              <p align="center"><font size="4"><b><font color="#F29CFA">              
+              <img border="0" src="images/Arrow.gif" width="30" height="12"></font><font color="#FF0000"><a href="mingxing.htm">格拉芙（Graf)－－－网坛常青树</a></font>                                                                                
+              </b></font></p>                                                                              
+              <p><span style="z-index: -2"><img border="0" src="mingxing.files/star.files/3.jpg" width="167" height="126"></span></td>                                                                              
+          </tr>                                                                              
+        </table>                                                                              
+        </center>                                                                              
+      </div>                                                                              
+    </td>                                                                                             
+    <td width="30%" height="146" nowrap bordercolorlight="#FFFF99" bordercolordark="#FFFF99">                                                                              
+      <p align="center"><font size="3" color="#0000FF">乔丹和我</font></p>                                                                              
+      <p align="center"><b class="p3"><font size="3" color="#0000FF"><a href="qiaodan/qiaodan.htm">Michael                                                                                  
+      and Me</a></font></b></p>                                                                                 
+      <p align="center"><img border="0" src="qiaodan/0309jor1.jpg" width="90" height="147"></p>                                                                                 
+      <p align="center">　</p>
+      <p><img border="0" src="images/lm3.gif" width="125" height="100"><a href="shige/shaorenzdl.htm" target="_blank">少人走的路</a></p>
+      <p align="center"><a href="shige/huoyubing.htm" target="_blank">火与冰</a>&nbsp;                                                                                  
+      <a href="shige/mom.htm" target="_blank">MOM母亲</a>&nbsp; <a href="shige/yingqi.htm" target="_blank">勇气</a></p>                                                                                 
+      <p align="center">　</p>                                                                                 
+      <p align="center">　</p>                                                                                 
+      <p><img border="0" src="shige/0310sn01.jpg" width="125" height="98"><a href="shige/xueyuan.htm" target="_blank">雪夜林边小伫&nbsp;</a></p>                                                                                 
+      <p>　</p>
+      <p>　</p>
+      <p><img border="0" src="images/lm2.gif" align="right" width="112" height="97"><a href="shige/xuetiansx.htm" target="_blank">雪天随想</a></p>
+      <p align="center"><a href="shige/guanyuyingqi.htm" target="_blank">关于勇气</a>
+      <p align="center">　
+      <p align="center">　
+      <p align="center"><font color="#9966ff"><b><font color="#6699ff"><a href="disini.htm">迪斯尼乐园</a></font></b></font><br>
+      　　<a href="disini.htm"><img border="0" src="disini_files/disney.jpg" width="143" height="124"></a>               
+    </td>               
+    <td width="25%" height="146" bgcolor="#FFFF99" nowrap bordercolor="#FFFF99" bordercolorlight="#FFFF99" bordercolordark="#FFFF99">
+      <table border="1" width="100%" height="257">
+        <tr>
+          <td width="100%" height="251"><font color="#FF0000">
+          <img border="0" src="images/pic097.gif" align="left" width="56" height="27"></font>
+            <p><img border="0" src="news/2008/shenao.jpg" width="130" height="94"></p>
+            <p align="left"><font color="#FF0000">最新消息</font>              
+            <p align="center">              
+            <marquee direction="up" height="76" scrollamount="1" width="136"><a class="a03" href="news/shownews.asp?key=847" target="847">◆</a><a href="news/1-9.htm"><SPAN class=font><B>Chinese Enthusiastic about 2008 Games Bid </B></SPAN>。</a></marquee>                                                                  
+          </td>                                                 
+        </tr>                                                 
+      </table>                                                 
+      <p align="center">　</p>                                         
+      <p align="center">　</p>                                         
+      <p align="center"><img border="0" src="images/kc.jpg" width="180" height="105"></p>                                                
+      <p align="center"><font color="#FF0000">Democracy&nbsp;&nbsp;&nbsp;&nbsp; 民主</font></p>                                                                                
+      <p align="center"><font color="#FF0000">Selection &nbsp;&nbsp;&nbsp; 选择</font></p>                                                                                
+      <p align="center"><font color="#FF0000">Creation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 创造</font></p>                                                                               
+      <p align="center"><font color="#FF0000">&nbsp; Harmony&nbsp;&nbsp;&nbsp; &nbsp; 和谐&nbsp;</font></p>                                                                               
+      <p align="center"><a href="ourschool.htm">OUR SCHOOL</a></p>                                                                                
+      <p align="center"><a href="ourschool.htm">我们的学校</a></p>                               
+      <p align="center">　</p>                               
+      <table border="1" width="83%" height="100%" cellspacing="6">                            
+        <tr>                            
+          <td width="100%" height="100" valign="top">                                
+      <p align="left">&nbsp;&nbsp;<img border="0" src="images/BD10265_.gif" width="12" height="12">谚语</p>                           
+      <p align="left">Actions speak louder</p>                                                                                      
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                       
+      than words.</p>                                                                                      
+      <p align="left">行动胜于言辞。</p>                                                                                      
+      <p align="left">He laughs best</p>                                                                                      
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; who laughs                                                                                       
+      last.</p>                                                                                      
+            <p align="left">笑到最后的人笑得最好。<img border="0" src="images/j0099170.gif" width="157" height="13" align="right" style="position: relative; top: 10; border-style: ridge"></td>                                                                                 
+        </tr>                                                                                 
+      </table>                                                                                 
+    </td>                                                                                                
+  </tr>                                                                                 
+</table>                                                                                               
+<table border="0" width="100%" cellspacing="0" cellpadding="0">                                                                                       
+  <tr>                                                                                       
+    <td width="754" bgcolor="#FFFF99">　</td>                                                                                       
+  </tr>                                                                                       
+</table>                                                                                       
+<table border="0" width="100%" cellspacing="0" cellpadding="0">                                                                                              
+  <tr>                                                                                              
+    <td width="100%" bgcolor="#C2F8DD">友情链接：                                                                                              
+      <table border="1" width="100%" bordercolor="#008000" cellspacing="1">                                                                                              
+        <tr>                                                                                              
+          <td width="25%" align="center">                                                                                              
+            <p align="center"><a href="http://61.133.98.10">康成校园网</a></p>                                                                                          
+          </td>                                                                                          
+          <td width="25%" align="center">                                                                                          
+            <p align="center"><a href="http://www.kc100.com">康成书院</a></p>                                                                                          
+          </td>                                                                                          
+          <td width="25%" align="center"><a href="http://www.gminfo.net.cn">高密信息港</a></td>                                                                                        
+          <td width="25%" align="center"><a href="http://www.chinaedu.com">101网校</a></td>                                                                                        
+        </tr>                                                                                        
+        <tr>                                                                                        
+          <td width="25%" align="center"><a href="http://kczx/as/alpk.htm">康成奥赛网</a></td>                                                                                     
+          <td width="25%" align="center"><a href="http://kczx/xiaohe/homepage/index.htm">小荷尖尖</a></td>                                                                                   
+          <td width="25%" align="center"><a href="http://cscserver/zhiri">稚日在线</a></td>                                                                                   
+          <td width="25%" align="center"></td>                                                                                  
+        </tr>                                                                                  
+        <tr>                                                                                  
+          <td width="25%" align="center">　</td>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+        </tr>                                                                                 
+        <tr>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+          <td width="25%" align="center">　</td>                                                                                 
+        </tr>                                                                                 
+      </table>                                                                                 
+    </td>                                                                                 
+  </tr>                                                                                 
+  <tr>                                                                                 
+    <td width="100%">                                                                                 
+      　</td>                                                                                
+  </tr>                                                                                
+  <tr>                                                                                 
+    <td width="100%">                                                                                 
+      <p align="center">版权所有</td>                                                                                
+  </tr>                                                                                
+  <tr>                                                                                
+    <td width="100%">                                                                                
+      <p align="center">康成中学校园英语网站制作中心&nbsp;&nbsp;&nbsp;</td>                                                                                
+  </tr>                                                                                
+  <tr>                                                                                
+    <td width="100%">                                                                                
+      <p align="center"><font color="#0000FF">Email:</font><a href="mailto:kccew@163.com"><font color="#000080">kccew@163.com</font></a></p></td>                                                                               
+  </tr>                                                                               
+</table>                                                                               
+</body>                                                                               
+                                                                               
+</html>

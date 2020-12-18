@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 硬件配制文件“轻装上阵”</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 硬件配制文件“轻装上阵”</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 硬件配制文件“轻装上阵” 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Windows98的“即插即用”功能让我们在安装新硬件时倍感亲切，但可惜的是“她”不具备硬件自动卸载能力。这样，对于经常更换外设的用户来说就很不方便，因为他们的硬件配置文件将越来越臃肿，极大浪费系统资源。笔者的电脑前一阵子就处于这种状态，通过实践成功地实现了“减肥”。<br>
+　　安装Windows98时，Windows98自动检测硬件情况并将其保存在注册表中，同时生成一份初始的硬件配置文件（Original Configuration），利用这个文件来启动计算机。当外设发生变化时，Windows98还使用原来的硬件配置文件启动系统，由此造成系统资源的浪费。那么如何生成符合当前硬件情况的硬件配置文件呢？可按如下步骤进行：<br>
+      　　<a href="images/122.gif" target="_blank"><img src="images/thm122.gif" width="100" height="109" align="left" alt="图1" border="0"></a>一、选择“开始\设置\控制面板\系统”，单击“硬件配置文件”标签，出现图1对话框，列表中的“Original 
+      Configuration"即目前电脑所使用的硬件配置文件。<a href="images/123.gif" target="_blank"><img src="images/thm123.gif" width="100" height="108" align="right" alt="图2" border="0"></a> 
+      <br>    
+　　单击 “复制（C）…”按钮，在弹出的“到（T）…”对话框中输入一个新文件名，如“Original Configuration old1”，单击确定按钮，出现如图2的对话框，得到一个新的硬件配置文件。这样做是为保证计算机系统中存在不同的硬件配置文件，这种情况下Windows98才会重新检测硬件并生成一份新的、符合当前硬件情况的硬件配置文件。<br>
+      　　二、选中“Original Configuration"，单击“重命名（R）”，在弹出的对话框中输入一个新文件名（不同于“Original 
+      Configuration”），如“Original Configuration old2"，单击“确定”，再单击“系统属性”对话框的“确定”按钮。<br>
+　　三、以上操作完成后，重新启动计算机，蓝天白云出现后，系统显示硬件配置文件菜单：<br>
+　　Select one of the following configuration:<br>
+　　1. Original Configuration old1<br>
+　　2. Original Configuration old2<br>
+　　3. None of the above<br>
+      　　Enter your choice:<br>
+　　键入“3”回车，这样Windows98就会重新检测计算机硬件系统并生成一份新的、符合当前硬件配置情况的硬件配置文件，名为“Original Configuration”，并用它来启动系统，此过程大约需要2～3分钟（具体时间由您的计算机配置情况决定），同时屏幕上会出现提示信息。当Windows98启动成功后，我们的目的就达到了。<br>
+　　四、当然，请别忘了再次进入“硬件配置文件”标签，将“Original Configuration old1”和“Original Configuration old2"两个文件删除。否则您每次开机都要面对硬件配置文件菜单了。<br><b>　　（江苏　李馥娟）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99421203.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

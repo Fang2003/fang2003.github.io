@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>硬盘坏道导致Pwin97安装故障<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：不久前，笔者为好友组装了一台电脑。其配置为：华硕 
+        TX97－LE主板、INTEL PENTIUM 200 MMX CPU、32MB SDRAM、SEAGATE3.2GB 硬盘、SONY 16倍速光驱、TRIDENT 
+        9750 PCI显卡(2M EDO RAM)、EMC 1564D彩显、ALS100声卡、NE2000兼容网卡等。在安装Windows 
+        95 OSR2时，遇到一起奇怪的故障，花了不少时间，也走了不少弯路才得以解决。<br>
+        　　开始进行硬件组装，没有遇到什么麻烦，当从A盘启动计算机(A盘为Windows 
+        95 OSR2的启动盘，能启动光驱且包含有必要的命令文件，建立方法见后。)并运行FDISK，将硬盘分为C、D两个区并分别作格式化。重启动后，系统识别出光驱为E盘；接着开始安装中文Windows95 
+        OSR2(以下简称PWIN97)，安装过程进展顺利，故障发生在文件拷贝完毕，第一次启动PWIN97时，只见硬盘灯一阵狂闪之后便没了下文——死机了。<br>
+        　　故障分析与排除：1. 首先检查CMOS有关项目：关掉电源，重新开机，进入COMS查看各项设置，没有什么异样，干脆使用“出厂保留设置”，还是不行。2.由于前面的安装过程很顺利，估计是PWIN97检测硬件时出了问题：首先怀疑硬盘出错，于是用SCANDISK扫描硬盘，在漫长的等待后，SCANDISK报告硬盘正常，没有发现错误；依次拔下声卡、网卡，仍是老毛病；换上另一台电脑中能正常使用的9685显卡、32M 
+        EDO RAM，依然无效；估计主板和CPU应该不会有问题。3.因为本机硬盘使用的是FAT32，安装的操作系统为PWIN97，传闻这二者运行于一些机型上会出现不兼容的问题。怀疑是PWIN97与FAT32不兼容，找来DOS6.22启动盘，重新分区、格式化硬盘，然后安装DOS6.22、PWIN32，一切正常。在PWIN32中升级安装中文Windows 
+        95，到了老地方，又死机了。4.排除了软件兼容性问题，又只得从硬件上找原因了。这回，找来一块华硕T2P4主板换上，也不行；将CPU插到其它机子上能顺利运行(该机的其它配件在另外的电脑上均正常)。怎么回事?配件都没问题，却死活不肯在一起工作。最后，估计硬盘有问题，这机箱内的东西也只有它没有换了，但它可是通过了SCANDISK检测的哟，实在没办法，只能试一试了。将硬盘换到另一台电脑中，开机一试，哈哈!这下真像大白，这家伙确实有问题。5.修复硬盘：再次用SCANDISK扫描硬盘，没问题；用NORTON磁盘医生检测，通过。实在没法，只能使用最后一招——低格硬盘了。使用DM命令，果然提示：“在XXX位置有坏磁道，按提示修复”。如此几次反复，修复所有硬盘坏磁道，完成后，又重新分区、高格硬盘，安装PWIN97等等，一切顺理成章、水到渠成。至此，问题全部解决。<br>
+        　　小结：1.攒机一定要把好质量关，散件最好到有一定信誉和资金实力的大公司购买，以防患于未然。2.不要迷信SCANDISK，SCANDISK对磁盘的检测不够彻底。3.尽量使用FAT32。FAT16的不足之处大家都清楚。笔者用FAT32已有半年，也没遇到兼容性方面的问题，倒是感觉好处多多，节约磁盘空间倒不用说了，特别是能使用2GB以上分区，那感觉真是太爽了!4.PWIN97启动软盘的建立方法：<br>
+        　　&middot;启动PWIN97，打开“我的电脑”，右击A盘，选择格式化，在出现的对话框中选“只拷贝系统文件”按回车键确认，以上可建立一张PWIN97的DOS启动盘；<br>
+        　　&middot;将C:\windows\中的HIMEM.SYS、EMM386.EXE、SMARTDRV.EXE，C:\WINDOWS\COMMAND\中的QBASIC.＊、EDIT.COM、MSCDEX.EXE、FDISK.＊、FORMAT.＊等以及光驱的驱动程序拷入A盘并建立CONFIG.SYS、AUTOEXEC.BAT两个文件，笔者的两个文件如下：<br>
+        CONFIG.SYS:<br>
+        DEVICE=HIMEM.SYS<br>
+        DEVICE=EMM386.EXE NOEMS<br>
+        DOS=HIGH,UMB<br>
+        DEVICEHIGH=GSCDROM.SYS/D:MSCD000(笔者的光驱驱动程序)<br>
+        LASTDRIVE=Z<br>
+        AUTOEXEC.BAT：<br>
+        LH MSCDEX.EXE /D:MSCD000<br>
+        SMARTDRV.EXE 4096<strong>　<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

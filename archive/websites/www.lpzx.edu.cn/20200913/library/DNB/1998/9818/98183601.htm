@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>系统可用资源为何下降 
+        &nbsp; <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台微机，Pentium 
+        MMX 166 CPU,32M内存、PA2007大众主板、SONY 16倍速光驱。<br>
+        　　先装DOS6.2，然后再装Windows95 OSR2。微机能够正常进入Windows95 OSR2，但进入DOS6.2时失败，微机直接进入Windows95 
+        OSR2。笔者认为造成该种故障的原因是安装Windows95 OSR2时破坏了DOS6.2的系统文件，于是在Windows95 
+        OSR2下重装DOS6.2，经修改系统文件后，开机后能正常进入Windows95 OSR2和DOS6.2，但在Windows95 
+        OSR2中查看“系统/性能”时，发现内存由原来的32MB变为30MB，可用系统资源由原来的92％变为85％，文件系统显示：“部分驱动器正在使用MS－DOS兼容方式”，并出现“F盘正在使用MS－DOS兼容方式的文件系统”的对话框。<br>
+        　　故障分析与处理：<br>
+        　　1.在“系统/性能”中，单击“F盘正在使用MS－DOS兼容方式的文件系统”，查看“详细资料”得知：该问题经常出现在有多个磁盘的情况下，主要原因是Config.sys文件中存在Windows无法识别的驱动程序，它和“兼容模式分页技术降低了整个系统的性能”相关。如果仅在一个磁盘上看到这条信息，说明该磁盘正在使用MS－DOS兼容(实模式)驱动程序，它将减慢对该磁盘的访问。<br>
+        　　2.笔者首先将Config.sys文件改名，重新启动机器，故障依旧。这说明原因不在Config.sys上，恢复Config.sys文件后，又将Autoexec.bat文件改名，重新启动机器后，查看“控制面板/系统/性能”时，发现文件系统为32位，对话框消失，可用系统资源为90％，内存仍为32MB。因此，笔者确定问题出在Autoexec.bat文件上。<br>
+        　　3.接下来笔者对Autoexec.bat文件中的驱动程序逐一进行卸载，在卸载掉Smartdrv驱动程序后，发现内存恢复为32MB，但“F盘正在使用MS－DOS兼容方式的文件系统”的对话框仍存在；当将光驱驱动程序卸载掉之后，故障消失，但内存却又变为30MB。于是将Startdrv.bat由默认值改为Startdrv.bat 
+        c＋ 20480，一切故障消失。<br>
+        　　4.经上述分析，最后确定故障原因是Autoexec.bat文件调用了Windows95 
+        OSR2无法正确使用的DOS光驱驱动程序和Smartdrv.exe程序造成的。Smartdrv程序在默认状态下使用2MB(本机内存32MB)的内存作为高速缓冲区，造成“系统/性能”中显示内存只有30MB。通过对Smartdrv程序功能的分析，笔者认为这种现象是正常的，它不会造成机器整体性能的下降，反而可能使微机整体性能提高(注：在先安装DOS6.2、后安装Windows95 
+        OSR2的情况下，在Autoexec.bat文件中不会出现Smartdrv程序，因此也就不会出现内存减少2MB的现象)。<br>
+        　　造成以上故障的根本原因是笔者所用SONY16倍速光驱的驱动程序不能在Windows95 
+        OSR2下使用。笔者在DOS下安装此驱动程序时发现，其仅对DOS下的Config.sys和Autoexec.bat文件进行提示修改，而不提示笔者是否对Windows95 
+        OSR2的系统文件进行修改，也就是说它不支持Windows95 OSR2。因此，在使用时必须要由Windows95 
+        OSR2所带的通用光驱驱动程序来驱动。(注：在先安装DOS6.2，后安装Windows95 
+        OSR2的情况下，Windows95 OSR2自动建立的Autoexec.bat文件将会卸载掉先前DOS 
+        6.2所用的光驱驱动程序，因此光驱就不会使用MS－DOS兼容方式的文件系统。)<br>
+        　　总结：<br>
+        　　这种故障现象主要出现在DOS6.2、DOS7.0与Windows95 OSR2并存的系统中，因此电脑爱好者在既想使用Windows 
+        95 OSR2又不愿放弃DOS6.2时，必须注意它们之间的Config文件和Autoexec文件的不同使用。<br>
+        　　在DOS6.2系统下安装Windows95 OSR2时，Windows95 OSR2会将DOS6.2调用的Autoexec.bat和Config.sys分别改名为Autoexec.dos和Config.dos，这两个文件仅在用户进入DOS6.2时调用。Windows95 
+        OSR2将重新建立Autoexec.bat和Config.sys文件，在这两个文件中将会去掉一些对Windows95 
+        OSR2无用的命令，并在Windows目录下建立Dosstart.bat文件，该文件包括DOS光驱驱动程序，以供DOS7.0使用。同时，需要说明的是，Windows95 
+        OSR2的启动并不需要Config.sys和Autoexec.bat文件，这两个文件的建立也是供DOS7.0使用的。<br>
+        　　由Windows95 OSR2进入DOS7.0时，系统将会首先调用C盘Windows目录下的Dosstart.bat文件，然后再进入DOS。因此我们也可将Autoexec.bat文件中的内容移植到Dosstart.bat文件中，然后删除Autoexec.bat文件，这样可以不让DOS命令解释程序Command.com文件占用Windows宝贵的常规内存，能省出大约8KB的内存。但是如果这样直接进入DOS7.0时(即在启动配置菜单中选择“Prompt 
+        command only”项)，大部分外设(如光驱等)将不能使用，因为这种启动方式需要调用Autoexec.bat和Config.sys文件，但无法调用Dosstart.bat文件，该文件只供在从Windows95 
+        OSR2进入DOS7.0时调用。不同方式启动时系统配置文件名称如表所示。<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月11日第18期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

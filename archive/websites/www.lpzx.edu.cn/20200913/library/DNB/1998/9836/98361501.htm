@@ -1,0 +1,128 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Linux安装手记<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 一、Linux简介<br>
+        　　Linux是一个优秀的完全免费的操作系统。如果你对 UNIX 
+        十分熟悉，你会发现它和UNIX很像。<br>
+        　　Slackware Linux 在安装时, 需要两片磁盘, 它们是启动盘(bootdisk)和文件系统盘(rootdisk)。启动盘的映像文件放在／linux／bootdsks.144／中：<br>
+        　　我选择了bare.i作为启动盘映像文件。我找了一张1.44M空白软盘，先格式化，然后在C&gt;提示符下转到\Linux\bootdsks.144，输入rawrite 
+        bare.i a:<br>
+        　　转到存有文件系统软盘映像文件的子目录\Linux\rootdsks，我选择了color144.gz， 
+        rawrite color.i a:就做成了一张rootdisk。<br>
+        　　二、分区<br>
+        　　因为我正好有一只新的2.5G硬盘，所以不必为分区耗费精力。值得说明的是，Linux是一个独立的操作系统，它需要一个单独的分区。如果您的硬盘已经被全部使用了的话，那么很不幸，您最好把它重新分区，为Linux腾出空间来。而且Linux所用的root区（根文件系统区）的起始部分的柱面号不应大于1024，也就是说，Linux启动分区的开始部分应位于硬盘504M之前的位置。<br>
+        　　用做好的 bootdisk 
+        启动机器。很快，就会出现欢迎画面，大体意思是请你输入一些必要的参数。一般情况下，可以不去管它，直接按回车，等待十几秒后，屏幕上出现了许多信息。（我注意到我的硬盘的设备名是／dev／hda，IDE光驱是／dev／hdb，这表示Linux已经检测到安装在第一IDE口上的做为主驱动器的硬盘和作为从驱动器的光驱。）最后停在下面这一行上：<br>
+        　　VFS: Insert root floppy disk to be loaded into ramdisk and press ENTER<br>
+        　　插入rootdisk，按回车键。稍事等待，又出现一屏欢迎信息，最后几行是<br>
+        　　You may now login as “root”.<br>
+        　　slackware login:<br>
+        　　输入‘root’，回车。再输入命令'fdisk'，出现下面简单至极的画面：<br>
+        　　＃ fdisk<br>
+        　　Command (m for help):<br>
+        　　这和我们用惯了的Dos下的FDISK很不一样。实际上，它和Dos的FDISK功能差不多。输入m，看一下帮助。<br>
+        　　以下是我的操作步骤<br>
+        　　Command (m for help): n← n 设立新的分区<br>
+        　　Command action<br>
+        　　e extended<br>
+        　　p primary partition (1－4)<br>
+        　　p ← p 指定 primary 分区<br>
+        　　Partition number (1－4): 1 ← 1 指定第一个<br>
+        　　First cylinder (1－4970): 1 ← 指定第一分区位置 从1－915 cylinder<br>
+        　　Last cylinder or ＋size or ＋sizeM or ＋sizeK (1－4970): 915<br>
+        　　Command (m for help): n← n 设立新的分区<br>
+        　　Command (m for help):<br>
+        　　 e extended<br>
+        　　 p primary partition (1－4)<br>
+        　　p ← p 指定 primary 分区<br>
+        　　Partition number (1－4): 2 ← 2 指定第二分区位置 从 916 － 946 cylinder<br>
+        　　First cylinder (916－4970): 916 ← 填入 916<br>
+        　　Last cylinder or ＋size or ＋sizeM or ＋sizeK (916－4970): 946 ← 填入 946<br>
+        　　Command (m for help): t← 修改分区类型<br>
+        　　Partition number (1－4): 2 ← 指定修改第二个分区<br>
+        　　Hex code (type L to list codes): 82← 82 代表 Linux Swap Partition<br>
+        　　Changed system type of partition 2 to 82 (Linux swap)<br>
+        　　Command (m for help): p← p 查看分区设定结果<br>
+        　　Command (m for help): w← w: 储存改动内容并退出<br>
+        　　完成后，取出rootdisk，换上bootdisk，按CTRL－ALT－DEL重新开机。仍然按前面的步骤适时换上rootdisk盘，并最终用root用户注册。<br>
+        　　三、运行setup<br>
+        　　现在，在'＃'提示符下运行setup，映入眼帘的是一个赏心悦目的彩色设置菜单：<br>
+        　　该画面的中文翻译说明如下：<br>
+        　　HELP 阅读在线安装说明<br>
+        　　KEYMAP 更改键盘排列<br>
+        　　MAKE TAGS 改变软件内建安装选项<br>
+        　　ADDSWAP启动 swap partition（交换区）, 使之即刻生效<br>
+        　　TARGET 指定目的硬盘分区<br>
+        　　SOURCE 指定安装源（source media）<br>
+        　　DISK SETS 选择安装软件包<br>
+        　　INSTALL开始安装<br>
+        　　CONFIGURE 系统设定<br>
+        　　PKGTOOL使用PKGTOOL安装或删除包<br>
+        　　EXIT 结束<br>
+        　　1.增加交换区<br>
+        　　通过选择ADDSWAP菜单建立和配置交换分区。<br>
+        　　一直选&lt;Yes&gt;或&lt;OK&gt;直到出现：<br>
+        　　... ... Would you like to continue the installation and setup your TARGET drive(s)?<br>
+        　　2.选择目标分区<br>
+        　　在上面的提问中选&lt;Yes&gt;，进入选择目标分区画面。由于现在只建立了一个Linux分区，所以可直接选择&lt;OK&gt;，进入下面，选择第一项：<br>
+        　　Format Quick format with no bad block checking<br>
+        　　文件系统就做好了。选&lt;Yes&gt;进入下一步。<br>
+        　　3.选择安装源<br>
+        　　选择5，从CD－ROM上安装。在下面的选择CD－ROM类型画面中，我选了<br>
+        　　 1 － Works with most ATAPI／IDE CD drives (／dev／hd＊)<br>
+        　　下面出现一长串CD－ROM可能的设备名列表。如果你弄不明白该用哪个，那么请选第一个选项'Scan'，它能飞快地扫描到你的CD－ROM的设备名称。<br>
+        　　下一步是指定Linux在光盘上的存放路径。<br>
+        　　选‘Custom’，再输入<br>
+        　　linux／slackware<br>
+        　　选&lt;Yes&gt;进入下一步。<br>
+        　　4.选择安装包<br>
+        　　屏幕上出现了所有可安装包的列表。<br>
+        　　用箭头键上下移动，空格键选中或不选。完成后，按回车键。<br>
+        　　以下连按几下回车后，出现一个“SELECT PROMPTING MODE”对话框。按回车键选 
+        Normal 模式并开始安装。<br>
+        　　安装完成之后，将会出现一个“INSTALL Linux KERNEL”菜单，有四个选择项。显然当前的bootdisk引导的Linux能够正常工作，所以Linux推荐用选项1，从当前使用的bootdisk拷贝Kernel到硬盘中。按回车确认之前，不要忘了把bootdisk放进驱动器。<br>
+        　　然后出现一个标题为“CONFIGURE YOUR SYSTEM?”的画面，选&lt;Yes&gt;，又有一个“MAKE 
+        BOOT DISK?”的画面。Linux强烈建议您制作一张启动软盘，这样，万一出现意外，仍然可以利用这张启动软盘救急。<br>
+        　　接着Linux询问是否配置你的调制解调器和鼠标，我都选了&lt;No&gt;。<br>
+        　　5.安装LILO<br>
+        　　安装到此，将要进行非常重要的、LILO的设定。LILO是一个相当优秀的系统工具。安装了它，你可以选择从你的硬盘上启动LINUX、WINDOWS 
+        95等多种操作系统。<br>
+        　　按照提示，选择你想默认启动的操作系统，选择INSTALL大功告成。　　</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

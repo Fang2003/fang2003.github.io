@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NOVELL网上共享CD-ROM的两种方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在单机上安装并使用CD－ROM并不困难，但在网络上共享CD－ROM就不太容易，这里有一点经验供大家参考。<br>
+        　　在NOVELL网上安装共享CD－ROM驱动器，根据不同形式的驱动程序，相应的安装方法也有所不同。<br>
+        　　<strong>一、使用基于DOS环境的CD－ROM驱动程序</strong><br>
+        　　安装步骤如下：<br>
+        　　1.在服务器的CONFIG.SYS文件中加入命令行：<br>
+        　　DEVICE=光驱驱动程序/D：光驱名<br>
+        　　2.在服务器的AUTOEXEC.BAT文件中加入命令行：<br>
+        　　C:\DOS\MSCDEX.EXE/D:光驱名/S<br>
+        　　(S参数表示允许在网络中共享CD－ROM)<br>
+        　　3.启动服务器，并在服务器控制台上安装一个和CD－ROM对应的卷。在这里，CD卷与网络的其他卷有所不同，它不需要一个建卷的过程，因为NETWARE系统将光盘上VOLUME名视为网络的CD卷名，所以，在安装网络CD卷之前必须事先记下所安装光盘的VOLUME名(进网之前，转到光盘上，用DIR命令即可看到)。接下来就是卷安装，假设在服务器ACER上安装的光盘VOLUME名为DZ－01<br>
+        　　.CD MOUNTE ACER\DZ－01<br>
+        　　4.用户在工作站登录入网后，可将光盘上的目录或应用程序映射到某驱动器上(假设光盘上某目录名为OS)。<br>
+        　　F:MAP K:=ACER\DZ－01\OS<br>
+        　　5.转到K：驱动器，就可对光盘进行操作。<br>
+        　　<strong>二、使用适合NETWARE要求的NLM形式的CD－ROM驱动程序</strong><br>
+        　　我所用的光驱跟硬盘同时使用内置式SCSI接口，在安装网络操作系统时已加载随机提供的NCRSDMS3.DSK模块(否则要自己加载该模块)。其它步骤如下：<br>
+        　　1.退出网络操作系统，重新编辑CONFIG.SYS和AUTOEXEC.BAT文件，去掉CD－ROM的设备驱动程序(本机为DOSCAM.SYS、SCSIDISK.SYS)和对CD－ROM的设备驱动程序的任何引用(笔者曾在DOS下使用该光驱)。<br>
+        　　2.重新启动服务器，在控制台上键入命令：<br>
+        　　LOAD CDROM.NLM&lt;Enter&gt;<br>
+        　　置欲使用的CD－ROM盘片于光驱内，键命令：<br>
+        　　CD DEVICE LIST&lt;Enter&gt;<br>
+        　　这样，CD－ROM编号、激活状态、CD－ROM驱动器名、盘片卷名以及CD－ROM作为卷装载与否的信息便会出现，键入命令：<br>
+        　　CD MOUNT &lt;卷名&gt; &lt;Enter&gt;<br>
+        　　开始装载CD－ROM卷。装载成功后键入命令LOAD INSTALL.NLM&lt;Enter&gt;可查看此卷。<br>
+        　　3.工作站启动后键入命令：<br>
+        　　MAP [驱动器 ]:=&lt;服务器名&gt;\&lt;卷名&gt;:\&lt;Enter&gt;即可使用<br>
+        　　CD－ROM共享卷给无光驱的工作站带来很大方便，同时也可方便多人同时使用同一软件。如经常使用，可将命令LOAD 
+        CDROM.NLM加在AUTOEXEC.NCF中，这样每次启动后只需装载“卷”即可。若该卷已装载过，则下次装载时无建立索引的过程，装载也就很快。</font></p>
+        <p class="ourfont"><font color="#369681">　　(王锡文　陈代寿)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月16日第6期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

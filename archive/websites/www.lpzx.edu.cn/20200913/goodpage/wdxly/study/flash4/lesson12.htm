@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center"><br>
+<font size="+2">第十二课&nbsp;Mask的妙用</font>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="66%">&nbsp;&nbsp;&nbsp;&nbsp;在这一课里，我们要来学习在FLASH里非常有用的一个特效——Mask掩膜层。看到右面的例子了吗，象不象一个探照灯在做来回移动的效果？很酷吧，看过这课后，你也能轻松的搞定了。那么，我们开始吧！
+
+<td width="34%"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/mask0.swf">
+<embed src="swf/mask0.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT>
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="47%"><img src="images/l12_01.gif" width="306" height="107">
+<td width="53%">&nbsp;&nbsp;&nbsp;&nbsp;首先，打开一个新的工作区。按Ctrl+M把工作区的大小设为300*100，背景色(Background
+color)设为黑色，点OK键。然后选一种颜色（例子里用蓝色）在Layer1层上写上“网页之作”四个大字，如左图。因为我们要做一个50帧的动画，所以在Layer1层的50帧的方格内单击右键，弹出菜单后选择Insert
+keyframe，插入一个关键帧，内容将与第一帧的一样。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="28%">&nbsp;&nbsp;&nbsp;&nbsp;新建一个Layer2层，选中Layer2层的第一帧，在这一帧里，用梯度色画上一个足够大的圆（能遮掉一个字就行），并把这个圆定义成符号(Symbol)。在第一帧里把这个圆形符号拖到工作区的最左面。然后，分别在第二十五帧、第五十帧的小方格里单击右键，同样选择菜单里的Insert
+keyframe，插入关键帧。把第二十五帧的圆形符号(Symbol)拖至工作区的最右面。接着，在第一帧和第二十五帧的方格里点击右键，选择菜单中的Properties...
+-&gt;Tweening -&gt;Motion，点确定，这时的Timeline区和第一、五十和二十五帧的工作区的状态应如右图所示。
+<td width="72%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="69%">
+<div align="center"><img src="images/l12_02.gif" width="350" height="38"></div>
+
+<td width="31%">
+<div align="center">层区和Timeline区</div>
+
+
+<tr>
+<td width="69%">
+<div align="center"><img src="images/l12_03.gif" width="307" height="107"></div>
+
+<td width="31%">
+<div align="center">第一帧和第五十帧</div>
+
+
+<tr>
+<td width="69%">
+<div align="center"><img src="images/l12_04.gif" width="304" height="106"></div>
+
+<td width="31%">
+<div align="center">第二十五帧</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="100%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="61%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="52%">
+<div align="center"><img src="images/l12_05.gif" width="175" height="69"></div>
+
+<td width="48%">
+<div align="center">在Layer1层上按住鼠标左键</div>
+
+
+<tr>
+<td width="52%">
+<div align="center"><img src="images/l12_06.gif" width="175" height="62"></div>
+
+<td width="48%">
+<div align="center">把Layer1层拖到Layer2层上面，松开左键</div>
+
+
+<tr>
+<td width="52%"><img src="images/l12_07.gif" width="227" height="77">
+<td width="48%">
+<div align="center">圆形符号(Symbol)被字所覆盖了</div>
+
+
+<tr>
+<td width="52%">
+<div align="center"><img src="images/l12_08.gif" width="176" height="62"></div>
+
+<td width="48%">
+<div align="center">对Layer1点选Mask后的层区状态</div>
+
+
+<tr>
+<td width="52%">
+<div align="center"><img src="images/l12_11.gif" width="227" height="77"></div>
+
+<td width="48%">
+<div align="center">最后的工作区，掩膜层把圆形遮住了一部分</div>
+
+
+</table>
+
+<td width="39%">&nbsp;&nbsp;&nbsp;&nbsp;注意，下面就是这节课里最关键的部分了，我们要对层区进行操作了。首先我们要确定把哪个层作为掩膜层，在这里，我们选择了Layer1层，也就是写有“网页之作”四个字的那一层，原因嘛，后文再提，先卖个关子。那么我们就要交换Layer1层和Layer2层的位置。在Layer1层上按住鼠标左键，把Layer1层拖到Layer2层上面，松开左键，看，Layer1层已经移到了Layer2层的上面了。这时工作区里，圆形符号(Symbol)被字所覆盖了（如左图）。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;接着，我们就要把Layer1层设为掩膜层(Mask Layer)了。在层区的Layer1层上单击鼠标右键，选择弹出的菜单里的Mask，现在，Mask项上应该被打上了一个小勾。层区也发生了变化，现在应如左图所示了。注意了吗？在Layer1前有<img src="images/l12_09.gif" width="14" height="15" align="absmiddle">的符号，这表明，改层是掩膜层(Mask
+Layer)；在Layer2前有<img src="images/l12_10.gif" width="15" height="14" align="absmiddle">的符号，这表明，改层是被其上的掩膜层所掩盖的层(Masked
+Layer)。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;现在，工作区也起了相应的变化，它应该和左图最下面的一样。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="64%">&nbsp;&nbsp;&nbsp;&nbsp;好了，你可以按Ctrl+Enter欣赏自己的动画了，效果应该不赖。呵呵，对了，我刚才卖的关子也该卖完了，我们来看看为什么要把Layer1层作为掩膜层(Mask
+Layer)吧。
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;要知道，在掩膜层(Mask Layer)上的像素点，要么是透明的，要么是遮盖的，所以无论你用什么颜色，Alpha值设为多少，对掩膜层(Mask
+Layer)来说，都是无效的。只要你在掩膜层(Mask Layer)上画上一个像素点，这一点就是透明的，被掩盖层(Masked Layer)就能透过这一点，而在掩膜层(Mask
+Layer)上你没画点的地方，则必是遮盖的。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;如果你没调换Layer1和Layer2的位置，而把Layer2设为掩膜层(Mask Layer)，掩盖Layer1层的话，这个动画的效果应该是如右图所示的。也一样试一下，对加深理解很有帮助的。
+
+<td width="36%"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="300" height="100" id="Shockwave Flash Object2">
+<param name=movie value="swf/mask00.swf">
+<param name=quality value=high>
+<embed src="swf/mask00.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT>
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;对了，最后还要强调的一点是，掩膜层(Mask Layer)只能掩盖在它下面的层，而不能掩盖在其上面的层哦！好了，我们可以继续下一课——<a href="lesson13.htm">制作自己的MovieClip</a>
+的学习了。
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson13.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

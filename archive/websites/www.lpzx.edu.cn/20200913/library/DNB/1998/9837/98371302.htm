@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>修改Word97内置命令 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 　大多数Word内置命令可通过转入宏来修改它们，以增强应用的灵活性。例如，可修改“文件”菜单中的“打开”命令，使其不再显示Word文档文件列表(扩展名为DOC的文件)，而是当前文件夹的所有文件。要在宏对话框中显示内置命令列表(选择“工具”菜单“宏”菜单项中的“宏”项，就可打开宏对话框)，可选择“宏的位置”对话框中的“Word命令”选项。这时我们可以看到显示的命令包括所有的菜单命令、工具栏命令或快捷键命令。菜单命令为以菜单名开头的命令。例如，“文件”菜单中的“打开”命令显示为FileOpen。因此，通过将一个宏命名为与Word命令相同的名称，就可用一个宏替代一个Word命令。<br>
+        　　下面来看看修改FileOpen命令的步骤：<br>
+        　　(1)单击“工具”菜单的“宏”选项，再单击“宏”项。<br>
+        　　(2)在“宏”对话框中“宏的位置”中选择“Word命令”项。<br>
+        　　(3)选择“宏名”对话框中的“文件保存”项。<br>
+        　　(4)在“宏的位置”对话框中选择一个模板或文档以保存该宏。例如，选择Normal.dot(共用的Template)生成一个共用宏，这样修改后的FileOpen命令对于所有文档有效。<br>
+        　　(5)单击“创建”按钮。<br>
+        　　FileOpen宏显示如下：<br>
+        　　Sub FileOpen()<br>
+        　　′FileOpen Macro<br>
+        　　′打开已有的文档或模板<br>
+        　　Dialogs(wdDialogFileOpen)Show<br>
+        　　End Sub<br>
+        　　在上面过程中我们可添加指令或删除已有的一句Dialogs(wdDialogFileOpen)Show(这是运行FileOpen命令的缺省代码)指令。当运行FileOpen命令时，新的FileOpen宏取代了原来的Word命令。如果我们要恢复原来的FileOpen功能，仅需将新的FileOpen宏改名或删除。另外我们还可通过建立包含名为Main的编码模块以替代Word命令，此模块也必须和要替代的命令同名。通过以上方法我们可以修改大多数Word内置命令。　　(江苏　周　奎)<br>
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

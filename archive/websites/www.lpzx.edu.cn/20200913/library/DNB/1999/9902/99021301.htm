@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>在VB中引用.dbf及索引文件</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">在VB中引用.dbf及索引文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　如何用FOX以外的编程语言来取得.dbf数据库的记录值和引用.idx 
+        和.cdx索引一直都是程序员讨论的话题之一。现有一任务是在一个触摸屏系统中加入一个用户查询水费界面。每个用户可随时查询到自己的水费记录。我使用VB5.0，希望打开NetWare系统下营业收费系统的七个.dbf数据表并进行查询。每个数据表有将近10万条记录。通过10M集线器交换数据,查询的字段都不是唯一的。显然这样大的数据量，又是通过10M网络传递，如果VB使用SQL方式查询，则最少要2分钟时间才能得到答复。让一个用户在机器旁边等2分钟是不现实的。于是想利用FoxPro自身的.idx或.cdx索引文件来查找。<br>
+        　　编程可用两种方式实现。一种是直接在VB中调用，另一种使用VB中的shell函数调用FoxPro的exe 
+        程序。<br>
+        　　<strong>方法一、直接在VB中调用.dbf文件</strong><br>
+        　　一、．在FoxPro数据库的所在目录下建立一个与FoxPro数据库文件名相同的.inf文本文件<br>
+        　　步骤：1.创建文本文件＊.inf, 与数据表同名。<br>
+        　　2.在文本文件的第一行，输入[FoxPro 2.5]；如果指定的是FoxPro 2.0索引，则输入[FoxPro 
+        2.0]，其余以此类推。<br>
+        　　3.依次输入各指定索引文件名 形式 IDXn=＊.idx 或 CDXn=＊.cdx 
+        。其中n为数字，依次表示第1个IDX索引文件，第2个IDX索引文件。或第1个CDX索引文件，第2个……以此类推。<br>
+        　　注意：如果不能将.inf 
+        文件与数据库存储在同一目录下，或为了维护方便而希望将所有文件存储在一个共享点。可采用创建Windows注册表项的方法，指向存储.inf的文件路径。（详见VB5的联机手册）<br>
+        　　二、 编写程序<br>
+        　　用OPENDATABASE方法直接打开外部FoxPro表。<br>
+        　　主要语句如下：<br>
+        　　dim db as database<br>
+        　　dim tb as recordset<br>
+        　　′打开外部数据库<br>
+        　　set db=opendatabase(“c:\fox\”,false,false,”foxpro 2.5;”) ′注意FoxPro 与2.5之间必须有空格<br>
+        　　set tb=db.openrecordset(“abc”)<br>
+        　　′调用索引<br>
+        　　tb.index=“abc1＃idx” ′注意索引名为“索引文件名＃后缀名”<br>
+        　　tb.seek “=”, “111－111” ′搜索唯一值为“111－111”的记录<br>
+        　　<strong>方法二、用shell() 函数调用VF的idx文件</strong><br>
+        　　用VB接受用户命令，然后调用VF的 .prg编译的.exe文件，按用户要求在数据库中查询，将查询结果放置在一个 
+        .TXT文件中。VB从.TXT文件取数显示，再次将查询结果传递给VF的.prg编译的 
+        .exe文件，查询取数结果。具体编程从略，这里要着重讨论shell()函数的特性：shell 
+        函数是以异步方式来执行其它程序的。也就是说，用 shell 
+        启动的程序可能还没有完成执行过程，就已经执行到 shell 
+        函数之后的语句。 这种执行方式打乱了程序固有的顺序执行方式, 
+        如果不加注意,程序的运行将产生混乱。<br>
+        　　如果语句如下<br>
+        　　……<br>
+        　　shell(c:\file1.exe) ′ 调用file.exe文件，并把结果放置在 X1.txt中 <br>
+        　　open c:\x1.txt for output as ＃1 ′打开X1.TXT文件，取查询结果。<br>
+        　　……<br>
+        　　按一般执行方式，上述语句应能正确执行。然而实际运行时，即使语句全部正确，也会弹出错误信息框：x1.txt文件不存在。原因就在于VB在执行shell（）语句时，file1.exe文件还未执行完，就继续下一行语句：打开file1文件创建的x1.txt；所以出现错误。<br>
+        　　经过多次实验，我最后采用了VB工具条中的timer控件来完成时间等待，程序编程通过。<br>
+        　　……<br>
+        　　shell(c:\file1.exe)<br>
+        　　‘运行计时器<br>
+        　　timer1.enabled=true<br>
+        　　……<br>
+        　　sub timer1_timer()<br>
+        　　if dir(“c:\x1.txt”)&lt;&gt;”” then<br>
+        　　open c:\x1.txt for output as ＃1<br>
+        　　……<br>
+        　　timer1.enabled=false<br>
+        　　end sub <br>
+        实际运行速度很快，2～3秒内完成查询操作。<br>
+        　　<strong>(广东　羊黎蓉)</p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

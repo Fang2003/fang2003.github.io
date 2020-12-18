@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>清除ＣＭＯＳ设置密码的技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　<br>
+        　　经常帮人修机器或装软件的朋友可能会遇到下面这种情况，当你需要进入CMOS重新设置系统配置信息的时候，却发现被设置了密码口令，不能进入，该怎么解决呢?据观察发现，有许多朋友都利用给CMOS供电电池放电的方法来解决这个问题。其实除了这种麻烦而又需要硬件知识的“硬”方法之外，还有一些轻松方便的“软”方法，那就是编制程序清除口令密码。下面我们就来详细介绍几个这样的小程序。<br>
+        　　第一个：在DOS命令行运行DEBUG程序：<br>
+        　　C：\DOS〉DEBUG<br>
+        　　然后输入以下DEBUG命令：<br>
+        　　－0 70 16<br>
+        　　－0 71 16<br>
+        　　－Q<br>
+        　　这样，CMOS设置中的全部数据信息都被清除，然后重新启动电脑，这样就可以进入CMOS设置了。<br>
+        　　第二个：在DOS命令行运行DEBUG程序：<br>
+        　　C：\DOS〉DEBUG<br>
+        　　然后输入以下DEBUG命令：<br>
+        　　－0 70 10<br>
+        　　－0 71 0<br>
+        　　－Q<br>
+        　　然后重新启动电脑，就可以进入CMOS设置了。<br>
+        　　第三个：在DOS命令行运行DEBUG程序：<br>
+        　　C：\DOS〉DEBUG<br>
+        　　－0 70 11<br>
+        　　－0 71 FF<br>
+        　　－Q<br>
+        　　重新启动电脑，同样可以进入CMOS设置。<br>
+        　　以上三种方法在各种机型上测试，无论新旧主板，百分之九十五以上的机器都能通过。<br>
+        (请本文作者与本报编辑部联系)<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9850/index.htm.txt">《电脑报》1998年12月28日第50期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

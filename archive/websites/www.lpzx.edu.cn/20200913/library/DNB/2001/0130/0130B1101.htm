@@ -1,0 +1,155 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0130/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0130/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第30期 </a>&gt;&gt;<a href="software.html">软件世界</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td height="9"> 
+            <div align="center">如何统计程序的行数</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>我们知道，一个软件的大小通常是用软件有多少行源代码来衡量的。我们经常听到这样的软件宣传广告：XXX程序员用X年时间开发完成，共有XXX行代码。那么，你想不想知道自己辛辛苦苦写的程序到底有多少行代码呢？<br>
+              不过好像VB、Delphi、VC等这些语言中都没有提供让我们统计程序行数的功能。怎么办呢？不用急，身为程序员，当然用编程来实现了。现在，就跟我来用VB实现统计程序行数的功能(用其他语言实现的原理是一样的)。<br>
+              大家都知道吧，VB的源代码(窗体代码、模块代码等)都是以文本形式保存的。窗体代码放在扩展名为“．frm”的文件里，模块代码放在扩展名为“．bas”的文件里，类模块代码放在扩展名为“．cls”的文件里。既然是文本文件，统计行数就是很容易的事了。很多朋友肯定想到了用判断文件中有多少回车符的方法来实现。我一开始也是马上就想到这里，不过，实际上有更好的方法啦——用Line 
+              Input语句！下面就来具体讲一讲在VB中实现此功能的算法思想及源代码。<br>
+              算法思想：<br>
+              查找软件设计目录下的所有扩展名为frm、bas、cls的文件，一旦找到就打开它并获得其行数。<br>
+              源程序：<br>
+              新建一个窗体(可以不放任何控件)，在窗体的Mouse＿Click事件中放入下列代码(为什么要放在Mouse＿Click事件里而不放在Load事件里，看完下面的源程序后你就明白了)：<br>
+              Option Explicit<br>
+              Public Sub Form＿Click()<br>
+              Dim strAppPath As String '程序运行时的路径<br>
+              Dim lngFileLines As Long '文件行数<br>
+              Dim lngTotalLines As Long '总行数<br>
+              Dim blnBeginCount As Boolean '是否开始统计行数<br>
+              Dim strTemp As String '临时变量<br>
+              Me．Cls '清除上一次运行时窗体生成的图形和文本<br>
+              '获取程序运行时的路径<br>
+              strAppPath = App．path<br>
+              If Right(strAppPath,1) ＜＞ “＼” Then strAppPath = strAppPath &amp; 
+              “＼”<br>
+              Dim fs,fd,f '文件系统变量，具体说明请查阅MSDN相关章节<br>
+              '关于CreateObject函数和FileSystemObject对象的具体说明请查阅MSDN相关章节<br>
+              Set fs = CreateObject(“Scripting．FileSystemObject”)<br>
+              Set fd = fs．GetFolder(strAppPath)<br>
+              For Each f In fd．Files<br>
+              strTemp = Right(UCase(f．Name), 3)'比较文件名时，必须将f．Name的内容转换成大写，否则会被视为不相同文件<br>
+              If strTemp = “FRM” Or strTemp = “BAS” Or strTemp = “CLS” Then<br>
+              '这里只统计了三种文件的行数<br>
+              Open strAppPath &amp; f．Name For Input As #1 '打开文件<br>
+              blnBeginCount = False '一定要设初值<br>
+              lngFileLines = 0 '同上<br>
+              Do While Not EOF(1)<br>
+              Line Input #1,strTemp '使用Line Input语句的目的就是为了一行行的读数据<br>
+              If Left(strTemp,15) = “Option Explicit” Then blnBeginCount = True<br>
+              If blnBeginCount = True Then lngFileLines = lngFileLines + 1<br>
+              '这里做这两个判断的原因是文件中有很多代码是VB自动完成的(用记事本打开就知道了)，我们自己写的代码一般是从“Option 
+              Explicit”开始<br>
+              Loop<br>
+              Close #1<br>
+              lngTotalLines = lngTotalLines + lngFileLines<br>
+              Print f．Name &amp; “的代码行数：” &amp; lngFileLines<br>
+              '因为使用的是Print语句，所以这些代码不能放在窗体的Load事件中<br>
+              End If<br>
+              Next<br>
+              Print “总代码行数：” &amp; lngTotalLines<br>
+              '因为使用的是Print语句，所以这些代码不能放在窗体的Load事件中<br>
+              End Sub<br>
+              以上程序在Windows Me+VB6调试通过，所附图片为我用本程序统计时的截图。</p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

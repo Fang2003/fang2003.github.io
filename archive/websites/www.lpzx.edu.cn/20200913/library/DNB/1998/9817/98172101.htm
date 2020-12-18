@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">中小型办公局域网的实现<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　<strong>编者按：</strong>随着办公自动化的深入，进行微机互联的单位越来越多，如何组建一个经济、实用的局域网成为一热门话题。本文为你提供一种较为经济、易于维护的组网方式。本版也希望广大读者就这一话题踊跃投稿。<br>
+        中小型办公局域网的实现<br>
+        　　目前常用的局域网典型结构有：3＋、NOVELL、DECnet、IBM Token－Ring以及AT＆T 
+        StarLan等等，然而这些结构形式的网络的组网、维护都较为复杂，不很适宜中小型办公系统使用。鉴于这种情况，笔者提供一种较为经济、易于维护的组网方式，供大家组建中小型局域网时参考。<br>
+        　　局域网选择的基本考虑：<br>
+        　　1.网络标准化，以支持网络扩展和互联。<br>
+        　　2.访问控制方法，网络应满足吞吐量和响应时间的要求，尤其要考虑负载峰值和平均吞吐量。<br>
+        　　3.网络传输距离和拓扑结构，应满足用户的现场环境和介质访问的要求。<br>
+        　　4.传输介质应满足网络带宽、抗干扰和安装等要求。<br>
+        　　5.工作站应具有相当的处理速度及内存容量。<br>
+        　　6.网络管理软件应支持多种服务、管理功能及兼容性要求。<br>
+        　　网络结构设计：<br>
+        　　在设计网络结构时，要考虑其成本、扩充性、安装维护是否方便等。综合这些因素，在以太网与令牌网两种结构类型中，笔者建议选择以太网，这是因为以太网的组成较为简单，便于非专业人员的日常维护。鉴于各工作站独立工作及协同工作的双重要求，工作站微机间的连接采用星形拓扑结构，在主计算机(HOST)与工作站间采用总线结构，以增强多用户访问时的可靠性，保证一定的传输速率。<br>
+        　　网络连接介质的选择：<br>
+        　　因双绞线以太网10BASE－T是局域网发展的方向，也是目前的主流，故用户机与集线器(HUB)间选用无屏蔽双绞线(每段双绞线的长度不得超过100米的极限，否则会对数据传输速率造成较大影响)。干线电缆、主计算机与干线电缆的连接、集线器与干线电缆的连接均采用50欧姆的基带同轴电缆。考虑到连入Internet的单位越来越多，网络结构图设计如下：<br>
+        　　连网微机的配置要求：<br>
+        　　6M以上内存，40M以上硬盘，80386以上处理器。主计算机因需带一些外设以便共享，所以该机应采用综合性能较高的计算机。<br>
+        　　网络适配器(网卡)的选择：<br>
+        　　据笔者的使用经验，100元左右的兼容网卡已能满足中小型办公网的要求，因此在资金不很宽裕的情况下，没必要去追求名牌网卡，选用NE2000、3C503兼容的网卡即可。另外，选择网卡时注意与接入电缆类型匹配，每台设备联入总线需一个T型接头。<br>
+        　　集线器(HUB)的选择：<br>
+        　　在以太网中集线器的作用是用来将各微机引出的双绞线联接在一起，常用集线器有8口和16口两种，根据所需接入的微机数量进行选用。市场上常见的品牌有D－Link等，用户可根据具体情况选择购买。<br>
+        　　网络操作系统的选择：<br>
+        　　因国内大多用户使用的是Microsoft的Windows系列产品，为充分发挥用户现有知识的价值，选用Windows 
+        For Workgroup比较合适，有经验的用户可以选用Windows NT作网络操作系统。另外，这种网络结构也较适用于基于DOS的NetWare等操作系统所组成的Novell网。<br>
+        　　MODEM的选择：<br>
+        　　虽然各大MODEM厂商竭力将56K产品推向市场，笔者仍建议选择33.6K的MODEM，理由是国内大多ISP服务商的接入速率实在不敢恭维。<br>
+        　　网卡的安装：<br>
+        　　将网卡插入计算机插槽，使用网卡自带的安装盘进行SETUP，完成后对系统进行测试，查看中断和I/O地址，看网卡是否与其他设备冲突，如果有冲突则需重设参数。查看AUTOEXEC.BAT，确认其中已包含网络驱动，否则需要手动挂接驱动程序路径(操作系统如用Windows 
+        NT，这一步不必先做，安装NT在检测到网卡时根据提示进行设置)。<br>
+        　　网络操作系统的安装：<br>
+        　　Windows For Workgroup、Windows NT的安装分别跟Windows 3.x和Win95相似，安装时注意对共享和通讯协议的设置，通过通讯软件实现各机间E－mail的传送。NetWare的安装设置较为复杂，可参照相关资料进行。<br>
+        　　此种网络结构特点：<br>
+        　　组网、维护方便，可选多种网络操作系统，经济实用，且扩充容易，并有两种方式可供选择：(1)以双绞线连入集线器；(2)利用T型插头直接连入总线电缆。数据传输速率可满足日常办公要求。此外，这种结构也适宜整栋办公楼内部相连。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(黄雪峰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月4日第17期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>垃圾DLL的清理高手---Clean System Directory</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>垃圾DLL的清理高手---Clean 
+        System Directory<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        　在Windows的系统维护工作中，一直让人棘手的问题，就是如何将系统目录下的那些没用的文件识别出来并清除掉。虽然有一些专门系统维护清理工具，如Cleansweep、windel等，但它们一般只能做到对由它们参与并做了安装记录的程序进行清除。而对于安装到Windows的system目录下的＊.dll文件，因为经常会有多个程序共用一个的情况，很难辨别是否有用。上述那些维护清理工具，也大都采取“事不关己，高高挂起”的态度。因为，与其错误删除造成用户的系统瘫痪，还不如不去管它们，免得被人骂娘要好些。所以，随着使用时间的推移，特别是喜欢尝试各种新程序的用户，会在Windows的系统目录下积累越来越多的没有任何用处的dll类文件，这不仅浪费硬盘空间，还会导致Windows驱动与运行性能严重下降。最近，笔者从网络上找到一款由澳大利亚的Kevin 
+        Solway编制的，专门用来清理Windows的system目录中无用的dll文件的工具软件Clean 
+        System Directory（V 1.6版）(免费的，无须注册，没有使用时间限制)，笔者经试用后，认为的确能较好解决已是“老大难”的清理dll文件中没用的垃圾问题。<br>
+        　　从网址www.ozemail.com.au/～kevsol/sware.html可以下载该软件（文件为zip文件，64K长度。也可给软件作者发E－mail 
+        到ksolway@poboxes.com索要）。下载后先解压，再用程序自带的setup.exe进行安装。安装时，如果不愿意采用默认目录可另外指定。安装后约占用128KB硬盘空间，在Windows3.x或95中都可使用（不能用于NT）。安装后，在程序组中生成一个文件夹快捷方式，打开后就可看到主程序clnsys.exe带有笤帚的图标。双击启动，出现操作窗口。<br>
+        　　在操作窗口中下部的Scan drives中，标有26个英文字母，其中深色的，前面带钩标记字母就是用户系统现有的所有硬盘与硬盘分区（浅色则表示不存在的硬盘分区）。默认所有的硬盘和硬盘分区均选中，一般不需改动。如果你有基于光盘运行的程序也放有dll类文件在Windows的system目录下，则可以放入这张光盘，将光盘驱动器盘符勾选。如果软驱上也是，也可勾选（也需放入这张软盘）。然后，按动最下面一排中间的操作按钮Start 
+        scanning， clnsys.exe首先将Windows的system目录下所有的dll文件找出，在按钮区上的“DLLs 
+        Unused：”中看到的数字就是dll文件数目。然后，clnsys.exe开始对所有硬盘分区中的程序文件与配置文件进行扫描，逐个分析所扫描的文件中是否声明或有调用代码指向dll文件。如果有，就将相应的dll文件排除。随着扫描进行，“DLLs 
+        Unused”旁的数字就不断减少，当所有的文件扫描完后，剩下的那些没有任何程序声明或有调用代码指向dll文件，就被clnsys.exe判定为是Unused(未使用)的dll文件。整个过程可能需要一些时间（视硬盘大小、文件多少与系统速度而定）。但是clnsys.exe不会删除任何一个被判定无用的dll文件，只是将这些dll文件移动到由该程序在Windows的system目录下创建的一个名为bkupdlls目录下。扫描完后，出现选择移动文件的操作窗口。用下面的Select 
+        all按钮，就会将图2窗口中列出的所有dll文件移动到bkupdlls目录下。如果你有能力判定其中哪些是需要，哪些是不需要的dll文件，也可将不需要的文件用鼠标选中，则用Move 
+        select files按钮移动，未选中不会移动。Cancel 
+        则可什么也不做返回程序主窗口。在主窗口中，用Quit按钮就可退出并关闭该程序了。<br>
+        　　因为clnsys.exe是通过对硬盘上所有文件内部程序代码逐个查看来确定无用的dll文件的，因此可靠性是相当高的。但是，对于一些不是由应用程序自己产生的，而是由操作系统为之生成的dll文件，如笔者使用的超想自然码3.0，在Windows 
+        95中属于兼容使用16位程序，Windows 95要为其运行生成一个Winzrm＄＄.dll文件，因为没有任何程序声明要使用它，clnsys.exe也会将其作为无用的dll文件看待。所以，clnsys.exe采用备份的作法是稳妥的。经过清理后，用户如果执行某个程序出错，应该注意看“找不到xx.dll文件”出错信息，根据这样的信息，就可以从bkupdlls目录中将相应的dll文件重新送回到system目录下。经过一段时间的运行，如果你能确信没有程序受到影响了，你就可以将bkupdlls目录下dll文件放心删除。如果你的硬盘空间紧张，也可以将bkupdlls下的dll文件压缩到软盘上备份，以备有错误时进行补救。<strong> 
+        &nbsp;&nbsp; (于建原)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月4日第17期9版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

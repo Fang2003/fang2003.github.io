@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>9812请你编程</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　本栏目由苦丁香公司协办<br>
+        　　对于本次的编程题目，许多读者都来信告诉我们说太简单，可是这次参加编程的读者也是特别的多，其实“请你编程”这个栏目存在的目的也就是给予每一个喜欢编程的读者一个展示自己才华的机会。题目虽然简单，但却能让大家都享受参与的乐趣，何乐而不为呢？岁末的时候，让我们都来轻松一下。下面来看看广东读者王净的思路和源程序。本次题目的答案是王先生的车牌号是9317。<br>
+        　　思路：<br>
+        　　王先生的车牌号是四位数字，从左看第一个数比最后一个数大2，第二个数字又比第三个数字大，四个数字各不相同，且都不是0，且与王先生的门牌号相反，又门牌号与车牌号相加为16456 
+        ，编程求车牌号。<br>
+        　　源程序：<br>
+        　　＃include ″stdio.h″<br>
+        　　main()<br>
+        　　{<br>
+        　　int a,b,c,d,s,l;<br>
+        　　for(a=3;a&lt;=9;a＋＋)　/＊因要求a减去d等于2且所有数字不能为零,故a从3开始循环＊/<br>
+        　　{<br>
+        　　d=a－2;　/＊由a决定相应d值＊/<br>
+        　　for(b=1;b&lt;=9＆＆b!=a＆＆b!=d;b＋＋)　/＊第二位数开始循环,要求不能等于已知数＊/<br>
+        　　{<br>
+        　　for(c=1;c&lt;b＆＆c!=a＆＆c!=d;c＋＋)　/＊第三位数开始循环＊/<br>
+        　　{<br>
+        　　s=a＊1000＋b＊100＋c＊10＋d;　/＊将每循环一次所得的四个数字变成四位数＊/<br>
+        　　l=d＊1000＋c＊100＋b＊10＋a;　/＊相应的相反数＊/<br>
+        　　if(s＋l==16456)　/＊条件判断＊/<br>
+        　　printf(″the number is:％d″,s);<br>
+        　　}<br>
+        　　}<br>
+        　　}<br>
+        　　}<br>
+        　　9902请你编程题目<br>
+        　　有一条没有桥的大河，只有两个船夫负责把过河的人送到对岸。现在有一队游客要过河（有男有女）。船夫说：河神有规矩，每次乘船的男人和女人的数目要一样多（不包括船夫本人）或者每次只运送男人或只运送女人（也不包括船夫本人），船才能顺利到达对岸；否则河神会发怒，把船弄翻。游客和船夫达成交易：两个船夫轮流送游客，每次船夫至少要送一名游客，而游客只把过河的钱交给把最后一批游客送到对岸的那个船夫。（假设一次乘船人数不限）很明显，有些情况是第一个开始送游客的船夫不能拿到钱。如：游客数目为1男2女，第一个船夫只能送1男、1男1女、1女、2女四种选择，而留给第二个船夫的是2女、1女、1男1女、1男四种情况，第二个船夫可以一次把剩下的游客都送到对岸，从而拿到过河钱；而如果游客数目为3男4女，第一个船夫只要送2男2女，把1男2女留给第二个船夫就可保证拿到过河钱。现在给出一对数字（i,j），表示有i个男游客，j个女游客，要求编一程序，可针对i,j两个数字，判断究竟是哪一个船夫能拿到钱。程序要求如下：<br>
+        　　1输入数据从文件rivertxt中读取，rivertxt格式为每一行两个数据i,j，两数之间用空格分开。数据0,0表示输入结束。<br>
+        　　2输出到屏幕，每一输出结果占一行，用first表示第一个船夫可以拿到钱，用second表示第二个船夫可以拿到钱。<br>
+        　　3i,j在1到100之间。<br>
+        　　来稿请寄磁盘稿或用E－mail投稿，请写明编程思路和源程序，请将来稿寄到电脑报编辑部的收信地址和E－mail邮箱，同时欢迎提供请你编程的题目。来稿截止日期：1999年2月15日。本次题目由上海的zzw提供。<br>
+        　　本期获奖名单：<br>
+        　　蒋峻岭（湖南）　程学武（四川）<br>
+        　　王　净（广东）　吕云光（江苏）<br>
+        　　葛　勇（上海）　艾新科（福建）<br>
+        　　刘仁杰（陕西）　袁光忠（安徽）<br>
+        　　每位获奖者将得到苦丁香公司的光盘一张。 <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月28日第50期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

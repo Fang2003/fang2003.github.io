@@ -1,0 +1,216 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用VB实现软件试用期</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{用VB实现软件试用期}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 大家都知道，很多共享软件都有它们的试用期即给你一个固定的期限免费使用超出一定的期限如果你坚决拒付使用费的话,呵呵，那个软件就不能启动了，就是修改注册表或重新安装都没有用。你想不想也编个带试用期的程序呢？不难，方法如下：<br>
+              编程思路<br>
+              应有的功能：<br>
+              1.给定一个试用期限，在系统每次启动时会判断软件已经使用了几天，还有几天可用以及启动的次数。<br>
+              2.当系统日期被修改成往日的日期后系统能自动判别“禁止修改日期”不予正常启动。<br>
+              3.当试用期到“显示信息”不予启动程序。<br>
+              大致算法<br>
+              1.在系统第一次运行时，在一个隐蔽的地方，如“c:\windows\system”，建立一个用以记录系统信息的数据库文件,如date.mdb,使用一张表date，有三个字段first＿timelast＿time和times。其中first＿time为系统第一次启动时的日期即试用期的第一天。last＿time为系统最近一次启动的时间，而times为记录系统启动的次数。<br>
+              2.系统每次启动会检测当前的日期同last＿time做比较如果当前的日期如2000/09/30在last＿time,如2000/10/01之前,说明系统的日期被推后,显示信息,不予启动系统。反之,则转入第三步。<br>
+              3.取出数据库中的first＿time同当前的日期做减法运算,看所用的天数是否在使用期限内。如果在则转入第四步“否则显示信息”不予启动系统。<br>
+              4.修改数据库的last＿time字段为当前的日期,显示系统已经使用的情况,正常启动系统。<br>
+              好了，只要大家把date.mdb藏好了，不被发现就万事大吉了。而且你可以给这个数据库加上密码然后把first＿time、last＿time、times的字段名改个面目全非就算有高手发现了数据库，破解了密码，他也不知道这个数据库是哪个软件所带的文件。<br>
+              程序源码<br>
+              在你的工程中请以SUB main启动程序。<br>
+              Sub main<br>
+              On Error GoTo error<br>
+              ＇系统检测是否有date.mdb文件如果没有则是系统第一次启动,则建立之<br>
+              If Dir″c:\windows\system\date.mdb″＝″″ Then <br>
+              ＇注意在开始:你要确定工程引用了Microsoft dao 2.5/3.5 compatibility library <br>
+              Dim WS As Workspace<br>
+              Dim DB As Database<br>
+              Dim TD As Tabledef<br>
+              Dim FLD As Field<br>
+              Dim IDX As Index<br>
+              Dim rd As Recordset<br>
+              Set WS ＝ DBEngine.Workspaces0<br>
+              Set DB ＝ WS.CreateDatabase″c：\windows\system\date.mdb″dbLangGeneral<br>
+              DB.Connect ＝ ″pwd＝andy″<br>
+              Set TD ＝ DB.CreateTableDef″date″<br>
+              TD.Attributes ＝ 0<br>
+              TD.Connect ＝ ″″<br>
+              TD.SourceTableName ＝ ″″<br>
+              TD.ValidationRule ＝ ″″<br>
+              TD.ValidationText ＝ ″″<br>
+              ＇ Field first＿time<br>
+              Set FLD ＝ TD.CreateField″first＿time″ 8 8<br>
+              FLD.Attributes ＝ 1<br>
+              FLD.DefaultValue ＝ ″″<br>
+              FLD.OrdinalPosition ＝ 0<br>
+              FLD.Required ＝ False<br>
+              FLD.ValidationRule ＝ ″″<br>
+              FLD.ValidationText ＝ ″″<br>
+              TD.Fields.Append FLD<br>
+              ＇ Field last＿time<br>
+              Set FLD ＝ TD.CreateField″last＿time″ 8 8<br>
+              FLD.Attributes ＝ 1<br>
+              FLD.DefaultValue ＝ ″″<br>
+              FLD.OrdinalPosition ＝ 1<br>
+              FLD.Required ＝ False<br>
+              FLD.ValidationRule ＝ ″″<br>
+              FLD.ValidationText ＝ ″″<br>
+              TD.Fields.Append FLD<br>
+              ＇ Field times<br>
+              Set FLD ＝ TD.CreateField″times″ 3 2<br>
+              FLD.Attributes ＝ 1<br>
+              FLD.DefaultValue ＝ ″″<br>
+              FLD.OrdinalPosition ＝ 2<br>
+              FLD.Required ＝ False<br>
+              FLD.ValidationRule ＝ ″″<br>
+              FLD.ValidationText ＝ ″″<br>
+              TD.Fields.Append FLD<br>
+              DB.TableDefs.Append TD<br>
+              DB.Close<br>
+              Set DB ＝ WS.OpenDatabase″c：\windows\system\date.mdb″<br>
+              Set rd ＝ DB.OpenRecordset″date″<br>
+              With rd<br>
+              .AddNew<br>
+              .Fields″first＿time″＝ Date<br>
+              .Fields″last＿time″＝ Date<br>
+              .Fields″times″＝ 1<br>
+              .Update<br>
+              End With<br>
+              DB.Close<br>
+              MsgBox ″这是你第一次启动本系统，你的试用期为30天，今天是第一天。谢谢使用″48″天华电脑艺术创意工作室″<br>
+              ＇效果如图<br>
+              mainForm.Show ＇启动你的主窗体<br>
+              Else ＇系统有date.mdb文件，则不是第一次运行，就不用建立数据库文件了.<br>
+              Dim WS2 As Workspace<br>
+              Dim DB2 As Database<br>
+              Dim rd2 As Recordset<br>
+              Set WS2 ＝ Workspaces0<br>
+              Set DB2 ＝ WS2.OpenDatabase″c：\windows\system\date.mdb″ pwd ＝″springlover″<br>
+              Set rd2 ＝ DB2.OpenRecordset″date″<br>
+              ＇开始检测用户是否修改了系统日期<br>
+              rd2.MoveFirst<br>
+              If rd2.Fields″last＿time″&gt; Date Then<br>
+              MsgBox ″对不起你在本软件的试用期内不可以修改系统日期否则将取消你对本系统的试用权.如果你想继续使用本软件。请你恢复系统日期。谢谢合作″48 
+              ″天华电脑艺术创意工作室″<br>
+              End<br>
+              End If<br>
+              ＇开始检测是否超期<br>
+              If Date - rd2.Fields″first＿time″&gt;＝ 30 Then ＇设定试用期为30天<br>
+              MsgBox″你已经启动本系统″ ＆ rd2.Fields″times″＆ ″次了，而且已经到了30天的试用期，如果你想继续使用本软件，请你到本公司注册并购买正版的软件″48 
+              ″天华电脑艺术创意工作室″<br>
+              End<br>
+              Else<br>
+              ＇仍在试用期内<br>
+              num％ ＝ rd2.Fields″times″<br>
+              rd2.Edit<br>
+              rd2.Fields″last＿time″ ＝ Date<br>
+              rd2.Fields″times″ ＝ num + 1<br>
+              rd2.Update<br>
+              MsgBox ″这是你第″ ＆ rd2.Fields″times″ ＆ ″次使用本系统你还有″ ＆ 30 - Date 
+              - rd2.Fields″first＿time″ ＆ ″天的试用期，祝你今天工作愉快″48 ″天华电脑艺术创意工作室″<br>
+              mainForm.Show '启动你的主窗体<br>
+              End If<br>
+              End If<br>
+              Exit Sub<br>
+              error<br>
+              MsgBox ″系统错误″<br>
+              End Sub<br>
+              好了,终于编写完了我们带试用期的软件,一般的高手会想到到注册表去修改或是恢复最初的注册表但这都是无济于事的。而且这种方法还有一个重要的特点就是只能安装本系统一次,因为当卸载了原来的程序,想重新安装的时候,因为date.mdb仍然存在所以就真正地控制了只能安装一次,使用30天的期限是不是比Dreamwaver还要酷。如果想重新安装,只要附加一个小程序删除那个数据库文件即可。如果你使用这种方法,再结合注册表,我想效果一定更佳,等你有了更好更妙的方法别忘了写信告诉我。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

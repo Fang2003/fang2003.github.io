@@ -1,0 +1,258 @@
+<html><!-- #BeginTemplate "/Templates/internet.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>用Netstal命令查木马</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+      
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第02期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+
+        </tr>
+
+      </table>
+
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用Netstal命令查木马<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->谈到“特洛伊木马”想必网友们都会知道它是通过各种途径将服务器端程序加载到被控计算机内，待其与外界建立连接，再在主机一侧利用客户端程序通过某个端口来控制对方。目前网络中常见的木马大约有200多种，你可能冷不防地就中了木马，一但你和外界连接，你的爱机将完全处在黑客的监视之下。那么如何才能判断你是否中了木马？<br>
+
+              其实在WIN95/98/NT安装目录下便有一个Netstat命令，利用该工具可以显示有关统计信息和当前TCP/IP网络的连接情况。<br>
+
+              其格式是：Netstat －参数1 －参数2<br>
+
+              利用a这个参数就可以显示所有与该机建立连接的端口信息。以下给出网络通信中最常用的几个端口：用于FTP文件传输协议的端口：21；<br>
+
+              用于TELNET远程登录协议的端口23<br>
+
+              用于SMTP邮件传输协议的端口25<br>
+
+              用于DNS域名服务即域名与IP之间的转换的端口53<br>
+
+              用于HTTP超文本传输协议的端口80 <br>
+
+              用于POP3电子邮件的一种接收协议的端口110<br>
+
+              WINDOWS中开放的端口：139；<br>
+
+              除此之外，若还有其他端口开放，就应引起重视，进一步判断是否为木马入侵。以下列出几个流行的木马所使用的通信端口有的木马端口可以重定义下面只是其默认端口<br>
+
+              BO31337YAI1999DEEP THROAT21403150NETBUS12345冰河7626SUB7124327374<br>
+
+              你可以通过监视以上这些端口是否开放来判断自己是否中了木马。若遭到了木马的袭击就应清除相应的木马程序。由于手工清除比较繁琐，建议大家还是选用几款专业的木马清除软件，如：ZoneAlarmhttp//www．zonelabs．com，TrojanRemoverhttp//members．aol．com<br>
+
+              Netstat的主要参数还有<br>
+
+              e显示以太网的统计信息一般与参数s共同使用<br>
+
+              n以数字格式显示地址和端口信息<br>
+
+              s显示TCP、ICMP、IP及UDP的协议的统计情况。<br>
+
+              听了我一番介绍以后，你是不是觉得Netstat挺有用？好了，快回去试试吧，看看<br>
+
+              自己有没有中木马？(上海 崔宏慧)<!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

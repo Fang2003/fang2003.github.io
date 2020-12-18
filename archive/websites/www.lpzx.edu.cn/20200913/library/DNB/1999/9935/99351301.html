@@ -1,0 +1,142 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- PowerBuilder编程俱乐部</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/banner.jpg' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>35 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; PowerBuilder编程俱乐部</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 PowerBuilder编程俱乐部 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好！PowerBuilder编程俱乐部今天正式与大家见面了，欢迎各位PB爱好者参与进来！为了方便与大家的交流，俱乐部特开放两个Email信箱：kjx@263.net和pb7@990.net，大家如果有PB方面的问题，可以发Email到这两个信箱。当然，更欢迎各位到我的主页http:／／kjx.126.com或http:／／pb70.yeah.net的BBS讨论区提交问题或解答问题，以便大家都能从中学到知识。互相学习、共同进步是PB编程俱乐部的宗旨，热切希望爱好PB编程的读者加入到PB编程俱乐部来！
+<p><b>　　一、问：一个MIS系统采用C／S的开发模式，前台开发工具用PB6.5，后台数据库为Oracle7.3。我通过OBOC却连不上数据库，请问应该如何配置？</b></p>
+　　答：PB提供了与当前流行的大型数据库如Oracle、Informix、Sybase等的专用接口，连接时无需通过ODBC。配置步骤具体如下：<br>
+　　1． 首先要通过SQL＊Net配置数据库别名。<br>
+　　启动SQL＊Net Easy Configuration后，选择“添加数据库别名” ( Add Database Alias)，输入数据库别名， 如hello。选择协议TCP／IP，输入TCP／IP主机名(TCP／IP Host Name)，可为主机名或IP地址输入数据库名(Database Instance)如ora7。单击“确定”按钮，生成数据库别名(hello)后，按“取消”退出。连接数据库，测试SQL＊Net是否连通。运行SQL＊PLUS，用自己的用户名，如kukoc进入，在用户名处输入kukoc／kukoc@hello 。若进入远程数据库，则SQL＊Net  配置成功。<br>
+　　2．然后，在PB6.5中配置 DB Profile。<br>
+　　选择073 Oracle7.3，按Button New，输入Profile Name，如hello。<br>
+　　输入Server：@hello（此处一定要为@＋开始配置的数据库别名）<br>
+　　输入Login ID：kukoc<br>
+　　输入Password：kukoc<br>
+　　单击确定按钮结束。<br>
+　　我们也可以通过配置文件（.ini）实现数据库连接，如hello.ini文件中数据库配置如下：<br>
+　　[Database]<br>
+　　DBMS=O73 ORACLE 7.3<br>
+　　Database=<br>
+　　UserId=<br>
+　　DatabasePassword=<br>
+　　LogPassword=kukoc<br>
+　　ServerName=@hello<br>
+　　LogId=kukoc<br>
+　　Lock=<br>
+　　DbParm=<br>
+　　Prompt=0
+<p><b>　　二、问：我在编写数据窗口录入程序的时候，若用户录入违反了约束（如关键字重复、非空项没输入等），程序老报一大堆英文出错信息，用户也看不明白。我怎样才能屏蔽它，并显示中文的错误信息？</b></p>
+　　答：可以自己编写一个错误信息函数，如f_dwerror_message（），参数为错误信息代码（Long型），返回值为1。函数中根据传入的错误代码给出相应的中文错误信息。在数据窗口的dberror事件中调用它：<br>
+　　return f_dwerror_message (sqldbcode)<br>
+　　而且，我们还可以将此数据窗口作成用户对象，要用到的地方继承即可。
+<p><b>　　三、问：在PB中如何打开一个文件（如.txt，.doc），就像在资源管理器中双击打开文件一样？</b></p>
+　　答：可以通过API函数来实现。<br>
+　　在应用程序的Global External Functions中定义：<br>
+　　Function long ShellExecuteA (ulong hwnd, string lpOperation, string lpFile, ＆ string <br>lpParameters, string lpDirectory, long nShowCmd) library “shell32.dll”
+　　调用如下：<br>
+　　String ls_null<br>
+　　SetNull (ls_null)<br>
+　　ShellExecuteA(Handle(Parent), ls_null, “c:\doc\hello.txt”, ls_null, ls_null, 1)
+<p><b>　　四、问：PB中数据窗口输入栏目（域）间的切换通过按键盘最左边的Tab 键来实现，既不方便又影响录入速度。如何能用Enter键替代Tab 键切换栏目，实现焦点的转移？</b></p>
+　　答：由于按Enter键是Windows直接支持的消息，故我们可以使用用户事件来解决此问题。 在用户事件中，PowerBuilder提供的一条pbm_事件对应Windows的一条或几条消息。我们在数据窗的用户事件中选择pbm_dwnProcessEnter并命名为ue_Enterkeydown。当我们按下Enter键时，将触发此事件。<br>
+　　提供两种方法（推荐用第二种）：<br>
+　　1.利用数据窗口的SetColumn函数。<br>
+　　在所定义的ue_Enterkeydown事件下写代码：<br>
+　　long ll_column_count<br>
+　　long ll_column<br>
+　　ll_column_count =long(this.Describe(“DataWindow.Column.Count”))<br>
+　　ll_column = this.GetColumn()<br>
+　　if ll_column = ll_column_count then<br>
+　　return<br>
+　　else<br>
+　　this.SetColumn(ll_column ＋ 1)<br>
+　　end if<br>
+　　用上面脚本，须注意几点：<br>
+　　(1) 按Enter键，焦点的切换是按所选列的顺序，而不是按设置的Taborder的顺序。<br>
+　　(2) 若某列的visible属性为false 或 TabOrder = 0， 则以上方法不起作用。<br>
+　　若不合以上要求，即所选列的顺序与要录入域顺序不一致，或某些列的visible属性为false或 其TabOrder = 0，此时不能用上述代码，但也可用类似方法实现，只是稍繁琐一点，举例如下：<br>
+　　long ll_column<br>
+　　string ls_column_name<br>
+　　ll_column = this.getcolumn()<br>
+　　ls_column_name = this.Describe(“＃”＋string(ll_column)＋“.Name”)<br>
+　　choose case ls_column_name ／／列名<br>
+　　case ‘no'<br>
+　　this.SetColumn(‘name')<br>
+　　case ‘name'<br>
+　　this.SetColumn(‘age')
+　　case ‘age'<br>
+　　…<br>
+　　end choose<br>
+　　2.把消息传递给Tab键，同时忽略Enter键的处理，这种方法最为方便简洁。在ue_Enterkeydown事件中<br>
+　　编写脚本如下：<br>
+　　Send(Handle(this),256,9,Long(0,0))<br>
+　　Return 1
+<p><b>　　五、问：Datawindow中要匹配的条件是变化的，如输入一个名字（名字放在变量ls_name中），用dw_name.setfilter(“name = ” ＋ ls_name )不起作用。如何用setfilter将这条记录找出来？</b></p>
+　　 答：因 ls_name 是string型的，filter语句应该这样写：<br>
+　　dw_name.SetFilter(“name = ‘” ＋ ls_name ＋ “'”)<br>
+　　dw_name.Filter( )<br>
+　　当ls_name = “张三”时，脚本实际为：<br>
+　　dw_name.SetFilter(“name = ‘张三’”)<br>
+　　dw_name.Filter( )
+<b><p>　　六、问：怎样得到一个应用程序如Outlook的路径？</p></b>
+　　答：可用RegistryGet()函数从系统注册表中获得。具体用法如下：<br>
+　　li_return = RegistryGet (“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows ＆<br>
+　　\CurrentVersion\App Paths\MSIMN.EXE”,“Path" , ls_outlook_path )<br>
+　　执行此脚本后，Outlook的路径将保存在string型变量ls_outlook_path中。<br></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/35/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99351301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

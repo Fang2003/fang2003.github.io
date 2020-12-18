@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　湖北李咪朋友问：1.我有一台6X86PR150＋电脑和一块Intel 
+        10M网卡（接同轴电缆），在安装Windows 95过程中死机，屏幕变蓝后出现0E错误，每次均如此，修改CMOS设置也没有用，请专家给予指点。2.同样的机器，拔掉网卡后，安装一型号为FAXSTAR336调制解调器上网，但在拨号后不能正确登录，安装TCP/IP协议时系统寻找ARC.EXE，取消后能正确安装，但仍不能登录。<br>
+        　　答：1.我曾遇到过同样的问题，不知你是否在DOS下安装了网卡的驱动程序（就是IPX、NETX），如果安装了，那就是它的毛病，这些驱动程序和网卡在Windows 
+        95下的驱动程序相冲突，请将Autoexec中有关网卡的驻留程序删掉。2.至于第二个问题，我想你的出发点是对的：安装TCP/IP协议。但安装TCP/IP协议时，一般不会出现系统寻找ARC.EXE文件，从你的情况上来看，很可能是INF文件损坏，你可以把Windows 
+        95源盘中所有INF文件解包后，拷入Windows，也可以把其它电脑中的INF文件拷过来。<br>
+        　　哈尔滨读者常洪伟问：我办公室有一台Pentium 133 CPU/RHINO8（OPTI芯片）/16M内存/1080M硬盘的电脑，近来发现病毒，用FDISK重新分区时，发现只有1030M，用KV300杀毒后仍如此，欲进行低级格式化，由于主板上没有低格的程序，朋友用光盘上的HDFORMAT对硬盘进行了低级格式化，但分区时发现只剩下504M，请告诉我正确的操作方法。<br>
+        　　答：老式的IDE接口不支持LBA方式，因此理论上硬盘的最大容量为528MB，HDFORMAT也不支持LBA方式，所以超过528MB的硬盘不管多大一律按528M去格式化，你所说的发现空间为504MB，那是衡量1MB的标准不同。说528MB，是按1000000BYTE=1MB去算，而504MB则是按1048576BYE=1MB得出来的，同样，你用1080×1000000/1048576，看看是不是1030MB。解决你的问题的办法有很多，你可以找一些高级的格式化软件，或者干脆把硬盘卸下来，拿到一台有低格程序的CMOS的电脑上去进行低级格式化。<br>
+        　　珠海市王晨朋友问：一台EPSON AP3260打印机，在WIN95里打印总是打半页多，怎样才能让它打满？<br>
+        　　答：你的这台打印机在国内很少见，它使用ESC/P2控制命令集，并可升级为彩打。可以从以下两个方面进行检查：1.Windows 
+        95的驱动程序是否正确安装，例如用1600K的驱动程序就可能只能打出半篇来。如该型号打印机的驱动程序找不到，也可安装LQ570 
+        ESC/P2的驱动程序。2.并口的类型是否正确。Windows 95的Lpt.vxd有个小BUG，如果并口类型在CMOS中设为ECP或EPP的时候，很可能出现这种情况，你可以到微软的主页上下载新的Lpt.vxd，或者干脆在CMOS中把打印口设为SPP（NORMAL），但打印速度会下降。<br>
+        　　重庆张涛朋友问：我于1996年购得一块RHINO6VX主板，前些日子从www.oceanhk.com下载了最新的BIOS程序，用FLASH写入后电脑便瘫痪，机器能通过自检，也能进入CMOS，但软硬盘均失效（找不到），我想把原来的BIOS重新写入，可软硬驱不好使，我们这里又没有专业的BIOS读写器，大侠能不能帮帮忙？可不要眼睁睁地看着我的主板完蛋啊！<br>
+        　　答：热拔插的方法很简单，不过由于该板子较老，很难找到相同的板子。估计BIOS升级失败的原因是由于主板较老，而新的BIOS支持的一些新特性没有硬件去支持（没有证实），这样试试吧，或许能行：在CMOS中关掉主板上所有的I/O口（包括软、硬控制器），然后找一块多功能卡插上（以前286、386机器上的多功能卡均可，486机器上的多功能卡则可接硬盘），并把软驱接上，这时软盘应该能启动，然后赶快把原来的BIOS写回去。<br>
+        　　哈尔滨张志鹏朋友问：上网太困难，前几天调制解调器还好使，今天突然不拨号了，而且从指示灯判断，调制解调器与电脑之间无数据交换，杀了毒也不好使，怎么回事？还有，我的南极星在WIN97里不好使，不能显示大五码。<br>
+        　　答：调制解调器不能拨号的原因有很多种，从你提供的现象中分析，调制解调器与电脑间无数据交换，很可能是串口或是连线的问题，首先建议你换一根好的连线，看看是否能恢复，如故障依旧，你再查查CMOS中的设置，看看COM口是否被打开，地址与Windows 
+        95中的是否一致，还有串口的类型（HPSIR ASKIR NORMAL），一般设为“NORMAL”，设为“HPSIR”或“ASKIR”都有可能不正常。南极星的问题已有很多人问过，把Preserve 
+        CJK Windows Text关掉，一般就行了。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

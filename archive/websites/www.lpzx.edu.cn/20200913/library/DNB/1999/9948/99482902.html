@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用Winamp实现网上广播歌曲</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='internet.html'>大众网络</A> &gt; 用Winamp实现网上广播歌曲</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用Winamp实现网上广播歌曲 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　随着MP3音乐越来越被人们喜爱和接受以及上网的普及，你可曾想过和网上的朋友共享你的MP3歌曲呢？SHOUTcast能帮你实现这个愿望。简单的说，SHOUTcast可以直接播发你硬盘里的MP3歌曲，帮你建一个广播站，而网友在网上可以直接通过Winamp来收听。<br>
+　　好了，现在让我们一步一步地把这个广播站建立起来吧！
+<p><b>　　第一步：准备工作</b></p>
+　　首先你得要有Winamp这个软件，可以直接到http://www.winamp.com下载 ，当然版本越新越好。<br>
+　　然后呢，得要有Winamp的广播插件包，从ftp://leftcoast.winamp.com/pub/shoutcast/v1.10－RELEASE/dsp_sc.zip就可以下载。<br>
+　　接着，需要广播的Server端软件，可以从ftp://leftcoast.winamp.com/pub/shoutcast/v1.1.2/sc_serv_1_1_2_win32_gui.zip下载 。
+<p><b>　　第二步：设置Server</b></p>
+　　1.安装广播插件<br>
+　　将下载的插件包解压缩（文件名一般为dsp_sc.dll)到你的Winamp目录下的Plugins下,如：C:\Program Files\Winamp\Plugins\dsp_sc.dll<br>
+　　2.配置插件<br>
+　　首先选定插件，如图1，选中Preferences...。<br>
+　　如果广播插件安装正确的话，如图2，会在DSP/Effect中显示SHOUTcast Source for Winamp v1.10(dsp_sp.dll)，这时选中它，然后点“Close”结束。<br>
+　　3.设置插件<br>
+　　安装之后启动Winamp，在你Windows桌面的任务栏里就会多一个小图标（如图3，第二行第一个），点击则会出现配置窗口，如图4。<br>
+　　在点击第一个Set后会出现窗口，如图5。<br>
+　　SHOUTcast Server是你选择做服务器的计算机，Port是用来做广播服务的端口，在这里面使用默认设置就可以了，只要在Password里填上changeme,这个是默认的密码，也可以在sc_serv.ini文件里修改密码。下面的Public server则是可以将你做广播服务的计算机在SHOUTcast公司的主页上登记，这样世界各地的人就有可能通过访问这个主页来收听你的广播，设置好了以后，点OK。<br>
+　　第二个Set则是输出的音频属性，总之，声音质量越好，速度越慢，反之质量越低，速度越快。同时网络带宽跟这个设置的选择有关系，而且也会影响你机器的速度，一般默认是24kBit/s、16KHz,这个可以自己调试。 <br>
+　　4.安装和设置Server端软件<br>
+　　将下载的服务端软件包解压缩到任意目录，如：C:\sc，在这个目录下有个sc_serv.ini文件，是服务器的配置文件，配置文件中包含了几个可以更改的选项，这里将几个选项简单介绍如下： <br>
+　　端口PortBase：SHOUTcast用这个端口来传输声音，缺省选项是8000， 最多用户MaxUser：在任意时刻的收听人数，必须保证设置一个合适的数值，这个根据你的网络带宽和操作系统 来决定，缺省是32，我的机器是5。<br>
+　　密码Password：这个密码用来设置播放的各项参数和进行管理,缺省是changeme（注意：这里面的设置，如Portbase、Password必须和插件设置中保持一致）。<br>
+　　运行sc_serv.exe 出现Server Monitor窗口，如图6。<br>
+　　在这里你可以看到连接的信息和用户情况，这里显示了服务器主机的IP地址、状态、端口以及连入服务器收听的客户端的信息，比如右下角的（0/5）是指最大用户数是5，目前接入用户数是0，等等。到此设置完成。
+<p><b>　　第三步：启动</b></p>
+　　1.运行sc_serv.exe；<br>
+　　2.启动Winamp；<br>
+　　3.点击图3中的小图标出现图4，点“Connect”开始连接；<br>
+　　4.Server Monitor出现连接成功的信息；<br>
+　　5.完成。<br>
+　　到这里广播站已经做好了，快叫你的朋友来听一听吧！方法就是：运行他自己机器上的Winamp，在Play Location（Ctrl＋L)里填上你计算机的IP地址和端口号，如图7。然后点“Open”就可以欣赏到你正在播放的歌曲了，很有意思吧！大家可以试试去做。在http://www.shoutcast.com上面有全部的软件和资料。 <br><b>
+　　（陕西 高少星）</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99482902.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

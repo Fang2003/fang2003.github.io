@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>WINDOWS95故障处理四例</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　<br>
+        　　在实践过程中，笔者发现，Windows95操作系统存在安全性能较差、管理人员几乎没有办法对它进行有效约束的缺点。这给管理工作带来诸多不便，现将实践中出现的一些问题及解决方法总结出来，供同行朋友们参考。<br>
+        　　故障现象1.因操作不慎，误删除Windows95目录下的System.ini系统文件，此系统文件放在回收站中未清空。再次开机启动时，无法进入Windows95图形界面，屏幕上显示：“Cannot 
+        find system.ini,you need to run windows setup again to install the file,press any key to 
+        contine……”<br>
+        　　分析与检修：根据故障现象，按照屏幕提示按下任意键后，屏幕显示：“现在你可以安全地关闭计算机了”。此提示说明System.ini系统文件已丢失，不要急着重新安装Windows95操作系统。重新启动，当屏幕显示“Staring 
+        Windows95……”时按下F8键，待出现Windows95的多重引导菜单时，选第6项“Command 
+        prompt only”进入DOS 6.x操作系统，再在根目录下寻找Recyled(回收站)目录(注意：该目录隐藏，须用“DIR/A”查找)。进入该目录后，并未发现被删除的System.ini文件。其原因在于Windows95系统中被删除的文件放入回收站后，在DOS状态下皆改名，一律以“DC”开头，缀以“1、2、3……”等数字序号，但系统文件的原扩展名不变，仍认为是.ini。通过仔细查找，发现一个名为“DC＊.ini”的文件(“＊”代表数字1、2、3……)，用“Edit”命令打开，正是要找的System.ini系统文件。最后用“Copy”命令将它拷贝到Windows95下并改名为System.ini后即可。注意：若在操作时突然停电，那就只得重新安装Windows95了。<br>
+        　　故障现象2.系统启动后自动关机，显示：“It is not safe to turn off 
+        your computer”。<br>
+        　　分析与检修：根据故障现象，判断该故障是启动时驱动程序装载出错所致，使系统认为硬件无法正常工作。可利用多重引导菜单中的“Step—By—Step 
+        Confirmation”来确认，待系统运行至“lodad all windows drivers[enter=Y,esc=N]”时，按回车键后如出现：“现在你可以安全地关闭计算机了”，则肯定是这个原因。先进入安全模式(Windows95启动菜单的第3项“Safe 
+        Mode”)，运行Sysedit或用软盘启动，检查系统文件System.ini中的[boot]项，将每一条装载的驱动程序与c:\Windows\System下的对应drv文件名对比。若有文件名写错，手工修改；若文件名后有多余文字则删除；如果有驱动程序文件丢失，可从其它装有Windows95的机器中拷贝过来；若均无问题，则有可能是机器感染病毒，与另一台没有病毒的计算机对比drv文件及注册表中的vxd文件，若有数个文件的长度变长，就可确认该机确实感染病毒，用KV300(P)杀毒软件杀毒后，故障即可排除。<br>
+        　　故障现象3.系统启动后，显示：“Staring Windows95……”，随即死机。<br>
+        　　分析与检修：由于Windows95系统中的DOS启动部分受到损坏，有些机器启动后会进入以前版本的DOS系统下，再次启动时会出现以上这种情况。根据故障现象，安装Windows95系统时，先用启动盘(Starup 
+        Disk)插入软驱，启动传送DOS系统给C盘，并输入“Sys C：”，再次启动，故障排除。注意：使用时千万不能用其他DOS启动盘来传送系统，否则会破坏Windows95系统而不能恢复正常。<br>
+        　　故障现象4.在Windows95环境下安装完T＆W卡的驱动程序，用鼠标点击“T＆W 
+        MPEG PLAYER”，能播放，但播放很短时间便返回Windows95画面。<br>
+        　　分析与检修：根据故障现象，说明驱动程序存在冲突，因为能播放，说明不是地址的冲突，而应是中断和DMA通道的冲突所致。<br>
+        　　先仔细检查T＆W卡上的中断即DMA跳线是否与软件的设置相匹配。如不匹配，修改跳线或修改软设置即可；若相匹配，则应点击T＆W卡的硬件设置程序Hardware 
+        Setting，修改Interruptg与DMA Channel的参数，与此对应的硬件跳线也要改变。修改前，可先查看一下哪些中断、DMA已被其他的设备占用。具体步骤如下：<br>
+        　　1.双击Windows95的控制面板；<br>
+        　　2.双击系统项，检查计算机的资源，分别以中断请求(IRQ)与直接内存访问(DMA)方式查看，便可查到所到已被占用的中断与DMA跳线。注意：在修改时应尽量避开那些已被占用的中断与DMA。<br>
+        <br>
+        (湖北　王　斌)<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9850/index.htm.txt">《电脑报》1998年12月28日第50期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

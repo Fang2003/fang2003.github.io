@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用ASP编写计数器</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/banner.jpg' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>35 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 用ASP编写计数器</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用ASP编写计数器 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在网友们编写的主页之中，一般都要用计数器来统计访问量。对于计数器的编写可谓经历了几代的发展，从最初Unix上的CGI到现今Microsoft的ASP，其编程的思想越来越先进，而实现的方法却越来越简单。当初我用Perl语言写计数器时真是费尽心力，现在使用VBScript结合ASP对象很容易就编写出漂亮的计数器了。这里我想通过实例来讲讲服务器端的编程要点和ASP的两个重要对象：Application对象和FileSystemObject对象。<br>
+　　请看第一个count.asp<br>
+　　&lt;％<br>
+　　′将服务器上的虚拟路径转化为真实路径<br>
+　　countFile=server.mapPath(″/″)＆″\″＆″count.txt″<br>
+　　′创建FileSystemObject对象的实例<br>
+　　set fso=Server.CreateObject(″Scripting.FileSystemObject″)<br>
+　　′打开count.txt<br>
+　　set file=fso.OpenTextFile(″countFile″)<br>
+　　′用readLine方法读取保存的访问数并赋给number<br>
+　　number=file.readLine<br>
+　　′访问数加1<br>
+　　number=number＋1<br>
+　　′显示访问数<br>
+　　response.Write(″你是第″＆number＆″位访问者！″)<br>
+　　′将新的访问数写回count.txt文件<br>
+　　set file=fso.createTextFile(″countFile″,true)<br>
+　　file.writeLine(number)<br>
+　　′关闭文件<br>
+　　file.close<br>
+　　％&gt;
+　　当客户端提出对count.asp的浏览请求时，该asp程序执行，从服务器上读出count.txt文件内保存的访问数赋给number变量，将number加一然后显示出来，再写回到count.txt文件中。但若有几人同时请求该页时就会发生错误，而且每次请求服务器端均进行一次文件读写，在访问量加大时就会给服务器带来严重的负担，那么有没有效率更高的方法呢？答案是肯定的，ASP提供了一个叫作Application的内部对象。将变量赋与Application作用域，存储到Application对象中，这样所有的用户均可访问该变量。当Web服务器(IIS或PWS)启动后,在第一次请求页面时将触发Application_onStart()事件，当服务器关闭时将触发Application_onEnd()事件。注意，OnStart与onEnd事件需写在一个名为Global.asa的文件中（可用写字本创建，并且一定要与count.asp放在同一目录下）。好了,请看改进后的计数器范例。<br>
+　　Global.asa文件：<br>
+　　&lt;Script language =″Vbscript″ Runat=″server″&gt;<br>
+　　sub Application_onStart()<br>
+　　countFile=server.mapPath(″/″)＆″\″＆″count.txt″<br>
+　　set fso=Server.CreateObject(″Scripting.FileSystemObject″)<br>
+　　set file=fso.OpenTextFile(″countFile″)<br>
+		′读取访问数并赋给Application变量number<br>
+　　Application(″number″)=file.readLine<br>
+　　file.close<br>
+　　end sub<br>
+　　sub Application_onEnd()<br>
+　　countFile=server.mappath(″/″)＆″\″＆″count.txt″<br>
+　　set fso=Server.CreateObject(″Scripting.FileSystemObject″)<br>
+　　set file=fso.CreateTextFile(″countFile″,true)<br>
+　　′使用writeLine方法写入当前值<br>
+　　file.writeLine(Application(″number″))<br>
+　　file.close<br>
+　　end sub<br>
+　　&lt;/script&gt;<br>
+　　以上就是Global.asa的全部内容,下面是count.asp的内容，它很简单，就是将Application(″number″)的值加一并显示出来就行了，为了避免多用户同时对Application(″number″)的值进行操作而导致混乱，采用Lock和Unlock方法。<br>
+　　count.asp程序：<br>
+　　&lt;％<br>
+　　Application.Lock<br>
+　　Application(″number″)=Application(″number″)＋1<br>
+　　Applicaiotn.Unlock<br>
+　　response.Write(″你是第″＆number＆″位访问者！″)<br>
+　　％&gt;<br>
+　　这样，这个计数器已经比较完善了。希望大家的网页都能精彩起来。我的E－mail:bad_boy2@21cn.com。<br>
+　<b>　( 四川　刘阿骥  )</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/35/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99352701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

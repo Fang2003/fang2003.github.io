@@ -1,0 +1,153 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 12</title>
+<style type="text/css">
+  .spanstyle { position:absolute; visibility:visible; top:-50px; font-size:12; color:#FF0000; font-weight:bold;}
+</style>
+<bgsound src="images/glgs.mid" loop="1">
+</head>
+
+<body onLoad="makesnake()" background="../images/bj.jpg" bgproperties="fixed">
+<script>
+var X, Y
+var step = 20
+var flag = 0
+var message = "欢迎来到老排工作室！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-50}
+function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1}
+function makesnake() {
+    if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+        for (i=0; i<message.length-1; i++) {
+            var thisspan = eval("span"+(i)+".style")
+            thisspan.posLeft=xpos[i]
+            thisspan.posTop=ypos[i]     }   }
+    else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+            for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+  thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<script language="JavaScript">
+var speed=100;
+function infoscroll(seed, looped)
+{  var msg="欢迎你来到老排工作室!        让我们一起推动中国网络进步！";
+  var putout = " ";
+  var c = 1;
+  if (seed > 100)
+  {  seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 100 && seed > 0)
+  { for (c=0 ; c < seed ; c++)
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 0){
+    if (-seed < msg.length)
+    { putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,speed);}
+    else
+    { window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,speed);}}}
+infoscroll(100,1)
+</SCRIPT>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<img border="0" src="images/me01.gif" width="267" height="73">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="../index.htm"><img border="0" src="../dali/a/images/a16.gif" width="100" height="45"></a></p>
+<table border="0" cellpadding="0" cellspacing="0" width="679" height="296">
+  <tr>
+    <td width="278" height="36"></td>
+    <td width="24" height="296" rowspan="2"><img border="0" src="images/me04.gif" width="13" height="368">&nbsp;&nbsp;&nbsp; 
+    </td>
+    <td width="375" colspan="3" height="36">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+      <img border="0" src="images/me02.gif" width="99" height="32"></td> 
+  </tr> 
+  <tr> 
+    <td width="278" height="260"><img border="0" src="images/me03.jpg" width="300" height="200"> 
+      <p>&nbsp;&nbsp;&nbsp;     
+      “玉树临风胜潘安，一朵梨花压海棠。”的靓哥李榕在此，嘿嘿……&nbsp;     
+      </p>    
+      <p>&nbsp;&nbsp;&nbsp; 我还好啦，175cm×59kg ,有女生说我有安全感。我很随便（严格说是拖拖拉拉），但为人开朗，乐于助人，活泼幽默，只要有事做，就有源源不断的动力，只要我的Kodak     
+      DC290 在身边，我就总想找些风景把它塞满。&nbsp;&nbsp; </p>    
+      <p>&nbsp;&nbsp;&nbsp; </p>    
+      <p>　</p>
+      <p>　</td>
+    <td width="41" height="260"><img border="0" src="images/me05.gif" width="33" height="167">
+      <p>　</p>
+      <p>　</p>
+      <p>　</p>
+      <p>　</p>
+      <p>　</p>
+      <p>　</p>
+      <p>　</p>
+      <p>　</td>
+    <td width="297" height="260"><img border="0" src="images/me06.jpg" width="297" height="190">
+      <p>&nbsp;&nbsp;&nbsp; 话说李扬，175cm之躯，42kg体重。人送外号“老排”（LR取的）。其实生活中的我很喜欢运动，足球、篮球、乒乓球、<i>铅球</i>样样精通（就差玩转地球），内向但不死板，爱好电脑，与LR共建“老排工作室”。活动频繁，空想的计划特别多，实事也干了不少，但成效甚微。我们俩“同流”但不“合污”，“空前”，但不“绝后”。</p>   
+      <p>（欢迎访问老排工作室制造的</p>   
+      <p><a href="http://xgyz.126.com">http://xgyz.126.com</a> )</p>   
+      <p>　</p> 
+      <p>　</td> 
+    <td width="33" height="260"><img border="0" src="images/me07.gif" width="33" height="168"> 
+      <p>　</p> 
+      <p>　</p> 
+      <p>　</p> 
+      <p>　</p> 
+      <p>　</p> 
+      <p>　</p> 
+      <p>　</p> 
+      <p>　</td> 
+  </tr> 
+</table> 
+ 
+<p><img border="0" src="../images/124.gif" width="645" height="16"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+老排工作室倾力制作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<a href="mailto:lr9528@21cn.com"><img border="0" src="../images/mail.gif">&nbsp;&nbsp;  
+联系我们</a></p> 
+</body>  
+  
+</html>  

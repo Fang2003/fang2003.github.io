@@ -1,0 +1,214 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 9910请你编程</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/.'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>综合报道</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/47/maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='file://///Linux/www.cpcw.com/issue'>电脑报电子版</A> 
+      &gt; <A HREF='file://///Linux/www.cpcw.com/issue/1999'>1999 年</A> &gt; <A HREF='file://///Linux/www.cpcw.com/issue/1999/47/.'>47 
+      期</A> &gt; <A HREF='file://///Linux/www.cpcw.com/issue/1999/47/wrapup.html'>综合报道</A> 
+      &gt; 9910请你编程</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 9910请你编程 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+    <TD>　　大家好！《请你编程》又与你们见面了。《请你编程》得到了广大朋友的关心和支持，我们在这里表示衷心的感谢。《请你编程》是一个读者朋友直接参与的栏目，是一个体现自我的园地，希望有编程愿望的朋友，无论是编程高手，还是初学者都能参与进来，我们将会认真对待每一份作品。下面请看本期北京读者叶立超的程序。 
+      <p align="center"><b>9910请你编程解题思路</b></p>
+      <p>　　1．建立如图1所示标系。对于给定的每一个点都有唯一的一组坐标，比如点1、2、3。<br>
+ <p align="center"><img src="images/1301.gif" width="318" height="294" alt="图１"></p>
+        
+      <p>　　4、5、6、7的坐标分别是（1，1）、（1，2）、（2，1）、（1，3）、（2，2）、（3，1）、（1，4）。<br>
+        　　在该坐标系下每个点的x值等于其序号和其所在水平行前一行的最后一个点的序号之差，每一水平行线上的点的x值和y值之和等于所在行数加1。另外在每一组数中找出满足如下条件的六个顶点，其中第一个顶点peak[0]的y值最小并且x＋y值最小，第二个顶点peak[1]的x值最小并且x＋y值最小，第三个顶点peak[2]的x值最小并且y值最大，第四个顶点peak[3]的y大值最并且x＋y值最大，第五个顶点peak[4]的x值最大并且x＋y值最大，第六个顶点peak[5]的x值最大并且y值最小。当没有重合时，这六个点的相对位置如图2所示。<br>
+        　　2．判断这六个顶点构成的多边形是否为正多边形。当这六个点的相邻的点之间的连线均平行于x轴或y轴 或水平行线，并且这些连线中不为零的都相等时，如果这六个顶点不在一条直线上则其构成的多边形是满足要 
+        求的正六边形或正四边形（其中两条边为零时）、或正三边形（其中三条边为零时）。 <br>
+        　　3．最后判断这一组数中的每一个点是否都在这个正多边形的边上，满足这一条件的一组数就为正确结果。 源程序</p>
+      <p align="center"><img src="images/1302.gif" width="253" height="177" name="图２"></p>
+      <p><br>
+        　　＃include &lt;math.h&gt;<br>
+        　　＃include &lt;stdio.h&gt;<br>
+        　　／＊用于保存坐标的结构＊／<br>
+        　　struct Coord<br>
+        　　{int x;<br>
+        　　int y;};<br>
+        　　／＊将从文本中读取的点的号码dail转变为当前坐标系下的坐标并保存在point指向的坐标结构中＊／<br>
+        　　void GetCoord(struct Coord ＊point,int dail);／＊将满足顶点条件的点的坐标存入数组peak中＊／<br>
+        　　void SetPeak(struct Coord peak[],struct Coord ＊point);<br>
+        　　／＊判断数组peak中的点是否构成正多边形＊／<br>
+        　　int Polygon(struct Coord peak[]);<br>
+        　　main()<br>
+        　　{int i,j; ／＊循环控制变量＊／<br>
+        　　int linage;／＊记录文本中待处理的数的行数＊／<br>
+        　　int dail; ／＊接收从文本中读取的号码＊／<br>
+        　　int sum; ／＊一行中点的总数＊／<br>
+        　　int flag; ／＊标志变量＊／<br>
+        　　struct Coord point[6];／＊用于保存一行中每个点的坐标的数组＊／ <br>
+        　　struct Coord peak[6];／＊用于保存六个顶点坐标的数组＊／<br>
+        　　FILE ＊fp;<br>
+        　　if((fp=fopen(″pyramid.txt″,″r″))==NULL)／＊打开文本＊／<br>
+        　　{printf(″Can not open the ′pyramid.txt′ file!″);<br>
+        　　exit(0);}<br>
+        　　else<br>
+        　　printf(″The result is:\n″);<br>
+        　　fscanf(fp,″％d″,＆linage); ／＊读取行数＊／<br>
+        &lt;linage;i＋＋) ／＊每次循环处理一行＊／&gt; 　　for(i=0;ibr&gt; 　　{fscanf(fp,″％d″,＆dail);／＊读取行中的第一个数＊／<br>
+        　　GetCoord(＆point[0],dail); ／＊转换为坐标＊／<br>
+        　　for(j=0;j&lt;6;j＋＋) ／＊初始化顶点坐标＊／<br>
+        　　peak[j]=point[0]; ／＊都设置为第一个点的坐标＊／<br>
+        　　for(j=1;fgetc(fp)!='\n'＆＆j&lt;6;j＋＋) ／＊处理一行数据＊／<br>
+        　　{fscanf(fp,″％d″,＆dail); ／＊读取一个号码＊／<br>
+        　　GetCoord(＆point[j],dail); ／＊转换为坐标＊／<br>
+        　　SetPeak(peak,＆point[j]); ／＊将满足顶点条件的点的坐标存入数组peak中＊／}<br>
+        　　sum=j;／＊记录该行的点的总数＊／<br>
+        　　flag=Ploygon(peak); ／＊判断数组peak中的点是否构成正多边形＊／<br>
+        &lt;sum＆＆flag;j＋＋) ／＊进一步判断该行中每一个点是否都在这个正多边形的边上＊／&gt; 　　for(j=0;jbr&gt; 　　{if(point[j].y!=peak[0].y＆＆<br>
+        　　point[j].y!=peak[2].y＆＆<br>
+        　　point[j].x!=peak[2].x＆＆<br>
+        　　point[j].x!=peak[4].x＆＆<br>
+        　　point[j].x＋point[j].y!=peak[0].x＋peak[0].y＆＆<br>
+        　　point[j].x＋point[j].y!=peak[4].x＋peak[4].y)<br>
+        　　flag=0;}<br>
+        　　if(flag) ／＊根据标志变量输出结果＊／<br>
+        　　printf(″TRUE\n″);<br>
+        　　else<br>
+        　　printf(″FALSE\n″);}}<br>
+        　　／＊将从文本中读得的序号dail转变为当前坐标系下的坐标并保存在point指向的坐标结构中＊／<br>
+        　　void GetCoord(struct Coord ＊point,int dail)<br>
+        　　{int line; ／＊当前行的点的总数＊／<br>
+        　　int span; ／＊所给点和上一行最后一个点的序号差＊／<br>
+        　　line=1; ／＊从第一行开始＊／<br>
+        　　span=dail;<br>
+        　　while(span&gt;line) ／＊所给点和上行最后一个点的序号差大于当前行的点的总数＊／<br>
+        　　{span－=line; ／＊序号差减去当前行的点的总数＊／<br>
+        　　line＋＋; ／＊当前行下移一行＊／}<br>
+        　　point－&gt;x=span; ／＊所给点的x值等于其和前一行最后一个点的序号差＊／<br>
+        　　point－&gt;y=(line＋1)－span; ／＊x值和y值之和等于所在行数加1＊／}<br>
+        　　／＊将满足顶点条件的点的坐标存入数组peak中＊／<br>
+        　　void SetPeak(struct Coord ＊peak,struct Coord ＊point)<br>
+        　　{if(point－&gt;y&lt;=peak[0].y＆＆(point－&gt;x＋point－&gt;y)&lt;=(peak[0].x＋peak[0].y))<br>
+        　　peak[0]=＊point; ／＊第一个顶点的y值最小并且x＋y值最小＊／<br>
+        　　if(point－&gt;x&lt;=peak[1].x＆＆(point－&gt;x＋point－&gt;y)&lt;=(peak[1].x＋peak[1].y))<br>
+        　　peak[1]=＊point; ／＊第二个顶点的x值最小并且x＋y值最小＊／<br>
+        　　if(point－&gt;x&lt;=peak[2].x＆＆point－&gt;y&gt;=peak[2].y)<br>
+        　　peak[2]=＊point; ／＊第三个顶点的x值最小并且y值最大＊／<br>
+        　　if(point－&gt;y&gt;=peak[3].y＆＆(point－&gt;x＋point－&gt;y)&gt;=(peak[3].x＋peak[3].y))<br>
+        　　peak[3]=＊point; ／＊第四个顶点的y大值最并且x＋y值最大＊／ <br>
+        　　if(point－&gt;x&gt;=peak[4].x＆＆(point－&gt;x＋point－&gt;y)&gt;=(peak[3].x＋peak[3].y))<br>
+        　　peak[4]=＊point; ／＊第五个顶点的x值最大并且x＋y值最大＊／<br>
+        　　if(point－&gt;x&gt;=peak[5].x＆＆point－&gt;y&lt;=peak[5].y)<br>
+        　　peak[5]=＊point; ／＊第六个顶点的x值最大并且y值最小＊／} <br>
+        　　／＊判断数组peak中的点是否构成正多边形＊／<br>
+        　　int Ploygon(struct Coord ＊peak)<br>
+        　　{int i; ／＊循环控制变量＊／<br>
+        　　int sidelen[6]; ／＊用于保存六条边长的数组sidelen＊／<br>
+        　　／＊各边必须平行于x轴或y轴或直线x＋y=常数＊／<br>
+        　　if(peak[0].x＋peak[0].y!=peak[1].x＋peak[1].y||<br>
+        　　peak[1].x!=peak[2].x||<br>
+        　　peak[2].y!=peak[3].y||<br>
+        　　peak[3].x＋peak[3].y!=peak[4].x＋peak[4].y||<br>
+        　　peak[4].x!=peak[5].x||<br>
+        　　peak[5].y!=peak[0].y)<br>
+        　　return 0;<br>
+        　　 ／＊求各条边长并存入数组sidelen中＊／<br>
+        　　for(i=0;i&lt;6;i＋＋)<br>
+        　　if(i==2)<br>
+        　　sidelen[i]=fabs(peak[i＋1].x－peak[i].x);<br>
+        　　else if(i==5)<br>
+        　　sidelen[i]=fabs(peak[0].x－peak[i].x);<br>
+        　　else<br>
+        　　sidelen[i]=fabs(peak[i＋1].y－peak[i].y);<br>
+        　　／＊两条相邻的边同时为零时各顶点在一条直线上，不能构成多边形＊／<br>
+        　　 for(i=0;i&lt;5;i＋＋)<br>
+        　　if(sidelen[i]==0＆＆sidelen[i＋1]==0)<br>
+        　　return 0;<br>
+        　　／＊第一条边不为零时，若某边不为零并和第一条边长不相等，则不为正多边形＊／<br>
+        　　if(sidelen[0])<br>
+        　　{for(i=1;i&lt;6;i＋＋)<br>
+        　　if(sidelen[i]＆＆sidelen[i]!=sidelen[0])<br>
+        　　return 0;}／＊第一条边为零时，若某边不为零并和第二条边长不相等，则不为正多边形＊／<br>
+        　　else<br>
+        　　for(i=2;i&lt;6;i＋＋)<br>
+        　　if(sidelen[i]＆＆sidelen[i]!=sidelen[1])<br>
+        　　return 0;<br>
+        　　return 1;}<br>
+      </p>
+      <p align="center"><b>9912请你编程题目</b></p>
+      　　在PopPush这个城市里，有一个非常著名的火车站。由于修建年代久远，这个车站只有一根轨道。而且，该车站又是终点站，所以火车进入和离开车站都依靠这个轨道，且只能从一端进出。该城市正是因此而得名。<br>
+      　　但这样一来，出现了一个很奇特的现象：如果有1、2、3这三列火车将先后进入车站，则火车出站的各种排列中不可能出现3、1、2。因为如果3是第一个进站的火车，说明1和2都已进站了。而2比1晚进车站，所以如果2还未出站的话，1不可能出站。但是，出站的各种排列中有可能出现1、2、3，即1进站后在2进站之前就已出站，2在3进站之前也出了站。<br>
+      　　程序要求如下：<br>
+      　　1．输入数据从文本文件rails.txt中读取。输入数据文件格式为：输入数据中又包含若干组；每一组的第一行为一个整数N，表示有N辆火车，N&lt;=1000。以下每一行表示火车出站的排列顺序，用0来表示这组的结束；若N=0，则表示输入结束。<br>
+      　　2．若这种排列可能出现，则输出Yes，反之，输出No；每一组数据要空一行。<br>
+      　　注：排列序列中的1、2、3、4...表示在这些火车进站之前，它们的先后顺序。<br>
+      　　输入数据范例：<br>
+      　　5<br>
+      　　1 2 3 4 5<br>
+      　　5 4 1 2 3<br>
+      　　0<br>
+      　　6<br>
+      　　6 5 4 3 2 1<br>
+      　　0<br>
+      　　0<br>
+      　　输出数据范例：<br>
+      　　Yes<br>
+      　　No<br>
+      　　本期题目由上海的卜天明提供。<br>
+      　　来稿请寄磁盘稿或用E－mail（software@cpcw.com）投稿，请写明解题思路和源程序（包含详细的注解），寄到电脑报编辑部的收信地址或E－mail信箱。来稿截止日期：2000年1月15日。<br>
+      <p align="center"><b>本期获奖者名单</b></p>
+      　　（广西 陈行辉 ） （福建 蔡一鸣） <br>
+      　　（湖北 文峰） （天津 贾承欢）<br>
+      　　（山东 周文英） （重庆 王建）<br>
+      　　（北京 骆德全） （浙江 贺伟国）<br>
+      　　（上海 王卫国） （浙江 刘静）<br>
+      　　每位获奖者将获得苦丁香公司提供的光盘一张。<br>
+    </TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99471301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

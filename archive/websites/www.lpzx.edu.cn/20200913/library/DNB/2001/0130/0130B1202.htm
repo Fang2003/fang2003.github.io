@@ -1,0 +1,204 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0130/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0130/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第30期 </a>&gt;&gt;<a href="software.html">软件世界</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td height="9"> 
+            <div align="center">Delphi中消息的特殊处理</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>对于编写过Windows程序的编程人员来说，对Windows中的消息肯定不会陌生，它是Windows编程中关键的技术内容之一，深刻地理解Windows对消息的处理机制是编制出优秀的Windows应用程序的基础。Delphi提供了大多数常用消息的处理方法，但在某些特定的场合下则需要我们对Windows消息进行一些特殊的处理，如用户需要改变已有消息的处理方法及功能，或自定义消息及编写对应的消息处理方法。现具体介绍如下：<br>
+              一、覆盖原有消息<br>
+              覆盖原有的消息处理方法主要用于在我们需要修改原有的Windows消息的时候，它工作的原理就是通过给新的消息处理方法赋予原有消息的消息索引号。这样，当某个事件发生而触发该消息时，根据该消息的索引号所得到的是新的消息的处理方法。具体的编程步骤如下：<br>
+              1．确定我们所需要处理的消息；<br>
+              2．声明消息处理方法；<br>
+              3．编写具体的代码；<br>
+              下面我们通过一个简单的例子来加以说明，范例程序的运行结果如图1。(^30020505a^)<br>
+              这里是该范例程序的主要部分的源代码：<br>
+              unit OverMsg<br>
+              ……<br>
+              private<br>
+              { Private declarations }<br>
+              flagBoolean;//禁止程序在开始运行时就响应WM＿PAINT消息<br>
+              public<br>
+               Public declarations <br>
+              protected;//新的消息处理方法，覆盖了WM＿PAINT消息<br>
+              procedure OverMsgPaint(var MsgTWMPaint)；message WM＿PAINT；<br>
+              end；<br>
+              ……．<br>
+              procedure TfrmMain．OverMsgPaint (var Msg：TWMPaint)<br>
+              begin //通过覆盖WM＿PAINT消息来加入我们自己的代码<br>
+              if flag then<br>
+              edtMsg．Text：='成功收到Paint消息！'<br>
+              inherited；<br>
+              end；<br>
+              procedure TfrmMain．btnSendMsgClick(Sender： TObject)<br>
+              begin<br>
+              flag：=true；<br>
+              repaint；//发送WM＿PAINT消息<br>
+              end；<br>
+              procedure TfrmMain．FormCreate(Sender： TObject)；<br>
+              begin<br>
+              flag：=false；<br>
+              end；<br>
+              end．<br>
+              二、自定义消息及对应消息<br>
+              每一条Windows消息都要对应一个消息标识符，自定义消息首先就要声明消息标识符。消息标识符是一个整型常量，它的大小在1～49151之间，而Windows保留了前1023的数值作为系统的消息索引号，自定义消息是不能占用这些索引号的，所以自定义消息的标识符应从1024开始，但有一些Windows标准组件也使用自定义范围内的消息，为了不与它们冲突，我们在自定义消息标识符时从32768开始(即WM＿APP常量)，声明如下：<br>
+              const<br>
+              CM＿MYMSG=WM＿APP+$100<br>
+              我们在定义了消息标识之后，还要为此消息指定消息记录类型，消息记录类型是传递给消息处理方法的参数的数据类型。我们也可以使用已经定义的消息记录类型(消息在messages．pas中定义)，如果我们需要新的消息记录类型，则可以根据实际情况自行定义，自定义消息记录类型的结构规定如下：<br>
+              1．消息记录的第一个域命名为Msg，类型为Cardinal(32位无符号类型)；<br>
+              2．定义四个字节对应参数wParam；<br>
+              3．定义四个字节对应参数lParam；<br>
+              4．最后一个域命名为Result，数据类型为Longint；<br>
+              整个消息记录共有128位，其中用户可自已定义的只有中间的64位。它还可以定义为各种数据类型的组合。<br>
+              下面是一个简单的范例，程序运行如图2。(^30020505b^)<br>
+              范例程序的主要部分的源代码如下：<br>
+              unit DefMsg；<br>
+              ……<br>
+              const //定义消息标识符WM＿DEFMSG和WM＿MYMSG<br>
+              WM＿DEFMSG=WM＿APP+$100；<br>
+              WM＿MYMSG=WM＿APP+$101；<br>
+              type //定义消息记录类型<br>
+              TMyMSG=record<br>
+              Msg：Cardinal；<br>
+              nLeft：word；//顺次的32位对应wParam参数<br>
+              nTop；word：<br>
+              nRight：word；//接着的32位对应lParam参数<br>
+              nButtom；word：<br>
+              Result；Longint：//32位返回值，由SendMessage函数取得<br>
+              end<br>
+              ……<br>
+              protected<br>
+              //此处声明自定义消息的处理方法<br>
+              procedure WMDefMsg(var Msg：TMessage)；message WM＿DEFMSG<br>
+              procedure WMMyMsg(var Msg：TMyMSG)；message WM＿MYMSG<br>
+              end；<br>
+              ……<br>
+              procedure TfrmMain．WMDefMsg(var Msg：TMessage)；<br>
+              begin<br>
+              lblDefMsg．Caption:='成功收到默认的消息，其中wParam='+inttostr(Msg．wparam)+<br>
+              'lParam='+inttostr(Msg．lParam)+！；<br>
+              inherited；<br>
+              end；<br>
+              procedure TfrmMain．WMMyMsg (var Msg：TMyMsg)；<br>
+              begin<br>
+              lblMyMsg．Caption:='成功收到自定义的消息，其中nLeft='+inttostr(Msg．nLeft)+<br>
+              '， nTop='+inttostr(Msg．nTop)+'， nRight='+inttostr(Msg．nRight)+<br>
+              '， nButtom='+inttostr(Msg．nButtom)+'!'<br>
+              inherited<br>
+              Msg．Result ：=1；//由SendMessage函数获得返回值<br>
+              end<br>
+              procedure TfrmMain．bntDefSendMsgClick(Sender：TObject)；<br>
+              begin://通过PostMessage函数发送WM＿DEFMSG消息<br>
+              PostMessage(Self．Handle ，Cardinal(WM＿DEFMSG)，4，3)；<br>
+              end<br>
+              procedure TfrmMain．bntMySendMsgClick(Sender：TObject)；<br>
+              var<br>
+              wParam，lParam，Result，integer；<br>
+              begin<br>
+              wParam：=(50 shl 16)+100；//把16位的nLeft和nTop处理为32位的wParam<br>
+              lParam：=(80 shl 16)+200；//把16位的nRight和nButtom处理为32位的lParam<br>
+              //通过SendMessage()函数发送WM＿MYMSG消息，并取得返回值<br>
+              Result：=SendMessage(Self．Handle，Cardinal(WM＿MYMSG)，wParam，lParam)；<br>
+              if Result＞0 then<br>
+              MessageDlg('发送消息成功！'，mtInformation，[mbOK]，0)；<br>
+              end；<br>
+              end．</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">花王200声卡在Windows95下发声不正常的故障处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台奔腾兼容机， 
+        配置为：华硕T2P4主板、Pentium166 CPU、32M EDO内存、丽台Winfast 600显示卡、Quantum 
+        Sirocco 2550A型硬盘、韩国产CDD－6801八倍速光驱、国产14.4kbps带语音的Fax/Modem卡、花王200型即插即用声卡，在DOS6.2和Windows3.11下运行各种软件及游戏，声音均正常。在Windows95下播放WAV.MIDI文件及软解压播放VCD也都正常。但在运行Windows95的部分游戏时，如《红色警报》，声音却断断续续并有回响，过关动画也有明显停顿。<br>
+        　　故障分析与排除：开始估计是资源有冲突，双击“Control Panel”中的“System”选项，查看“Device 
+        Manager”中的“Sound,Video and Game Controllers”选项，发现声卡中断号为7，与并行口中断冲突，改为空闲的中断号10后重新启动系统，故障依旧。又怀疑与Modem卡冲突，将Modem卡拔下后也未见改善。将Windows95、《红色警报》和DirectX3.0重新又安装一遍，故障还是没有消除。换用Alsound声卡后，声音正常，但动画依然有停顿现象，换用花王500声卡后，声音及动画均正常，因此怀疑是声卡有问题。运行Program 
+        Files\DirectX\Setup子目录下的Dxsetup程序，Audio Driver一行为“No hardware 
+        supported”，估计声卡驱动程序与DirectX3.0不兼容。后经过查找，发现在《红色警报》光盘上的DX\DRIVER\AUDIO子目录下有大量的声卡驱动程序，将其中的ES688.DRV和ES688.VXD两个文件拷贝至Windows\System子目录下，将原来相同文件名的文件覆盖掉。运行Dxsetup文件，可以看到Audio 
+        Driver一行变为“Certified”。此后，再运行其它需要DirectX的游戏均正常。<br>
+        　　小结：发声故障和显示故障一般除了硬件原因和资源冲突外，与驱动程序也有很大关系，旧的驱动程序往往不能支持一些新的标准，因此及时升级硬件的驱动程序是很必要的。本故障即是由于旧的声卡驱动程序和DirectX3.0不兼容所造成的。(北京　于中)<br>
+        </font></p>
+        <p align="right"><font color="#369681"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1998年1月19日第3期36版</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

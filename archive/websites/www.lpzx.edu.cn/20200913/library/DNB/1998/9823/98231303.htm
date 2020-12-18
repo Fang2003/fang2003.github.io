@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>QuickMIS V5.0菜单生成器的密码权限系统</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>QuickMIS 
+        V5.0菜单生成器的密码权限系统<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        QuickMIS V5.0面市已一个多月了,它的一些新功能想必已给你带来了一些简便。<br>
+        　　在QuickMIS V5.0的菜单生成器中，新增加了对用户非常实用且很有必要的多级密码权限系统。对于QuickMIS老用户来说，只需用菜单参数转换生成器将一个QuickMIS 
+        V5.0以前版本制作的系统菜单的参数文件(PAR目录下的＊.CDP文件)转换为新版本V5.0下的参数文件即可，然后用菜单生成器打开转换后的参数文件，当双击某一菜单项时，会发现在弹出“定义菜单项属性”对话框中增加了一项属性“权限选择”，在此权限系统中，首先将整个密码权限系统分为二级：0级(超用户级)和1－9级(普通级用户)。0级用户具有最高权限级，可访问系统中所有菜单程序。该级默认权限密码为：用户名user0，口令为空值，回车即可。对于1－9级用户，他们的权限密码级是一样的。<br>
+        　　与其他权限系统概念有所不同的是，QuickMIS采用类似一把钥匙开一把锁的方式，即为某一菜单项设置的权限，只有掌握该权限密码的用户才能访问该菜单，而不知道此权限密码的用户将无法访问该菜单。例如有A、B、C、D四项菜单，权限设置分别为1，2，1、2和3。那么当进入系统后，键入1级权限密码可访问A和C菜单；键入2级权限密码可访问B和C菜单；键入3级权限密码只可访问D菜单；若键入1、2、3级以外的任何权限密码(除0级用户)，都将无法访问A、B、C、D这四项菜单。所有的权限设置是在菜单编辑中完成的，由开发人员依照系统需求设置权限密码，系统默认的权限密码1－9级为用户名user1,user2…user9，口令为空， 
+        回车即可。在系统交付使用后，可根据不同的权限密码，输入默认密码后修改密码以便个人使用。在菜单权限系统编辑中，值得注意的是当菜单编辑完成后，需在系统菜单项“属性设置”中将“口令设置”选择上，菜单权限才会生效。<br>
+        　　另外，在屏幕格式生成器中也有密码权限系统，只是在进行权限设置时，需用鼠标右键单击屏幕上的按钮即可进行权限设置。希望你能在设计系统中更好地使用密码权限系统，使系统结构能更完善，功能更强大。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月15日第23期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

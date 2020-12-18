@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>改变Win9x任务栏的时间显示</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+
+<table BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+  <tr>
+    <td WIDTH="221" HEIGHT="69"><a HREF="../../../../www_lpzx_edu_default.html"><img SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></a></td>
+    <td WIDTH="484" HEIGHT="69"><p ALIGN="center"><A
+    href="netschool/index.htm" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/netschool/wlxy.jpg" BORDER="0"
+    WIDTH="468" HEIGHT="60"></A><br>
+    中文十大网站之一，广告效果极佳，欢迎在此<a href="bill/index.htm">刊登广告</a>。 
+    </td>
+  </tr>
+</table>
+</center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>改变Win9x任务栏的时间显示</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/%B5%D7%CE%C6.gif"><p align="left">　　记得以前用Win95时，任务栏上的时间显示为“8∶30 
+        AM”或“8∶30 PM”，其中AM表示上午，PM表示下午。出于好奇，我想把“AM”或“PM”字符改成其他字符串(如：“上午好”或“下午好”)，于是我在运行窗口中键入“regedit”,在注册表编辑器里按下“Ctrl＋F”弹出查找窗口。在查找目标中录入“AM”进行查找。发现在[HKEY_CURRENT_USER\Control 
+        Panel\International]的内容中字符串“s1159”的值是“AM”，将其改为“上午好”，关闭注册表，重新启动Win95。当进入Win95时，我惊奇地发现任务栏上的时间后面(也就是屏幕的右下角)出现了“上午好”的提示。于是，我经过多次修改，发现如下秘密：<br>
+        　　展开[HKEY_CURR<br>
+        ENT_USER\Control Panel\International],字符串“Locale”的值有两种：一种是“00000409”表示12小时制；另一种是“00000804”表示24小时制。<br>
+        　　字符串“s1159”的值表示上午显示的信息，其默认值是“AM”。<br>
+        　　字符串“s2359”的值表示下午显示的信息，其默认值是“PM”。<br>
+        　　字符串“sTimeFormat”的值“HH:mm:ss tt”表示时间显示格式，其中在Win95中字符“tt”没有用处，且其中“HH”表示小时的格式为两位，如“8∶30”将表示为“08∶30”。一个“H”将不会因小时不足两位时出现补零的现象。在Win98中“tt”是一定得要的，它表示时间后面将再显示信息。需要说明的是此字符串在Win95的注册表中可以不要。<br>
+        　　在修改过程中应注意两点：一点是在Win95中如果“Locale”的值为“00000804”，也就是说采用24小时制的话将不会在任务栏时间的后面显示“s1159”或“s2359”值的内容。另一点是字符串“s1159”或“s2359”值的内容有长度限制，其最长可用5个汉字，即10个字符，如果超长的话，那么任务时间的位置将会多出一片空白，连时间都不显示了。<br>
+        　　怎么样，现在就马上试一试。按上面的方法把“s1159”的值改成“梅琴专用”，把“s2359”的值改成“电脑报”，重新运行Windows，改变上下午时间，看看会出现什么?<br>
+        <strong>(湖北　梅琴)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月5日第13期</a></font> 
+        </td>
+      </tr>
+    </table>
+                <DIV ALIGN="center">
+                  <CENTER>
+                  </CENTER>
+                </DIV>
+                <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+                <NOSCRIPT> 
+                <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+                </NOSCRIPT> 
+              </center></div></td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

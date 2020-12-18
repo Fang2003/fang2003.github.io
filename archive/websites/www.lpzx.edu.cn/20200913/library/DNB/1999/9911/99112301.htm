@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>寻找失踪的猫--Windows98下检测不到MODEM的处理</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>寻找失踪的猫——Windows98下检测不到MODEM的处理</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　Windows98强大的网络功能是有目共睹的，但你也许没有想过，当你将系统升级到Windows98后，它可能根本就检测不到你的“猫”!如果你满头大汗地重装了多遍MODEM的驱动程序却仍没有解决问题，那么你不妨看一看下面的解决方法，它也许会让你茅塞顿开，轻松驭“猫”上网。<br>
+        　　●解决资源冲突<br>
+        　　不要过于迷信Windows98的自动配置功能。事实上，如果MODEM所使用的通讯端口被设置为计算机上的其他设备使用时，那么MODEM将无法工作，自然，Windows98也就无法检测到它。<br>
+        　　通过下面的方法可确认MODEM是否存在资源冲突问题：单击“开始／设置／控制面板”，双击“系统”图标。如果对话框中“设备管理器”选项上的某项设备旁边出现带感叹号的黄圈，那么表明该设备可能与MODEM端口使用了同样的设置，从而发生了资源冲突。<br>
+        　　双击该设备，单击“资源”标签，在“冲突设备列表”中查找资源冲突，试着将与MODEM发生冲突的设备配置为使用其他资源。一般来讲，Windows98会自动显示该设备的可用资源，你只需从中进行选择即可。<br>
+        　　需要注意的是，由于在大多数计算机中，COM1和COM3，COM2和 COM4共用一个串行口，因此COM1和COM3，COM2和COM4不能同时使用。如果COM1、COM2上有其他设备，如串行鼠标，就不能再在COM3、COM4上使用MODEM。此外，如果将COM1或COM2重新定义成COM3或COM4，还必须在COMS设置中对它们进行重新设置，为它们分配正确的地址和IRQ。<br>
+		      　　如果你将MODEM配置为使用COM4，而你的显示卡使用的是早期的S3芯片，那么MODEM也可能无法正常工作。这是因为某些早期的S3芯片在Windows98中执行I/O地址映射来解码时会出错，这些芯片包括801、805和928版本、Diamond 
+		      Stealth32、Diamond Stealth64、Orchid Technology Fahrenheit 
+		      1280。解决的方法有四种：<br>
+        　　1更新显示卡驱动程序；<br>
+        　　2改变MODEM所使用的物理端口，将它与其他可用端口相连；<br>
+        　　3降低显示器的分辨率和色彩，关闭显示卡的硬件加速功能；<br>
+        　　4使用Windows 3.1下的S3显示驱动程序。注意，如果在Windows 98中使用Windows 
+        3.1的显示卡驱动程序，会丢失一些Windows功能，如动画鼠标指针、鼠标指针轨迹和fallback视频支持等。<br>
+        　　再次运行“添加新硬件”向导，如果Windows98自动检测到该端口并且该端口也出现在“设备管理器”选项中，但是仍然检测不到MODEM，请确认MODEM自身是否存在问题。如果MODEM所使用的端口仍未出现在“设备管理器”选项中，请进行下一步。<br>
+        　　●手工安装MODEM<br>
+		      　　如果Windows98没有自动检测到MODEM，就需要用“安装新硬件”向导手工安装MODEM。单击“开始/控制面板”，双击“MODEM”。如果“安装新硬件”向导没有启动，单击“添加”启动它。单击“不检测MODEM，直接从列表中选择取”复选框，再单击“下一步”。在“厂商”和“型号”下面，选择与你的MODEM相匹配的类型，在“请选择此MODEM所使用的端口”下面，单击安装MODEM的通讯端口，然后单击“下一步/完成”<br>
+		      　　如果不能肯定MODEM安装在哪个通讯端口，请参考MODEM的安装说明。安装完毕后重启“控制面板/MODEM”，在“诊断”选项上单击MODEM端口，单击“详细信息”，如果收到出错信息或是“标识符”框中没有显示任何信息，那么表明MODEM安装不正确，须进行下一步。<br>
+        　　●安装与Hayes兼容的MODEM或标准MODEM<br>
+        　　与Hayes兼容的驱动程序是大多数MODEM常用的驱动程序，因此，安装与Hayes兼容的驱动程序并将其设置为MODEM支持的最大波特率，通常是解决问题的好办法。为避免冲突，在安装新的MODEM前应将计算机上其他的MODEM拆除。<br>
+		      　　安装与Hayes兼容的驱动程序步骤与手工安装MODEM一样，只要注意在“厂商”下面单击“Hayes”，在“型号”下面单击与你的MODEM支持的最大波特率(此数据请查阅MODEM的说明书)匹配的驱动程序(与Hayes兼容的)，然后单击“下一步/完成”即可。<br>
+        　　如果Windows 98仍收不到来自MODEM的信息，那请为MODEM安装标准MODEM驱动程序。在“厂商”下面单击“标准MODEM类型”，在“型号”下面单击与你的MODEM支持的最大波特率匹配的驱动程序。执行测试Hayes兼容的MODEM的步骤，查看Windows98是否收到来自MODE的信息。<br>
+        　　●检查MODEM是否已被启用、所选端口是否正确<br>
+		      　　单击“开始/设置/控制面板”，双击“系统”，在“设备管理器”选项下单击“端口”(COM和LPT)分支边上的加号(＋)，单击选中“MODEM”，再单击“属性”按钮，查看“在此硬件配置文件中禁用”复选框是否已被清除。同时，在“常规”选项下检查列出的端口是否正确，如果不正确，请选择正确的端口，然后单击“确定”。<br>
+        　　●确认MODEM自身是否存在问题<br>
+        　　要确定问题是否与硬件有关，请按如下程序进行下列测试：<br>
+        　　1检查在命令提示符下用MODEM能否进行通讯。方法是：选择启动菜单上的“Safe 
+        mode command prompt only”模式，在提示符下执行以下命令：echo 
+        atdt&gt;com&lt;x&gt;，其中&lt;x&gt;代表MODEM所使用的通讯端口，此时MODEM应当用拨号音或通讯信号应答。在提示符下执行下列命令可停止拨号音：echo 
+        ath0&gt;com&gt;&lt;x&gt;。注意：在测试过程不能总让MODEM发出拨号音，因为并没有将电话号码作为命令输入。但是，MODEM应当给出某种信号，表示信息已经收到。<br>
+        　　2检查所有电缆连接是否正确，特别是要保证MODEM上的所有跳线设置均正确；<br>
+        　　3将MODEM与计算机的不同端口相连，确认MODEM是否已损坏。<br>
+        ●确定计算机是否能识别MODEM所在的COM端口<br>
+        　　方法如下：用“Command prompt only”模式重启计算机，在命令提示符后面键入“debug”。在随后出现的“—”后键入“d40：0”，回车，屏幕上将出现BIOS数据列表和连字号提示符，类似于以下内容：<br>
+        　　0040：0000 F8 03 F8 02 E8 03 00 00－78 03 00 00 00 00 00 00<br>
+        　　其中，连字符左边的值表示COM端口，连字符右边的值表示LPT端口。此例说明计算机有地址为03F8(高字节在前)的COM1、地址为02F8的COM2和地址为03F8的COM3。而COM4没有找到。此时，应向计算机厂商查询，以解决计算机不能识别分配给MODEM使用的COM端口问题。<br>
+        <strong>(北京　吴立群)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月22日第11期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

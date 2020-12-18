@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>非PNP声卡在Windwos95下使用小记</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　笔者在1996年购买了一台兼容机，配置为：奔腾100MHz 
+        CPU，8MB内存，希捷 630MB硬盘，小影霸显卡和兼容SB16的OPTI 924C声卡。当时选用的操作系统是MS－DOS6.22和Windows 
+        3.2。<br>
+        　　随着For Windows95的软件日益增多，笔者也在1997年末加入到了Windows95的大军中。安装Windows95的过程十分顺利，然而当一切就绪，启动系统后却没有听到那悦耳的声音。打开“系统属性”，看到系统识别出了我的声卡是OPTI的，但在该项前面有表明系统有冲突的黄色惊叹号，不仅如此，在硬盘控制器前也有冲突的标志。当时也不死心，试着更改IRQ和DMA，但没有效果。<br>
+        　　向懂行的朋友咨询，结果被泼了一盆冷水，我被告知，我的声卡不是Windows95的PNP(即插即用)设备，在Windows95下认不出。而且因为它“出身”比较早，所以在配套的驱动程序里没有For 
+        Windows95的版本。换言之，要么就不要声音，要么就换一块声卡。朋友推荐我换，当时一块普通的支持Windows95 
+        的PNP声卡只卖80元，何况计算机没有了声音，多媒体功能等于就被取消了，别说看VCD，就是玩游戏也少了很多乐趣。<br>
+        　　当时颇觉踌躇，重买一块声卡倒没什么，只是对如何处理那块老声卡感到犹豫：卖掉没人要，放着又没用。正委决不下，一日到另一朋友的公司玩，谈起此事，朋友说：“反正公司正好联接了Internet，何不到网上去寻寻，说不定能找到个‘补钉’程序呢?”<br>
+        　　这可是本人第一次上网——不过心仪已久——看着朋友熟练地接上网络，打开Navigator，几下摆弄，OPTI那四个蓝色字母出现在显示器上，那心情真是有点激动!<br>
+        　　网页上资料不少，我英语不行，看不大明白那一堆堆的介绍，不过看得出这是家涉及面很广的公司。点击目录里“Sound”一项，果然全是声卡的介绍和驱动程序，数目还不少，很快找到了我的924C型声卡，果然有For 
+        Windows95的驱动程序，而且有两个，都是ZIP压缩文件。简直是大喜过望，赶紧全下载下来!<br>
+        　　回到家，马上打开电脑，开始配置。下载的两个文件分别是924W95C.EXE和924W95DX.ZIP，长度分别是914K和75K。考虑到924W95C.EXE文件是自解压文件，又比较大，它一定要相对完善一些，就决定用它。解开后有Readme文件，不过看不太明白，大体是要求在纯DOS环境下安装。于是退出Windows95，启动DOS6.22，键入Setup.exe。按提示开始安装，其安装界面和以前的For 
+        Windows3.2安装界面差不多，连其默认的IRQ等值也和过去一样，为：220 7 
+        1。设置好后用Test测试，一切正常。安装完毕后，重新启动，进入Windows95，依然没有声音，系统属性显示冲突，故障依旧。退出重新安装，考虑可能是资源地址等设置有误，造成冲突，改为：240 
+        5 1。用Test测试，声卡同样能正常出声，但启动Windows 95后现象依然存在。而在DOS 
+        6.22下声卡却能够出声，当时真有点摸不到头脑的感觉，OPTI的驱动程序是不该有问题的，那又为什么安装后毫无效果呢?又重新解压、安装，仍不能解决问题。<br>
+        　　焦头烂额之际，决定用另一个程序。于是将924W95DX.ZIP在D盘根目录下解开。解开后有9个文件，却找不到安装文件，有Setup文件，但不是可执行文件，而是一个.inf文件。其他主要是.drv和.inf文件，没有一个可执行文件，这又如何安装呢?也许这是在Windows95下安装的吧。再次启动Windows95，先删去系统属性里所有有冲突的部分。打开控制面板里的“添加新硬件”，按照提示检测硬件，然后安装。选择“从磁盘安装”，默认磁盘是A盘，选择“浏览”，打开对话栏后发现默认的文件名是＊.inf，顿时信心倍增。把驱动器设置为D盘，点取Setup.inf开始安装，由于所列出的关于OPTI的硬件有四个，便逐次点选D盘根目录下的所有＊.inf文件安装，完成后重新启动Windows95，耳旁顿时响起了悦耳的“咚……”声，再打开“系统属性”，刚才的那些黄色惊叹号全部消失。那时的心情恐怕只有同道中人才能体会!<br>
+        　　原来笔者下载的两个驱动程序分别要在DOS和Windows95下安装才能发挥作用，而不能单独使用。由于对硬件驱动程序和Windows不熟悉，英语水平又差，无法读懂Readme文件，故而走了一段弯路。<br>
+        　　在OPTI公司的网址上,还提供了其他各种型号的OPTI声卡的For 
+        Windows95和For Windows3.1的驱动程序。OPTI公司声卡的网址是：http://www.opti.com/products/sound.htm。<br>
+        　　在当前Windows95大行其道之时，有相当多的旧设备因为不支持PNP无法使用，尤其是老的声卡，为购买较早的用户带来了麻烦。其实一些公司针对这一问题已经采取了措施，编写了支持Windows95的新驱动程序，有条件接触网络的朋友不妨一试。或许能使你“留之无用，弃之可惜”的老声卡重新焕发青春!</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月23日第11期36版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

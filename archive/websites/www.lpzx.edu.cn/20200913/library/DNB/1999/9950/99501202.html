@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Windows 98启动盘的别用</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; Windows 98启动盘的别用</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Windows 98启动盘的别用 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Windows 98启动盘具有多种用途，能否对Windows 98的启动盘稍加修改，以满足在某些特殊情况下的特殊需要呢？以下是作者对此摸索出的两点经验。<br>
+　　1．大多数用过Windows 98启动盘的朋友可能和作者有同感：虽然它名曰启动盘，但实际上无法用Windows 98启动盘启动进入Windows 98。解决这一问题的方法是：将C:盘根目录下的msdos.sys文件拷贝到Windows 98启动盘，覆盖掉其根目录下的同名文件即可。注意如果在Windows 98下没有显示msdos.sys和io.sys，就需要将文件夹属性中的“显示所有文件”选项选中。启动盘之所以不能启动到Windows 98，原因是启动盘中的msdos.sys文件是空的。实际上任一含有io.sys和上述msdos.sys文件的软盘均可启动到Windows 98。<br>
+　　2．Windows 98启动盘的另一个用处就是可以很方便地做一张带有光驱驱动及常用DOS6.22命令的DOS6.22启动盘。方法是在DOS6.22系统下用sys a：命令传递DOS6.22系统文件即做成一张带有光驱驱动的DOS6.22启动盘。用该盘启动系统，可以看到原来的Windows 98启动菜单变成了DOS6.22的启动菜单。但此时启动盘在内存中建立的虚拟盘（ramdrive）中的DOS命令以及启动盘本身带有的几个DOS命令仍属DOS7.1版本，在DOS6.22系统下无法执行。此时，可进一步修改启动盘的有关文件，使DOS7.1版本的命令变为DOS6.22版本的命令。在Windows 98启动盘中，ebd.cab文件即是含有DOS命令的压缩文件，因此，将需要用到的DOS6.22命令文件以cab格式压缩成ebd.cab文件替换原有的ebd.cab文件，即可做成带有光驱启动及常用DOS6.22命令的DOS6.22启动盘。另外，也可将DOS6.22命令文件以arj格式压缩成ebd.arj文件。拷贝arj.exe和ebd.arj文件到启动盘，并同时删除ebd.cab和extract.exe文件。最后，修改启动盘的autoexec.bat文件，将该文件中的extract.exe替换为arj.exe，ebd.cab替换为ebd.arj，将％ramd％:\extract /y /e /l ％ramd％:ebd.cab &gt; nul语句替换为％ramd％:\arj e ebd.arj ％ramd％: &gt; nul即可。<br><b>
+（河南　牛淑芬）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99501202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

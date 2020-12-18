@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>远程登陆NT网<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　在外地出差的公司职员、联系紧密的异地客户经常需要远程登录公司局域网，获取或发送资料。电话、传真和E－mail是我们常用的手段，但这些手段各有其利弊。本文向大家介绍Win95工作站通过电话线远程登录NT网的设置过程，进行这种设置后，有权限的用户就可以随时随地通过电话线登录公司局域网，获取和发送资料了。下面我们就介绍具体设置过程。<br>
+        　　<strong>一、在NT网上安装拨号网络服务器</strong><br>
+        　　通过电话线与Windows NT连网并不需要专门购置一台拨号网络服务器，我们在Windows 
+        NT服务器上安装拨号网络服务软件，就可使它兼有拨号网络服务器的功能。<br>
+        　　1对硬件要求及安装<br>
+        　　至少有一个兼容的调制解调器或网卡。将网卡插入主板上，连接好网线；设定调制解调器的参数及开关，再将调制解调器用RS－232电缆连接到计算机的串口COM1或COM2。。<br>
+        　　2安装远程访问软件(RAS)<br>
+        　　RAS(Remote Access Service)可以在“定制安装”时，或是在Windows NT的初始安装退出之后安装。在“快速安装”时，如果计算机内没有安装网卡，则默认安装RAS。<br>
+        　　安装和配置RAS，必须以“系统管理员”身份登录，添加远程访问软件过程如下：<br>
+        　　(1)选择控制面板中的“网络”选项。<br>
+        　　(2)选择“网络设置”对话框内的“添加软件”按钮。<br>
+        　　(3)选择“网络软件”下拉式列表内的“远程访问服务”，然后选择“继续”按钮。出现源文件路径的提示后，输入路径，并选择“确定”按钮。RAS文件将复制到你的计算机上。<br>
+        　　(4)“远程访问安装程序”会询问是否自动检测调制解调器。若要以人工方式选择调制解调器，则选择“取消”按钮；如果要自动检测调制解调器，则选择“确定”按钮。<br>
+        　　(5)在“端口使用情况”框中，选定端口的使用方式时，“只能拨出”表示计算机只能当作RAS的客户。“只能接收”表示计算机只能当作是RAS服务器。“拨出与接收”表示计算机可以作为客户或服务器。<br>
+        　　(6)若要配置接到端口的设备类型的信息，请选择“设备”，然后选择“设置”按钮。通常使用默认的设置即可。<br>
+        　　(7)在“远程访问安装程序”对话框中，选取“网络”按钮(请参阅配置RAS以使用LAN协议)，即可设置RAS网络的配置。在配置RAS服务器时，网络的访问范围可设为整个网络，或仅限于RAS服务器。<br>
+        　　(8)完成端口和网络配置设置后，选择“继续”按钮。出现“RAS服务器配置”对话框后，从框中可以看到已经安装的协议。<br>
+        　　(9)点击验证对话框内的“确定”按钮，然后再点击“网络设置”对话框内的“确定”按钮。计算机会提示你验证网络协议或其它的设置。<br>
+        　　(10)重新启动计算机，使“远程访问”生效。<br>
+        　　<strong>二、在Win95工作站上安装拨号网络客户</strong><br>
+        　　1在“控制面板”中选择“添加/删除程序”，单击“安装Windows”菜单。<br>
+        　　2在组件列表中单击“通讯”，再单击“详细资料”按钮。<br>
+        　　3在“通讯”对话框中单击“拨号网络”，再单击“确定”按钮。<br>
+        　　安装之后，“我的电脑”中就会增加“拨号网络”文件夹。<br>
+        　　<strong>三、连接</strong><br>
+        　　在建立拨号网络之前，必须先在Win95工作站处安装一台调制解调器，其后便可进行拨号网络连接，具体步骤如下：<br>
+        　　1从“我的电脑”中，双击“拨号网络”文件夹。<br>
+        　　2在“拨号网络”文件夹中，双击“新建连接”图标。<br>
+        　　3“新建连接向导”提示输入定义连接的有关信息，包括要拨入的计算机名字、调制解调器型号、区号、电话号码和国家代码。<br>
+        　　4最后按“完成”，一个新图标就会添加到“拨号网络”窗口中。<br>
+        　　5双击该图标你就可以连接到远方的拨号网络服务器上了。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(江西　乐时进　郝明生)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

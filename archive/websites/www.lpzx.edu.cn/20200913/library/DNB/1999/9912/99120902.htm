@@ -1,0 +1,128 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>三月重大BUG追击</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+    <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+      <TR> 
+        <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+        HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+        <TD WIDTH="484" HEIGHT="69"> 
+          <P ALIGN="center"><A
+        HREF="http://netfin4.china.com/?adlink|2|CPCW-Front-Top|1|468x60|247MEDIA" TARGET="_top"><IMG
+        SRC="http://netfin4.china.com/?adserv|2|CPCW-Front-Top|1|468x60|247MEDIA" BORDER="0"
+        WIDTH="468" HEIGHT="60"></A><BR>
+            中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+        </TD>
+      </TR>
+    </TABLE>
+    <table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center>
+              <table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#e8e8e8">
+                <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>三月重大BUG追击</strong></font></td>
+      </tr>
+                <tr VALIGN="BOTTOM" ALIGN="LEFT" BGCOLOR="#e8e8e8"> 
+                  <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"> 
+                    <p align="left">　　三公子从家乡回来后花了很长时间，处理积压了半个月的信件，倒也是一个又累又开心的事情。这么多信虽然花了我不少的时间，但是也可以看出这个栏目在朋友们心中的分量着实不轻。最近还收到了好几个在美国的朋友来信，想想大概是托了“电脑报网上电子版”的福，有时候一个人坐着痴想，上网最大的好处，可能就是可以免费看《电脑报》了。</p>
+        <p align="center"><strong>补丁的补丁</strong></p>
+                    <p align="left">　　Bug：微软发布了一个针对Windows NT Service Pack 4(这是一个升级和修复Windows 
+                      NT的补丁包)中的安全漏洞的补丁。这个漏洞对存在于一个包含了DOS、Windows 3.1、Windows for 
+                      Workgroups、OS/2 Warp 或者 Macintosh等混合环境中的NT服务器构成威胁。在上述环境中，一个用户能够使用空白口令交互式地登录进系统。这个问题出在Windows 
+                      NT Security Account Manager (SAM)数据库存放了“Hashed”的口令中，而SAM数据库处理修改口令操作时对一个非32位客户端有一个逻辑错误。感兴趣的朋友可以在http://support.microsoft.com/support/kb/articles/q214/8/40.asp找到这个逻辑错误的详细资料。需要这个补丁的朋友可以在ftp://ftp.microsoft.com/bussys/winnt/winnt-public/fixes找到。</p>
+                    <p align="center"><strong>Okidata的打印机不工作</strong></p>
+        <p align="left">　　Bug：如果你是从Windows 95中升级到Windows 98， 
+        同时仍然使用Okidata OL－600e打印机打印资料，那么你将会得到以下错误信息：“A 
+        Fatal Exception OE has occurred at [内存地址]”。微软解释说，Windows 98的安装程序修改了Okidata软件包中的部分组件内容， 
+        如果你不幸拥有了这款打印机，那么只能按照微软的建议，向Okidata的客户服务部寻求解决方案。</p>
+        <p align="center"><strong>钩子技术导致的Bug</strong></p>
+                    <p align="left">　　Bug：Symantec (出品Norton系列软件的公司)发现在他们出品的pcANYWHERE32 
+                      和Quarterdeck ProComm Plus存在着严重的兼容性问题。你不能在同一台NT机上安装这两个软件，否则在第二个软件安装完成重新启动Windows时，你会发现“Ctrl+Alt+Del”的组合键失去了作用，你无法重新启动电脑了。问题的症结在于ProComm 
+                      Plus中的Rapid Remote功能和pcANYWHERE32在启动时同时试图在系统中的同一位置放上自己的HOOK(HOOK的直译是钩子，在Windows中，HOOK代表了一种技术，这种技术使外部程序可以直接与系统挂钩，而当某些特殊事件发生时，系统将会自动回调该程序)。如果你已经安装了这两个软件，那么很可能需要重新安装NT才能解决。如果你确实需要安装这两个软件，那么使用自定义安装，舍弃Rapid 
+                      Remote功能。</p>
+        <p align="center"><strong>Norton AntiVirus防病毒软件要你冷启动</strong></p>
+                    <p align="left">　 Bug：当你安装了Symantec Norton SystemWorks 1.1 
+                      Norton AntiVirus并且重新启动机器后，只要按下“Ctrl+Alt+Del”或者使用Windows 
+                      95开始菜单中关闭系统下的“重新启动计算机”项目，都会出现一条错误信息：“HIMEM.SYS is missing. 
+                      Make sure that the file is in your Windows directory.&quot;，可能还会包括一条信息“Unable 
+                      to control A20 line .”。解决方法之一：正常关机，然后冷启动(也就是切断电源后，静候一分钟，然后启动)。Symantec建议你在Autoexec.bat的第一行加入以下内容：<br>
+        　　SET DOS16M=2<br>
+        　　Norton AntiVirus防病毒软件导致意外死机<br>
+        　　Bug：如果你使用的是升级版本的Windows 98，Symantec说你的SystemWorks 
+        1.1可能会出现一些麻烦问题。包括：如果安装了Norton AntiVirus部分，那么在关闭系统时会出现Windows 
+        保护性错误，在热启动时Windows 98会挂起，或者无法从Windows 98中重新启动到MS－DOS方式。为了解决这些问题，Symantec公司已经将他们的SymEvent 
+        升级为10.2.9.3版本，SymEvent是Symantec公司用于对你的系统进行一些低级访问的驱动程序和DLL包，你可以在ftp://ftp.symantec.com/public/english_us_canada/symevnt/sevinst.exe得到它。不过，如果你已经安装了Norton 
+        AntiVirus 5.0就不再需要这个补丁，因为这个软件中使用的正是SymEvent 
+        10.2.10.1版本。Norton SystemWorks 1.1，这个软件和运行于东芝膝上电脑的东芝鼠标控制软件有冲突，因此，Symantec建议你在安装SystemWorks之前卸载该部件。<br>
+        东芝笔记本电脑<br>
+        无法播放CD的Bug<br>
+        　　Bug：如果你使用的是Toshiba Satellite 4000、4005或者4010，那么你会发现在使用电池时无法播放CD。你可以在http://pcsupport.toshiba.com找到Windows 
+        9x Audio Quick Fix文件S4KSNDFX.EXE。</p>
+        <p align="center"><strong>升级到NT Service Pack 4注意事项</strong></p>
+        <p align="left">　　Bug：如果你在Windows NT 4.0 Service Pack 3上运行Traveling 
+        Software Laplink 7.5或者Laplink Professional，那么在升级到Windows NT 4.0 Service 
+        Pack 4之前须要先移去Laplink的驱动文件。否则，当你运行autochk.exe时，将会挂起几分钟，然后提示错误信息。在重新启动后，如果你还能够进入Windows，那么到Traveling 
+        Software的主页去获得一个TSIKBFD.SYS文件(http://www.travsoft.com/techsupport/updates.asp)，然后将它复制到\WINNT\Sytem32\Drivers下，接着重新启动计算机。如果Windows 
+        NT无法启动了，那么可以试着多启动几次，Traveing Software说Autochk.exe可能会终止在启动时自动执行，然后你就可以去升级该驱动程序了。最糟糕的可能就是Windows 
+        NT再也无法启动，那么你就需要使用别的机器去获得这个8.5K的驱动程序，然后使用启动盘启动机器进行升级。</p>
+        <p align="center"><strong>IBM电脑的升级错误Bug</strong></p>
+        <p align="left">　　Bug：微软最近发布消息说，如果你将你的IBM Aptiva E84或者E56从Windows 
+        95升级到Windows 98，那么可能会在冷启动时挂起。微软建议的解决方案是：禁止32位文件存取方式：打开开始菜单中的程序子菜单，在附件组中运行System 
+        Tools。点击System Information，然后在Tools 菜单中选择System Configuration。在“General”标签中打开“Advanced”部分，选择Force 
+        Compatibility Mode Disk Access的复选框，然后重新启动电脑。另一个解决方案是，在启动时按住Ctrl键以出现Windows 
+        98启动菜单，选择安全模式(Safe Mode)，在Windows 98中选择开始菜单中的关闭计算机→重新启动计算机。</p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月29日第12期</a></font> 
+        </td>
+      </tr><tr>
+                  <td> 
+                    <P>相关站点：<A HREF="http://support.microsoft.com/support/kb/articles/q214/8/40.asp" TARGET="_blank">http://support.microsoft.com/support/kb/articles/q214/8/40.asp</A><BR>
+                      　　　　　<A HREF="ftp://ftp.microsoft.com/bussys/winnt/winnt-public/fixes" TARGET="_blank">ftp://ftp.microsoft.com/bussys/winnt/winnt-public/fixes</A><BR>
+                      　　　　　<A HREF="ftp://ftp.symantec.com/public/english_us_canada/symevnt/sevinst.exe" TARGET="_blank">ftp://ftp.symantec.com/public/english_us_canada/symevnt/sevinst.exe 
+                      </A><BR>
+                      　　　　　<A HREF="http://pcsupport.toshiba.com" TARGET="_blank">http://pcsupport.toshiba.com 
+                      </A><BR>
+                      　　　　　<A HREF="http://www.travsoft.com/techsupport/updates.asp" TARGET="_blank">http://www.travsoft.com/techsupport/updates.asp</A> 
+                    </P>
+                    </td>
+                </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+    <DIV ALIGN="center">
+      <CENTER>
+      </CENTER>
+    </DIV>
+    <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+    <NOSCRIPT> 
+    <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+    </NOSCRIPT> 
+  </center></div>
+</body>
+</html>

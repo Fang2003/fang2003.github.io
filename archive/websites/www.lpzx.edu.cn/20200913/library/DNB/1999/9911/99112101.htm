@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>如何升级显卡的BIOS</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>如何升级显卡的BIOS</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　1.下载对应显卡芯片的BIOS升级程序(例如：nv3flash.exe可用于芯片为Riva128的显卡，以下升级以此为例。如果你的显卡芯片不是Riva128，就需要到它的公司主页上找特定的升级程序，千万不可乱用)。<br>
+        　　2.下载最新的BIOS。在相应的显卡主页上下载相应的BIOS，千万要注意显卡具体型号，如显存是SDRAM还是SGRAM、有8MB显存还是有16MB显存、是AGP版本还是PCI版本、有无TV输出等等。另外，在BIOS中要设置成A盘先启动，准备好一张DOS 
+        6.22的启动盘(如果你的DOS不是6.22版，准备相应版本的DOS启动盘)，将nv3flash.exe拷贝进去。<br>
+        　　3.进入“安全DOS模式”。升级不能在Windows下进行，万一遇上设备冲突，显卡就可能报废。所以要在纯DOS模式下升级，不能加载任何驱动程序。在Win95/98环境下，开机后按Shift＋F5；DOS6.22环境下，开机直接按F5，跳过config.sys和autoexec.bat 
+        进入DOS提示符。<br>
+		      &nbsp;&nbsp;&nbsp; 4.开始进行BIOS升级： 将nv3flash.exe和BIOS升级文件(多为*.rom文件)拷贝到驱动盘根目录下(一般为C盘)，直接运行nv3flash.exe 
+		      *.rom ，屏幕显示当前的BIOS信息，nv4flash.exe会检测BIOS的类型，然后有一个信息提示更新完毕，退回到C:/&gt;，取出软盘，重新开机。更新过程绝对不能被中断，如果能够正常开机，则表示更新成功。<br>
+        　　更新BIOS可以修正显卡的一些错误，或增加某些新功能。<br>
+        　　更新BIOS要非常小心，更新时如果中途断电或写入的BIOS版本有错、不全等等都有可能造成更新失败，显示器黑屏。所以从下载BIOS升级程序、下载最新的BIOS到升级BIOS，都要非常小心。如果没有经验，请不要轻易尝试！<br>
+        　　如果更新出错，办法有三：<br>
+        　　1．如果还可以进入Windows，只是Windows认不出显卡，请用DOS启动盘启动系统，将正确的BIOS重新写入EPROM，启动后就可以恢复BIOS的功能了。<br>
+        　　2．显示器黑屏：请另找一块PCI显卡，与刷坏的显卡同时插在主板上，并将显示器接在新的PCI显卡上(刷坏的显卡如为AGP版本，注意把系统CMOS中设为AGP先初始化)，用DOS启动盘启动系统，将正确的BIOS重新写入EPROM，启动后就可以恢复BIOS的功能了。<br>
+        　　3．用专用的烧录器将正确的BIOS重新写入EPROM(一般用户无法实现)。<br>
+        　　以下是我收集的可刷新显卡名录：<br>
+        　　Voodoo Banshee,i740,Riva128,Riva TNT,Savage 3D,3D Labs Permedia2,Matrox系列：Mystique,mystique 
+        220,Millennium,Millennium Ⅱ,MGA G100,MGA G200, Mystique G200,Marvel G200<br>
+        <strong>(于　飞)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月22日第11期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　福建读者庄重问：我的声卡是ALS007声卡，奇怪的是在Windows 
+        95的硬件列表中，该声卡被放在“其它设备”一栏，并且显示的四个设备名称都一样，属性中并没有指出资源冲突。说明Windows 
+        95不能识别该声卡，也排除声卡被Windows 95重复检测的可能。但问题在于，我必须在Windows 
+        3.2中安装好声卡驱动程序后，再升级到Windows 95才能使声卡工作正常。我也曾试着运行声卡的驱动安装程序，或在控制面板中让Windows 
+        95重新检测，从列表中选择声卡并安装驱动程序，都不能解决声卡不能工作的问题。请问是何原因？如何解决？<br>
+        　　答：采用ALS007芯片的声卡是在Windows 95发布以后才进入市场的。虽然这是一种符合“即插即用”的声卡，但Windows 
+        95系统盘里并没有它的驱动程序。对于这样的设备，Windows 95的处理方式是先把它放到“其它设备”一栏中，等候用户处理。要注意的是，Windows 
+        95系统中安装设备驱动程序的方法通常与Windows 3.X系统中有所不同。当在系统的“其它设备”中已经出现ALS007设备条目时，可以先将ALS007声卡相关的条目删除掉，然后用鼠标器点击系统窗口中的“刷新”或选择“开始/关闭系统/重新启动”，使系统自检发现新设备，然后选择由声卡厂商提供的驱动程序，并从磁盘安装，即可将驱动程序安装到系统中。对于用“刷新”方式安装的声卡驱动程序，在初次安装驱动程序后，虽然出现了喇叭标志，但喇叭还不能发声，这时可重新启动系统，喇叭就会发出声音来。<br>
+        　　之所以在“其它设备”中会出现四条相同的ALS007设备项目，是因为声卡上还有MIDI、游戏口、光驱接口等设备，Windows 
+        95把它们当成同一设备上的东西，以相同的设备名称列了出来。<br>
+        　　对于某些声卡，其Windows 3.X下的驱动程序仍可为Windows 95所接受，所以可采用先在Windows 
+        3.X下装好驱动程序，再升级到Windows 95的方法来使用该声卡。<br>
+        　　河南读者李树玉问：我单位有一台奔腾Ⅱ代微机，使用Windows 95 
+        OSR2。另一单位用的是四通打字机。我想拷贝一个文件，于是拿来四通打字机上的3寸盘，插入微机软驱，未打开写保护，在Windows 
+        95 OSR2资源管理器上用鼠标器点击A驱动器，结果发现显示的文件全是以MSDOC开头的、从001到160的TXT文件。第一个文件是DIR.DAT，用Word 
+        97打开一个TXT文件，却只有2411等几个字符。之后，用UCDOS打开文件，系统显示：“磁盘满，按任意键删除BAK文件”，我没敢按键，马上取出磁盘。再到四通打字机上，发现文件全部读不出来了。但盘上有许多重要文件，如何挽救？<br>
+        　　答：四通打字机的磁盘格式和文件格式与一般PC机是不完全相同的。有些文字处理系统，例如WPS具有接受和转换四通文件的能力，但也不能正确地写回四通格式磁盘。一旦用微机写回四通格式磁盘，就会产生问题，导致四通打字机不能再使用微机写过的盘。因为四通打字机的处理能力有限，要挽救这种磁盘一般只能靠计算机。要保留好原盘，避免转换不成功进一步损坏盘上数据，最好是先复制一张盘，然后用WPS的文件转换功能将四通文件转换为文本文件格式，再用WPS对其进行编辑。如果软盘的FAT表或部分文件损坏了，也可以用PCTOOLS等工具软件进行整修。或者将有用的数据一块一块地读出来，再拼成文件。当然，这些操作比较复杂，由比较熟练的人操作为宜。<br>
+        　　如果还要用Word对文件进行处理，则应将WPS处理好的文件再转换为文本文件格式，或者用Word读取WPS文件的方式读取WPS处理后的文件，而不能用Word直接读取或处理四通格式文件。<br>
+        　　湖北读者张玉彬问：我有一台品牌电脑，Pentium MMX166 CPU，16M EDO内存，希捷硬盘，8速光驱。硬盘分为两个逻辑盘。长时间运行后，偶尔会出现D盘运行速度变慢或程序不能运行的故障，而C盘运行正常。退出并热启动，出现：“Pri 
+        Master HDD Error……”，有时C盘无法引导，BIOS设置中查不到硬盘。关机后重新启动，一切正常。请问是不是硬盘有问题？<br>
+        　　答：很可能是硬盘存在质量问题。这种问题通常是由硬盘的磁头架略有松动造成的。在运行一段时间后，磁头定位发生偏差，就会出现这种现象。关机后，重新启动时，磁头重新定位，又可以开始一段时间的正常工作。建议及时找经销商更换该硬盘。<br>
+        　　湖南省读者蒋卫星问：一次，我的电脑被一位不懂电脑的朋友使用，后来我再使用软驱时，总是出现“General 
+        failure reading drive A, Abort,Retry, Fail?”的提示。开始我怀疑CMOS设置不当，仔细检查没有问题。后来怀疑是软驱的磁头偏了，当我把软驱拆下，调整磁头小车及磁头后再装上去，开机后使我大吃一惊，读A盘时，指示灯不亮，过了两分钟才出现“Abort, 
+        Retry, Fail?”的提示。Windows 95中的“控制面板/系统”里，在软驱项的属性中，显示设备失败，提示更改设备驱动程序。怎么办？<br>
+        　　答：很可能是在你把软驱装回去时，软驱的信号线或电源线没有插好，请你仔细检查，信号线的两头都要检查；或请比较熟悉电脑硬件的人看看。另外你也还要再检查一下CMOS的设置情况，仔细检查与软驱有关的两三处设置是否有不当之处，例如软驱模式和Floppy 
+        Swarp等项。<br>
+        　　山西读者向东问：我有一块华硕AGP－V2740显卡，如何更新其视频BIOS?<br>
+        　　答：1在DOS实模式下：键入740flash.exe，回车，如果可以更新，屏幕会出现“Program 
+        the device?(default=Yes)”的提示，当键入Y时，屏幕会出现提示：“Enter 
+        name of ROM data file to open(default=vb.dat)：请键入BIOS文件名asus217a.rom”，然后在数秒内屏幕无显示(如果是用软盘去更新)。但是在读软盘时，注意切勿任意关机，等到更新成功后屏幕会出现提示:<br>
+        　　Flash ROM program completed!<br>
+        　　Remove any floppies and reboot for changes to take effect!<br>
+        　　2在Windows 95模式下：键入Flash217a.exe(flash2～1.exe)，将BIOS文件结合在里面，在Windows 
+        95下直接执行更新后，重新启动系统即可。<strong>　<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

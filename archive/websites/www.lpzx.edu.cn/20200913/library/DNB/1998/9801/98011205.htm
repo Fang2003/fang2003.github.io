@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">VB4.0对注册表操作的命令<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        &nbsp; 大多数FOR WINDOWS 95的程序安装时都要对Windows 95的注册表进行修改，以适应自身的需要。对于用VB4.0的用户来说它也提供了对注册表操作的一些命令，下面就其用法介绍给大家。<br>
+        　　<strong>1.SAVESETTING保存注册表设置。</strong><br>
+        　　用法：savesetting appname,section,key,seting<br>
+        　　对应：hkzy_current_user\Software\microsoft\myapp\myprogram\path(path中的值)<br>
+        　　<strong>2.GETSETTING　从注册表中取一值</strong><br>
+        　　用法：getting appname,section,key[,default]<br>
+        　　其中default的值决定了注册表中没有所要的项目时的返回值。<br>
+        　　<strong>3.GETALLSETTING　从注册表中取一组值</strong><br>
+        　　用法：getallsetting appname,section<br>
+        　　<strong>4.DELETESETTING删除一个应用程序、一组值、一个值的设置</strong><br>
+        　　用法：deletesetting appname[,section[,key]]<br>
+        　　例子：strdate=date<br>
+        　　savesetting &quot;regcust&quot;,&quot;startup&quot;,&quot;backup&quot;,strdate‘如果注册表中的software\microsoft下没有应用程序“REGCUST”一项或没用下面的任何一个，则会创建一个项。<br>
+        　　Strdate=getsetting 
+        &quot;regcust&quot;,&quot;startup&quot;,&quot;backup&quot;,&quot;0&quot;　‘将BACKUP中的值取给STRDATE，如果没找到则返回0。<br>
+        　　deletesettings &quot;regcust&quot;,&quot;startup&quot;,&quot;backup&quot;　‘删除一个值<br>
+        　　deletesettings &quot;regcust&quot;,&quot;startup&quot; ‘删除一组值<br>
+        　　deletesettings &quot;regcust&quot;　　‘删除一个应用程序 <strong>（云南 
+        董平）。</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

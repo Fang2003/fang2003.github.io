@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VB的“问”与“答”&nbsp; 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　作为一个VB爱好者，一个人在黑暗中摸索真是太累了。现将我摸索的一些心得贡献给大家，希望起抛砖引玉的作用（我用的是VISUAL 
+        BASIC 50中文版）。<br>
+        　　1.问题：有一程序含有两个Form，其中Form2的Picture属性为一张BMP位图，而以下是Form1显示Form2的程序：<br>
+        　　Form2Show<br>
+        　　'延迟2秒<br>
+        　　Time1=Timer<br>
+        　　While Timer－Time1&lt;2<br>
+        　　Wend<br>
+        　　以上程序的目的是希望显示Form2的图片两秒之后，Form1才继续执行，结果竟然是2秒之后，Form2的图片才显示出来。为什么图片会延迟显示呢？<br>
+        　　回答：一般而言，绘图会比一般的指令费时，因此，绘图指令的优先级较低，也就是说，直到其他指令都执行完毕之后，才会轮到绘图指令的执行，在以上的Form1程序中，由于Form2Show之后，又执行了一个费时2秒的While循环，因此，Form2的图片必须等待2秒钟，才会被描绘出来。<br>
+        　　可按如下方法解决：<br>
+        　　在While循环中增加DoEvents，如下：<br>
+        　　Form2Show<br>
+        　　'延迟2秒<br>
+        　　Time1=Timer<br>
+        　　While Timer－Time1&lt;2<br>
+        　　DoEvents<br>
+        　　Wend<br>
+        　　DoEvents的作用是短暂地停止执行，使得优先级较低的绘图指令被执行，于是Form2的图片便可以在While循环执行的阶段就被显示出来。<br>
+        　　2.问题：在编数据库程序时，根据帮助来声明变量，如下：<br>
+        　　Dim db As Database<br>
+        　　Dim rs As Recordset<br>
+        　　结果程序编译时VB竟然说“用户定义类型未定义”，是何原因呢?<br>
+        　　回答：Database及Recordset属于DAO(Data Access Object)模块里的，不是VB内定的，因此必须将DAO的定义包含在“引用中”，VB才会认得Database及Recordset，操作方法是选取功能表的“工程（P）”，待出现“引用（N）”窗时，再选取Microsoft 
+        DAO 30 Object Library或Microsoft DAO 25/30 Compatibility Library(兼容Access 20以前的版本)。(如果使用的是16位版本的VB，则选取Microsoft 
+        DAO 25 Object Library)<br>
+        　　3.问题：我想控制I/O，VB是否有类似Quick BASIC的INP、OUT指令可使用？<br>
+        　　回答：VB并无INP及OUT的指令可用，即使是Windows的API函数也没有类似的函数，原因是Windows不希望应用程序直接控制硬件。如果想控制RS232的通讯口，则VB专业版(或企业版)有现成的“MSComm”控件可用。<br>
+        　　4.问题：如何创建椭圆形的窗体?<br>
+        　　回答：当然是用Win32 API函数了，用VB50中文版的API文本查看器将下列API函数加入窗体的通用代码中，就可以做一个椭圆窗口。<br>
+        　　Private Declare Function CreateEllipticRgn Lib ″gdi32″(ByVal X1 As Long,ByVal Y1 
+        As Long,ByVal X2 As Long,ByVal Y2 As Long)As Long<br>
+        　　Private Declare Function SetWindowRgn Lib ″user32″(ByVal hWnd As Long,ByVal hRgn 
+        As Long,ByVal bRedraw As Boolean)As Long<br>
+        　　在Form_Load()窗体中加入如下代码：<br>
+        　　Private Sub Form_Load()<br>
+        　　Show<br>
+        　　SetWindowRgn hWnd,CreateEllipticRgn(0,0,300,200),True<br>
+        　　End Sub<br>
+        　　上述代码可以创建一个椭圆形状的窗口。(重庆 小敏）<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月11日第18期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

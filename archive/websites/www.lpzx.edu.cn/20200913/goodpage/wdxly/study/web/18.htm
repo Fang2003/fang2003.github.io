@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- #BeginTemplate "/Templates/samplefiletmp.dwt" -->
+<head><!-- #BeginEditable "dochead" -->
+<title>静态菜单</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+td {font-size: 9pt;}
+body {font-family: "宋体";font-size: 9pt;margin-top: 5px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;}
+.pt9 {font-size: 9pt;font-family: "宋体";}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<TABLE border="0" cellspacing="0" cellpadding="0" align="center">
+<tr valign="top">
+<TD width="787" height="779">
+<table width="100%" border="1" cellspacing="1" cellpadding="1" bordercolor="#009999" bgcolor="#F5F5F5">
+<tr valign="top">
+<TD height="14" colspan="2" width="737" align="center"><!-- #BeginEditable "title" --><font size="3" color="#FF0033">Static
+Menu 静态菜单脚本</font><!-- #EndEditable -->
+
+<tr valign="top">
+<TD colspan="2" width="737"><!-- #BeginEditable "mainbody" -->
+<p>将如下代码加入&lt;body&gt;标签内的适当位置:</p>
+<p>&lt;script language=&quot;JavaScript&quot;&gt;</p>
+<p>function setVariables() {<br>
+if (navigator.appName==&quot;Netscape&quot;) {<br>
+v=&quot;.top=&quot;;<br>
+dS=&quot;document.&quot;;<br>
+sD=&quot;&quot;;<br>
+y=&quot;window.pageYOffset&quot;;<br>
+}<br>
+else {<br>
+v=&quot;.pixelTop=&quot;;<br>
+dS=&quot;&quot;;<br>
+sD=&quot;.style&quot;;<br>
+y=&quot;document.body.scrollTop&quot;;<br>
+}<br>
+}<br>
+function checkLocation() {<br>
+object=&quot;object1&quot;;<br>
+yy=eval(y);<br>
+eval(dS+object+sD+v+yy);<br>
+setTimeout(&quot;checkLocation()&quot;,10);<br>
+}<br>
+&lt;/script&gt;<br>
+&lt;div id=&quot;object1&quot;style=&quot;position:absolute;visibility:show;
+left:0px;top:0px;z-index:5&quot;&gt;<br>
+&lt;table width=150 border=0 cellspacing=20 cellpadding=0 &gt;<br>
+&lt;tr&gt;<br>
+&lt;td bgcolor=&quot;#EAEAEA&quot;&gt;<br>
+&lt;center&gt;<br>
+静态导航菜单 <br>
+&lt;/center&gt;<br>
+&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td bgcolor=&quot;#EAEAEA&quot;&gt;&lt;a href=&quot;http://www.microsoft.com&quot;
+&gt;Microsoft&lt;/a&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td bgcolor=&quot;#EAEAEA&quot;&gt;&lt;a href=&quot;http://www.yahoo.com&quot;
+&gt;Yahoo&lt;/a&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td bgcolor=&quot;#EAEAEA&quot;&gt;&lt;a href=&quot;http://www.anysite.com&quot;&gt;Any
+site&lt;/a&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;tr&gt;<br>
+&lt;td bgcolor=&quot;#EAEAEA&quot;&gt;&lt;a href=&quot;http://www.anysite.com&quot;
+&gt;Any site&lt;/a&gt;&lt;/td&gt;<br>
+&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+&lt;/div&gt;</p>
+<p>最后,不要忘记在&lt;BODY&gt;中加上onload事件句柄:</p>
+<p>&lt;BODY bgcolor=&quot;#ffffff&quot;OnLoad=&quot;setVariables();checkLocation()&quot;&gt;</p>
+<!-- #EndEditable -->
+
+</table>
+
+
+</TABLE>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+<!-- #EndTemplate --></html>

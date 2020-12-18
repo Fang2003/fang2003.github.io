@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>“红楼梦”不能安装的解决办法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>“红楼梦”不能安装的解决办法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　《电脑报配套光盘第四辑》的用户程序中有一个“红楼梦”的软件，但最近不断有用户反映不能安装。这是由于作者对源盘进行了加密，但我们在测试时没有注意到，因此造成了这个问题。在此我们希望作者在投稿中不要对源盘加密，而且如果有安装程序，则应当适合于光盘介质，我们以后一律不放入软件的安装镜像文件。<br>
+        　　“红楼梦”不能安装问题的解决办法如下：<br>
+        　　在DOS下（无论是纯DOS还是DOS窗口都行），进入光盘的\dnbredr\honglm\目录，执行“install 
+        c:”，会出现提示信息，按照提示按C继续。不管是否出现错误信息，继续以下步骤。输入命令行“arj 
+        x mss －gMicrowin Software Studio c:\”。其中，“－gMicrowin Software Studio”中间的两个空格是Alt＋255，输入方法是：按住Alt键不放，然后依次按255三个数字，然后放开Alt键，就会看到屏幕上出现一个空格，但实际上不是。注意命令行中的大小写不能写错。<br>
+        　　最后，用“edit c:\hlm.bat”命令建立一个批处理文件，内容如下：<br>
+        　　subst a: c:\mss<br>
+        　　a:<br>
+        　　_ hlm<br>
+        　　c:<br>
+        　　subst a: /d<br>
+        　　然后存盘退出，运行它，就可以使用“红楼梦”了。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月23日第11期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

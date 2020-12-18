@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">如何给服务器装两个网卡<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　学校一连网公用机房，服务器为486DX2－66兼容机，8M内存，所连50台电脑为386DX，1M内存，网络操作系统为NOVELL 
+        3.12(250USER)，采用以太网，总线电缆布局。近一年来运行非常不稳定，经常有多台电脑不能上网，或上网易死机。怀疑网卡未插好，或网卡有故障。经重新安插网卡或更新好网卡仍不能解决问题。<br>
+        　　分析：该批电脑为组装兼容机，稳定性不好，有些部件已开始老化。服务器性能也较低，一个网卡带50台工作站，负担太重。为降低维护成本，决定试试不更换服务器，在原服务器上增加一个网卡，分担网络流量，看能否解决问题。<br>
+        　　在给服务器装上两个网卡后，以前不能上网的电脑已全部可以上网，且死机现象明显减少，故障消除。加装网卡的方法如下：<br>
+        　　1.增加的硬件：<br>
+        　　&middot;NE2000卡一个2终端器一对<br>
+        　　2.操作步骤：<br>
+        　　a 启动服务器，在控制台“：”提示符下输入LOAD INSTALL，然后选择“System 
+        Options”中的“Edit autoexecncf File”，可以看到如下文本：<br>
+        　　……<br>
+        　　load ne2000 port=300 int=3 frame=ETHERNET_802.3<br>
+        　　bind ipx to ne2000 net=8252386<br>
+        　　……<br>
+        　　从上面可以看到已安装在服务器上的网卡使用IRQ3(中断号为3)，基本I/O地址300h，网络编号为8252386。<br>
+        　　b 为新网卡设置好IRQ，I/O地址，以及不同于上面的网络编号。NE2000卡可用中断号为IRQ2，3，4，5，7。I/O地址可为300H、320H、340H、360H。为避免设备间冲突，我选择了IRQ5，I/O地址340H，并在新网卡上相应地作好跳线设置。对应的网络编号为8252387(可以为任意不同于上面网络编号的不超过8位十六进制的数)，并在autoexec.ncf文件中作修改，见步骤d。<br>
+        　　c 硬件连接<br>
+        　　在服务器上插好新增网卡，一半电脑通过电缆线和一对终端器连接到新增网卡上。另一半电脑使用另一条电缆线和一对终端器连接到以前的网卡上。<br>
+        　　d 修改autoexec.ncf文件<br>
+        　　启动服务器，在控制台“：”提示符下输入LOAD INSTALL，然后选择“System 
+        Options”中的“Edit autoexec.ncf File”，增加下面两行文本：<br>
+        　　……<br>
+        　　load ne2000 port=340 int=5 frame=ETHERNET_802.3<br>
+        　　bind ipx to ne2000 net=8252387<br>
+        　　……<br>
+        　　f 重新启动服务器，系统装入netware操作系统时，选择b，回车。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(广东　廖忠)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月23日第11期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

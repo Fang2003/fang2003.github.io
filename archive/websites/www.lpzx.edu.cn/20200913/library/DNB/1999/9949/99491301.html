@@ -1,0 +1,161 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='stylesheet' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VB制作屏幕保护程序</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>49 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VB制作屏幕保护程序</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VB制作屏幕保护程序 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　利用VB制作屏幕保护程序非常容易。本文将详细给大家介绍制作屏幕保护程序的方法。
+<p><b>　　一、 基本编程思路</b></p>
+　　大家都知道屏幕保护程序就是用变换的颜色或图形以防止屏幕荧光粉被损伤。当有鼠标移动或按键时能够终止它。<br>
+　　1. 编制屏幕保护图形<br>
+　　2. 隐藏鼠标<br>
+　　用ShowCursor Windows API 函数我们可以实现隐藏鼠标。<br>
+　　3. 检测鼠标和按键行为<br>
+　　检测鼠标行为以便退出屏幕保护程序。<br>
+　　4. Windows 调用屏幕保护程序的参数命令<br>
+　　／a   在显示器属性对话框中单击它可改变口令按钮。<br>
+　　／p   每当选中显示器属性对话框中屏幕保护程序标签时，在对话框显示预览效果。<br>
+　　／c   在显示器属性对话框中单击它进行设置按钮。<br>
+　　／s   在显示器属性对话框中单击则预览按钮或屏幕保护程序被系统正常调用。<br>
+　　5. 编译屏幕保护程序<br>
+　　其实任何VB应用程序都可作为屏幕保护程序来运行，但为了被Windows 95 所调用，需要将它作为屏幕保护程序来编译。首先进入VB5编程环境，编好程序后选择／File／Make project菜单项，然后在File Name文本框中将后缀名EXE改为SCR。最后单击OK按钮,将生成的SCR文件拷到Windows目录下，就完成了屏幕保护程序的创建。
+<p><b>　　二、实例</b></p>
+　　下面就用一个实例给大家详细说明屏幕保护程序的制作。<br>
+　　名称          属性值<br>
+　　Form1<br>
+　　BorderStyle=0－None  ′取消标题栏和最大化、最小化按钮<br>
+　　WindowState=2－Maximized ′窗体最大化<br>
+　　Timer<br>
+　　Name=Timer1<br>
+　　Interval=1  ′时间间隔为1毫秒<br>
+　　Enabled=False<br>
+　　Timer<br>
+　　Name=Timer2<br>
+　　Interval=50<br>
+　　Enabled=False<br>
+　　Label<br>
+　　Name=lab1
+　　Caption=电脑爱好者<br>
+　　Option Explicit<br>
+　　Dim quitflag As Boolean  ′声明终止程序标志变量<br>
+　　Dim lleft               <br>
+　　′声明隐藏或显示鼠标的API函数<br>
+　　Private Declare Function ShowCursor Lib ″user32″ (ByVal bShow As Long) As Long<br>
+　　′检测鼠标单击或移动<br>
+　　Private Sub Form_Click()<br>
+　　quitflag = True<br>
+　　End Sub<br>
+　　Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)<br>
+　　Static xlast, ylast<br>
+　　Dim xnow As Single<br>
+　　Dim ynow As Single<br>
+　　xnow = X<br>
+　　ynow = Y<br>
+　　If xlast = 0 And ylast = 0 Then<br>
+　　xlast = xnow<br>
+　　ylast = ynow<br>
+　　Exit Sub<br>
+　　End If<br>
+　　If xnow &lt;&gt; xlast Or ynow &lt;&gt; ylast Then<br>
+　　quitflag = True<br>
+　　End If<br>
+　　End Sub<br>
+　　′检测按键<br>
+　　Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)<br>
+　　quitflag = True<br>
+　　End Sub<br>
+　　Private Sub Form_Load()<br>
+　　Dim X As Long<br>
+　　lleft = 0    ′横向滚动文字的起始X坐标<br>
+　　If App.PrevInstance = True Then ′用APP对象的PrevInstance属性<br>
+　　Unload Me      ′防止同时运行屏幕保护程序的两个实例<br>
+　　Exit Sub<br>
+　　End If<br>
+　　Select Case UCaseS(LeftS(CommandS, 2))  ′装载命令行参数<br>
+　　Case ″／S″    ′在显示器属性对话框中单击了预览按钮或屏幕保护程序被系统正常调用。<br>
+　　Show       ′全屏显示Form1窗体            <br>
+　　Randomize ′初始化随机数生成器   <br>
+　　X = ShowCursor(False)    ′隐藏鼠标<br>
+　　BackColor = vbBlack<br>
+　　Do<br>
+　　Timer2.Enabled = True  ′启动Timer2 ,显示屏幕保护滚动文字<br>
+　　DoEvents       ′转让控制权,以便检测鼠标和按键行为<br>
+　　Loop Until quitflag = True  ′运行屏幕保护滚动文字直至有鼠标和按键行为<br>
+　　Timer2.Enabled = False ′终止滚动文字<br>
+　　Timer1.Enabled = True     ′启动Timer1,退出屏幕保护程序<br>
+　　Case Else<br>
+　　Unload Me<br>
+　　Exit Sub<br>
+　　End Select<br>
+　　End Sub<br>
+　　Private Sub Form_Unload(Cancel As Integer)<br>
+　　Dim X<br>
+　　X = ShowCursor(True)                ′显示鼠标<br>
+　　End Sub<br>
+　　Private Sub Timer1_Timer()<br>
+　　Unload Me  ′退出屏幕保护程序<br>
+　　End Sub<br>
+　　Private Sub Timer2_Timer() ′显示横向滚动文字<br>
+　　lleft = lleft ＋ 100<br>
+　　If lleft &gt;= 11810 Then<br>
+　　lleft = 0<br>
+　　Lab1.Top = Int(Rnd ＊ 7000)<br>
+　　End If<br>
+　　Lab1.Left = lleft<br>
+　　Timer2.Enabled = False<br>
+　　End Sub　<br><b>　（黑龙江　王兵　王波）     </B></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99491301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

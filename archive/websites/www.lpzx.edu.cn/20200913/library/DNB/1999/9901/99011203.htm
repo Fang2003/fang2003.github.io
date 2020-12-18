@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Windows 
+        9x故障解决一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　运行Windows 
+        9X,常常系统告急，注册表或system.ini出现一段英文提示错误的信息。<br>
+        　　它的中文意思是：<br>
+        　　找不到运行Windows 或Windows 应用程序所需的设备。<br>
+        　　Windows 注册表或system.ini 文件与此设备文件有关， 
+        但这个设备文件已不存在。<br>
+        　　如果你真的想删除此文件，试着用它的Uninstall或Setup程序来卸载相关的应用程序。<br>
+        　　如果你仍然要用与此设备文件相关的应用程序，试着重装那个应用程序来代替丢失的文件。<br>
+        　　 
+        出现这种错误主要是由于应用软件未删净产生，原因如下：　　<br>
+        　　1.DOS、Windows、Windows 9X启动并存，因Windows中的应用程序装卸删除引起的，Windows 
+        97禁用DOS启动其中就有这个原因。<br>
+        　　2.病毒或人为修改Windows 注册表或system.ini 文件。<br>
+        　　3.不是用 uninstall 删除应用软件， 造成设备文件存留在 Windows 
+        注册表或system.ini 文件中。<br>
+        　　解决办法：<br>
+        　　1.用杀毒软件杀查；<br>
+        　　2.修改system.ini，方法是：<br>
+        　　在“运行”中输入“sysedit”，运行sysedit。选system.ini编辑，用“搜索”中的“查找”，输入待查文件????????.???，查找到删除该行，然后查找下一个，查找到再删除该行一直到找不到为止，存盘。<br>
+        　　3.修改注册表，查找要删除的主键或键值，但不用打开它。方法是：<br>
+        　　在“运行”中输入“regedit”，运行regedit（“注册表编辑器”）。选择“我的电脑”，选“编辑”中的“查找”，在“查找目标”中输入????????.???，让电脑搜索，找到第一个后，选“编辑”中的“删除”（千万不要修改或只删除文件内容（键值）！这时该行（主键）还存在，还会有提示！）然后查找下一个，查找到后用上面的方法删除......一直到电脑提示“完成对注册表的搜索”，按“确定”，存盘。<br>
+        　　4.用应用软件的Uninstall或Setup程序来卸载相关的应用程序。<br>
+        　　一般来说，按照上面的方法，重新启动电脑，就不会有类似的提示。作者曾修改过多例这样的软故障。如果注册表修改出现错误，你的计算机可能无法正常运转。<br>
+        　　一旦发生这种情况，请将注册表还原为上次成功启动时的状态。方法如下：<br>
+        　　1.单击“开始”按钮，然后单击“关闭系统”。<br>
+        　　2.单击“重启动计算机并切换到 MS－DOS 
+        方式”，然后单击“是”。<br>
+        　　3.转到 Windows 目录下。例如: 如果 Windows 目录为 C:\Windows 
+        ，则键入：cd c:\windows<br>
+        　　4.键入下列命令，并在每次键入后按 ENTER 键。( 注意：System.da0 
+        和 User.da0 包含数字 0 )。<br>
+        attrib －h －r －s system.dat <br>
+        attrib －h －r －s system.da0<br>
+        copy system.da0 system.dat<br>
+        attrib －h －r －s user.dat <br>
+        attrib －h －r －s user.da0 <br>
+        copy user.da0 user.dat<br>
+        　　5.重新启动计算机。<br>
+        (河南　龚运喜) <strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月04日第1期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

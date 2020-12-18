@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>用FreeSpace动态压缩硬盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        &nbsp; 大家也许还记得DoubleSpace之类的硬盘“扩容”软件吧，因其与不少程序存在不兼容问题而没有被广泛使用。但动态压缩的想法还是很诱人的，即使在硬盘容量进入了按 
+        G 论大小的时代仍旧如此。 <br>
+        　　现在是否有一个既能享受到动态压缩的好处又能最大限度地回避兼容性问题的软件出台呢？有！FreeSpace就是遵循这种想法而新开发的。 
+        <br>
+        　　开发FreeSpace的基本思想是：部分压缩。如果回避可能引起兼容性问题的各种系统文件及其他敏感文件<br>
+        ，而把那些大量消耗空间的数据文件压缩，不就能最大限度的避免兼容性问题的发生了吗?FreeSpace这样做了，而且做得很不错。 
+        <br>
+        　　FreeSpace 的主要组件是一个驱动程序，它在安装后就直接进入 
+        Windows 启动后台队列，在每次 Windows 启动时都会自动装载，按Ctrl＋Alt＋Del可以看到这个加载的后台进程名为 
+        Fs32。这个驱动程序是实现动态压缩/解压缩的关键，只要它驻留后台，经 
+        FreeSpace 
+        压缩过的文件无论看起来还是使用起来都像是没有压缩过一样。 <br>
+        　　该驱动程序只在 Windows95 中装载，在 Window s NT 4.0 下，FreeSpace 
+        是使用 NTFS 文件系统本身的<br>
+        压缩功能来进行压缩的，没有用到它。 <br>
+        　　除了这个主要的驱动程序外，FreeSpace 
+        还提供了一些相应的管理工具项，这些工具项集中在集成的 Fre<br>
+        eSpace Manager（FreeSpace管理器）中，下面作简要说明。 <br>
+        　　1.“QuickSpace 
+        向导”，这是一个“聪明”的压缩向导。你只要决定想从硬盘上“榨取”多少空间，比<br>
+        如 10 MB，“QuickSpace 
+        向导”就会自动分析硬盘状况，并依次给出它认为最佳的获取 10 MB 
+        空间的压缩方案（推荐压缩文件夹组合）。如果同意它提出的方案，只要按一下 
+        next，就能马上多出10 MB 
+        的硬盘自由空间来！要是不同意它提出的方案，可以按一下“New 
+        Suggestion”按钮，它会马上提出另一个方案……直到你满意或者它再也提不出方案为止。 
+        <br>
+        　　2.“压缩向导”，用于找出系统中适于压缩的文件和文件夹。所谓“适于压缩”就是指那些文件或文件夹<br>
+        很长时间没有被访问，或者它们的压缩比非常可观，值得一压。 <br>
+        　　3.“解压缩向导”，自动找出系统中已经压缩的项目，以便能对它们进行解压操作的。 
+        <br>
+        　　4.“FreeSpace 设置”，包括是否要显示后台的Fs32 进程的tray 
+        图标以及 FreeSpace 项是否要在鼠标<br>
+        键菜单中出现等。 <br>
+        　　5.“FreeSpace 磁盘检测”，这是检查经 FreeSpace 
+        压缩的文件夹中各项数据是否正常的工具。 <br>
+        　　FreeSpace 的另一个管理工具是 FreeSpace Analyzer（FreeSpace 
+        分析器）。这是一个与 Windows95 
+        资源管理器界面类似的程序，它用来分析整个驱动器上的文件（夹）占用磁盘空间情况，并预计它们各自被压缩后可空出多少空间来，而且还可以用它找出希望压缩的符合某种条件的数据，比如找出 
+        &gt; 10MB 的文件夹之类。 
+        在这个分析器的文件夹列表中，如果稍微留意一下就会发现 Windows95 
+        所在文件夹的可压缩比是 0％！换言之，FreeSpace 
+        遵循了安全第一原则，对这个最重要的系统目录是不进行压缩的。 <br>
+        　　如果希望卸载 FreeSpace，只要运行 Uninstall 
+        程序就可以了。但要注意的非常重要的一点是：如果已<br>
+        经使用 FreeSpace 
+        压缩过某些文件或文夹，那么一定要先将它们解压缩恢复到正常状态后再卸载 
+        FreeSpace。因为没有 FreeSpace 的支持你将不能再访问那些压缩的数据。 <br>
+        　　如果想尝试一下，可以访问：http://www.mijenix.com。FreeSpace 
+        正在那里等待实践的检验呢！　<strong>(浙江 沈逸刚)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月6日第13期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

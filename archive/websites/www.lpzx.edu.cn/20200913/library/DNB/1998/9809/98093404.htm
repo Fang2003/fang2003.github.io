@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">网络<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 　广西读者朱桂林问：在一次摩机过程中，出现硬盘分区信息丢失问题。后来在进入中文版Windows 
+        3.1时死机，用复位键启动计算机后，显示CMOS信息出错。重启动按“Del”键进入CMOS设置程序，改动“STANDARD 
+        CMOS SETUP”和“LOAD BIOS DEFAULTS”后，才能进入系统，而且硬盘中只有C分区了，请问能否挽救D、E盘文件？<br>
+        　　答：从我遇到的几起类似情况来看，故障多数发生在配有容量大于528MB硬盘的微机中，因为在设置CMOS参数时，操作者误将硬盘的工作模式由LBA改为了Normal或其它模式。由于DOS的原因，使得系统对于大于528MB的硬盘或磁道数大于1024的硬盘不能正常读取，必须将CMOS中的硬盘工作模式改为LBA模式后方可正常操作。一旦操作者改变了硬盘的LBA模式，就会出现C盘虽然可以启动，但会丢失扩展分区的现象。对于C盘容量分配得比较大的微机，还可能会出现C盘后部文件不能正常读取的现象。有少数486主板，其BIOS默认的硬盘工作模式是Normal，这类主板在进行CMOS设置时，如果选择LOAD 
+        DEFAULT参数，就容易出现上述问题。出现这种情况时，千万不要惊慌，不要急急忙忙去做分区，造成信息大量丢失，只须将CMOS设置中有关硬盘的工作模式重新设置为LBA，即可恢复原有分区信息。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

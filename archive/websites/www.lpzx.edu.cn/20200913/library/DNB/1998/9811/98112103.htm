@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">SYS卷修复三步曲<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　SYS卷在NOVELL局域网中占有非常重要的位置，如SYS卷安装不上，则整个网络处于瘫痪状态。导致SYS卷安装失败大致有这么几方面的原因：<br>
+        　　一是没有正常退网(用DOWN命令)。<br>
+        　　二是文件服务器硬件故障。<br>
+        　　三是软件故障。<br>
+        　　出现以上现象不用着急，按以下三步进行修复便可使网络恢复正常运转。<br>
+        　　<strong>一、用网络管理命令VREPAIR修复</strong><br>
+        　　方法是：首先检查相应目录下是否有vrepair.nlm文件，如有则在控制台提示符“：”下敲入LOAD 
+        VREPAIR后，回车便出现以下信息<br>
+        　　OPTIONS：<br>
+        　　1.VREPAIR A VOLUME<br>
+        　　2.SET VREPAIR OPTIONS<br>
+        　　3.EXIT<br>
+        　　ENTER YOUR CHIOCE：<br>
+        　　在上述菜单中选“1”进行第一步修复，修复结束时出现信息提示“WRITE 
+        REPAIRS TO THE DISK(Y/N)?”回答“Y”则可将修复结果存盘。<br>
+        　　<strong>二、进行上述修复后仍不能安装SYS卷则进行第二步的修复</strong><br>
+        　　方法是：在上述菜单中选“2”回车，则屏幕出现提示信息为：<br>
+        　　CURRENT VREPAIR CONFIGURATION：<br>
+        　　QUIT IF A REQUIRED VREPAIR NAME SPACE SUPPER NLM IS NOT LOADED<br>
+        　　WRITE ONLY CHANGED DIRECTORY AND FAT ENTRIES OUT TO DISK<br>
+        　　KEEP CHANGE IN MEMORY FOR LATER UPDATE<br>
+        　　RETAIN DELETED FILES<br>
+        　　OPTIONS：<br>
+        　　1.REMOVE NAME SPACE SUPPORT FROM THE VOLUME<br>
+        　　2.WRITE ALL DIRECTORY AND FAT ENTRIES OUT TO DISK<br>
+        　　3.WRITE CHANGES IMMEDIATELY TO DISK<br>
+        　　4.PURGE ALL DELETED FILES<br>
+        　　0.RETURN TO MAIN MENU<br>
+        　　ENTER YOUR CHIOCE：<br>
+        　　SYS卷正常安装时各选项默认值为上述所列，因此SYS卷出故障时各配置项按上述默认值配置便可修复。<br>
+        　　按上述两种方法修改完后，退回控制台命令下，在控制台提示符“：”下敲入MOUNT.SYS(或MOUNT 
+        ALL)，回车，过一段时间，如能安装上，则说明上述修复成功。经以上两步修复仍不能正确安装SYS卷则进行第三步。<br>
+        　　<strong>三、退回到DOS下，进入相应网络目录，检查网络系统数据文件是否有丢失或错误。</strong><br>
+        　　方法是：在硬盘另一目录下事先备份一份网络系统数据，在网络系统数据文件遭破坏时，对照检查数据文件，重点检查＊.NLM文件，若少了则拷贝恢复。<br>
+        　　经过以上三步修复大多数NOVELL网络能恢复正常，不妨一试!<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(江西　邹木春)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月23日第11期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

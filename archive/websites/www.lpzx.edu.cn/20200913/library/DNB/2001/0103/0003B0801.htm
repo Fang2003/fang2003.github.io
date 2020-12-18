@@ -1,0 +1,181 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用VB编写趣味撞球程序</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0103/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第03期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{用VB编写趣味撞球程序}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 一只红色的小球在箱子中不停地弹跳,你要适当地移动下面的板子挡住,别让它掉下来。相信许多人都玩过这样的游戏,有没有想过自己编个来玩呢？<br>
+              界面设计：新建一个工程,Form1的Caption属性设为“趣味撞球”,在Form1上放上一个图片框控件Picture1 一个图形控件Shape1,将Shape属性设为3,FillStyle属性设为0,FillColor属性设为“＆H000000FF＆”,即红色,Shape1显示为红色实心圆作小球,一个直线控件Line1,其BorderWidth属性设为3,当做板子；一个定时器Timer1,其Interval属性设为10,Enabled属性设为False,两个标签Label1 
+              和Label2,其Caption属性分别为“得分”和“0”,再放两个命令按钮Command1和Command2,其Caption属性分别为“开始”和“退出”,设计好的界面如左图。<br>
+              程序代码：<br>
+              Option Explicit<br>
+              Dim x＿step As Integer<br>
+              Dim y＿step As Integer<br>
+              Private Sub Command1＿Click<br>
+              Timer1.Enabled ＝ Not Timer1.Enabled<br>
+              ′启动或停止定时器<br>
+              If Command1.Caption ＝ ″暂停″ Then<br>
+              Command1.Caption ＝ ″继续″<br>
+              Else<br>
+              Command1.Caption = ″暂停″<br>
+              End If<br>
+              End Sub<br>
+              Private Sub Command2＿Click<br>
+              End<br>
+              End Sub<br>
+              Private Sub Form＿Load<br>
+              x＿step = 200<br>
+              ′设置小球运动的速度<br>
+              y＿step = 200<br>
+              End Sub<br>
+              Private Sub Picture1＿KeyDownKeyCode As Integer Shift As Integer<br>
+              Select Case KeyCode<br>
+              Case 37 ′如果按下左箭头,使板子向左移动<br>
+              If Line1.X1 &lt;= 0 Then<br>
+              Line1.X1 = 0<br>
+              Line1.X2 = 2000<br>
+              Else<br>
+              Line1.X1 = Line1.X1 - 100<br>
+              Line1.X2 = Line1.X2 - 100<br>
+              End If<br>
+              Case 39′如果按下右箭头,使板子向右移动<br>
+              If Line1.X2 &gt;= Picture1.Width Then<br>
+              Line1.X2 = Picture1.Width<br>
+              Line1.X1 = Picture1.Width - 2000<br>
+              Else<br>
+              Line1.X1 = Line1.X1 + 100<br>
+              Line1.X2 = Line1.X2 + 100<br>
+              End If<br>
+              End Select<br>
+              End Sub<br>
+              Private Sub Timer1＿Timer<br>
+              If Shape1.Top &lt;= 0 Then Shape1.Top = 0 y＿step = -y＿step<br>
+              ′如果小球出了上边界便弹回<br>
+              If Shape1.Left &lt;= 0 Then Shape1.Left = 0 x＿step = -x＿step<br>
+              ′如果小球出了左边界便弹回<br>
+              If Shape1.Left &gt;= Picture1.Width - Shape1.Width Then Shape1.Left 
+              = Picture1.Width - Shape1.Width x＿step = -x＿step <br>
+              ′如果小球出了右边界便弹回<br>
+              If Shape1.Top &gt;= Line1.Y1 - Shape1.Height And Shape1.Left &gt;= 
+              Line1.X1 And Shape1.Left &lt;= Line1.X2 Then<br>
+              ′如果小球撞在板子上,便弹回<br>
+              Shape1.Top = Line1.Y1 - Shape1.Height<br>
+              y＿step = -y＿step  1.01′速度增加<br>
+              x＿step = x＿step  1.01<br>
+              Label2.Caption = ValLabel2.Caption + 1<br>
+              End If<br>
+              Shape1.Top = Shape1.Top + y＿step<br>
+              ′使小球移动<br>
+              Shape1.Left = Shape1.Left + x＿step<br>
+              If Shape1.Top &gt;= Picture1.Height - Shape1.Height Then<br>
+              MsgBox ″你输了″<br>
+              Timer1.Enabled = False<br>
+              Command1.Caption = ″开始″<br>
+              Shape1.Top = 1000<br>
+              Label2.Caption = 0<br>
+              End If<br>
+              End Sub<br>
+              按“F5”键运行,小球来回跳动起来,你招架得住吗？有意思吧,快试试呀！(安徽 云飞)<br>
+              知识点：这个程序的主要控件是Shape(形状控件)和Line(直线控件),这两个控件都是简单形状的控件。<br>
+              Shape控件：主要属性有Shape、FillStyle、FillColor、Top和Left。Shape是用来设置图形样式的,有矩形、正方形、椭圆形、圆形、带圆角的矩形和正方形等等；FillStyle用来设置填充的样式,如设为“1”,即Transparent,便为一个透明即空心的图形,而“6”即为方格填充,还可以设置为斜线、水平线、垂直线填充；FillColor用来设置填充的颜色Top和Left属性用来设置Shape控件的位置,在该例中,用来控制小球的移动和判断是否达到了反弹的条件。<br>
+              Line控件：主要属性有Style、BorderWidth和X1、X2、Y1、Y2。我们可以通过BorderWidth来设置直线的宽度,默认为“1”,最小为“1”；Style主要是用来设置直线的样式,如虚线、点划线等等,注意：只有当BorderWidth设置为“1”时,才能选择不同的直线样式,BorderWidth大于1时,只能画出普通直线。X1、X2、Y1、Y2是用来设定直线的位置和长度的,在本段程序中,就是通过这几个属性来控制直线的移动的。<br>
+              好了,这一期“看实例学编程”就讲到这里,下一次,我们将介绍用“PictureClip”控件编写有趣的拼图程序,请大家留意。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

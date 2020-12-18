@@ -1,0 +1,134 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>认识Linux的特殊文件</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第09期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{认识Linux的特殊文件}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ Linux系统把整个计算机系统的所有资源包括硬件和软件系统资源以及系统运行状况都通过磁盘文件的形式来表示。其中有些与DOS和Windows相同例如系统配置文件、系统可执行文件、应用软件、用户文件等，并同样建立各类目录结构，最高层也是根目录。另有一些文件有所不同，它们并非存在硬盘上的文件，而是一类特殊的系统资源和进程的反映，主要有以下四类（以RED 
+              HAT Linux为例）：<br>
+              1.安装目录文件<br>
+              /mnt下面还有cdrom、dosc、floppy等三个子目录，它们又叫安装点，是Linux系统用来读写其它文件系统的文件而设置的固定目录文件。cdrom指光盘文件系统，dosc指同一硬盘上的DOS或Windows分区文件系统，floppy指软盘文件系统。Linux不像DOS或Windows那样可以直接读写光盘和软盘，而需要用mount命令安装它们到这几个对应目录下后才能读写。对DOS或Windows分区文件系统也是一样。因此退出这些设备也就必须首先卸载（unmount）。没有安装它们时对这三个子目录的操作是毫无意义的。这里介绍一下具体命令：<br>
+              mount /dev/设备文件名 /mount/安装点 -T 文件系统<br>
+              unmount /mount/安装点 或 unmount /dev/设备文件名<br>
+              说明：“设备文件名”如fd0、cdrom、hda1等；“安装点”指以上三个子目录；“文件系统”是在Linux系统不能确定将要安装的文件系统种类时要求写明的，如ext、msdos、iso9660等，通常省略。<br>
+              2.设备文件<br>
+              /dev下面基本上是设备文件，即代表硬件系统的各种设备，对这些设备文件的操作也就是对相应设备的操作。简单介绍如下：<br>
+              hd系列指硬盘，hda是第一个硬盘，hda1是其基本分区；fd系列指软驱，fd0指1.4MB软驱，可以使用mke2fs /dev/fd0格式化软盘；ram是内存，只能由超级用户对其操作；audio系列指声卡，console是系统控制台即文本方式下的屏幕；lp系列是打印机并口；sda系列指scsi设备；stdin 
+              指系统标准输入设备；stdout指系统标准输出设备；tty是虚拟控制台；cua系列是系统默认串口。 <br>
+              设备文件又分为字符设备文件和块设备文件，前者以字符为单位处理数据流，其文件属性的开头字母为“c”（如下例crw-rw----，运行速度较快，如控制台console等。后者以块为单位处理数据流，其文件属性的开头字母为“b”（如下例brw-rw-r--，运行速度较慢，如磁盘等设备。Linux系统安装后给每个设备文件分配两个设备号，主设备号（如下例5和41用来区别各类设备；从设备号（如下例65、66和0用来区别同类设备。同类设备的主设备号相同，而从设备号以数字排序。用户还可以使用makenod建立新设备文件。<br>
+              例<br>
+              crw-rw---- 1 root uucp 5 65 oct 10 1997 cua1<br>
+              crw-rw---- 1 root uucp 5 66 oct 10 1997 cua2<br>
+              brw-rw-r-- 1 root root 41 0 oct 10 1997 bpcd<br>
+              3.链接文件<br>
+              /dev/cdrom、/dev/mouse都是链接文件，其文件属性开头字母为“l”。这些文件其实是不存在的，它指向另一个原始文件。建立链接文件是Linux系统的重要特点。对于Linux 
+              文件系统中的文件，系统无论类型都分给它一个号码叫索引节点号（INODE NUMBER以数字表示），也是存在磁盘上的一个数组入口索引号。该数组的每个元素都是索引节点，它们保存相应文件的管理信息（即文件的各种属性、读写权限、文件位置、建立时间等），目录中同时保存每个文件的索引节点号和文件名，两者之间的对应就称为链接。这种文件组织方式可以支持一个索引节点号出现在多个链接中，也就是一个索引号可以链接多个文件名。这样可以对重要文件建立多个链接上例中的1就是链接数目，当某个文件的索引号没有链接任何文件名时，它才可以被删除，有利于保护重要文件；还可以通过链接文件访问对应的原始文件，因此这是一种快捷方式。链接有两种：普通链接和符号链接，前者是同一文件系统下的链接，后者是不同文件系统之间的链接，如上面的/dev/cdrom，对于符号链接而言，删除原始文件也即删除了所有链接。建立链接文件的命令是：ln 
+              -s 原始文件 链接文件，加-s表示符号链接。显示索引节点号的命令是：ls -i 文件名。<br>
+              4.系统运行映像文件<br>
+              /proc下面的目录和文件其实并不存在于硬盘，而是系统运行情况的说明，可以通过查看这些文件来了解系统运行时各方面的情况，例如系统进程、内存分配、设备报告等。一般不要修改它们，以免影响系统运行。简单介绍如下：<br>
+              数字目录，以数字为名字的目录下的文件是系统以数字为进程号标识的进程情况报告文件，通常数字越小，对应的进程越重要，数字大的进程即由其产生。系统进程可用ps命令查看。cpuinfo 
+              文件是计算机cpu的检测报告文件；devices是当前系统使用设备的报告文件；filesystem使当前使用的文件系统的报告文件；net/是当前网络情况的报告文件，是网络配置的参考资料；scsi/是系统scsi设备使用情况的报告文件；dma、interrupts、ioports则是系统设备占用dma、interrupts、ioports情况的报告文件，用来查看系统资源分配情况和添加的新设备是否冲突。不同的Linux版本之间，/proc内容相差较大。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

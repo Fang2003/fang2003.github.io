@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>低价电脑的基石 
+        麒麟QL571一体化主板</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　编者按：在第9期的DIY情报站中，介绍了一款明致的M571 
+        All In One主板后，引起了许多读者的兴趣，纷纷来信要求再详细介绍一下该主板的情况，这里向大家介绍一款类似的名为麒麟QL571主板的详细使用方法。<br>
+        　　笔者近期使用了一块“Made in China”的麒麟MB－QL571奔腾主板（和市场上福扬586TXpro主板技术规格和结构基本相似），为一台486电脑升级。该主板内置64位图形加速显示卡和Sound 
+        Blaster 16兼容3D声卡，价格只有640元(三月份南京地区价，最新价格请见DIY情报站)。那么这块使用“TXproⅡ”芯片组的All 
+        In One(一体化)主板的性能究竟如何，能用它装出好用的电脑吗？主板制造商所声称的功能都有吗？以下就是笔者的使用经验和体会。<br>
+        　　一、主板主要功能和验证<br>
+        　　麒麟MB－QL571奔腾主板（以下简称QL571）使用的是SiS公司的SiS5598芯片，这种芯片组的功能确实很强，从主板说明书上所罗列的功能来看，已经超过了Intel 
+        Triton TX芯片组。QL571主板还支持75MHz的总线时钟，提供512KB L2 Cache、双USB总线插座，预留了ATX电源插座。在使用ATX电源时则可以实现MODEM远程“唤醒”、键盘软开机等功能。对QL571所声称的各种功能，笔者证实了大部分，还有个别功能如远程启动（电脑）、USB接口功能等没有条件去做。下面介绍已经证实的主要技术规格。<br>
+        　　1板上内置3D声卡<br>
+        　　QL571主板内置兼容Sound Blaster 16和Sound Blaster Pro的3D声卡，使用CMI8330芯片(又称Sound 
+        Pro)。<br>
+        　　以上功能在安装完成后证实，至于3D环绕可以用所提供的一个演示程序在WIN95中得到验证。<br>
+        　　QL571的内置声卡没有功率放大部分，所以必须和有源音箱配合使用。另外，如果需要使用外置声卡，用户可以从CMOS菜单中设置关闭内置声卡。当主板内置声卡关闭后，安装联讯3991红蜻蜓3D声卡，使用正常。<br>
+        　　2板上内置显示卡<br>
+        　　QL571内置显示卡，显示芯片采用的SiS5597/5598。显存占用主内存，容量可在1MB～4MB之间调整，可支持最高为1024×768的真彩显示模式。<br>
+        　　以上功能在实际运行中也已证实。其中显存容量在CMOS菜单中调整，分辨率和色彩调整在显示属性菜单中进行。如果需要关闭内置显卡，可在主板上调节跳线器“JP3”实施。在关闭主板内置显卡后，笔者另行安装S3 
+        Trio64＋和S3 Virge PCI显卡，使用正常。<br>
+        　　3外部时钟75MHz<br>
+        　　QL571主板的CPU外部时钟频率可以调节在50/55/60/66/75MHz五种频率上。<br>
+        　　在实际运行时，QL571可以稳定地工作在75MHz的主频上。笔者曾经使用Pentium 
+        133跳在75×2=150MHz方式下，运行各种程序均正常。<br>
+        　　4支持168线内存和内存混用<br>
+        　　支持单条SDRAM启动系统。另外，33V工作电压的SDRAM可以和5V的EDO 
+        DRAM或普通72线RAM条混合使用。<br>
+        　　5支持Ultra DMA/33<br>
+        　　QL571提供了Ultra DMA/33的DOS和WIN95下的驱动程序（主板附带光盘），经实际安装使用，证实DMA/33驱动程序有效。<br>
+        　　此外，QL571提供了齐全的附件和驱动程序光盘，但只提供英文的主板使用说明书，让国内的用户使用起来很不方便。<br>
+        　　二、安装注意事项<br>
+        　　1PCI总线频率设置<br>
+        　　如果主板工作在75MHz时，CPU工作电压、倍频系数仍按说明书设置跳线，PCI时钟跳接器JP5(D)需保持在1－2线位，即CPU 
+        CLK/2频率，不能按说明书跳接成固定33MHz的2－3位置，否则电脑启动后可能无法进入硬盘。<br>
+        　　2机箱面板指示灯的连接<br>
+        　　主板左下角有一长条形接线座J3，用来连接机箱面板各状态指示灯，其中原TURBO灯可改为电脑“挂起”指示，在电脑呈“挂起”状态时显示黄灯（见图）。<br>
+        　　3硬盘Ultra DMA/33驱动程序的安装<br>
+        　　驱动程序在主板附带光盘的IDE目录中，其中DOS环境下的驱动程序可在DOS提示符下直接运行光盘中IDE\M571\Installexe文件；WIN95环境下的驱动程序是在安装DOS驱动程序后进入WIN95，从资源管理器中运行光盘中IDE\M571\WIN95\Setupexe，选择安装“PIO或DMA”。(各位是不是注意到了是M571)<br>
+        　　注意，在安装WIN95环境下的Ultra DMA/33驱动程序前，要在Autoexecbat文件中取消安装光驱的Mscdexexe命令，否则安装Ultra 
+        DMA/33后光驱工作不正常。在Ultra DMA/33驱动程序安装成功后，从设备管理菜单中可以看到硬盘类型与实际使用硬盘型号相同，不再是通常的“GENERIC 
+        IDE DISK TYPE47”了。<br>
+        　　4内置显卡和声卡的驱动程序安装<br>
+        　　如果使用内置显示卡和声卡，那么主板上JP3跳接器应该在2－3位；在CMOS菜单项的“Peripheral 
+        Setup”中的“Onboard Sound Pro”应该设为“Enable”，这样在安装WIN95时安装程序将发现声卡，并提示操作者安装相应的驱动程序，但内置显示卡只被当作标准PCI 
+        VGA显示卡，并不提示安装相应的驱动程序，只能等WIN95安装成功后，从控制面板中采用更新驱动程序的方式重新安装显示驱动程序。内置显卡和声卡的驱动程序和相应的应用程序在工具光盘vga\m571\win95和sound\soundpro\drv中。<br>
+        　　5Advanced Chipset项的设置<br>
+        　　这一项中，如果我们使用内置显示卡时，可以在“VGA Shared Memory 
+        Size”中调整显存容量为1M至4M。如果使用SDRAM内存时，显示出现花屏现象，那么表明SDRAM条同主板不相匹配，可以在这一项中将“SDRAM 
+        Access Time”时间调慢一些，如果仍然不行，那只有换RAM条。<br>
+        　　关于AMI BIOS的其它设置内容还可以参考《电脑报》今年第9期。<br>
+        　　三、对QL571主板的个人评价<br>
+        　　由于QL－571主板是内置显卡、声卡的All In One主板，所以硬件兼容性较好，软件适应性也不错，系统运行稳定。虽然整体运行速度不尽如人意，但用于一般事务性处理、软件编程和运行对3D显示速度要求不高的电脑游戏等还是能满足要求的。<br>
+        　　另外QL571主板的稳定性也不错。笔者曾在中文WIN95下连续17个多小时运行Intel公司的CPU专用测试程序，没有出现任何问题。　　</font></p>
+        <p class="ourfont" align="left"><font color="#369681">(安徽　李肖峰)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月6日第13期40版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

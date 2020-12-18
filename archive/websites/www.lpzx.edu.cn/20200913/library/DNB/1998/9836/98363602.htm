@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>终端接口故障的快速检测与维修<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 
+        &nbsp; 接到一台有故障的终端时，首先加电开机检查，如果电源和监视器正常，则机器将自动调用监控芯片中的自检程序进行检测，以确定CPU部分、显示部分、键盘等是否正常工作。但这种自检并不能检测出各类接口的故障，这时，许多维修人员往往通过与主机、打印机等设备建立物理联接的办法进行检测，十分麻烦。笔者在维修中，通过自制短接插头，运用机器自检程序进行检测、维修，十分方便，现介绍如下。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp; 1.短接插头的制作：取25针的插头(公、母各一个，用于串、并行口)按如下方法用细包皮金属线连接：RS232主辅插头打印口插头2－310－64－6－811－15－175－20－2212－1413－1焊接好后须用万用表×1Ω档测量，以确保短接头的完好。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp; 2.调用考机检查程序：将焊接好的RS232短接头和打印口短接头分别插到终端的相应端口上，当机器加电并显示“自检正常”后，按任一键使机器进入正常工作状态，然后再根据相应机型的考机检查程序调用办法进行检测，如长城终端：同时按ALT－V和CTRL－F10键，海威终端须依次按ESC－[－4－或－1－1－Y－键。这时终端处于考机检查状态，在显示屏上继续显示扫描光栅。若有错误，则系统会在显示行的下端显示提示，“ERROR：EIA〈通讯口〉，PRT〈打印口〉，MODEM〈调制解调器〉，SPRTCGRAM，VRAM，KBD……”等。这时，维护人员可根据相应的提示信息进行维修。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp; 3.以GW220B终端为例，现将常见接口故障介绍如下：&amp;middot;通讯口：由于人为带电拔插通讯电缆、接地系统处理不当、芯片失效原因造成本口故障率较高。当将RS232短接插头插到通讯口上并使机器进入考机阶段后，终端进入自收自发的状态，终端发送的数据通过D208251(可编程通讯接口芯片)的TXD脚发送，然后通过D21488(四线驱动器)发送出去；而D31489(四线接收器)则接收发来的数据并进行电平转换，并让8251接收数据。在此过程中的任一器件出现故障，都会出现“ERROR：EIA”的错误信息，此时可检测上述器件并排除故障。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp; &amp;middot;打印口：机器在进行考机检查时，CPU向Dll74LS374(八D触发器，数据输出口)写数据，然后查询D974LS244(八缓冲器，打印机状态输入口)的BUSY线，若为高电平，则表示上次数据还未接收完；若为低电平，表示已接收完，可以接收新数据，产生一个选通负脉冲，打印机接收到此脉冲后开始接收D11输出的数据，同时BUSY变高。若打印口出现故障，则可检测以上芯片及D874LS05(反相器)，最好用“比较法”，据经验，D11的故障率最高。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp; &amp;middot;监视器接口：监视器的行、场同步信号是由主板提供的，若主板出现场不同步，则肯定是74LS04(六反相器)损坏；若出现行不同步，则可能是6845损坏。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp;&nbsp; &amp;middot;键盘口：本口故障率较低，若开机后提示键盘错，而键盘正常，则故障一般集中在与I/O总线相连的D1774LS322(移位寄存器)和D1274LS74(双D触发器)上，维修人员可用“比较法”将上述故障排除。(山东陈德胜) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

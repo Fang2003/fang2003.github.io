@@ -1,0 +1,58 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>Windows 95内存管理的新特点</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Windows 
+        95内存管理的新特点<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　Windows 95提高了寻址能力，能更好地访问物理内存，同时对Windows 
+        3.1中交换文件的实现作了改进，能支持物理内存的虚拟内存存储。总的看来，Windows 
+        95中的内存管理主要具有以下几个新特点：<br>
+        　　1. 为基于Win32的应用程序提供线性内存寻址<br>
+        　　为支持16位操作环境，Intel处理器体系结构使用称为“段”的机制，采用16位段地址和16位偏移量在段内访问地址。一个段是64KB大小，应用程序和操作系统访问越段信息时，会有性能损失。Windows 
+        95使用了Intel 80386（或以上）处理器的体系结构提出的32位容量，它为32位操作系统功能函数和基于Win32的应用程序提供了平面的、线性的内存模式。一个线性寻址模型简化了应用程序开发人员的开发过程，消除了由分段内存体系结构造成的性能损失，能访问寻址至4GB（4千兆字节）内存的虚拟内存空间。Windows 
+        95内部的32位组件和虚拟设备驱动程序都使用平面内存模型。<br>
+        　　2. 与Windows NT内存模型兼容<br>
+        　　Windows 95采用与Windows NT相同的内存模型体系结构，为主流系统提供了高级的操作系统功能。Windows 
+        95允许全部使用4GB可寻址的内存空间来支持最大的桌面应用程序。操作系统为应用程序提供了2GB的内存范围，同时为自己保留了2GB的内存范围。<br>
+        　　3. 增强了对虚拟内存的支持（交换文件）<br>
+        　　Windows 95针对Windows 3.1虚拟内存交换文件的实现，研究了它存在的问题和限制。Windows 
+        3.1中，用户面临众多的选择和配置选项以设立支持虚拟内存的交换文件。用户要决定是使用一个临时的交换文件还是永久的交换文件，为交换文件分配多少内存，是否使用32位磁盘存储来访问该交换文件。一个临时的交换文件不需要连续空间，并且Windows在它开始时能动态分配硬盘空间，在它结束时能释放该空间。一个永久的交换文件可提供最佳性能，但它必须是连续的，还要设置在物理硬盘上，由用户静态地说明，用户退出Windows时，也不释放。<br>
+        　　Windows 95中交换文件夹的实现，简化了用户配置，并且由于采用改进了的虚拟内存算法和存取方法，最好地结合了临时交换文件和永久交换文件的优点。Windows 
+        95的交换文件是动态的，并且可基于系统上的操作来缩减或扩大。交换文件可占据硬盘上分片的区域，也可定位在一个压缩磁盘卷上。Windows 
+        95利用智能系统以默认方式配置虚拟内存，减轻了用户改变虚拟内存设置的任务。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

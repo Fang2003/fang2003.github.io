@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head><script language="javascript">
+<!--
+function makearray(size)
+{
+this.length=size;
+for(i=1;i<=size;i++)
+{
+this[i]=0
+}
+return this;
+}
+msg=new makearray(3)
+msg[2]="嗨！您好。看见了吗？"
+msg[1]="您可根据自己的需要显示不同的内容！";
+msg[3]="可在这个窗口内显示最新信息！"
+interval=100;
+seq=0;
+i=1;
+function Scroll() {
+document.tmForm.tmText.value=msg[i].substring(0, seq+1);
+seq++;
+if (seq>=msg[i].length) {seq=0;i++;interval=900};
+if(i>3){i=1};
+window.setTimeout("Scroll();", interval);interval=100
+};
+//-->
+</script>
+
+<title>Javascript小技巧：一条一条显示的跑马灯</title>
+<link rel="stylesheet" type="text/css" href="goodpage/wdxly/study/web/samp.css">
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+.12px24px {font-family: "宋体";font-size: 12px;line-height: 24px;}
+.12px {font-family: "宋体";font-size: 12px;}
+.15px {font-family: "宋体";font-size: 15px;}
+.top {font-family: "宋体";font-size: 12px;line-height: 18px;text-decoration: none;}
+body {font-family: "宋体";font-size: 12px;line-height: 16px;text-decoration: none;}
+td {font-family: "宋体";font-size: 12px;line-height: 16px;text-decoration: none;}
+A:link {text-decoration: none;color: #0000A0;}
+A:visited {text-decoration: none;color: #0000A0;}
+A:active {text-decoration: none;}
+A:hover {text-decoration: underline;color: Red;}
+.a a:link {text-decoration:none;color: #c1eaff;}
+.b a:visited {text-decoration:none;color: #c1eaff;}
+.c a:active {text-decoration:none;color: #c1eaff;}
+.d a:hover {text-decoration:none;color: #80FF80;}
+-->
+</style>
+</head>
+
+<body background="http://www.lpzx.edu.cn/goodpage/wdxly/study/web/177fb-b-bg01.gif" onload="Scroll()">
+
+<table align="left" border="0" width="740">
+<tr>
+<td width="569">
+<p align="center"><font face="黑体" color="#D587FA"><b><big>一条一条显示的跑马灯</big></b></font></p>
+<form name="tmForm">
+<p><input type="Text" name="tmText" size="40"> </p>
+</form>
+<P align="left"><br>
+<font color="Black">1. 请把以下代码copy至你的html文件的&lt;head&gt;和&lt;/head&gt;之间：</font><br>
+<br>
+&lt;script language=&quot;javascript&quot;&gt;<br>
+&lt;!--<br>
+function makearray(size) {this.length=size;for(i=1;i<=size;i++) {this[i]="0"} return this;} msg="new" makearray(3) msg[2]="嗨！您好。看见了吗？" msg[1]="您可根据自己的需要显示不同的内容！";msg[3]="可在这个窗口内显示最新信息！" interval="100;" seq="0;" i="1;" function Scroll() {document.tmForm.tmText.value="msg[i].substring(0," seq+1);seq++;if (seq>=msg[i].length) {seq=0
+;i++;interval=900};if(i&gt;3){i=1};window.setTimeout(&quot;Scroll();&quot;, interval
+);interval=100};<br>
+//--&gt;<br>
+&lt;/script&gt;<br>
+<br>
+<font color="Black">2. 修改你的语句为&lt;body onload=&quot;Scroll()&quot;&gt;</font><br>
+<br>
+<font color="Black">3. 请把以下代码copy至你的html文件的&lt;body&gt;和&lt;/body&gt;</font>之间：<br>
+<br>
+&lt;form name=&quot;tmForm&quot;&gt;<br>
+&lt;p&gt;&lt;input type=&quot;Text&quot;name=&quot;tmText&quot;
+size=&quot;40&quot;&gt;&lt;/p&gt;<br>
+&lt;/form&gt;<br>
+<br>
+　　　　　　　　　　　　　　　　　　　　　<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+
+</table>
+</body>
+</html>

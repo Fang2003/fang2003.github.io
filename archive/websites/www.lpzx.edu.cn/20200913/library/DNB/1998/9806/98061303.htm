@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>JAR应用实例</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">JAR应用实例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp; </strong><font
+        color="#369681">共享版压缩软件JAR是ARJ软件公司于1997年推出的新作，目前最高的版本是102，它具有压缩比例高和压缩速度快的优点。其中JAR16用于16位的DOS操作系统，而JAR32则用于Windows 
+        95或Windows NT的32位操作系统，它们的命令格式相同，只要用JAR32取代JAR16即可。但JAR32比JAR16的运行速度更快，压缩比例更高。本文以JAR16为例介绍若干应用实例，以供读者参考。<br>
+        　　<strong>1压缩具有某一共同特性的文件</strong><br>
+        　　例11　JAR16 a arc ＊exe ＊com ＊bat<br>
+        　　把当前目录下的执行文件压缩成arcj。<br>
+        　　例12　JAR16 a －r －hbr1 arc<br>
+        　　把当前目录及其下各子目录中的只读文件压缩成arcj，选项－hbr1中的r表示只读属性，其他是：a归档，h隐含，d目录，s系统；－hbr1中的1表示是，0表示不是，所以若用－hbh1rs0则表示是隐含而不是只读或系统属性。<br>
+        　　例13　JAR16 a －r －hm980101 arc<br>
+        　　把当前目录及其下各子目录中的从9811起至今的文件压缩成arcj，如改选项－hm980101为－hmb971124则表示971124前的文件。<br>
+        　　<strong>2释放指定文件到指定目录</strong><br>
+        　　例21　JAR16 e arc －od:\pctoolsexe<br>
+        　　把arcj中的pctoolsexe释放到d:\。<br>
+        　　例22　JAR16 e arc －od:\dbf\fox\dbf<br>
+        　　arcj中含目录结构\fox\dbf，该命令行把\fox\dbf下的文件释放到d:\dbf中，如d:\下无此目录，则询问是否要建立。<br>
+        　　<strong>3按一定顺序列出压缩文件中的文件名</strong><br>
+        　　例31　JAR16 l －ju0 arc<br>
+        　　列出arcj中的文件，按文件名排列。<br>
+        　　例32　JAR16 l －ju1 arc|more<br>
+        　　列出arcj中的文件，按扩展名排列，满屏暂停(利用DOS管道)。<br>
+        　　例33　JAR16 ls arc<br>
+        　　列出arcj中的文件，按简单格式显示。<br>
+        　　<strong>4多卷操作(备份与恢复)</strong><br>
+        　　例41　JAR16 a －jt －r －b0 backup<br>
+        　　在硬盘上建立带目录结构的压缩文件backupj。<br>
+        　　例42　JAR16 y －oa:backupa －vvas －hk backup<br>
+        　　把上例中建立的backupj文件按软驱(a:)容量大小自动切割成多卷，文件名依次为backupaj01、backupaj02…backupaj。<br>
+        　　例43　JAR16 a －jt －r －b0 －hk －vvas －wc:\a:\backupa<br>
+        　　直接在a驱的软盘上建立带目录结构的多卷压缩文件backupaj，临时工作文件建于c:\。<br>
+        　　例44　JAR x backup<br>
+        　　恢复带目录结构的压缩文件，也适用于多卷压缩文件的恢复。<br>
+        　　JAR这个软件可在《电脑报配套光盘第三辑》的压缩实用程序中找到。<strong>(上海　胡佳文)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月16日第6期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

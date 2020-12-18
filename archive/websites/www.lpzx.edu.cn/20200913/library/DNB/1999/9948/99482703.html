@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 如何制作 Dreamweaver 的 Objects 类型插件</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='internet.html'>大众网络</A> &gt; 如何制作 Dreamweaver 的 Objects 类型插件</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 如何制作 Dreamweaver 的 Objects 类型插件 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Dreamweaver 2.0 以其强大的功能，典雅的界面和良好的可扩展性而深受广大网友的欢迎。但是 Dreamweaver 自带的插件非常有限，你有没有想过也为 Dreamweaver 制作几个插件，让你在制作网页的时候更加轻松呢？<br>
+　　其实制作 Dreamweaver 插件非常的简单。Dremweaver 的插件格式与其它具有可扩展性的软件有所不同，它使用的是 HTML 格式的文件。打开 Dreamweaver 目录下的 Configuration 目录，在这个目录下我们可以发现有这样几个文件夹：Behaviors、Commands 和 Object。在这几个文件夹下保存的就是 Dreamweaver 的三种不同类型的插件。Object 类插件在这几种插件中是最容易制作的，你甚至不需要任何的编程经验就可以制作出相当实用的插件。此类插件实际上是由 HTML 文档中 <head> 部分的一个基于 Java 脚本的 ObjectTag() 函数，返回一个 HTML 字串到你当前编写的网页文件中。<br>
+　　下面就以如何制作一个插入版权标志的 Objects 类型的插件为例介绍一下如何制作此类插件：<br>
+　　首先使用任意的网页制作软件，建立一个标题（Title）为“插入版权标志”的空白 HTML 文档，在这个文档中不要输入任何文字。然后打开文档的 HTML 的源代码编辑方式，在文档的 <head> 与 </head> 之间插入下列代码：  <br>   
+&lt;SCRIPT LANGUAGE=″JAVASCRIPT″&gt;<br>
+&lt;！－－ 
+      //返回字串的 ObjectTag() 函数<br>
+      function objectTag(){<br>
+        //声明并定义返回的字串变量<br>
+        var retval=″＆copy;″<br>
+        //返回字串变量<br>
+        return retval<br>
+      }<br>
+  //－－&gt;<br>
+ &lt;/SCRIPT&gt;<br>
+　　将这个文件命名为“版权标志.htm”并保存在 Objects 目录的任意一个子目录下，然后启动 Dremweaver，在 Insert 菜单下你就可以发现多了一个名为“版权标志”的菜单项了。点击一下这个菜单项试一试……。同时你也会发现在 Objects工具条中多了一个带有 ？号的图标，将鼠标移动到这个图标上就会显示一个“插入版权标志”的工具提示。如果你希望在 Objects工具条中显示一个图标，你可以建立一个与这个插件同名的 18 ＊ 18 的 .gif 格式的图标。这样在 Dreamweaver 的 Objects 工具条中你就可以找到这个插件的图标了。(Weber)</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99482703.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

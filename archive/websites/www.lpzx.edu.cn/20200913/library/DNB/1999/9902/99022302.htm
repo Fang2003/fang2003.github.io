@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">重装系统后“花屏”的处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　故障现象：一台兼容机，配置为：Intel 
+        MMX 200CPU，32M EDO内存，捷波J－5TXC主板，希捷2G(UltraDMA／33)硬盘，金彩霸9685显示卡(1M显存)，15英寸.28彩显，花王530PD声卡，SONY 
+        16倍速光驱，安装Windows 98 Beat3中文版，使用随显示卡自带的驱动程序(Trident 
+        9660／968x／938x,Linear Accelerated for PCI版本：4.0.12 日期：1996年12月31日)。为了进一步提高显示卡的性能，用户安装了Windows98 
+        Beat3中文版内置的新版驱动程序(Trident 9685／9680／9682／9382／9385－1 
+        PCI),覆盖掉原有的显示卡驱动程序，重新启动系统后，花屏。<br>
+        　　故障分析与处理：使用杀毒软件(KV300 S＋＋)杀毒，未发现任何病毒，可以排除病毒所为。仔细观察系统启动过程，Windows 
+        98启动画面正常，可一进入桌面就花屏。花屏时，单击鼠标右键可听到菜单弹出声，说明系统并未崩溃死机，原因可能是驱动程序不兼容或Windows98本身有BUG，需重新安装系统和驱动程序。但当前无法重装Windows98 
+        Beat3:一是安装时间太长来不及，用户急用，二是手头无安装盘。联想到以前曾遇到过类似问题，无奈之际，只好本着把死马当成活马医的精神，大胆试一试。<br>
+        　　用软盘引导进入C盘的Windows目录中，查看了一下文件，虽然整个Windows98很庞大，但是从文件组织结构来看，和Windows95差不多，仍是“换汤不换药”，虽然使用了比Windows3.X更先进的注册表管理系统软硬件信息，但同时也为向下兼容Windows3.X的应用程序和驱动程序保留了WIN.INI和SYSTEM.INI。这两个文件包含了系统启动的重要信息，只好手工调整了。使用EDIT命令打开WIN.INI,并未找到系统驱动程序行，只有一些设置参数。打开另一文件SYSTEM.INI,一眼看到[BOOT]下的“DISPLAY.DRV=Pnpdrvr.drv”这一项。没错，这就是系统启动时被加载的显示驱动程序行。如何修改呢?将“DISPLAY.DRV=Pnpdrvr.drv”这一行后的驱动程序名删除，改为“DISPLAY.DRV=VGA.DRV”，强行将系统以标准VGA方式启动。存盘退出,重新启动系统，成功!系统以640×480、16色方式显示桌面，桌面上的图标和升级显示卡驱动程序之前的一模一样，操作使用正常，打开“控制面板”中的“系统”，在“设备管理器”列表中的设备完好如初，可是“显示适配器”中仍显示为“Trident 
+        9685／9680／9682／9385／9382／9385－1 PCI”(因为SYSTEM.INI里的[BOOT.DESCRIPTION]下DISPLAY.DRV=Trident 
+        9685／9680／9682／9385／9382／9385－1 PCI这一项未改过来)，不过这并不影响正常显示。将原显示卡所带的驱动程序(Trident 
+        9660／968x／938x,Linear Accelerated for PCI)装入后重新启动，发现“控制面板/系统/设备管理器”列表已改为“Trident 
+        9660／968x／938x,Linear Accelerated for PCI”了。　　(请本文作者与本报编辑联系)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

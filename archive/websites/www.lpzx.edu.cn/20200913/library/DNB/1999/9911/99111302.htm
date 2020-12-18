@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>删除多种属性文件一例</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>删除多种属性文件一例</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　我用Turbo 
+        C 2.0编写了一个可以删除任何属性文件的程序。这个程序的思路是：首先找到需删除文件的地址，(即段地址和偏移地址)，接着把文件属性修改为A，最后进行删除，这就像DOS中先用Attrib 
+        命令修改文件属性后，再用DEL命令进行删除。源程序如下：<br>
+        ＃include ″stdio.h″<br>
+        ＃include ″process.h″<br>
+        ＃include ″dos.h″<br>
+        main()<br>
+        {<br>
+        char filename[12]；<br>
+        printf(″Please input filename″)；<br>
+        gets(filename)；/*输入要删除的文件名*/<br>
+        change (filename)；<br>
+        delete(filename)；<br>
+        }<br>
+        change(char near ＊file)/*改变文件属性函数*/<br>
+        {<br>
+        union REGS inregs,outregs;<br>
+        struct SREGS segregs;<br>
+        inregs.h.ah=Ox43;/*功能号AH=Ox43*/<br>
+        inregsh.al=1;/*入口参数AL=1*/<br>
+        inregs.h.cl=FA_ARCH;/*把文件属性修改为A*/<br>
+        segregs.ds=FP_SEG(file);/*描述偏移地址*/<br>
+        inregs.x.dx=FP_OFF(file);/*描述表段地址*/<br>
+        int86x(Ox21,&amp;inregs,&amp;outregs,&amp;segregs);/*INT 21H系统功能调用*/<br>
+        return;<br>
+        }<br>
+        delete(char near＊file)<br>
+        {<br>
+        union REGS inregs,outregs;<br>
+        struct SREGS segregs;<br>
+        inregs.h.ah=Ox41;/*功能号AH=Ox43*/<br>
+        inregs.x.dx=FP_OFF(file)；<br>
+        segregs.ds=FP_SEG(file)；<br>
+        int86x(Ox21,&amp;inregs,&amp;outsegs,&amp;segregs);<br>
+        return；} <br>
+        <strong>(重庆　刘骏洪) </strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月22日第11期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

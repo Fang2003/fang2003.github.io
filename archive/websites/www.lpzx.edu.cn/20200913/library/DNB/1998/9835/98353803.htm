@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>便利的3DS汉字输入</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>便利的3DS汉字输入<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 很多人抱怨在3DS内输几个汉字要花很长时间，更多的3DS参考书提供的方法也是又繁又难，为此，笔者现将近日摸索出的一条捷径提供给大家，没有专用中文字库，照样能轻松便捷地输入汉字。<br>
+        &nbsp;&nbsp;&nbsp; 1、进入AutocadR12中文版，打开【中文工具】菜单，选劝定义汉字字型”项，在弹出的字型图上选取一种轮廓字型(注意勿选诸如HZTXT、CTXT之类字型)，按OK确认，高度根据输入字数而定，比如输入两个字“福州”，可定为5。打开DTEXT命令，打开中文之星的新全拼功能，输入“福州”两个字；<br>
+        &nbsp;&nbsp;&nbsp; 2、关键步骤：打开菜单【中文工具】，选劝炸碎文字”，点击“福州”；<br>
+        &nbsp;&nbsp;&nbsp; 3、按DXF格式存储并退出，退出时还要以DWG格式“存储已作的改动”；<br>
+        &nbsp;&nbsp;&nbsp; 4、进入3DS的2DShape，装入刚才存储的DXF文件；<br>
+        &nbsp;&nbsp;&nbsp; 5、按Shape／Check，在弹出的对话框内答Yes,显示“Allpolygonsinshapemustbeclosed”，点击continue；<br>
+        &nbsp;&nbsp;&nbsp; 6、按Modify／Polygon／Move，双击所有的轮廓线，在弹出的对话框内答Yes，注意若有多余线段应先删掉；<br>
+        &nbsp;&nbsp;&nbsp; 7、按Shape／Check,显示“Shapeself－intersects,vertices：”，字轮廓线上出现很多小红圈，这是重叠的端点；<br>
+        &nbsp;&nbsp;&nbsp; 8、按Modify／Vertex／Delete，逐个点过这些小红圈，注意小红圈并不马上消失，你可以沿着小白点顺时针或逆时针逐个点过去，以免出错，若出错可按UNDO钮；<br>
+        &nbsp;&nbsp;&nbsp; 9、再按一下Shape／Check，若还有个小红圈，重复步骤8，直到出现“ShapeOK,Vertices:”，OK，可以放样了!评述：此方法仅步骤8要多费点时间，其余步骤都可以迅速完成，步骤8比起书上介绍的描红要轻松得多，三下五除二，即可点完所有小红圈，效率比起“描线法”可谓提高几十、上百倍，特别是输入大量文字的时候。获得的效果和原字一模一样，更会让你百分之百的满意。<br>
+        &nbsp;&nbsp;&nbsp; 注意：若输入字数太多，3DShape无法一次输入时，可更改在3DS.SET中的ShapeMax，将其改为2000，但这会占用内存，因此在步骤9之后要重新将它改回500，否则会影响以后的制作速度。(榕城小苦)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

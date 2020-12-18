@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Win95注册表应用技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　由于注册表的作用十分强大，一些常规方法所不能实现的功能，有时可以修改注册表实现。下面介绍几个利用注册表的技巧：<strong></p>
+        </strong></font><p class="ourfont" align="center"><strong><font color="#369681">改变子菜单的显示速度</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681">　　Win 95的子菜单的弹出比较慢，大约需要1秒钟的时间，进入HKEY_CURRENT_USER\Control 
+        Panel\Desktop，选择编辑／新建／字符串值，输入&quot;MenuShowDelay&quot;，其键值可以定为0～100000之间任意数字，表示延时长度，单位毫秒。我们输入“0”，这样将鼠标光标放到一个菜单上面，其子菜单会立即弹出。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">删除运行中的选项</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681">　　当点击开始／运行”菜单时，在打开窗口中保存了以前所做的一些操作，有些可能不需要了，想删掉它，在HKEY_USERS\.Default\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU中保存着这些操作，删掉不需要的串值即可。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">减少“新建”的选项</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681">　　在资源管理器、桌面等处单击鼠标右键，选新建时，弹出的菜单中可以建立多种文件，有些可能并不常用。打开注册表编辑器，查找“shellnew”，找到不常用的文件类型后，删掉“shellnew”键。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">隐藏驱动器</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681">　　进入HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer，新建二进制值“NoDrives”，缺省值是00000000，表示不隐藏任何驱动器。键值由四个字节组成，每个字节的每一位（bit）对应从A：到Z：的一个盘，当相应位为1时， 
+        “我的电脑”中的相应驱动器就被隐藏了。<br>
+        　　第一个字节代表从A到H的八个盘，即01为A、02为B、04为C…依此类推，第二个字节代表I到P；第三个字节代表Q到X；第四个字节代表Y和Z。要关闭C盘，将键值改为04000000；要关闭D盘，改为08000000。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">隐藏“开始”菜单项</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681">　　“开始”菜单中，有些项目你也许不常用，可以通过修改注册表，将不常用的项目删除。进入HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer 
+        中，把NoRun的值改为0x00000001（1），“运行”项被关闭。<br>
+        　　新建一个“NoRecentDocsHistory”键，建立DWORD值为0x00000001（1），则“文档”中的快捷方式不再发生变化。<br>
+        　　新建一个“NoRecentDocsMenu”键，建立DWORD值为0x00000001（1），则“文档”被关闭。<br>
+        　　Windows 98的“开始”菜单中新增了“收藏夹”项，但大多数人并不用它。可以新建一个“NoFavoritesMenu”键，建立DWORD值为0x00000001（1），“收藏夹”项被关闭。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">注册表的减肥</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681">　　通常，在安装一个程序后，注册表中都要相应地增加一些键。然而，当这些程序被删除后，注册表中的键仍然保留。有些机器的注册表文件能够达到3－4MB，就是因为这些键太多的原因。我们可以使用Norton 
+        Utilities 中的WinDoctor分析和删除，也可以手工删除注册表中的一些信息。<br>
+        　　分别进入HKEY_CURRENT_USER\Software、HKEY_LOCAL_MACHINE\SOFTWARE、HKEY_USERS\.Default\Software，你可以看到许多熟悉的公司名。把那些已经确认被删除的程序所在公司的键删除，再看看注册表文件，应该小一点了。<br>
+        　　进入HKEY_LOCAL_MACHINE\System\CurrentControlSet\control\Keyboard Layouts，这里是“控制面板”中的“键盘布局”。相信大家对其中的大多数布局不感兴趣，可以直接删掉它们的键。<br>
+        　　在HKEY_LOCAL_MACHINE\System\CurrentControlSet\control\Nls\Locale中，是“区域设置”，保留几个区域，其它的也可以删除。<br>
+        (河北　洪慧立)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月04日第1期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

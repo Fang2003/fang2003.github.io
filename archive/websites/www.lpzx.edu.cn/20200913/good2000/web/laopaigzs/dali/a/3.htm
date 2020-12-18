@@ -1,0 +1,185 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 8</title>
+<bgsound src="images/a01w.wav" loop="2">
+<style type="text/css">
+  .spanstyle { position:absolute; visibility:visible; top:-50px; font-size:12; color:#FF0000; font-weight:bold;}
+</style>
+</head>
+
+<body onLoad="makesnake()" background="../../images/bj.jpg" bgproperties="fixed">
+<script>
+var X, Y
+var step = 20
+var flag = 0
+var message = "欢迎来到老排工作室！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-50}
+function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1}
+function makesnake() {
+    if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+        for (i=0; i<message.length-1; i++) {
+            var thisspan = eval("span"+(i)+".style")
+            thisspan.posLeft=xpos[i]
+            thisspan.posTop=ypos[i]     }   }
+    else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+            for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+  thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<script language="JavaScript">
+var speed=100;
+function infoscroll(seed, looped)
+{  var msg="欢迎你来到老排工作室!        让我们一起推动中国网络进步！";
+  var putout = " ";
+  var c = 1;
+  if (seed > 100)
+  {  seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 100 && seed > 0)
+  { for (c=0 ; c < seed ; c++)
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 0){
+    if (-seed < msg.length)
+    { putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,speed);}
+    else
+    { window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,speed);}}}
+infoscroll(100,1)
+</SCRIPT>
+
+<p align="left"><a href="2.htm"><img border="0" src="images/a11.gif" width="96" height="36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+&nbsp;&nbsp; <img border="0" src="images/a08.gif" width="175" height="63">&nbsp;&nbsp;&nbsp; &nbsp;<font size="5"><b><a href="../../index.htm"><img border="0" src="images/a16.gif" width="100" height="45"></a></b></font>&nbsp;&nbsp;&nbsp;   
+<a href="../b/4.htm"><img border="0" src="images/a09.jpg" width="172" height="32"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>      
+<p><font color="#00FFFF">&nbsp;&nbsp;&nbsp; </font><font color="#0000FF"><i>在城中溜哒<img border="0" src="images/a17.gif" width="55" height="55">了许久，被城外巨大的声响所吸引，循声觅去，看到了大理石工艺品制作的全过程。老排忍不住，在打磨机上“大显身手”！</i></font></p>         
+<div align="center">         
+  <center>         
+  <table border="0" width="683" height="37">         
+    <tr>         
+      <td width="228" height="37"><applet code="fphover.class" codebase="../" width="224" height="24">         
+          <param name="color" value="#000080">         
+          <param name="hovercolor" value="#0000FF">         
+          <param name="textcolor" value="#FFFFFF">         
+          <param name="text" value="大理城门">         
+          <param name="effect" value="glow">         
+          <param name="url" valuetype="ref" value="1.htm">         
+        </applet>         
+      </td>         
+      <td width="228" height="37"><applet code="fphover.class" codebase="../" width="225" height="24">         
+          <param name="color" value="#000080">         
+          <param name="hovercolor" value="#0000FF">         
+          <param name="textcolor" value="#FFFFFF">         
+          <param name="text" value="古城风貌">         
+          <param name="url" valuetype="ref" value="2.htm">      
+          <param name="effect" value="fill">         
+        </applet>         
+      </td>         
+      <td width="227" height="37"><applet code="fphover.class" codebase="../" width="209" height="24">         
+          <param name="color" value="#000080">         
+          <param name="hovercolor" value="#0000FF">         
+          <param name="textcolor" value="#FFFFFF">         
+          <param name="effect" value="glow">         
+          <param name="text" value="大理石">         
+          <param name="url" valuetype="ref" value="3.htm">         
+        </applet>         
+      </td>         
+    </tr>         
+  </table>         
+  </center>         
+</div>         
+<div align="center">         
+  <center>         
+  <table border="0" width="666" height="209">         
+    <tr>         
+      <td width="299" height="29"><a href="../c/dl03.htm"><img border="0" src="images/a10.jpg" width="300" height="200">         
+        </a>         
+        <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="images/a12.jpg" align="left" width="142" height="36"></td>              
+      <td width="14" height="29">　</center> 
+      <p>　</td> 
+    <center> 
+    <td width="331" height="29"><a href="../c/dl04.htm"><img border="0" src="images/a13.gif" width="300" height="203"> 
+      </a> 
+      <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          
+      <img border="0" src="images/a14.jpg" align="left" width="142" height="36"></td>            
+    </tr>            
+  </center>            
+    <tr>            
+      <td width="639" height="29" colspan="3" align="center">         
+        <p align="left">&nbsp;&nbsp;&nbsp; 大理石，储藏于点苍山。美丽的花纹藏于石，将山上选回来的大理石剖石成片，精心打磨，自然花纹毕现，每一块石片就是一幅景致逼真的大理石美术工艺品。</p>        
+      </td>           
+    </tr>           
+    <center>        
+    <tr>           
+      <td width="299" height="286" align="center"><a href="../c/dl05.htm"><img border="0" src="images/a06.jpg" width="300" height="219"></a>&nbsp;       
+        <p>&nbsp;<img border="0" src="images/a07.jpg" align="left" width="141" height="35"></td>          
+      <td width="14" height="286" align="center"></td>          
+      <td width="331" height="286" align="center"><a href="../c/dl06.htm"><img border="0" src="images/a15.jpg" width="300" height="200">          
+        </a>          
+        <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+        <img border="0" src="images/a08.jpg" align="left" width="141" height="35"></td>           
+    </tr>           
+  </center>           
+  <tr>       
+      <td width="644" height="8" align="center" colspan="3">       
+        <p align="left">&nbsp;&nbsp;&nbsp;&nbsp; <i> <font color="#0000FF">当晚我们就夜宿周城著名的白族民居“严家大院”（隔壁的一家扎染作坊）。热情好客的金花、阿鹏请我们品尝口味独特的三道茶，在这一苦二甜三回味的滋味中高度凝结了白族人民朴实的人生观和对美好生活的向往。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+        </font></i><a href="../b/4.htm"><img border="0" src="images/a09.jpg" width="172" height="32"></a></td>      
+  </tr>   
+  </table>       
+</div>       
+       
+<p><img border="0" src="../../images/124.gif" width="645" height="16"></p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+老排工作室倾力制作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<a href="mailto:lr9528@21cn.com"><img border="0" src="../../images/mail.gif">&nbsp;&nbsp;   
+联系我们</a></p>  
+        
+</body>        
+        
+</html>        

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">E-mail传送中的三种编码标准<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　<strong>一、编码的必要性</strong><br>
+        　　E－mail只能传送ASCII码(美国国家标准信息交换码)格式的文字信息，ASCII码是7位代码，非ASCII码格式的文件在传送过程中就需要，先编成7位的ASCII代码，然后才能通过E－mail进行传送；如果不经过编码，则在传送过程中会因为ASCII码7位的限制而被分解，分解之后只会让收信方看到一堆杂乱的ASCII字符。经过编码后的文件，在传送过程中可顺利传送，不会有“被截掉一位”的危险。但是收信方必须具有相应的解码程序，将这份经过编码的东西还原，才能看到发信人要传送的信息是什么。<br>
+        　　有一点要注意：大部分的人认为“文本文件不需要编码”，但我们的中文是属于8位代码的文字，并不是标准的ASCII码格式，由于在国内中文是通行的文字，所以大部分的邮件服务器都已能够处理GB内码的文件，因而不需要做这种编码/解码的操作，可以直接传送。但如果要送中文邮件到国外，就需要经过这种转换才能传送，因为国外的邮件服务器是无法辨认中文内码的。中文码在经过一些不支持中文内码的传递主机时，依然会被截掉一位，造成文件支离破碎无法读龋而经过编码的中文邮件，收信人收到后将文件解码还原，也需要有中文系统才能看所写的中文信息。<br>
+        　　<strong>二、常见的三种编码标准</strong><br>
+        　　●UU编码(Unix－to－Unixencoding)<br>
+        　　uuencode和uudecode原来是unix系统中使用的编码和解码程序，后来被改写成为在DOS中亦可执行的程序。在早期传送非ASCII码的文件时，最常用的便是这种UU编码方式。<br>
+        　　使用的方法是：发邮件前，在DOS下先用uuencode.exe程序将原文件编码成ASCII码文件，然后将邮件发出。收信人收到邮件后，用uudecode.exe程序将文件还原。<br>
+        　　基于Windows的类似程序有wincode和winzip等。<br>
+        　　wincode的使用原理和DOS下的uuencode和uudecode没什么两样，只是在Windows的界面下操作更为简便。wincode除支持UU编码外也支持MIME、Binhex等编码格式，应用范围颇为广泛。<br>
+        　　以上介绍的UU编码并非只能编中文文字。任何你要寄送的文件包括exe等二进制文件都可以按照编码→发送→收信方收信→解码还原的步骤传送。<br>
+        　　●MIME标准(MultipurposeInternetMailExtentions)<br>
+        　　UU编码解决了E－mail只能传送ASCII文件的问题。但这种方式其实并不是很方便，因而又发展出一种新的编码标准，其全名是MultipurposeInternetMailExtentions，一般译作“多媒体邮件传送模式”。顾名思义，它可以传送多媒体文件，在一封电子邮件中附加各种格式文件一起送出。<br>
+        　　MIME标准现已成为Internet电子邮件的主流。它的好处是以物件作为包装方式，可将多种不同文件一起打包后传送。发信人只要将要传送的文件选好，它在传送时即时编码，收信人的软件收到也是即时解码还原，完全自动化，非常方便。当然先决条件是双方的软件都必须具有这种功能，要不然发信人很方便地把信送出去了，但收信人的软件如果没有这种功能，无法把它还原，看到的也就是一大堆乱码了。使用这种方式，用户根本不需要知道它是如何编码/解码的。即使只是用文字写的信，一样是打好包便寄出。如果是要寄多媒体文件，只要做选文件的动作，选完后寄出，其余的工作由电子邮件软件自动完成。<br>
+        　　由于MIME的方便性，愈来愈多的电子邮件软件采用这种方式。(我们现在最常使用的电子邮件软件Eudora、NetscapeMail、InternetMail等就是采用MIME方式，所以我们才能如此轻松地收发电子邮件。)MIME定义的是一种规格，也可以说是一种统称。<br>
+        其实能够符合这种规格的编码方式并不是单一的一种，只要符合这种MIME规格便可顺利传送。以货运作为比喻，若货运公司规定送交货运的规格是1立方米大小的箱子便可托运，它并没有限制一定要用木箱或是铁皮箱，只要是1立方米大小，货运公司就帮你送达。至于箱子里你是装食品或是书本或是衣服或是混合着装也没有限定，也就是说，多种格式的文件可以一起寄送。<br>
+        　　就上例而言，“1立方米大斜是货运规格，也就是我们的MIME规格。木箱或铁皮箱是编码方式，现在我们就来看看你有哪些“箱子种类”可以选择。MIME定义两种编码方式：Base64与QP(Quote－Printable)。QP的规则是对于资料中的7位无须重复编码，仅将8位的数据转成7位。QP编码适用于非ASCII码的文字内容，例如我们的中文文件。而Base64的编码规则，是将整个文件重新编码成7位，通常用于传送二进制文件。编码的方式不同会影响编码之后的文件大校而具有MIME功能的E－mail软件大都能自动判别你的邮件是采用何种编码，然后自动选择用QP或Base64来解码。<br>
+        　　QP编码的方式，是将一个字节用两个16进制数值表示，然后在前面加“=”。所以我们看到经过QP编码后的文字通常是这个样子：=A4j=AEa=A6n=A1I=A7=DA=AC0=B1=E7=A9s=A7g=A1A=AB=DC=B0=AA=BBase64编码后的文字通常是：pGquYaZuoUmn2qxPseepc6dnoUGr3LCqv70ms773t3ymYqa5plakaq5hptu如果你使用支持MIME标准的电子邮件软件，那么在收发信件的过程中是看不到这些乱七八糟的字符的。但如果很不幸，收信人没有这种支持MIME的软件，他看到的东西就是上面那一大段符号了。不过别急，你仍然可以先将这份“天书”存档，然后使用一些decode软件把它翻译回来。<br>
+        　　●Binhex编码<br>
+        　　Binhex的编码方式常用于Mac机器，在PC上是较少使用的一种编码方式。一般PC上的电子邮件软件，亦多数支持MIME的规格，很少有支持Binhex格式。在常用的电子邮件软件中，唯Eudora具有这种功能，可直接解读Binhex的编码，如果你收到了这种由Binhex所编码的邮件，而且你的mail软件并不是Eudora或其他支持Binhex格式的软件。那也得用一个解读Binhex的程序解码。有一个共享软件Binhex3.exe具有这个功能，它在许多FTP站点都能找到。<br>
+        　　在Windows下，你还可以用我们前面所介绍的wincode来解码。本文介绍的UU编码、MIME以及Binhex都可以用它来处理。但可惜的是，对于MIME，它只处理Base64的编码。如果能再加上QP的功能，真的可以靠它走遍天下了。<br>
+        在MIME几乎已成标准规格的现在，用一套支持MIME的软件来做收发E－mail的工作，这些编码/解码工作就会自动完成，不会给你带来麻烦。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(湖南　孙谦)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期18版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

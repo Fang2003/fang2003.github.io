@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>使用VFP的_SCREEN对象<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">在VisualFoxPro中充分利用_SCREEN对象，就能对主窗口进行各种操作，如可以动态地改变主窗口的图标、标题、颜色等，也可以通过它引用其它的对象或属性。<br>
+        &nbsp;&nbsp;&nbsp; _SCREEN对象（即指主窗口）是从表单类派生出来的，表单中的部分属性、事件和方法在_SCREEN对象也存在，因而可以把主窗口当作表单来操作（但也有所不同，如在_SCREEN中不能像表单那样对LOAD、ACTIVATE等事件添加代码)。<br>
+        &nbsp;&nbsp;&nbsp; 下面举例说明如何利用_SCREEN对象：<br>
+        &nbsp;&nbsp; <strong>1更改图标和标题</strong><br>
+        &nbsp;&nbsp;&nbsp; 把VFP窗口的小狐狸图标和“MicrosoftVisualFoxPro”标题，改为你所喜欢的图标和标题，只需执行代码 
+        &nbsp;&nbsp;&nbsp; _SCREENICON=″你的图标文件名(.ICO)″<br>
+        &nbsp;&nbsp;&nbsp; _SCREENCAPTION=″你的标题名″<br>
+        &nbsp;&nbsp;&nbsp; <strong>2动态地改变主窗口的图标和标题</strong><br>
+        &nbsp;&nbsp;&nbsp; 
+        即让主窗口的图标和标题随时间的变化而变化。这就需要在_SCREEN中加入一个Timer类，Timer类是每经过一定的时间(在Interval属性中设定，单位为毫秒)循环地执行其Timer事件中的代码。方法如下：先定义你的Timer类：点“文件/新建/类/新建文件”，这时弹出一窗口，上面有这几项需要填写：“类名”项填新建类名（如MyTimer），“派生于”项选Timer，“来源于”项不用填，“存储于”项填新建类库名（如MyClass）。确定后出现类设计器（很像表单设计器），上有一小闹钟（Timer控件）把其Interval属性设为1000（时间间隔，毫秒），在Init事件中输入代码：<br>
+        &nbsp;&nbsp;&nbsp; PUBL NN<br>
+        &nbsp;&nbsp;&nbsp; NN=0＆＆NN为变化的标志变量<br>
+        &nbsp;&nbsp;&nbsp; 在Timer事件(每隔一定时间执行）输入：<br>
+        &nbsp;&nbsp;&nbsp; _SCREENICON=IIF((－1)^NN,″所需加入的图题1″，″图标2″)<br>
+        &nbsp;&nbsp;&nbsp; _SCREENCAPION=IIF((－1)^NN,″所需加入的标题1″，″标题2″)<br>
+        &nbsp;&nbsp;&nbsp; NN=NN＋1<br>
+        &nbsp;&nbsp;&nbsp; 关闭并保存，类建立完毕。<br>
+        &nbsp;&nbsp;&nbsp; 可视地把该类添到_SCREEN中：由于_SCREEN与表单有所区别，故不能用表单设计器工具来完成拖放类定义，而是用“类浏览器”来完成，寻工具/类浏览器”后，弹出一打开窗口，选择刚才建立的类库文件（MYCLASS），确定后，弹出类浏览器窗口，选中MyTimer类，这时在类浏览器的左上角有一小闹钟，把它拖放到主窗口中，你就会惊奇地发现你的主窗口不再是死气沉沉的了。不信？试试！<strong><br>
+        &nbsp;&nbsp; 3利用_SCREEN得到主窗口内包含的表单数量</strong><br>
+        &nbsp;&nbsp; 执行：?_SCREENFORMCOUNT即可<br>
+        &nbsp;&nbsp; <strong>4利用_SCREEN得到打开的表单名</strong><br>
+        &nbsp;&nbsp; 可执行：?_SCREENFORMS(1)NAME＆＆FORM(1)为数组<br>
+        &nbsp;&nbsp;&nbsp; 以上是有关_SCREEN对象的简单阐述，想要你的窗口美化起来，具体的工作还需要你自己去做。我的联系地址：hhongwei@163net。<strong>(河南 
+        黄宏伟)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

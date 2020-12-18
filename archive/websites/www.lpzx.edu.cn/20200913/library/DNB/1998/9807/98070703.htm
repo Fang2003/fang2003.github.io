@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">BIOS的升级方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp; <font
+        color="#369681"> </strong>BIOS管理着微机的底层输入输出模块，采用较新的BIOS可以改善微机的性能。BIOS升级一般是通过更换芯片或重写Flash 
+        ROM实现的，下面分别讲述这两种方法：<br>
+        　　<strong>1芯片升级</strong><br>
+        　　关闭电源打开机箱后，用起子或其它工具小心地将原有芯片取出，然后将新的BIOS芯片插入。安装时注意，将芯片有缺口的一侧与插座上有缺口的一侧对准，避免插反。<br>
+        　　更换BIOS应尽量采用与原厂家同一系列的芯片，不同厂家的BIOS芯片有可能带来兼容性方面的问题。升级前还应了解你的主板是否能支持所换BIOS新增功能，如果这些功能需要专门的主板结构，则BIOS升级意义不大。<br>
+        　　<strong>2Flash ROM升级</strong><br>
+        　　新型的主板均采用Flash ROM，使用软件方法进行升级。<br>
+        　　那么什么是Flash ROM呢?<br>
+        　　486档次以下微机的BIOS芯片是一块EPROM(可擦除只读存储器)，芯片上有一个小窗口，通过紫外线照射可以清除BIOS内容，所以这些芯片上都贴有一块印有厂商标记的不干胶，用于保护芯片中的BIOS。<br>
+        　　EPROM的BIOS升级、维护都很不方便。在586以上的主板中普通采用了更新的芯片技术——Flash 
+        ROM来作为BIOS程序的载体。Flash ROM也称为闪速存储器，在本质上属于EEPROM(电可擦除只读存储器)。平常情况下Flash 
+        ROM与EPROM一样是禁止写入的，在需要时，加入一个较高的电压就可以写入或擦除。因此，其维护与升级都很方便。BIOS升级的程序盘一般由主板厂商提供，也可以到Internet网上去下载。<br>
+        　　为预防用户误操作删除Flash ROM中的内容导致系统瘫痪，一般的主板厂商都在Flash 
+        ROM中固化了一小块启动程序(BOOT BLOCK)用于紧急情况下接管系统的启动。<br>
+        　　一般主板上有关Flash ROM的跳线开关用于设置BIOS的只读/可读写状态。关机后在主板上找到它将其设置为可写(Enable或Write)，重新开机，就可以重写BIOS升级了。<br>
+        　　Flash ROM升级需要两个软件：一个是Flash ROM写入程序，一般由主板附带的驱动程序盘提供；另一个是新版BIOS的程序数据，需要到Internet或BBS上下载。升级前检查BIOS数据的编号及日期，确认它比你使用的BIOS版本更新，同时也应检查它与你所用的BIOS是否是同一产品系列，如：TX芯片组的BIOS不宜用于VX的主板，避免出现不兼容问题。BIOS升级程序只能在DOS实模式运行，因此开机启动时应按F5跳过Config.sys和Autoexec.bat，并且不能进入Windows。<br>
+        　　Flash ROM工具程序一般有以下功能：<br>
+        　　1保存原有BIOS数据(Save Current BIOS to File)<br>
+        　　2更新BIOS数据(Update BIOS Block from File)<br>
+        　　3其它功能(Advanced Features)<br>
+        　　首先选择保存功能将原BIOS数据保存到软盘上，存为一个文件，用于升级失败时恢复原有BIOS。然后装入新BIOS数据盘，选择更新BIOS数据，输入新BIOS的文件名，完成BIOS的升级。<br>
+        　　有的BIOS工具只升级主要的模块，如果它发现新的BIOS与原BIOS有很大不同，会给予提示并建议使用相应选项对整个BIOS升级(包括BIOS启动模块和PnP 
+        ESCD参数区)。<br>
+        　　升级结束后，注意将主板上Flash EEPROM的跳线改回只读状态，此外部分主板要求清除COMS并重新设置，具体可参看主板的用户手册。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期7版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

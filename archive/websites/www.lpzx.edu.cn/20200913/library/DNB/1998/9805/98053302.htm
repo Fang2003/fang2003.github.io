@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>主板上的温度监控技术<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　一位朋友曾抱怨说，他发现他的奔腾主板在CPU插座的空档内还焊置有集成块。要知道，CPU的底部发热可是相当厉害的，半导体集成电路设在如此环境，工作还能稳定？<br>
+        　　还有一位朋友曾无不忧虑的说，如果CPU的散热风扇出了问题，即便是未停转而仅是转速大大降低，他在机外又如何知晓机内的这些隐患？<br>
+        　　看来，由于现在电脑的CPU等部件的驱动电流更大，耗能更高，散热问题被越来越多的人所关注。<br>
+        　　CPU的散热是通过散热风扇来解决的，不过散热风扇也需要智能化的方式监控。<br>
+        　　目前基于监控芯片的温度监控系统已开始在一些奔腾主板中采用。这类监控芯片通过传感技术以及与系统总线联系，并在自身的智能化控制下完成工作。比较典型的有LM78集成电路，一种44引脚(个头不算小)的多功能监控芯片。它包括温度传感器，风扇转速传感输入、5个正极性输入(可监测正极性电源及信号)和2个负极性输入(监测负极性电源与信号)，以及其它温度传感信号的输入，当然还有地址口和数据口及附加的数字I/O口(提供诸如：中断处理、电源控制、复位功能等)。LM78目前已被一些主板名牌厂家在设计时采用。<br>
+        　　风扇停转如果不被及时发现，后果是不言而喻的，实际上当风扇的转速降低到它正常转速的70％时，已不能有效散热，如不及时发现也可能出问题。风扇的监控可以通过监控芯片接收来自转速传感器的信号(例如每转一圈发两个脉冲)实现。<br>
+        　　将LM78安放在一些高发热区(如CPU附近、电压调节器等高热集中的区域)，当那些区域达到某个设定温度时，就可报警。我们还可想到，在部分高热部件处(如Modem、声卡)也放置温度传感器，当该部件过热，而CPU等基本处于正常时，该传感子系统向总监控芯片报警，然后系统再通知用户关闭该部件(如关闭Modem)，计算机仍可继续工作。<br>
+        　　CPU的发热最高(可以把手烫出泡)，因此CPU的热监控就尤为重要。LM78太大，想直接感知CPU的温度不可行，在CPU的底部安置传感器，发现过热就通知LM78则是可行的。LM75是一种8脚数字温度传感器，它可焊在CPU插槽的空档中部，贴近CPU来检测温度(至此，第一位朋友的质疑可以得到澄清，那块集成块就是为感温而出现的)。LM75提供内置的可编程“看门狗”(熟悉单片机的朋友对此都很熟悉，它在出现异常时自动报警)，当温度超过“预置点”时，LM75发出中断信号给LM78，这种方式无需系统持续定时查询。<br>
+        　　不过，本人最近在网上看到有人对LM75／78的温度检测的准确性进行了检查，LM78用于测试主板温度，与实测值相同。但LM75就大不一样了，由于在有些主板上，LM75的位置较低(见图)，不能准确测出CPU的温度，如果设计者未对温度进行补偿的话，实测的数据可能相差20℃。这种情况下，只有自己在BIOS中重新设定温度限制值了。(湖北　毛　顿)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期33版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

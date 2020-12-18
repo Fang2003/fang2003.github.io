@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">硬盘不能启动的常见故障分析及处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　作为微机最主要的存储设备，硬盘在微机系统中占有举足轻重的地位。如果硬盘不能启动，则会使你陷于手忙脚乱之中，这里向你介绍几种“武器”，专门对付硬盘不能启动的“顽症”，你可得小心使用哟，不然，损伤了硬盘，白花花的银子可就白费了哟!<br>
+        　　故障现象一：开机后屏幕显示：“Device error”，然后又显示：“Non－System 
+        disk or disk error,Replace and strike any key when ready”，说明硬盘不能启动，用软盘启动后，在A:\&gt;后键入C:，屏幕显示：“Invalid 
+        drive specification”，系统不认硬盘。<br>
+        　　故障分析及处理：造成该故障的原因一般是CMOS中的硬盘设置参数丢失或硬盘类型设置错误造成的。<br>
+        　　进入CMOS，检查硬盘设置参数是否丢失或硬盘类型设置是否错误，如果确是该种故障，只需将硬盘设置参数恢复或修改过来即可，如果忘了硬盘参数不会修改，也可用备份过的CMOS信息进行恢复，如果你没有备份CMOS信息，也别急，有些高档微机的CMOS设置中有“HDD 
+        AUTO DETECTION”(硬盘自动检测)选项，可自动检测出硬盘类型参数。若无此项，只好打开机箱，查看硬盘表面标签上的硬盘参数，照此修改即可。<br>
+        　　故障现象二：开机后，“WAIT”提示停留很长时间，最后出现“HDD 
+        Controller Failure”。<br>
+        　　故障分析及处理：造成该故障的原因一般是硬盘线接口接触不良或接线错误。先检查硬盘电源线与硬盘的连接，再检查硬盘数据信号线与多功能卡或硬盘的连接，如果连接松动或连线接反都会有上述提示，最好是能找一台型号相同且使用正常的微机，可以对比线缆的连接，若线缆接反则一目了然。<br>
+        　　故障现象三：开机后，屏幕上显示：“Invalid partition<br>
+        table”，硬盘不能启动，若从软盘启动则认C盘。<br>
+        　　故障分析及处理：造成该故障的原因一般是硬盘主引导记录中的分区表有错误，当指定了多个自举分区(只能有一个自举分区)或病毒占用了分区表时，将有上述提示。<br>
+        　　主引导记录(MBR)位于0磁头/0柱面/1扇区，由FDISK.EXE对硬盘分区时生成。MBR包括主引导程序、分区表和结束标志55AAH三部分，共占一个扇区。主引导程序中含有检查硬盘分区表的程序代码和出错信息、出错处理等内容。当硬盘启动时，主引导程序将检查分区表中的自举标志。若某个分区为可自举分区，则有分区标志80H，否则为00H，系统规定只能有一个分区为自举分区，若分区表中含有多个自举标志时，主引导程序会给出“Invalid 
+        partion table”的错误提示。最简单的解决方法是用NDD修复，它将检查分区表中的错误，若发现错误，将会询问你是否愿意修改，你只要不断地回答YES即可修正错误，或者用备份过的分区表覆盖它也行(KV300，NU8.0中的RESCUE都具有备份与恢复分区表的功能)。如果是病毒感染了分区表，格式化是解决不了问题的，可先用杀毒软件杀毒，再用NDD进行修复。<br>
+        　　如果上述方法都不能解决，还有一招，就是先用FDISK重新分区，但分区大小必须和原来的分区一样，这一点尤为重要，分区后不要进行高级格式化，然后用NDD进行修复。修复后的硬盘不但能启动，而且硬盘上的信息也不会丢失。其实用FDISK分区，相当于用正确的分区表覆盖原来的分区表。尤其当用软盘启动后不认硬盘时，这一招特灵。<br>
+        　　故障现象四：开机后自检完毕，从硬盘启动时死机或者屏幕上显示：“No 
+        ROM Basic，System Halted”。<br>
+        　　故障分析及处理：造成该故障的原因一般是引导程序损坏或被病毒感染，或是分区表中无自举标志，或是结束标志55AAH被改写。从软盘启动，执行命令“FDISK/MBR”即可。FDISK中包含有主引导程序代码和结束标志55AAH，用上述命令可使FDISK中正确的主引导程序和结束标志覆盖硬盘上的主引导程序，这一招对于修复主引导程序和结束标志55AAH损坏既快又灵。对于分区表中无自举标志的故障，可用NDD迅速恢复。<br>
+        　　故障现象五：开机后屏幕上出现“Error loading operating system”或“Missing 
+        operating system”的提示信息。<br>
+        　　故障分析及处理：造成该故障的原因一般是DOS引导记录出现错误。DOS引导记录位于逻辑0扇区，是由高级格式化命令FORMAT生成的。主引导程序在检查分区表正确之后，根据分区表中指出的DOS分区的起始地址，读DOS引导记录，若连续读五次都失败，则给出“Error 
+        loading opearting system”的错误提示，若能正确读出DOS引导记录，主引导程序则会将DOS引导记录送入内存0:7C00h处，然后检查DOS引导记录的最后两个字节是否为55AAH，若不是这两个字节，则给出“Missing 
+        operation system”的提示。一般情况下用NDD修复即可。若不成功，只好用FORMAT 
+        C:/S命令重写DOS引导记录，也许你会认为格式化后C盘数据将丢失，其实不必担心，数据仍然保存在硬盘上，格式化C盘后可用NU8.0中的UNFORMAT恢复。如果曾经用DOS命令中的MIRROR或NU8.0中的IMAGE程序给硬盘建立过IMAGE镜像文件，硬盘可完全恢复，否则硬盘根目录下的文件全部丢失，根目录下的第一级子目录名被更名为DIR0、 
+        DIR1、<br>
+        DIR2……，但一级子目录下的文件及其下级子目录完好无损，至于根目录下丢失的文件，你可用NU8.0中的UNERASE再去恢复即可。<br>
+        　　综上所述，硬盘不能启动大都是由于硬盘上的主引导记录、DOS引导记录、三个系统隐含文件出现错误导致的，因此平时要养成备份主引导记录、DOS引导记录的好习惯，关键时刻才能顺利解决问题。</font></p>
+        <p class="ourfont"><font color="#369681">(新疆 陈智罡)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

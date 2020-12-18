@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>Win Api在VB中的妙用</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>Win Api在VB中的妙用</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　Windows API作为一套功能强大的应用程序接口，使VB可以实现对Windows底层的控制，完成VB不具有的功能。下面介绍几种使用API函数的方法。<br>
+        　　一、制作特殊窗口<br>
+        　　1.各种形状的窗口(仅给出了函数名，具体定义可以查阅API Viewer)<br>
+        　　1)CreateEllipticRgn 建立一个椭圆形的区域；<br>
+        　　2)CreateRoundRectRgn 建立一个圆角矩形的区域；<br>
+        　　3)CreatePolygonRgn 建立一个多边形区域；<br>
+        　　4)CreatePolyPolygonRgn建立多个可重叠的多边形区域；<br>
+        　　5)CreateRectRgn 建立一个矩形区域；<br>
+        　　6)CombineRg连接两个区域，通过代入不同的参数可以实现多种合并方式；<br>
+        　　7)SetWindowRgn 设定窗口的范围，使用前边创建的区域；<br>
+        　　8)FrameRgn 在指定区域画上<br>
+        边框。<br>
+        　　下边的程序就是建立一个形如“棒槌”的窗口：<br>
+        Private Sub Form1_Load()<br>
+        Dim p, q As Long<br>
+        p = CreateEllipticRgn(0, 0, 200, 200) 
+        ′通过制定左上角和右下角的坐标建立一个圆<br>
+        q = CreateRoundRectRgn(40, 120, 160, 400, 20, 20) 
+        ′通过制定左上角和右下角的坐标以及圆角的宽度建立一个圆角矩形<br>
+        CombineRgn p, q, p, RGN_OR ′联合两个区域,使用或(就是取并集)运算<br>
+        SetWindowRgn hWnd, p, True ′设置窗口区域<br>
+        Me.Refresh ′刷新窗口<br>
+        End Sub<br>
+        　　2.浮动窗口<br>
+        　　Delphi中实现浮动窗口非常容易，只要在属性栏中设置就可以。用VB实现就只有借助于API函数:<br>
+        SetWindowPos hWnd,HWND_TOPM<br>
+        OST,0,0,0,0,SWP_NOMOVE＋SWP_NOSIZE＋SWP_SHOWWINDOW就可以了。其中hWnd是窗口的句柄，HWND_TOPMOST指定了窗口的位置—总是在最上边。如果你要取消这个属性，只要把TOPMOST改成NOTOPMOST就可以了。后面4个参数指定了窗口的位置和大小，和VB提供的MOVE方法一样。不过最后一个参数如果指定了SWP_NOMOVE(不改变位置)和 
+        SWP_NOSIZE(不改变大小)，那么这四个参数就会被忽略。<br>
+        　　3.透明窗口<br>
+        　　去年的《电脑报》上提供了一个制作透明窗口的办法，这里再介绍另一种方法：<br>
+        Private Sub Form1_Load()<br>
+        Dim p As Long<br>
+        p = GetWindowLong(hWnd,GWLEX<br>
+        STYLE) ′取得当前窗口属性<br>
+        SetWindowLong hWnd, GWL_EXSTY<br>
+        LE,p ＋ WS_EX_TRANSPARENT<br>
+        ′加上一个透明属性<br>
+        Me.Refresh<br>
+        End Sub<br>
+        　　GetWindowLong 和 SetWindowLong 
+        配合使用还可以更改窗口的不少属性，有兴趣的读者不妨一试。<br>
+        　　二、读取外部图标<br>
+        　　下面的一段程序就显示了如何读取程序中的图标，其中Picture1是一个图像框，dlgOpen是一个标准对话框，Command1是一个按钮；ExtractIcon函数有三个参数，第一个参数指定调用的应用程序，一般都用App.hInstance；第二个参数指定图标文件，可以是DLL、EXE和ICO。第三个参数的不同就决定了其返回值的不同：如果代入－1，就返回文件中包含的图标数，代入0则返回第一个图标的句柄，其余依次类推。<br>
+        Private Sub Command1_Click()<br>
+        Static total As Long,p(50) As Long，i As Integer<br>
+        dlgOpen.Filter = ″图标|＊.Exe;<br>
+        ＊.Ico;＊.Dll″<br>
+        dlgOpen.ShowOpen<br>
+        If Dir(dlgOpen.filename)&lt;&gt;″″ Then<br>
+        If ExtractIcon(App.hInstance, dlgOpen.filename, －1) = 0 Then ′如果没有图标<br>
+        MsgBox ″No Icon!″<br>
+        Else<br>
+        total = ExtractIcon(App.hIns<br>
+        tance, dlgOpen.filename, －1) <br>
+        ′取得总图标数<br>
+        For i = 0 To total － 1<br>
+        p(i) = ExtractIcon(App.hIn<br>
+        stance, dlgOpen.filename, i) ′读取每个图标<br>
+        Next i<br>
+        For i = 0 To total － 1 ′依次显示每个图标<br>
+        DrawIcon Picture1.hdc, 34 ＊ i, 0, p(i)<br>
+        Next i<br>
+        End If<br>
+        End If<br>
+        End Sub<br>
+        　　三、在桌面上画图<br>
+        　　下面一段程序就是使用API函数在屏幕上画图标。(注：p是图标的句柄，可以由ExtractIcon取得)<br>
+        deskhwnd = GetNextWindow(hwnd, GW_HWNDLAST) ′取最下面一个窗口<br>
+        deskdc = GetWindowDC(deskhwnd)<br>
+        ′取窗口的情景设备<br>
+        For i=0 To Screen.Width/32/15 ′将屏幕坐标单位换算成“Pixel”，并计算可画的图标数<br>
+        For j=0 To Screen.Height/32/15<br>
+        DrawIcon deskdc, 32＊i, 32＊j, p<br>
+        ′在桌面上画图<br>
+        Next j<br>
+        Next i<br>
+        　　用函数GetNextWindow取得其句柄，用函数GetWindowDC取出它的虚拟设备。不过，一旦窗口被覆盖，图标就会消失。<br>
+        　　四、屏蔽系统功能键<br>
+        　　在去年《电脑报》第22期上介绍了一种在Delphi中屏蔽系统功能键的方法。可是在VB中无论你怎么设置数据类型，系统总是提示“数据类型不匹配”, 
+        下面就是API Viewer中给出的定义： <br>
+        　　Declare Function SystemParametersInfo Lib ″user32″ Alias “SystemParametersInfoA” 
+        (ByVal uAction As Long, ByVal uParam As Long, ByVal lpvParam As Any, ByVal fuWinIni As 
+        Long) As Long<br>
+        　　笔者经过反复思考，终于恍然大悟：看到黑体的“ByVal”了吗？问题就出在这里。原来该函数使用的lpvParam 
+        参数应该按地址传送而非按值传送，然而VB Viewer 
+        中使用的是按值传送，所以会出现错误提示。<br>
+        <strong>(福建　桃花岛主)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月22日第11期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

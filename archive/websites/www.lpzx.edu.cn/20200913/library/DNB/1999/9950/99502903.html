@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 警惕一个新的黑客软件</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 警惕一个新的黑客软件</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 警惕一个新的黑客软件 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　今天朋友给我mail来一个软件，说是不知道谁发来的，图标到是挺好看，就是不敢执行（安全意识挺强的），要我看看能不能执行。我收到一看是个小图标，挺可爱的（是个绿头发的娃娃脸）。我想就执行吧，谁怕谁啊！我也看过不少黑客软件了，大多是把自己复制到system目录下，再添加注册表上，让其自动运行。我于是执行了这个程序，和大多数黑客软件一样，没反应，我知道就不是什么好东西了！马上打开进程管理察看，发现c:\windows\system\Files32.vxd 在进程中，一般情况下是没有的，立刻终止进程。打开资源管理器删掉这个Files32.vxd 结果删除的时候报错，说文件占用。再察看进程，这个东西又出来了，怎么回事？马上又终止进程，删掉了这个文件。这时，我想打开注册表看看它有没有动什么手脚。却出现提示Windows无法找到Files32.vxd，要求定位。我一下子慌了，我想，难道和happy99一样合并到系统文件里了？赶快要网友帮我找找机子里有没有Files32.vxd，结果说没这个文件！我重启动计算机，发现启动以后Files32.vxd依然运行，还自动跳出拨号连接对话框。我将所有程序能隐藏自动启动的地方都看过了，也没有发现！我只能再到注册表里看看了。结果终于发现了HKEY_CLASSES_ROOT\exefile\shell\open\command，默认键值变为FILES32.VXD ″％1″ ％＊，居然是用这个来打开应用程序！也就是说只要有程序执行。它就会出来！真太黑了!<br>
+　　我跟踪了一下它的网络动作发现如下动作：202.96.128.110:25，smtp，195.40.6.1:6667，IRC，&lt;202.103.190.46:8000，udp，可能由于我是169它连接不上IRC服务器。它会自动地转换服务器。我记录下了几个地址207.152.95.10、195.238.2.19、193.55.112.8、195.40.6.1，这几个都是它连接的irc服务器地址，但是不知道具体做了什么动作。该软件文件名是pretty_park.exe  大小为36.5KB。<br>
+　　该黑客程序通过电子邮件在网络上广为传播，当你不小心运行该程序后，你上网的账号、密码、ICQ号及私人信件等资料就被拱手送至他人手中，进而控制你的电脑和使用你的个人资料。<br>
+　　带有该黑客程序的邮件内容如下：“TEST：Pretty Park.exe：）”，在附件中就附带有Park.exe。如果你收到了这样的邮件，认为这是从你的好朋友或亲人那里发过来的，大可以放心地执行附件中的程序，那你就大错特错了，因为这是他感染了该黑客程序的病毒之后由该程序自动发给你的，也就是说，他也不知情。当你收到这封信时如果执行了附件中的该黑客程序之后，计算机就会自动将这封信发给你通讯簿中所有的联系人，进而形成一种链式反应。<br>
+　　如果你不小心执行了该黑客程序，请寻找电脑里是否有FILES32.VXD这个文件，如有即为中毒。解除方法如下：<br>
+　　在“开始”的“运行”里输入“Regedit”并回车，再进入“HKEY_LOCAL_ROOT\exefile\shell\open\command里，会发现一个叫FILES32.VXD″％1″％之类的东西，立刻删掉它，然后重新启动电脑，再到Windows\System中删除FILES32.VXD，再将Pretty Park.exe删除即可。 <br><B>
+(江苏　瞿芾 michael_wolf@china.com　湖北　佘明军　smjclh@yeah.net)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99502903.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

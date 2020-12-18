@@ -1,0 +1,182 @@
+<html><!-- #BeginTemplate "/Templates/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>VB的几种打印方法</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->VB的几种打印方法<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->我们编程时，如果在程序中加入“打印”功能会使程序更加完善，更加专业。下面，我提供几种编写打印程序的方法以供大家参考。<br>
+              1. 采用Visual Basic提供的简单打印函数PrintForm方法<br>
+              应用程序窗体的PrintForm方法时Visual Basic把当前窗体的位图送到打印机。该方法的优点在于它几乎不需要任何编程但也有很大缺陷。最为突出的是当低分辨率图形在高分辨率打印机上打印时其结果令人无法满意会产生锯齿。<br>
+              代码如下：<br>
+              Private Sub Command1_Click '用PrintForm打印<br>
+              Me.PrintForm '打印窗体的可见区域<br>
+              End Sub<br>
+              2. 用Printer对象<br>
+              要想产生复杂的打印输出编程较为烦琐。Printer对象代表系统缺省的打印机Printer对象支持许多由窗体和图形框所支持的属性和方法三种对象都有画线和画方框。应用程序可用以下代码在Printer对象上画出1平方英寸的方框。注意打印机以twips来测量距离。每英寸有1440个twips。<br>
+              Printer.Line2144021440-Step14401440 B<br>
+              打印机、从窗体和图形框都有Circle、PaintPicture、Print、Pset、TextHeight、TextWidth方法。使用这些方法应用程序可以为打印机生成高分辨率输出。<br>
+              打印文本直接用Print方法，见下列代码：<br>
+              Printer.Print &quot;HelloChina ComputerWorld&quot; '打印字符串<br>
+              Printer对象还有一些窗体和图形框都没有方法<br>
+              NewPage告诉打印机程序对当前输出页的发送已经结束Printer对象应开始新的一页。<br>
+              EndDoc告诉VB程序创建文档结束VB应将它发送到物理打印机上打印。<br>
+              KillDoc取消当前打印作业。应用程序应该终止由EndDoc和KillDoc所设定的每个打印作业。<br>
+              Zoom属性用于定义打印输出的缩放因子。<br>
+              Copies属性用于定义打印的副本数目。<br>
+              3. 如果你在编程时用到了RichTextBox控件那么你可以使用该控件的SelPrint 方法来打印<br>
+              代码如下：<br>
+              Private Sub Command3_Click 'SelPrint方法<br>
+              CommonDialog1.Flags=cdlPDReturnDC+<br>
+              cdlPDNoPageNums<br>
+              If RTF1.SelLength = 0 Then 'RTF1为窗体的RichTextBox控制<br>
+              CommonDialog1.Flags = CommonDialog1.Flags+ cdlPDAllPages<br>
+              Else<br>
+              CommonDialog1.Flags = CommonDialog1.Flags+ cdlPDSelection<br>
+              End If<br>
+              CommonDialog1.CancelError = True<br>
+              On Error Resume Next<br>
+              CommonDialog1.ShowPrinter<br>
+              If Err.Number = cdlCancel Then Exit Sub<br>
+              If Err.Number &lt;&gt; 0 Then<br>
+              Beep<br>
+              MsgBox &quot;Error printing file.&quot; &amp; vbCrLf + Err.Description 
+              vbOKOnly +vbExclamation &quot;Printing Error&quot;<br>
+              Exit Sub<br>
+              End If<br>
+              Printer.Print &quot;&quot;<br>
+              RTF1.SelPrint CommonDialog1.hDC '打印RTF1控件的可见区域<br>
+              End Sub<br>
+              上面代码先进行打进设置再进行打印。如果不需要设置采用下面代码更为简单<br>
+              RTF1.SelPrint Printer.hDC '打印RTF1控件的可见区域<br>
+              4.可以在VB中调用Word 97提供的OLE自动化服务利用Word 97强大的打印功能来完成VB打印<br>
+              代码如下：<br>
+              Private Sub Command4_Click '调用Word打印<br>
+              Dim objWord As Object<br>
+              Const CLASSOBJECT = &quot;Word.Application&quot;<br>
+              On Error GoTo objError<br>
+              Set objWord = CreateObjectCLASSOBJECT<br>
+              objWord.Visible = True<br>
+              objWord.Documents.Add<br>
+              With objWord<br>
+              .ActiveDocument.Paragraphs.Last.Range.Bold = False<br>
+              .ActiveDocument.Paragraphs.Last.Range.Font.Size =20<br>
+              .ActiveDocument.Paragraphs.Last.Range.Font.Name = &quot;黑体&quot;<br>
+              .ActiveDocument.Paragraphs.Last.Range.Font.ColorIndex==4<br>
+              .ActiveDocument.Paragraphs.Last.Range.Text = &quot;我是计算机世界读者&quot;<br>
+              End With<br>
+              Clipboard.Clear<br>
+              Clipboard.SetText &quot;通过剪切板向WORD传送数据&quot;<br>
+              objWord.Selection.Paste<br>
+              objWord.PrintPreview = True '预览方式<br>
+              'objWord.PrintOut'执行打印<br>
+              'objWord.Quit'退出Word<br>
+              Exit Sub<br>
+              objError<br>
+              If Err &lt;&gt; 429 Then<br>
+              MsgBox Str$Err &amp; Error$<br>
+              Set objWord = Nothing '不能创建Word对象则退出<br>
+              Exit Sub<br>
+              Else<br>
+              Resume Next<br>
+              End If<br>
+              End Sub<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

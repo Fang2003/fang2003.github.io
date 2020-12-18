@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用Excel计算国债到期收益率</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 用Excel计算国债到期收益率</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用Excel计算国债到期收益率 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　国债作为一种重要的投资品种日益受到人们的关注。要进行国债的买卖必须先计算到期收益率，国债到期收益率的计算力求精确，尤其是附息国债的收益率计算涉及到幂的计算，十分繁杂，用手工算法来求可谓事倍功半，目前市场上还没有成熟的专业国债分析软件来实现这一功能。这里向你介绍一种利用Microsoft 的Excel5.0来计算国债到期收益率的方法。需要注意的是，Excel一般只计算复利收益率。<br>
+　　Excel的函数精灵fx 提供了一组实现特定任务的函数，它们与计算和分析各种债券的收益率有关。所有这些函数都是“分析工具库”嵌入宏的一部分。如果你打开函数精灵后未找到这些函数，则可能是由于你没有安装“分析工具库”嵌入宏。要安装这个嵌入宏很简单，只要从“工具”菜单下选择“加载宏”命令，再从“加载宏”列表框中选择“分析工具库”，单击确定即可。如果“分析工具库”未列在“加载宏”列表框中，则必须再次运行Excel安装程序以便加入“工具库”模块。下面对具体算法的实现进行举例说明。
+<p><b>　　1.用YIELDDISC函数直接计算贴现国债的年收益率</b></p>
+　　它的使用格式为：=YIDELDDISC（债券结算日，债券到期日，债券价格，兑付价格，债券日期计算基本类型）<br>
+　　债券日期计算基本类型：<br>
+　　0——美国30／360基准，为缺省值；<br>
+　　1——实际日期／实际日期；<br>
+　　2——实际日期／360；<br>
+　　3——实际日期／365；<br>
+　　4——欧洲30／360基准。<br>
+　　例1：1997年8月1日9701国债（二年期贴现式，1997年1月22日发行）在上海证券交易所的收盘价是88.30元，用Excel求当日该券复利收益率。<br>
+　　解：进入Excel，打开一新工作表，在新工作表的任一单元格中键入：<br>
+　　=YIELDDISC（datevalue(“97/08/01”),datevalue(“99/01/22”),88.3,100,0）<br>
+　　按回车后，该单元格中即显示出所要求的结果为：8.983％。<br>
+<p><b>　　2.用POWER函数间接求零息国债的年收益率</b></p>
+　　零息国债的复利率收益率公式为：
+　　我们用Excel中的POWER函数可以求出，再减去1，就得到了零息国债的年收益率。POWER函数的功能是用指定的幂指数对一个数进行求幂，它的格式为：<br>
+　　=POWER（底数，指数）<br>
+　　如：POWER（4，2）=42=16<br>
+　　因此，用Excel计算零息国债年收益率的公式为：Y=POWER（F／V，1／T）－1  。<br>
+　　例2：1997年7月10日上海证券交易所796国债的收盘价是109.53元，已知该国债票面利率10.96％，三年期，1999年8月6日到期。试用Excel求当日该券的复利率收益率。<br>
+　　解：进入Excel，打开一新工作表，在新工作表的任一单元格中键入：<br>
+　　=POWER（100（10.96％＊3＋1）/109.53,1/757/365）－1<br>
+　　按回车后，该单元格中即显示出所要求的结果为：9.66％ 。<br>
+<p><b>　　3.用POWER函数间接求附息国债年收益率</b></p>
+　　附息国债的计算公式是<br>
+　　将上式两边都乘以（1＋Y），则得到<br>
+　　将两式相减，则有<br>
+　　式中：P——附息国债价格；	<br>
+　　I——每年利息；<br>
+　　M——到期本金；<br>
+　　Y——到期收益率；<br>
+　　n——附息国债到期年数取整；<br>
+　　h——从现在到下一次付息不满一年的时期。<br>
+　　先估计一个Y，利用POWER函数算出（1＋Y）n＋h和 （1＋Y）t＋1，然后计算出预测的P值，与实际的P值相比较，如果预测值&gt;实际值，则下次再用一较大的Y值代入；如果预测值&lt;实际值，说明假设的Y太大，下次用一较小的Y值代入。这样用“试误法”，不断地用估计的Y值代入，直到得出的P值与实际的P值相等为止。<br>
+　　例3：1997年7月8日上海证券交易所的696国债收盘价110.58元，896国债的收盘价96.91元，试用POWER函数计算两个附息债的到期收益率。<br>
+　　解：696国债1996年6月14日发行，票面利息率11.83％，十年期，1996年7月8日至2006年6月14日共3263天，折合为8.9397年。<br>　　
+　　用试算法得出：Y≈10.11％。<br>
+　　 896国债1996年11月1日发行，票面利息率8.56％ ，七年期，1996年7月8日至2003年11月1日还有2307天，折合为6.3205年。<br>　　
+　　用试算法得出：Y≈10.52％。<br>
+　　可见896国债比696国债明显具有投资价值。<br>
+<p><b>　　4.用PRICE函数间接求附息国债收益率</b></p>
+　　在净价交易法下（如美国），求附息国债年收益率可以直接用Excel中的YIELD函数算出，YIELD的格式是：<br>
+　　=（债券结算日，债券到期日，债券票面利率，每100元票面的债券价格，债券兑付价格，每年利息偿还次数，债券的日计数基准）<br>
+　　全价交易法下，在付息日当天，作为一种特殊情况，全价交易法下的价值公式与净价交易法下的一致，可以用YIELD函数计算这天的全价法下附息国债收益率。<br>
+　　例4：1997年6月12日是696国债的债权登记日，它在上海证券交易所的收盘价是121.90元。按照这个价格该券第二个付息年限的第一个交易日（因周末闭市推迟为6月16日）的开盘价是110.07元，但实际上当日收盘价为109.66元，求1997年的付息日696以收盘价计算的到期收益率。<br>
+　　解：因为1997年6月16日是付息日，所以全价交易的696国债也可以用YIELD求其收益率：进入Excel，打开一新工作表；在新工作表的任一单元格中键入：<br>
+　　=YIELD（datevalue(“97/6/16”), datevalue (“2006/06/14”),0.1183,109.66,100,1,0）按回车后，该单元格中即显示出所要求的结果为：10.14％ 。<br>
+　　但是一年365天中只有一天是付息日，还有200多个交易日我们不能用YIELD函数来计算目前全价交易法下的附息国债价格，只好绕个弯子，用PRICE函数间接算得它们的收益率。PRICE函数是净价交易法下计算附息国债价格的函数，它的格式是：<br>
+　　=PRICE（债券结算日，债券到期日，票面利率，到期收益率，债券兑付价，每年利息的偿还次数，债券的日计数基准）<br>
+　　它的计算公式实际上就是下式：<br>
+　　[]中的式子其实就是全价交易法下的价格P全，则<br>
+　　P净=P全－I×（1－h）=PRICE（…）<br>
+　　I×（1－h）是从上次付息日到交易日的利息，可以算出。那么我们再次运用试误法，用估计的Y值代入，直到算出的P值与实际值一致为止。<br>
+　　例5：条件同例2，要求用PRICE间接求出696国债和896国债的到期收益率。<br>
+　　解：（1）696国债在7月8日的净价是<br>
+　　P净=110.58－118.83×(1－0.9397)=109.867<br>
+　　P净=PRICE(datevalue(“97/07/08”),<br>
+　　　　datevalue(“2006/06/14”),0.1183,Y,100,1,0)<br>
+　　用“试误法”不断地用估计的Y（收益率）值代入，最后得出Y≈10.11％  。<br>
+　　（2）896国债在7月8日的净价是<br>
+　　P净=96.91－8.56×(1－0.3205)=91.094<br>
+　　P净=PRICE(datevalue(“97/07/08”),<br>
+　　　　datevalue(“2003/11/01”),0.0856,Y,100,1,0)<br>
+　　用“试误法”得出：Y≈10.52％ 。<br>
+　　相比之下，还是用PRICE函数来求附息国债的到期收益率更简单些。<br><b>(中央财经大学　原松琪)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99453401.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

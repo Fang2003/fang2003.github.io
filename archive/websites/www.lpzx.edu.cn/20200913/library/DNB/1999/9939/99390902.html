@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VFP中Grid表格设计技巧四则</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/loga.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>39 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VFP中Grid表格设计技巧四则</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VFP中Grid表格设计技巧四则 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　使用VFP中表格设计浏览界面，给人简捷方便直观的感觉。下面向你介绍几例操作小技巧，希望喜欢。<br>
+<p><b>　　一、快速建立Grid表格</b></p>
+　　对于字段较多的表，要制作Grid表格非常麻烦。在这里，你只要能灵活地利用VFP的“表单生成器”，就能大大提高Grid表格的制作效率。假设需要以A.dbf为处理对象建立一个Grid表格，其建立步骤如下：<br>
+　　(1)建立一个只有两个字段的自由表B.dbf，并使其中的一个字段能与A.DBF中的某个字段相关；<br>
+　　(2)启动“表单生成器”，选择“向导方式”中的“一对多表单向导”；<br>
+　　(3)在“一对多表单向导”的操作引导下，以B.dbf为父表、A.dbf为子表的基本模式制作表单。在选择子表字段时，以未来Grid表格的需要来进行A.dbf字段的选取；<br>
+　　(4)打开由第(3)步制作的表单，剪切表单上的Grid表格，然后再退出该表单；<br>
+　　(5)打开您程序中需要使用Grid表格的表单，把在第(4)步上剪切的Grid表格复制到当前表单上。<br>
+　　这样，一个符合程序要求的Grid表格即制作完毕。用此方法制作Grid表格，表格字段越大，本方法的效率就越高。
+<p><b>　　二、用Grid模拟Browse窗口</b></p>
+　　可以将Grid结合在Form对象中，模拟成一个Browse命令窗口，可以自由调整Form大小，而Grid对象也会自动调整大小。用下面方法可以实现：<br>
+　　(1)首先设定一个Form对象，该对象必须保留其BorderStyle为3－可调边框，这样可自由调整大小之边线属性；同时设定Resize事件程序如下：<br>
+　　Thisform.Grid1.Width=this.width<br>
+　　Thisform.Grid1.Height=this. Height<br>
+　　(2)设计一个Grid对象于Form对象中，并设定其属性如下：<br>
+　　RecordSource－目前“数据环境”中所设定的工作区别名<br>
+　　Top与Left均为0，表示该对象左上端坐标为0，0<br>
+　　Width=Thisform.Width<br>
+　　Height=Thisform.Height<br>
+　　这样，已经设定好的Grid对象和Browse窗口一般，当对Form对象进行大小调整时，对象的高度与宽度就可以随之调整了。
+<p><b>　　三、在Grid中删除记录后立即移出显示</b></p>
+　　如不进行特殊设置，Grid删除记录后只是在Grid的删除记号区打上黑点，而不会立即移出显示。进行以下设置可立即移出：<br>
+　　(1)在主程序或Form对象的Load事件写下代码:SET DELETE ON<br>
+　　(2)在删除记录按钮对象的Click事件中加入代码:<br>
+　　DELETE<br>
+　　THISFORM.GRID1.CO<br>
+LUMN1.SETFOCUS
+<p><b>　　四、设计Grid记录层次检核程序</b></p>
+　　在Grid对象中没有Valid事件程序设定位置，我们可以借助Grid对象的AfterRowColChange作为当记录指针移开时的记录检核程序，该事件当你将光标焦点移开某一列或某一栏时可以被触发。你只需在AfterRowColChange事件中加入以下代码即可：<br>
+　　LPARAMETERS nColIndex<br>
+　　IF INLIST(LASTKEY(),24,5)<br>
+　　?? CHR(7)<br>
+　　=MESSAGEGOX(″触发记录检核程序！″)<br>
+　　ENDIF　　<br><b>(江苏　曾庆祝)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/39/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99390902.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

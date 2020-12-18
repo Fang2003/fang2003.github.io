@@ -1,0 +1,338 @@
+<html><!-- #BeginTemplate "/Templates/oa.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>用《几何画板》的操作类按钮实现课件演示效果</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+       
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> <br>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第1期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;<a href="oa.html">OA专刊</a></font></td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用《几何画板》的操作类按钮实现课件演示效果<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　《几何画板》以它易用、直观、动态、高效的特性，得了广大数学教师的喜爱。但在课件制作的实践中，我们会发现一些在Authorware中很容易实现的效果，在《几何画板》中却没有专门的功能来实现。我们知道《几何画板》中“…系列”按钮有着按次序自动执行一连串按钮动作的功能。只要积极开动脑筋想办法，灵活应用“编辑”菜单中的“操作类按钮”下的“动画”和“系列”，也能够实现Authorware才有的一些功能效果。从而使课件制作得更美观、实用。<br>
+
+              <br>
+
+              一、暂停、等待、单击继续 <br>
+
+              <br>
+
+              　　 其原理是，制作一个点在圆上运动的“≒动画”按钮，因为“≒动画”按钮有着等待鼠标单击而结束的特性，利用这一点，让它在课件中起到暂停，等待的作用。 
+
+              具体制作过程： <br>
+
+              <br>
+
+              　　 1．选择画圆工具，画出一个圆(一个小圆即可)，并在圆上另外选取一点(可用“作图”菜单中的“对象上的点”来选取)； <br>
+
+              <br>
+
+              　　 2．按住Shift键，依次选择该点和此圆，单击“编辑”菜单中的“操作类按钮”下的“动画”，出现“≒动画”按钮，将其改名为“≒暂停”，并将此圆隐藏。然后只须在需要暂停处，在“…系列”按钮中加上此“≒暂停”即可。 
+
+              另外，也可制作一个点在线段上运动的“≒动画”按钮(选择“双向”或“单向”)来实现暂停，等待鼠标单击再继续。 <br>
+
+              <br>
+
+              二、延时等待、自动进行 <br>
+
+              <br>
+
+              　　 其原理是，我们先制作一个点在线段上运动“一次”的“≒动画”按钮，它可起到延时的作用，线段越长延时就越长。为了增加延长等待的时间，还可以在“…系列”中连续使用多个此类按钮。 
+
+              具体制作过程如下： <br>
+
+              <br>
+
+              　　 1．选择画线段工具，画一条线段(可适当地画长些)，并在此线段上另取一点； <br>
+
+              <br>
+
+              　　 2．按住Shift键，依次选择该点和此线段，单击“编辑”菜单中的“操作类按钮”下的“动画”，在对话框中选“一次”(注意不要选“双向”和“单向”)和“慢慢地”(不要选择“快速地”)，出现“≒动画”按钮，将其改名为“≒延时”， 
+
+              并将此线段隐藏。然后只须在需要延时处，在“…系列”按钮中加上此“≒延时”按钮即可。 <br>
+
+              <br>
+
+              　　 下面制作一个实例： 画一个三角形，让此三角形的一个顶点在两个固定点之间来回移动，从而产生三角形的形状变化效果，但中间必须有停顿，否则是看不清过程的。 
+
+              <br>
+
+              <br>
+
+              　　 1．在左边的工具栏中选择画线段的工具，画出一个三角形ABC来； <br>
+
+              <br>
+
+              　　 2．选择画点工具，在顶点A的附近画两个点D、E； <br>
+
+              <br>
+
+              　　 3．按住Shift键，依次选择A、D点，在“操作类按钮”中单击“移动”，制作出“→移动A→D”按钮来，用同样的方法制作出“→移动A→E”； 
+
+              <br>
+
+              <br>
+
+              　　 4．按本文一的方法制作“≒暂停”； <br>
+
+              <br>
+
+              　　 5．按住Shift键，依次选取“→移动A→D”、“≒暂停”、“→移动A→E”，再到“操作类按钮”中单击“系列”，出现“…系列”按钮，将其改名为“…变形”即完成制作。 
+
+              最后别忘了把不必要的东西都给隐藏起来哦！ 如果在上述第四步中改用本文二的方法制作出“≒延时”按钮，并加入到“…系列”中，就可实现延时等待，使过程自动进行。 
+
+              <br>
+
+              <br>
+
+              　　 三、图形、字符闪烁 <br>
+
+              <br>
+
+              　　 实现图形文字的闪烁，有两种办法：一种是“空闪烁”，即“显示\延时\再显示”；另一种是“变色闪烁”，即“显示原图形文字\延时\再显示改变了颜色的图形文字”。可用来强调课件中的重点。因为在《几何画板》中，双击“▲显示”按钮，图形文字是以反白的选中状态显示的，为美观起见，通常在“▲显示”之后加一个其他按钮，如“△隐藏”、“≒延时”等。 
+
+              制作实例： <br>
+
+              <br>
+
+              　　 1．画出一个三角形ABC； <br>
+
+              <br>
+
+              　　 2．复制出一个同样的三角形A＇B＇C＇，并改变一下颜色； <br>
+
+              <br>
+
+              　　 3．用鼠标选择三角形ABC，在“操作类按钮”中单击“隐藏/显示”，出现“▲显示”、“△隐藏”两个按钮，将其改名为“▲显示1”、“△隐藏1”，对三角形A＇B＇C＇出作同样的操作，可得到“▲显示2”、“△隐藏2”； 
+
+              <br>
+
+              <br>
+
+              　　 4．将两个三角形在同一位置对齐； <br>
+
+              <br>
+
+              　　 5．按本文二制作出“≒延时”按钮； <br>
+
+              <br>
+
+              　　 6．按住Shift键，用鼠标依次选择“△隐藏2”、“▲显示1”、“≒延时”、“▲显示2”、“△隐藏1”，在“操作类按钮”中单击“系列”，出现“…系列”按钮，并将其改名为“…闪烁”。 
+
+              为了美观，可隐藏除“…闪烁”外的其他按钮，至此制作完成。 因为《几何画板》中的文字是不能改变颜色的(只是黑色)，要用第二种办法实现文字的“变色闪烁”，可用Windows中的图画板将文字做成不同颜色的图片或用Word打出彩色文档，做好了复制、粘贴过来。然后再利用“…系列”按钮，“▲显示原文字”、“≒延时”、“▲显示变色文字”、“△隐藏原文字”。但其缺点是造成课件体积增大。 
+
+              <br>
+
+              <br>
+
+              (深圳 王燕京)<!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

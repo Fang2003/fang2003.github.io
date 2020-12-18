@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>VC5中使用标签控件</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>VC5中使用标签控件</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　VC5中，标签控件是由CTabCtrl类来作数据支持的。做一个标签控件，主要有以下几个步骤：<br>
+        　　一、在ResourceView标签页(就是VC5左面的标签控件第二项)的对话框中添加TABCTRL(比如取名为MYTABCTRL)。<br>
+        　　二、在ClassWizard中为刚添加的标签控件关联上一个CTabCtrl变量(比如取名为mytab)。<br>
+        　　三、为标签控件添加项目。<br>
+        　　四、到此为止，一个标签控件就做好了。现在便可以用ClassWizard为标签控件添加消息映射了。<br>
+        　　下面重点介绍为标签控件添加项目的方法。<br>
+        　　CTabCtrl类有一个成员函数InsertItem，它的原型是：<br>
+        　　BOOL InsertItem(int nItem,TC_ITEM＊pTabCtrlItem)；<br>
+        　　其中第一个参数是加入项目的序号，此序号将在调用CTabCtrl的另一个成员函数GetCurSel()时作为返回值。与GetCurSel()对应的就是SetCurSel(int 
+        nItem)，SetCurSel函数可改变标签控件当前选定的项目，其中nItem就是该项目的序号。<br>
+        　　InsertItem的关键在于第二个参数PTabCtrlItem。这是一个指向TC_ITEM结构的指针。<br>
+        　　TC_ITEM结构的定义如下：<br>
+        　　typedef struct_TC_ITEM<br>
+        　　{<br>
+        　　UINT mask; ／／ 标签控件的类型<br>
+        　　UINT lnReserved1; ／／ VC保留，勿用<br>
+        　　UINT lnReserved2; ／／ VC保留，勿用<br>
+        　　LPSTR pszText; ／／ 标签控件的项目文字<br>
+        　　int cchTextMax; ／／ pszText的长度<br>
+        　　int iImage; ／／ 标签控件的图形序号<br>
+        　　LPARAM lParam; ／／ 用于交换的数据<br>
+        　　}TC_ITEM;<br>
+        　　在编程中，真正经常使用的只有mask、pszText、iImage三个成员变量。<br>
+        　　1.mask<br>
+        　　指定标签控件的类型。它可以是以下三个值：<br>
+        　　TCIF_TEXT pszText成员有效<br>
+        　　TCIF_IMAGE iImage成员有效<br>
+        　　TCIF_PARAM iParam成员有效<br>
+        　　如果要使用多个属性，应该用按位或运算符“|”连接。例如要使pszText和iImage成员同时有效，则用TCIF_TEXT|TCIF_IMAGE作为mask的值。<br>
+        　　2.pszText<br>
+        　　标签控件的项目文字，可直接赋予字符串值。此时标签控件的类型必须有TCIF_TEXT。<br>
+        　　3.iImage<br>
+        　　标签控件的图形序号，这是为标签控件添加图形所必须用到的一个成员变量。此标签控件必须有TCIF_IMAGE。<br>
+        　　在赋值时，只需给这三个(有时是两个)变量赋值就行了。<br>
+        　　下面为大家介绍iImage的用法。<br>
+        　　iImage中存储的是项目的图形序号。这个序号所对应的图形(可能为图标和位图)将被显示到标签控件项目文字的左边。这些图形可以是任意大小，但必须一样大。<br>
+        　　标签控件的每一个项目的iImage组成了一个序列，这个序列所对应的图形是用另一个类CImageList来管理的。下面请看CImageList的用法。<br>
+        　　我在使用CImageList时，只用到以下几个成员函数：<br>
+        　　1.BOOL Create(int cx,int cy,UINT nFlags,int nInitial,int nGrow)；<br>
+        　　这个函数建立一个含nGrow个图形（每个图形为cx长，cy高以nInitial为初值：通常为0）的空CImageList；其中有个nFlages参数，它用来指定图形的颜色属性，它的值只能为以下几个值中的一个：<br>
+        　　ILC_COLOR 使用默认颜色(一般为16色)<br>
+        　　ILC_COLOR4 使用4位色(16色)<br>
+        　　ILC_COLOR8 使用8位色(256色)<br>
+        　　ILC_COLOR16 使用16位色(64K色)<br>
+        　　ILC_COLOR24 使用24位色(16M色)<br>
+        　　ILC_COLOR32 使用32位色(4G色)<br>
+        　　ILC_COLORDDB 使用系统当前色<br>
+        　　2.BOOL Create(UINT nBitmapID,int cx,int nGrow,COLORREF crMask)；<br>
+        　　这个函数是以nBitmapID所代表的位图(已在rc文件中定义，与定义工具条的位图相似)建立一个含有nGrow个图形（每个图形长为cx）的CImageList；<br>
+        　　其中crMask指定位图中的什么颜色将被替换为黑色，一般就用黑色(RGB(0,0,0))。<br>
+        　　3.int Add(CBitmap＊pbmImage,COLORREF crMask)；<br>
+        　　这个函数往CImageList中追加一个位图。其中nbmImage可以通过先定义一个CBitmap指针，再用CBitmap的成员LoadBitman来得到。比如：<br>
+        　　CBitmap＊mvbitmap;<br>
+        　　mvhitmap=new CBitmap()；<br>
+        　　mvbitmap－&gt;LoadBitmap(MYPICTURE); ／／ MYPICTURE是已定义的位图资源crMask参数与前面相同。<br>
+        　　4.int Add(HICON hIcon)：<br>
+        　　这个函数往CImageList中追加一个图标。<br>
+        　　其中hIcon可以用AfxGetApp()－&gt;LoadIcon(UINT nIDResource)来得到。如：AfxGetApp()－&gt;LoadIcon(MYICON)；／／其中MYICON是已定义的图标资源，当CImageList定制好后，调用CTabCtrl的成员函数SetImageList，其原型如下：<br>
+        　　CImageList＊SetImageList(CImageList＊pImageList)；<br>
+        　　其中的pImageList正是指向我们刚才定制的CImageList对象的指针，而以前的iImage参数就是CImageList中的图形序号了。这样，一个带有图形的标签控件就做好了。<br>
+        　　关于标签控件，在一般编程中我们大约只用到以上函数。上面是我对标签控件编程的心得，希望能与大家分享。 
+        <br>
+        <strong>(四川 姜 边)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">排除WIN95下系统字体大小设置引起的软故障<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　近日新购Seagate4.3G硬盘一只,用自制WIN95启动盘引导后,对硬盘分区,格式化(FAT32),使用联想随机WIN95光碟(OSR2.1版),运行OEMSETUP直接往空硬盘上安装WIN97。安装完成后,设置好ACCTON 
+        EN1208以太网卡,S3 VIRGE－DX/GX显卡及声卡。由于该机在WIN95对等网络环境下使用,该对等网使用WINGATE代理服务连接INTERNET。因管理需要,必须对该机设置固定IP地址。进入“控制面板”,双击“网络”图标,点击EN1208网卡所绑定的TCP/IP协议,点击“属性”,进入IP地址选项卡,选择指定IP地址。此时,居然发现IP地址及子网掩码处无光标出现,无法填入。点击“确定”, 
+        系统立即弹出一个对话框“未指定IP地址,请在空白处填入IP地址&quot;。使用WIN95这么多年,还没有碰上如此怪事,真是百思不得其解,只好一点一点摸索着解决。<br>
+        　　转到“WINS配置”选项卡,发现“WINS服务器搜索顺序”的空白处也无光标出现。转到“DNS配置”选项卡,发现“DNS服务器搜索顺序”处正常。考虑到DNS处可正确填入,怀疑是WIN97安装出错。于是,对硬盘进行快速格式化,重新使用OEMSETUP安装完成后,发现故障依旧。这时，怀疑会不会是网卡驱动程序坏掉,但换新盘重装后无效;将所有网络协议及适配器删掉后重装,仍然不行;怀疑WIN95光盘坏,换一张新碟重装，发现一切照旧;怀疑有某种病毒作怪,找来最新的杀毒软件查杀,甚至连FDISK/MBR也用上了,仍然无效。可怜我一时糊涂,把个Seagate翻来覆去折腾,重复分区,格式化,安装,前后达五次之多,还是没有解决问题。<br>
+        　　第五次安装时,为方便起见,在WIN95安装过程中,添加TCP/IP协议后直接输入IP地址(192.168.0.30)及子网掩码(255.255.255.0)。安装完成后,发现IP地址及子网掩码处一片空白,无法看到先前填入的IP地址及子网掩码,仍然无光标。但是运行WINIPCFG命令后发现IP地址正是192.168.0.30,子网掩码也正确。这时,忽然想起WIN95安装中是使用16色,640×480的画面,会不会是显示属性未设好出错。赶紧进入“控制面板－显示器－设置”,把“桌面区域”调回640×480,“调色板”调回16色,字体调回“小字体”。重启后进入IP地址设置,一切正常。考虑到分辨率及颜色应该不关事,再调回800×600,增强色(16位),一切OK。至此,真相大白。<br>
+        　　 原来,笔者安装WIN95,在安装完显卡驱动程序后,按照老习惯,立即把“桌面区域”调到800×600,增强色(16位),为看得舒服,“显示字体大小”处按习惯未使用WIN95提供的方式(小字体,大字体),而是使用“其它”方式,并自定义为正常字体的120％大小(115dpi)。.使用这种字体(非WIN95提供),系统会弹出一对话框警告“该字体大小的设置可能会导致某些程序表现不正常”。因为笔者一直使用正常,未发现问题,所以没放在心上。没有想到恰是这里出了问题。所以,建议朋友们在设置系统字体时,尽量使用WIN95提供的小字体,大字体两种方式,以免出现显示错误。<strong>(广东　罗晓明) 
+        </p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

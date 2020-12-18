@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Authorware程序打包问题剖析</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; Authorware程序打包问题剖析</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Authorware程序打包问题剖析 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Authorware通过程序打包，脱离原制作环境而独立运行exe文件的功能，给使用者带来了意想不到的益处，深受广大多媒体爱好者的喜爱。但如果有关设置不当，这个exe文件就会运行不正常，下面就是几种常见的问题及解决方法：<br>
+　　1.程序打包后在其它电脑上运行时出现：The transition Xtra (xtra name) specified by this icon is not available，这时只能选择Continue才能继续，而且画面出现后任何已选择的效果都没有了。<br>
+　　出现这个问题的原因是：为一个显示图标选择了一个External Xtra（外部的过程），但程序在运行中找不到这个外部过程文件了(在Authorware中Xtra分为两种，一种是Internal(内部)的，这些过程在打包时也会被打包到exe的文件中)。所以生成的exe文件只好在运行时去找外部过程了。你可以在你生成的exe文件所在的子目录下建立Xtras子目录，把用到的Xtras文件(即Authorware下Xtras子目录中的文件)全部拷贝进去，当然你如果还使用到其他外部过程，相应的文件也要复制到Xtras子目录中，这样问题就迎刃而解了。因为Authorware打包生成的exe文件默认的外部过程文件路径都是在子目录Xtras中。当然你也可以只选择用Internal的过程，即在选择图像效果时只选Internal类，这样程序的可靠性更高，不过画面出现的效果可就要打折扣了。<br>
+　　2.程序打包运行后出现∶Where is movie moviename.avi?<br>
+　　出现这个问题的原因是你的程序中调用了avi动画文件。这些avi文件通常都比较大，所以Authorware在打包时不会把这些文件包含进去，而是让生成的exe文件在运行时自己到exe文件所在的子目录里找，实在不行就找动画文件，把avi文件拷贝到生成的exe文件所在的目录就可以了。<br>
+　　3.程序打包运行后出现∶Unable to locate external movie for moviename。<br>
+　　Authorware在播放一些外部动画(如avi文件)时，需要一些动画Movie Driver（驱动程序）(不需要fli、flc文件，因为这两种动画文件格式应用很广泛，其驱动程序已经进行了打包)，如果这些驱动程序没能找到，就会出现上述错误。这些驱动程序默认位置也是exe文件所在的子目录，所以只需要把Authorware的Movie Driver拷贝到这个子目录就可以了。这些Movie Driver如下∶<br>
+　　A3BRAVOVDR<br>
+　　A3DIBSEQIMM<br>
+　　A3DIRXMO<br>
+　　A3FLCFLIIMM<br>
+　　A3MCIVDR<br>
+　　A3MMOTNVDR<br>
+　　A3MPEGXMO<br>
+　　A3PIOCLVVDR<br>
+　　A3PIONERVDR<br>
+　　A3QTXMO<br>
+　　A3SONYVDR<br>
+　　A3VBLASTVDR<br>
+　　A3VFWXMO<br>
+　　A3VLOGICVDR<br>
+　　A3VSVWVDR<br>
+　　其实，辨别这些文件是否动画驱动程序只需要看它的属性就清楚了。<br><b>(请本文作者速与本报编辑部联系)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99363803.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

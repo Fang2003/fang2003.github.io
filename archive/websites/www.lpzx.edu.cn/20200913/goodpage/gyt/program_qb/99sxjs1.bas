@@ -1,0 +1,24 @@
+CLS
+PRINT "INPUT"
+INPUT "N=", N
+FOR I = 2 TO N + 1
+IF I MOD 2 = 0 THEN
+FOR J = 1 TO I - 1
+A = A + 1
+K = I - J
+S$ = RIGHT$(STR$(K), LEN(STR$(K)) - 1) + "/" + RIGHT$(STR$(J), LEN(STR$(J)) - 1)
+IF A = N THEN 100
+NEXT J
+ELSE
+FOR J = I - 1 TO 1 STEP -1
+A = A + 1
+K = I - J
+S$ = RIGHT$(STR$(K), LEN(STR$(K)) - 1) + "/" + RIGHT$(STR$(J), LEN(STR$(J)) - 1)
+IF A = N THEN 100
+NEXT J
+END IF
+NEXT I
+100 LOCATE 1, 50: PRINT "OUTPUT"
+LOCATE 2, 50: PRINT S$
+
+

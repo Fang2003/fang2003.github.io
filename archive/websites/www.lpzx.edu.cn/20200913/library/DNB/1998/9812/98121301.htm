@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>在VB中播放AVI文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　AVI文件是语音和影像同步组合在一起的文件格式。在VB50中用MMControl多媒体控件设计播放AVI文件的程序步骤如下：<br>
+        　　1新建一个工程。<br>
+        　　2在Form1上建立一个MMControl控件，并建立一个图片框。<br>
+        　　3设定MMControl对象的按钮属性。<br>
+        　　4撰写程序如下：<br>
+        Private Sub Form_Load()<br>
+        　　MMControl1.DeviceType=″avivideo″<br>
+        　　MMControl1.filename=″c:\vb\avi\a.avi″<br>
+        　　MMControl1.hWndDisplay=picture1.hWnd<br>
+        　　MMControl1.Command=″Open″<br>
+        　　End Sub<br>
+        　　说明：<br>
+        　　1DeviceType=″avivideo″，是设定MCI播放媒体的种类。<br>
+        　　2HwndDisplay=picture1.hWnd,是把AVI文件在图形框中播放，如果没有这一行，将自动开启一个窗口播放。<br>
+        &nbsp; <strong> (湖南　余鑫铭)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月30日第12期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

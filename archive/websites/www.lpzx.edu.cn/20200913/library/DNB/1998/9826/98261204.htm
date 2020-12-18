@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>可执行程序在不同路径的正常使用 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　<strong> </strong>在Visual FoxPro 5.0下编制程序后，调试程序时，一般在主程序中总是用set 
+        default to…命令指明缺省路径，以便Virsual FoxPro到指定的文件夹中寻找文件。生成执行文件后，如果将应用程序放在另外的文件夹中，则程序出错。<br>
+        　　例如：<br>
+        　　程序dbfmain.prg为主程序，代码如下：<br>
+        　　set default to d:\mydbf<br>
+        　　use mydbf　＆＆表mydbf.dbf放在d:\mydbf文件夹中<br>
+        　　……　＆＆其他代码<br>
+        　　假设生成的执行文件为dbfmain.exe。在调试或写程序时，表mydbf.dbf放在d:\mydbf中，运行没问题。把最终的应用程序给用户后，用户若不将程序放在d:\mydbf文件夹中，则程序运行出错，除非应用程序不需要打开其他的文件。<br>
+        　　如例中，若用户将应用程序放在c:\dbf目录中，程序执行到use mydbf 
+        时，将到d:\mydbf文件夹中寻找表mydbf.dbf，而事实上mydbf.dbf文件存在于c:\dbf中，程序肯定出错。<br>
+        　　Visual FoxPro提供了大量的命令和函数来解决这个问题。典型的有：<br>
+        　　sys(2014)　返回指定文件相对于当前目录、指定目录或文件夹的最小化路径。<br>
+        　　sys(5)　　 返回当前Visual FoxPro的默认驱动器。<br>
+        　　sys(2003)　返回默认驱动器或卷上的当前目录或文件夹的名称。<br>
+        　　sys(2004)　返回启动Visual FoxPro的目录或文件夹名称。<br>
+        　　set path to　指定查找文件的路径。<br>
+        　　curdir()　　返回当前目录或文件夹。<br>
+        　　fullpath()　 返回指定文件的路径或相对于另一文件的路径。<br>
+        　　使用以上功能可以实现文件夹的自由改变。方法如下：<br>
+        　　首先，不要使用set default to d:\mydbf命令，通过调用以上函数返回dbfmainexe的位置，然后用set 
+        path to返回的位置来相对定位其他要打开的文件。使用这个办法，在调试程序成功后，可直接生成执行程序，且生成的执行程序在任意目录中都可以运行，不会出现找不到文件的错误。<br>
+        　　这个办法还是比较麻烦。还有一个简单的方法，在调试程序时使用set 
+        default to…命令，在生成执行文件前将set default to…命令行注释掉，生成的执行文件将不会执行set 
+        default to…。当运行程序时，dbfmain.exe程序（主程序）所在的目录被认定为当前目录。一旦要打开其他的文件，则程序在当前目录中寻找。也就是说，在dbfmain.exe（主程序）文件所在的目录中寻找。这样做的好处在于：不需要为程序的移植添加额外的代码；缺点在于：应用程序的所有文件必须在同一个目录，不能放在子目录中。<strong>(老　茂)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年26月26日第26期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

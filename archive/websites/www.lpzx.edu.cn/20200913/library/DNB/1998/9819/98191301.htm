@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用FoxPro转换网上文本格式<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        　随着Internet的迅速发展，在网络上查询信息越来越为广大用户所接受。但是，从网上截取下来的资料虽然可以满足用户的需求，但是它们的文本格式却并不一定能适合用户的需要。例如，本人通过Internet从某图书馆下载的数据为纯文本，其排列格式如下（dattxt）：<br>
+        　　企业编号：00001<br>
+        　　企业名称：上海化工<br>
+        　　员工人数：5000<br>
+        　　主营产品：化工产品<br>
+        　　……<br>
+        　　这种数据存储方式在网上较为常见。我现用FoxPro 25b for Windows编写了一段程序，将上述的竖排式文本格式转换成FoxPro数据库的二维表形式，以方便操作管理，即转换成如下表格式（datdbf）：<br>
+        　　也就是将dattxt中的信息转换到datdbf数据库中去。当然，下载的数据必须是规范化的，如左边的类别名称必须是统一的，如果有不同之处，需事先将它调整好，且类别名称与右边的具体资料之间是用冒号分隔开的，每个企业的第一条信息都应是该企业的编号。<br>
+        　　转换程序执行的过程中，首先将文本信息收入一临时数据库文件（lsdbf）中，然后，对该数据库中每条信息进行判断，将冒号左边的查询名称，在字段名称表数据库（zdmcbdbf）中对应找到datdbf中的字段名，将冒号右边的内容作为要存储的信息保存到数据库datdbf相应的字段中去，而对于没有冒号的信息均作为该企业的备注信息加以保存。<br>
+        　　字段名称表数据库zdmcbdbf的内容如下表，其中查询名称为dattxt中左边栏的类别名称，字段名为datdbf中的字段名。<br>
+        　　临时数据库lsdbf只有一个字符型字段Line，其长度为200，以保证能放下较长的信息。本程序是在Windows 
+        95中用FoxPro编写并运行通过的。<br>
+        　　程序如下：<br>
+        　　SET TALK OFF<br>
+        　　SET SAFE OFF<br>
+        　　CLEAR ALL<br>
+        　　CLEAR<br>
+        　　SELE 1<br>
+        　　USE DAT<br>
+        　　SELE 2<br>
+        　　USE ZDMCB<br>
+        　　SELE 3<br>
+        　　USE LS<br>
+        　　ZAP<br>
+        　　APPE FROM DATTXT SDF<br>
+        　　SCAN FOR ′编号′|SLINE<br>
+        　　X=AT(′:′,LINE)<br>
+        　　BH=ALLTRIM(SUBS(LINE,X＋1))<br>
+        　　SELE 1<br>
+        　　APPE BLAN<br>
+        　　REPL 编号 WITH BH<br>
+        　　SELE 3<br>
+        　　SKIP<br>
+        　　DO WHILE !′编号′|SLINEAND!EOF()<br>
+        　　X=AT(′:′,LINE)<br>
+        　　IF X&gt;0<br>
+        　　Y1=ALLTRIM(SUBS(LINE,1,X－1))<br>
+        　　Y2=ALLTRIM(SUBS(LINE,X＋1))<br>
+        　　SELE 2<br>
+        　　LOCA FOR 查询名称=Y1<br>
+        　　IF FOUND()<br>
+        　　XXX=ALLTRIM(字段名)<br>
+        　　SELE 1<br>
+        　　REPL (XXX) WITH Y2<br>
+        　　ENDIF<br>
+        　　ELSE<br>
+        　　Y2=ALLTRIM(LINE)<br>
+        　　SELE 1<br>
+        　　REPL 备注 WITH ALLTRIM(备注)＋Y2<br>
+        　　ENDIF<br>
+        　　SELE 3<br>
+        　　SKIP<br>
+        　　ENDDO<br>
+        　　SKIP －1<br>
+        　　ENDSCAN<br>
+        　　CLEAR ALL 　　<strong>(浙江　苏　云)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

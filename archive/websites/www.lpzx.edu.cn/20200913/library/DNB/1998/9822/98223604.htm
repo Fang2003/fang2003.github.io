@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>外加多功能卡修复主板的故障 
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        &nbsp;&nbsp;&nbsp; 故障现象：一台兼容机配置如下：联讯EXP8551主板、CPU为Pentium 
+        100、32M EDO内存、希捷1.2G硬盘、SONY CDU77E四倍速光驱、S3Trio64v＋765显卡。近日出现找不到硬盘的故障，表现为开机自检后，屏幕出现“Primary 
+        HDC failure／press F1 to RESUME”的错误提示，按F1键可用软盘启动，但不能进入硬盘。进入BIOS中的UTILITY项进行硬盘检测，报告第一、第二主从硬盘皆为“NOT 
+        DETECTED”，出现故障前没有动过机箱内的任何东西。<br>
+        　　故障分析与排除：先将光驱卸去，换一根好的40芯扁平线试验，进入BIOS检测硬盘，仍找不到硬盘(接线无误，硬盘跳线也正确)，换用主板上的IDE2口也一样，而此硬盘在别的机器上皆能正常检测并正常运行。后检查该机的＋5V、＋12V电压也正常，最后怀疑是主板本身的问题，该板采用的是Intel 
+        430FX芯片组，估计是控制芯片组部分损坏，业余维修此种主板比较困难，而板上其它部件皆正常，弃之可惜。于是想到用一块多功能卡来试试，找来一块多功能卡，将其软盘驱动器、串行口1和串行口2及并行打印口用跳线屏蔽掉(如不屏蔽，自检时将出现“System 
+        Board Device Resource Conflict”的错误提示，另外，对无说明书搞不清跳线怎样接的多功能卡，跳线也可不动，但必须将BIOS中的相应项设置成Disable或改变地址值)，硬盘IDE口不屏蔽。做好上述准备工作后，将多功能卡插到主板上的任一个EISA插槽中，接上硬盘线，开机进入BIOS中的硬盘侦测项进行硬盘检测。令人高兴的是，在Primary 
+        Master里列出了该硬盘的正确参数，选择接受此参数后，进入&quot;Setup／Advanced 
+        ”项中，将“Primary Master LBA mode”项设为“Enabled”。如设为“Disabled”，则启动后将出现“Missing 
+        Operation System”的提示，不能通过硬盘进行引导，但可从软盘引导并能进入硬盘，其余项根据实际情况设置即可。保存CMOS参数后退出，系统重新启动后自检正常，无论是DOS或Windows95皆能正常运行。将光驱设为从盘挂在硬盘线上，工作也正常。笔者已用增加多功能卡的方法修复三块类似故障的主板，读者朋友如遇到此故障，不妨试试。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9822/1998/22/index.htm">《电脑报》1998年6月8日第22期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

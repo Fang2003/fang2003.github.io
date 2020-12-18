@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　广西读者陈礼相问：我负责管理我校的电脑室，有一位同学用“Deltree”把PWIN95目录下的内容误删除掉了，致使不能用硬盘启动(可用Windows 
+        95启动盘启动)，后来我把Config.sys、Autoexec.bat文件和系统文件IOSYS、MSDOSSYS删除，再恢复DOS下的这些文件，还是不能用DOS启动，再把硬盘取下，用DOS系统盘也不能启动系统，但用Windows 
+        95启动盘可启动，请问该怎样处理?能否用Format格式化硬盘后重新安装Windows 
+        95?<br>
+        　　答：如果实际情况确如陈礼相朋友所述，开始只是误删除了PWIN95目录下的内容而没有删除硬盘根目录下的系统文件，那么这时的系统其实尚未“瘫痪”，只是由于Windows 
+        95缺损文件而无法正确启动，而DOS系统还是可以正常引导的，方法是：<br>
+        　　在系统出现“Start Windows95……”时，按下F8键，调出启动菜单，选择“Previous 
+        version of DOS”项即可引导原来的DOS系统，当然重装Windows 95是必需的。而试图通过人为方式，把在Windows 
+        95下原DOS系统中后缀名为SYS的系统文件恢复为原名来进行DOS的引导当然不能成功，这是因为计算机在安装了Windows 
+        95系统后，整个系统的控制权实际上已由Windows 95掌握(即使是采用Windows95和DOS双启动的情况)，系统是进入原来的DOS还是Windows 
+        95，就只能由Windows 95系统决定了，而人为的换名当然无效。而陈礼相朋友后来采取的措施(删除IOSYS、MSDOSSYS等)反而使问题复杂化了，这时的系统才真正“瘫痪”了。解决的办法是：如不需要DOS系统，那么直接用Windows 
+        95启动盘启动后，利用SYS C：命令来向C盘传输系统，即可恢复C盘的引导功能，引导成功后再重装Windows 
+        95即可。如需要DOS系统，则需利用DOS系统盘引导系统(来信所述Windows 
+        95启动盘能启动，而DOS系统盘则不能引导，似乎不太可能，请仔细检查一下DOS系统盘的正确性)，同样利用SYS 
+        C：命令来恢复系统，然后，在DOS环境下重装Windows 95即可。至于Format硬盘则无必要。<br>
+        　　福建读者郑建伟问：我有一台太一10倍速光驱，安装在一台华硕SP97－V主板、Pentium 
+        166 MMX CPU的电脑上，单独连接在IDE2口上。以前工作正常，最近发现开机时无法找到CD－ROM(在CMOS中已将4个IDE选为AUTO)，但光驱灯有闪烁，放入光盘光驱也会转动，启动Windows 
+        95后，在“我的电脑”中无光驱盘符。到“控制面板”中添加新硬件，重新启动后系统无法检测到新硬件。如用手工添加CD－ROM，完成后重新启动系统，在“我的电脑”中仍无光驱盘符，但到“控制 
+        /系统 /设备管理”中，发现CD－ROM选项显示正常(把光驱分别跳为M、S，故障依旧)。请问何故，如何解决。<br>
+        　　答：从来信所述故障情况看，主要是没有解决好光驱与系统连接和系统设置相匹配的问题。<br>
+        　　就笔者了解的情况，许多人在光驱的安装上大多把注意力集中到硬件连接、跳线和驱动程序的安装上，而对系统CMOS的设置方面注意不够。对于采用IDE接口的光驱，在确认硬件连接正确的情况下，还需注意系统IDE的设置，一般涉及两个方面，一是光驱自身TYPE的设置，一般可设置为AUTO(在STANDARD 
+        CMOS SETUP项中即可完成)，另一个则是当前光驱使用的IDE通道(IDE Channel)是否可用的设置，这项设置极易被用户忽视，因为计算机CMOS缺省设置时，该项一般为可用(ENABLED)，因此大多数情况下通过第一项设置后，系统均能识别光驱，但是由于某些偶然的原因把该项设置改变为不可用后(DISABLED)，则接在该IDE接口上的光驱自然会“丢失”，计算机开机时就会找不到CD－ROM，而依托于系统硬件的Windows 
+        95系统当然也找不到光驱，至于说通过Windows 95系统手工强制安装光驱，虽然能在设备管理中看到光驱，但这只是假象，由于最初的系统设置已禁用了光驱所依赖的IDE接口，因而，实际上光驱仍是无效的。解决办法是：在系统CMOS设置中选取“Integrated 
+        Peripherais”项，保证其中的“Onchip IDE First Channel”和“Onchip IDE Second 
+        Channel”项均为“ENABLED”即可。<br>
+        　　浙江读者张银杉问：我在Windows 95环境中，将UCDOS下的WPS的批处理文件创建为快捷方式时出现下列问题：在系统正常进入UCDOS环境后，屏幕出现如下三行提示：<br>
+        　　“MICROSOFT WINDOWS POP－UP PROGRAM SURPORT<br>
+        　　Your Pop－Up Programs Ready To Run,When You Have Finished Using It,Press Ctrl＋C 
+        To Close This Windows And Return To Windows”<br>
+        　　按任一键都不起作用，无法进入UCDOS系统，好像死机了，但按Ctrl＋C能退到桌面。请问怎样设置快捷方式才能进入UCDOS下的WPS。<br>
+        　　答：对于原DOS下的应用程序，如要在Windows 95环境下设置快捷方式，可按如下方法进行：Windows 
+        95在快捷方式图标的属性中的“程序”项提供了一项高级栏设置，其中有三种方式可供用户选择：防止基于MS－DOS程序检测、建议使用MS－DOS方式和MS－DOS方式。<br>
+        　　第一种方式主要是适用于那些一旦检测到Windows存在而不能运行的DOS程序，复选此项后，可以防止DOS程序对Windows是否存在进行检测，以“骗过”DOS应用程序而让其运行；而第二种方式则是针对Windows系统本身，让它来检测应用程序是否需要在MS－DOS方式下运行，如不复选此项，可能会造成某些需要在MS－DOS方式下运行的DOS应用程序在快捷方式下无法运行；第三种情况则是系统把所有的资源都让给DOS应用程序，在DOS应用程序运行完成后再重新启动Windows。<br>
+        　　对于这三种方式中的任意一种，都要求DOS程序运行处于激活状态而不 
+        是只驻留内存，否则，Windows就会认为DOS程序已运行完毕而收回系统控制权或重新引导Windows，因此在设置DOS批处理文件的快捷方式时，一定要保证在批处理命令中最终有处于激活运行状态的程序。具体到UCDOS系统设置快捷方式时，据笔者的经验，最好不要选取MS－DOS方式运行，否则，在退出系统后重新引导Windows会遇到麻烦。至于出现读者来信中提到的情况，请检查一下批处理文件，保证其中有调用WPS执行文件一项，因为如果不调出WPS的执行文件，则Windows系统在运行完启动UCDOS所必需的程序后(这些程序都是内存驻留程序)，就会收回系统控制权，即会出现来信中所提到的几行英文提示，这时当然无法再进入WPS了。当然，即使调用了WPS，在退出WPS后系统仍会显示这几段英文提示，按Ctrl＋C后系统可恢复正常。究其原因，大概是UCDOS系统的图形方式与Windows 
+        95不兼容的缘故。其实，像UCDOS这种原DOS系统下的汉字系统，最好还是把Windows 
+        95切换到DOS状态下运行为好，这毕竟是UCDOS系统最初开发时所依托的环境。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年7月20日第28期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

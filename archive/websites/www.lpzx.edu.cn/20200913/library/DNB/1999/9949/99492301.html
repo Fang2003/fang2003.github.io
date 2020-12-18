@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='stylesheet' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- “千年虫”问题导致Win98安装故障的解决</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>49 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; “千年虫”问题导致Win98安装故障的解决</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 “千年虫”问题导致Win98安装故障的解决 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　 想必不少使用电脑的朋友都了解,我们现在使用的计算机中可能存在2000年问题，但也许不少同我一样粗通电脑的朋友，都认为计算机2000年问题不会影响到家用电脑的使用，但是最近遇到的一个故障改变了我的看法，问题发现的过程如下。<br>
+　　一个朋友抱怨他的Win98系统经常出错，不少游戏无法安装或安装后不能正常使用，我告诉他只要重新安装一个比较“干净”的系统，一般就能解决问题。对于我这个经常装卸系统的“高手”来说，安装Win98自然是小菜一碟。于是，在启动时按住“Ctrl”键，显示启动菜单，选择“Command prompt only”启动到DOS状态，使用Deltree命令删除Win98的系统目录和“Program Files”目录（建议加载Smartdrv.exe以加快速度），然后编辑Config.sys和Autoexec.bat加载光驱驱动程序及Smartdrv，重新启动机器后，放入Win98标准版光盘，在DOS命令行打入“Setup ／is”（即安装前不运行磁盘扫描程序，安装中也不制作启动软盘）。Win98安装程序开始往硬盘上拷贝安装文件，接着进入协议画面，然后要求输入序列号。当我将序列号一字不差输入后，按确定按钮，却弹出了一个出错窗口，显示“SuWin导致一般性保护错误”，要求关闭程序。我也没在意，以为是安装文件出了问题，就更换了一张安装盘，谁知到输入序列号后，出现了同样的错误。这下我有点急了，经过询问，我的朋友说他前两天曾将并口卸下，于是我开始怀疑是内存接触不良所致。但经过多次拔插甚至更换内存条，故障依旧，可以排除是内存条的问题。使用多张Win98安装盘都出现同样的问题，甚至将安装文件拷贝到硬盘上安装（可以排除光盘介质问题）也不行。后来想起Win98的OEM版是在第一轮安装完毕后才要求输入序列号的，抱着侥幸的心理，找来随品牌机附带的Win98 OEM版，这次总算将安装进行下去了，第一轮启动后，又到了输入序列号的时候了，怀着忐忑不安的心情，输入序列号，按下回车，这回弹出的窗口倒不是“一般性保护错误”，而是变成了“程序执行了非法操作，即将被关闭”，按“确定”后就跳回到DOS状态。<br>
+　　这下我几乎一筹莫展了。抱着“死马当活马医”的想法，决定试着安装一下，手头上正好有中文Win98第二版的测试版（版本号：2.10.2184.1），由于事先看过报刊介绍，知道这个测试版本年底会过期，唯恐日期错误导致不能安装，就打入“Date”命令查看一下系统日期，这一看好了，发现问题了！系统日期中月和日都没有错，但是年份却是2099年，整整多了100年！朋友说他从未自行调整过系统时间，难道这就是千年虫问题？朋友的这台机器是1998年装配的，配置为P166CPU、VX主板、64兆内存、2GB硬盘，其BIOS的日期是1998年4月份，我原以为1997年之后的机器应该都不存在千年虫问题，难道这台机器却是例外？有了这个想法，马上联想到会不会由于系统时间错误导致Win98安装失败，于是将系统时间恢复正常，进入刚才只完成第一轮安装的Win98目录，当出现安装界面后，又到了输入序列号的时候了，这次输入后，按下回车，安装程序马上自动运行下去，再无出错提示，顺利安装完毕。终于解决问题了！安装完毕后，为了证实我的设想，马上找来几个2000年问题检测程序，逐一运行，结果证明这台机器果然存在2000问题！由于这台机器是兼容机，其BIOS升级文件不好找，最后只好采用软件方式修复了事。<br><b>      　　(福建　林 斌)           </b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99492301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

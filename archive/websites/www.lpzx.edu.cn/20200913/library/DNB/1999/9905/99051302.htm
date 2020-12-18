@@ -1,0 +1,82 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><font face="黑体" color="#FFFFFF"><big><big>Delphi编程俱乐部</big></big></font></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><span style="line-height: 1.5"><font
+        color="#369681">　　问：如何知道程序运行时所在的路径？如何得到程序自身的完整名字？<br>
+        　　答：只要简单地调用系统函数GetCurrentDir，返回的就是当前的路径。程序自身的完整名字可以通过读取对象application.exename属性得到（包含完整路径）。<br>
+        　　提示:ExtractFilePath可以将一个完整带路径的文件名分割得到文件所在的路径。ExtractFileName单独取出文件的名字，不含路径，ExtractFileExt单独取出文件的后缀名。<br>
+        　　问：如何在Delphi中实现类似VB中的字符串操作？<br>
+        　　答：Delphi提供了丰富的字符串操作，可以实现许多复杂的处理。<br>
+        　　Pos在字符串中查找指定字符串的位置，用于文字的查找<br>
+        　　Delete删除字符串中从指定位置开始指定数量的字符<br>
+        　　Insert在字符串指定文字开始插入字符串<br>
+        　　Copy返回字符串中指定位置的一定长度的字符串<br>
+        　　Length返回指定字符串的长度<br>
+        &nbsp;&nbsp;&nbsp; 问：如何进行字符串与其他类型数据转换？<br>
+        　　答：可以用inttostr()函数，这是一个十分常用的函数，如果你希望将整数转化为字符串的形式，就必须使用这个函数。使用的方法十分简单，inttostr(整数)返回一个代表这个整数的字符串。对应函数strtoint(字符串)返回整数。特别注释：如果你不想因为输入了不是数字的字符串而引起异常报警（这是很常见的），你可以使用一个替代的函数，自己进行输入校验，这个函数就是StrToIntDef。使用的方法是：StrToIntDef（字符串，默认数字），返回的是数字，如果输入的字符串不是合法的数字，返回的将是默认的数字，如果对其进行检测，就可以发现问题。If 
+        (Inputbox(′输入数字′),－1)=－1 then showmessage(′你输入的不是数字或者输入了－1′);对应的函数还有许多，下面仅列出其函数名，具体的使用方法类似，如果需要进一步了解此类函数，请发信到我的E－mail信箱，或者到我的站点查找。<br>
+        　　FloatTostr浮点数转化成字符串<br>
+        　　FloatToStrF带格式的浮点数转化成字符串<br>
+        　　IntToHex整数到十六进制字符串<br>
+        　　TimeToStr时间转化成字符串<br>
+        　　DateToStr日期转化成字符串<br>
+        　　DateTimeToStr日期时间转化成字符串<br>
+        　　FmtStr按指定格式输出字符串，类似于C的printf。<br>
+        　　问：如何在Delphi编程中调用其他执行程序？<br>
+        　　答：Function ExecuteFile(const FileName, Params, DefaultDir: string;ShowCmd: 
+        Integer): THandle;是最简单的执行文件调用方法。<br>
+        　　演示的程序如下：<br>
+        　　executefile(′c:\program～1\winamp\winamp.exe′,′winamp.m3u′,′d:\mp3\′,0);<br>
+        　　这段程序就是我编写的定时启动播放音乐程序的一部分，仅供大家参考。<br>
+        　　提示：最为有趣的是如果在输入的参数中填入的不是可执行文件名，而是某个数据文件如DOC文件，它会自动调用相应的程序打开（如Word）。通过这一功能还可以实现，自动发送E－mail，自动访问指定网站的功能。<br>
+        　　executefile(′mailto:delphi32@infoworld.sh.cn′,″,″,0);<br>
+        　　简单的语句实现了调用默认电子邮件程序向我发信的功能。<br>
+        　　executefile(′http://delphi.sq.sh.cn′,″,″,0);<br>
+        　　立即可以拨号上网看到我的主页<br>
+        　　executefile(′d:\mp3\cd01\001.mp3′,″,″,0);<br>
+        　　立即调用默认的MP3播放程序播放这首歌曲。<br>
+        　　问：如何确保文字切割时不会把单个汉字一分为二出现断字（汉字整字技术）？<br>
+        　　答：ByteType是Delphi提供的特殊函数，专门在双字节的系统中确保双字节字不会被分割成2个单字节字。返回的值可以告诉你指定位置的字符是单字节还是双字节字中的第一字节或第二字节，可以确保切割文字的正确性。<br>
+        　　提示：由于Delphi不是完全为双字节系统设计，有时候你必须自己决定文字的分割和换行，所以这个函数是十分必要的。尤其是在报表系统中（报表子系统不是inprise/borland制作的）。<br>
+        &nbsp;&nbsp;&nbsp; 编后：有许多朋友来信问编程俱乐部的图标中P字母的含义，其实P就是Programer的意思，而整个图标的意思就是这里是所有的编程爱好者聚会的好地方，你们喜欢吗? 
+        </font></span></p>
+        <p class="ourfont" align="right"><span style="line-height: 1.5"><a href="99051301.htm"><font
+        color="#369681">接下页</font></a></span></p>
+        <p align="right"><span style="line-height: 1.5"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

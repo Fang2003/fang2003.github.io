@@ -1,0 +1,133 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>制作Linux启动盘的四种方法</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第06期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{制作Linux启动盘的四种方法}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ Linux的启动软盘有boot盘和boot/root盘之分，所谓的boot盘只能用来启动已经安装在硬盘上的Linux系统，而boot/root盘本身就是一个迷你Linux系统。Linux启动软盘是系统修复的必备工具，因此掌握启动软盘的制作方法是很有用处的，下面我就向大家介绍boot盘的四种不同的制作方法：<br>
+              1.使用mkbootdisk工具为当前系统制作启动盘<br>
+              mkbootdisk －－device /dev/fd0 ｀uname －r｀<br>
+              参数说明：－－device /dev/fd0是要建立启动软盘，也是默认选项，因此也可以省略它；接下来的参数是内核版本号，如2.2.16等，这里是利用｀uname 
+              －r｀命令来获得系统的内核版本号。对于更多的参数，请自行参看手册页：man mkbootdisk。<br>
+              此方法将为当前系统制作启动软盘，因此必须已经运行Linux系统，并且在系统中安装有mkbootdisk软件包(如果没有的话请安装该软件包)。制作出来的启动盘与在Linux安装过程中提示制作的启动软盘是一样的。<br>
+              2.将lilo安装在软盘的引导扇区中<br>
+              lilo －b /dev/fd0<br>
+              参数说明：－b /dev/fd0是将lilo安装在软盘上，因为默认时是将lilo安装在硬盘上的，所以不能省略它；－C config＿file参数将允许你使用/etc/lilo.conf以外的配置文件。更多的参数请自行参看手册页：man 
+              lilo。<br>
+              这种方法也是为当前系统制作启动盘。<br>
+              3.找一个可引导内核，令它的根设备指向正确的根分区，然后“刻”入软盘<br>
+              rdev vmlinuz /dev/hda﹖<br>
+              dd if＝vmlinuz of＝/dev/fd0<br>
+              说明：使用rdev命令将可引导内核vmlinuz中的根设备指向/dev/hda﹖，请把hda﹖换成你自己的根分区，接下来用dd命令将该内核写入软盘。<br>
+              此方法可以使用任一个可引导的内核来制作，因此可以借助其它的Linux系统来完成，这在已经无法通过硬盘启动来进入你的Linux系统时尤为有用。但需注意的是，如果使用与你系统不同的内核，则在启动后可能失掉部分功能，比如无法装入某些模块，无法正确显示汉字(用外文内核来引导中文Linux时)等，如果你还想为你的系统制作专门的启动盘，可以在启动完成后再利用方法1或2来制作。<br>
+              4.利用软盘上的装载程序和一个可引导内核启动系统<br>
+              首先要制作一个DOS启动盘(format a/s)，将装载程序loadlin.exe和可引导内核vmlinuz拷贝到软盘上，然后建立自动批处理文件autoexec.bat，其内容如下：<br>
+              loadlin vmlinuz root＝/dev/hda﹖ ro<br>
+              这种方法很简单，因为在各个版本的Linux安装光盘上都可以找到loadlin.exe和某个可引导内核vmlinuz，在DOS或Windows 
+              9x中就可以轻易地拷贝出来。特点与方法3一样，你可以利用任一个可引导内核来引导系统。<br>
+              以上四种方法在包括RedHat、蓝点、Xteam Linux、Turbo Linux、红旗等在内的发行套件中都验证通过。<br>
+              除了上面的几种方法之外，你还可以利用sxslinux软件来制作Linux启动盘，由于各种Linux发行套件都不包含它，所以在此就不多说了。而boot/root的制作则可以参看《电脑报》2000年第43期的“用好Linux的启动盘”一文。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

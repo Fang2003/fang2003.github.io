@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 微机黑屏故障处理三例</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><img src="images/cpcw.gif" width="468" height="60" border="0"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>30 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 微机黑屏故障处理三例</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 微机黑屏故障处理三例 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在计算机中，黑屏是一种比较严重也较容易发生的故障（这里所说的黑屏，是指开启计算机电源后，不能启动计算机系统和点亮显示器这一类故障，不包括单纯的显示器损坏）。产生黑屏故障的原因较多，如：主板BIOS芯片损坏或接触不良、电源损坏、内存条损坏、CPU损坏或接触不良、超频过度等等均有可能引发开机黑屏。显示器黑屏表明计算机可能存在较为严重的硬件故障。<br>
+　　故障现象一：一台MMX166 CPU/T2P4主板/32M内存/3.2G硬盘的兼容电脑，操作系统为PWIN98。开机时电源指示灯亮，电源风扇也正常转动，但计算机并没有启动，也没有出现开机自检画面。<br>
+　　故障分析处理：据该机使用者称，最后一次使用该机的时间是4月26日，他运行Word时出现了白字蓝屏故障，关掉电源后再次启动便出现上述现象。听说4月26日这个日子，估计是CIH破坏了这台电脑的主板BIOS芯片和硬盘，唯一的解决办法是重写BIOS。<br>
+　　处理：<br>
+　　1. 把该机主板上的BIOS芯片拔下，插上另外一块正常的T2P4 主板的BOIS芯片,然后启动电脑。此时只能从软盘上启动，该启动盘上应包括该种型号主板的BIOS升级程序（BIOS升级程序在主板驱动盘上可以找到），比如Aword的BIOS升级程序是Awdflash.exe。<br>
+　　2. 运行Awdflash.exe ，按照要求备份一个BIOS文件，备份完成后用损坏了的BIOS芯片替下正常的，然后继续进行Awdflash.exe的下一步骤——将刚才备份的BIOS文件写回损坏的芯片中，刷新BIOS的过程只需要几秒钟时间。到这一步时，BIOS已修复。<br>
+　　3. 该机硬盘也被破坏，好在上面没有什么重要的东西，将该盘重新分区、格式化，安装WIN98后恢复正常。<br>
+　　上面修复BIOS的方法便是大家常提到的“热插拔法”，这种方法需要带电拔插BIOS芯片，有一定的风险，但只要操作者胆大心细，一般说来还是安全的（笔者用这种方法修复的十几个BIOS，从未出过什么问题）。同时“热插拔法”不需要其它设备（如擦除器等），操作简便，不啻为业余条件下的首选方法。<br>
+　　故障现象二：一台赛扬333／64M内存／BX主板／6.4G硬盘的兼容电脑，故障现象同上。<br>
+　　故障分析处理：该机一直运行正常，也没有CIH病毒发作的迹象。但故障发生前使用人员曾经取下过CPU，并在CPU散热片上加装了一个风扇。因使用者曾经动过计算机硬件，因此将查找重点放到硬件故障方面。<br>
+　　处理：<br>
+　　1. 揭开机箱盖子观察，发现开机瞬间，硬盘、光驱灯都亮了一下，同时CPU风扇（接在主板CPU风扇接口上）也运转正常；用万用表测试，电源的±12V、±5V输出均正常，可以先排除电源的问题。<br>
+　　2. 将该机的CPU、内存、显卡等部件取下重新安装一次，确保安装到位、接触良好。再次启动，故障依旧，排除了接触不良的问题。<br>
+　　3. 取下声卡、光驱、硬盘等，主板上只留CPU、内存条、显卡，组成一个最小化系统，这时开机仍未出现启动画面。到这一步可以确定故障原因在CPU、内存或主板上。<br>
+　　4. 从理论上讲，内存有问题时，启动时应有报警声，只有主板、CPU损坏时才会黑屏无声。找来一颗正常的赛扬300A替下原来的赛扬333，开机出现了自检画面，判断是原CPU损坏。<br>
+　　5.仔细观察换下的CPU，发现在CPU金手指的两根引脚上有一道很深的划痕，凭直觉这两脚已被切断。问到该用户，说是安装第二个CPU风扇时因用力过猛，螺丝刀的刀口碰到了CPU上。于是非常小心地用烙铁把这两根被切断的引脚焊好，完成后将这块CPU插回到原主板上，这次终于能正常启动了，问题遂全部解决。<br>
+　　故障现象三：一台PⅡ350/64M 内存/ABIT BH6主板/8.4G硬盘的兼容电脑，启动时出现黑屏故障，并且计算机发出紧急的报警声。<br>
+　　故障分析处理：该机运行在133×3.5=467MHz下，一直较稳定。上述故障出现于一次玩《极品飞车Ⅲ》时，当时系统突然崩溃，后再也无法启动。有报警声表示电源、主板、CPU没有什么大的问题；显示器上显示画面前便已死机并报警，则说明从自检CPU后到显卡之间的某个硬件出了问题。符合上述条件的只有内存和显示卡了。<br>
+　　处理：<br>
+　　PC133规范未推广以前，运行在133MHz外频下的电脑，其内存条（PC100）、AGP显示卡（工作于133×2/3=88.7MHz）均处于极度超频状态，相比之下内存条更容易出问题。用一根LGS 7K的64M内存条换下原来那根杂牌的，电脑顺利启动。<br>
+　　随着价格一步步下降，现在市面上的PC100内存条质量也参差不齐，劣质的PC100 SDRAM内存条在100MHz下还勉强顶得住，等上到124MHz、133MHz这些高外频时便多半要出问题了。本例便是如此，长时间工作在133MHz下的杂牌内存条终于因为过度发热而烧毁了。<br>
+　　总结：<br>
+　　微机黑屏故障多半是由硬件原因造成，遇到这类故障时一般可以采取下面两个方法来解决。<br>
+　　一、用排除法将运行正常的部件排除在查找范围之外。排除法的重点在于“望、闻、问、切”：“望”是揭开机箱盖子观察各部件有无明显损伤的痕迹，风扇是否正常运转等等；“闻”是听开机时是否有报警声，报警声长短搭配情况等；“问”是询问使用者在计算机出现问题前后的操作情况：“切”则是用手来感觉机箱内部件有无发热异常或一些芯片、板卡有无松动迹象等。这一步的目的是将出故障的元件范围尽量缩小。<br>
+　　二、用替换法找出故障的元件。替换法是维修计算机中最常用的方法之一，它的核心是用好的元件逐步替换怀疑有故障的元件，替换到哪一样时计算机恢复正常，则可以判断该元件是故障元件。 替换法操作的一般原则是：先替换怀疑最大的部件。<br>
+　　其实，只要能熟练运用上面两种方法，对大部份计算机硬件类故障，你都已具备一定的应付能力，如果再进一步掌握有关硬件方面的理论知识，哈哈！恭喜！恭喜！你已经成为别人眼中的硬件高手了！<br>
+<b>(四川　李俊)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/30/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99302301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+<A HREF='http://www.lpzx.edu.cn/show_stats.htm%20target=sxrl'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

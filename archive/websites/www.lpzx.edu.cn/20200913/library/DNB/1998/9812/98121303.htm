@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>9803请你编程<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　9803的题目是：三个学生想打电话给老师，但只记得七位的电话号码的前3个数字为818，后4位数字记不清了，一个学生说，他记得这后4位数字中的前两个数字相同；另一个学生说，他记得后2位数字也相同；最后一个学生说他记得后4位数字正好是一个完全平方数，请确定这个老师的电话号码N。<br>
+        　　这次请你编程栏目，收到了许多的信件和E－mail。题目的答案也很清楚：老师的电话号码是8187744。次此，投来的稿件中大多数是通过后4位数字是一个完全平方数入手，再通过其它的一些限制条件求出答案，在此介绍两个程序供大家借鉴。<br>
+        　<strong>　1江苏省朱伟读者的来稿</strong><br>
+        　　思路：因电话号码的后四位数为一完全平方数，而完全平方数的末位数只可能在1、4、5、6、9这五个数中去选择，这就可使循环次数减少近一半。又因完全平方数的平方根应为一整数，故在循环推导过程中，对所得的方根将其类型转化为整型，通过比较转换前与转换后两者的平方数是否相等，最终得到答案。<br>
+        　　＃include ″stdioh″<br>
+        　　＃include ″mathh″<br>
+        　　main (void)<br>
+        　　{<br>
+        　　int ＊p,x,i;<br>
+        　　／＊因为后四位数为完全平方数，故平方数的末两位数只可能在1，4，5，6，9这五个数中选择＊／<br>
+        　　int a[5]{1,4,5,6,9}；<br>
+        　　for (p=a;p&lt;a＋5;p＋＋)<br>
+        　　{<br>
+        　　for (i=1;i&lt;=9;i＋＋)<br>
+        　　{<br>
+        　　／＊对推测所得的四位数进行求方根，并将其结果类型转换成整型＊／<br>
+        　　x=(int)(sqrt(1000＊i＋100＊i＋10＊＊p＋＊p))；<br>
+        　　if (x＊x==1000＊i＋100＊i＋10＊＊p＋＊p)<br>
+        　　printf(″\ntelephone number is :818％d％d％d％d\n″，i,i,＊p,＊p);<br>
+        　　}<br>
+        　　}<br>
+        　　}<br>
+        　　<strong>2山东孟庆峰读者的来稿</strong><br>
+        　　思路：电话号码后四位可写为mmnn,数值为1100＊m＋11＊n=11(100＊m＋n)，又因后四位为完全平方数，所以11＊(100＊m＋n)=Z 
+        2，由此可知100＊m＋n必可分解为11与另一个平方数之积，即11＊a＊a，且形式为X0X，故可通过用模除法判断十位为0，最后得出结果。<br>
+        　　CLS<br>
+        　　FOR a=4 TO 9<br>
+        　　f=11＊a＊a<br>
+        　　b=f MOD 100<br>
+        　　IF b&lt;10 THEN PRINT“所求号码为818－”；11＊f<br>
+        　　NEXT a<br>
+        　　9805请你编程的题目是：<br>
+        　　一个名叫阿当斯的人花了几十年时间研究出的“六角幻方”，即：用1～19这19个数填到右图空中，使得每条线上的数字之和均相等，试编程解出这个“六角幻方”<br>
+        　　来稿请寄磁盘稿，并写清楚思路和算法，截止时间1998年5月10日，并欢迎同时提供请你编程的题目。<br>
+        　　本期获奖名单是：<br>
+        　　朱伟(江苏)　孟庆峰(山东)　杨永威(黑龙江)<br>
+        　　高磊(吉林)　张院珠(广东)　韦金(重庆)<br>
+        　　陆刚(江苏)　黄学文(上海)　许敬宜(山东)<br>
+        　　周世攀(云南)<br>
+        　　每位获奖者将获得苦丁香公司提供的光盘一张。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月30日第12期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

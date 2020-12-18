@@ -1,0 +1,121 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　安徽读者洪祖兵问：我有一型号为M2613ESA、P／N 
+        B038－7055－B115A＃P、容量为133MB的硬盘，接在一块型号为CI－2095、REVA的多功能卡上。由于感染了病毒，在使用DEBUG处理时将硬盘的主引导记录损坏了，致使硬盘不能正常工作，用硬盘启动时提示：“Sector 
+        0 is valid Boot sector!!Press A Key to reboot”，按任意键后重复上面的提示，从软驱A启动时无法进入硬盘，在BIOS中设置为：None,CYLN,HEADS,PRECOMP,LANDSIZE,SECTORS全为0，把硬盘接到其他微机上，因BIOS不认这种型号的硬盘而无法修理。<br>
+        　　答：从你提供的信息看，你的微机所感染的是破坏CMOS的病毒，因为你的硬盘型号在BIOS中被改掉了。可按下面的步骤解决这个问题：<br>
+        　　1将CMOS放电；<br>
+        　　2进入CMOS Setup程序，重新设置包含硬盘型号在内的各个选项参数；<br>
+        　　3用软盘重新启动计算机，然后用NDD／Undelete命令恢复硬盘主引导记录与分区表；<br>
+        　　4用硬盘启动计算机，再用KV300或者AV95等杀毒软件检查硬盘。<br>
+        　　另外，你的这个硬盘也能接在其他微机上，只要进入CMOS Setup程序，将硬盘读取方式改为“Normal”即可。<br>
+        　　贵州读者李珊问：一台微机，配置为：同维主板、TI486－80 CPU、512KB显存的Trident显示卡及花王声卡、TW解压卡、光驱。由于主板上只有一个普通的IDE接口，只能用来接硬盘而无法接CD－ROM，所以用声卡的IDE接口接上CD－ROM，使用正常。前些天试着换了一个带IDE接口的ASS007声卡，结果开机后显示器无显示，微机也不自检，只好又重新将原来的声卡装上去，但显示器不显示且微机不自检，如果将声卡IDE口上接CD－ROM的数据线拨掉，则计算机就可以正常显示且自检，同时CD－ROM也可以打开，但这时CD－ROM由于没有数据线也无法挂接配置，这样反复试了几次，均是这种情况。<br>
+        　　答：从你提供的情况来看，你的CD－ROM数据线可能接反了，或者主板上某处接触不良。另外，主板上的IDE接口可以同时接硬盘和CD－ROM驱动器，你只要将原来的数据线换成两个接口的即可。<br>
+        　　哈尔滨读者石大鹰问：我和朋友各有一台微机，均安装了中文Windows 
+        95、调制解调器，两台微机经常需要交换文件，而两台微机的地理位置相距较远，无法通过软盘实现，请问如何通过电话线来实现文件的交换?具体需要什么样的软硬件环境设置及具体如何操作?<br>
+        　　答：如果你曾经上过BBS，就不难解决这个问题。使用Telix、中文Windows 
+        95下的仿真终端程序Terminal等都可以实现两台计算机之间的连接，同时可以传输文件。具体操作如下：<br>
+        　　1首先分别在两台微机上安装好调制解调器，注意安装的端口，通常为COM2；<br>
+        　　2在Telix等软件中设置通讯端口(如COM2)及通讯速率(如14400bps)；<br>
+        　　3设置上传(Upload)与下载(Download)的文件路径；<br>
+        　　4通过AT命令或者拨号命令拨号，在两台计算机之间建立连接。<br>
+        　　哈尔滨读者王力问：我在去年二月购置了一台组装机，CPU为Pentium 
+        133，内存为16M EDO，硬盘容量为12GB，主板为AP5K，用QAPLUS 60 for 
+        Windows对主板进行测试，提示设置为：<br>
+        　　CPU TYPE:Pentium－90<br>
+        　　NPU:Installed<br>
+        　　CPU Speed:127MHz<br>
+        　　BUS:PCI,ISA<br>
+        　　BIOS／Machine:Award 09／02／96<br>
+        　　Win Mode:Enhanced Mode<br>
+        　　但奇怪的是该测试软件并没有对NPU进行测试，且对CPU进行性能测试时发现三项参数的值均为零，并提示有浮点运算零溢出，而用该软件对IBM品牌机(IBM 
+        CPU 100，8M内存)进行测试，在出现浮点运算零溢出错误时，其三项参数的值分别如下：<br>
+        　　Whetstones(millions) 18.169<br>
+        　　Dhrystones(Thousands) 90.847<br>
+        　　MIPS(Tens) 25.853<br>
+        　　请问：我的微机中，Pentium 133 CPU是否为假货?主板是否有问题?CPU上述三个参数对机器性能有何影响?<br>
+        　　答：需要说明的是，QAPLUS 60 for Windows的检测结果不能作为CPU“真假”或者性能好坏的依据。我曾经检测我的Pentium 
+        75，发现了许多问题，如浮点溢出、CPU的性能无法检测出等。但是，该CPU在WinStone 
+        97、WinBench 97上检测均能通过，且结果令人满意，使用至今也未出现问题，即使在超频使用到90MHz时也是如此。因此，单凭上面的检测结果，是无法断定CPU的真假。我建议你使用其他检测软件，如WinStone 
+        97、WinBench 97、Nu 95 2.0(Sysinfo)等检测一下你的微机，且应从综合结果来判断。<br>
+        　　另外，QAPLUS 60的上述三个指标越高，则说明该CPU的性能就越好，因为这是一个检测标准指标。<br>
+        　　江苏读者汤梓厚问：一台电脑，运行Windows 95一直比较正常，前一时间安装了《中文之星》，但是经过一段时间的运行，并不适用，于是就把它删除了，从此每当我启动Windows 
+        95后不久，就出现一个带“X”的圆形警告标记的对话框，并提示：“找不到文件Cstar.exe(或它的组件之一)，请确定路径和文件名是否正确”。按回车键后又出现了一个带“!”的三角形警告标记的对话框，并提示：“不能加载或者运行Windows 
+        95文件里特定的Cstar.exe，请确定你的计算机上有此文件或在Windows 95文件里删除对它的引用”，因此，每次启动Windows 
+        95都比较麻烦，希望给予指点。<br>
+        　　答：在安装《中文之星》结束时，你肯定选择了“在启动windows时启动《中文之星》”的选项。选择该选项后，系统将在Windows 
+        95的启动系统文件Win.ini的[boot]小节中加上如下一行：<br>
+        　　load=c:\Cstar25\Cstar.exe<br>
+        　　如果你在Windows 95中只是删除了《中文之星》的安装目录及其子目录和开始菜单中的《中文之星》选项，而未对Win.ini文件的该行命令处理，则在启动Windows 
+        95时，系统将出现你所提出的提示信息。只要将Win.ini文件中的[boot]小节中的该行命令进行注释，然后再加上“load=”即可。<br>
+        　　对于初学者来说，在删除应用程序时，首先必须使用应用程序所安装的卸载程序(Uninstall)。如果应用程序没有提供这样的卸载程序，可记住安装程序所做的工作，然后用手工的方法一一作删除。对于Windows 
+        95来说，除了这些工作外，还应对注册表中的相应注册项目进行清除。Microsoft公司提供的RegClean 
+        4.1程序可以很好地做到这一点。<br>
+        　　华北电力大学读者王晓飞问：我有一台配置为K5－P75／16MB内存／VxPro主板／J3显示卡的电脑，发生如下问题，望给予解释。1在安装了Windows 
+        95以后，无法使用PCTOOLS等磁盘工具对硬盘文件进行十六进制编辑，是何原因?如何解决?2在Windows中鼠标有时变为黑色方块，如何解决?3在用Xing播放VCD时，常出现“应用程序出错……将导致一个错误在J3……”的提示，我怀疑是显示卡的问题，请问是何原因?<br>
+        　　答：1由于Windows 95采用了长文件名，因而其文件系统发生了变化。在对此文件系统进行写操作时，必须得到Windows 
+        95的许可。在通常情况下，许多老的磁盘编辑工具就不能在这种文件系统下进行写操作，一旦进入了写操作，将出现如下信息：<br>
+        　　Windows has disabled direct disk access to protect your long filename.<br>
+        　　To override this protection,see the LOCK／?command for more information.<br>
+        　　The system has been halted.Press CTRL＋ALT＋DEL to restart your computer.<br>
+        　　其中文意思是：<br>
+        　　Windows已经取消直接磁盘存取功能以保护你的长文件名；<br>
+        　　为了消除这种保护措施，你可参见LOCK／?命令以获得更多的信息；<br>
+        　　系统已经停止运行了，你可按Ctrl＋Alt＋Del复合键重新启动你的计算机。<br>
+        　　从上面的信息看出，为了对这种文件系统进行写操作，首先必须使用Lock命令。Lock是Windows 
+        95新增加的内部命令，它可以将此文件系统暂时解锁，允许老的磁盘工具软件进行写操作。在写操作结束后，必须使用Unlock命令再加上锁，以便保护Windows 
+        95的长文件名。<br>
+        　　有关Lock、Unlock详细使用方法，可使用Lock／?、Unlock／?获得帮助说明。<br>
+        　　2在Windows中，鼠标指针可以根据操作的进程显示出不同的形状，因此，鼠标指针有时显示出黑色方块是正常的。有的软件(如ChMouse等) 
+        可以修改鼠标指针为不同形状。<br>
+        　　3这不一定是显示卡的问题，也可以是Xing或者Windows 95本身的问题，在断定该问题之前，还必须使用KV300＋、AV95检查一下你的Windows 
+        95系统，然后再重新安装最新版本的Xing软件(如Xing 3.2)。另外，你还应安装最新的显示卡驱动程序，如可能的话，可从显示卡厂商的网页上下载最新的驱动程序。<br>
+        　　福建读者相建问：我曾想分析一下UCDOS(各种版本)下的WPS 2.2，即其中的WPS.EXE。但是发现种版本下的WPSEXE均被PKLITE软件(1990年－1991年版)压缩过。而我手头上只有1990年－1992年版本的PKLITE共享版，无法解压成功，我想请教一下，如何解决这个问题?<br>
+        　　答：你的愿望是好的，不过你所使用的PKLITE共享版是无法解压的。使用PKLITE专业版(最新版为15)可以解压成功，其执行方法是：<br>
+        　　PKLITE －X WPS.EXE<br>
+        　　山东读者冯涛问：我的计算机是AST PremiumⅢ＋4／100t型，最近我在该机上安装了Windows 
+        95，在安装后重新启动计算机，先进入Windows 95启动菜单，在任选一个选项后，屏幕上出现了四排乱字符，紧接着下面一排是“Starting 
+        Windows 95”，然后是Windows 95的蓝天白云画面，接着才进入本选项。请问，能不能清除那些乱 
+        字符和Windows 95的画面?<br>
+        　　答：Windows 95在启动时，将首先从MSDOSSYS(这是一个文本文件，其属性为RHS)文件中读取设置，然后出现相应的菜单与设置。在该文件的[options]小节中，添加如下一行：<br>
+        　　logo=0<br>
+        　　则可以将那些乱字符与Windows 95画面清除掉。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第6期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

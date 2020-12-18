@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong><br>
+        光驱读盘时为何重新启动<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp; &nbsp; 
+        　福建读者林诚问：一台微机，配置为：华硕TX－97E主板、Pentium MMX 
+        200 CPU、32M内存、2.1G硬盘、TATUNG24速光驱。光驱读盘时，常会突然降速并重新启动，此时如果不退出光盘，启动进入WIN95时又会重新启动，不知是何原因?<br>
+        　　答：产生这种现象的原因大致有以下三个：<br>
+        　　1.华硕TX－97系列主板使用Intel 430TX芯片组，该芯片组支持Ultra DMA 
+        33传输方式，但无论是WIN95、还是 WIN95 OSR2版本都不支持Ultra DMA 33传输方式，华硕TX－97主板自带的Intel 
+        Bus Master Driver提供了对Ultra DMA 33的支持，但由于该Bus Master Driver的版本较老，或说对有些光驱支持不好，会产生读光驱时死机、无法播放VCD或硬盘速度变慢的现象。建议卸载Bus 
+        Master driver，重新安装 Microsoft 的IDE Controller (dual－fifo)试试，如果问题解决，则是Bus 
+        Master Driver与光驱不兼容导致的。<br>
+        　　如果你的硬盘不支持Ultra DMA33，问题就解决了；如果支持，考虑更新Bus 
+        Master Driver，在《电脑报配套光盘之PC世界1998.1期》的\HARDWARE\BOARD\INTELTX370B目录中提供了Triones 
+        PⅡX Bus Master IDE Drivers 3.70B版,该程序为430FX、430HX、 430TX、430VX、440FX和440LX等芯片组提供了对Ultra 
+        DMA 33传输方式的支持，并修正了以前版本的错误，你可以找来试试。如果还不能解决问题，参见本报1998年第32期36版《光驱与430TX主板不兼容的处理》一文所述方法解决。<br>
+        　　2.电源过载能力差也会造成你所描述的现象，由于光驱读盘时，电机提速旋转，电流突然增大，电源过载能力差会使电源保护电路动作，导致断电，断电后光驱电机逐渐降速，电源负载减轻，电源恢复供电重新启动。由于未取出光盘，进入WIN95后系统检测到光盘，光驱又开始提速准备读盘，又重新使电源过载导致重新启动。可考虑换只电源试试。<br>
+        　　3.光驱电机起动时，冲击电流过大也是导致此现象的原因之一，一般情况下，电机启动电流是正常工作电流的3倍以上，如果电机驱动电路性能不良，此冲击电流还可能增大，可用电流表测量光驱12V组供电电流，如光驱读盘提速时，该组电流变化超过2A，则须检查光驱的相应电路。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

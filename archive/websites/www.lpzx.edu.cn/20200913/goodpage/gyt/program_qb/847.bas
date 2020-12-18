@@ -1,0 +1,10 @@
+CLS
+5 S = 1
+10 FOR A = 1 TO 10
+30 S = S * A
+35 PRINT S
+40 NEXT A
+50 PRINT "1*2*3*...*10="; S
+
+ 
+

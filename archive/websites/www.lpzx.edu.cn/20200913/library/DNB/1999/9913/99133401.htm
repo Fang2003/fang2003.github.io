@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>政府上网统计跟进——一个统计信息网络的规划</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+
+<table BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+  <tr>
+    <td WIDTH="221" HEIGHT="69"><a HREF="../../../../www_lpzx_edu_default.html"><img SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></a></td>
+    <td WIDTH="484" HEIGHT="69"><p ALIGN="center"><A
+    href="netschool/index.htm" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/netschool/wlxy.jpg" BORDER="0"
+    WIDTH="468" HEIGHT="60"></A><br>
+    中文十大网站之一，广告效果极佳，欢迎在此<a href="bill/index.htm">刊登广告</a>。 
+    </td>
+  </tr>
+</table>
+</center></div>
+  <center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>政府上网 &nbsp; 
+        统计跟进——一个统计信息网络的规划</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/%B5%D7%CE%C6.gif"><p align="left">　　<strong>一、系统背景</strong><br>
+        　　作为实现我国迈入“网络社会”的重要工程——“政府上网工程”，在1998年年底全面启动，国家有关部委将1999年定为我国信息产业界的“政府上网年”。1999年1月23日，我国政府上网工程启动大会在北京隆重举行，由此拉开中国各级政府机构走上互联网的帷幕。到2000年，我国80％的部委和政府部门将开设“网上办公室”。<br>
+        　　统计信息是国家宏观管理和科学决策的依据，是国家社会、经济、科技信息的主体，是国家基本的信息资源。统计局作为拥有最大信息的政府机构之一，合理规划网络，完成统计数据的采集录入、校验审核、汇总分析，向领导及社会各界提供有价值的信息，是统计系统上网的核心内容。为此我们按统计的工作特点，完成了统计信息系统的规划与设计。<br>
+        　　<strong>二、 统计的工作特点</strong><br>
+        　　统计的基本任务是对国民经济和社会发展情况进行统计调查，统计分析，提供统计资料和统计咨询意见，实行统计监督。<br>
+        　　从计算机的数据处理上，统计主要分为三个阶段：<br>
+        　　1.原始数据处理：主要完成定期报表、抽样调查、专项调查、普查等数据处理的报表收集、数据录入、数据审核、数据汇总，报表打印及向上级统计部门上报数据。<br>
+        　　2.数据分析：从统计数据中按统计分析方法提取有价值的统计信息，如常规统计分析、企业效益评价、城市综合评价、经济预测、GDP核算等。<br>
+        　　3.统计信息发布：向政府领导及社会各界提供统计分析报告、综合统计信息、统计年鉴、地市县情、企业名录、统计法规的信息发布及服务等。<br>
+        　　结合上网工程，我们规划了统计信息网络：依靠局域网完成统计数据的处理与分析，通过互联网向外发布信息，较好地实现了统计信息网的建设。<br>
+        　　<strong>三、 系统设计环境</strong><br>
+        　　1.硬件<br>
+        　　Digital服务器1台<br>
+        　　HP Netserver服务器1台<br>
+        　　586、686微机(工作站)30多台<br>
+        　　2.软件<br>
+        　　SCO UNIX 操作系统<br>
+        　　WINDOWS NT操作系统<br>
+        　　WINDOWS 95/98操作系统<br>
+        　　TCP/IP 通讯协议<br>
+        　　ORACLE 数据库管理系统<br>
+        　　Delphi 4.0 C/S软件开发工具<br>
+        　　3.统计信息网络的系统结构图(如右上图所示)<br>
+        　　<strong>四、 统计信息网的设计</strong><br>
+        　　1.结构模型设计<br>
+        　　本系统采用三层C/S(客户机/服务器)模型开发，与二层C/S结构相比，三层C/S结构多了一个中间层——应用服务器，即系统分为三部分：<br>
+        　　●客户应用：在用户计算机上提供用户界面；<br>
+        　　●应用服务器：它驻留在客户可访问的网络中心，为任意数量的客户提供公共数据服务；<br>
+        　　●数据库服务器：提供关系型数据库管理系统。<br>
+        　　三层结构模型(客户/应用服务器/数据库)将应用的业务逻辑和用户界面隔离，许多复杂的工作由应用服务器代劳了，客户程序只需要关注用户界面本身，使程序的开发、维护更加容易。<br>
+        　　根据统计工作的特点，本系统细分为以下三层结构：<br>
+        　　(1)客户层(一层)<br>
+        　　在客户层上主要分为四类：<br>
+        <br>
+        　　1.原始数据处理系统<br>
+        　　主要完成统计月、季、年定期报表、抽样调查、专项调查、普查等统计任务的数据录入、审核、汇总、报表、上报等初步加工。在此系统上数据的处理量较大，考虑到客户机配置较高，将主要的工作放在客户机上完成，仅向数据库服务器传送处理好的数据及提取统计分析结果，可有效地减轻网络传输及服务器的负担。<br>
+        　　2.决策支持系统<br>
+        　　从服务器提取数据，为领导提供：决<img src="image/34-1.gif"
+        width="312" height="244" alt="34-1.gif (13033 字节)" align="left">策查询、决策表格、决策图形、统计分析结果显示等功能。由于工作主要由应用服务器和数据库服务代劳，可做的很“瘦”，便于分发和维护。<br>
+        　　3.信息发布系统<br>
+        　　由WEB服务器构成，响应Internet客户的请求，自动管理数据的链接，从数据库中提取内容，建立HTML文档，并将其传给Internet客户，完成综合统计信息、统计年鉴、地市县情、企业名录、统计法规等信息的发布。<br>
+        　　4.办公自动化系统<br>
+        　　统计信息网络的建设不仅要满足统计业务的需要，而且要充分考虑办公自动化的需求。办公自动化系统主要完成人事管理、档案管理、资产管理、财务管理等办公业务。<br>
+        　　(2)应用服务器(二层)<br>
+        　　在中间层服务器集中实现统计工作的业务逻辑(又称商业规则)，主要完成：<br>
+        　　●提供客户数据集接口；<br>
+        　　●接收来自客户的数据请求，从数据库服务器取回请求数据，传输包装数据并向客户数据集发送数据；<br>
+        　　●接收来自客户数据集的更新数据，解析该更新，将其应用到数据库并记录任何不能实现的更新且将未解析的更新返回客户应用以进一步协调；<br>
+        　　●提供安全控制机制。<br>
+        　　(3)数据库服务器(三层)<br>
+        　　由数据库管理系统完成数据管理及统计分析。主要完成月、季、年统计信息数据库，抽样调查数据库，专项调查数据库，普查数据库，发布信息库，方法模型库(统计分析预测)，基本数据库(办公自动化)等数据的管理并由方法模型库完成常规统计分析、企业效益评价、城市综合评价、经济预测、GDP核算等统计数据分析。<br>
+        　　2.软件设计<br>
+        　　一、 二层由delphi 4.0 C/S 开发，三层由ORACLE 实现。<br>
+        　　Delphi 4.0 C/S 有如下特点：<br>
+        　　●可视化设计，类似VB，程序开发快速、方便；<br>
+        　　●采用面向对象的PASCAL语言，有较强的异常处理能力；<br>
+        　　●内置数据库接口，可支持ORACLE等数据库系统；<br>
+        　　●支持多层C/S技术，既可开发客户端程序也可开发应用服务器；<br>
+        　　●内含决策支持组件，可以快速建立决策支持系统；<br>
+        　　●支持TCP/IP协议；<br>
+        　　●可以创建WEB服务器应用。<br>
+        　　多层数据库应用的体系结构图如下：<br>
+        <img src="image/34-2.gif" width="350" height="229" alt="34-2.gif (4055 字节)"
+        align="left"><br>
+        　　由图可知，客户端的应用是实现数据集的输入/输出，通过Delphi的TdataSource和TclientDataSet构件实现与应用服务器的链接，由TDEdit、TDBGrid等构件实现与用户的联系界面；在应用服务器端提供对数据库的直接访问和对客户端的支持，主要由构件Tprovider、Ttabie、Tquery、TstoreProc及Borland数据库引擎(BDE)完成的。由此可以看出Delphi 
+        4.0 C/S＋ORACLE可较好地实现本系统的软件开发。<br>
+        　　<strong>五、 系统特点</strong><br>
+        　　本系统有以下特点：<br>
+        　　1.将局域网和Internet网有机结合，完成了上网工程的需要；<br>
+        　　2.用户界面友好，为用户建立了一个简便、易操作的环境；<br>
+        　　3.能充分利用系统资源，最大限度地发挥主机性能；<br>
+        　　4.应用软件模块化，应用软件的维护和升级都变得更简单，容易适应统计报表的变更；<br>
+        　　5.有较高的数据完整性和安全性，适应数据库建设的需要；<br>
+        　　6.支持多台主机并行工作，便于系统的扩充。<br>
+        　　政府上网，利国利民。不同的政府机构有不同的特点，应根据自身特点，合理规划网络，才能使上网工程落到实处。(邢台市统计局计算站　沈保修)</p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月5日第13期</a></font> 
+        </td>
+      </tr></table>
+            </center>
+          </div>
+        <CENTER>
+          <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+          <NOSCRIPT> </NOSCRIPT>
+        </CENTER>
+        <NOSCRIPT>
+        <DD ALIGN="center">
+          <CENTER>
+            <A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A>
+          </CENTER>
+        </DD>
+        </NOSCRIPT> 
+      
+
+</TABLE></CENTER></DIV></body></html>

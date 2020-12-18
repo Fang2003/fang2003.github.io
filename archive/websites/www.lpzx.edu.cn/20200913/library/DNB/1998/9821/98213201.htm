@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">《帝国时代》的两款附加工具<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　玩过《帝国时代》吗？如果是的话，那么我就向你推荐一两款软件，以助你的玩兴，这就是CPNBUILD和DRSBUILD。<br>
+        　　第一员大将CPNBUILD是一个命令行形式的工具软件，它的作用是将微软出品的《帝国时代》游戏中的SCN文件转化为CPN的格式，同时支持反向运用（也就是将CPN转化为SCN）。也许你要问，在游戏中已经内置了一个战役编辑器，为什么还要用这个软件呢？因为软件的作者最初玩的是试玩版，它不允许作者直接调用SCN的文件，被逼无奈，他只好开发了这个工具。如果你玩的是这个游戏的正式版的话，此工具对你的用处就不是很大。你还得为它付款给开发者。若你手中的版本老的话，那么这个工具软件就是你的福音了。<br>
+        　　整个软件是包含在ZIP压缩包里的，容量不是很大，解压后只有525K。包中一共有CPNBUILDEXE、CPNBUILETXT、CPNDESCRTXT三个文件。<br>
+        　　CPNBUILD有三种操作模式：构筑模式，提取模式，列表模式。在任何一种模式下，你必须在命令行中提供你想要的战争剧本文件的名称和你的版本号。文件名是一个单纯的CPN（SCN）文件，键入文件都不需要在游戏的文件夹中。程序运行后产生的文件存放于当前目录中。如果你要使用它的话，你必须手工将CPN文件拷贝到CAMPAIGN文件夹，将SCN文件拷贝到SCENARIO文件夹，做完了这些工作就可以开始游戏了。<br>
+        　　注：如果你使用“列表模式”的话，输出的信息是显示在屏幕上的。<br>
+        　　命令格式：CPNBUILD [/c &lt;campaign&gt; &lt;file1&gt;[,&lt;file2&gt;]|[/e 
+        &lt;cpn file&gt;]|[/l &lt;cpn file&gt;][/v &lt;version&gt;][/k][/h]<br>
+        　　选项开关：<br>
+        　　/c &lt;campaign&gt;　从战争剧本中建立文件<br>
+        　　/e &lt;cpn file&gt;　从CPN文件中提取剧本<br>
+        　　/l &lt;cpn file&gt;　列出CPN文件中的所有剧本<br>
+        　　/v &lt;version&gt;　设置所有文件的版本号，缺省值是“110”<br>
+        　　/k　保存所有文件的版本号，缺省情况下是不保存。<br>
+        　　/h　显示帮助信息。<br>
+        　　举例：<br>
+        　　1在当前目录中创建包含SCEN1SCN和SCEN2SCN文件的CAMP1CPN文件，并且设置版本号为110。<br>
+        　　输入：CPNBUILD /v 110 /c camp1 scen1scn scen2scn<br>
+        　　2从当前目录中的战役文件CAMP1CPN中提取剧本文件，保持版本号不变。<br>
+        　　输入：CPNBUILD /e camp1cpn /k<br>
+        　　3在当前目录中列出战役文件CAMP1CPN中的所有剧本。<br>
+        　　输入：CPNBUILD /l camp1cpn<br>
+        　　如果命令成功完成的话，屏幕上不会显示任何信息，而文件已经保存在当前目录中了。如果有错误产生，屏幕上会出现出错信息，程序会中断执行。错误的原因可能是你输入的文件名有错误，或者命令格式错误。<br>
+        　　重要疑难之解答：为什么你要加上/v参数来设置剧本的版本号？<br>
+        　　答：如果你使用《帝国时代》的剧本文件，它肯定有自己的与《帝国时代》相同的版本号。其Beta版的版本号是109，而其试玩版的版本号是110（正式版的版本号是111）。这就意味着你不能在Beta版中玩试玩版的剧本文件。若你要强行执行的话，得到的信息就是：“This 
+        scenario does not work with the trial version（这个剧本文件不能在试玩版中运行）”。实际上，两个版本是相互兼容的，作者就曾经在Beta版中玩过试玩版中经过正确版本设置为110的剧本文件。程序自动地将版本号设置为110，因为这是最普通的形态，所以你在试玩版中运行文件，/v参数是不必写的，而在Beta版和正式版中/v参数就是必不可少的了。<br>
+        　　第二员虎将DRSBUILD也是一个命令行的工具软件，它可以制作《帝国时代》中的声音文件，也就是将游戏中的DRS文件转化为WAV、SHP、SLP、BIN格式的文件。<br>
+        　　与其他游戏不同的是，《帝国时代》并不提供制作“mod包”（包括声音、图像和游戏规则）的工具，甚至连制作的基本规则都没有。这对于电脑发烧友来说是十分痛苦的事。如果要强行制作“mod包”的话，五个DRS文件就有303MB的“魁梧”身材，曾经玩过《文明2》的玩家就会感觉到能够重新编辑游戏的资源可以让一个好游戏变得更好。因此，软件的开发者下定决心制作出了这个软件。<br>
+        　　这个软件包含在一个名为DRSBUILD10ZIP的压缩包中，共有DRSBUILDEXE、DRSBUILDTXT、DRSDESCRTXT三个文件。在这里，我要提醒你的是，由于这是一个命令行的软件，这也就决定了它只能在WINDOWS的MS－DOS方式下运行，不要在WINDOWS的资源管理器中点击它，那将没有任何效果。<br>
+        　　命令行是：DRSBUILD [/b &lt;drs file&gt; &lt;file1&gt;[,&lt;file2&gt;]]|[/e 
+        &lt;drs file&gt;]|[/l &lt;drs file&gt;][/s][/h]<br>
+        　　注：本软件支持通配符。<br>
+        　　选项开关：/b &lt;drs file&gt;　从DRS文件中制作MOD包。<br>
+        　　/e &lt;drs file&gt;　从DRS文件中提取出所有的文件。<br>
+        　　/l &lt;drs file&gt;　列出DRS文件的内容。<br>
+        　　/s　安静模式。<br>
+        　　/h　在屏幕上显示帮助信息。<br>
+        　　举例：<br>
+        　　1从位于\GAME\MSAOE\DATA目录中的INTERFACDRS文件中提取内容。<br>
+        　　输入：DRSBUILD /e \games\MSAoE\data\interfacdrs<br>
+        　　2从INTERFACDRS中新建一个MOD包，并且存放于\INTERFAC目录中。<br>
+        　　输入：DRSBUILD /b interfacdrs interfac\＊＊<br>
+        　　3从当前目录中的INTERFACDRS文件中列出文件信息。<br>
+        　　输入：DRSBUILD /l interfacdrs<br>
+        　　这两个软件的大致功能就这么些，详细的功能就要靠你自己摸索了，有了结果可不要忘了告诉我，我的E－Mail是：raywang@bigfootcom。(江苏　Ray)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月1日第21期32版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

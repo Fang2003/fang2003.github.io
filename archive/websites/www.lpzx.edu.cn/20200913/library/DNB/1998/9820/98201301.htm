@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VFP5.0中实现带图标列表项<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在Windows95中打开“我的电脑”，可以看到窗口中每一项目的面前都有一个小图标，这些图标代表着项目的类型，如果是文件夹，就显示“文件夹”图标，如果是文本文件，就显示“记事本” 
+        图标。在资源管理器中，也是如此。这种带图标的显示方式，非常直观，笔者经过摸索，在VFP50(Visual 
+        FoxPro 50)中也实现了这样的功能。具体实现如下：<br>
+        　　1新建一表单，往其中添加一个列表框和一个命令按钮。<br>
+        　　2列表框和命令按钮的属性设置如下：</font></p>
+        <table border="1" cellpadding="0" cellspacing="0" width="77%" height="145"
+        bordercolor="#008080">
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"><p align="center"><font
+            color="#1AA291">控件名</font></td>
+            <td width="33%" height="16" align="center" class="ourfont"><p align="center"><font
+            color="#1AA291">属性</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><p align="center"><font
+            color="#1AA291">值</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"><p align="center"><font
+            color="#1AA291">list1</font></td>
+            <td width="33%" height="16" align="center" class="ourfont"><font color="#1AA291">ColumnCount</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><font color="#1AA291">1</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"></td>
+            <td width="33%" height="16" align="center" class="ourfont"><font color="#1AA291">ColumWidths</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><font color="#1AA291">60</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"></td>
+            <td width="33%" height="16" align="center" class="ourfont"><font color="#1AA291">IntegralHeight</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><font color="#1AA291">.T.</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"></td>
+            <td width="33%" height="16" align="center" class="ourfont"><font color="#1AA291">FontSize</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><font color="#1AA291">10</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"></td>
+            <td width="33%" height="16" align="center" class="ourfont"><font color="#1AA291">RowSourceType</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><font color="#1AA291">0(或1，不能为其他值)</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="16" align="center" class="ourfont"></td>
+            <td width="33%" height="16" align="center" class="ourfont"><font color="#1AA291">RowSource</font></td>
+            <td width="34%" height="16" align="center" class="ourfont"><font color="#1AA291">空</font></td>
+          </tr>
+          <tr>
+            <td width="33%" height="17" align="center" class="ourfont"><p align="center"><font
+            color="#1AA291">command1</font></td>
+            <td width="33%" height="17" align="center" class="ourfont"><font color="#1AA291">Caption</font></td>
+            <td width="34%" height="17" align="center" class="ourfont"><font color="#1AA291">演示</font></td>
+          </tr>
+        </table>
+        <p class="ourfont" align="left"><font color="#369681">　　3命令按钮的Click事件代码如下：<br>
+        　　＆＆往列表框中添加项目<br>
+        　　ThisFormList1.List(1)=′MAIN.SCX′<br>
+        　　ThisFormList1.List(2)=′FORM1.SCX′<br>
+        　　ThisFormList1.List(3)=′DEMO1.DBF′<br>
+        　　ThisFormList1.List(4)=′SALES.DBF′<br>
+        　　ThisFormList1.List(5)=′TESTDATA.DBC′<br>
+        　　ThisFormList1.List(6)=′MAIN.PRG′<br>
+        　　ThisFormList1.List(7)=′MYFUNC.PRG′<br>
+        　　ThisFormList1.List(8)=′SALES.FRX′<br>
+        　　ThisFormList1.List(9)=′SS.FRX′<br>
+        　　ThisFormList1.List(10)=′SALES.QPR′<br>
+        　　N=ThisFormList1.ListCount<br>
+        　　FOR i=1 TO N<br>
+        　　＆＆从后缀名判断类型<br>
+        　　cExtension=UPPER(RIGHT(ThisForm.List1.List(I),3))<br>
+        　　＆＆bmp文件在当前目录下<br>
+        　　DO CASE<br>
+        　　CASE cExtension=″DBF″<br>
+        　　ThisForm.List1.Picture(I)=″table.bmp″<br>
+        　　CASE cExtension=″PRG″<br>
+        　　ThisForm.List1.Picture(I)=″apps.bmp″<br>
+        　　CASE cExtension=″SCX″<br>
+        　　ThisForm.List1.Picture(I)=″forms.bmp″<br>
+        　　CASE cExtension=″DBC″<br>
+        　　ThisForm.List1.Picture(I)=″database.bmp″<br>
+        　　CASE cExtension=″FRX″<br>
+        　　ThisForm.List1.Picture(I)=″report.bmp″<br>
+        　　CASE cExtension=″QPR″<br>
+        　　ThisForm.List1.Picture(I)=″query.bmp″<br>
+        　　OTHERWISE<br>
+        　　ThisForm.List1.Picture(I)=″fox.bmp″<br>
+        　　ENDCASE<br>
+        　　ENDFOR<br>
+        　　执行的结果是在每一项目前都有与项目类型对应的图标。将列表框换成组合框(ComboBox)也能达到同样效果。<br>
+        &nbsp;&nbsp; <strong>(河北　王俊)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月25日第20期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

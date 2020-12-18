@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用Delphi制作动态有声标签<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　 
+        电脑报社出品的《硬件大师》的安装界面见过吧，当你把鼠标移到安装提示上时会发出声音，在上面按下鼠标左键也会发出声音，而Delphi30安装界面的安装提示虽然有动感却没有声音，能不能二者兼得?答案是肯定的，用Delphi只须编写几句简单代码便可轻松实现上述功能。<br>
+        　　原理：通过标签和表单的OnMouseMove事件判断应何时改变、恢复标签位置，用sndplaysound()函数使鼠标触发相应事件后执行播放声音的动作。<br>
+        　　首先进入Delphi集成环境，在“File”菜单中选“New application”，在“Standard”选项卡上选取两个“Label”放置到表单上。在Object 
+        inspector中将Label1与Label2的“Caption”属性设为“关闭表单”。双击“Font”属性，将字体大小设为12。再将“Top”与“Lef”分别设为108、170。将Label2置于Label1之上。以上是两个标签的共同属性，现在选Label1，将其颜色设为白色，再选Label2，在Object 
+        inspector中双击其OnMouseMove项，编写如下代码：“Label2.Top：=109;”，接下来再为表单编写OnMouseMove事件代码：“Label2.Top:=108;”。运行表单，把鼠标移到标签上，怎么样，效果还不错吧。下面让我们为它加上声音。<br>
+        　　找到两个短小的wav文件，假设为cj1.wav和cj2.wav。在表单单元中的uses句之后加上“mmsystem”(即调用Windows多媒体函数动态链接库)。在implementation下加上“f:boolean;”。为Label2的OnClick事件编写代码：“sndplaysound( 
+        ′cj1.wav′，snd_ async);”，为OnMouseMove事件加入“if f then sndplaysound( ′cj2.wav′，snd_ 
+        async)；f:=false；”两句。最后在表单的OnMouseMove事件中加入“f:=true;”。<br>
+        　　保存文件再运行它，动态有声标签就制作完成了。<br>
+        　　以上在Delphi3.0中运行通过。　　<strong>(广西　蔡　健)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月20日第15期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

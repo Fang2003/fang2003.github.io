@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>教你一招--如何用PGP加密</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">教你一招--如何用PGP加密</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        PGP是国际上十分流行的加密软件，其功能十分强大，可以对各种文件进行加密，生成256位、512位、1024位密匙。<br>
+        &nbsp;&nbsp;&nbsp; PGP采用公匙加密体系，用加密算法生成两个密匙，分别作为公匙和私匙。公匙用来加密，是公开的。私匙用来解密，自己保存。<br>
+        &nbsp;&nbsp;&nbsp; 下面介绍PGP的使用：<br>
+        &nbsp;&nbsp;&nbsp; 1首先生成你的PGP密匙。在DOS命令行输入：<br>
+        &nbsp;&nbsp;&nbsp; pgp－kg<br>
+        &nbsp;&nbsp;&nbsp; 2程序会提示你一步步进行密匙生成工作：<br>
+        &nbsp;&nbsp;&nbsp; ①选择密匙长度。建议用1024位，安全性相当有保障。<br>
+        &nbsp;&nbsp;&nbsp; ②输入用户名。要尽量避免混淆。<br>
+        &nbsp;&nbsp;&nbsp; ③选择口令。和所有密码一样，尽量取得难猜一点。PGP是区分口令大小写的，在生成过程中程序为了得到随机数，会请你随意地在键盘上敲一系列的键，注意尽量多敲些不同的键，时间间隔不要太短。<br>
+        &nbsp;&nbsp;&nbsp; 现在你就拥有自己的一对PGP密匙了。文件SECRINGPGP是私匙，PUBRINGPGP是公匙。<br>
+        &nbsp;&nbsp;&nbsp; 3PGP的基本命令<br>
+        &nbsp;&nbsp;&nbsp; ①加密命令：<br>
+        &nbsp;&nbsp;&nbsp; pgp－e[a]源文件收件人ID[其他收件人ID]<br>
+        &nbsp;&nbsp;&nbsp; 
+        用公匙环中收件人的公匙加密源文件，得到密文。加上a参数后将得到7bits编码的密文（asc后缀），否则是二进制形式密文（pgp后缀）。<br>
+        &nbsp;&nbsp;&nbsp; ②解密命令：<br>
+        &nbsp;&nbsp;&nbsp; pgp[－d][－p]密文<br>
+        &nbsp;&nbsp;&nbsp; －d参数用来保留密文（缺省删除密文），－p参数用来恢复源文件加密时的文件名。<br>
+        &nbsp;&nbsp;&nbsp; PGP的命令参数很多，详细用法请参见该软件的SETUPTXT文件。<strong>(河北 
+        魏伟) </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月12日第2期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

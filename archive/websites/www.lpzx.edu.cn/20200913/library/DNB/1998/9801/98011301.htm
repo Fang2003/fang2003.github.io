@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>RAR常用的三种压缩功能</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">RAR常用的三种压缩功能<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        <strong>一、RAR的分卷压缩功能</strong><br>
+        　　RAR的命令操作方式可以把大量的数据压缩备份到多张软盘上，使原文件的字节数大大减少。<br>
+        　　它的分卷压缩参数为－V，有两种格式：<br>
+        　　1－V:在压缩时计算机自动探测备份目标盘的可用空间，然后决定被压缩文件的分卷长度，当第一张磁盘装满后，会提示你插入下一张磁盘，直至压缩结束。<br>
+        　　2－V(长度系数)：此格式是指在分卷压缩时产生指定长度的压缩文件。分卷长度=长度系数＊千字字节数。RAR的分卷长度是任意的，它不像压缩软件ARJ，限制了分卷的大小。操作者可根据自己的需要，自己决定分卷压缩的大小。<br>
+        　　例：将C盘DOS目录下所有文件压缩为1，100，000字节(1.1MB)大小的压缩文件，应执行命令：<br>
+        　　RAR A－V1100 DOS C:\DOS\*.*<br>
+        　　运行结束后，你键入命令DIR,就会看到当前目录下产生了DOS.RAR.DOSR01……等压缩卷，这些压缩卷都是等长的。<br>
+        　<strong>二、RAR的加密压缩功能</strong><br>
+        　　为了防止他人随意释放你的压缩文件，我们在用RAR对文件进行压缩时，可以设置密码。设置密码的参数为“－P”。<br>
+        　　例：执行了“RAR A －P A:\ABC C:\ABC.TXT”之后计算机会提示你输入密码：“Enter 
+        Password:”输入密码ABC回车后，系统会再次提示输入密码：“Reenter 
+        Password:”，以确保密码的正确性。在进行输入密码时，计算机以“＊＊＊”的形式显示，执行完上述内容之后，就会在A盘根目录下生成压缩文件ABC.RAR，密码为ABC。<br>
+        　　为了方便，我们在对文件进行加密压缩时，也可以在参数“－P”后直接键入密码，执行命令时，计算机就不会再提示你输入密码了。<br>
+        　　如：RAR A －P ABC AB C:\ABC.TXT<br>
+        　　执行完命令行后，计算机会在当前目录中生成压缩包文件AB.RAR，密码为ABC。<br>
+        　　<strong>三、RAR的子目录压缩功能</strong><br>
+        　　RAR压缩软件不仅可以对当前目录中的文件进行压缩，而且还可以对当前目录中的子目录及其各级子目录进行压缩备份。在对子目录及其以下的各级子目录中的文件进行压缩时，只需在命令行中加上“－R”参数。<br>
+        　　如：RAR A －R －SFX C:\UCDOS C:\UCDOS\*.*<br>
+        　　回车之后，UCDOS及其以下子目录的文件就被压缩到文件UCDOS.EXE文件中。释放时键入UCDOS，计算机就会在当前目录上建立目录UCDOS及其以下各级子目录，并把文件释放到相应目录中。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Word中表格计算功能的实现<small><br>
+        </small></strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　说起Word的表格编辑、打印功能，相信每个用户都会翘起大拇指夸一声“Good”，可如果说到Word的表格计算功能，恐怕知道的用户就不多了。在许多用户眼中，Word只能进行表格的编辑、打印、排序等操作，但不能进行计算，他们往往利用“计算器”等程序来完成表格间各个单元格之间的数据计算问题，有些用户甚至还会动用Excel来帮忙。其实我们完全不必如此麻烦，Word虽然没有直接提供表格计算功能，但它具有强大的“域”处理功能，我们只需利用它即可方便地对表格中的数据进行各种运算。<br>
+        　　也许有用户会说，Word的“域”处理功能如此之多，且操作比较复杂，我怎么知道该如何使用呢？其实这种担心完全是多余的，因为Word的表格计算功能虽然是利用“域”来实现的，但在表格项的定义方式、公式的定义方法、有关函数的格式及参数、表格的运算方式等方面都与Excel基本一致，任何一个熟悉Excel的用户都可以很方便地利用“域”功能在Word中进行必要的表格运算；即使你没有使用过Excel也没有关系，Word的表格计算功能十分简单，你只需经过下面一番粗略的学习就可以掌握它的有关基本用法。假设某用户在Word中编制了一个“产品销售情况表”（如表1所示），拟根据原始的数据自动求出有关汇总数据，现以此为例，向大家介绍一下Word计算功能的基本操作方法：</font></p>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" height="160">
+          <tr>
+            <td width="50%" rowspan="2" height="158"><font color="#369681"><span class="ourfont">　　1. 
+            按正常方式在Word中绘制出所需的表格，并输入有关原始数据。<br>
+            　　2. 将光标移至表格的D2单元格中（Word在定义表格中各个单元格的名称时采用了与Excel相同的方式，即第一列的各个表格分别为A1、A2、A3……第二列的各个表格分别为B1、B2、B3……D2单元格即表示甲车间全年产品销售额）。<br>
+            　　3. 执行Word“表格”菜单的“公式”命令，系统弹出“公式”对话框(如图1所示)。<br>
+            </span></font></td>
+            <td width="50%" align="center" height="133"><p align="center"><font color="#369681"><span
+            class="ourfont"><img src="http://www.lpzx.edu.cn/library/DNB/1999/9902/image/99023501_1.jpg" width="207" height="133"
+            alt="99023501_1.jpg (11451 字节)"></span></font></td>
+          </tr>
+          <tr>
+            <td width="50%" align="center" height="23"><font color="#369681"><span class="ourfont">图1</span></font></td>
+          </tr>
+        </table>
+        <p class="ourfont"><font color="#369681">　　4. 
+        单击“粘贴函数”下拉框，从中选择求和函数“SUM”。Word为表格计算功能提供了许多计算函数，它们与Excel的计算函数基本一致，广大用户可根据需要从中加以选择。<br>
+        　　5. 此时Word“公式”对话框的“公式”栏中将显示出求和函数“=SUM()”，用户应在单括号内指定求和的范围(如表2所示)。在本例中，D2是由B2＋C2所组成，故我们应在括号内输入“B2:C2”。此后，“公式”对话框的“公式”栏此时就变成了“=SUM(B2:C2)”，它即表示D4单元格是B2和C2这两个单元格的累计值和（注意，用户如果高兴，完全可以省去第4步，而直接在公式对话框的“公式”栏中输入“=SUM(B2:C2)”字样，其效果完全一致）。</font></p>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td width="100%" align="center"><span class="ourfont"><img src="http://www.lpzx.edu.cn/library/DNB/1999/9902/image/99023501_2.jpg"
+            width="354" height="66" alt="99023501_2.jpg (11984 字节)"></span></td>
+          </tr>
+          <tr>
+            <td width="100%" align="center"><span class="ourfont"><font color="#369681">表1</font></span></td>
+          </tr>
+        </table>
+        <p class="ourfont"><font color="#369681">　　6. 
+        从“公式”对话框的“数字格式”下拉框中选择或输入合适的数字格式，我们在此可选择“0.00”。<br>
+        　　注意，“公式”对话框的“数字格式”下拉框主要用于定义Word自动计算出来的表格数据的格式，用户必须适当地加以设置，以便保证表格数据与原来的格式相同。如我们在上面所选择的“0.00”即表示按正常方式显示，并将计算结果保留两位小数。<br>
+        　　7. 单击确定按钮，关闭“公式”对话框。</font></p>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td width="100%" align="center"><img src="http://www.lpzx.edu.cn/library/DNB/1999/9902/image/99023501_3.jpg" width="340" height="66"
+            alt="99023501_3.jpg (10569 字节)"></td>
+          </tr>
+          <tr>
+            <td width="100%" align="center"><span class="ourfont"><font color="#369681">表2</font></span></td>
+          </tr>
+        </table>
+        <p class="ourfont"><font color="#369681">　　8. 此时，Word就会在D2单元格中插入一个“{=SUM(B2:C2)〕‘0.00’}”的域，并将其结果“2200.00”显示到用户的面前（注意，通常情况下，Word并不直接显示域代码，而只是显示最后的计算结果，用户若打算查看域代码，则可现行选定该域，然后按下Alt＋F9键，再次按下Alt＋F9将切换回计算结果）。<br>
+        　　9. 采用同样的方法为D3、B4、C4、D4等单元格中定义所需的计算公式。<br>
+        　　至此，利用Word的表格计算功能自动计算“产品销售情况表”的步骤即告结束，表格中的有关数据都由Word自动计算完成，我们再也不必借助于其它应用程序进行有关数据计算工作了，从而大大地方便了用户的日常操作。<br>
+        　　需要注意的是，Word是通过“域”来完成数据计算功能的，它并不是真正的像Excel那样进行计算，因此当我们在表格中修改了有关数据之后，Word将不会自动进行刷新。为解决这一问题，我们可先行选定需更改的域，然后再按下F9键，Word即会更改计算结果。如我们在计算上表中的数据之后，发现甲车间上半年的销售额应为900（即需要将B2单元格的值修改为900），当我们进行修改之后，D2单元格的值不会自动发生变化，此时我们可将光标移至D2单元格中，然后按下F9键，让Word自动将单元格中的数据更新为2100，从而满足了用户的要求。另外，我们在执行打印操作时，只需单击“打印”对话框中的“选项”按钮，然后复选“更新域”选项，此后Word在打印前会自动更新所有的“域”，这就免去了用户逐一对表格中的数据进行更新的步骤。<br>
+        　　从上面的介绍中可以看出，尽管Word不具备真正的数据计算功能，但通过它的“域”处理功能却可满足我们绝大多数表格数据计算的要求，广大用户可充分加以利用。<strong>(湖北 
+        胡锦承)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

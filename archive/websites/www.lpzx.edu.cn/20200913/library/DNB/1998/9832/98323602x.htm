@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>?????<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　近年来，许多硬件厂商先后推出了基于Ultra 
+        DMA/33技术标准的大容量高速硬盘，如Saegate金牌系列、昆腾火球五代系列、Maxtor四代系列等，这些硬盘与430TX芯片组的主板(如华硕TX97－LE、TX97－E、TXP4，微星5156、5170，梅捷5VT5、5BT5等)及具有MMX功能的CPU组合，在Windows 
+        95中安装430TX芯片组的IDE驱动程序后，其内部数据传输速率可达到每秒33MB，显著地提高了系统性能。但有些朋友也许发现，430TX芯片组的IDE 
+        Bus Master(总线主控)驱动程序与早期生产的某些型号的光盘驱动器存在不兼容现象，原来正常运行的光驱在Windows 
+        95下无法驱动。如果修改Autoexec.bat和Config.sys两个配置文件以DOS实模式方式驱动光驱，虽然能解决Windows 
+        95环境下使用光驱的问题，但由于光驱是工作在DOS兼容模式下，将导致系统整体性能降低。<br>
+        　　那么，有没有办法既能实现较高的内部数据传输速率，又能在Windows 
+        95下正常配置光驱并且不降低系统整体性能呢?我们可以通过修改Windows 
+        95系统注册表达到这一目的。<br>
+        　　首先，如果原来光驱和硬盘共用一根IDE连线，则另配一根IDE连线将硬盘、光驱分别接入主板的第一IDE接口(Primary 
+        IDE)和第二IDE接口(Secondary IDE)，并将硬盘设为主盘(Master)，光驱设为主盘(Master)，修改CMOS设置使硬盘和光驱在Windows 
+        95下正常运行。<br>
+        　　第二，按照软件说明在Windows 95下安装主板430TX芯片组的IDE Bus 
+        Master驱动程序。<br>
+        　　第三，启动Windows 95，选择“开始/运行”，在窗口键入“Regedit”，单击“确定”，打开注册表编辑器。在左边窗口选择“HKEY_LOCAL_MACHINE/System/CurrentControlSet/Services/Class/hdc/0002”，找到“DriverDesc”项的键值为“Secondary 
+        IDE controller”，用鼠标左键双击“Portdriver”，弹出“编辑字符串”窗口，将“键值”改为“ESDI_506.pdr”，单击“确定”，退出“注册表编辑器”。<br>
+        　　第四，重新启动Windows 95，系统报告发现新设备，按提示重新启动二至三次后就一切OK了。<br>
+        　　为了防止因误操作造成修改注册表后Windows 95不能正常运行，可在第二步安装430TX芯片组驱动程序前，先使用注册表编辑器的“导出注册表文件”功能，将系统注册表备份。万一修改注册表后系统不能正常运行，可通过注册表编辑器的“引入注册表文件”功能，恢复原系统注册表。&#26;<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年32月32日第32期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

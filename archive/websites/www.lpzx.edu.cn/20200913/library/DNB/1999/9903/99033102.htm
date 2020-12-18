@@ -1,0 +1,67 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>了解“跨线迁移”</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">了解“跨线迁移”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　“跨线迁移”(Across－the－Migration)适用于NetWare2.X、NetWare3.X以及其它网络操作系统的升级，是所有升级方法中最安全的一种，它可以迁移全部或被选择的信息，还可以将多个服务器升级到同一服务器中，在整个过程中，NetWare3.12服务器里的所有数据保持完好无损。此方法对网络较大的单位来说很方便、安全。<br>
+        　　<strong>一、“跨线迁移”必需具备的条件</strong><br>
+        　　1.源服务器：即所要升级的NetWare服务器。<br>
+        　　2.目标服务器：一台NetWare或更高版本的服务器。<br>
+        　　3.一台装有“Client32 For Windows”的Windows3.X或Windows95工作站。<br>
+        　　<strong>二、“跨线迁移”的实现方式</strong><br>
+        　　1.使用基于DOS文本格式的程序Migrate.exe。<br>
+        　　2.使用DS迁移和文件迁移方式，它是NetWare Administrator的内嵌程序，可在Win3.x或Win95的工作站中进行操作。<br>
+        　　<strong>三、采用“跨线迁移”升级前的准备</strong><br>
+        　　1.源服务器(要升级的NetWare服务器)。<br>
+        　　a.备份此服务器(可以不用备份，因为跨线迁移不会损坏NetWare服务器上的数据)；<br>
+        　　b.让所有用户退出此服务器；<br>
+        　　c.检查并确认所有文件已关闭(装订库除外)；<br>
+        　　d.删除不必要的文件；<br>
+        　　e.重新命名具有长名字的DOS目录和文件；<br>
+        　　f.在此服务器上运行BINDFIX，移走在服务器上不存在的用户的邮件子目录和受托人权利；<br>
+        　　g.在目标服务器(如NetWare4.11)安装光盘中，将PRODUCTS\NW3X目录下的NLM复制到源服务器的SYS:SYSTEM目录下。<br>
+        　　2.目标服务器(一台新安装的NetWare4.11或更高版本的服务器。注意：源服务器与目标服务器的名称和IPX内部网络地址不能相同。安装新服务器NetWare4.11时可直接在NetWare4.11安装光盘中运行install.exe)。<br>
+        　　a.最好创建一个单独的卷来存放将要迁移的数据；<br>
+        　　b.保证卷具有命名空间支持；<br>
+        　　c.所有用户退出目标服务器；<br>
+        　　3.工作站。<br>
+        　　a.386或更高的处理器：至少8MB RAM、20MB磁盘空间；<br>
+        　　b.采用Windows3.X或Windows95操作系统，并安装“Client32 for Windows”的NOVELL客户软件(注：安装工作站可在NetWare4.11安装光盘中运行Products\Win95\ibm_enu\setup.exe)；<br>
+        　　c.确保工作站能登录源服务器和目标服务器；<br>
+        　　d.检查CONFIG.SYS文件，设置FILES=100。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+.mstheme     { nav-banner-image: url(aricebnr.gif); separator-image: url(aricerul.gif); 
+               list-image-1: url(aricebu1.gif); list-image-2: 
+               url(aricebu2.gif); list-image-3: url(aricebu3.gif); 
+               navbutton-horiz-pushed: url(aricehbs.gif); 
+               navbutton-horiz-normal: url(aricehb.gif); 
+               navbutton-horiz-hovered: url(aricehbh.gif); 
+               navbutton-vert-pushed: url(aricevbs.gif); 
+               navbutton-vert-normal: url(aricevb.gif); 
+               navbutton-vert-hovered: url(aricevbh.gif); 
+               navbutton-home-normal: url(aricehom.gif); 
+               navbutton-home-hovered: url(aricehomh.gif); 
+               navbutton-home-pushed: url(blhomep.gif); navbutton-up-normal: 
+               url(ariceup.gif); navbutton-up-hovered: url(ariceuph.gif); 
+               navbutton-up-pushed: url(blupp.gif); navbutton-prev-normal: 
+               url(aricepre.gif); navbutton-prev-hovered: url(aricepreh.gif); 
+               navbutton-prev-pushed: url(blprevp.gif); 
+               navbutton-next-normal: url(aricenxt.gif); 
+               navbutton-next-hovered: url(aricenxth.gif); 
+               navbutton-next-pushed: url(blnextp.gif) }
+.mstheme-bannertxt { font-size: 6; color: rgb(204,204,153); font-family: 宋体 }
+.mstheme-horiz-navtxt { font-size: 2; font-weight: bold; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-vert-navtxt { font-size: 2; font-weight: bold; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-navtxthome { font-size: 1; color: rgb(204,204,153); font-family: 宋体 }
+.mstheme-navtxtup { font-size: 1; color: rgb(204,204,153); font-family: 宋体 }
+.mstheme-navtxtprev { font-size: 1; color: rgb(204,204,153); font-family: 宋体 }
+.mstheme-navtxtnext { font-size: 1; color: rgb(204,204,153); font-family: 宋体 }
+ul           { list-style-image: url('aricebu1.gif') }
+ul ul        { list-style-image: url('aricebu2.gif') }
+ul ul ul     { list-style-image: url('aricebu3.gif') }
+a:link       { color: rgb(102,102,204) }
+a:visited    { color: rgb(51,102,51) }
+a:active     { color: rgb(0,0,153) }
+body         { color: rgb(0,0,0); background-color: rgb(204,204,153) }
+h1           { color: rgb(0,51,0) }
+h2, marquee  { color: rgb(0,51,0) }
+h3           { color: rgb(0,51,0) }
+h4           { color: rgb(0,51,0) }
+h5           { color: rgb(0,51,0) }
+h6           { color: rgb(0,51,0) }
+hr           { color: rgb(0,51,0) }
+button       { background-color: rgb(0,51,0); color: white; border-color: rgb(102,102,51) }
+label, .MSTHEME-LABEL { color: rgb(0,0,0) }
+textarea     { color: black; border-color: rgb(51,51,51) }
+fieldset     { color: black; border-color: rgb(51,51,51) }
+legend       { color: rgb(0,51,0) }
+select       { color: black; border-color: rgb(51,51,51) }
+table        { table-border-color-light: rgb(102,102,51); table-border-color-dark: 
+               rgb(51,51,51); color: rgb(0,0,0); border-color: rgb(51,51,51) }
+caption      { color: rgb(0,51,0) }
+th           { color: rgb(0,0,0); border-color: rgb(51,51,51) }
+td           { border-color: rgb(51,51,51) }
+.mstheme-bannertxt a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt a:visited { color: rgb(0,0,0) }
+.mstheme-bannertxt-g { font-size: 6; color: rgb(0,0,0); background-image: url('ricebnr.gif'); 
+               font-family: 宋体 }
+.mstheme-bannertxt-g a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt-g a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-bannertxt-s { font-size: 6; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-bannertxt-s a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt-s a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt-s a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:active { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt a:link { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt a:visited { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt-g { font-size: 2; color: rgb(255,255,204); background-image: url('ricehb.gif'); 
+               font-family: 宋体 }
+.mstheme-horiz-navtxt-g a:active { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt-g a:link { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt-g a:visited { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt-gs { font-size: 2; color: rgb(255,255,204); background-image: url('ricehbs.gif'); 
+               font-family: 宋体 }
+.mstheme-horiz-navtxt-gs a:active { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt-gs a:link { color: rgb(255,255,204) }
+.mstheme-horiz-navtxt-gs a:visited { color: rgb(255,255,204) }
+.mstheme-navtxthome a:active { color: rgb(0,0,0) }
+.mstheme-navtxthome a:link { color: rgb(0,0,0) }
+.mstheme-navtxthome a:visited { color: rgb(0,0,0) }
+.mstheme-navtxthome-g { font-size: 1; color: rgb(0,0,0); background-image: url('ricehom.gif'); 
+               font-family: 宋体 }
+.mstheme-navtxthome-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxthome-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxthome-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:active { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:link { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g { font-size: 1; color: rgb(0,0,0); background-image: url('ricenxt.gif'); 
+               font-family: 宋体 }
+.mstheme-navtxtnext-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:active { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:link { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g { font-size: 1; color: rgb(0,0,0); background-image: url('ricepre.gif'); 
+               font-family: 宋体 }
+.mstheme-navtxtprev-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtup a:active { color: rgb(0,0,0) }
+.mstheme-navtxtup a:link { color: rgb(0,0,0) }
+.mstheme-navtxtup a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtup-g { font-size: 1; color: rgb(0,0,0); background-image: url('riceup.gif'); 
+               font-family: 宋体 }
+.mstheme-navtxtup-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtup-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtup-g a:visited { color: rgb(0,0,0) }
+.mstheme-topbar-font a:active { color: rgb(204,204,153) }
+.mstheme-topbar-font a:link { color: rgb(204,204,153) }
+.mstheme-topbar-font a:visited { color: rgb(204,204,153) }
+.mstheme-topbar-font-g { font-size: 1; color: rgb(204,204,153); background-image: url('riceglbu.gif'); 
+               font-family: 宋体 }
+.mstheme-topbar-font-g a:active { color: rgb(204,204,153) }
+.mstheme-topbar-font-g a:link { color: rgb(204,204,153) }
+.mstheme-topbar-font-g a:visited { color: rgb(204,204,153) }
+.mstheme-vert-navtxt a:active { color: rgb(255,255,204) }
+.mstheme-vert-navtxt a:link { color: rgb(255,255,204) }
+.mstheme-vert-navtxt a:visited { color: rgb(255,255,204) }
+.mstheme-vert-navtxt-g { font-size: 2; color: rgb(255,255,204); text-align: right; background-image: 
+               url('ricevb.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-g a:active { color: rgb(255,255,204) }
+.mstheme-vert-navtxt-g a:link { color: rgb(255,255,204) }
+.mstheme-vert-navtxt-g a:visited { color: rgb(255,255,204) }
+.mstheme-vert-navtxt-gs { font-size: 2; color: rgb(255,255,204); text-align: right; background-image: 
+               url('ricevbs.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-gs a:active { color: rgb(255,255,204) }
+.mstheme-vert-navtxt-gs a:link { color: rgb(255,255,204) }
+.mstheme-vert-navtxt-gs a:visited { color: rgb(255,255,204) }
+.mstheme     { navbutton-background-color: rgb(255,255,255); top-bar-button: 
+               url(riceglbu.gif) }
+.mstheme-topbar-font { font-size: 1; color: rgb(204,204,153); font-family: 宋体 }
+body         { background-image: url('ricebk.jpg'); font-family: 宋体 }
+h1           { font-weight: normal; font-style: normal; font-size: 24pt; font-family: 宋体 }
+h2           { font-weight: normal; font-style: normal; font-size: 18pt; font-family: 宋体 }
+h3           { font-weight: normal; font-style: normal; font-size: 14pt; font-family: 宋体 }
+h4           { font-weight: normal; font-style: normal; font-size: 12pt; font-family: 宋体 }
+h5           { font-weight: normal; font-style: normal; font-size: 10pt; font-family: 宋体 }
+h6           { font-weight: normal; font-style: normal; font-size: 8pt; font-family: 宋体 }
+button       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+label, .MSTHEME-LABEL { font-size: 8pt; font-style: normal; font-family: 宋体 }
+textarea     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+fieldset     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+legend       { font-size: 8pt; font-style: Normal; font-family: 宋体 }
+select       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+table        { font-style: normal; font-family: 宋体 }
+caption      { font-size: 14pt; font-style: normal; font-family: 宋体 }
+th           { font-style: normal; font-family: 宋体 }
+marquee      { font-size: 14pt; font-family: 宋体 }

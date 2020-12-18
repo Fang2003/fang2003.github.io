@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">主板新功能——瞬间开机<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"><span
+        class="ourfont">　　AOpen的主板（如AP5T、AX5T）有个不错的功能，笔者称之为“瞬间开机”，不过我想很多人都忽略了它，希望有AOpen主板的朋友一定要试试。<br>
+        　　瞬间开机（Suspend to Hard Drive）就是把目前电脑的工作状态（系统状况、内存中的数据和屏幕上的影像）存到硬盘上，然后就可以直接把电脑电源关掉。下次开机之后电脑便会直接将资料恢复，迅速回到上次的工作状态。使用瞬间开机功能的先决条件如下：<br>
+        　　1、主板有此功能。你可以在主板BIOS中的Power Management选项中看看是否有Suspend 
+        to Harddisk的选项，如果有，就可以使用瞬间开机。如技嘉的TX主板也有此功能。<br>
+        　　2、内存与硬盘连续自由空间之和必须大于32M；<br>
+        　　3、显示卡必须是与VESA兼容的PCI卡；<br>
+        　　4声卡必须与Sound Blaster兼容。<br>
+        　　实现瞬间开机的步骤如下：<br>
+        　　1、在BIOS的设置中，选择Suspend to Harddisk。<br>
+        　　2、选择PNP/PCI Configuration－&gt; PNP OS Installed，选择NO，让BIOS获得分配系统资源的权力。<br>
+        　　3、重新启动系统到DOS提示符下，（请注意：是在DOS7.0下，而不是DOS6.xx）使用程序“ZVHDD”（如果主板没有附带的话，请到www.aopen.com.tw下载）在硬盘上建立一个隐藏文件，这个文件用于储存系统状态和内存映射资料。<br>
+        　　键入ZVHDD /C /FILE即可。<br>
+        　　请确认你的硬盘具备足够的连续空间以建立这个隐藏文件。举例来说，若ZVHDD找不到足够大的连续空间，你可以使用Defrag重整硬盘空间。建立成功后，请重新启动系统。<br>
+        　　4、在WIN95下，点击Suspend图标强迫系统进入Suspend to Hard Drive模式，成功之后，就可以直接关机。<br>
+        　　5、下次重新开机后就可以直接进入上次工作状态。<br>
+        　　注意事项：<br>
+        　　1、因为必须支持PNP(即插即用)，所以在DOS、Windows NT和OS/2下无法使用瞬间开机功能。<br>
+        　　2、ZVHDD不支持FAT32的硬盘系统，FAT16是唯一可以保证运行正常的环境。(史俊彦)<span
+        class="ourfont"><span class="ourfont"><span class="ourfont"> &nbsp;&nbsp; </span></span></span></span></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：<a
+        href="index.htm">《电脑报》1998年1月12日第2期33版</a></font></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

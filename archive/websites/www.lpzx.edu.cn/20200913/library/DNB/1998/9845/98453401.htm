@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>两块SCSI卡冲突的处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp; 
+        　河南读者李国忠问：我有1个有关SCSI卡的问题。我使用的电脑为DELL 
+        P133，操作系统为WIN95，内插Adapter SCSI卡，外接UIDAR TrueScan800大幅面扫描仪，进行工程图纸扫描处理工作。后来为了方便大数据量的存储，又购买了富士通FN230外置MO磁光盘机，该光盘机也使用SCSI接口。由于不知如何将此磁光盘机和扫描仪接到同一块内置Adapter 
+        SCSI卡上，无奈又购买了第二块Adapter SCSI卡，并接上了磁光盘机，但是在WIN95下，两块SCSI卡发生设备冲突，冲突显示信息如下：<br>
+        　　Adapter AH－152x／Ah－1510 SCAI host Adapter正常<br>
+        　　驱动程序：C:\Windows\System\Iosubsys\sparrow.mpd<br>
+        　　! Adaptec AIC－6x60 ISA Single－chip SCSI Controller不正常<br>
+        　　答：由于WIN95是采用中断(IRQ)来管理众多的设备，如果再向主板插槽上增加一个设备，则很有可能使设备之间产生冲突。你的问题就是这种情况。 
+        其实，你无需再购买第二块Adapter SCSI卡，完全可在第一块Adapter SCSI卡上再接磁光盘机，这需要你购买一条SCSI接口的数据线，在此数据线上可以接多台SCSI设备，这与EIDE控制卡类似（只是EIDE控制卡只能接两个IDE设备）。在数据线上接SCSI设备的方法与IDE设备的接法类似，但要注意主SCSI设备与从SCSI设备的关系。另外要说明的是，在Adapter 
+        SCSI卡上也能接SCSI硬盘，如果你需要从此硬盘启动，则需要将它设为主SCSI设备，再进行连接。<br>
+        　&nbsp;&nbsp;&nbsp; 沈阳读者裴景胜问：我购买了一台Pentium 133多媒体电脑，没有配备打印机，操作系统为MSDOS 
+        6.22＋PWIN32和PWIN95。<br>
+        　　1.机器安装了16MB内存，开机自检也是16384KB（16MB），但是当机器启动以后 
+        ，无论是在DOS 6.22状态还是在PWIN95状态下，使用MEM命令查看内存时，只有15360KB（即15MB），两者相差1024KB（1MB），这是为什么? 
+        <br>
+        　　2.启动PWIN32以后 ，运行各种程序基本正常，但是当运行Xing或者媒体播放器时，总显示一个错误对话框：<br>
+        　　单击“取消”按钮，则可以正常运行，如果单击“重试”按钮，则无任何反应。<br>
+        　　3.在使用Award BIOS时，我不知道下面的四个选项：<br>
+        　　PCI／VGA Palette Snoop<br>
+        　　OS Select For DRAM &gt;64MB<br>
+        　　Memeory Hole At 15M－16M<br>
+        　　Peer Concurrency<br>
+        表示什么意思，有什么作用?<br>
+        　　答：1.如果你在Autoexec.bat或者Config.sys中设置 了Smartdrv 1024，则可能使DOS、PWIN95丢失1MB内存。因此，你应该检查你的Autoexec.bat或者Config.sys文件中的设置。<br>
+        　　2.“AUX”在DOS中是指辅助设备，在许多程序中很少使用。如果在执行Xing时，出现写入“AUX”设备的现象，则说明Xing程序已遭到破坏（如病毒、或者某些程序覆盖了Xing驱动程序等）。建议你先卸载Xing，然后重新安装Xing。<br>
+        　　3.Award BIOS中的这四个参数的含义为：<br>
+        　　●PCI／VGA Palette Snoop：是否需要探测PCI／VGA调色板，这主要用于一些电影卡上。但是如果你使用的是小影霸Trident 
+        9685显示卡，而将此选项设为“Enabled”，则可能会造成Windows 95出现花屏的现象，因为系统认为该显示卡是电影卡，从而造成了调色板的混乱。当遇到此现象时，建议将选项设为“Disabled”。在通常情况下，将此选项设为“Disabled”，可以提高系统的兼容性。<br>
+        　　●OS Select For DRAM&gt;64MB：如果你在机器中安装了OS/2，且有64MB内存，建议将此选项设为“OS／2”，否则设为“Disabled”。<br>
+        　　●Memeory Hole At 15M－16M：如果你的计算机超过16MB内存，则必须将此选项设为“Disabled”。使用此选项可以让系统识别16MB以上的内存。<br>
+        　　●Peer Concurrency：将此选项设为“Enabled”，可协调系统功能的一致性，从而提高系统性能。<br>
+        　 
+        &nbsp;&nbsp;&nbsp; 江西读者李勇问：我在计算机上安装了《电脑报配套光盘第2期》上的许多软件，后来又卸载了部分软件。我想在注册表中肯定有许多“垃圾”，就打开了注册表，在HKEY_LOCAL_MACHINE分支中查找无用的子键或者键值。由于一时疏忽，将某个子键的主键也删除了。后来在Windows 
+        95的DOS环境中运行程序时，发现屏幕上只有一些纵横交错的网状光栅线，无任何提示。按“关闭”、“返回”以及其他任何键均无反应，系统死机了，只好强行关机。<br>
+        　　答：首先要说明的是，在修改注册表之前，必须使用注册表编辑器的“导出注册表文件”选项保存一份当前的注册表，然后再修改。你所说的现象在许多读者来信中都谈到这个问题，下面介绍几种常用方法：<br>
+        　　1.在出现此错误时，可以将注册表的备份文件恢复过来，其方法是：<br>
+        　　(1)进入纯DOS环境中。<br>
+        　　(2)在Windows目录下执行如下命令：<br>
+        　　attrib －h －r －s system.da0<br>
+        　　attrib －h －r －s user.da0<br>
+        　　copy system.da0 system.dat<br>
+        　　copy user.da0 user.dat<br>
+        　　(3)重新启动计算机。<br>
+        　　2.将C盘根目录下的System.lst拷贝成System.dat，其方法是：<br>
+        　　在DOS环境中执行如下命令：<br>
+        　　attrib －h －r －s c:\system.lst<br>
+        　　copy c:\system.lst c:\windows\system.dat<br>
+        　　然后重新启动计算机。<br>
+        　　3.如果你对注册表比较熟悉，则可以将你删除的主键恢复过来，其方法是：<br>
+        　　(1)在纯DOS环境下，使用RegEdit ／C命令将System.lst导出到一个文本文件SYS.TXT中。<br>
+        　　(2)在SYS.TXT文件中查找你所删除的主键，将此主键及其下面的所有子键保存成一个文件，如AAA.REG。<br>
+        　　(3)在Windows 95下打开注册表编辑器，然后将AAA.REG导入到注册表中。<br>
+        　　有关注册表内部结构请参见《Windows 95／98注册表详解、配置与应用实例》一书（清华大学出版社出版）。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月23日第45期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

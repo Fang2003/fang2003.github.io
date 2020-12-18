@@ -1,0 +1,115 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>使用Delphi获取系列信息</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+      <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+        <TR> 
+          <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+          <TD WIDTH="484" HEIGHT="69"> 
+            <P ALIGN="center"><A HREF="http://pcsoft.cpcw.com" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/images/ad/pcsoft.gif" BORDER="0" WIDTH="468" HEIGHT="60"></A><BR>
+              中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+          </TD>
+        </TR>
+      </TABLE>
+    </center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><div align="center"><center><table
+    border="0" width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>使用Delphi获取系列信息</strong></font> </td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/bkgrd.gif">　　Delphi以其优良的可视化编程，灵活的Windows 
+        API接口，丰富的底层操作越来越受到编程爱好者的青睐。<br>
+        　　在Delphi中，通过调用Windows API，可以很方便地获取系统信息，这有助于我们编写出更好的Windows应用程序。以下程序在Delphi3.0 
+        For Windows 9x下编译通过。<br>
+        　　<strong>一、 用GetDriveType函数获取磁盘信息</strong> <br>
+        　　Lbl_DriveType:Tlabel;<br>
+        　　DriveType:WORD; //定义驱动器类型变量<br>
+        　　DriveType:=GetDriveType(RootPathName); //获得RootPathName所对应的磁盘驱动器信息<br>
+        　　case DriveType of<br>
+        　　DRIVE_REMOVABLE:Lbl_DriveType.Caption:= '软盘驱动器';<br>
+        　　DRIVE_FIXED : Lbl_DriveType.Caption:= '硬盘驱动器';<br>
+        　　DRIVE_REMOTE: Lbl_DriveType.Caption:= '网络驱动器';<br>
+        　　DRIVE_CDROM: Lbl_DriveType.Caption:= '光盘驱动器';<br>
+        　　DRIVE_RAMDISK: Lbl_DriveType.Caption:= '内存虚拟盘';<br>
+        　　end; //将该磁盘信息显示在Lbl_DriveType中<br>
+        　　<strong>二、 用GlobalMemoryStatus函数获取内存使用信息</strong><br>
+        　　MemStatus: TMEMORYSTATUS; //定义内存结构变量<br>
+        　　Lbl_Memory:Tlabel;<br>
+        　　MemStatus.dwLength := size of(TMEMORYSTATU<br>
+        S);<br>
+        　　GlobalMemoryStatus(MemStatus); //返回内存使用信息<br>
+        　　 Lbl_Memory.Caption := format('共有内存: %d KB 可用内存: %dKB',[MemStatus.dwAvailPhys 
+        div 1024,MemStatus.dwTotalPhys div 1024]);<br>
+        　　//将内存信息显示在Lbl_Memory中<br>
+        　　<strong>三、 用GetSystemInfo函数获取CPU信息</strong><br>
+        　　SysInfo: TSYSTEMINFO;<br>
+        　　Lbl_CPUName:Tlabel;<br>
+        　　GetSystemInfo(SysInfo);//获得CPU信息<br>
+        　　case SysInfo.dwProcessorType of<br>
+        　　PROCESSOR_INTEL_386:Lbl_CPUName.Caption:=format('%d%s',[SysInfo.dwNumber Of 
+        Processors,'Intel80386']);<br>
+        　　PROCESSOR_INTEL_486:Lbl_CPUName.Caption:=format('%d%s',[SysInfo.dwNumber Of 
+        Processors, 'Intel 80486']);<br>
+        　　PROCESSOR_INTEL_PENTIUM:Lbl_CPUName.Caption:=format('%d%s',[SysInfo.dwNum<br>
+        berOfProcessors, 'Intel Pentium']);<br>
+        　　PROCESSOR_MIPS_R4000:Lbl_CPUName.Caption:=format('%d%s',[SysInfo.dwNumberOfProcessors, 
+        'MIPS R4000']);<br>
+        　　PROCESSOR_ALPHA_21064:Lbl_CPUName.Caption:=format('%d%s',[SysInfo.dwNumberOfProcessors, 
+        'ALPHA 21064']);<br>
+                        　　end;//把CPU信息显示在Lbl_CPUName中。(陕西　杨波)
+<p align="right"><font COLOR="#000000">本文出自：<a
+        href="index.htm">《电脑报》1999年04月12日第14期</a></font> </td>
+      </tr>
+    </table>
+    </center></div><div ALIGN="center"></div><script>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</script>
+<NOSCRIPT>
+
+    <dd ALIGN="center"><a
+      HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><img
+      SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+      WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></a></dd>
+</NOSCRIPT>
+    </div>
+			<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+			<A HREF="http://www.sitemeter.com/stats.asp?site=pcwno" TARGET=_blank>
+			<NOSCRIPT>
+				<IMG SRC="http://www.sitemeter.com/meter.asp?site=pcwno" ALT="Site Meter" NoSave BORDER=0 WIDTH=20 HEIGHT=20>
+			</NOSCRIPT>
+			<SCRIPT LANGUAGE="JavaScript">
+				document.write("<img src="http://www.lpzx.edu.cn/library/DNB/1999/9914/%5C%22http:/www.sitemeter.com/meter.asp?site=pcwno&amp;refer=%22+escape(document.referrer)+%22&amp;hours=%22+(new" Date()).getHours()+"&minutes="+(new Date()).getMinutes()+"\" BORDER=0 ALT=\"Site Meter\" WIDTH=20 HEIGHT=20>");
+			</SCRIPT>
+			</A>
+			<!--WEBBOT bot="HTMLMarkup" Endspan -->
+</td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Win 95 中文字体为何横置</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　故障现象：一台微机，配置为：Pentium 
+        MMX 166 CPU，32M SDRAM内存，华硕TX97－E主板、SONY16倍速光驱，丽台S600/DX显卡，花王530PDW声卡，钻石三代4.3G硬盘。操作系统为Win 
+        95 OSR2＋DOS 6.22。本机自组装之后一直运行良好，前日一位朋友组装了一台与本机配置基本相同的电脑，运行几日后突然出现不能启动的现象，采用替换法排除了主板、硬盘和CMOS设置方面出现的问题的可能性，最后怀疑是内存条的问题，因此将内存条拿到笔者的机器上试用。<br>
+        　　将怀疑有问题的内存条换上，开机后能正常进入Win 95启动画面(由于本机CMOS中将内存自检一项设置为Disable，所以未能报警)，Win 
+        95正常启动，但没过几分钟，系统就自动退出了Win 95，屏幕提示Win95系统发生错误。笔者马上关机，将本机原来好的内存条换上，开机启动正常，能进入Win95，但屏幕提示：“是否保存系统设置”，笔者选择了“是”，随后自动退出了Win 
+        95，重新启动，再进入Win95，一切正常。但笔者发现，桌面上的所有中文字体都向左转了90度，成了横置字体(如“我的电脑”变成我的电脑)其它一切正常。<br>
+        　　故障分析与处理：由于故障现象是在更换内存条之后才出现的，故障肯定与内存条有关。于是重新设置CMOS，将内存自检一项设置为“Enable”，然后关机将朋友的内存条换上，开机后不能通过自检，至此确定朋友的内存条损坏。<br>
+        　　可是Win95中文字体横置的现象是怎样产生的呢?笔者认为是劣质内存条破坏了Win95初始化设置造成的。换上好的内存条之后，笔者根据屏幕提示选择保存系统设置，此时保存的系统设置是已经被劣质内存条破坏后的系统设置，是非正常的系统设置。如果选择“不保存”，Win95可能就会以正常的系统设置启动，也就不会出现字体横置的故障。因此故障产生的原因是笔者保存了被劣质内存条破坏后的系统字体设置。<br>
+        　　于是笔者开始在注册表中寻找桌面字体的设置，发现有关桌面字体设置的“键值”已经改变。笔者然后找到一台Win95运行正常的电脑，记下正常的键值，将笔者中的Win95有关字体设置的键值改为正常键值后，重新启动，一切恢复正常。具体操作如下：<br>
+        　　在“开始”菜单中选择“运行”，键入“regedit.exe”，打开注册表编辑器，然后依次打开“HKEY_CURRENT—USERS\control 
+        panel\desktop\windowmetrics”，将“menufont(菜单字体)”、“messagefont(对话框字体)”、“statusfont(状态字体)”的键值改为：<br>
+        　　09 00 00 00 00 00 00 00<br>
+        　　90 01 00 00 00 86 00 00<br>
+        　　00 02 CB CE CC E5 00 13<br>
+        　　F7 BF 37 01 00 00 EF 16<br>
+        　　EC BF B8 99 14 C1 01 00<br>
+        　　00 00 0D 30 40 00 B8 99<br>
+        　　14 C1<br>
+        　　将“captionfont(标题栏字体)”、“smcaptionfont(小标题栏字体)”键值改为：<br>
+        　　09 00 00 00 00 00 00 00<br>
+        　　BC 02 00 00 00 86 00 00<br>
+        　　00 02 CB CE CC E5 00 13<br>
+        　　F7 BF 37 01 00 00 EF 16<br>
+        　　EC BF B8 99 14 C1 01 00<br>
+        　　00 00 0D 30 40 00 B8 99<br>
+        　　14 C1<br>
+        　　将“iconfont(图标字体)”的键值改为：<br>
+        　　09 00 00 00 00 00 00 00<br>
+        　　90 01 00 00 00 86 00 00<br>
+        　　00 02 CB CE CC E5 00 00<br>
+        　　E7 04 12 88 17 02 47 03<br>
+        　　17 00 00 00 EA 15 02 00<br>
+        　　9A 88 CF 27 68 FA 63 00<br>
+        　　CC 88<br>
+        　　小结：这种故障现象可能极为罕见，如果不知道在注册表中修改字体设置的键值，就不得不重新安装Win95，即费时又费力。从这里也可以反映出用户应当注意的两个重要问题：<br>
+        　　1.在CMOS设置中，最好将内存自检设置为Enable，防止“病从口入”，把好“进口”关，当内存条出现问题时就可被机器自检所发现，从而避免一些不必要的麻烦。<br>
+        　　2.Win95的注册表“regedit.exe”中包含着系统设置的重要信息，必须予以备份，一旦Win95系统设置出现问题，可以进行挽救。笔者这次就是因没有备份而不得不费力去修改注册表，但这对于大多数用户来说还是有一定困难的。备份注册表主要有三种方法：一是运行“regedit.exe”，打开注册表编辑器，在“注册表”菜单项里选择“导出注册表”，选取文件名保存即可，需要时，再在“注册表”菜单项里选择“引入注册表”，找到原先备份的文件“确定”即可；二是直接备份Windows目录下的system.dat文件和user.dat文件，这两个文件中包含着注册表的重要信息，需要时将这两个文件覆盖Windows目录下的同名文件即可；三是在Windows下还有System.da0和User.da0两个文件，它们分别是System.dat和User.dat这两个文件的备份，每次当用户修改了注册表之后，就产生包含原注册表设置内容的这两个备份文件，需要时，将System.da0和User.da0分别改名为System.dat和User.dat，然后删除原System.dat和User.dat两个文件即可。但笔者在使用中发现第三种方法并不十分可靠，强烈推荐前两种方法，可以将其直接备份到Win95的启动盘上，以利保存。最后还需要说明一点，因为很多Win95应用程序的安装都要对注册表进行修改，因此在安装了应用程序之后应及时对注册表进行备份，以避免出现问题后使用备份的注册表可能导致一些新安装的应用程序不能正常运行。(河北　于忠义　胥京川　张文阁) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

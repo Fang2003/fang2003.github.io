@@ -1,0 +1,215 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用VB实现图形文件的批量转换</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | 
+      <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="457" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="139" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第14期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{用VB实现图形文件的批量转换}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 由于工作的原因，这段时间我在处理多媒体、创建网站的时候，经常会遇到要转换大量图片的大小这种情况。而我们经常用到的图形处理工具，如PHOTOSHOP、FIREWORKS等软件，它们虽然能够改变图形的大小，但一般只能进行单个文件的转换，在需要转换大量文件的时候效率十分低。为了提高工作效率，我用VB编写了一个批量转换图形文件大小的程序，虽然界面比较粗糙，但比较实用。<br>
+              <br>
+              设计思路：<br>
+              如上图所示，左边的图形框为Picture1，里面显示的就是要转换的图形文件，右边的图形框为Picture2，里面显示的就是转换后的图形文件。<br>
+              首选通过CommonDialog控件选择图形文件，然后显示在Picture1上(注意：Picture1的AutoRedraw属性要设为True，AutoSize属性要设为True)：Picture1.Picture 
+              = LoadPictureCommonDialog1.FileName，然后设置分辨率(res=200)再设置坐标，把两个Picturebox的绘图区都设成长宽均为分辨率大小的坐标：Picture1.Scale00-resres，Picture2.Scale00-resres，当点击“开始转换”按钮时，将左图坐标(IJ)的点画到右图上：<br>
+              For I=1 to res<br>
+              For j=1 to res<br>
+              Picture2.PsetIjPicture1.pointIj<br>
+              next j<br>
+              next I<br>
+              最后存储Picture2上的图形。<br>
+              程序代码：<br>
+              以下是批量转换Pic1至Pic10这十个文件的程序代码：<br>
+              Dim res As Integer '定义分辨率为全局变量<br>
+              Private Sub Command2＿Click '点击“选择文件”按钮<br>
+              CommonDialog1.filename = &quot;&quot;<br>
+              Picture1.Picture = LoadPictureCommonDialog1.filename<br>
+              CommonDialog1.Filter = &quot;.jpg｜.jpg｜.bmp｜.bmp&quot;<br>
+              CommonDialog1.DialogTitle = &quot;打开图形文件&quot;<br>
+              CommonDialog1.Action = 1<br>
+              Picture1.Picture = LoadPictureCommonDialog1.filename<br>
+              End Sub<br>
+              Private Sub command3＿Click '点击“批量转换”按钮<br>
+              On Error GoTo errorhandler<br>
+              CommonDialog1.filename = &quot;&quot;<br>
+              Picture1.Picture = LoadPictureCommonDialog1.filename<br>
+              CommonDialog1.Filter = &quot;.jpg｜.jpg｜.bmp｜.bmp&quot;<br>
+              CommonDialog1.DialogTitle = &quot;打开图形文件&quot;<br>
+              CommonDialog1.Action = 1<br>
+              Dim i j w h pd As Integer<br>
+              Dim filelen k As Integer<br>
+              Dim filename As String<br>
+              filelen = LenCommonDialog1.filename<br>
+              pd = MsgBox&quot;是否按默认设置？&quot; vbYesNo &quot;选择框&quot;<br>
+              If pd = 7 Then<br>
+              w = InputBox&quot;请输入转换后的图形宽：&quot; &quot;输入框：&quot;  0 0<br>
+              If w &lt; 50 And w &gt; 200 Then<br>
+              GoTo handler<br>
+              End If<br>
+              h = InputBox&quot;请输入转换后的图形高：&quot; &quot;输入框：&quot;  0 0<br>
+              If h &lt; 50 And h &gt; 200 Then<br>
+              GoTo handler<br>
+              End If<br>
+              Picture2.Width = w  15.3<br>
+              Picture2.Height = h  15.3<br>
+              End If<br>
+              For k = 1 To 10<br>
+              filename = LeftCommonDialog1.filename filelen - 5 &amp; TrimStrk 
+              &amp;- RightCommonDialog1.filename 4 '批量载入pic1pic2……pic10<br>
+              Picture1.Picture = LoadPicturefilename<br>
+              Picture1.Scale 0 0-res res<br>
+              Picture2.Scale 0 0-res res<br>
+              For i = 1 To res<br>
+              For j = 1 To res<br>
+              Picture2.PSet i j Picture1.Pointi j<br>
+              Next j<br>
+              Next i<br>
+              SavePicture Picture2.Image LeftCommonDialog1.filename filelen 
+              - 5 &amp; TrimStrk &amp;- &quot;.bmp&quot; '批量保存文件<br>
+              Command4.Caption = filename<br>
+              'Picture1.Visible = True<br>
+              'Picture1.Picture = Picture2.Picture<br>
+              Next k<br>
+              Command4.Caption = &quot;转换完毕&quot;<br>
+              errorhandler<br>
+              MsgBox &quot;文件不存在或存在错误！&quot;<br>
+              handler<br>
+              If w &lt; 50 And w &gt; 200 Or h &lt; 50 And h &gt; 200 Then<br>
+              MsgBox &quot;你输入的数字不对！&quot;<br>
+              End If<br>
+              End Sub<br>
+              Private Sub Form＿Load<br>
+              res = 200 '设置分辨率为200<br>
+              End Sub<br>
+              Private Sub Command1＿Click '点击“开始转换”按钮<br>
+              Dim i j w h pd As Integer<br>
+              pd = MsgBox&quot;是否按默认设置？&quot; vbYesNo &quot;选择框&quot;<br>
+              If pd = 7 Then<br>
+              w = InputBox&quot;请输入转换后的图形宽：&quot; &quot;输入框：&quot;  0 0<br>
+              If w &lt; 50 And w &gt; 200 Then<br>
+              GoTo handler<br>
+              End If<br>
+              h = InputBox&quot;请输入转换后的图形高：&quot; &quot;输入框：&quot;  0 0<br>
+              If h &lt; 50 And h &gt; 200 Then<br>
+              GoTo handler<br>
+              End If<br>
+              Picture2.Width = w  15.3<br>
+              Picture2.Height = h  15.3<br>
+              End If<br>
+              Picture1.Scale 0 0-res res<br>
+              Picture2.Scale 0 0-res res<br>
+              For i = 1 To res<br>
+              For j = 1 To res<br>
+              Picture2.PSet i j Picture1.Pointi j<br>
+              Next j<br>
+              Next i<br>
+              SavePicture Picture2.Image LeftCommonDialog1.filename filelen 
+              - 5 &amp; TrimStrk &amp;- &quot;.bmp&quot;<br>
+              handler<br>
+              If w &lt; 50 And w &gt; 200 Or h &lt; 50 And h &gt; 200 Then<br>
+              MsgBox &quot;你输入的数字不对！&quot;<br>
+              End If<br>
+              End Sub}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

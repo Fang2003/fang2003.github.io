@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">给Netware做个中文菜单</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　Novell公司的Netware 
+        3.X系统给我们提供了一个功能强大的菜单程序，但用其编写的菜单不支持中文，这使英文较差的朋友受难不少，现在我给大家介绍一种中文菜单以代替Netware 
+        3.X的英文菜单。<br>
+        　　这个中文菜单是利用NU8.0工具中的主程序来实现的，步骤如下：<br>
+        　　1建立一个如下所示的目录结构：(以F：为例)<br>
+        　　F:\NU\NU<br>
+        　　F:\NU\DLC<br>
+        　　2.复制中文NU8.0相应目录下的文件到对应目录中。<br>
+        　　3.调用一中文操作系统(如F:\UCDOS\UP.BAT)。<br>
+        　　4.执行F:\NU\NU\NORTONEXE程序进入NU8.0主菜单状态，按照中文NU8.0的编辑格式输入程序菜单项的中文名称，并建立相应的联系。<br>
+        　　5.退出NORTON.EXE主程序，在DOS目录下建立NU.BAT文件，内容如下：<br>
+        　　@echo off<br>
+        　　f:<br>
+        　　cd\nu\nu<br>
+        　　norton<br>
+        　　6.修改登录原稿，去掉以前的执行菜单命令，并加上如下两行：<br>
+        　　map s16:=sys:\dos<br>
+        　　exit &quot;nu.bat&quot;<br>
+        　　以后，登录时就会出现你所建立的中文菜单，你只需选择要执行的程序项即可。<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月1日第21期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<html><!-- #BeginTemplate "/Templates/hardware.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>Modem无法正常拨号故障分析</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+       
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第1期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Modem无法正常拨号故障分析<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->&nbsp&nbsp&nbsp&nbsp最近老是有朋友打电话来问我一些上网的问题，其中问得最多的就是无法正常拨号上网。我针对几个比较特殊的例子，总结出以下几个影响正常拨号的原因，希望能给碰到这些问题的朋友一些启发。 
+
+              <br>
+
+              <br>
+
+              1．如果是第一次上网，可能是Modem和串行口的设置有问题。仔细查看各项设置并改正，问题就可以解决了。如果还不能进行正常拨号，就请参考以下内容。 
+
+              <br>
+
+              <br>
+
+              2．如果你的Modem一直使用正常，突然罢工了，这种情况就比较复杂了，但大致上可以从以下几点考虑： <br>
+
+              &nbsp&nbsp&nbsp&nbsp(1)检查线路有无问题。接上一部电话听一下，有无正常拔号音，若拔号音不正常，可能是电话线路出现故障，检查一下电话线路。如拨号音正常，则可能是你在设置其它参数的时候不小心搞乱了Modem和串行口的设置，只要改回来就可以了。 
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbsp(2)如果是内置Modem的话，看看其设置是否与存在的串行口发生冲突。串行口3与串行口1共用中断4，串行口4与串行口2共用中断3。如果你的鼠标是接在串行口1上的话，最好是把内置的Modem设置在串行口4上，然后在“控制面板”中的“设备”管理内的端口选项中禁用串行口2，这样的话一般就不会再出现串行口与内置Modem抢中断的事情了。 
+
+              &nbsp&nbsp&nbsp&nbsp(3)想想看最近有无安装过什么软件或硬件，查看一下该软件或硬件有无与Modem发生资源上的冲突，尤其是内置Modem，很容易与其它设备发生资源冲突。若有的话，先试试通过设备管理器调整有冲突的硬件或软件的资源，再不行就重新安装Modem的驱动程序。若恢复正常则罢，否则只好先删除有冲突的软件或去掉有冲突的硬件，应该会没问题了。再不行的话，就只有重新安装Windows 
+
+              98！ <br>
+
+              &nbsp&nbsp&nbsp&nbsp(4)如果电话线路正常，参数设置也没错，那么最近有无雷击、闪电之类的现象。如果有，最好先拿你的Modem到你朋友的家里试一下，如果也不行，那么你的“猫”肯定是已遭雷击了。解决方法就是去换一只新Modem。 
+
+              <br>
+
+              <br>
+
+              3．除了以上那些软件和硬件的故障以外，还有以下的因素也可能会引起Modem无法正常拔号： <br>
+
+              &nbsp&nbsp&nbsp&nbsp(1)非正常的拔号音。这种问题在使用内部分机上网的电脑上比较常见，因为一些小的程控交换机的拔号音没有采用标准的频率，或者有一些交换机根本就是用音乐来作为拔号音。由于Modem无法正确识别这些拔号音，所以就提示无拔号音。如果是这样的话，你可以在“控制面板”中，双击“调制解调器”，然后单击“常规”标签，单击正在使用的调制解调器，单击“属性”，在“连接”标签中取消“拔号前等待拨号音”前复选框中的选中符号，让Modem不检测拨号音，直接进行拨号连接。 
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbsp(2)使用内部分机上网的话，千万别忘了在电话号玛前加上拨外线时需加的前缀，如“0”或“9”等，视具体情况而定。方法很简单，只要在拨外线前缀与电话号码间加上一个空格就可以了，如拨163则为“0　163”，Modem在拨“0”后再等待交换机接通外线，当检测到外线拨号音以后，Modem就会继续拨出“163”连通网络。 
+
+              <br>
+
+              <br>
+
+              3．对于一些外置Modem，在使用了一段时间后就会出现断线等原因，除了电话线路的因素外，其实Modem的电源部分也有很大的影响。笔者以前就为了省钱曾使用过一个杂牌的外置Modem，每次上网大概二十分钟就会断线，而当断线出现后，再拨号，没过几分钟就又会断线。一开始还以为是线路问题，但仔细想想，就算是线路问题的话，也不至于每次都会在使用过一段时间后才出现故障，而且后来发现环境温度越高越容易出现断线，所以怀疑是Modem的散热有问题。打开Modem后，发现Modem的电源部分是由外接变压器输入交流电压的，经过机内整流及滤波电路后，由稳压集成块7805向电路提供+5V的直流电压。开机观察了一会儿后发现，7805发热得很历害，断线的时候量其输出电压，只有二点几伏，于是就把它换成功率较大的7805，此后，就再也没出现过以前那种无缘无故断线的情况了。 
+
+              以上几点希望能给那些拥有一只调皮“猫”的朋友一点“制”猫方法，若有什么问题的话给我发E-mail(zzss@myrice.com)。 
+
+              (浙江 郑云)<!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

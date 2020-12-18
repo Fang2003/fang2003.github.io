@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Novell网上Win95的共享安装<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　我公司目前在NetWare 
+        4.1下用软盘启动实现了Win95的共享安装，现把安装过程介绍如下，与大家共享。<br>
+        　　<strong>一、进行Win95共享安装(服务器安装)</strong><br>
+        　　1.在运行Win95的工作站上以管理员身份登录。<br>
+        　　2.运行Win95光盘上的共享安装程序：\ADMIN\NETTOOLS\NETSETUP\NETSETUP.EXE。<br>
+        　　3.单击“安装路径”按钮，设置将要安装Win95的服务器路径，例如：\\SERVER\SYS\WIN95(UNC格式)；在自己指定的共享目录中安装Win95资源文件，选“不创建”，在弹出的Setup描述文件MSBATCH.INF中，根据提示输入正版Win95的ID。<br>
+        　　4.选择安装的源路径和目的路径。<br>
+        　　5.单击“确定”开始安装。<br>
+        　　6.安装程序复制所有Win95共享文件，并设置可读属性。<br>
+        　　7.共享安装结束后，进行下一步。<br>
+        　　<strong>二、创建机器目录</strong><br>
+        　　设置多台计算机的最好办法是为一台计算机指定选项并运行Win95 
+        Setup创建共享安装。然后，对有同种网络适配卡和从共享的Win95拷贝中启动的计算机，采用设置机器对话框自动地为同类型每台计算机生成机器目录。步骤如下：<br>
+        　　1.在NETSETUP窗口中单击设置路径(或改变路径)并指定含有Win95源文件的服务器路径，然后单击确定，单击增加按钮。<br>
+        　　2.在设置机器对话框中，单击某个选项指定是否加入一个或多个机器目录。<br>
+        　　3.指定用于存放目录的全部选项之后，单击确定。<br>
+        　　<strong>三、配置MSBATCH.INF文件</strong><br>
+        　　在进行安装前必须配置MSBATCH.INF文件，其中应包含以下内容：<br>
+        　　[Network]<br>
+        　　WorkstationSetup=1<br>
+        　　HDBoot=0<br>
+        　　RPLSetup=0<br>
+        　　[Setup]<br>
+        　　ProductID=424－6560657<br>
+        　　(Win95 ID)<br>
+        　　CCP=0<br>
+        　　<strong>四、进行软盘安装</strong><br>
+        　　1.首先制作一张可启动的实模式下的网络引导盘。<br>
+        　　2.用这张引导盘引导系统并以系统管理员身份登录。<br>
+        　　3.从网络上Win95的共享目录中运行Setup。<br>
+        　　4.按Win95正常安装步骤进行安装。<br>
+        　　5.正常安装结束后，Win95的网络设置应该为：<br>
+        　　相应的实模式网卡驱动程序<br>
+        　　NOVELL NETWARE　[Workstation shell 4.0 and above[VLM]]客户<br>
+        　　IPX/SPX协议<br>
+        　　6.运行NetWare 4.1的Novell Workstation shell安装程序，设置路径后，自动安装NetWare为支持Win95而提供的文件，安装到\\SERVER\SYS\WIN。<br>
+        　　7.安装结束后，启动软盘应包含Win95最小启动文件：<br>
+        　　HIMEM.SYS、IFSHLP.SYS、SERVER.EXE、COUNTRY.SYS、LSL.COM、VLM.EXE、IPXODL.EXE、＊.VLM和网络适配卡驱动程序(例如：DE22X.COM)。<br>
+        　　另外，启动软盘中的AUTOEXEC.BAT和CONFIG.SYS文件内容如下：<br>
+        　　AUTOEXEC.BAT：<br>
+        　　SET NWLANGUAGE=ENGLISH<br>
+        　　LSL.COM<br>
+        　　DE22X.COM<br>
+        　　VLM.EXE<br>
+        　　F：<br>
+        　　LOGIN<br>
+        　　SETPDOS<br>
+        　　SETMDIR /R:F:\MACHINE－DIR<br>
+        　　CONFIG.SYS：<br>
+        　　COUNTRY=001，437<br>
+        　　FILES=100<br>
+        　　软盘安装已在我公司网络上运行成功。<br>
+        　　我公司运行环境为：软件为NetWare 4.1，服务器为Compaq 5/66，工作站为586、486兼容机。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(新疆　杨鹰　程玲)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

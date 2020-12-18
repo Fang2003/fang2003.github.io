@@ -1,0 +1,71 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>硬盘分区无损调整</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font color="#FFFFFF">硬盘分区无<span
+        style="line-height: 1.5">损调整</span></font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　对电脑发烧友来说，硬盘使用一段时间后增加新的分区或调整现有分区容量是免不了的。但是，采用FDISK调整硬盘分区非常麻烦，需要事先备份数据和事后重新安装系统并恢复数据。如果你使用System 
+        Commander Deluxe 4.0（共有2张盘，支持FAT32），就可以对硬盘分区进行无损调整。<br>
+        　　一、System Commander Deluxe 4.0的 安装<br>
+        　　System Commander Deluxe 4.0必须安装到硬盘方能使用。安装方法有三种：一是从实模式的DOS下安装。启动Win95／98后单击“开始”按钮，然后选择“关闭系统”。选中“关闭系统”对话框中的最后一项“重新启动计算机并切换到MS－DOS方式”进入DOS，再运行一号盘上的SETUP.EXE文件。二是启动Win95/98后单击“开始”、“程序”、“MS－DOS方式”命令，打开保护模式下的“MS－DOS方式”窗口，再运行一号盘上的SETUP.EXE文件。三是直接使用System 
+        Commander Deluxe 4.0的一号盘启动电脑，然后运行上面的SETUP.EXE文件进行安装。 
+        <br>
+        　　安装结束后重新启动计算机，屏幕上会出现一个多重启动菜单：A：Windows98、B：Windows98－Prompt、C：Boot 
+        from drive A：，可分别进入Windows98的图形界面、命令行方式及软盘启动状态。 
+        <br>
+        　　二、 增加硬盘分区<br>
+        　　给只有一个C分区的硬盘再增加一个分区，使其变为C、D两个分区的操作步骤如下： 
+        <br>
+        　　1.启动电脑，在出现操作系统多重选择菜单“OS Selection Menu”时按下“Alt＋O”键，进入操作系统安装向导（OS 
+        Wizard）窗口，屏幕上出现“ OS Wizard is analyzing your system… ”信息。<br>
+        　　2.当出现操作系统安装向导窗口时，不进行操作系统的安装工作，而是选择“Cancel”取消操作。 
+        <br>
+        　　3.用鼠标或键盘选择“Partition”（分割操作）菜单，进入磁盘分区管理窗口，窗口分成左、中、右三部分。左边是功能按钮及分区类型图例，中间是硬盘分区示意图，右边显示所选硬盘分区的详细参数。选择分区示意图C盘区域，执行“Resize”命令，根据屏幕提示调整C分区容量大小（不能小于C盘已占用的容量），为增加新的分区腾出空间。以上操作完成后，可看到屏幕中间硬盘分区示意图上分区C的容量变小了，而腾出来的区域则标记为“Free”。<br>
+        　　 4.再选择刚刚腾出来的“Free”区域，执行“Create”命令，然后将分区属性设置为扩展分区“Extended”，新增分区工作即告结束。<br>
+        　　根据笔者经验，执行以上操作前最好运行“磁盘扫描程序”和“磁盘碎片整理程序”，以消除硬盘上可能存在的错误，并将所有数据集中在一起。这样新增分区工作会进行得更顺利。<br>
+        　　三、 调整硬盘分区大小<br>
+        　　使用System Commander Deluxe 4.0将D分区的部分空间调整给C分区（或反之）的操作方法是：<br>
+        　　1.启动电脑进入Win95／98，利用“资源管理器”的“剪切”、“复制”命令，将D分区的所有数据全部移动到C分区。如果D分区的数据不多，也可备份至软盘，再将D分区的所有数据删除。<br>
+        　　2.重新启动电脑，按前面介绍的方法进入硬盘分区管理窗口，选择D分区，执行“Tools－Delete”命令，将D分区删除。完成后原分区D被标记为“Free”。<br>
+        　　3.选择C分区，执行“Resize”命令，将标记为“Free”的区域全部划给C分区。<br>
+        　　4.按前面介绍的方法，重新选择C分区后执行“Resize”命令，根据需要调整C分区容量大小（不能小于C分区已占用的容量），为新的D分区腾出空间,而腾出来的区域则标记为“Free”。<br>
+        　　5.选择刚刚腾出来的“Free”区域，执行“Create”命令，并将分区属性设置为扩展分区“Extended”，一个调整后的D分区即告诞生。<br>
+        　　6.重新启动电脑，进入Win95／98，利用“资源管理器”的“剪切”、“复制”命令，将原来移动到C分区的所有数据（或备份数据）重新移回（或恢复至）D分区。至此，调整D分区大小的工作全部结束。<strong>(新疆　张迎新) 
+        </strong></span></font></p>
+        <p align="right"><big><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月8日第06期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

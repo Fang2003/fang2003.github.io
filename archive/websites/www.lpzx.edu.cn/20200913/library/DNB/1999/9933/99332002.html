@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 低档整合主板超频经验一则</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'>目录</A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'>软件世界</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT  COLOR='#CC0000'>硬件周刊</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>33 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 低档整合主板超频经验一则</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 低档整合主板超频经验一则 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　你是不是得意于自己主板上集成的一些东西呢？请注意了，有时他们会成为你超频的巨大障碍。<br>
+　　我的机器配置为：赛扬300A＋低档BX主板＋LGS PC100 64M内存。一直以为自己的电脑是属于“不可超”一类的，因为不管是加风扇，降硬盘速度，换内存，贴B21脚，调电压，甚至连水冷系统都做了，但总是不能稳定地超到450MHz。<br>
+　　由于购买电脑的时机不好，价格与现在的高档货相差无几，所以一直心有不甘。于是查阅各种硬件资料，日思夜想，寻找自己的机器无法超频的原因。据说赛扬的CPU只要加到2.2V电压就可以稳定地超到450MHz，而我已经将电压加到2.4V，并且加上水冷系统，仍然没戏，看来不是CPU的问题。硬盘为1G、4500转的老将，而且曾经将速度降到PIO 3，好像也没用。至于内存，换过一次，在BIOS中已将速度设成最低，商家保证超频没有问题，同样也没有效果。<br>
+　　最后，我终于将目光放到那块主板上。这是一块BX的板子， Baby－AT结构，集成了一块3D声卡。我曾经在超频时用了3个风扇对着主板吹，也没成功，看来也不是主板过热造成的。<br>
+　　据有关超频的文章介绍，PCI设备的稳定性对超频的成败关系重大。我的主板上只插有一块PCI网卡，将其拿掉，再超，失败。看来我的超频梦要彻底破灭了…… 咦，板载声卡呢？那块集成到主板上的声卡用的是什么总线？赶忙翻出说明书，哈，果然是PCI的！在BIOS中禁用板载声卡后加了一块ISA的声卡（机器不能没声音呀），再超……耶！CPU以450MHz的速度欢快地“走”进“酒吧”，接着又乘坐极品飞车Ⅲ与上帝一起疯狂了一番才收手，在这期间没有任何不稳定的迹象。而此后一个星期的使用更加明确地告诉我，超频是成功的。怎么样？如果你的CPU也没法超频，而主板恰恰又集成了某个东西时，也试试这招，我称之为“舍鱼而取熊掌法”，你看形象吗？<br>
+<b>(江苏　 王祥星)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/33/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99332002.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

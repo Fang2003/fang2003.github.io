@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用Excel制作&lt;&lt;往来帐表&gt;&gt;<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　在商务活动中少不了往来账，如果用电脑将这些账汇总在一张表上，需要查看分户细表时只要点击一下分户名称，分户表就会自动调出来，这样我就会很轻松地工作。下面我们就让Excel97的模板来为你完成吧。<br>
+        　　<strong>一、往来账表模板的制作</strong><br>
+        　　1先制作一张“往来账汇总表”，范围从A4至G35，加上表格线，在第4行设7个字段，从A4至G4字段名分别是“编号”、“分户名称”、“应收账款”等。<br>
+        　　2在G5单元格中设公式：=C5－D5＋E5－F5，然后向下填充至本表格的最后一行的G35单元格。同时在表最后一行的C35至F35设列求和。<br>
+        　　3在表上部的适当位置分别输入标题“往来账汇总表”、“单位”和“统计时间”。<br>
+        　　4制作分户细表：每张分户表设为15行，第一分户表范围是A3至G17，其栏目及公式设置与汇总表一样，设本工作表标签为“分户1表”。在这张工作表中是每一分户设一张表。在第一张表的抬头左边第一单元格A2中填“对方：”。<br>
+        　　5建立关联：<br>
+        　　(1)分户名的关联：汇总表的一行对应一张分户表，以第一户为例：设户名“AAA”。先在分户表的抬头名称位置B2中填入“AAA”，并右击B2在快捷菜单中击复制，然后跳到汇总表点击“分户名称”列下的第一单元格B5，右击选择“选择性粘贴\粘贴链接”。以后在分户表中“AAA”单元格中更改名称时汇总表的B5相应分户名称也随着自动更改。<br>
+        　　(2)统计数字的关联：在“AAA”分户表的最后一行，定义C17至F17单元格，然后右击选择“复制”，再跳到汇总表的分户名“AAA”的那一行，选定C5单元格，再右击选择“选择性粘贴\粘贴链接”。这样只要在分户表上输入数据，其结果都会自动汇总到汇总表。<br>
+        　　(3)在汇总表中查找对应分户细表的关联：先将分户表“AAA”整张表格定义，范围A2至G17。通过菜单的“插入\名称\定义”，填入分户名“AAA”，跳到汇总表，单击B5分户名“AAA”单元格，在工具栏上点击超级链接，出现对话框：<br>
+        　　①选择在“文件中有名称的位置(非必选项)”下的“浏览”。<br>
+        　　②选择“定义名称”。<br>
+        　　③选择“AAA”名称。<br>
+        　　④最后点击“确定”。<br>
+        　　这样只要在汇总表的分户名称栏内点击分户名称，相应的分户细表就会自动调到界面上来。<br>
+        　　以此类推制作其它分户的关联。<br>
+        　　6汇总表的保护：<br>
+        　　定义第二行的B2和G2单元格，通过菜单“格式\单元格\保护”，取消“锁定”后，进行工作表保护设定。这样这张汇总表除了使用单位名称B2和统计时间G2单元格可以输入数据外，其它单元格都被锁死，从而保护了工作表。<br>
+        　　完成设计后此表如图所示，将表名定为《往来账表》，将它另存到Template模板的目录栏中。<br>
+        　<strong>　二、《往来账表》的生成及使用</strong><br>
+        　　在Excel97中通过“文件—新建”在模板中双击《往来账表》模板，便会自动产生一个名为《往来账表1》的xls文件。<br>
+        　　在《往来账表1》中含有两张工件表：（汇总表、分户表），两表相关联。只要在分户表中填入往来发生额，汇总表即会自动加以汇总。当在汇总表中，需要查阅某分户细目时，只要在汇总表上单击该分户名称，便会自动调出相对应的分户表。　　　　<strong>(福建　齐孔骐)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

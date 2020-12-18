@@ -1,0 +1,125 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>VB编程俱乐部</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><big><strong>VB编程俱乐部</strong></big></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p class="ourfont">　　VB编程俱乐部推出后，我每天都会收到大量的来信，为了使你关于VB编程的疑问能尽快得到解答，在提交问题或解答问题时，可使用 
+        VBForums@126.com 和 VBForums@bigfoot.com 
+        这两个邮件地址，也可以通过访问网站 http://VBForums.yeah.net 在 BBS上讨论。另外有许多只能上169的网友来信询问，如何订阅VBForums，在这里我告诉你们一个方法：你可以申请一个163和169通用的免费信箱。<br>
+        　　问题１：在程序运行时，怎样把多个文本框的内容保存起来？（保存到一个文件中，打开时要在相应的文本框输出）。<br>
+        　　回答：可以利用 INI 文件和Windows95／98的注册数据库来保存，下面讲解如何使用 
+        INI 文件来保存和读取内容。假设当前有 Text1、Text2、Text3三个文本框的内容需要保存，INI文件名为 
+        ABC.INI。<br>
+        　　首先新建一个Module，然后，在此Module中说明 API 函数：<br>
+        　　Declare Function WritePrivateProfileString Lib ″ker nel32″ Alias ″WritePrivateProfileStringA″ 
+        (ByVal lpApplica tionName As String, ByVal lpKeyName As Any, ByVal lp String As Any, ByVal 
+        lpFileName As String) As Long<br>
+        　 Declare Function GetPrivateProfileString Lib ″kernel32″ Alias ″GetPrivateProfileStringA″ 
+        (ByVal lpApplicationName As String, ByVal lpKeyName As Any, ByVal lpDefault As String, 
+        ByVal lpReturnedString As String, ByVal nSize As Long, ByVal lpFileName As String) As Long<br>
+        　　为了简化工作，最好定义好几个函数，给程序提供更简单的操作，首先定义一个用于输入的函数WriteOneString： 
+        <br>
+        　　Private Function WriteOneString(ByVal Section As String, ByVal Key As String, ByVal 
+        value As String) As Boolean<br>
+        　　Dim x As Long, buff As String ＊ 128, I As Integer<br>
+        　　buff = value ＋ Chr(0)<br>
+        　　x = WritePrivateProfileString(Section, Key, buff, <br>
+        ″ABC.INI″)<br>
+        　　WriteOneString = x<br>
+        　　End Function<br>
+        　　然后定义一个用于输出的函数 ReadOneString ：<br>
+        　　Private Function ReadOneString(ByVal Section As String, ByVal Key As String) As 
+        String<br>
+        　　Dim x As Long, buff As String ＊ 128, I As Integer<br>
+        　　x = GetPrivateProfileString(Section, Key, ″″, buff, 128, ″ABC.INI″)<br>
+        　　I = InStr(buff, Chr(0))<br>
+        　　ReadOneString = Trim(Left(buff, I － 1))<br>
+        　　End Function<br>
+        　　这时，你就可以在 Form 的 Load 和 UnLoad 
+        事件里分别进行保存和读取操作。<br>
+        　　Private Sub Form_Load()<br>
+        　　Text1 = ReadOneString(″Option″,″Text1″)<br>
+        　　Text2 = ReadOneString(″Option″,″Text2″)<br>
+        　　Text3 = ReadOneString(″Option″,″Text3″)<br>
+        　　End Sub<br>
+        　　Private Sub Form_Unload(Cancel As Integer)<br>
+        　　Text1 = WriteOneString(″Option″,″Text1″,Text1)<br>
+        　　Text2 = WriteOneString(″Option″,″Text2″,Text2)<br>
+        　　Text3 = WriteOneString(″Option″,″Text3″,Text3)<br>
+        　　End Sub<br>
+        　　利用INI文件可以做很多事情，只要你学会举一反三，就可以成为行家里手。<br>
+        　　问题２：我用VB5生成了一个可执行文件，想更改它的图标有什么办法？<br>
+        　　回答：更改VB5的可执行文件的图标需要分三步进行：⑴为某个Form制定图标(如MainForm)；⑵修改工程属性，点选“生成”选项卡，在“图标”列表框中选中MainForm；⑶编译程序。完成上述操作后，看看，你的程序图标是否已改变？<br>
+        　　问题３：如何用编程方式调用通过VB报表设计器设计的报表。<br>
+        　　回答：在工程中引用CrystalReport 控件，然后将出现在 Toolbox 
+        上的相应控件图标拖到 Form 上。选中这个控件(命名为CryReport)，修改其各种属性值，如：报表文件名称等。最后，就可以用代码激活报表预览或打印窗口了,如：CryReport.Action 
+        = 1 。<br>
+        　　问题４：许多用VB编写的软件，当选择“关于”时，其中的E－mail地址和主页网址都是蓝色带下划线的链接形式，这是怎么实现的呢？<br>
+        　　回答：热心的Prisoner 提供了使用API函数ShellExecute 的方法。<br>
+        　　Declare Function ShellExecute Lib ″shell32.dll″ Alias<br>
+        ″ShellExecuteA″(ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As 
+        String, ByVal lpParameters As String, ByVal lpDirectory As String,ByVal nShowCmd As Long) 
+        As Long<br>
+        　　在Label控件的Click事件上加入代码：<br>
+        　　Private Sub Label1_Click()<br>
+        　　Dim HyperJump<br>
+        　　HyperJump = ShellExecute(0＆, vbNullString, WEB, vbNullString,vbNullString, 
+        vbNormalFocus)<br>
+        　　End Sub<br>
+        　　其中WEB为你定义的超连接地址，例如：<br>
+        　　Private Const WEB = ″http://i.am／hellprisoner″<br>
+        　　如果需要调入E－mail，就要在E－mail地址前加入“mailto:” 例如<br>
+        　　Private Const WEB = ″mailto:prisoner@990.net″<br>
+        　　如果在Label的属性中再设置MousePointer = 99 ， 并把MouseIcon设置为一只手的图标，当鼠标移动到标签上时，指针就变成手的形状，这就更像超连接了。<br>
+        　　WEIV网友提供了更简单的解决方法：先建立两个Label控件Label1和Label2，设它们的Caption分别为“我的mail” 
+        和“我的主页”(或是其他你想要显示的内容)，然后加入如下代码:<br>
+        　　Private Sub Label1_Click()<br>
+        　　Set ie = New InternetExplorer<br>
+        　　ie.Visible = False<br>
+        　　ie.Navigate ″mailto:weiv@163.net″<br>
+        　　End Sub<br>
+        　　Private Sub Label2_Click()<br>
+        　　Set ie = New InternetExplorer<br>
+        　　ie.Visible = True<br>
+        　　ie.Navigate ″http://playworld.126.com″<br>
+        　　End Sub<br>
+        　　问题５：我用EXCEL VBA编写宏，我想在打开电子表格文件时立即自动运行该宏命令，可不可以？<br>
+        　　回答：当然可以！你可以为你的 Workbook 编写一个 Open 
+        事件函数，在这个函数里做你需要做的事即可，例如：<br>
+        　　Private Sub Workbook_Open()<br>
+        　　MsgBox ″Main autoexec!″<br>
+        　　End Sub<br>
+        <strong>(VB版主 庞一鸣）</strong></p>
+        <p align="right"><font color="#000000"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1999年3月01日第08期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

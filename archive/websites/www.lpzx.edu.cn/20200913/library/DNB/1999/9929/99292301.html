@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 实现AOpen主板的“瞬间开机功能”</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>29 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 实现AOpen主板的“瞬间开机功能”</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 实现AOpen主板的“瞬间开机功能” 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　近日，升级机器，购得 AOpen AX6BC 主板一块，配 Celeron 300A CPU、AOpen PA70D(8MB显存，S3 Savage3D芯片)显卡、火球七代 6.4GB 硬盘、64MB SDRAM。急急忙忙安装“Win98”，再装好所有驱动程序和应用软件，启动一切正常。<br>
+　　 由于主板支持“瞬间开机功能”，这使我想到，如果能实现硬盘回存瞬间开机,开机速度一如启动DOS就不是梦了。按图索骥：<br>
+　　1.改变BIOS设置<br>
+　　⑴ Power Management →Suspend Mode Option, 选择 “Suspend to Disk”；<br>
+　　⑵ PNP／PCI Configuration →PnP OS Installed, 选择 “NO”.<br>
+　　2.将主板附带光盘上的AOZVHDD.EXE文件拷贝到C盘根目录，建立“挂到硬盘”文件。从安全模式下启动到DOS，运行C:>AOZVHDD ／c ／file或C:>AOZVHDD ／c ／partition（适合于FAT16／FAT32文件系统）。注意前者需要硬盘上有足够的连续空间，即连续的空间大于系统内存与显存之和，否则须先运行有关的磁盘整理程序。后者则需要保留一个足够大的空的分区（这里就用得着Partition Magic之类硬盘分区工具了），该分区要大于系统内存与显存之和，并且要考虑今后内存的扩展。<br>
+　　3.重新启动，进入Windows后再关机时，就不要选择“关闭Windows”了，而是选择“将你的计算机转入睡眠状态”。<br>
+　　这是针对 Windows 95／98 安装时就装好了ACPI而言的。但我的电脑在安装 Windows98 时没有装ACPI，按照上面的步骤操作电脑毫无反应。说明书上却没有多余的话了。经过反复摸索，终于发现设置好BIOS后，还得有下列一番“开肠剖肚”的小动作：<br>
+　　1.安装、配置 Windows 98<br>
+　　(1) 运行 “Setup.exe ／p j” 安装 Windows 98（当然“温酒吧”装好了就不必重装了)；<br>
+　　(2)进入Windows 98，选择Control Panel（控制面板）→Power Management（电源管理），将所有的电源方案设置为 “Never”（从不），并打开“睡眠状态支持”；<br>
+　　(3) 安全模式启动到DOS，运行C:>AOZVHDD ／c ／file或C:>AOZVHDD ／c ／partition；<br>
+　　(4) 重新启动系统。<br>
+　　2.从APM改变到ACPI(只有Windows 98需要改)<br>
+　　(1) 运行 “Regedit.exe”<br>
+　　a.通过“HKEY_LOCAL_MACHINE／SOFTWARE／MICROSOFT／WINDOWS／CURRENT VERSION／DETECT”；<br>
+　　b. 选择“编辑／新建／二进制值”，键值名为 “ACPIOPTION”；<br>
+　　c. 右击新建值，选择“修改”, 在“0000”后加 “01” 变成“0000 01”；<br>
+　　d. 保存退出注册表编辑。<br>
+　　(2) 在“控制面板”中选择“添加新硬件”，允许 Windows 98检测新硬件 (Windows 98将找到“ACPI BIOS”并删除“Plug and Play BIOS”)；<br>
+　　(3) 单击“完成”并重新启动系统。<br>
+　　(4) 在安全模式下进入DOS，然后运行C:>AOZVHDD ／c ／file或C:>AOZVHDD ／c /partition。<br>
+　　3.从ACPI改变到APM<br>
+　　(1) 运行 “Regedit.exe”<br>
+　　a. 通过“HKEY_LOCAL_MACHINE／SOFTWARE／MICROSOFT／WINDOWS／CURRENT VERSION／DETECT”；<br>
+　　b. 右击“ACPI OPTION”并选择“修改”,改变“01”为 “02”即变成“0000 02”（“02”意思是Windows 98是 ACPI 但关闭 ACPI 功能）；<br>
+　　c. 保存退出注册表编辑。<br>
+　　(2)Windows 98将找到“Plug and Play BIOS”并删除“ACPI BIOS”；<br>
+　　(3) 重新启动系统；<br>
+　　(4) 再次运行“添加新硬件”，Windows 98将找到 “Advanced Power Management Resource”（高级电源管理）；<br>
+　　(5) 点击 “OK”（完成）。<br>
+　　至此即大功告成！关机后再开机试试？自检完毕后，很快是“嘀——”一声长鸣，显示一行蓝底黄字“Your saved system information will now be restored, Please wait ....”几秒钟后即恢复先前关机时的画面。<br><b>(湖南　匡德其)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/29/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99292301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

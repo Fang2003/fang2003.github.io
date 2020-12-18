@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">巧用CLIPBOARD建立图像数据库&quot;<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">VisualBasic中的数据控件(datacontrol)能连接众多的数据库源并且操纵简便，用来开发数据库管理应用程序，可以轻而易举地完成以前需要大量编写程序才能完成的任务。<br>
+        &nbsp;&nbsp;&nbsp; 使用其缺省数据库(Access格式)的二进制类型(Binary)字段来存放图形图像数据可建立包含图像的数据库，只是图像的格式受限制(缺省为bmp类型)。<br>
+        &nbsp;&nbsp;&nbsp; 那么，能否在VB中建立一个不受图像格式限制的图像数据库呢?下面通过实例介绍实现方法：1.定义数据库结构用数据管理器(datamanager)建立一个包含表ImgTable的数据库Imge1mdb。<br>
+        &nbsp;&nbsp;&nbsp; 其中表ImgTable的结构定义为：<br>
+        &nbsp;&nbsp;&nbsp; 字段名&nbsp;&nbsp;&nbsp; 类型<br>
+        &nbsp;&nbsp;&nbsp; No 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer<br>
+        &nbsp;&nbsp;&nbsp; ImgData&nbsp; Binary<br>
+        &nbsp;&nbsp;&nbsp; 这里，同时预先建立几个ImgData内容为空的记录，供测试用。<br>
+        &nbsp;&nbsp;&nbsp; 2.添加控件及代码<br>
+        &nbsp;&nbsp;&nbsp; 在Form1上画出标签(Label1)、按钮(Command1)、图片框(Picture1)、数据控件(Data1)各一个，属性及代码如下：<br>
+        &nbsp;&nbsp;&nbsp; Data1DatabaseName=″C:\VB40\IMGE1MDB″<br>
+        &nbsp;&nbsp;&nbsp; Data1RecordSource=ImgTable<br>
+        &nbsp;&nbsp;&nbsp; Label1DataSource=ImgTable<br>
+        &nbsp;&nbsp;&nbsp; Label1DataField=No<br>
+        &nbsp;&nbsp;&nbsp; Picture1DataSource=ImgTable<br>
+        &nbsp;&nbsp;&nbsp; Picture1DataField=ImgData<br>
+        &nbsp;&nbsp;&nbsp; SubCommand1_Click()<br>
+        &nbsp;&nbsp;&nbsp; ′从Clipboard截取图像数据到图片框控件中<br>
+        &nbsp;&nbsp;&nbsp; Picture1Picture=ClipboardGetData()<br>
+        &nbsp;&nbsp;&nbsp; End Sub<br>
+        &nbsp;&nbsp;&nbsp; 3.往Clipboard送图像可采用各种支持Clipboard的图像编辑器，如在Photoshop上处理好图像，然后将其“拷贝”或“剪切”至Clipboard。<br>
+        &nbsp;&nbsp;&nbsp; 4.从Clipboard截取图像到数据库<br>
+        &nbsp;&nbsp;&nbsp; 切换至VB，运行Form1。用鼠标点击按钮Command1，将图像从Clipboard“粘贴”到图片框中。然后，利用数据控件将当前记录往后(或往前)滑动，图片框中的图像便自动保存至数据库中。<br>
+        &nbsp;&nbsp;&nbsp; 5.重复3、4步，利用Clipboard可建立一个不受图像格式限制的图像数据库，而且，比起字段中放置图像文件名再依此调用图像文件的方法更易管理。<br>
+        &nbsp;&nbsp;&nbsp; 另外，对于一些数据库的增加、查询、修改等操纵功能，可配合使用数据库对象(如Database、TableDef、Field、Dynaset、Snapshot等)去完成。<br>
+        &nbsp;&nbsp;&nbsp; 以上程序在VisualBasic30/40上通过。<strong>(浙江 
+        胡文俊)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

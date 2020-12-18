@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 解决安装硬件设备引起的中断冲突</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>27 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 解决安装硬件设备引起的中断冲突</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 解决安装硬件设备引起的中断冲突 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　当用户为计算机安装打印机、 MODEM卡、扫描仪和网卡等硬件设备时，往往没有专业人员在现场指导，在计算机连接的外部设备较少时，出现问题的可能性还不大，但计算机连接有较多的外部设备时，如果安装设置不当，原有的设备就无法正常工作。这其中的原因就是安装多种设备后，产生了中断冲突，笔者经过反复研究，解决了这个问题。我想很多朋友也会遇到这种情况。现介绍如下，初学电脑的朋友可资借鉴，也欢迎来E－Mail交流(xyx99@990.net)。<br>
+　　笔者的电脑是一台奔腾Ⅱ兼容机，使用中文Windows98操作平台，安装了同维内置56K MODEM卡，拨号连入Internet网，使用一年多，收发电子邮件、传真一切正常。前不久，购买了北京天财胜龙科技发展有限公司的广星卡,通过闭路电视线接收股票信息，安装完成后，股市信息接收效果很好。但发现不能拨号上网，以为是MODEM卡的驱动程序丢失，重新安装其驱动程序，设置“拨号网络”，还是不行。进入“控制面板”，打开“系统／设备管理器”标签，单击“调制解调器”，双击“ Davicom  56p internal foxmodem”，显示IRQ为5，设备状态框显示“该设备工作正常”，单击“资源”标签，在冲突设备列表中显示“没有冲突”。向朋友请教，都没有遇到过这个问题，可能是既装广星卡又装MODEM卡的人还不多，无奈之下,我打算卸去广星卡, 恢复机器拨号上网。<br>
+　　后来静下心来分析，我想可能是广星卡和MODEM卡占用了同一个 IRQ5，由于广星卡是在DOS下安装，在“设备管理器”中没有显示，按照说明书更改中断比较麻烦，试试重新设置一个调制解调器的中断请求号，看看怎么样？进入“控制面板”，打开“系统／设备管理器”标签，双击“调制解调器”，双击“Davicom  56p internal foxmodem”栏，打开“资源”标签，显示中断请求号为“5”，选中“中断请求”，去掉“使用自动设置”复选框，单击“更改设置”，在“值”框中，按动上下键，从计算机未占用的IRQ中分配一个中断号给调制解调器，设置“调制解调器”的IRQ 为15，单击“确定”。一试机，问题解决，硬件设备冲突就这么搞定了。<br>
+　　最近我又购买了一台N－TEK6030扫描仪，正确安装后，运行“扫描仪检测”，一看窗口中显示IRQ为5，就知道问题又来了，果然，接收股市信息失败了。看来只好重新分配中断号了。同上次一样，进入“控制面板/系统／设备管理器”标签的“N－TEK  parallel port  Host  adapter”栏，发现扫描仪直接强占了IRQ5，无法更改中断号，真是霸道！只好进入“设备管理器”标签，双击“计算机”，查看计算机设备中未占用中断号，只有IRQ12能给广星卡。通过仔细阅读广星卡说明书，在广星卡上有一排插针跳线，可供选择的IRQ有5、7、10、11、12、15，默认为IRQ5，拔插跳线将中断设为IRQ12 ，再运行广星卡附带的slfchsr.exe文件，在IRQ处输入“12”， 完成中断号设置，一试机，问题解决。<br>
+　　小结：当为计算机添加外部硬件设备时，都要给硬件设备分配一个合适的中断号及I/O地址，知道了这个道理，用户就可以通过打开“控制面板”，单击“系统”，单击“设备管理器”标签，双击“计算机”，查看硬件安装使用的中断号。<br>
+　　笔者第一次遇到的广星卡与MODEM卡发生中断冲突，就是广星卡将中断号默认为IRQ5，在控制面板的“设备管理器”中，没有显示“广星卡”，设备状态框显示“该设备工作正常”， 在冲突设备列表中显示“没有冲突”。 这样就使问题具有了隐匿性，迷惑了笔者。所以用户在安装新硬件后，若原有设备不能工作，应考虑是否发生了中断冲突，可以试一试其它中断号，说不定问题就解决了。在计算机中，系统时钟、键盘、软驱、打印机、显卡、硬盘等一些最基本的硬件设备的中断号是固定的，不能更改，另外增加的设备如MODEM卡，扫描仪、广星卡、网卡等可以使用计算机未占用的中断口5、9、12、15进行设置。所以，更改硬件设备的中断请求，就可以避免硬件安装中遇到的中断冲突，使计算机和外设的性能更好地发挥。<br> 
+<b>(山东　薛元昕　李鹰)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/27/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99272301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD></TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

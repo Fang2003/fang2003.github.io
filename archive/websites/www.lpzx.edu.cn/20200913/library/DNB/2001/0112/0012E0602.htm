@@ -1,0 +1,130 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/oa.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>曲径通幽花木深——也谈在ＥＸＣＥＬ中进行币值转换</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> <br>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第12期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/oa.html">OA专刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{曲径通幽花木深——也谈在EXCEL中进行币值转换}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{有幸在2000年6月5日《电脑报》的第59版读到了山东钟震宇同志的《EXCEL中不同币种贷款与人民币的自动转换》一文，深受启发。<br>
+              但是我认为用ｉｆ函数写的公式似乎有些繁琐，而且最重要的是ｉｆ函数最多只能包含8个嵌套判断9种情况，如果有10个及其以上的币种汇率，ｉｆ函数就会“卡壳”。<br>
+              我根据自己以前的经验，针对同样的问题，用另一个函数试验了一下，结果证明不但可以简化公式而且还可以容纳大数据表。<br>
+              仍旧用钟震宇同志的假设数据表（如图所示），单元格区域A1B5存放预先设定的各外汇汇率，我们称为数据表。A7B14的内容需要手工输入，C7C14的值利用公式计算。这里我们不走“判断”的思路，而改走“搜索”的道路来解决问题，也就是用ｖｌｏｏｋｕｐ函数。其功能就是根据用户的指令，在一定范围的数据表中找到符合条件的记录并返回该记录指定字段的内容。<br>
+              ｖｌｏｏｋｕｐ函数的原始格式为：ｖｌｏｏｋｕｐ（ｌｏｏｋｕｐ＿ｖａｌｕｅｔａｂｌｅ＿ａｒｒａｙｃｏｌ＿ｉｎｄｅｘ＿ｎｕｍｒａｎｇｅ＿ｌｏｏｋｕｐ）。其中参数ｌｏｏｋｕｐ＿ｖａｌｕｅ为需要在数据表首列搜索的值（也就是我们想要搜索的内容）；ｔａｂｌｅ＿ａｒｒａｙ为需要在其中搜索数据的数据表；ｃｏｌ＿ｉｎｄｅｘ＿ｎｕｍ为满足条件的单元格在数据表中的列序号；ｒａｎｇｅ＿ｌｏｏｋｕｐ指定在查找时是精确匹配还是大致匹配，如果需要大致匹配，则赋值为FALSE，如果需要精确匹配，则赋值为TRUE或忽略此参数。<br>
+              说了这么多术语，连我都有些糊涂了。那么就让我们在实例中熟悉ｖｌｏｏｋｕｐ好了。<br>
+              在B7单元格中应当这样写公式：“＝B7＊VLOOKUPA7＄A＄1＄B＄52FALSE／100”。<br>
+              VLOOKUPA7＄A＄1＄B＄52FALSE的意思是：在＄A＄1＄B＄5这个固定的数据表的首列中针对A7单元格的内容进行搜索，搜索到首列与A7内容完全相符的记录后就提取该记录第2列的内容（因为汇率是在＄A＄1＄B＄5这个固定的数据表的第2列）。在本例中的实际含义就是，以A7单元格的内容（即字符“USD”）为标准，在＄A＄1＄B＄5这个数据表的首列中搜索，当搜索到与“USD”相同的记录（即第1行）后，指定提取第2列——我们需要的数据——汇率。<br>
+              另外请注意：<br>
+              1）要用绝对引用来描述数据区域，也就是说要将A1到B5描述成“＄A＄1＄B＄5”，至少要描述为“A＄1B＄5”。<br>
+              2）最后一个参数必须是“FALSE”，否则会形成混乱。<br>
+              公式中其余的内容就好说了：B7单元格的内容乘以利用ｖｌｏｏｋｕｐ函数搜索并提取的汇率再除以100便可以得出正确结果。<br>
+              最后将C7复制到C8C14，大功告成！<br>
+              当然，我们可以将汇率清单单独存放在一个工作表中，那样我们的表格将更加美观。我们还可以将存放汇率的数据表增加多个空行，例如增加为A1B7，将公式中的＄A＄1＄B＄5改为＄A＄1＄B＄7。日后如果增加了新的币种，我们就可以随时在数据表中增加汇率，及时扩充数据。这点充分体现了ｖｌｏｏｋｕｐ函数大容量的特性。<br>
+              文章错误之处，万望多多批评指正。河北 董国红}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

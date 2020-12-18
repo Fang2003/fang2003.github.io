@@ -1,0 +1,153 @@
+.mstheme     { separator-image: url(romhorsd.gif); list-image-1: url(rombul1d.gif); 
+               list-image-2: url(rombul2d.gif); list-image-3: 
+               url(rombul3d.gif); nav-banner-image: url(rombannd.gif); 
+               navbutton-horiz-normal: url(romhbudd.gif); 
+               navbutton-horiz-pushed: url(romhbusd.gif); 
+               navbutton-vert-normal: url(romhbudd.gif); 
+               navbutton-vert-pushed: url(romvbusd.gif); 
+               navbutton-home-normal: url(romhombd.gif); 
+               navbutton-next-normal: url(romnexbd.gif); 
+               navbutton-prev-normal: url(romprebd.gif); navbutton-up-normal: 
+               url(romupbd.gif) }
+.mstheme-bannertxt { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-horiz-navtxt { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-vert-navtxt { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-navtxthome { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-navtxtnext { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-navtxtprev { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-navtxtup { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+ul           { list-style-image: url('rombul1d.gif') }
+ul ul        { list-style-image: url('rombul2d.gif') }
+ul ul ul     { list-style-image: url('rombul3d.gif') }
+a:link       { color: rgb(102,0,0) }
+a:visited    { color: rgb(153,153,0) }
+a:active     { color: rgb(0,102,0) }
+body         { color: rgb(102,51,0); background-color: rgb(255,255,255) }
+h1           { color: rgb(102,0,0) }
+h2, marquee  { color: rgb(153,102,0) }
+h3           { color: rgb(153,153,0) }
+h4           { color: rgb(102,0,0) }
+h5           { color: rgb(153,102,0) }
+h6           { color: rgb(153,153,0) }
+hr           { color: rgb(153,153,0) }
+button       { background-color: rgb(102,0,0); color: white; border-color: rgb(153,102,0) }
+label, .MSTHEME-LABEL { color: rgb(102, 51, 0) }
+textarea     { border-color: rgb(102,0,0) }
+fieldset     { color: black; border-color: rgb(102,0,0) }
+legend       { color: rgb(153,153,0) }
+select       { color: black; border-color: rgb(102,0,0) }
+table        { table-border-color-light: rgb(153,102,0); table-border-color-dark: 
+               rgb(102,0,0); color: rgb(102, 51, 0); border-color: 
+               rgb(102,0,0) }
+caption      { color: rgb(153,153,0) }
+th           { color: rgb(102, 51, 0); border-color: rgb(102,0,0) }
+td           { border-color: rgb(102,0,0) }
+.mstheme-bannertxt a:active { color: rgb(102,0,0) }
+.mstheme-bannertxt a:link { color: rgb(102,0,0) }
+.mstheme-bannertxt a:visited { color: rgb(102,0,0) }
+.mstheme-bannertxt-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('rombannd.gif'); font-family: 宋体 }
+.mstheme-bannertxt-g a:active { color: rgb(102,0,0) }
+.mstheme-bannertxt-g a:link { color: rgb(102,0,0) }
+.mstheme-bannertxt-g a:visited { color: rgb(102,0,0) }
+.mstheme-bannertxt-s { color: rgb(102,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-bannertxt-s a:active { color: rgb(102,0,0) }
+.mstheme-bannertxt-s a:link { color: rgb(102,0,0) }
+.mstheme-bannertxt-s a:visited { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt a:active { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt a:link { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt a:visited { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romhbudd.gif'); font-family: 宋体 }
+.mstheme-horiz-navtxt-g a:active { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt-g a:link { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt-g a:visited { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt-gs { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romhbusd.gif'); font-family: 宋体 }
+.mstheme-horiz-navtxt-gs a:active { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt-gs a:link { color: rgb(102,0,0) }
+.mstheme-horiz-navtxt-gs a:visited { color: rgb(102,0,0) }
+.mstheme-navtxthome a:active { color: rgb(102,0,0) }
+.mstheme-navtxthome a:link { color: rgb(102,0,0) }
+.mstheme-navtxthome a:visited { color: rgb(102,0,0) }
+.mstheme-navtxthome-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romhombd.gif'); font-family: 宋体 }
+.mstheme-navtxthome-g a:active { color: rgb(102,0,0) }
+.mstheme-navtxthome-g a:link { color: rgb(102,0,0) }
+.mstheme-navtxthome-g a:visited { color: rgb(102,0,0) }
+.mstheme-navtxtnext a:active { color: rgb(102,0,0) }
+.mstheme-navtxtnext a:link { color: rgb(102,0,0) }
+.mstheme-navtxtnext a:visited { color: rgb(102,0,0) }
+.mstheme-navtxtnext-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romnexbd.gif'); font-family: 宋体 }
+.mstheme-navtxtnext-g a:active { color: rgb(102,0,0) }
+.mstheme-navtxtnext-g a:link { color: rgb(102,0,0) }
+.mstheme-navtxtnext-g a:visited { color: rgb(102,0,0) }
+.mstheme-navtxtprev a:active { color: rgb(102,0,0) }
+.mstheme-navtxtprev a:link { color: rgb(102,0,0) }
+.mstheme-navtxtprev a:visited { color: rgb(102,0,0) }
+.mstheme-navtxtprev-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romprebd.gif'); font-family: 宋体 }
+.mstheme-navtxtprev-g a:active { color: rgb(102,0,0) }
+.mstheme-navtxtprev-g a:link { color: rgb(102,0,0) }
+.mstheme-navtxtprev-g a:visited { color: rgb(102,0,0) }
+.mstheme-navtxtup a:active { color: rgb(102,0,0) }
+.mstheme-navtxtup a:link { color: rgb(102,0,0) }
+.mstheme-navtxtup a:visited { color: rgb(102,0,0) }
+.mstheme-navtxtup-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romupbd.gif'); font-family: 宋体 }
+.mstheme-navtxtup-g a:active { color: rgb(102,0,0) }
+.mstheme-navtxtup-g a:link { color: rgb(102,0,0) }
+.mstheme-navtxtup-g a:visited { color: rgb(102,0,0) }
+.mstheme-topbar-font a:active { color: rgb(102,0,0) }
+.mstheme-topbar-font a:link { color: rgb(102,0,0) }
+.mstheme-topbar-font a:visited { color: rgb(102,0,0) }
+.mstheme-topbar-font-g { font-size: 1; color: rgb(102,0,0); background-image: url('romglob.gif'); 
+               font-family: 宋体 }
+.mstheme-topbar-font-g a:active { color: rgb(102,0,0) }
+.mstheme-topbar-font-g a:link { color: rgb(102,0,0) }
+.mstheme-topbar-font-g a:visited { color: rgb(102,0,0) }
+.mstheme-vert-navtxt a:active { color: rgb(102,0,0) }
+.mstheme-vert-navtxt a:link { color: rgb(102,0,0) }
+.mstheme-vert-navtxt a:visited { color: rgb(102,0,0) }
+.mstheme-vert-navtxt-g { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romhbudd.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-g a:active { color: rgb(102,0,0) }
+.mstheme-vert-navtxt-g a:link { color: rgb(102,0,0) }
+.mstheme-vert-navtxt-g a:visited { color: rgb(102,0,0) }
+.mstheme-vert-navtxt-gs { color: rgb(102,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('romvbusd.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-gs a:active { color: rgb(102,0,0) }
+.mstheme-vert-navtxt-gs a:link { color: rgb(102,0,0) }
+.mstheme-vert-navtxt-gs a:visited { color: rgb(102,0,0) }
+.mstheme     { navbutton-background-color: rgb(255,255,255); top-bar-button: url(romglob.gif) }
+.mstheme-topbar-font { font-size: 1; color: rgb(102,0,0); font-family: 宋体 }
+body         { font-family: 宋体 }
+h1           { font-weight: normal; font-style: normal; font-size: 24pt; font-family: 宋体 }
+h2           { font-weight: normal; font-style: normal; font-size: 18pt; font-family: 宋体 }
+h3           { font-weight: normal; font-style: normal; font-size: 14pt; font-family: 宋体 }
+h4           { font-weight: normal; font-style: normal; font-size: 12pt; font-family: 宋体 }
+h5           { font-weight: normal; font-style: normal; font-size: 10pt; font-family: 宋体 }
+h6           { font-weight: normal; font-style: normal; font-size: 8pt; font-family: 宋体 }
+button       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+label, .MSTHEME-LABEL { font-size: 8pt; font-style: normal; font-family: 宋体 }
+textarea     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+fieldset     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+legend       { font-size: 8pt; font-style: Normal; font-family: 宋体 }
+select       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+table        { font-style: normal; font-family: 宋体 }
+caption      { font-size: 14pt; font-style: normal; font-family: 宋体 }
+th           { font-style: normal; font-family: 宋体 }
+marquee      { font-size: 14pt; font-family: 宋体 }

@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Netware 
+        3.12使用经验三则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　<strong>一、无盘工作站以386增强模式运行Windows3.2</strong><br>
+        　　1.网络环境<br>
+        　　Netware3.12网络操作系统，五十台586/16M/1.44M工作站，一台HP Netserver 
+        E40服务器，一台LQ1600K打印机(连接在HP服务器的LPT1上)。服务器硬盘上安装了一个SYS卷(1.8G)和一个DATAS卷(2G)，在SYS卷上安装了Netware3.12系统软件，UCDOS6.0汉字系统和各种应用软件，DATAS卷上建有50个目录(和用户名一致)供用户使用，系统登录脚本(System 
+        Login Script)里有以下两行：<br>
+        　　Map root G:=datas:％login_name(G:为登录入网的用户在DATAS卷的目录名)<br>
+        　　Drive G:(用户入网后的缺省驱动器)<br>
+        　　2.Windows3.2安装<br>
+        　　以Supervisor用户名登录入网，将Windows3.2中文版安装软件拷贝到网络F盘的WIN32目录中。<br>
+        　　在一无盘站上以Supervisor用户名登录入网，进入F盘的WIN32目录，执行安装程序Setup/a，将Windows的共用程序(约20M)安装到F盘的PWIN32.SHR目录中。<br>
+        　　将DATAS卷上的某一用户目录(如XY1)映射为G盘(Map root G:=datas:xy1)，然后再进入F盘的WIN32目录，执行安装程序Setup/n，将Windows的用户程序(约5M)安装到G盘的PWIN32目录中。<br>
+        　　此时若要以386增强模式进入Windows，则必须在A驱中插入一张含有EMM386.EXE和WIN386.EXE的软盘(这两个文件存在于PWIN32.SHR目录中)，此种方式对于多人共用的工作站来说极为不便。我们采用了一种特别的解决办法成功地避免每次启动Windows都要插入A盘的操作。<br>
+        　　将这两个文件拷贝到F盘的DOS目录下(也可以在F盘上专建一目录)，将DOS目录映射为A驱(MAP 
+        ROOT A:=F:\DOS)，也可以在G盘的根目录上建立一个文件ENTER.DAT，利用DOS的重定向输入代替回车操作，最后在G盘的根目录上建立包含以下内容的批处理文件WIN.BAT：<br>
+        　　@ECHO OFF<br>
+        　　MAP ROOT A:=F:DOS&lt;ENTER.DAT<br>
+        　　CD\PWIN32<br>
+        　　WIN.COM<br>
+        　　MAP DEL A:<br>
+        　　CD\<br>
+        　　执行WIN.BAT就能以386增强模式进入Windows。<br>
+        　　安装一些公用的应用软件，如Word6.0、Excel5.0、WPS97、五笔字型输入法等，如果每台无盘站都使用相同的显示卡，还应安装显卡驱动程序。最后将目录PWIN32和文件WIN.BAT分别拷贝到各用户目录中，安装即告完成。<br>
+        　　此方法不但可使无盘站以386增强模式运行Windows3.2，而且各用户可自行安装不同的应用软件，设置不同风格的桌面。唯一不足的是在Windows中不能使用A驱读写光盘。<br>
+        　　<strong>二、无盘工作站自动登录入网</strong><br>
+        　　Netware每次入网都需要输入用户名，这对于教学用无盘站或多人共用的无盘站极为不便，由于各网卡的地址(Node 
+        Address)是唯一的，所以我们可以利用该地址通过二次登录的方法实现每台无盘站以不同的用户名自动登录入网。<br>
+        　　1.获得每台无盘站网卡地址和用户名<br>
+        　　启动网络上的每一台无盘站并以相应的用户名登录入网，在一台有盘或无盘站上以Supervisor用户名登录入网，键入网络工作站命令Userlist/a可查得每台工作站的网卡地址和用户名，将其重定向输出到文件Login.doc中(Userlist/a&gt;Login.doc)，用文本编辑软件将Login.doc按以下格式编辑整理保存至F盘的Login目录中：<br>
+        　　IF P_STATION=″000034D6E564″ THEN EXIT ″LOGIN XY1″<br>
+        　　IF P_STATION=″00003467E564″ THEN EXIT ″LOGIN XY2″<br>
+        　　……<br>
+        　　其中的000034D6E564、00003467E564和XY1、XY2是无盘站网卡地址及相应的用户名。<br>
+        　　2.登录方法<br>
+        　　建一公用用户名Users，在Users的用户登录脚本(Login Script)里输入INCLUDE 
+        SYS:\LOGIN\LOGIN.DOC，这样当以Users登录时，计算机就会先调用Login.doc。其后根据当前无盘站的网卡地址所对应的用户名自动进行二次登录入网。<br>
+        　　为使无盘站启动后先按Users的用户名登录，还应将以下内容加入到F盘Login目录中的Autoexec.bat批处理文件中：<br>
+        　　F:<br>
+        　　CD\LOGIN<br>
+        　　LOGIN USERS<br>
+        　　以上方法实现了每台无盘站以不同的用户名自动登录入网，避免了多个用户以同一用户名登录入网并防止了用户登录时出现错误。在教学网络中采用这种方法，可以收到很好的效果。<br>
+        　　<strong>三、共享打印机</strong><br>
+        　　以Supervisor登录入网，执行Pconsole.exe程序，由此可定义一个队列(Queue)Q1和一个打印服务器(Print 
+        Server)PS1。定义好PS1的各项参数后，在服务器上键入Load pserver ps1命令(也可将其加入到Autoexec.ncf中)。<br>
+        　　1.在Windows中共享打印机。<br>
+        　　从工作站进入Windows3.2中文系统后，先安装好打印机(LQ1600K)驱动程序，双击控制面板中的打印机图标，单击“连接”及“网络”按钮进入Network－Printer 
+        Connections窗口，将队列Q1加入到Available Queues中，选择Permanent(常置的)，单击Connect，再单击Options打开Print 
+        Options for LPT1：窗口，取消Enable banner选项，然后按完成网络打印机设置。<br>
+        　　此后在Windows中就可以随时使用网络打印机进行打印。<br>
+        　　2.在UCDOS6.0中共享打印机<br>
+        　　从工作站登录入网，执行以下命令：<br>
+        　　CAPTURE Q=Q1/NB/NT/NFF/TI=5<br>
+        　　或在System Login Script的最后加入：<br>
+        　　＃F:\PUBLIC\CAPTURE Q=Q1/NB/NT/NFF/TI=5<br>
+        　　就可以在UCDOS支持的任何环境下(包括WPS)用网络打印机进行打印了。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(广西　裴献　彭科)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

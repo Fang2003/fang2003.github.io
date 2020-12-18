@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 汉化AutoCAD R14菜单</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+  <TR> 
+    <TD WIDTH='468' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top' colspan="2"><img src="images/dzba.gif" width="468" height="60"></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9938.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9938.html'>38 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 汉化AutoCAD R14菜单</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 汉化AutoCAD R14菜单 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现在汉化软件很多，可是它们对一些专业的术语翻译总是不尽人意，我经过一段时间的摸索,终于找到了汉化AutoCAD R14的方法。 现将方法介绍如下：<br>
+　　一、使用查找功能(win键＋F键)或资源管理器找到AutoCAD R14\Support\acad.mnu文件,然后用写字板打开该文件。
+　　我们会发现,该文件的内容和AutoCAD R14下拉菜单、屏幕菜单、工具提示的内容是相对应的。为了不破坏原有菜单，同时也为了安全起见，在汉化之前最好将acad.mnu文件拷贝一份并更名保存（例如更名为：chinese.mnu ，为了调用方便将更名文件仍存放在Support子目录下）。<br>
+　　二、用写字板编辑chinese.mnu文件，方法如下：<br>
+　　1．将“[    ]”内的英文翻译成汉语. <br>
+　　2．将字符“＆”和紧跟其后的一个字母保留并加上圆括号,删掉其余的字母，那么这一行修改就完成了。下面给出修改FILE菜单的实例，原英文菜单为：<br>
+　　＊＊＊POP1<br>
+　　＊＊FILE<br>
+　　ID_MnFile    [＆File]<br>
+　　ID_New       [＆New...\tCtrl＋N]^C^C_new<br>
+　　ID_Open      [＆Open...\tCtrl＋O]^C^C_open<br>
+　　[－－]<br>
+　　ID_Save      [＆Save\tCtrl＋S]^C^C_qsave<br>
+　　ID_Saveas    [Save ＆As...]^C^C_saveas<br>
+　　ID_Export    [＆Export...]^C^C_export<br>
+　　[－－]<br>
+　　ID_Config    [P＆rinter Setup...]^C^C_config<br>
+　　ID_Preview   [Print Pre＆view]^C^C_preview<br>
+　　ID_Print     [＆Print...\tCtrl＋P]^C^C_plot<br>
+　　修改后为：<br>
+　　＊＊＊POP1<br>
+　　＊＊FILE<br>
+　　ID_MnFile    [文件(＆F)]<br>
+　　ID_New       [新建(＆N)...\tCtrl＋N]^C^C_new<br>
+　　ID_Open      [打开(＆O)...\tCtrl＋O]^C^C_open<br>
+　　[－－]<br>
+　　ID_Save      [保存(S＆)\tCtrl＋S]^C^C_qsave<br>
+　　ID_Saveas    [另存为(＆A)...]^C^C_saveas<br>
+　　ID_Export    [输出为(＆E)...]^C^C_export<br>
+　　[－－]<br>
+　　ID_Config    [打印设置(＆R)...]^C^C_config<br>
+　　ID_Preview   [打印预览(＆V)]^C^C_preview<br>
+　　ID_Print     [打印(＆P)...\tCtrl＋P]^C^C_plot<br>
+　　关于屏幕菜单和工具提示的汉化方法和下拉菜单相似，只是它们没有了“＆”＋字母。按照以上方法修改后将其保存为纯文本文件即可。<br>
+　　三、汉化菜单的调用方法如下：<br>
+　　1. 启动AutoCAD R14。<br>
+　　2. 在command:命令提示后键入menu命令调用菜单程序。<br>
+　　3.出现Select Menu File对话框后, 选择文件类型 “Menu Template ”，然后选中你的汉化菜单文件，如：chinese.mnu，最后选择打开,将出现警告信息，回答“YES”，稍等片刻，中文菜单就出现了。<br>
+　　4. 需要注意的是：如果你的汉化出现错误，调用时在AutoCAD命令行会提示你在哪几行有错误，你可以按照提示进行修改(错误通常是有些地方不应有空格)。<br>
+<b>(湖北　黄 涛)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/38/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99381204.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

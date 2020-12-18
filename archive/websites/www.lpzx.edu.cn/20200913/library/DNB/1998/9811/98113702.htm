@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>PCI 
+        SCSI卡的使用</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　随着使用SCSI接口的设备和扫描仪等的日渐普及，SCSI(小型计算机系统接口)正被更多的人所接受。SCSI设备需要一块接口卡来将设备的数据传至系统总线上。下面以市场常见的DC－390系列的PCI 
+        SCSI卡为例，讲讲SCSI在安装、使用中应注意的问题。<br>
+        　　基于PCI总线的DC－390 SCSI卡具有PCI 2.1标准的PNP功能，同时该卡支持ASPI（Advanced 
+        SCSI Programming Interface),兼容MS－DOS、WINDOWS 3.X/95/NT、OS/22.0/WARP 3.0/4.0及网络系统NETWARE3/4。<br>
+        　　DC390分为DC390、DC390U、DC390F三个型号，其中390和390U最多可接七个SCSI设备，而390F可连接15个SCSI设备。在连接DC－390F时要特别注意，该卡有一个68针的16位外部SCSI设备连接端子，一个68针的16位内部SCSI设备连接端子和一个50针的8位内部SCSI设备连接端子，可最多连接15个16位SCSI设备和最多7个8位SCSI设备，但在连接时，卡上的三个连接端子（无论内外口）只能同时使用两个。<br>
+        　　在同一个系统中可最多插接四块DC－390。由于SCSI卡上的BIOS将映射至内存，这样每块卡将占用不同的16KB的内存空间；当有四块卡同时使用时，每块卡具有不同的映射地址，将总共耗用64KB的内存。因此，当在一个系统内使用了两块以上的该卡时，我们可设定一块卡为主控卡，即将该卡上的JP2跳线短接，其它卡上的JP2开路。这样，当系统引导时，主卡的BIOS将控制其它的SCSI卡进行系统设备初始化和数据的传输。<br>
+        　　为使SCSI设备稳定工作，通常SCSI总线的两端配有终端匹配器。在DC－390上配置有先进的“Active 
+        Termintors”终端匹配器，它可自动搜索SCSI总线上的设备来调整系统配置，因此不需要手动调节SCSI的终端匹配器。<br>
+        　　SCSI总线的物理连线长度同时受所接设备数量和传输速度两个因素所决定。下表列出DC－390系列的三个卡的具体连接长度：<br>
+        型号 SCSI类别 传输率 最多设备 最大连接<br>
+        390 SCSI－2 10MB/秒 8 3米<br>
+        390U ULTRA 20/40MB/秒 4 　3米 <br>
+        390F ULTRA 20/40MB/秒 8 1.5米<br>
+        　　从上表中可以看出：在同等条件下所连设备数越多则SCSI线的物理长度就越小。注意，当有内部SCSI设备连接时，其内部SCSI线的长度也应计算在总长度之内。<br>
+        　　当在装有外部SCSI设备的系统冷开机时，一定要首先打开外部SCSI设备的电源，而后再开启系统电源。这是由于SCSI卡在加电初始化时要搜索SCSI设备来调整SCSI总线的设置，此时若外部设备未能开机，则系统将忽略该外部设备从而使设备不能正常工作，这一点要特别注意。<br>
+        　　在早期主板上安装SCSI硬盘做为引导盘（C盘）时，一定要将CMOS中的硬盘类型设为“not－installed”，因早期主板的BIOS的IDE类型硬盘具有绝对的系统优先权。当在装有一块或两块IDE的硬盘的系统上再加接SCSI硬盘时，你的SCSI硬盘就不能设定为C盘或D盘了。不过现在较新的主板都具有多重引导的功能，允许直接从SCSI设备上引导系统。为加快SCSI卡的工作速度，可将CMOS中的“ROM 
+        SHADOWING”选项选取为“ENABLE”，这样可将SCSI卡的BIOS地址映射至内存，通常选定地址为“C8000H－DFFFFH”。<br>
+        　　任何一个SCSI控制卡及每一个SCSI设备需配置一个SCSI ID号码（设备号）。一张FAST 
+        SCSI－2 卡配置的SCSI号码由0至7，SCSI控制卡本身也必须有一个ID号码，一般定为 
+        7。所以，其它的SCSI设备就只能是0至6了。一般情况下，SCSI ID0 或SCSI 
+        ID 1都会配给SCSI硬盘。不过在使用DC－390F时要特别注意，当将卡本身的设备号定为大于7的数值时，任何连接在该卡上的8位数据设备将不被系统承认。因此，一般不要更改SCSI卡本身的ID默认值7。</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月23日第11期37版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

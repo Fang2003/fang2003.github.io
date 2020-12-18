@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>系统速度为何变慢<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 6月底，我买了一台奔腾Ⅱ233的机器，磐英440BX主板，同维9750AGP显卡，三洋16倍速光驱，买回来不久就出现系统速度突然变慢的问题，开机两三小时后，无论运行什么软件，系统速度都会突然慢下来。特别在播放VCD时，画面很不流畅，无法观看。不久，这个问题就更严重了，开机半小时后就发作。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        最初，怀疑是显卡没插好，于是打开机箱，机箱内很热，把显卡插紧后没盖机箱就开机，并用电风扇给机器散热，机器正常了，但装好机箱盖后问题依旧。反复几次均是这样，可以断定，系统速度变慢的原因是由于机箱中温度过高所致，但仍无解决办法。一次，偶然在CMOS中找到两项设置，修改后解决了系统变慢的问题。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 当时，我发现CHIPSETFEATURESSETUP菜单项里这么两项设置：“CPUWarningTemperature”即CPU警戒温度设置项，可修改，当前值为50℃/122；“CurrentCPUTemperature”即当前CPU温度设置项，只读，当前值为53℃/127，当前CPU温度超过警戒温度3℃。这时，我灵感突来，联想到奔腾Ⅱ的主板带有CPU温度过高自动减速保护功能，这会减慢CPU的速度。于是把“CPUWarningTemperature”一项设置为65℃/149。开机，8个小时后机器工作依然正常。当前CPU温度为62℃/144，CPU风扇转速(CurrentCPUFANspeed)为4673RPM。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 从对奔腾Ⅱ的技术了解知道，“CPUWarningTemperature”一项可减缓CPU老化速度，防止CPU烧毁，因为CPU工作温度过高，老化就会加快，甚至烧毁。此项有6个可选值：40℃/104，50℃/122，55℃/131，60℃/140，65℃/149，70℃/158，默认值为50℃/122。而现在本地白天平均气温为35℃，只需半个小时，CPU的温度就会超过这个默认值，主板上的减速降温功能自动激活，把CPU设置为半休眠状态，从而引起系统速度变慢。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        设置此项也有技巧，先把警戒温度设为最高值70℃/158，开机两小时后，再把警戒温度值设置在比当前CPU温度大于5℃而小于10℃这个范围内。这样，机器在5小时至6小时内不会有问题。但不要设置得太高，当周围环境温度很高时，应把机器放置到阴凉的地方，或加大散热能力，也不要用机时间过长。(广西杨桂明)。 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

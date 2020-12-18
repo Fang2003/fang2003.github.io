@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center">
+<p><font size="+2">第十一课&nbsp;巧用Alpha和Layer（二）</font></p>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="66%">&nbsp;&nbsp;&nbsp;&nbsp;在上一课学的“幻影特效”酷不酷？其实，利用我们的Alpha特效和层(layer)还可以制作出各种更酷的效果。看右面的例子，这节课，我们就要来做这样的一个被称为“光栅特效”的动画。
+
+<td width="34%"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/al02.swf">
+<embed src="swf/al02.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT>
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;在这一节课里，我们讲解的方法与前几课的不同，因为有许多朋友说看到别人的Flash作品觉得很好，但自己又不知道如何下手、如何做出相类似的动画。那么，这一课我们就从分析这个动画开始。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;看到这个动画，我们首先分析一下这个动画需要几个层，然后再想各种效果是如何实现的。也许，你会马上想到这个动画需要三个层，最下面的一层写上金黄色的“FLASH”字样，中间一层是那个移动的光栅，最上面的那一层是黑色的一块板，中间镂空了“FLASH”字样，用以遮住掉“FLASH”字外的光栅。这个思路非常正确，但是仔细一想，却发现最下面一层（写着金黄色“FLASH”字的那层）是多余的，只要把背景色设为金黄色再加上镂空的黑色矩形层不就达到同样的效果了吗？所以，确定了这个动画只需要两层，最下面一层是光栅，上面一层是镂空的黑色矩形。或许，你还是觉得这样分析有些困难，但是只要你多加练习，熟悉FLASH，就一定能得到正确的分析结果的。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;分析出了一个动画需要几个层，这个动画就完成了一大半。而动画所使用的特效呢，对于我们现在制作的这个动画来说，并没有用到什么特效，很明显，只是对光栅的Alpha值作了些改动而已。得到了这样的结果后，我们就可以着手制作动画了。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="62%">&nbsp;&nbsp;&nbsp;&nbsp;得到了分析结果后，我们就可以开工了。首先，打开一个新的FLA文件后，按Alt+M设置工作区的属性，把工作区设为300*100，背景色设围金黄色（我用的是
+R:255 G:204 B:51），点选确定。然后选中Layer1层的第一帧在工作区的右侧用其他颜色（最好与背景色区别较大）画上一个平行四边形（可以利用按下Alt+Ctrl+G以及Shift+Alt+Ctrl+G键定位鼠标后使用画图工具栏里的画线工具(Line)来画，如右图）。
+<td width="38%"><img src="images/l11_01.gif" width="311" height="111">
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="48%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="40%">
+<div align="center"><img src="images/l11_02.gif" width="66" height="39"></div>
+
+<td width="60%">
+<div align="center">填充色选择按钮</div>
+
+
+<tr>
+<td width="40%">
+<div align="center"><img src="images/l11_03.gif" width="81" height="51"></div>
+
+<td width="60%">
+<div align="center">自定义颜色按钮</div>
+
+
+</table>
+
+<td width="52%">&nbsp;&nbsp;&nbsp;&nbsp;对这个平行四边形填充是关系到这个动画成败的关键步骤，填充色选的好、填充方向选的准，这个动画的效果就好。那么，我们就一起来做好这个关键步骤。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;首先，在画图工具栏里选择油漆桶(Paint Bucket)，看见工具栏下方的填充色选择按钮了吗？按下它，Flash系统就会弹出一个调色板让你选择颜色，在调色版的顶部，有一个独立的按钮，那就是自定义颜色按钮，按下它，会有一个和下面一样的自定义颜色对话框弹出来。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="40%">&nbsp;&nbsp;&nbsp;&nbsp;我们看到，这个Color对话框有两个标签。一个是Solid，这是设定实心色（纯色）的；另一个是Gradient，是设定梯度色的。下面，我们就来看一下这个对话框里的各项设值的功能。以Solid为例（Gradient类似），左面那一排密密麻麻的颜色就不用说了，那是给你选择现有的颜色的；下面的Snap
+to Web Safe是把这颜色用最接近的网络安全色代替；再下面的三个按钮分别是调色板功能菜单、把当前编辑的颜色定为调色板中的新颜色和删除当前色。中间一块是当前编辑的颜色的属性，上面那一块自然是当前编辑的颜色了；中间的R、G、B三项是该色的R/G/B值；如果你把最下面的Hex选项打上钩，那么，中间R、G、B项里的数据将以十六进制显示，而不是平时的十进制。右面的那部分应该不用说了，那一块大大的五颜六色的就是选择颜色的了；看到了吗，颜色也有Alpha值呀，最右面的滑杆是用来设值颜色的透明度的，只不过这很少用到而已；最下面的Change按钮是把选择色换为编辑色。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;在Gradient标签下，有些部分略有不同。左侧的颜色选择区下有一个滑条，上面有两个滑块（其实可以有更多，下面我们就会讲到），我称这画块为颜色标记；滑条下面就是对应的编辑的颜色；再下面是选择填充模式，共有Linear和Radial两种，分别是线性填充和辐射填充。右侧的Change按钮上也多了一个颜色块，这个颜色块就是当前选择的颜色标记的颜色。注意了，再Gradient标签里，所有颜色属性（RGB属性和右侧的选色区）都只是针对当前选择的颜色标记的。
+
+<td width="60%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="41%"><img src="images/l11_04.jpg" width="313" height="168">
+<td width="59%">
+<div align="center">Solid标签</div>
+
+
+<tr>
+<td width="41%"><img src="images/l11_05.jpg" width="313" height="168">
+<td width="59%">
+<div align="center">Gradient标签</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;了解了这个对话框的基本功能后，我们就该来进行填充色的设置了。因为光栅有一定的柔和度，所以我们不能把填充色设为Solid，而要设为Radient，因此，选择Radient标签。为了讲解的方便，我们采用图解的方法，一步一步地学习如何调配好颜色。
+
+</table>
+<br>
+<table width="85%" border="1">
+<tr>
+<td width="33%">
+<div align="center"><img src="images/l11_06.gif" width="135" height="48"><br>
+1.选择填充模式为Linear</div>
+
+<td width="33%">
+<div align="center"><img src="images/l11_07.gif" width="143" height="41"><br>
+2.在第一个颜色标记上按下鼠标左键，不要松开 </div>
+
+<td width="33%">
+<div align="center"><img src="images/l11_08.gif" width="140" height="37"><br>
+3.把这个颜色标记一直拖到滑条的中央才松开左键，看，滑条上又多了一个标记 </div>
+
+
+<tr>
+<td width="33%">
+<div align="center"><img src="images/l11_09.gif" width="122" height="83"><br>
+4.点选中间的颜色标记，把它的RGB值改为255/255/255（白色） </div>
+
+<td width="33%">
+<div align="center"><img src="images/l11_10.gif" width="159" height="82"><br>
+5.分别把两边的颜色标记选中，把它们的RGB值改为255/204/51（与背景色一致） </div>
+
+<td width="33%">
+<div align="center"><img src="images/l11_11.gif" width="135" height="35"><br>
+6.按下New按钮把做好的颜色加入调色板，并使其成为当前作图色 </div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="30%">&nbsp;&nbsp;&nbsp;&nbsp;调配好颜色后，我们就可以给这个平行四边形上色了。好，再画图工具栏里选择油漆桶(Paint
+bucket)工具，不过注意了，梯度色的填充（无论是Linear或Radial）是有方向性的，下面我们来看看怎样调整填充的方向。（见右）
+<td width="70%">
+<table width="100%" border="1">
+<tr>
+<td width="33%">
+<div align="center"><img src="images/l11_12.gif" width="61" height="107" align="absmiddle"><br>
+1.在平行四边形的中心按下鼠标左键，不要松开。 </div>
+
+<td width="34%">
+<div align="center"><img src="images/l11_13.gif" width="63" height="106"><br>
+2. 按住左键的同时把油漆桶沿着与斜边平行的直线拖到平行四边形的顶部</div>
+
+<td width="33%">
+<div align="center"><img src="images/l11_14.gif" width="61" height="107"><br>
+3.松开左键，OK！大功告成。 </div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="28%">
+<div align="center"><img src="images/l11_15.gif" width="63" height="108"></div>
+
+<td width="72%">&nbsp;&nbsp;&nbsp;&nbsp;注意我们在第二步里拖出的那条直线，那就是梯度色的中线（你可以试着向别的方向拖动，看看效果）。如果我们在第一步时就松开了左键，那么，梯度色的中线方向就会默认为垂直于水平线，填充的效果如左图所示。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="15%">&nbsp;&nbsp;&nbsp;&nbsp;接着，我们就要把那个蓝色的边框去掉（保证美观嘛）。具体的操作看右面。
+<td width="85%">
+<table width="100%" border="1">
+<tr>
+<td width="20%">
+<div align="center"><img src="images/l11_16.gif" width="74" height="44"><br>
+1.在画图工具栏里点取箭头工具(Arrow) </div>
+
+<td width="20%">
+<div align="center"><img src="images/l11_17.gif" width="89" height="120"><br>
+2.把平行四边形框起来 </div>
+
+<td width="20%">
+<div align="center"><img src="images/l11_18.gif" width="61" height="106"><br>
+3.把鼠标移到中心，这时，按住Shift键后，按下鼠标左键，把中间我们刚才填充的颜色从选区里去掉，使其只选中边框 </div>
+
+<td width="20%">
+<div align="center"><img src="images/l11_19.gif" width="63" height="107"><br>
+4.看，只选中边框了吧，好按下键盘上的Del键，把边框除去。</div>
+
+<td width="20%">
+<div align="center"><img src="images/l11_20.gif" width="61" height="106"><br>
+5.看，这就是最后效果，过渡很柔和吧。 </div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="40%">
+<div align="center"><img src="images/l11_21.gif" width="213" height="44"></div>
+
+<td width="60%">&nbsp;&nbsp;&nbsp;&nbsp;好了，填充的工作到这儿就OVER了。把这个平行四边形框起来，定义成一个图形符号(Graphics
+Symbol)，并按照前两课的方法把这个符号(Symbol)的Alpha值改为80（我用的，可以改动）。然后，在Layer1的第二十五帧的小方格按右键，选择Insert
+keyframe，插入一个关键帧。选中第二十五帧，在这一帧里，把平行四边形符号从工作区的左侧移到右侧。然后在Layer1的第一帧下的小方格按右键，选择Properties...
+-&gt;Tweening -&gt;Motion，这时的Timeline区应如左图所示。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="51%">&nbsp;&nbsp;&nbsp;&nbsp;接着我们要来制作镂空字的那一层了。在菜单里选择Insert -&gt;
+Layer插入一个层Layer2，并锁住Layer1层。。用画矩形的工具在Layer2层把整个工作区都画上一个黑色的矩形（注意边框也要设成黑色，如果你前面打开了Alt+Ctrl+Shift+G和Alt+Ctrl+G功能的话，去掉它们）。然后再用写字工具(Type)写上“FLASH”几个字（颜色要和矩形的区别大一点），然后按Ctrl+B把这些字打散成像素点。如右图。
+
+<td width="49%">
+<div align="center"><img src="images/l11_22.gif" width="300" height="100"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellpadding="0">
+<tr>
+<td width="51%">
+<div align="center"><img src="images/l11_23.gif" width="300" height="100"></div>
+
+<td width="49%">&nbsp;&nbsp;&nbsp;&nbsp;接着，在工作区的外面用鼠标左键点一下，放弃选区。然后，按住Shift键的同时，在每个字母的笔划上点一下鼠标左键，选中这些像素。左图是过程中的一步。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="51%">&nbsp;&nbsp;&nbsp;&nbsp;五个字符都选中了吗？好，选好后，按下键盘上的Del键，把这些像素点出去，看到了没有，Layer1层的东西便从这些镂空的像素里透了过来。（如右图）
+<td width="49%">
+<div align="center"><img src="images/l11_24.gif" width="301" height="99"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;OK，在Layer2层的第二十五帧的方格里点右键，选择Insert keyframe后，这个动画就完工了，最后的层区和Timeline区如右图所示。好了，按下Ctrl+Enter看一下效果吧，很不错哟！
+<td><img src="images/l11_25.gif" width="386" height="63">
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;在下一课，我们要学习掩膜层(Mask)的用法，这个效果也是很不错的哟！让我们一起<a href="lesson12.htm">进入</a>吧！
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson12.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

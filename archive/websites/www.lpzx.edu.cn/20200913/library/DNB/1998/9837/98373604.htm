@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>微机因设置密码引起故障的处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 故障现象：一台COMPAQ586微机设置了密码后，密码不能被解除，导致机器不能进入工作状态。<br>
+        &nbsp;&nbsp;&nbsp; 
+        故障分析与排除：由于找不到加密人，密码无法获知，致使机器不能进入工作状态。此时只有对CMOS进行放电，使其中所贮存的内容全部消失，所设密码也就随之解除了。于是笔者采用通常最简单的办法对CMOS电池放电(取下主板上的“纽扣电池”，然后将其正、负极瞬间短接即可)；随后重新开机，此时屏幕上仍然出现要求输入密码提示；当笔者认为可能是CMOS放电不够彻底，然后数次对其进入放电(并延长正、负极短接时间)后，反复试机，以上现象依旧存在。难道是主板CMOS电路发生了故障，对其放电不起作用?然而以下现象否定了这点。每次放电后，重新开机都可进入CMOS设置主菜单，因为要进入CMOS设置主菜单(如果系统设置有密码的话)必须输入密码方可进入；倘若密码未解除，开机后就不能进入CMOS设置主菜单，这就说明CMOS电路无故障，对CMOS电路放电已解除了密码。究竟是何原因导致如此现象发生?就在笔者感到为难之际，突然发现CMOS设置菜单中硬盘设置与实际的不符，随之重新设置正确的硬盘参数，再次开动机器，故障现象消除。原来加密码者在设置密码前对硬盘参数进行了错误修改，虽然每次放电解除了密码，但由于以上的硬盘设置错误，致使在系统自检完毕后不能确认自身硬盘，不能更新CMOS电路中的系统设置参数，此时CMOS中的内容就又自动“沿袭”了原先设有密码的参数；从而导致了这种“令人迷惑不解”的现象发生。(陕西 
+        &nbsp;&nbsp;&nbsp; 王毓俊) <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

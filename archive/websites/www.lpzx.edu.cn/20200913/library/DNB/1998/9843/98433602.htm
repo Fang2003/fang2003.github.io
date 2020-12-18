@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>外置式光驱安装手记<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">在不带光驱的电脑上安装软件是相当麻烦的，有了外置光驱之后就方便了许多。当然，使用外置光驱也必须注意其安装使用上的一些特点，才能正确使用。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">外置光驱内部由一只外置驱动盒和一只普通的IDE光驱组成，二者通过40芯的IDE接口线连接在一起。外置驱动盒还提供给IDE光驱电源线和音频输出线，其中IDE光驱可换接其它同类光驱。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">外置光驱与电脑连接很简单，先将附带的信号线一端接到外置光驱背面标有“TOCOMPUTER”的接口，另一端接到电脑的并行口上。如果还要同时使用打印机，可将打印线接外置光驱背面标有“TOPRINTER”的接口上，最后给外置光驱接上电源线，打开电源开关即可。下面以COMMUTER外置式光驱为例，介绍其安装。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">1.DOS下驱动程序的安装<br>
+        运行驱动盘的INSTALL程序，按照提示逐步安装，完毕后重新启动。外置光驱即被分配了一个驱动器符号，可正常使用。<br>
+        在已经安装了驱动程序的电脑上使用，只要在电脑启动前正确连接好外置光驱即可。<br>
+        其实INSTALL程序所做的工作只是将驱动程序PATAPICD.SYS拷贝到C:\COMMUTER目录中，在CONFIG.SYS中加入DEVICEHIGH=C:\COMMUTER\PATAPICD.SYS，在AUTOEXEC.BAT中加入C:\DOS\MSCDEX.EXE。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">2.Windows95下驱动程序的安装<br>
+        运行驱动盘的SETUP程序，按照提示逐步安装，完毕后打开“我的电脑”，即可见到一个新的CD－ROM驱动器图标，可正常使用。如果没有出现新的CD－ROM驱动器图标，一般重新启动即可。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">安装了驱动程序的电脑，在没有接外置光驱时，点击“控制面板”中的“系统”，寻设备管理”标签，可看到“系统设备”中多了一个“DataStorTechnologyParallelBusEnumerator”驱动程序。在接外置光驱时，除了上面一个驱动程序外，还可看到另外多了两个驱动程序：“CDROM:(相应的CDROM型号)”和“SCSI控制器：<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">EPPParallelPorttoATA/ATAPIAdapter－Windows95”。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">该外置光驱在Windows95下完全即插即用，在安装了驱动程序的电脑上，不需重新启动，只要直接连上外置光驱，驱动程序马上自动加载并产生一个新的CD－ROM驱动器符号。一旦取下外置光驱，驱动程序马上取消相应的CD－ROM驱动器符号并自动卸载。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">安装使用外置光驱过程中，以下一些情况需特别注意：1.在Windows95下驱动程序的安装过程中，选择设备驱动程序时，需正确选择“DataStorTechnology:DataStorTechnologyParallelBusEnumerator”；2.在Windows95下使用外置光驱时，总是先打开外置光驱电源，再用数据线连接电脑的并行口。如果没打开外置光驱电源就连接，Windows95将检测不到外置光驱的连接，驱动程序不会自动加载，外置光驱不能使用，此时即使再打开电源也没有用处。必须拔下数据线，打开外置光驱电源，重新再用数据线连接电脑的并行口；3.Windows95下使用外置光驱时，总是先拔下数据线，再关闭外置光驱电源，否则极有可能引起电脑死机。因为先关闭外置光驱电源再拔下数据线，Windows95将检测不到外置光驱的脱开，不会取消相应的CD－ROM驱动器符号并卸载外置光驱的驱动程序，从而造成系统混乱。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">4.如果在Windows95下，外置光驱的驱动程序造成了设备冲突而不能解决时，外置光驱将不能使用，此时的补救办法是将外置光驱在DOS下的驱动程序加到Windows95的CONFIG.SYS(DEVICEHIGH=C:\COMMUTER\PATAPICD.SYS)和AUTOEXEC.BAT(C：\WINDOWS\COMMAND\MSCDEX.EXE)中，连好外置光驱后重新启动即可使用，不过外置光驱的即插即用功能也就失效了，使用时，必须在电脑启动前正确连好外置光驱。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">5.外置光驱的数据传输率为最高1.25MB(并行口为EPP模式)或最高250KB(并行口为标准模式)，故应在CMOS中将并行口设成EPP模式。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

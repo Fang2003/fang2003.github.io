@@ -1,0 +1,118 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/game.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>〈万王之王〉机器人编写技巧</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第14期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="game.html">游戏广场</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->〈万王之王〉机器人编写技巧<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="0" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 经常有人要求我多制作一些不同职业的机器人代码，我的时间不是很充裕，而且代码要针对不同人的不同情况制作才能发挥它最大的效果，因此我建议大家能够自己编写适合于自己的机器人代码。这里我把我编写机器人的技巧给大家介绍一下。 
+              一、精确时间 制作机器人的时候，需要一个秒表，准确测试出每个命令执行所需要的时间，长了的话浪费时间，短了的话就没有起到作用。还要注意自己的网络情况，如果你的网络很LAG的话，就需要稍微把时间改长一些。另外，对于某些连续性命令，可以使用比实际所需时间更短的周期。比如需要连续法术充电3次，如果每5秒发1次指令，需要3×5=15秒，而换成每秒发一个充电指令，连续发送10次，完全可在更短的时间完成3次充电动作，而且可以防止充电失败。 
+              二、注意平衡 就是要注意自己生命值和法力值、MOB的死亡和重生、法术使用和充电等几项的平衡。你也可以通过一些方式来平衡难度，比如把充电法术和自动法术都采用吸魂，则可以解决MP消耗和恢复的问题；MOB5分钟重生一次，自己打一遍试试看，打到多少个的时候第一个死亡的MOB重生了；避免使用法术，而全用法器动作，则不会有法术失败伤到自己的情况，自然也不会有HP的消耗和恢复；这个需要经过自己对机器人进行一段时间的实验和修改才能达到最佳的平衡状态。以长时间的运行而不会出现生命、法力和MOB不够为标准。 
+              三、突出重点 做机器人之前要先知道自己这个机器人的用途，是打经验还是练技能，如果是练技能的话又是练哪几样技能。并不是所有技能都练到了就一定好。比如大剑师，只须要在大剑师术(近身攻击)和剑气(远程攻击)两种中选择一种修炼，而不需要两种一起修炼，这样的话可以大大提高机器人的效率。而如果是打经验，例如大法师，则不需要使用其它的法术，直接用蓝达喷就可以了。 
+              四、简化指令 有些朋友做出来的机器人指令有几百行，其实大部分都是重复的，可以通过某些方法简化，比如大剑师用剑气打一个屏幕内的所有MOB，如果你给那些MOB命名为a、b、c……那么你编写代码的时候就需要swordkee 
+              a，swordkee b……有多少个MOB就要多少个命令。其实你完全可以给所有的MOB命名为a，然后只需要swordkee a一个命令，让它重复多次就可以达到相同的目的。KOK会自动按照从右到左，从下到上的顺序打MOB。 
+              注意到这四点，那你完全可以编写出高效率的机器人了，最后祝大家挂机顺利！如果有什么不懂的话可以来www.cnagain.com找我 
+              ^＿^ <!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

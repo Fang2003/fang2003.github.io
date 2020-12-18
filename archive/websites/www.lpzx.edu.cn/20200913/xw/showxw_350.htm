@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> V013 - 一般函数（General） </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+Beep <br><br>Beep() <br><br>产生哔哔的声音　 <br><br>FlushKeys <br><br>FlushKeys() <br><br>清除在系统尚未处理之前所有使用者所按的键　 <br><br>Initialize <br><br>Initialize() <br><br>Initialize(variable1,..., variable10) <br><br>将指定的所有变数回覆到其原来的初值　最多只可以使用 10 个变数　 <br><br>MediaPause <br><br>MediaPause(IconID@&quot;IconTitle&quot;, pause) <br><br>此函数应用在影片或是视讯的播映上　若 pause 的值为真时　表示影片会暂停播映　若为假时　则影片会继续播映的动作　 <br><br>MediaPlay <br><br>MediaPlay(IconID@&quot;IconTitle&quot;) <br><br>此函数应用在影片或是视讯的播映上　若表示开始播映之意　请在 IconTitle 中填入此影片的图示名称　 <br><br>MediaSeek <br><br>MediaSeek(IconID@&quot;IconTitle&quot;, position) <br><br>搜寻影片或是视讯图示中特定镜头的位置　请在 position 中填入所要寻找的镜头位置　 <br><br>MoveWindow <br><br>MoveWindow(top, left) <br><br>将展示视窗移到”top　 left”的座标上　 <br><br>PressKey <br><br>PressKey(&quot;keyname&quot;) <br><br>本函数执行後就好像使用者按了 keyname 键一样　 <br><br>PrintScreen <br><br>PrintScreen() <br><br>列印画面　 <br><br>Quit <br><br>Quit(options) <br><br>依照 options 来跳离执行的动作　选项有下列三种　 <br><br>数字 结果 <br><br>0 跳到程式管理员之下<br><br>如果原来执行分歧到其它的档案<br><br>则会回到原来的档案之中 <br><br>1 跳到程式管理员之下 <br><br>2 跳到 DOS 之下 <br><br>QuitRestart <br><br>QuitRestart(options) <br><br>QuitRestart 与 Quit 函数唯一不同的地方就是　它会忽略 File Setup 对话方块中 Resume 的设定从程式的一开始执行　使用者无法回到上一次所离开的状态　引数的部份与 Quit 函数完全相同　 <br><br>ResizeWindow <br><br>ResizeWindow(Width, Height) <br><br>将展示视窗以 width 及 height 两个引数来改变其大小　 <br><br>Restart <br><br>Restart() <br><br>立即重新执行本档案　应用在输入错误的密码时　非常有用　 <br><br>SaveRecords <br><br>SaveRecords() <br><br>将使用者的资料记录到指定的目录中　这些资料为使用者目前的状态　而记录的目录系统内定为 WINDOWS\A3W_DATA　 <br><br>SetCursor <br><br>SetCursor(type) <br><br>设定滑鼠游标的类别　类别有下几种　 <br><br>数字&nbsp; 结果 <br><br>0 箭头 <br><br>1 | <br><br>2 交叉号 <br><br>3 十字号 <br><br>4 空白 <br><br>5 时间漏斗 <br><br>6 手形符号&nbsp; <br><br>ShowCursor <br><br>ShowCursor(display) <br><br>显示或是隐藏游标　以 display 引数作判断　设定引数为 off 表示隐藏游标　设定引数为 on 表示显示游标　 <br><br>ShowMenuBar <br><br>ShowMenuBar(display) <br><br>显示或是隐藏功能表列　以 display 引数作判断　设定引数为 off 表示隐藏功能表列　设定引数为 on 表示显示标题列　 <br><br>ShowTitleBar <br><br>ShowTitleBar(display) <br><br>显示或是隐藏标题列　以 display 引数作判断　设定引数为 off 表示隐藏标题列　设定引数为 on 表示显示标题列　 <br><br>SyncPoint <br><br>SyncPoint(option) <br><br>将计时器重新设回初始的值　以 option 作判断　这个计时器的功用与 SyncWait 互相配合　选项有下列三种　 <br><br>数字 结果 <br><br>0 在展示现在图示之前 <br><br>1 在展示现在图示之後 <br><br>2 符合一个交谈回应之时 <br><br>SyncWait <br><br>SyncWait(seconds) <br><br>本函数功能会在上一次函数 SyncPoint 执行完成後　暂停展示档案　直到指定的时间 seconds 到了之後　才会继续展示档案　在暂停期间　所有的动画　影片　以及其它动作会继续展示不受影响　 <br><br>Test <br><br>Test(condition, true expression, false expression) <br><br>这个指令与 if...then 有异曲同工之妙　在 condition 中为一个判断式　若此判断式为真　则会执行 true expression 之中的表示式或指令　否则执行 true expression 之中的表示式或指令　 <br><br>TextCopy <br><br>TextCopy() <br><br>将选定的文字拷贝到剪贴簿上　 <br><br>TextCut <br><br>TextCut() <br><br>将选定的文字剪下来　贴到剪贴簿上　 <br><br>TextPaste <br><br>TextPaste() <br><br>将剪贴簿上的文字　贴到指定的区域上　 <br><br>Trace <br><br>Trace(&quot;string&quot;) <br><br>这个函数可与 Trace 视窗配合使用　主要在追踪程式用　每当程式执行到此时　此函数就会将 string 这个字串丢到 Trace 视窗中　表示程式已经执行到此地了 <br><br>WaitMouseUp <br><br>WaitMouseUp() <br><br>本函数会暂停展示的动作　直到使用者放开滑鼠的按键　如果碰到本函数而使用者未按任何滑鼠的按键时　本函数的无法作用　 <br><br>ZoomRect <br><br>ZoomRect(x, y) <br><br>将萤幕座标 (x, y) 的方块区域　放大显示　 <br><br>曾安德　编著
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001114160255
+<div align="center"><a href="xwpl_341.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

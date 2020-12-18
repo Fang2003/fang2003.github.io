@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VB编程检测当前电池使用情况</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>44 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VB编程检测当前电池使用情况</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VB编程检测当前电池使用情况 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　你想知道你的机器当前电池使用情况吗?系统电池如电压不足将导致系统时间变慢等后果。所以你应该知道电池现在的状态，如电压不足则应该尽快去更换电池。用系统测试软件可以办到，但如果你没有也没关系，我们可以用VB编程来帮我们找到答案,具体做法如下：<br>
+　　首先,新建一个工程,在其FORM1上新建二个COMMAND命令按钮(如COMMAND1和COMMAND2),再放上二个LABEL控件(如LABEL1和LABEL2),再装载一个WINDOWS SYSINFO CONTROL 5.0(请从工程菜单下部件对话框中选择并装载),其NAME为SYSINFO1,其他都不变,然后输入以下代码程序:<br>
+　　Option Explicit  ′要求声明所有变量<br>
+　　－－－－－－－－－－－－－<br>
+　　Private Sub Form_Load()    ′做初始化设置<br>
+　　Form1.Caption = ″检测电池状态演示程序″<br>
+　　Command1.Caption = ″检测电池″<br>
+　　Command2.Caption = ″退出″<br>
+　　Label1.Caption = ″″ <br>
+　　 Label1.AutoSize = True<br>
+　　End Sub<br>
+　　－－－－－－－－－－－－－<br>
+　　Private Sub Command1_Click()   ′检测当前电池状态<br>
+　　 Select Case SysInfo1.BatteryStatus <br>
+　　Case 1: Label1.Caption = ″当前电池状态 :电池电压足″<br>
+　　Case 2: Label1.Caption = ″当前电池状态 :电池电压不足″<br>
+　　Case 4: Label1.Caption = ″当前电池状态 :电池快用完了″<br>
+　　Case 128: Label1.Caption = ″当前电池状态 :无电池″<br>
+　　Case 255: Label1.Caption = ″当前电池状态 :不知名″<br>
+　　End Select<br>
+　　End Sub<br>
+　　－－－－－－－－－－－－－<br>
+　　Private Sub Command2_Click()<br>
+　　Unload Me  ′结束程序<br>
+　　End<br>
+　　End Sub<br>
+　　运行该程序，不用调用任何的API函数就实现了这个功能。以上程序在中文WINDOWS98，中文VB5.0专业版中调试通过。<br><b>
+　　（上海　季昭君）</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99441302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>CPCW网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

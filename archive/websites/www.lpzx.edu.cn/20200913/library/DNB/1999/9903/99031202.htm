@@ -1,0 +1,58 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Pqmagic的分区技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　这里我以在同一硬盘安装多个操作系统（WINDOWS 
+        NT4.0、Linux、WINDOWS 98）为例，介绍Pqmagic的使用技巧。我使用的是PQMAGIC3.05，硬盘是SEAGATE的3.2G硬盘。<br>
+        　　1.在PQ中一个硬盘最多只能分四个分区。这四个分区可以都是主分区；也可以三个是主分区，一个是扩展分区，扩展分区上可建立多个属于不同系统的逻辑分区。<br>
+        　　2 .如果建立BootManager，则可以在开机时出现一个界面让用户选择激活哪一个操作系统。如果不建立主分区，则进入某个操作系统后，在DOS下运行PQ的PQBOOT.EXE或PQMAGIC.EXE也可以选择激活其他操作系统。建议大家建立BootManager，这样使用起来较方便。<br>
+        　　这里要注意的是，BootManager分区算作四个分区中的一个主分区。因此建立BootManager后一个硬盘最多只能安装三个不同的操作系统（它们分占三个不同的主分区，连同BootManager主分区共为四个主分区）。<br>
+        　　3. Windows NT4.0与Win 98在同一硬盘安装时，WIN_NT必须放在第一个操作系统主分区（ 
+        BootManager 主分区可在其前面）。不能够让Win 98 
+        放在第一个操作系统主分区，否则WIN_NT不能正常安装。硬盘分区示意如下：<br>
+        　　BootManager<br>
+        　　WIN_NT 4.0<br>
+        　　Linux<br>
+        　　Win 98<br>
+        　　4. 只有第一个操作系统主分区（如本例中的WIN_NT主分区）才可以包含DOS 
+        6.22, 其它主分区不能包含。也就是说DOS 6.22 
+        只能在第一个操作系统主分区使用。<br>
+        　　5. 安装Linux（Slackware版本）应注意：LILO必须选择安装在Linux主分区的Root,而不能选择安装在MBR（Master 
+        Boot Record）。若LILO安装在MBR则会把BootManager覆盖，夺取了整个硬盘的控制权。<strong>(广东　刘军营)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

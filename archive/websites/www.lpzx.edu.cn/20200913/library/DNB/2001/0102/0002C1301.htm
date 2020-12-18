@@ -1,0 +1,260 @@
+<html><!-- #BeginTemplate "/Templates/hardware.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>山特8222型UPS电源检修</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+      
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第02期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->山特8222型UPS电源检修<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 　　山特8222型UPS电源是以U1(82STK618－00305－00)微处理器控制芯片为核心而构成的一台低成本、后备式方波输出UPS电源。检修的难点：一是没有图纸，二是对控制板上的U1、U2、U3和U5各引脚功能不甚了解，笔者实测8222型UPS电路，发现其微处理器芯片U1和山特M500型UPS所用的微处理器芯片(PPC 
+
+              618－00040－01)相似，或许二者可直接替换，微处理器(PPC 618－00400－01)各脚功能见表。 <br>
+
+              　　笔者查阅有关资料，得知U2是功率驱动门组件，其内部电路见图1。U2的1、2、3、4、5、6、7脚是输入，对应的输出脚是16、15、14、13、12、11、10、9脚箝位端，8脚接地。 
+
+              <br>
+
+              　　U5是一只光电耦合器，其内部结构如图2所示。 山特8222型UPS电源逆变器中的功率驱动MOS管用的是5N06HD，其参数可简述如下，V(BR)DSS＝60V，ID(maX＝50Ards＝22mVGS＝5V管型为TO－220AB，管脚排序为G、D、S(注：漏极D与管壳相连)。可以替代这种MOS管的品种有：PRF50N06、IRFZ48、SMP50N06、MTP50N06、BUK556－60A、IRFZ44、IRLZ44、BUK456－60、SUP70NO6等。 
+
+              掌握了U1、U2、U5各引脚功能和内部结构图，检修8222型UPS电源就事半功倍了。 <br>
+
+              　　维 修 实 例 <br>
+
+              　　例一 故障现象：开机，烧保险。 <br>
+
+              　　分析与维修：根据故障现象分析，市电输入电路存在元件短路。因没有图纸，边测绘、边检测输入电路各元件，经检查发现，整流二极管D32、D35(IN4007)短路，更换D32、D35开机，不再烧保险。 
+
+              <br>
+
+              　　例二 故障现象：接上市电，无220V电压输出，加电一会，电阻R80、R81很烫，不接市电，开机，机内发出“哧、哧”响声后，后备工作指示灯和市电供电指示灯交替闪烁，无电压输出。 
+
+              <br>
+
+              　　分析和维修：根据现象分析，可能是公共电路有故障。用万用表检查控制板上的二极管、三极管、继电器等元件，发现D4、D5(IN4148)短路，更换D4、D5，故障依旧。不接市电，开机，输出220V，但瞬间发生保护，接市电，输出电压高达260V，工作一会R80、R81很烫，说明抗尖峰抑制电路启动，检查抗尖峰抑制电路各无件，未见异常，测U1的10脚，输出5V高电平。逆变电路的驱动信号也是由U1的11、12脚输出的，UPS电源逆变和市电供电都不正常的可能性很小，怀疑微处理器U1有故障，更换U1。开机，市电供电正常，不接市电开机，输出电压185V，经查阅有关资料，山特8200系列后备式UPS，当它处于逆变提供方波电源的工作状态时，它的逆变器电源所输出的电压有效值低于逆变器电源处于带负载时的电压值。将UPS电源的输出接微机，电压输出220V。 
+
+              <br>
+
+              　　例 三 故障现象：市电供电正常，不接市电时，开机，输出电压高达300多伏，拆下控制板检查继电器，三个继电器线包和常闭触点良好，装上，让其逆变供电，一启动即发生保护。关机，机内还发出“滴嗒、滴嗒”的响声，只有取下蓄电池的一个极，响声才消失。 
+
+              <br>
+
+              　　分析与维修：不接市电开机，测U1的1脚电压，高达7．8V，正常值为5V，检查5V供电电路，发现Q2(2N3904)性能不良，更换Q2，关机不再发出响声，但U1的1脚电压仍高达7．8V，自测并绘画出5V供电电路图，得知5V是通过U3TL431的阴极输出的，怀疑是U3性能不良，更换U3，故障排除。 
+
+              <br>
+
+              　　山特8200系列UPS电源有自诊断功能，一开机即执行自诊断，如诊断到某一电路存在故障，即进入停机状态。遇到这种现象，可重点检测U1的2、3、4、5、8、16脚电压，即可知道哪一部分电路出现故障。另外，山特8200系列UPS电源检测到电池电压过低时，不仅不能逆变供电，连市电旁路电源也无输出，UPS将处于完全停电状态。其三，后备式UPS电源不能带负载开机，原因是：刚开机时，逆变器刚被启动还没有机会获得空载稳定运行的条件时，就被置于带负载运行状态(注意：此时的负载电流是负载的正常额定工作电流和负载的开机浪涌电流之和)，这样，势必会大大增高UPS的故障率。(贵州 
+
+              胡以华)<!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>SCO UNIX的安全性及用户口令管理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　<strong>一、计算机系统的安全性</strong><br>
+        　　美国国防部计算机安全中心将计算机系统的安全性进行等级化分类，共划分为七个等级：D、C1、C2、B1、B2、B3、A1，以满足不同的安全性要求。其中D级安全性最低，A1级最高。我们常用的DOS、Windows 
+        3X／95为D级。C2级产品为处理敏感数据的最低级产品。<br>
+        　　<strong>二、SCO UNIX系统的安全性</strong><br>
+        　　SCO UNIX系列是目前金融企业常用的操作系统，它包括3．2、4．2、OPENSERVER 
+        3．0等几种。它的安全性可以达到C2级标准。之所以说“可以达到”，是因为根据需要，它还将安全性细分为四个等级：<br>
+        　　1.高级（High）：适用于系统含有机密数据且用户众多的情况；<br>
+        　　2.改良级（Improved）：适用系统含有机密数据且用户不多的情况；<br>
+        　　3.传统级（Traditional）：适用于与其它UNIX兼容的情况；<br>
+        　　4.低级（Low）：适用于系统规模小而且只有少量内部用户的情况；<br>
+        　　在以上四个等级中，前两个的安全性达到C2级安全标准。在安装系统时，我们必须选定一种安全级。安装完成后，超级用户可以利用relax命令来改变系统的安全级。<br>
+        　　<strong>三、SCO UNIX系统用户口令的管理</strong><br>
+        　　SCO UNIX系统对用户口令的管理分为两种情况，低安全级为一种，其它安全级为另一种。下面分别说明。<br>
+        　　1.低安全级时，用户口令经加密变换后存放在／etc／passwd文件中，该文件每一行标识一个用户，每行用冒号分隔为七个域：用户名、口令、用户标识号、用户组标识号、用户注释、用户目录、界面程序。如果没有设置口令，则第二域为空。<br>
+        　　2.其它安全级时，用户的口令经加密后存放在／etc／shadow文件中，该文件对应／etc／passwd文件，每行用冒号分隔为四个域：用户名、口令、最后一次修改时间、口令需修改的最小期限、口令最大有效期限。／etc／passwd文件中第二个域被置为x。另外，口令还存放在系统的可靠计算数据库（TCB）的用户说明中，即文件 
+        ／tcb／files／auth／用户名的第一个字符／用户名中的第二行，其格式为：<br>
+        　　：u_pwd=口令：\<br>
+        　　两处的口令必须相同，否则注册时系统会提示“错误的注册标识”并拒绝该用户进入系统。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　（福建　黄红松）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Visual 
+        FoxPro编程技巧（一）</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp; <strong>&nbsp; 一、定制桌面</strong><br>
+        　　是否感觉到VFP提供的桌面有些不合你的口味?如果不喜欢那些最大最小化和关闭按钮，试试在你的应用程序初始化时加入如下代码段：<br>
+        　　with_ SCREEN<br>
+        　　BackColor=rgb(64,128,128)<br>
+        　　Caption=″通用管理信息系统″<br>
+        　　ControlBox=.F.<br>
+        　　MaxButton=.F.<br>
+        　　MinButton=.F.<br>
+        　　WindowState=2<br>
+        　　end with<br>
+        　　<strong>二、制作“空白”菜单</strong><br>
+        　　通常的表单会因为标题条、控制盒等影响其实际使用面积。能否做出一个纯粹的“空白”表单呢?答案是肯定的。如果你和我一样讨厌Form的标题条，请按如下方式设置其属性：<br>
+        　　with Form1<br>
+        　　Caption=″″<br>
+        　　Closable=.F.<br>
+        　　ControlBox=.F.<br>
+        　　MaxButton=.F.<br>
+        　　MinButton=.F.<br>
+        　　Movable=.F.<br>
+        　　end with<br>
+        　　可以将这样的一个表单保存为一个“空白”表单类，以备不时之需。 
+        <strong> (湖北　李雄文)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

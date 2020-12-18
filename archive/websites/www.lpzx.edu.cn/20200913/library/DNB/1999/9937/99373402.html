@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<link rel="stylesheet" href="images/epcw.css" TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用Excel计算个人所得税</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-oa&realm=oa' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9937.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'></A></TD>
+<TD BGCOLOR='#FFCC66'>&nbsp;</TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9937.html'>37 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 用Excel计算个人所得税</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用Excel计算个人所得税 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　计算个人所得税繁琐、复杂，手工操作易出错，笔者通过一段时间的摸索，成功利用办公软件Office97中的 Excel计算个人所得税。通过运用和函数、IF函数和取整函数设置计算公式后，只要将每月工资手工输入，应纳税所得额、税率、速算扣除数及应纳税额自动生成，使个人所得税的计算准确简便。下面笔者将这一方法从简到繁，分三步介绍如下：<br>
+　　<b>一、基本计算</b><br>
+　　这是个人所得税的基本计算方法，不存在奖金等情况，而且其他复杂的情况都可在此方法的基础上变化得到。<br>
+　　根据《税法》规定，计算个人所得税的公式为：<br>
+　　个人每月应纳所得税=个人每月应纳税所得额×适用税率－速算扣除数。<br>
+　　对上述公式说明两点：<br>
+　　（1）个人每月应纳税所得额=月工资额－非纳税收入项目（如住房公积金等）－800<br>
+　　（2）税率与速算扣除数如表一所示。<br>
+　　根据上述计算方法，用Excel编制计算表(表二)：<br>
+　　以甲为例说明计算公式的建立：<br>
+　　本月甲的应纳税所得额为本月工资－住房公积金－800=2350，在“D2”内设置公式为=B2－C2－800；<br>
+　　因2000&lt; 2350&lt; 5000，则税率为15％，在“E2”内建立公式为=IF（D2=“”，“”，IF（D2&gt;2000，“15％”，IF （D2&gt;500，“10％”，IF（D2&gt;0，“5％”，0）））），这样，税率将根据“应纳税所得额”自动选取相应的税率填入；
+　　税率为15％时，速算扣除数为125，在F2内建立公式为=IF（E2=“15％”，125，IF（E2=“10％”，25，IF（E2=“5％”，0，0））），速算扣除数将根据“税率”自动选取填入；<br>
+　　本月甲应纳税额为2350×15％－125=227.5，在G2内设置公式为=D2×E2－F2；<br>
+　　设置好公式后，以后只要手工输入当月的工资，税率、速算扣除数、及应纳税额都将自动生成。<br>
+　　在合计栏内利用求和函数SUM（）求和。如在B5内设立公式为=SUM（B2：B4），C5内的公式为SUM（C2：C4），余类推。<br>
+　　对上述计算方法值得说明的是，设置每个人的公式时，可分别建立，但较繁琐；利用Excel中的拖曳功能设立公式，简便准确。<br>
+　　<b>二、有奖金时如何计算</b><br>
+　　如发放季度或年终奖金，计算纳税的基数（应纳税所得额）应加上发放的奖金。如甲同时发1500元年终奖时，则应纳税额为2350＋1500=3850元；据此判断税率为15％；本月应纳税额为3850×15％－125=452.5。计算公式为：<br>
+　　应纳税所得额=工资－住房公积金－800＋奖金。<br>
+　　如其他数据与前例一致，同时增发年终奖金每人1500元，计算表如表三所示。<br>
+　　甲的计算公式为：<br>
+　　应纳税所得额E2=B2＋C2－D2－800；<br>
+　　税率F2=IF（E2=“”，“”，IF（E2&gt;2000，“15％”，IF （E2&gt;500，“10％”，IF（E2&gt;0，“5％”，0））））；<br>
+　　速算扣除数仍根据“税率"取数，在G2内建立公式为=IF（F2=“15％”，125，IF（F2=“10％”，25，IF（F2=“5％”，0，0）））；应纳税额H2=E2×F2－G2。<br>
+　　<b>三、实际代扣所得税时的“取整”问题</b><br>
+　　计算的个人所得税往往带有角分，给实际发放工资时代扣个人所得税带来很多不便。如利用电话费的缴费方法，将使代扣个人所得税操作简便。<br>
+　　这一方法主要是利用取整函数ROUND（）四舍五入，舍角分取元为单位，其多交或少交的差额在下次抵补，累计计算。仍以上为例，计算时需增加“上次结余”　、“累计应代扣额”　、“实际代扣额”、“本次结余”四个栏目，计算如(表四)：<br>
+　　“上次结余"反映上次多扣或少扣的金额，假设上月甲少扣0.43元，则累计应代扣额=本次应纳税额＋0.43=452.93，在J2内设置公式为=H2－I2；“实际代扣额”反映甲实际取整并代扣的金额为453元，公式为ROUND（J2，0）；甲本次多交了493－492.97=0.07元，在“本次结余”内反映，在L2内建立公式为=K2－J2，当少扣税额时为负数，多扣税额时为正数。<br>
+　　需要说明的是“本次结余"在下月计算时将数值复制到I栏，以连续使用，在复制时，用选择性粘贴仅将L栏的数值粘贴到I栏 ，而不是全部粘贴。<br>
+　　注：本文中所有金额单位均为元。<br>
+<b>(山东　潘娣)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/37/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99373402.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

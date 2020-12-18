@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Delphi编程俱乐部</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>46 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; Delphi编程俱乐部</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Delphi编程俱乐部 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好， 在“Delphi论坛”和大家小别的这一段时间里一定让不少人等急了（对不起，实在是不好意思），所以这次眼光是在头上绑了一根写着“必胜”的白布条才一个猛子扎进论坛的数据库的。不为别的，只是希望不让大家失望。 经过两个多小时的打捞，眼光从回收站里伸出的手中攥着以下几个问题和答案：<br>
+　　问题一：在Win98中右击“我的文档”，选属性，在弹出的“我的文档 属性”窗口中点击“浏览”按钮就会弹出一个“浏览文件夹”对话框。请问这个对话框是怎么做出来的？<br>
+　　答案：要做这个对话框有三种方法。<br>
+　　（一）第一种方法是用Delphi提供的组件（在Win 3.1面板上）模仿在上面看到的对话框自己组装一个“浏览文件夹”窗体。具体的做法是：<br>
+　　1． 在你的Project里增加一个BorderStyle为bsDialog的新窗体；<br>
+　　2．放置一个DirectoryListBox组件；<br>
+　　3． 放置一个DriveComboBox组件，设置DirList为DirectoryListBox1；<br>
+　　4．然后再放上两个Button。一个“确定”（ModalResult为mrOk），一个“取消”（ModalResult为mrCancel）；<br>
+　　5．最后只要在调用这个浏览文件夹的地方加上一下代码就算大功告成了：<br>
+　　if Form2.ShowModal = mrOk then<br>
+　　Memo1.Lines.Add(Form2.DirectoryListBox1.Directory);<br>
+　　（二）第二种方法，在Delphi中可以通过调用SelectDirectory函数得到这种效果。<br>
+　　SelectDirectory在Delphi 4中的申明如下（请注意，一共有两个重载的申明）：<br>
+　　type<br>
+　　TSelectDirOpt = (sdAllowCreate, sdPerformCreate, sdPrompt);<br>
+　　TSelectDirOpts = set of TSelectDirOpt;<br>
+　　function SelectDirectory(var Directory: string;<br>
+　　Options: TSelectDirOpts; HelpCtx: Longint): Boolean; overload;<br>
+　　function SelectDirectory(const Caption: string; const Root:WideString; out Directory: string): Boolean; overload;<br>
+　　第一种语法的Options参数指定了“浏览文件夹”对话框的一些选项；参数HelpCtx指定上下文敏感的Help ID；Directory初始化了对话框的值，并且携带返回值。<br>
+　　第二种语法的Caption参数指定对话框标题（比如′请选择XXX的文件夹′）；参数Root指定用来浏览的根目录；所选择文件夹返回在参数Directory中。<br>
+　　不管是哪种语法，如果在对话框中选择了路径并按下“确定”按钮，SelectDirectory函数返回True；在其它情况下，函数SelectDirectory就返回False。<br>
+　　（三）第三种方法是比较高明的解决方案。在Windows中已经有一个专门用来处理这种问题的ShellAPI函数——SHBrowseForFolder（事实上，第二种方法的第二种语法就是调用了这个API，这在Delphi的源代码中可以得到证实）。因为它是使用系统已有的API，这样就不会占用太多的系统资源，从而减小代码长度、提高程序运行速度，并且在Windows的不同语言版本中会自动的和Windows相适应。具体代码如下：<br>
+　　var<br>
+　　Info: TBrowseInfo;<br>
+　　Dir: array[0..260] of char;<br>
+　　ItemId: PItemIDList;<br>
+　　begin<br>
+　　with Info do<br>
+　　begin<br>
+　　hwndOwner := self.Handle;<br>
+　　pidlRoot := nil;<br>
+　　pszDisplayName := nil;<br>
+　　lpszTitle := ′请选择XXX的文件夹′;<br>
+　　ulFlags := 0;<br>
+　　lpfn := nil;<br>
+　　lParam := 0;<br>
+　　iImage := 0;<br>
+　　end;<br>
+　　ItemId := SHBrowseForFolder(Info);<br>
+　　if ItemId &lt;&gt; nil then<br>
+　　begin<br>
+　　SHGetPathFromIDList(ItemId, @Dir);<br>
+　　Result := string(Dir);<br>
+　　end<br>
+　　else<br>
+　　Result := ′′;<br>
+　　end;<br>
+　　如果你对最后的这种方法感兴趣，以Browsing for Folders为主题在Windows API Help中检索将会得到更多的文档。<br>
+　　问题二：在许多软件的制作过程中我都遇到文件复制这个问题，但我对文件操作很不熟悉。请问，在Delphi中有简单的方法能够实现这个功能吗？<br>
+　　答案：实现它的源代码如下：<br>
+　　var<br>
+　　DesFile, SourFile: File;<br>
+　　Buf: Byte;<br>
+　　begin<br>
+　　AssignFile(SrcFile, ″c:\autoexec.bat″);<br>
+　　Reset(SrcFile, 1);／／ 1 = 逐个字节操作<br>
+　　AssignFile(DesFile, ″c:\autoexec.bak″);<br>
+　　Rewrite(DesFile, 1);  ／／ 同上<br>
+　　while not Eof(SrcFile) do<br>
+　　begin<br>
+　　BlockRead(SrcFile, Buf, SizeOf(Byte));   ／／ 从源文件中读出来<br>
+　　BlockWrite(DesFile, Buf, SizeOf(Byte));  ／／ 写到目标文件中去<br>
+　　end;<br>
+　　CloseFile(SrcFile);<br>
+　　CloseFile(DesFile);<br>
+　　end;<br>
+　　另外还有一个高招——直接使用API函数CopyFile。这个API的原型如下：<br>
+　　BOOL CopyFile(<br>
+　　LPCTSTR lpExistingFileName,  ／／ pointer to name of an existing file <br>
+　　LPCTSTR lpNewFileName,   ／／ pointer to filename to copy to <br>
+　　BOOL bFailIfExists   ／／ flag for operation if file exists <br>
+　　);<br>
+　　如：CopyFile( PChar(′c:\autoexec.bat′), PChar(′c:\autoexec.bak′), True);<br></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99461302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

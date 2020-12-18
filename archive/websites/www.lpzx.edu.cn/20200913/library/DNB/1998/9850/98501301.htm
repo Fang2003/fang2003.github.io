@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VFP3.0的多媒体编程实例二则</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　一、彩色按钮的设计<br>
+        　　Visual FoxPro拥有强大的ActiveX控件类库，但由于控件类的封装比较严密，因而也损失了一些灵活性，即标准控制对象的组件不能被单独修改。如果要设计一些形状各异，丰富多彩的命令按钮，就要另辟蹊径。好在VFP提供了很强的扩展功能，这些问题不难解决。以下给出了利用可视化编程技术设计的椭圆形可变色命令按钮的步骤，供大家参考。<br>
+        　　1创建主表单Form1。<br>
+        　　2在Form1中创建两个叠加在一起的形状控件Shape1和Shape2。将Shape1的BackColor属性设为0，0，0（黑色），并将其向右下方稍稍移动一点，作为Shape2的阴影。<br>
+        　　3将Shape1和Shape2的Carvature（曲率）属性设为90，控件便成为椭圆形状。<br>
+        　　4将Shape2和BackColor属性设为0，128，255（蓝色）。<br>
+        　　5在Shape2的MouseMove Event方法中输入：<br>
+        　　thisBackColor=RGB(255,0,255)<br>
+        　　即当鼠标移到Shape2上时，Shape2的颜色将变为紫红色。<br>
+        　　6再在Form1中创建一个标签控件Label1,并将Label移至Shape2上，作为按钮上的标题。<br>
+        　　7将Label1的属性作如下设置：<br>
+        　　BackStyle为“透明”；<br>
+        　　Caption为按钮上的文字；<br>
+        　　ForeColor为255,255,255（白色）；<br>
+        　　FontName为揩体；<br>
+        　　FontSize为14；<br>
+        　　说明：以上设置仅供参考，读者可根据自己的需要和喜爱来确定按钮的字体、大小、颜色等。<br>
+        　　8在Label1的Click方法中输入按钮被按下时要执行的程序。<br>
+        　　9最后，打开主表单Form1的属性表，在MouseMove Freat方法中输入语句：<br>
+        　　thisShape2BackColor=RGB(0,128,255)<br>
+        　　目的是当鼠标离开按钮时，按钮能恢复成蓝色。<br>
+        　　然后来运行一下这个彩色按钮，感觉不错吧。<br>
+        　　二、为表单添加背景音乐<br>
+        　　MP3播放器现在非常流行，它可以播放MP3类型的声音文件，我们可以用OLE方式将其加入到表单中，当打开表单时就可听到优美的音乐或歌曲，使得操作界面显得更加活泼友好。<br>
+        　　具体步骤简述如下：<br>
+        　　1首先将准备播放的MP3文件以及播放器WINMPLAY3应用程序集中放在某个子目录中，例如名为VFPMUS的子目录。<br>
+        　　2选择一首当表单打开时自动播放的音乐，假设为Music0mp3。双击Music0mp3,将弹出Win95的“打开方式”窗口，在“选择要使用的程序”中选择VFPMUS目录下的WINMPLAY3exe,同时还要设定“始终用此程序打开此文件”，这样，只要双击Music0mp3,就会弹出MP3播放器，并自动开始播放Music0。<br>
+        　　3在主表单Form1中创建OLE容器对象olecontrol1,随后将弹出OLE对象窗口，在左边的单选项中选“从文件中插入”，单击“浏览”，选择“C:\VFPMUS\Music0mp3”，同时，设定为“链接方式”。最后，单击“确定”退出。<br>
+        　　4用鼠标右键单击olecontrol1对象，选择“编辑包”对OLE对象的图标进行修改，可从VFP\Samples\Graphics\Icons中选一个合适的图标，选好图标后，单击“外观”，选择编辑菜单中的标识符项，输入“音乐”二字，最后关闭窗口。<br>
+        　　5打开主表单Form1的属性窗口，在Init Event方法中输入：<br>
+        　　thisolecontrol1DoVerb(－2)<br>
+        　　使得运行Form1时就能自动播放背景音乐。<br>
+        　　这样，音乐播放器就可以使用了。运行Form1，在表单上便可看到正在播放音乐的MP3播放器，可以将其最小化，或移到合适的位置，以免MP3播放器遮挡表单上的内容。若要停止播放，可关闭MP3播放器窗口，若想再进行播放，可双击“音乐”图标。如果想换一首曲子，可单击MP3播放器的File菜单项，打开其他MP3文件。也可以选定MP3播放器的Repeat项，以进行不间断的重复播放。(江苏　张浩平) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月28日第50期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

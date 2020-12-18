@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>海量硬盘的好管家---FAT32<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　<strong>一、FAT32与FAT的区别</strong><br>
+        　　文件分配表(FAT)是基于MS－DOS和Windows的个人计算机所使用的主要磁盘文件管理格式，但微软公司在Windows 
+        95 OSR2(Windows97)及Windows98测试版中推出了新的磁盘文件管理格式——FAT32，FAT与FAT32主要区别在哪里呢?看看下表即可明白。<br>
+        　　由上表不难看出，FAT的弊端主要有两个：一是只能管理2GB以下的硬盘，二是硬盘分区太大时所分配簇的大小不科学，在大容量硬盘日渐普及的情况下，FAT32的出现可以说是水到渠成、大势所趋，其根本目的就是为了更有效地利用和管理硬盘驱动器上的存储空间。<br>
+        　　以下是关于FAT32的一些详细情况，相信对迫切希望了解FAT32的读者有所帮助，特别是对于那些有海量硬盘的电脑用户更是如此。<br>
+        　　<strong>二、FAT32的基本常识</strong><br>
+        　　1某一个驱动器是否为FAT32驱动器<br>
+        　　双击“我的电脑”，右键单击硬盘图标，在弹出的菜单中点击“属性”，此时文件系统选项将显示当前驱动器类型是FAT还是FAT32。<br>
+        　　2创建FAT32分区<br>
+        　　方法一：使用Windows97或更新版的FDISKEXE进行分区，在启动FDISK时若该硬盘的容量超过512MB，FDISK将提示是否启用FAT32对大磁盘进行管理，回答“Y”则创建的分区将使用FAT32文件系统，而且该计算机可管理大于2GB的硬盘分区，回答“N”则创建原来的FAT文件系统，而且该计算机也不能管理大于2GB的硬盘分区。<br>
+        　　方法二：使用Windows98或更新版磁盘工具中的FAT32转换实用程序，详细使用方法见该实用程序的帮助信息，但该方法不能改变硬盘原来分区的个数和大小。<br>
+        　　3FAT32管理下的运行速度<br>
+        　　在大多数情况下，如果硬盘分区由FAT32管理，计算机的性能与由FAT管理基本相同，速度不会有明显的提高或降低。但是在某些情况下，如当计算机在MS－DOS模式下运行或当计算机运行Windows安全模式时，FAT32管理的驱动器运行速度可能显著变慢；但是，若在使用MS－DOS模式时加载磁盘缓冲程序(SMARTDRVEXE等)，驱动性能、存取速度将显著提高。<br>
+        　　4FAT32驱动器的压缩<br>
+        　　遗憾的是，至今Windows97的DriveSpace 3仍不支持对FAT32管理下驱动器的压缩。其实对FAT32管理的硬盘进行压缩并无什么实际意义，因为绝大多数压缩软件在对硬盘进行压缩时，也是把硬盘簇大小改为4K～8K／簇，而在FAT32中8G以下的分区均采用4K／簇管理，问题是在普通的电脑用户中不知哪位有幸拥有大于8G的硬盘?<br>
+        　　5在FAT32上运行Interlink<br>
+        　　如果在FAT32驱动器上以服务器方式运行Interlink，所有的连接和查询(例如DIR)，将出现如下错误信息：“文件分配表损坏，驱动器X”，而且Interlink“管理程序”显示错误的驱动器总空间量。<br>
+        　　要查看FAT32服务器，请在保护模式下启动计算机，并运行Interlink。<br>
+        　　6程序错误地报告可用磁盘空间<br>
+        　　非专为Windows97及更新版本开发的软件可能无法正确报告FAT32大硬盘的可用空间或完全无法报告超过2GB的可用磁盘空间或总磁盘空间。<br>
+        　　Windows97及更新版本提供的MS－DOS和Win32 API程序可以正确报告和测定超过2GB的磁盘可用空间或总空间。<br>
+        　　7Ontrack的磁盘管理程序<br>
+        　　Ontrack这个词对大多数人可能很是陌生，不知所指，但说起DM，喜欢工具软件的电脑用户肯定如雷贯耳，DM即为Ontrack发行的软件之一。在使用FAT32的计算机上使用DM，启动计算机时可能有长时间的延迟，并且驱动器可能将被设置在安全模式下运行。<br>
+        　　在FAT32驱动器上必须使用704及更新版本，并使用／L=0开关。<br>
+        　　<strong>三、FAT32的兼容性</strong><br>
+        　　1硬盘管理工具<br>
+        　　FAT32与现有的计算机以及为MS－DOS和Windows的早期版本而设计的程序完全兼容，但是许多现有对磁盘执行低级操作的实用程序(例如磁盘诊断工具NDD、DISKEDIT和磁盘碎片整理程序SPEEDISK、COMPRESS等)要在FAT32驱动器上工作就必须使用最新的支持FAT32的版本。<br>
+        　　Windows97中的磁盘工具(包括磁盘扫描程序、备份程序和磁盘碎片整理程序)完全支持FAT32驱动器，但无法使用DriveSpace压缩FAT32驱动器。<br>
+        　　2对FAT32的访问<br>
+        　　Windows97以前的操作系统封锁法访问保存在FAT32驱动器上的信息，这些操作系统包括：老版本的MS－DOS、Windows95和Windows 
+        NT40。<br>
+        　　Windows97的MS－DOS模式支持对FAT32驱动器的访问；可以通过网络共享FAT32驱动器，即使远程计算机不支持FAT32，该远程计算机也能够像访问老式FAT驱动器一样访问FAT32驱动器。<strong>(广西　唐建荣)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期7版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

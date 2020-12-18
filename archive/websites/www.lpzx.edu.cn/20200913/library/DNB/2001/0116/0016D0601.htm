@@ -1,0 +1,140 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>入侵检测初步（下）</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/Templates/internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->入侵检测初步（下）<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->3.文件访问日志与关键文件保护<br>
+              除了系统默认的安全审核外，对于关键的文件，我们还要加设文件访问日志，记录对它们的访问。<br>
+              文件访问有很多的选项：访问、修改、执行、新建、属性更改……一般来说，关注访问和修改就能起到很大的监视作用。<br>
+              例如，如果我们监视了系统目录的修改、创建，甚至部分重要文件的访问(例如cmd.exe net.exe，system32目录)，那么，入侵者就很难在不引起我们注意的情况下安放后门。要注意的是，监视的关键文件和项目不能太多，否则不仅增加系统负担，还会扰乱日常的日志监测工作。关键文件不仅仅指的是系统文件，还包括有可能对系统管理员和其他用户构成危害的任何文件，例如系统管理员的配置、桌面文件等等，这些都是有可能被用来窃取系统管理员资料和密码的。<br>
+              4.进程监控<br>
+              进程监控技术是追踪木马后门的另一个有力武器，90%以上的木马和后门是以进程的形式存在的。作为系统管理员，了解服务器上运行的每个进程是职责之一(否则不要说安全，连系统优化都没有办法做)。做一份每台服务器运行进程的列表非常必要，能帮助管理员一眼就发现入侵进程，异常的用户进程或者异常的资源占用都有可能是非法进程。除了进程外，dll也是危险的东西，例如把原本是exe类型的木马改写为dll后，使用rundll32运行就比较具有迷惑性。<br>
+              5.注册表校验<br>
+              一般来说，木马或者后门都会利用注册表来再次运行自己，所以，校验注册表来发现入侵也是常用的手法之一。一般来说，如果一个入侵者只懂得使用流行的木马，那么由于普通木马只能写入特定的几个键值(比如Run、Runonce等等)，查找起来是相对容易的，但是对于可以自己编写或改写木马的人来说，注册表的任何地方都可以藏身，靠手工查找就没有可能了。应对的方法是监控注册表的任何改动，这样改写注册表的木马就没有办法遁形了。监控注册表的软件非常多，很多追查木马的软件都带有这样的功能，一个监控软件加上定期对注册表进行备份，万一注册表被非授权修改，系统管理员也能在最短的时间内恢复。<br>
+              6.端口监控<br>
+              虽然说不使用端口的木马已经出现，但是大部分的后门和木马还是使用TCP连接的，监控端口的状况对于由于种种原因不能封锁端口的主机来说就是非常重要的了。对于系统管理员来说，了解自己服务器上开放的端口甚至比对进程的监控更加重要，常常使用netstat查看服务器的端口状况是一个良好的习惯，但是并不能24小时这样做，而且NT的安全日志有一个缺陷，喜欢记录机器名而不是IP，如果你既没有防火墙又没有入侵检测软件，倒是可以用脚本来进行IP日志记录的，看着这个命令：netstat 
+              -n -p tcp 10&gt;&gt;Netstat.log这个命令每10秒钟自动查看一次TCP的连接状况，基于这个命令我们做一个Netlog.bat文件time 
+              /t&gt;&gt;Netstat.log Netstat -n -p tcp 10&gt;&gt;Netstat.log。这个脚本将会自动记录时间和TCP连接状态，需要注意的是：如果网站访问量比较大，这样的操作是需要消耗一定的CPU时间的，而且日志文件将越来越大，所以请慎之又慎。<br>
+              一旦发现异常的端口，可以使用特殊的程序来关联端口、可执行文件和进程如inzider就有这样的功能，它可以发现服务器监听的端口并找出与该端口关联的文件，inzider可以从http://www.nttoolbox.com下载，这样无论是使用TCP还是UDP的木马都无处藏身。<br>
+              7.终端服务的日志监控<br>
+              单独将终端服务(Terminal Service)的日志监控分列出来是有原因的，微软Win2000服务器版中自带的终端服务Terminal 
+              Service是一个基于远程桌面协议(RDP)的工具，它的速度非常快，也很稳定，可以成为一个很好的远程管理软件，但是因为这个软件功能强大而且只受到密码的保护，所以也非常的危险，一旦入侵者拥有了管理员密码，就能够像本机一样操作远程服务器。虽然很多人都在使用终端服务来进行远程管理，但是，并不是人人都知道如何对终端服务进行审核。大多数的终端服务器上并没有打开终端登录的日志。其实打开日志审核是很容易的，在管理工具中打开远程控制服务配置(Terminal 
+              Service Configration)，点击“连接”，右击你想配置的RDP服务(比如RDP-TCPMicrosoft RDP 
+              5.0，选中书签“权限”，点击左下角的“高级”，看见上面那个“审核”了么？我们来加入一个Everyone组，这代表所有的用户，然后审核它的“连接”、“断开”、“注销”的成功和“登录”的成功和失败就足够了。审核太多了反而不好，这个审核是记录在安全日志中的，可以从“管理工具”→“日志查看器”中查看。现在什么人什么时候登录我都一清二楚了，可是美中不足的是：这个破烂玩艺居然不记录客户端的IP(只能查看在线用户的IP)，而是华而不实地记录什么机器名，倒！要是别人起个PIG的机器名你只好受他的嘲弄了，不知道微软是怎么想的，看来还是不能完全依赖微软呀，我们自己来吧，写个程序，一切搞定，你会C么？不会？VB呢？也不会？Delphi？……什么？你什么编程语言都不会？我倒，毕竟系统管理员不是程序员呀，别急别急，我给你想办法，我们来建立一个bat文件，叫做TSLog.bat。这个文件用来记录登录者的IP，内容如下：time 
+              /t &gt;&gt;TSLog.log netstat -n -p tcp ｜ find “3389”&gt;&gt;TSLog.logstart 
+              Explorer。我来解释一下这个文件的含义：第一行是记录用户登录的时间，time /t的意思是直接返回系统时间(如果不加/t，系统会等待你输入新的时间)，然后我们用追加符号“&gt;&gt;”把这个时间记入TSLog.log作为日志的时间字段；第二行是记录用户的IP地址，netstat是用来显示当前网络连接状况的命令，-n表示显示IP和端口而不是域名、协议，-ptcp是只显示tcp协议，然后我们用管道符号“｜”把这个命令的结果输出给find命令，从输出结果中查找包含“3389”的行(这就是我们要的客户的IP所在的行，如果你更改了终端服务的端口，这个数值也要作相应的更改)。最后我们同样把这个结果重定向到日志文件TSLog.log中去，于是在TSLog.log文件中，记录格式如下：<br>
+              2240 TCP　192.168.12.283389<br>
+              192.168.10.1234903　ESTABLISHED 2254 TCP　192.168.12.283389　<br>
+              192.168.12.291039　ESTABLISHED也就是说只要这个TSLog.bat文件一运行，所有连在3389端口上的IP都会被记录，那么如何让这个批处理文件自动运行呢？我们知道，终端服务允许我们为用户自定义起始的程序，	
+              在终端服务配置中，我们覆盖用户的登录脚本设置并指定TSLog.bat为用户登录时需要打开的脚本，这样每个用户登录后都必须执行这个脚本，因为默认的脚本(相当于shell环境)是Explorer(资源管理器)，所以我在TSLog.bat的最后一行加上了启动Explorer的命令start 
+              Explorer。如果不加这一行命令，用户是没有办法进入桌面的！当然，如果你只需要给用户特定的shell例如cmd.exe或者word.exe你也可以把start 
+              Explorer替换成任意的shell。这个脚本也可以有其他的写法，作为系统管理员，你完全可以自由发挥你的想象力、自由利用自己的资源，例如写一个脚本把每个登录用户的IP发送到自己的信箱，对于重要的服务器也是一个很好的方法。正常情况下一般的用户没有查看终端服务设置的权限，所以他不会知道你对登录进行了IP审核，只要把TSLog.bat文件和TSLog.log文件放在比较隐蔽的目录里就足够了。不过，需要注意的是这只是一个简单的终端服务日志策略，并没有太多的安全保障措施和权限机制。如果服务器有更高的安全要求，那还是需要通过编程或购买入侵监测软件来完成的。<br>
+              8.陷阱技术<br>
+              早期的陷阱技术只是一个伪装的端口服务用来监测扫描，随着“矛”和“盾”的不断升级，现在的陷阱服务或者陷阱主机已经越来越完善，越来越像真正的服务，不仅能截获半开式扫描，还能伪装服务器一端的回应并记录入侵者的行为，从而帮助判断入侵者的身份。我本人对于陷阱技术并不是非常感兴趣，一来从技术人员角度来说，低调行事更符合安全的原则；二来陷阱主机反而成为入侵者跳板的情况并不仅仅出现在小说中，在现实生活中也屡见不鲜。如果架设了陷阱反而被用来入侵，那真是偷鸡不成了蚀把米。记得CoolFire说过一句话，可以用来作为对陷阱技术介绍的一个总结：在不了解情况时，不要随便进入别人的系统，因为你永远不能事先知道系统管理员是真的白痴或者是伪装成白痴的天才……<br>
+              入侵监测的初步介绍就到这里，在实际运用中，系统管理员对基础知识掌握的情况直接关系到他的安全敏感度，只有身经百战知识丰富，仔细小心的系统管理员才能从一点点的蛛丝马迹中发现入侵者的影子，未雨绸缪，阻止入侵的行动。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">在VC++的对话框资源模板中显示汉字1.4<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　熟悉Visual C＋＋编程的人知道，在基于中文的对话框资源模板中加入静态文本控制是很容易显示汉字的。但有时若对话框资源是由AppWixard自动创建的，这时生成的资源是基于英语的，所以其中的静态文本控制就不能显示汉字。由于AppWizard生成的资源文件Data.rc为一文本文件，于是我用Windows 
+        95中的记事本打开它，经过分析才明白，原来对话资源IDD_DATA_FORM是定义在下面的定义体中的：<br>
+        　　／／English(U.S.)resources<br>
+        　　＃if!defined(AFC_RESOURCE_DLL)||defined(AFX_TARG_ENU)<br>
+        　　＃ifdef_WIN32<br>
+        　　LANGUAGE LANG_ENGLISH,SUBLANG_ENGLISH_US<br>
+        　　＃pragma code_page(1252)<br>
+        　　＃endif／／_WIN32<br>
+        　　… …<br>
+        　　＃endif ／／English(U.S.)resources<br>
+        　　由于这是一个基于英语的资源定义，当然显示不出汉字来。于是我将对话框资源IDD_DATA_FORM的描述部分剪贴到剪切板中。然后在Data.rc中找到基于中文的定义体，如下所示：<br>
+        　　／／Chinese(P.R.C)resources<br>
+        　　＃if!defined(AFX_RESOURCE_DLL)||defined(AFX_TARG_CHS)<br>
+        　　＃ifdef_WIN32<br>
+        　　LANGUAGE LANG_CHINESE,SUBLANG_CHINESE_SIMPLIFIED<br>
+        　　＃pragma code_page (936)<br>
+        　　＃endif／／_WIN32<br>
+        　　… …／／插入到此处。<br>
+        　　＃endif ／／Chinese(P.R.C.)resources<br>
+        　　将对话资源描述粘贴到定义体中，运行程序，汉字果然显示出来了!<strong>(河北　李玉存)</p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

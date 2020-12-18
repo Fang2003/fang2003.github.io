@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- #BeginTemplate "/Templates/samplefiletmp.dwt" -->
+<head>
+<!-- #BeginEditable "dochead" -->
+<title>伸展与缩放动画效果Banner显示</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+td {font-size: 9pt;}
+body {font-family: "宋体";font-size: 9pt;margin-top: 5px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;}
+.pt9 {font-size: 9pt;font-family: "宋体";}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<TABLE width="633" border="0" cellspacing="0" cellpadding="0" height="1619" align="center">
+<tr valign="top">
+<td>
+<TABLE width="120%" border="1" cellspacing="1" cellpadding="1" bordercolor="#009999" bgcolor="#F5F5F5">
+<tr valign="top">
+<TD height="15" colspan="2" width="768" align="center">伸展与缩放动画效果Banner显示
+
+<tr valign="top">
+<TD colspan="2" width="768" height="1581">
+<p>效果很酷，如果你想要使Banner的效果更加花哨一点的话。建议先看看DEMO的效果。<br>
+</p>
+<p>&lt;html&gt;<br>
+&lt;head&gt;</p>
+<p> <font color="#FF0033" face="Arial, Helvetica, sans-serif"><i>Step
+1</i></font><font color="#FF0033"> :首先将下面的代码加入HTML的&lt;head&gt;区。</font><br>
+&lt;script&gt;<br>
+&lt;!--// </p>
+<p>//定义图片的宽度和高度，所有的图片要有相同的尺寸；<br>
+var imgwidth=400<br>
+var imgheight=60</p>
+<p>//下面定义了包含2个图片的数组，数组的下标从0开始，你可以增加任意的图片，按照顺序增加即可，注意相应增加数组下标。<br>
+var imgname=new Array()<br>
+imgname[0]=&quot;imggum1.jpg&quot;<br>
+imgname[1]=&quot;imggum2.jpg&quot;</p>
+<p>//下面定义图片的url，如果不需要url，将连接值设置为&quot;#&quot;；<br>
+var imgurl=new Array()</p>
+<p>imgurl[0]=&quot;http://java2000.126.com&quot;<br>
+imgurl[1]=&quot;#&quot;</p>
+<p>// 先预读图片，不要修改这里；<br>
+var imgpreload=new Array()<br>
+for (i=0;i&lt;=imgname.length-1;i++) {<br>
+imgpreload[i]=new Image()<br>
+imgpreload[i].src=imgname[i]<br>
+}</p>
+<p><br>
+var pause=2000</p>
+<p>//图片的显示速度，数值小速度快；<br>
+var speed=20</p>
+<p>//下面的参数也会影响图片显示的速度，数值小速度快；代表2个图片的显示间隔。<br>
+var step=10</p>
+<p>//不要修改下面的代码；<br>
+var i_loop=0<br>
+var i_image=0</p>
+<p>function stretchimage() {<br>
+if (i_loop&lt;=imgwidth) {<br>
+if (document.all) {<br>
+imgcontainer.innerHTML=&quot;&lt;a href='&quot;+imgurl[i_image]+&quot;'
+target='_blank'&gt;&lt;img width='&quot;+i_loop+&quot;' height='&quot;+imgheight+&quot;'
+src='&quot;+imgname[i_image]+&quot;' border='0'&gt;&lt;/a&gt;&quot;<br>
+}<br>
+i_loop=i_loop+step<br>
+var timer=setTimeout(&quot;stretchimage()&quot;,speed)<br>
+}<br>
+else {<br>
+i_loop=imgwidth<br>
+clearTimeout(timer)<br>
+imgcontainer.innerHTML=&quot;&lt;a href='&quot;+imgurl[i_image]+&quot;'
+target='_blank'&gt;&lt;img src='&quot;+imgname[i_image]+&quot;'
+border='0'&gt;&lt;/a&gt;&quot;<br>
+var timer=setTimeout(&quot;shrinkimage()&quot;,pause)<br>
+}<br>
+}</p>
+<p>function shrinkimage() {<br>
+if (i_loop&gt;=0) {<br>
+if (document.all) {<br>
+imgcontainer.innerHTML=&quot;&lt;a href='&quot;+imgurl[i_image]+&quot;'
+target='_blank'&gt;&lt;img width='&quot;+i_loop+&quot;' height='&quot;+imgheight+&quot;'
+src='&quot;+imgname[i_image]+&quot;' border='0'&gt;&lt;/a&gt;&quot;<br>
+}<br>
+i_loop=i_loop-step<br>
+var timer=setTimeout(&quot;shrinkimage()&quot;,speed)<br>
+}<br>
+else {<br>
+i_loop=0<br>
+clearTimeout(timer)<br>
+changeimage()<br>
+}<br>
+}</p>
+<p>function changeimage() {<br>
+i_image++<br>
+if (i_image&gt;=imgname.length) {i_image=0}<br>
+if (document.layers) {<br>
+document.imgcontainer.document.write(&quot;&lt;a href='&quot;+imgurl[i_image]+&quot;'
+target='_blank'&gt;&lt;img src='&quot;+imgname[i_image]+&quot;'
+border='0'&gt;&lt;/a&gt;&quot;) <br>
+document.imgcontainer.document.close()<br>
+} <br>
+stretchimage()<br>
+}</p>
+<p> // --&gt;<br>
+&lt;/script&gt;</p>
+<p><font face="Arial, Helvetica, sans-serif"><i><font color="Red">Step
+2</font></i></font><font color="Red">: 将CSS控制加入&lt;head&gt;区</font><br>
+&lt;style&gt;<br>
+.containerstyle {<br>
+position:absolute;<br>
+<font color="#6600CC">left:60px;<br>
+top:20px;</font><br>
+}<br>
+&lt;/style&gt;</p>
+<p>&lt;/head&gt;</p>
+<p>&lt;body bgcolor=&quot;#FFFFFF&quot;<font face="Arial, Helvetica, sans-serif" color="#FF0033">onLoad=&quot;stretchimage()&quot;</font>&gt;<br>
+<font face="Arial, Helvetica, sans-serif" color="Red">&lt;span
+id=&quot;imgcontainer&quot;class=&quot;containerstyle&quot;&gt;&lt;/span&gt;
+</font><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</p>
+<p></p>
+最后，在&lt;Body&gt;标签内加上onload事件句柄，在&lt;body&gt;区加上&lt;span&gt;...&lt;/span&gt;标签。你可能需要修改图片出现的<font color="#6600CC">绝对位置</font>。如上兰色部分。修改直至位置符合你的具体需要。
+
+</TABLE>
+
+
+</TABLE>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+<!-- #EndTemplate --></html>

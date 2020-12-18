@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>VFB编程小窍门</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><big><strong>VFB编程小窍门</strong></big></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p class="ourfont">　　VFP作为数据库管理系统，它具有友好的界面、强大的数据库管理性能、面向对象的程序设计及汉字处理功能等，深为广大编程爱好者所青睐。下面向大家提供几点关于VFP编程的窍门。<br>
+        　　1.用项目管理器编辑<br>
+        　　项目管理器是VFP中处理和组织数据的工具，它为数据提供了一个组织良好的分层结构视图。建立一个项目可以帮助你组织数据，在项目管理器中只需单击几次鼠标按钮，就可以跟踪表和查询，并组织相关的表单、报表、标签、代码、位图和其他文件。<br>
+        　　2.用CONFIG.FPW设置信息<br>
+        　　CONFIG.FPW是个文本文件，VFP在启动时读此文件，一般情况保存在VFP目录下(通常是C：\VFP)，它指定一些VFP的初始设置信息。你可以在其中加入以下一些对性能影响较大的SET命令：<br>
+        　　SET ESCAPE ON<br>
+        　　SET OPTIMIZE ON<br>
+        　　SET REFRESH TO 0，0<br>
+        　　SET STATUS BAR OFF<br>
+        　　SET STATUS OFF<br>
+        　　SET SYSMENU TO DEFAULT<br>
+        　　SET TALK OFF<br>
+        　　SET VIEW OFF<br>
+        　　3.用两个目录管理数据<br>
+        　　建立两个目录DATA和LS，在某些情况是很有价值的，如你可以将原始数据放在DATA目录中，将一部分备份数据放在LS目录中，这样，你在编程时，就可以用LS中的数据进行开发和调试，既节约时间，又能保证原始数据不被破坏。<br>
+        　　4.在编程中提高性能<br>
+        　　(1)FOR…ENDFOR循环比DO WHILE…ENDDO循环快；<br>
+        　　(2)INSERT SQL比APPEND BLANK再加上REPLACE要快得多，尤其是多用户环境下建立了索引的表更是如此；<br>
+        　　(3)从多个字段复制数据时，SCATTER TO ARRAY要比SCATTER MEMVAR快；<br>
+        　　(4)如果要将很多记录追加到已有索引的表中，则先移去索引再追加记录，然后重建索引会更快些；<br>
+        　　(5)如果经常使用某一索引排序，则定期地按此方式对表进行排序也可以提高性能；<br>
+        　　(6).CDX文件可以提高多用户性能，因为更新一个.CDX文件比更新多个.IDX文件速度快。　<strong>(江苏　曾庆祝)</strong></p>
+        <p align="right"><font color="#000000"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1999年3月01日第08期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

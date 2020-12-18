@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>结构分析的必备工具--Algor</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>结构分析的必备工具——Algor</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　目前，我国有限元结构分析软件市场主要以国外公司的大型商业有限元分析软件为主，如MSC/Nastran、MSC/Patran、Ansys、Abquas和 
+        Marc等。这些大型软件尽管功能强大，但是价格昂贵，对计算机硬件要求高。美国Algor公司针对微机平台而开发的有限元分析软件Algor以其分析功能齐全、使用操作简便和对硬件的要求低，在从事结构分析的科技工作者中享有盛誉。<br>
+        　　Algor软件是在我国工程界十分熟悉的有限元分析软件SAP5和Adina基础上发展起来的。它的第一个版本运行于微机DOS操作系统，而Algor在1995年就已推出了Windows95环境下运行的Algor95。1998年又推出了全新的基于Windows95/98和WindowsNT操作系统的全32位有限元分析软件Algor98。目前该软件可以运行于从DOS到Windows95<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15A.gif" width="280" height="138" alt="15A.gif (7795 字节)" align="right">/98和WindowsNT操作系统的微机平台。<br>
+        　　本文就Algor软件的分析功能、结构和初步使用做一简要介绍。<br>
+        　　1.Algor软件的分析功能<br>
+        　　如图1所示，Algor软件的分析模块和主要功能有：<br>
+        　　（1）线性应力分析<br>
+        　　主要功能：线性应力分析（ssap0）；复合材料线性应力分析（ssap0c）；间隙单元线性应力分析（ssap0g）；复合材料和间隙单元线性应力分析（ssap0gc）；线性稳定性分析（ssap6s）。<br>
+        　　（2）线性动力学分析<br>
+        <img src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15B.gif" width="302" height="150" alt="15B.gif (10620 字节)"
+        align="left">　　主要功能：线性模态分析（ssap1）；复合材料模态分析（ssap1c）；时间历程分析（ssap2）；响应谱分析（ssap3）；线性瞬态应力分析（ssap4）；复合材料瞬态应力分析（ssap4c）；频率响应分析（ssap5）；随机振动分析（ssap7）；载荷作用下的模态分析（ssap8s）。<br>
+        　　（3）非线性动力分析<br>
+        　　主要功能：非线性模态分析（apak1）；非线性动力和应力分析（apak4）。<br>
+        　　（4）热传导分析<br>
+        　　主要功能：稳态热传导分析（ssap10）；瞬态热传导分析（ssap11）。<br>
+        　　（5）流体流动分析<img src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15C.gif" width="214" height="164"
+        alt="15C.gif (6953 字节)" align="left"><br>
+        　　主要功能：二维稳态流动分析（flow01）；二维非稳态流动分析（flow02）；三维稳态流动分析（flow03）；三维非稳态流动分析（flow04）。<br>
+        　　（6）电场分析<br>
+        　　（7）管道设计集成分析<br>
+        　　（8）机械运动仿真<br>
+        　　主要功能：非线性机械运动仿真Accupak/VE（apak4）。<br>
+        　　（9）CAD接口Houdini<br>
+        　　主要功能：通过IGES、SAT、PRT等<img src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15D.gif" width="180"
+        height="130" alt="15D.gif (3448 字节)" align="right">文件读取其它CAD软件的实体模型；通过IGES、DXF文件读取CAD软件线框模型。<br>
+        　　2.Algor软件的结构<br>
+        　　Algor软件通过Roadmap把前处理（SuperdrawⅢ）、后处理（Superview）和分析模块紧密地联系在一起。Roadmap界面如图2所示。前处理和后处理界面分别见图3和图4。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15E.gif" width="215" height="156"
+        alt="15E.gif (5133 字节)" align="left">&nbsp;&nbsp; 图5为所示SD3界面图例，它主要由以下几个部分组成(参见图5标示)：<br>
+        　　A. 标题栏：显示程序名和使用的模型名。<br>
+        　　B. 菜单栏：位于标题栏下方，包括下拉式菜单。<br>
+        　　C. 模型区：此区域是显示模型的地方。<br>
+        　　D. 浮动工具栏：此工具栏可以快速进入SD3命令。<br>
+        　　E. 最小轴：指出你的视点相对于三维活动区域的位置。<br>
+        　　F. 状态栏：显示重要的信息和提供坐标和参数输入。<br>
+        　　G. 对话栏：提供输入字符的地方。<br>
+        　　3．Algor软件的初步使用<br>
+        　　下面我们以安装在Windows 95下的Algor为例演示该软件初步的使用方法。<br>
+        　　Algor安装后，在Windows 95“开始”下的“程序”菜单中形成一个“Algor 
+        Software”图标。单击该图标进入下一级菜单，从“Start Algor with Roadmaps”启动进入“Roadmap”。从“File”菜单中选择“New 
+        Model”输入新模型名。从“Analysis Type&quot;菜单中选择分析类型。双击“Create/Edit 
+        Your Model”进入下一级菜单，单击“SuperdrawⅢ”进入前处理SD3。在SD3中利用它的“Add”、 
+        “Construct”和“Modify”菜单下的命令来构造几何模型，再利用“FEA 
+        Mesh”菜单下的命令生成有限元网格。边界条件和载荷使用“FEA Add”菜单的下一级菜单“Stress 
+        and Dynamic Analysis”、“Fluid Flow Analysis”、“Heat Transfer Analysis”和“ 
+        Electrostatic Analysis”，功能是分别施加“结构应力和动力分析”、“流体流动分析”、“热传导分析”和“电场分析”的边界条件和载荷。<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15F.gif" width="199" height="145" alt="15F.gif (6697 字节)" align="right">对结构应力和动力分析而言，分别用“Boundray 
+        Conditions”、“Nodal Forces”、“Nodal Moments”和“Nodal Temperatures”等命令来执行。用鼠标单击状态栏中“Element 
+        Data”图标，出现对话窗，在此对话窗中选择单元类型、添加材料特性和几何特性（见图6）。单击“Data”菜单生成计算所需要的数据。<br>
+        　　此时自动退出SD3程序，回到Roadmap界面。双击“Select Run Time Options”图标进入执行控制参数菜单，在此菜单中选择程序控制参数、计算输出内容和打印内容等。完成后双击“Up”图标返回到“Roadmap”界面。单击“Analyze”图标，提交作业，Roadmap自动调用计算分析程序进行计算。计算机屏幕上会显示程序的执行进程和一些相关信息。计算完成后自动返回到Roadmap界面，单击“View 
+        Log File”图标检查计算历程文件。双击“Up”图标返回到“Roadmap”界面。<br>
+        <img src="http://www.lpzx.edu.cn/library/DNB/1999/9909/image/15G.gif" width="238" height="182" alt="15G.gif (14082 字节)"
+        align="left">　　单击“View Analysis Results”图标调用后处理程序Sview检查计算结果。Sview主菜单下的“Options”菜单提供了许多非常有用的命令，可以使用户非常方便地查看已完成的有限元模型，例如，显示节点和单元号；改变边界条件、压力、集中力和力矩的显示颜色；隐藏局部单元；以及定义剖切平面等。Sview主菜单下的“Require”菜单提供了许多查看节点和单元信息的命令，例如查看节点坐标、节点载荷和温度、查看单元材料特性，以及表面压力等信息。“Load 
+        case”、“Displaced”和“Stress－di”菜单提供了很多显示计算结果的命令，在“Load 
+        case”菜单下可以观看每个工程的计算结果。在“Displaced”菜单下可以观看结构的变形图、变形和未变形的叠加图，并能查看任一节点的位移数据和任意改变放大比例。“Stress－di”菜单提供了丰富的命令，可以按各种准则显示结构的应力、应变和接触力情况，不但能用云图显示，还可以显示应力、应变和接触力等值线，用鼠标点取结构上的任何节点可以显示出该节点的应力、应变和接触力数据，在该菜单下还可以生成计算结果的BMP图片文件。图7为在Sview中显示的应力计算结果。利用主菜单下的“Animate”菜单就可得到计算结果的动画演示。<br>
+        <strong>(黑龙江　周传月)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

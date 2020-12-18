@@ -1,0 +1,354 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<link rel="stylesheet" type="text/css" href="gyt.css">
+<title></title>
+
+<style type="text/css">
+  .spanstyle {
+  	position:absolute;
+  	visibility:visible;
+  	top:-50px;
+  	font-size:9pt;
+  	color: #FF0000;
+   font-weight:bold;
+  }</style>
+<script>
+var x,y
+var step=20
+var flag=0
+var message="郭宇霆的网站！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-50}
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1}
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]    	}
+		xpos[0]=x+step
+		ypos[0]=y
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]    	}	}
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]    	}
+		xpos[0]=x+step
+		ypos[0]=y
+			for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]}	}
+		var timer=setTimeout("makesnake()",30)}
+
+</script>
+</head>
+
+<body onLoad="makesnake()" background="images/bg.gif" >
+<script>
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"'class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<center>
+<table style="BORDER-TOP: 2px solid; BORDER-BOTTOM: 2px solid" cellSpacing="0" cellPadding="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td width="206" height="1">
+        <p align="center"><img alt="郭宇霆的网站" src="images/gytdwz.gif" border="0" width="180" height="68"></p>
+      <td vAlign="center" width="511" height="1">
+        <div align="center">
+          <table height="80" cellSpacing="0" cellPadding="0" width="425" border="0">
+            <tbody>
+              <tr>
+                <td width="423">
+                  <p align="center">
+                  <object classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" id="ShockwaveFlash1" width="466" height="65">
+                    <param name="_cx" value="5080">
+                    <param name="_cy" value="5080">
+                    <param name="Movie" value="gytsm.swf">
+                    <param name="Src" value="gytsm.swf">
+                    <param name="WMode" value="Window">
+                    <param name="Play" value="-1">
+                    <param name="Loop" value="-1">
+                    <param name="Quality" value="High">
+                    <param name="SAlign" value>
+                    <param name="Menu" value="-1">
+                    <param name="Base" value>
+                    <param name="Scale" value="ShowAll">
+                    <param name="DeviceFont" value="0">
+                    <param name="EmbedMovie" value="0">
+                    <param name="BGColor" value>
+                    <param name="SWRemote" value>
+                  </object>
+                  </p>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <td width="63" height="1">
+        <div align="center">
+          <table cellSpacing="1" cellPadding="0" width="63" border="0">
+            <tbody>
+              <tr>
+                <td width="57">
+                  <p align="center"><script language="JavaScript"> 
+
+function bookmarkit(){window.external.addFavorite('http://guoyuting.yeah.net/','郭宇霆的网站')}
+
+</script>
+                  <a onclick="bookmarkit()" href="main.htm#">-加入收藏</a></p>
+              <tr>
+                <td width="57">
+                  <p align="center"><a style="CURSOR: hand" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://guoyuting.yeah.net/');" "http://www.lpzx.edu.cn/goodpage/gyt/href">-设为首页</a></p>
+              <tr>
+                <td width="57"><a href="mailto:guoyuting@sina.com">-给我发信</a>
+              <tr>
+                <td width="57">
+                  <p align="center"><a target="_blank" href="http://guoyuting.abc.yesite.com/">-给我留言</a></p>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </tr>
+  </tbody>
+</table>
+</center>
+<table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td class=btnTD bgcolor=#FF0000 style=font-size:11pt align=center><p style=margin-top:1;margin-bottom:1><b><a href="main.htm"><font color=#00FFFF> 首&nbsp;&nbsp;                  
+      页 </font></a></b><td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center valign=middle>
+            <p style=margin-top:1;margin-bottom:1><b><font color=#000000><a href="soft/soft.htm">软件小屋</a></font></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center>
+            <p style=margin-top:1;margin-bottom:1><b><font color=#000000><a href="diy.htm">DIY园地</a> 
+              </font></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center>
+            <b><font color="#000000"><a href="wz.htm">珍藏文章</a></font></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center>
+            <p style=margin-top:1;margin-bottom:1><b><font color=#000000> <a href="asfd.htm">奥赛辅导</a> 
+              </font></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center>
+            <p style=margin-top:1;margin-bottom:1><b><font color="#000000"><a href="sc.htm">素材大全</a></font></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center><b><a href="yjzd/6.htm">有奖征答</a></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center><b><font color=#000000><a href="grda.htm">个人档案</a></font></b> 
+          <td class=btnTD bgcolor=#00FF00 style=font-size:11pt align=center><p style=margin-top:1;margin-bottom:1><b><a href=http://guoyuting.abc.yesite.com/> 我的留言 </a></b></table>
+<table border=0 cellpadding=0 width=100%>
+<tr><td valign=top><table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td width=100%><table border=0 cellpadding=0 cellspacing=0 width=98%><tr><td width=100% bgcolor=#80D0FF style=font-size:11pt;border-style:solid;border-width:1><p align=center style=margin-top:1;margin-bottom:1><font color=#000000> ★ 更新记录 ★ </font><tr><td width=100% bgcolor=#F0F8FF style=border-left-style:solid;border-left-width:1;border-right-style:solid;border-right-width:1;border-bottom-style:solid;border-bottom-width:1>                 
+                  <p style=margin-top:6;margin-bottom:0><font color=#800080>2000-04-26                
+                  &quot;郭宇霆的网站”诞生，获得了“阳泉市首届网页设计大赛”优秀作品奖。</font>
+                  <p style=margin-top:0;margin-bottom:0><p style=margin-top:0;margin-bottom:0><font color=#FF0000>2000-06-28  
+                  郭宇霆的网站第一次改版，已经创造了佷好的访问量。</font><p style=margin-top:0;margin-bottom:0> 
+                  <p style=margin-top:0;margin-bottom:6><font color=#800080>2001-06-10                  
+                    “郭宇霆的网站”网站再次改版，并增加栏目。</font> 
+                </table><tr><td width=100%>&nbsp;  <tr><td width=100%><table border=0 cellpadding=0 cellspacing=0 width=98%><tr><td width=100% bgcolor=#80D0FF style=font-size:11pt;border-style:solid;border-width:1><p align=center style=margin-top:1;margin-bottom:1><font color=#000000> ★ 聊天登录 ★ </font><tr><td width=100% bgcolor=#F0F8FF style=border-left-style:solid;border-left-width:1;border-right-style:solid;border-right-width:1;border-bottom-style:solid;border-bottom-width:1><table borderColor=#008000 height=77 cellSpacing=0 cellPadding=0 width=100% border=0><tbody><tr><td><form name=login action=http://202.106.185.95/freechat/login.php3 method=post><p style=MARGIN-TOP:3px;MARGIN-BOTTOM:3px align=center> 昵称: <input size=10 name=user><p style=MARGIN-TOP:3px;MARGIN-BOTTOM:3px align=center> 密码: <input type=password size=10 value name=passwd><p style=MARGIN-TOP:3px;MARGIN-BOTTOM:3px align=center> (游客无须密码) <p style=MARGIN-TOP:3px;MARGIN-BOTTOM:3px align=center> (第一次进入自动申请) <p style=MARGIN-TOP:3px;MARGIN-BOTTOM:3px align=center><input type=submit value=进入 name=submit><input type=reset value=重写 name=B2><input type=hidden value=guoyuting name=room></form></tbody></table></table><tr><td width=100%>&nbsp;  <tr><td width=100%><table cellSpacing=0 cellPadding=0 width=98% border=0 style=border-style:solid;border-width:1><tbody><tr><td width=100% bgColor=#80D0FF colSpan=2 style=font-size:11pt>                
+                  <p align=center> ★ 网友QQ号码 ★                 
+                <tr><td bgcolor=#F0F8FF style=border-right-style:solid;border-right-width:1;border-top-style:solid;border-top-width:1><p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 姓名 <td bgcolor=#F0F8FF style=border-top-style:solid;border-top-width:1>
+                  <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> QQ号码 
+                <tr><td bgcolor=#F0F8FF style=border-right-style:solid;border-right-width:1;border-top-style:solid;border-top-width:1>
+                  <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> ★霆霆★
+                  <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> msxcms <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> doubler <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 瑞瑞 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 凯新 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 蓝色雅碧 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 赵子龙yjw <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 赵鹏 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 小不点 <td bgcolor=#F0F8FF style=border-top-style:solid;border-top-width:1><p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 8926927 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 5774438 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 1996286 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 825776 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 14131183 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 27887579 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 19682647 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 10922442 <p style=MARGIN-TOP:2px;MARGIN-BOTTOM:2px align=center> 14791466 </tbody></table><tr><td width=100%>&nbsp;  <tr><td width=100%><table border=0 cellpadding=0 cellspacing=0 width=98%><tr><td width=100% bgcolor=#80D0FF style='font-size: 11pt; border-style: solid; border-width: 1'><p align=center style=margin-top:1;margin-bottom:1><font color=#000000> ★ 本站计数器 ★ </font><tr><td width=100% bgcolor=#F0F8FF style=border-left-style:solid;border-left-width:1;border-right-style:solid;border-right-width:1;border-bottom-style:solid;border-bottom-width:1><p style=margin-top:6;margin-bottom:6 align=center><img src=http://www.xz.jsinfo.net/cgi-bin/Count.cgi?ft=7&frgb=255;215;0&dd=A|df=gytguoyutingyeahnet.dat border=0 width=88 height=31></table></table><td valign=top width=77%><table border=0 cellpadding=0 width=100% cellspacing=12 height=303><tr><td width=50% valign=top height=278>                
+            <table border=0 cellpadding=0 cellspacing=0 width=100%>
+              <tr>
+                <td width=33% bgcolor=#0000FF style=font-size:11pt;color:#FFFFFF> 
+                  <p align=center style=margin-top:2;margin-bottom:2><b><font face=宋体 color="#FFFF00">◇本站公告 
+                    </font></b>
+                <td width=33%><td width=34%><tr>
+                <td width=100% colspan=3 style="border:1 solid #0000FF"> 
+                  <p style=margin-top:7;margin-bottom:7> <img src="images/MAR_062.gif" width="16" height="16">“郭宇霆的网站”有许多栏目，让你不仅了解我，还可以学到许多知识，得到许多素材，对你买电脑也是佷好的参谋。 
+                  <p style=margin-top:7;margin-bottom:7><font color=#800000><span style=background-color:#00FF00><img src="images/MAR_062.gif" width="16" height="16">本站在2001年5月31日的访问量终于突破了1000大关，计数器的四位数字开始跳动。</span></font> 
+                  <p style=margin-top:7;margin-bottom:7><img src="images/MAR_062.gif" width="16" height="16">本站在开通一周年之际，特别更新，希望大家喜欢。 
+                  <p style=margin-top:7;margin-bottom:7><font color=#800000><span style=background-color:#00FF00><img src="images/MAR_062.gif" width="16" height="16">有奖征答栏目已经更新，你不仅可以参加《少年电脑世界》的编程小乐园栏目，还有可能得到网络百宝箱光盘一张。</span></font> 
+                  <p style=margin-top:7;margin-bottom:7>&nbsp;
+                  <p style=margin-top:7;margin-bottom:7 align=right> 站长：郭宇霆2001-06-10
+                </table><td width=50% valign=top height=278><table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td width=33% bgcolor=#FF0000 style=font-size:11pt;color:#FFFFFF><p align=center style=margin-top:2;margin-bottom:2><b><font face=宋体 color=#00FFFF> ◇自编软件 </font></b><td width=33%><td width=34%><tr><td width=100% colspan=3 style="border:1 solid #FF0000" valign=middle>
+                  <p style=margin-top:7;margin-bottom:7><img src="images/MAR_062.gif" width="16" height="16">CIH病毒防发作程序                
+                    2.5
+                  <p style=margin-top:7;margin-bottom:7> &nbsp; &nbsp; 最新版本的CIH病毒防发作程序，解决了以前版本的许多BUG，通过改日期与AV-CIH杀CIH病毒的软件结合使用，使CIH无处可藏！                
+                  <p style=margin-top:7;margin-bottom:7><span style=background-color:#FFFF00> 
+                    <img src="images/MAR_062.gif" width="16" height="16">MTGYT                
+                    5.0</span>
+                  <p style=margin-top:7;margin-bottom:7><span style=background-color:#FFFF00> 
+                    &nbsp; &nbsp; 共享软件大多还是有时间限制的，所以我编了这个软件，来破解共享软件的时间限制。 </span>                
+                  <p style=margin-top:7;margin-bottom:7> <img src="images/MAR_062.gif" width="16" height="16">超级联盟浏览器                
+                    1.00
+                  <p style=margin-top:7;margin-bottom:7> &nbsp; &nbsp; IE好处多多，但是它有一个最大的缺点是：不支持单窗口多页面同时浏览。超级联盟浏览器可以最大限度的节省系统资源，可以实现无 数个窗口同时浏览，1.00版本还可以进行脱机浏览。&nbsp;                
+                    &nbsp; 
+                </table><tr><td width=50% valign=top height=17><table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td width=33% bgcolor=#00FF00 style=font-size:11pt;color:#FFFFFF>
+                  <p align=center style=margin-top:2;margin-bottom:2><b><font face=宋体 color=#000000> 
+                    ◇栏目介绍</font></b>
+                <td width=33%><td width=34%><tr><td width=100% colspan=3 style="border:1 solid #00ff00">
+                  <p style=line-height:122%;margin-top:7;margin-bottom:7> 软件小屋：推荐一些软件，里面有我喜欢的许多东东，我自编的软件等等内容。 
+                  <p style=line-height:122%;margin-top:7;margin-bottom:7><span style="background-color: #80D0FF">D</span><span style=background-color:#80D0FF>IY园地：有硬件最新价格、推荐硬件、推荐DIY配置等等好东西！ </span><p style=line-height:122%;margin-top:7;margin-bottom:7> 奥赛辅导：有“全国信息学奥林匹克计算机竞赛”的试题、答案和我编的一些程序。 <p style=line-height:122%;margin-top:7;margin-bottom:7><span style="background-color: #80D0FF">素材</span><span style=background-color:#80D0FF>大全：包含我收集的许多图片，非常的酷，还有做网页要用的许多素材，快来看看吧！ </span><p style=line-height:122%;margin-top:7;margin-bottom:7> 有奖征答：在这里，你不仅可以参加《少年电脑世界》的编程小乐园栏目，还有可能得到网络百宝箱光盘一张。<p style=line-height:122%;margin-top:7;margin-bottom:7> <span style="background-color: #80D0FF">个人档案：介绍我的个人资料。</span><p style=line-height:122%;margin-top:7;margin-bottom:7> 珍藏文章：包括我的文章，和我喜欢的文章。 <p style=line-height:122%;margin-top:7;margin-bottom:7><span style=background-color:#80D0FF> 我的留言：打开“郭宇霆的留言薄”，可以查看我的留言、写留言或参加论坛。 </span></table><td width=50% valign=top height=17><table border=0 cellpadding=0 cellspacing=0 width=100%><tr><td width=33% bgcolor=#0000FF style=font-size:11pt;color:#FFFFFF>
+                  <p align=center style=margin-top:2;margin-bottom:2><b><font face=宋体 color=#FFFF00> 
+                    ◇精选网站</font></b>
+                <td width=33%><td width=34%><tr><td width=100% colspan=3 style="border:1 solid #0000FF">
+                  <table border="0" cellpadding="0" cellspacing="4" width="100%">
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.k12.com.cn/">中国中小学教育教学网</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.zuowen.com/index.htm">中小学生作文网</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.scpe.net/sbb/">少年百科知识报</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.cctv.com.cn/social/kids/kidmain.html">大风车</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.young-china.com/">少年儿童网</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.zgsnb.com.cn/zgsnb/home.html">中国少年报</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://snlm.yeah.net/">少年联盟</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://http://202.102.230.155/softdown/jwjjt/index2.html">汉化新世纪</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.newhua.com/">华军软件园</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.csdn.net/">软件开发网</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.mydrivers.com/">驱动之家</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.ssreader.com/">超星数字化图书馆</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://my.8848.net/">8848网上超市</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.sohu.com/">搜狐</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.ekan.net/">ｅ刊阅览室</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.sina.com.cn/">新浪网</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.3721.com/">3721中文网址</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.cpcw.com/">电脑报电子版</a></td>
+                    </tr>
+                    <tr>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.zol.com.cn/">中关村报价网</a></td>
+                      <td width="50%" align="center">
+                        <p style="margin-top: 4; margin-bottom: 4"><a href="http://www.cce.com.cn/">中国电脑教育报</a></td>
+                    </tr>
+                  </table>
+                </table></table>
+      <p style=margin-top:6;margin-bottom:6 align=center><font size="3" color="#FF0000">&nbsp;&nbsp;  
+<script language="JavaScript"> 
+<!-- 
+var caution = false
+function setCookie(name, value, expires, path, domain, secure) {
+        var curCookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expires.toGMTString() : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "")
+        if (!caution || (name + "=" + escape(value)).length <= 4000)
+                document.cookie = curCookie
+        else
+                if (confirm("Cookie exceeds 4KB and will be cut!"))
+                        document.cookie = curCookie
+}
+function getCookie(name) {
+        var prefix = name + "="
+        var cookieStartIndex = document.cookie.indexOf(prefix)
+        if (cookieStartIndex == -1)
+                return null
+        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+        if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+        return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+function deleteCookie(name, path, domain) {
+        if (getCookie(name)) {
+                document.cookie = name + "=" + 
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+        }
+}
+function fixDate(date) {
+        var base = new Date(0)
+        var skew = base.getTime()
+        if (skew > 0)
+                date.setTime(date.getTime() - skew)
+}
+var now = new Date()
+fixDate(now)
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+var visits = getCookie("counter")
+if (!visits)
+        visits = 1
+else
+        visits = parseInt(visits) + 1
+setCookie("counter", visits, now)
+document.write("欢迎您的第" + visits + "次光临！")
+// -->
+</script>
+
+      </font>
+
+    </table>
+<DIV align=center>
+  <TABLE cellSpacing=3 cellPadding=3 width=680 border=0>
+    <TBODY> 
+    <TR><TD width=675 height=33 style='font-size: 11pt' colspan="4"><P align=center><SPAN class=top><FONT color=#000080><B> 首页链接 </B></FONT></SPAN> 
+      <TR>
+      <TD height=40 class="f11" align="center"> 
+        <P align=center><span class=top><b><span style="background-color: #FFFF00"><a href="http://www.sx.cninfo.net/">三晋热线</a></span></b></span>
+      
+      <TD height=40 class="f11" align="center"> 
+        <P align=center><span class=top><b><span style="background-color: #00FFFF"><a href="http://www.yq.sx.cninfo.net/">阳泉信息港</a></span></b></span> 
+      <TD height=40 class="f11" align="center"> 
+        <P align=center><span class=top><b><span style="background-color: #00FFFF"><a href="http://www.yqedu.net/">阳泉教育热线</a></span></b></span>
+      <TD height=40 class="f11" align="center"> 
+        <p align="center"><a href="http://snlm.yeah.net/"><img border="0" src="yqlj_image/snlm.gif" width="88" height="31">
+        </a>
+      <TR>
+      <TD height=40 align="center"> 
+        <P align=center><a href="http://wangchengkai.myetang.com/"><img src="yqlj_image/yabi3000.gif" width="88" height="31" border="0"></a> 
+      <td height=40 class="f11" align="center"> 
+        <P align=center><a href=http://flyrwvq8319.126.com><img border=0 src="yqlj_image/fatyu.gif" width="88" height="31"></a> 
+      
+      <TD height=40 class="f11" align="center"> 
+        <P align=center><a href=http://msx.126.com/><img src="yqlj_image/ggxx.gif" border=0 width="88" height="31"></a>
+      <TD height=40 class="f11" align="center"> 
+        <P align=center style=margin-top:3;margin-bottom:3><a href=http://doubler.yeah.net/><font color=#000000><b><span style=background-color:#FFFF00> 
+          阳泉网络</span></b></font></a>
+        <P align=center style=margin-top:3;margin-bottom:3><a href=http://doubler.yeah.net/><font color=#000000><b><span style=background-color:#FFFF00> 
+          新干线</span></b></font></a> 
+      
+    </TBODY></TABLE></DIV>
+</body>
+
+</html>

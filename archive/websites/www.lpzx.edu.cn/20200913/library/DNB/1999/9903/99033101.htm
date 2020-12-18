@@ -1,0 +1,114 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>用“跨线迁移”将NetWare3.12升级为4.11/title&gt; </title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用“跨线迁移”将NetWare3.12升级为4.11<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在NOVELL网络操作系统中，虽然NetWare 
+        2.X、3.X被广泛的使用，但是NetWare2.X、3.X采用的是装订库来存放用户、组、NetWare服务器和打印服务器，而在NetWare4.11中用NDS代替了装订库，NDS在多方面都优于装订库，因此，很有必要将NetWare2.X、3.X进行升级。本文将介绍如何将NetWare3.12升级为NetWare4.11。NetWare3.12的升级，实际上就是把NetWare3.12中的装订库信息迁移到NetWare4.11中的NDS库中。<br>
+        　　升级的方法有很多种，笔者根据本单位的升级经历，特向大家介绍通过“跨线迁移”中“DS迁移、文件迁移”实现NetWare3.12的升级，具体步骤如下：<br>
+        　　<strong>一、同时连接NetWare3.12和4.11服务器</strong><br>
+        　　1.在Windows工作站上运行Client32,以ADMIN用户在NetWare4.11服务器上登录。<br>
+        　　2.将驱动器H：映射到NetWare3.12服务器的卷上。<br>
+        　　(注意：网络中的帧类型必须一致，外部网络号要一样。下文中提到“LD”是NetWare3.12服务器的名字，“NW411”是NetWare4.11服务器的名字，4.11中O=WSGS,OU=WYL。)<br>
+        　 <strong>二、发现NetWare装订库</strong><br>
+        　　1.启动DS迁移程序。<br>
+        　　a.在运行Client32的工作站上启动NetWare Administrator程序<br>
+        　　b.在工具(TOOL)菜单中选择DS migrate<br>
+        　　当第一次启动DS时，它会创建一个工作目录，单击OK<br>
+        　　c.当DS迁移的开始屏幕出现时，单击Continue<br>
+        　　2.发现NetWare3.12服务器的装订库。<br>
+        　　a.从文件(file)菜单选择new view<br>
+        　　b.从new view的子菜单选择bindery view<br>
+        　　3.输入一个文件名如：viewl作为观察文档的名称，然后单击OK。<br>
+        　　4.选择包含要发现的装订库的服务器。<br>
+        　　5.接收你要发现的信息的缺省表，单击OK(此时，DS迁移在viewer中生成一个报告，它记录了发现的过程，并且说明装订库出现的问题。)<br>
+        　　6.扫描此报告(如果有的话)。<br>
+        　　7.退出PSI观察器。<br>
+        　　<strong>三、模块化NetWare装订库</strong><br>
+        　　1.修改装订库的结构，使其符合NetWare4.11目录树结构。<br>
+        　　a.通过双击它们和输入以下名称，重新命名组织和组织单元：<br>
+        　　O=WSGS(NetWare4.11服务器的组织名称)<br>
+        　　OU=组织单元名称，如：OLD<br>
+        　　b.删除NetWare3.12服务器和卷对象<br>
+        　　c.删除SUPERVISOR和GUEST对象<br>
+        　　2.增加用户对象(如：wul)至目录树。<br>
+        　　a.选择组织单元OLD<br>
+        　　b.从edit菜单选择add object<br>
+        　　c.选择user然后单击OK<br>
+        　　d.输入用户登录名称wul<br>
+        　　e.输入姓wu,然后单击OK<br>
+        　　3.双击wul用户对象，并且通过其属性(可以被修改)进行浏览，单击cancel，配置NetWare装订库至目录树。<br>
+        　　4.从View菜单中选择configure all objects。<br>
+        　　如果在预配置检查中发现错误，它们将被列在对话框中<br>
+        　　5.检查错误列表后，单击OK，表明已认可所发表的错误；然后单按yes；如果没有错误列表，只要单击yes。<br>
+        　　当配置完成后，有关配置的汇总报告出现在PSI观察器中。<br>
+        　　6.扫描汇总报告。<br>
+        　　7.退出PSI观察器和DS迁移。<br>
+        　　8.浏览NetWare4.11管理员目录树，检查并且确定装订库信息已经迁移至目录树。<br>
+        　　<strong>四、迁移数据文件</strong><br>
+        　　1.从NetWare Administrator工具菜单选择File migration。<br>
+        　　2.确认屏幕所显示的条件已经符合，然后单击next。<br>
+        　　3.在Source Server区域，检查并确认显示了NetWare3.12服务器名称，如“LD”。<br>
+        　　4.在Source Volume区域，检查并确认显示了正确的“SYS”，然后单击next。<br>
+        　　在此屏幕的每个区域单击down arrow，选择可作用的服务器，或者目录。<br>
+        　　5.在Password区域，键入NetWare3.12服务器口令，然后单击next。<br>
+        　　6.Destination Server区域，检查并确认已经选择了正确的服务器，如“NW411”。<br>
+        　　7.Destination Volume区域，检查并确认选择了正确的NetWare4.11上的SYS或其它卷。<br>
+        　　8.Deistination directory区域，检查并确认了选择了正确的目录，选择“.(root)”然后单击next。<br>
+        　　在此屏幕的每个区域单击down arrow，显示可使用的服务器，卷或者目录。<br>
+        　　9.在Password区域，键入服务器口令，然后单击next。<br>
+        　　10.实用程序检查迁移的条件已经符合，并且将发现的错误通过屏幕警告信息通知你，然后屏幕显示说明迁移是否继续进行，单击yes。<br>
+        　　11.当屏幕上出现通知SUPERVISOR对象已经被删除，单击yes继续执行。<br>
+        　　12.屏幕显示通知你服务器卷的迁移能够完成，单击migrate。<br>
+        　　13.单击view log，同时扫描迁移日志(LOG)。<br>
+        　　14.单击close。<br>
+        　　15.单击down，返回NetWare Administrator管理器。<br>
+        　　16.单击yes以确定要继续进行。<br>
+        　　到此为止，升级基本完成。<br>
+        　　NetWare3.12的以下信息已经迁移到NetWare4.11的NDS中：用户登录名称，用户登录脚本，用户账户限制，用户打印配置，目录和文件的受托人分配，组员和安全等效，NetWare3.12打印服务器配制，系统登录底稿和NetWare3.12服务器中邮件目录及其内容。而NetWare3.12中的用户口令和打印机定义数据库未被迁移到NetWare4.11，因此，还须做以下工作。<br>
+        　　<strong>五、在允许用户登录之前必需做如下工作：</strong><br>
+        　　1.修改用户口令，用户需通过NetWare Administrator立即修改自己的口令。<br>
+        　　2.在每个原NetWare3.12工作站上重新安装NetWare4.11的工作站软件(即Client32上网软件)。<br>
+        　　3.给由装订对象升级到NDS目录的对象，进行目录对象权和属性权分配。<br>
+        　　4.修改原NetWare3.12的系统和用户的登录脚本，更改服务器名称或目录路径的。<br>
+        　　5.复制NetWare4.11的Login.EXE文件至网络上非NetWare4.11服务器的SYS:LOGIN目录下，直至此任务完成，在NetWare4.11服务器上的登录脚本才开始正常运行。<br>
+        　　6.使用Sbackup将NetWare4.11服务器上的所有数据作出一个备份拷贝。<br>
+        　　7.测试登录脚本和应用程序。<br>
+        　 8.如果你已经变了以太网的帧类型，你必须修改工作站的配置，使其与服务器的帧类型相匹配。<br>
+        　　最后，检查用户的账号、限制，目录的安全性是否正确，以及应用程序是否正常运行。如一切正常说明升级完全成功，你的网络就是NetWare4.11了。　<strong>(重庆　刘福斌)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

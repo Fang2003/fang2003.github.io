@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>实现Win95工作站资源的安全共享<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　在NTServer4.0中文版中，根据用户或用户组级别，可以实现对服务器系统中软硬件资源的安全访问。NTServer4.0提供了两种访问方式：共享级的访问控制（S）方式、用户级的访问控制（U）方式。如果把Win95工作站的资源提供给本域用户使用，采用前一种方式进行访问的话，则系统存在严重的安全隐患，用户稍有不慎，则可能给本机资源造成意想不到的损失；采用后一种方式进行访问，则能对Win95工作站上的资源进行安全访问。用户级的访问控制（U）方式允许指定访问每个共享资源的用户和组，在Win95工作站中实现在NTServer4.0提供的所有共享资源访问的全<img
+        src="images/98462101-1.jpg" width="338" height="318" alt="图一" align="right" border="0">部安全权限，在信任用户和组之间实现资源安全共享，使其具有NT同等级别的安全保密措施。笔者在本单位以NTServer4.0组成的局域网中利用该访问控制功能，实现了本域全部用户工作站资源的安全共享，取得较好应用效果。采用用户级的访问控制（U）方式实现Win95工作站资源安全共享的具体方法如下：一、在NTServer4.0主域控制器中设置好域用户、用户组及其权限，Win95工作站安装网卡设置好TCP/IP协议及IP地址，网络标识栏“工作组”为简单起见，可设为与NTServer域名一致，也可按部门设为若干工作组，如图一所示，“NTJT.CD.SC”即为本地主域控制器域名，这里也作为本地工作组名。<br>
+        　　二、在网络设置时选中“文件和打印共享”，访问控制栏对资源的访问控制方式设为“用户级访问控制”，用户和组的列表来自“NTJT.CD.SC”组即为NTServer域名。<br>
+        　　三、基本网络登录方式选择“Microsoft网络客户”，网络客户属性选择“登录到WindowsNT域（L）”，填入NTServer域名(如图二所示)。<br>
+        　　四、将Win95工作站目录资源或打印机设置为共享(如图三所示)。<br>
+        　　五、按“添加”按钮，NTServer4.0自动提供本域全部用户名和用户组，添加NTServer4.0域用户或组对该目录资源的使用权限(如图四所示)。<br>
+        　　根据工作需要设置各用户或用户组对本地工作站资源的使用权限。如选择自定义权限，还会出现对话框(如图五所示)。<br>
+        　　设置访问权限与NTServer4.0一样，权限级别更为详荆Win95工作站采用“用户级的访问控制（U）”方式，其资源借助NTServer4.0提供的网络服务功能，实现了NTServer4.0同等级别的安全访问模式，增强了工作站共享资源的安全性和可靠性。如果NT网络中有多个工作组，在信任用户和组间使用该方式访问控制，均可达到高可靠性的安全访问。最后提醒一点：Win95工作站用户名必须是NTServer4.0中的合法用户，而且用户必须进行域登录，才能取得NTServer4.0提供的多种访问权限，否则不能实现上述功能。<br>
+        </p>
+        </font><table border="0" width="100%" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="50%"><p align="center"><img src="images/98462101-2.jpg" width="355"
+            height="268" alt="98462101-2.jpg (17612 字节)" border="0"><br>
+            <font color="#369681">图二</font></td>
+            <td width="50%"><p align="center"><img src="images/98462101-3.jpg" width="309"
+            height="327" alt="98462101-3.jpg (15289 字节)" border="0"><br>
+            <font color="#369681">图三</font></td>
+          </tr>
+          <tr>
+            <td width="50%"><p align="center"><img src="images/98462101-4.jpg" width="357"
+            height="273" alt="98462101-4.jpg (20752 字节)"><br>
+            <font color="#369681">图四</font></td>
+            <td width="50%"><p align="center"><img src="images/98462101-5.jpg" width="310"
+            height="277" alt="98462101-5.jpg (14493 字节)"><br>
+            <font color="#369681">图五</font></td>
+          </tr>
+        </table>
+        <p class="ourfont" align="left"><font color="#369681">　　(四川　叶国良)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

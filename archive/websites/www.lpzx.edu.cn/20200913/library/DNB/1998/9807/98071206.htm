@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Appder宏病毒的巧妙防治</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Appder宏病毒的巧妙防治</strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp; </strong><font
+        color="#369681">&nbsp; “Appder”是一种流行相当广泛的Word宏病毒,它发作时会删除Windows目录下的一些系统文件,使Windows系统瘫痪;还会删除用户的＊DOC文件,造成比较严重的后果。<br>
+        　　对付“Appder”的杀毒软件有KV300L＋以上版本和McAfee VirusScan 310版。然而,杀毒终归是一种亡羊补牢之举,使用户处于被动挨打的状态,而且事实也是“野火烧不尽,春风吹又生”,费时又费力。那么有没有一种一劳永逸的办法呢？笔者采用一种对付病毒的新方法：“主动出击，以毒攻毒”。这种方法操作简单，效果颇佳。具体做法如下：<br>
+        　　打开你的Word,选主菜单“工具”下的“宏”，查看列表框里是否有“Appder”、“Autoclose”和“AutoOpen”三个病毒宏,如果有就点击“删除”按钮,分别删除它们;如果没有就省略这一步(注意:这时千万不要退出Word或打开或新建Word文件)。接着再键入宏名“Appder”，点击“创建”按钮，在弹出的模块编辑环境中的“Sub 
+        Main”和“End Sub”之间填入“DisableAutoMacros”语句，存盘并退出该模块。重复以上步骤，分别建立“Appder”、“AutoClose”、“AutoOpen”、“AutoNew”四个宏。关闭Word再重新启动它，这时你会发现你的Word已经具有防御“Appder”宏病毒的能力了。以后，你如果打开带有“Appder”宏病毒的Word文件，该病毒不会激活，也不会感染Word本身和其它打开的Word文件；如果你建立新文件，该新文件也不会再染上“Appder”宏病毒。从此，你可以放心地使用你的Word了。<br>
+        　　以上方法在Word60英文版上实验通过。<strong>(广东　鲁仕林)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

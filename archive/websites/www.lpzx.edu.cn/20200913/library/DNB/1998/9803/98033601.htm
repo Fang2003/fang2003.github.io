@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Master95解压卡在金长城微机上的安装一例 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台金长城S500 
+        486VD2/66C微机(8MRAM)，操作系统是DOS6.22和中文Windows3.2，欲加装多媒体，购得ALS007(花王600)声卡，Master95 
+        SE/LITE解压卡，米苏米4速光驱。<br>
+        　　安装光驱、声卡,一切顺利后，再安装解压卡，但安装解压卡后，微机不能播放VCD，判断可能是系统资源冲突造成的。Master95解压卡是一种可以由软件自动扫描并设定IRQ、DMA和I/O值的解压卡，卡上无相应跳线，按照手册说明，找到播放软件中的CONFIGURE项，欲修改设置参数，但进入设置画面后，系统死锁。<br>
+        　　故障分析及处理：针对以上情况，考虑到要尽量给解压卡留出检测并设定其参数的“机会”，于是拆掉声卡，删除WIN.INI及SYSTEM.INI中所有与声卡配置有关的参数，重新安装Master95解压卡驱动程序，播放VCD正常。进入CONFIGURE设置画面，发现IRQ值为10，I/O值为0x2c0。重新安装声卡及驱动程序后，播放VCD正常。<br>
+        　　然而好景不长，一次播放完VCD，正准备退出Windows3.2时，音箱发出“汽船声”，同时死机。重新启动微机，选取CONFIGURE项，发现IRQ值为0，且Free 
+        IRQ(软件检测到的自由中断号)值只有0，同时鼠标失灵。显然，利用软件自动进行配置已不可能。<br>
+        　　为找到正确IRQ值，用NORTON8.0测试到7、10、11、12号IRQ均未使用。为设置IRQ值，在C∶\WINDOWS下找到WINMPEG.INI，其内容如下：<br>
+        　　[WINMPEG]<br>
+        　　PATH=C∶\VISMPEG\windows<br>
+        　　DOSPATH=C∶\VIS－<br>
+        　 MPEG\dos<br>
+        　　IOBASEA=0x2c0<br>
+        　　IOBASEV=0x2d0<br>
+        　　VINT=0<br>
+        　　AINT=0<br>
+        　　DMA=6<br>
+        　　TV=NTSC<br>
+        　　COM=4<br>
+        　　VOL=6<br>
+        　　640I=on<br>
+        　　分析该文件，第6行VINT(VIDEO－INT)和第7行AINT(AUDIO－INT)的值为零，CONFIGURE中IRQ值为0就是由此所致。分别以自由中断号7、10、11、12实验，发现当VINT=12、AINT=11(或12)时可以取得满意的播放效果。至此，故障排除。<br>
+        　　小结：Master95是性能优秀的解压卡，其色彩和清晰度均属上乘。在安装Master95解压卡时，建议在安装声卡之前进行安装，如果发生系统资源冲突，可通过直接修改Windows目录下的WINMPEG.INI文件中的各项值解决。另外，因金长城S500 
+        486VD2/66C微机主板上只有一个IDE接口，在安装Windows95时，建议选用带IDE接口的声卡，将光驱与声卡IDE口连接，否则，因无法实现32位传输模式，难以实现理想的VCD播放效果。(河北 
+        车辉)<br>
+        </font></p>
+        <p align="right"><font color="#369681"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1998年1月19日第3期36版</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

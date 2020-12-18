@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- MODEM手术记</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>47 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; MODEM手术记</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 MODEM手术记 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　有一天，电话噪声突然变得很大，我以为是天下雨影响线路，后来一查，原来是调制解调器出了问题。既然有噪声，那就首先屏蔽一下看看，于是找到家中三孔带安全接地的电源插座，接到电脑上以此来作屏蔽。我拎起电话听筒，好！噪音没了，不过正常该有的拨号音也没了，看来动手术是难免了。<br>
+　　根据以上现象分析，极有可能是某元件通过安全接地把电话线路短路了，所以电话什么声音也没了。断开安全接地，电话线路中有十几毫安的短路电流，对于电话机来说就相当于并联了一个回路，在护墙板内，电话线和市电线路靠在一起，难免会感应出较高的噪音。那么是什么元件，位于哪个部分呢？<br>
+　　于是先看25孔的接口部分，用MF47型万用表×1K档进行测量，7脚与外壳相连，8脚、6脚、5脚、3脚、22脚黑棒接地，红棒测量有明显的电容充电，反向测量，电阻在12K～22K之间不等，视充电程度不同而不同，4脚、2脚、20脚正反向都在7K左右，其余是空脚。显而易见，应该是正常的，在WIN98控制面板中诊断调制解调器，其结果也是正常。<br>
+　　于是打开MODEM的后盖，首先观察有无明显烧坏或其它毁损的地方。我发现双稳压集成电子元件没有加散热片，也没有和下方线路板上的有效部位接触，但通电一量也正常。于是再仔细观察，发现了一个重要情况，电路分两部分，一部分是数字处理部分，另一部分是电话接入接出部分，并有明显的隔离元件，两只光电耦合器，两只继电器，一只变压器，一只编号为D1A050000的器件。因此两部分很显然在电气上应该是隔离的，如果不隔离就无须用光电耦合这样的形式，因为电话振铃电压实测在120 V左右，如此高的电压不经隔离直接加在5V的TTL电路上，是难免会出问题的。于是将该部分电路按实物绘出线路原理图（如图所示），测量两部分间的电阻才5K，说明问题就在这里，用×100Ω档测量则更小，只有800Ω左右，问题清楚了。隔离元件共5只，2 只继电器一般不会出问题（因为是机械结构，触点非此即彼），不用检查。那么从光电耦合器着手，拆下一量，两边间电阻无法测得，指针看不到偏转，现在重点只能是那个不知为何物的D1A050000的器件，它和双列16脚集成电路IC的大小一样，但只是双列8脚（两边中间各有2脚位置空余），拆下该器件，板上的两部分间的电阻，成了无穷大，再测量该集成电路，原先测得的阻值，就出现在这片集成电路上，就此找出了原因。<br>
+　　既然是极间有较小的阻值，说明内部有局部短路，就先用高压激一下，极间输入1.25V到24V的渐增电压，直到24V电流也没能陡增，再输入5.25V到48V的渐增电压，到39V时电流骤增后突然减小到2mA，有点行了，欧姆档一量，电阻值增加到330K，想想离M级较远，就再试试增加电压，2mA的电流不足以烧断短路点，于是再增加到45V，电流急剧增加到130mA，持续3秒多还没有下降的迹象，心想只有用电容高压放电法，正在思考之际，一阵青烟，元件被烧出了裂痕，完了，只有换新器件了。<br>
+　　该调制解调器是上网时免费赠的，包装盒，驱动盘、readme等均无法找到实际厂商名及地址或电话，只有香港制造的英文标识，还是自己琢磨琢磨算了。<br>
+　　在线路板上标有K2的字样，据此推测可能是开关问题，因为光电耦合器在印刷电路板的标号是U开头，而本器件和继电器一样用的是K开头的标号（如图所示），如是集成电路开关的话，极可能是参数继电器。问题出在电话线路端，既是开关，那么用导线短路就算了，电话线路即使短路也不可能有大的损害，脉冲拨号就是靠一次次时钟来实现的。接上去后，一拨号果然通了，还收发了Email，下线后再拨号又不动了，错误警告：电话线未连接，请重接一次线。后来又发现，接上线后两秒钟内不拨号就再拨不上号了。<br>
+　　就此可以肯定的是，这是一个受控制的开关，采用继电器是极可能的，于是找了光电耦合器取代。开始时为了保证原驱动电路的安全（因为是贴片元件，料想驱动能力有限），采用的光电流是15mA，输入端（原控制端）串联了330Ω的电阻进行限流，上网下线再上网拨号，一切正常。后来在下载台湾网站上的BIOS文件时，每秒只有几百个字节，连1K还不到，以往虽然也达不到33.6K/s的速率，但一般也在2K～3K左右，有时还能达4K以上，开始以为是线路不畅，后来在下载无锡网站上的免费文件时，也是如此，想想不可能，又怀疑是MODEM缘故。只能是那个换上的光电耦合器，于是加大光电流到50mA（将原来限流电阻330Ω改成100Ω），再次上网，一切正常。就此手术成功结束，至今已有四个多月，没有发现错误的地方。　　<br><b>
+（江苏　程广云）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99472102.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

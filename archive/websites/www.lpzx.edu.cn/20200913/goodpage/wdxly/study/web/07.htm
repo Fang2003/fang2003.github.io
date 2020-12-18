@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><!-- #BeginTemplate "/Templates/samplefiletmp.dwt" -->
+<head>
+<!-- #BeginEditable "dochead" -->
+<title>Untitled Document</title>
+<!-- #EndEditable -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+td {font-size: 9pt;}
+body {font-family: "宋体";font-size: 9pt;margin-top: 5px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;}
+.pt9 {font-size: 9pt;font-family: "宋体";}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+<TABLE width="761" border="0" cellspacing="0" cellpadding="0" height="100%" align="center">
+<tr valign="top">
+<TD align="center">
+<table width="100%" border="1" cellspacing="1" cellpadding="1" bordercolor="#009999" bgcolor="#F5F5F5">
+<tr valign="top">
+<TD width="82%" height="14" colspan="2" align="center"><font face="Times New Roman, Times, serif" size="3" color="#FF0033">News
+and text scroll show</font><font size="3" color="#FF0033"> 滚动新闻文字发布</font>
+
+<tr valign="top">
+<td colspan="2">
+<p>如下是其中一个例子的代码，全部范例和必须的ProScroll可以下载得到。</p>
+<p>&lt;applet code=&quot;ProScroll&quot;width=&quot;400&quot;height=&quot;16&quot;&gt;<br>
+&lt;param name=&quot;TEXT&quot;value=&quot;这是一个演示，可用于页面的新闻滚动发表，#green#占地面积小，#yellow#适用于小量信息的展示。&quot;&gt;<br>
+&lt;param name=&quot;STYLE&quot;value=&quot;plain&quot;&gt;<br>
+&lt;param name=&quot;SIZE&quot;value=&quot;12&quot;&gt;<br>
+&lt;param name=&quot;SPEED&quot;value=&quot;fast&quot;&gt;<br>
+&lt;/applet&gt;</p>
+<table width="90%" border="1" cellspacing="0" cellpadding="1" bordercolor="#CCCCCC">
+<tr>
+<td width="13%">TEXT
+<td width="87%">
+<p>颜色可选，#red# #green# #blue# #yellow# #orange# #white# #lightGray#
+#gray# #darkGray# #black# #cyan# #magenta# #pink# ，想要字体显示颜色，在文字前加上#<font color="Red">颜色</font>#即可。
+</p>
+<p>插入一个图片，只要加入一个$字符即可，还需要为IMAGES参数设置图片文件。<br>
+&lt;PARAM NAME=TEXT VALUE=&quot;$$&quot;&gt;<br>
+&lt;PARAM NAME=IMAGES VALUE=&quot;image1.gif image2.gif&quot;&gt;</p>
+<p>example：<br>
+&lt;PARAM NAME=TEXT VALUE=&quot;$ This is a demo $&quot;&gt;<br>
+&lt;PARAM NAME=IMAGES VALUE=&quot;image1.gif image2.gif&quot;&gt;<br>
+先显示image1.gif，再显示文字内容This is a demo，再显示image2.gif。 </p>
+
+
+<tr>
+<td height="11">URL
+<td height="11">&lt;PARAM NAME=TEXTURL VALUE=&quot;http://www.anysite.com/page.htm&quot;&gt;
+点击的连接
+
+<tr>
+<td>FONT
+<td>字体，默认TimesRoman。
+
+<tr>
+<td>SIZE
+<td>字体号，默认12 points
+
+<tr>
+<td>STYLE
+<td>字体风格，可选plain, bold, italic 和 bolditalic。默认plain(普通)。
+
+<tr>
+<td>TARGET
+<td>页面打开的方式，可选_top,_blank,_self或已经定义的frame的名字，默认_self
+
+<tr>
+<td>SPEED
+<td>滚动速度，可选slow, medium, 和fast。
+
+<tr>
+<td>IMAGES
+<td>见 TEXT参数。
+
+<tr>
+<td height="15">BGCOLOR
+<td height="15">滚动条背景色，不需要#，或者直接用red,white等直接色。
+
+</table>
+
+
+</table>
+
+
+</TABLE>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+<!-- #EndTemplate --></html>

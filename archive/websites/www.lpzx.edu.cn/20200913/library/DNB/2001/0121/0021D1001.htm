@@ -1,0 +1,150 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>网页中对象的动态移动</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0121/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0121/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第21期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->网页中对象的动态移动<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->在上网浏览网页的过程中，大家是否见过网页中有些图片或文字会在页面中随机移动呢？<br>
+              动态ＨＴＭＬ中大多数的内容要想精确定位都要用到＜ＤＩＶ＞标签作为容器定义一个对象。在＜ｄｉｖ＞．．．＜／ｄｉｖ＞容器之间可以放置任何对象，并且可随意控制这个对象的位置（坐标），但Ｎｅｔｓｃａｐｅ的浏览器还不支持这项规定。我们接下去要做的就是将需要随机移动的图片或文字放在＜ｄｉｖ＞．．．＜／ｄｉｖ＞容器之中，给这个对象起一个名称，再写一个定时执行的脚本来改变各个对象的位置；看下面这段源代码，各位肯定都理解是怎么一会事了。注／／后的文字为注释）<br>
+              ＜ｈｔｍｌ＞<br>
+              ＜ｈｅａｄ＞<br>
+              ＜ｔｉｔｌｅ＞会移动的图形和文字＜／ｔｉｔｌｅ＞ ／／网页的标题<br>
+              ＜ｓｃｒｉｐｔ ｌａｎｇｕａｇｅ＝″ｊａｖａｓｃｒｉｐｔ″＞ ／／一个定时执行的ＪＡＶＡ<br>
+              脚本程序<br>
+              ｖａｒ ｂ２＝３ｂ１＝６ａ２＝４ａ１＝２ ／／定义变量<br>
+              ｆｕｎｃｔｉｏｎ ｍｏｖｅＩｔ ／／移动各个对象的位置，使用了递归调用方法。<br>
+              <br>
+              ｂｂｂ．ｓｔｙｌｅ．ｌｅｆｔ ＝ ｐａｒｓｅＩｎｔｂｂｂ．ｓｔｙｌｅ．ｌｅｆｔ － ｂ１ ／／将名为ｂｂｂ的对象的行坐标减去ｂ１<br>
+              ｂｂｂ．ｓｔｙｌｅ．ｔｏｐ ＝ ｐａｒｓｅＩｎｔｂｂｂ．ｓｔｙｌｅ．ｔｏｐ ＋ ｂ２ ／／将名为ｂｂｂ的对象的纵坐标加上ｂ２<br>
+              ａａａ．ｓｔｙｌｅ．ｌｅｆｔ ＝ ｐａｒｓｅＩｎｔａａａ．ｓｔｙｌｅ．ｌｅｆｔ ＋ ａ１ ／／和上两行类似<br>
+              ａａａ．ｓｔｙｌｅ．ｔｏｐ ＝ ｐａｒｓｅＩｎｔａａａ．ｓｔｙｌｅ．ｔｏｐ ＋ ａ２<br>
+              ｉｆ ｐａｒｓｅＩｎｔｂｂｂ．ｓｔｙｌｅ．ｌｅｆｔ＜０｜｜ｐａｒｓｅＩｎｔｂｂｂ．ｓｔｙｌｅ．ｌｅｆｔ＞４８０ 
+              ｂ１＝－ｂ１ <br>
+              ｉｆ ｐａｒｓｅＩｎｔｂｂｂ．ｓｔｙｌｅ．ｔｏｐ＜０｜｜ｐａｒｓｅＩｎｔｂｂｂ．ｓｔｙｌｅ．ｔｏｐ＞１８０ 
+              ｂ２＝－ｂ２ ／／判断对象ｂｂｂ<br>
+              是否超出了显示范围？若超出了范围，则让ｂ１＝－ｂ１<br>
+              ｉｆ ｐａｒｓｅＩｎｔａａａ．ｓｔｙｌｅ．ｌｅｆｔ＜０｜｜ｐａｒｓｅＩｎｔａａａ．ｓｔｙｌｅ．ｌｅｆｔ＞４８０ 
+              ａ１＝－ａ１<br>
+              ｉｆ ｐａｒｓｅＩｎｔａａａ．ｓｔｙｌｅ．ｔｏｐ＜－１００｜｜ｐａｒｓｅＩｎｔａａａ．ｓｔｙｌｅ．ｔｏｐ＞１８０ 
+              ａ２＝－ａ２ ／／和上二行意思一样；<br>
+              ｓｅｔＴｉｍｅｏｕｔ＇ｍｏｖｅＩｔ＇ １００ ／／１００毫秒之后再调用本函数，以形成递归；<br>
+              <br>
+              ＜／ｓｃｒｉｐｔ＞ ／／脚本结束；<br>
+              ＜／ｈｅａｄ＞<br>
+              ＜ｂｏｄｙ ｏｎｌｏａｄ＝″ｍｏｖｅＩｔ″＞ ／／当网页加载时执行上面的ｊａｖａ脚本程序，完成对象的移动；<br>
+              ＜ｄｉｖ ｉｄ＝″ｂｂｂ″ ｓｔｙｌｅ＝″ｐｏｓｉｔｉｏｎｒｅｌａｔｉｖｅ ｌｅｆｔ２０ｐｘｔｏｐ８ｐｘ ｗｉｄｔｈ４０ｐｘ 
+              ｈｅｉｇｈｔ１６ｐｘ″＞<br>
+              ＜ｄｄ＞＜ｉｍｇ ｓｒｃ＝″ｐｉｃｔｕｒｅ．ｇｉｆ″ ｗｉｄｔｈ＝″９０″ ｈｅｉｇｈｔ＝″８０″＞ ＜／ｄｄ＞<br>
+              ＜／ｄｉｖ＞ ／／用＜ｄｉｖ＞．．．＜／ｄｉｖ＞定义了一个名为ｂｂｂ的对象，其初始坐标为ｘ２０ｙ８对象的宽度ｗｉｄｔｈ＝６０和高度ｈｅｉｇｈｔ＝４９，这个对象只包括一张图片名为ｐｉｃｔｕｒｅ．ｇｉｆ<br>
+              ＜ｄｉｖ ｉｄ＝″ａａａ″ ｓｔｙｌｅ＝″ｐｏｓｉｔｉｏｎｒｅｌａｔｉｖｅ ｌｅｆｔ１０ｐｘｔｏｐ８ｐｘ ｗｉｄｔｈ９００ｐｘ 
+              ｈｅｉｇｈｔ１６ｐｘ″＞<br>
+              ＜ｄｄ＞＜ｆｏｎｔ ｃｏｌｏｒ＝″＃ＦＦ００ＦＦ″＞好玩吗？！！！ ＜／ｆｏｎｔ＞＜／ｄｄ＞<br>
+              ＜／ｄｉｖ＞ ／／同样定义了一个名为ａａａ的对象，对象包括一行文字。<br>
+              ＜／ｂｏｄｙ＞<br>
+              ＜／ｈｔｍｌ＞<br>
+              浙江 ｚｒｏｍ<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

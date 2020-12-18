@@ -1,0 +1,149 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用DIET实行文件“透明”压缩<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        经常使用压缩工具的人，肯定会感到压缩后的文件用起来太麻烦，都得先用压缩工具解开，最多能自解压后再使用。但是你若见到压缩工具DIET，一定会高兴不已，相见恨晚。DIET(V1.45F)是一个DOS下的工具，短小精干，长度只有26，370字节，可驻留内存，能压缩.EXE、.COM、.SYS、.DRV、.TXT、.WAV等文件，使用上有很多方便之处。其特点如下：<br>
+        　　一、可驻留内存，并且容易移出，DOS下执行DIET－Z和DIET－ZR就可实现。愿意的话还可以在你的AUTOEXEC.BAT中加上DIET－Z或者把DIET作为一个设备加载：DEVICE=DIET.EXE 
+        －Z －P －K。<br>
+        　　二、对文件单独压缩，不打包，压缩后文件除了长度和以前不一样以外，其扩展名、文件的时间等都可以不变，用DIR根本看不出文件被压缩过，应说压缩文件对用户而言是透明的。<br>
+        　　三、压缩后的执行文件的设备驱动程序、长度平均可缩短40％，而且不用解压就可以直接执行或在CONFIG.SYS中加载，执行速度快得让你根本感觉不到有什么变化。<br>
+        　　四、DIET驻留内存时，经其压缩的数据类型文件在编辑或加工时可以自动展开，这是DIET最为出色的地方。例如在DOS下执行DIET 
+        －Z －P后，经过压缩的数据类型文件不用解压，就可以直接用EDIT或其它任一种编辑器打开进行编辑，而文件在修改后还会自动再压缩。这对于那些经常要编辑文件的用户而言无疑是太方便了。<br>
+        　　DIET把所有的DOS文件分为两类来压缩：一类是执行文件和设备驱程序，如.EXE、.COM、.SYS、.DRV文件，它们均被压缩成自解压文件；另一类是数据文件，如.TXT、.WAV文件，它们不能自解压，必须手动解压或在DIET驻留内存后使用。DIET的命令格式为：<br>
+        DIET [选项]　FILENAME [LENAME]……<br>
+        　　选项需加“－”或“/”作前缀，多个选项之间加空格。如：DIET 
+        －Z －TD:\TMP\(即DIET驻留内存且选D：\TMP为当前工作目录)。FILENAME为要压缩的文件，可带路径。<br>
+        　　DIET的选项分为基本选项和辅助选项两种。辅助选项对基本选项起限制说明作用，相当于常用压缩软件的开关。其常用选项如表一：</font></p>
+        <div align="center"><center><table border="1" cellpadding="0" cellspacing="0" width="56%">
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">基本选项</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">基本选项功能</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">辅助选项</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-X</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">压缩为自解压文件</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">-I,-K,-O&lt;文件名&gt;</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-D </span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">压缩为数据文件</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">-I，-O&lt;文件名&gt;</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-R</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">解压指定的数据文件</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">-O&lt;文件名&gt;</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-RA</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">解压所有的数据文件</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">-O&lt;文件名&gt;</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-C[文件名]</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">拷贝并（解）压缩为此文件</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">-R，-RA，-X，-D</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-L</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">查看文件是否已压缩</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">　</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-Z</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">驻留DIET到内存中</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">-P，-W，-M，-T&lt;目录名&gt;</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-ZD</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">使驻在内存的DIET失效</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">　</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-ZA</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">激活驻在内存的DIET</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">　</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%" align="center"><font color="#369681"><span class="ourfont">-ZR</span></font></td>
+            <td width="46%" align="center"><font color="#369681"><span class="ourfont">把DIET从内存中移走</span></font></td>
+            <td width="38%" align="center"><font color="#369681"><span class="ourfont">　</span></font></td>
+          </tr>
+        </table>
+        </center></div><p class="ourfont"><font color="#369681">　　表一中的辅助选项功能如表二：</font></p>
+        <div align="center"><center><table border="1" cellpadding="0" cellspacing="0" width="41%">
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">辅助选项</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">辅助选项功能</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-O</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">指明压缩输出的路径名和文件名</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-I</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">忽略警告信息“可能是覆盖文件！”</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-K</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">应用程序结束时删除临时文件</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-P</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">压缩文件打开修改后自动再压缩</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-W</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">自动压缩新生成的文件</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-M</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">自动压缩时不显示提示信息</span></font></td>
+          </tr>
+          <tr>
+            <td width="26%" align="center"><font color="#369681"><span class="ourfont">-T&lt;目录名&gt;</span></font></td>
+            <td width="74%" align="center"><font color="#369681"><span class="ourfont">指出DIET的工作目录</span></font></td>
+          </tr>
+        </table>
+        </center></div><p class="ourfont"><font color="#369681">　　FILENAME项可使用通配符“*”。例如,不加选项执行DIET 
+        *.*，DIET会将当前目录下的执行文件和驱动程序作为自解压文件压缩，其它文件作为数据类型文件进行压缩。一起执行下列两条命令DIET 
+        *.*和DIET －R *.*时，会使当前目录下所有的执行文件和驱动程序被压缩，而其它的文件则不被压缩。想还原所有类型的压缩文件，可用DIET 
+        －RA *.*。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

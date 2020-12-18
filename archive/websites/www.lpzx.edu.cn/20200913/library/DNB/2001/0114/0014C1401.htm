@@ -1,0 +1,159 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/hardware.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>MODEM芯片大扫描</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | 
+      <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="457" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="139" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第14期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{MODEM芯片大扫描}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 我们知道，计算机对数据信息的存储、处理和传输都是通过二进制的“0”和“1”来实现的。因为计算机只能识别和处理数字信号，而电话线传送的是连续性的模拟信号，也就是音频信号。当计算机上的数字信号通过电话线传送出去时，必须将其转换为模拟信号，即引入一定频率范围的连续波(称为正弦载波)，通过振幅、频率或相应的特性变化来表示0、1信息，这个过程叫做“调制”。反过来，当电话线上的模拟信号传给计算机时，须将其转换为数字信号，这叫做“解调制”。通常计算机都是通过MODEM来完成上述两个过程的，因为MODEM内部有一块DSP(数据信号处理)芯片，它主要负责MODEM底层算法、完成数据的数模转换以及发送、接收、侦听线路的信号等。<br>
+              ##1 MODEM分类<br>
+              我们经常会听到全硬MODEM、半软MODEM和全软MODEM，其实它们是按照MODEM所包含的硬件不同来划分的。一般来说，MODEM是由控制器(Controller)、数据泵(Data 
+              Pump)和数据整理(Data Arrangement)三个硬件系统组成的。全硬MODEM包含控制器、数据泵和数据整理系统，半软MODEM包含数据泵和数据整理系统，全软MODEM只有数据整理系统。半软MODEM和全软MODEM中所缺少的硬件功能是由驱动程序和CPU来实现的。<br>
+              通常，我们所说的软MODEM是将传统MODEM的“Host Signal Processing”(HSP)即数据处理工作交由CPU完成，从而省去传统MODEM固有的电子元件，使网络能在稳定可靠的基础上达到本地连接的最快速度。目前我们见到的软MODEM主要有HCF和HSF两种。<br>
+              1.HCF(Host Controlled，V.90/K56 Flex MODEM Device Family)也就是通常所说的半软MODEM，它采用了硬件数据泵技术，由驱动程序控制硬件数据泵完成数据处理工作，也正因为采用了硬件数据泵，HCF 
+              MODEM在一些媒体上又被称为PCI硬“猫”。<br>
+              2.HSF(Host Soft，V.90/K56flex MODEM Device Family)也就是通常所说的全软MODEM，数据处理及控制均由CPU完成。HCF和HSF的差异在于CPU资源的占用上。因为现在CPU的速度越来越快，对于速度快的系统来说，将MODEM芯片的部分功能转移给CPU处理并不会大幅度降低系统速度，而对于那些本来速度就不是很快的系统来说，使用软“猫”会给系统带来比较大的负担。<br>
+              ##1 MODEM芯片大“观园”<br>
+              MODEM所采用的芯片对MODEM性能和价格有很大的影响。目前主要的MODEM芯片厂商有：Conexant、TI、Lucent、Intel、ESS、MOTOROLA等等。下面笔者就列出几款市场上比较常见的MODEM芯片。<br>
+              一、Conexant公司<br>
+              Conexant的前身就是Rockwell，它是世界上最大的MODEM芯片厂商。相对其它芯片而言，Conexant(Rockwell)的芯片的抗干扰能力比较好，采用Conexant(Rockwell)芯片的MODEM在连接的时候速度比较稳定，适用于电话线噪声较大的场合。该公司的主要产品如下：<br>
+              1.Conexant ACF56K：属于全硬芯片，支持V.90和K56 Flex协议，有1Mbit ROM和2Mbit ROM两个版本，适用于外置MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              2.Conexant HCF56K：属于半软芯片，支持V.90和K56 Flex协议，适用于PCI或USB接口的MODEM。<br>
+              3.Conexant HSF56K：属于全软芯片，支持V.90和K56 Flex协议，适用于PCI接口的内置MODEM。<br>
+              4.Rockwell 56ACF：属于全硬芯片，支持K56 Flex和V.90，适用于外置MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              5.Rockwell 56PDF：属于半软芯片，支持K56 Flex和V.90自动双频切换，适用于PCI或USB接口的MODEM。<br>
+              6.ConexantRockwellRH56/SP-PCI R6795：属于半软芯片，支持V.90和K56 Flex协议，适用于PCI接口的内置MODEM。<br>
+              7.ConexantRockwellRH56/SP-PCI R6793：属于全软芯片，支持V.90和K56 Flex协议，适用于PCI接口的内置MODEM。<br>
+              8.Conexant AC-link：属于全软芯片，符合AC’97标准，支持V.90和K56 Flex协议，适用AMR接口的内置MODEM。<br>
+              9.Conexant SC56D：该芯片支持V.92协议。<br>
+              二、TI(德州仪器)公司<br>
+              TITexas Instruments，德州仪器公司也是一家著名的MODEM芯片厂商。在电话线路噪声很小的场合，使用TI芯片的MODEM的网络连接速度一般比Rockwell芯片的MODEM要快。也就是说在质量好的线路上，TI的MODEM芯片更能体现出速度优势。TI芯片主要用在高端MODEM产品中，主要产品是TMS320芯片，它支持V.90及X2协议，适用于外置的MODEM或ISA接口的内置MODEM。<br>
+              三、Lucent(朗讯)公司<br>
+              Lucent是全球知名的通讯产品厂商，其MODEM芯片的产品线也比较丰富。主要产品如下：<br>
+              1.Lucent 1646：属于全硬芯片，支持V.90与K56 Flex协议，适用于外置的MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              2.Lucent M-1673：属于全硬芯片，支持V.90与K56 Flex协议，适用于外置的MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              3.Lucent Venus(M-1675)：属于全硬芯片，有1Mbit ROM和2Mbit ROM两个版本，支持V.90与K56 
+              Flex协议，适用于外置的MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              4.Lucent L56DVS、L56DV、L56DV+P：这些芯片均为全硬芯片，支持V.90协议，适用于外置的MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              5.Lucent Apollo、Luna：属于半软芯片，适用于ISA接口的内置MODEM。<br>
+              6.Lucent Mars：属于半软芯片，适用于ISA或PCI接口的内置MODEM。<br>
+              7.Lucent L56DL、L56DLI、L56DAS、L56DASI、L56DM+S：属于半软芯片，支持V.90和K56Flex协议，适用于ISA或PCI接口的内置MODEM。<br>
+              8.Lucent L56DT：属于全软芯片，支持V.90和K56Flex协议，适用于PCI接口的内置MODEM。<br>
+              四、Intel公司<br>
+              Ambient Technologies是Intel旗下的子公司，是专业MODEM芯片生产商。也就是最早的Cirrus Logic，后来一度改名为Ambient 
+              Technologies，直至改为Intel。所以在其MODEM芯片上也出现三种不同的厂商名称。如果芯片的型号一致，那么它们的技术参数也是一样的。主要产品如下：<br>
+              1.CirrusLogic MD562X：属于半软芯片，支持V.90和x2协议，适用于PCI接口的内置MODEM。<br>
+              2.Ambient MD563X-HaM、Intel MD563X-HaM：属于半软芯片，支持V.90协议，适用于PCI接口的内置MODEM。<br>
+              3.CirrusLogic MD565X、Ambient MD565X：属于全硬芯片，支持V.90和x2协议，适用于外置MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              4.CirrusLogic MD566X、Ambient MD566X、Intel MD566X：属于全硬芯片，支持V.90和x2协议，适用于外置MODEM或ISA、PCMCIA接口的内置MODEM。<br>
+              5.Ambient MD567X、Intel MD567X：属于全硬芯片，支持V.90协议，适用于USB接口的MODEM。<br>
+              五、ESS公司<br>
+              众所周知，在586年代，ESS公司出品的ESS1688之类声卡赫赫有名。其实在低端的MODEM产品中，ESS的芯片也随处可见。其主要产品有ES56CV-P、ES56PI、ES56X等芯片，它们均为全软MODEM芯片，适用于PCI接口的内置MODEM。<br>
+              六、Motorola(摩托罗拉)公司<br>
+              Motorola(摩托罗拉)公司生产的MODEM芯片主要有两种：<br>
+              1.Motorola SM56 AC-link：属于全软芯片，符合AC’97标准，适用于AMR、CNR、MDC接口的内置MODEM。<br>
+              2.Motorola SM56：属于全软芯片，适用于ISA或PCI接口的内置MODEM。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

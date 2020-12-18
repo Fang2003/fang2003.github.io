@@ -1,0 +1,254 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="zh-cn">
+<title>欢迎来到山恬水静</title>
+<style type="text/css">
+<!--
+
+a:link {font-size:9pt;	color: #000080;	text-decoration:none;}
+a:visited	{font-size:9pt;	color: #000080;text-decoration:none;}
+a:hover		{font-size:9pt;	color: #008000;text-decoration:none;}
+.bar {  font-family: "宋体"; font-size: 9pt; color: #CCFF99;}
+a.bar:hover {  font-family: "宋体"; font-size: 9pt; color: #FFFFFF }
+a.bar:link {  font-family: "宋体"; font-size: 9pt; color: #ccff99; text-decoration:none;}
+a.bar:visited {  font-family: "宋体"; font-size: 9pt; color: #ccff99; text-decoration:none;}
+.little {font-size: 8pt;}
+body {  font-family: "宋体"; font-size: 9pt}
+td {  font-family: "宋体"; font-size: 9pt}
+p {  font-family: "宋体"; font-size: 9pt; line-height: normal}
+-->
+</style>
+ 
+
+</head>
+
+<BODY background="1.jpg" >
+<script language="JavaScript1.2">
+
+    var snowsrc="leabul1e.gif"
+  // Configure below to change number of snow to render
+  var no = 15;
+
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+
+  var dx, xp, yp;    // coordinate and position variables
+  var am, stx, sty;  // amplitude and step variables
+  var i, doc_width = 800, doc_height = 600;
+  
+  if (ns4up) {
+    doc_width = self.innerWidth;
+    doc_height = self.innerHeight;
+  } else if (ie4up) {
+    doc_width = document.body.clientWidth;
+    doc_height = document.body.clientHeight;
+  }
+
+  dx = new Array();
+  xp = new Array();
+  yp = new Array();
+  am = new Array();
+  stx = new Array();
+  sty = new Array();
+  
+  for (i = 0; i < no; ++ i) {  
+    dx[i] = 0;                        // set coordinate variables
+    xp[i] = Math.random()*(doc_width-50);  // set position variables
+    yp[i] = Math.random()*doc_height;
+    am[i] = Math.random()*20;         // set amplitude variables
+    stx[i] = 0.02 + Math.random()/10; // set step variables
+    sty[i] = 0.7 + Math.random();     // set step variables
+    if (ns4up) {                      // set layers
+      if (i == 0) {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><a href="goodpage/stsj/zhuanti/1st/%5C%22http:/dynamicdrive.com/%5C%22"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></a></layer>");
+      } else {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></layer>");
+      }
+    } else if (ie4up) {
+      if (i == 0) {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><a href="goodpage/stsj/zhuanti/1st/%5C%22http:/best.163.com/%7Egujun%5C%22"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></a></div>");
+      } else {
+        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"; VISIBILITY: visible; TOP: 15px; LEFT: 15px;\"><img src='http://www.lpzx.edu.cn/goodpage/stsj/zhuanti/1st/%22+snowsrc+%22' border=\"0\"></div>");
+      }
+    }
+  }
+  
+  function snowNS() {  // Netscape main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/10;
+        sty[i] = 0.7 + Math.random();
+        doc_width = self.innerWidth;
+        doc_height = self.innerHeight;
+      }
+      dx[i] += stx[i];
+      document.layers["dot"+i].top = yp[i];
+      document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+    }
+    setTimeout("snowNS()", 10);
+  }
+
+  function snowIE() {  // IE main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = Math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + Math.random()/10;
+        sty[i] = 0.7 + Math.random();
+        doc_width = document.body.clientWidth;
+        doc_height = document.body.clientHeight;
+      }
+      dx[i] += stx[i];
+      document.all["dot"+i].style.pixelTop = yp[i];
+      document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+    }
+    setTimeout("snowIE()", 10);
+  }
+
+  if (ns4up) {
+    snowNS();
+  } else if (ie4up) {
+    snowIE();
+  }
+
+</script>
+<!-- ImageReady Slices (snownight.psd) --> 
+
+<div align="right">
+  <table border="0" cellpadding="0" cellspacing="0" width="788" height="294">
+    <tr>
+      <td width="277" align="right" height="97" colspan="0">
+        <p align="center"></td>
+      <td width="252" height="97"></td>
+      <td colspan="2" background="1.jpg" width="304" height="97">
+        <p align="center"><span style="position: absolute; left: 269; top: 26; z-index: 1"><img border="0" src="index.1.gif" width="292" height="80" align="left"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td width="41" height="97"></td>
+      <td width="296" height="97">
+        <p><font color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top" width="149" height="59">
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="new_page_2.htm" target="_blank"><font face="楷体_GB2312" size="5" >山恬</font></a></td>
+      <td valign="top" width="371" align="left" height="59">
+        <p align="left">让恬美的青山,带给我深沉的思考,梦一般的回忆</td>
+      <td rowspan="9" width="32" height="15"></td>
+      <td valign="top" rowspan="13" width="450" height="468"><font color="#008000">
+        <marquee width="357" height="12" scrolldelay="100">我的精神家园</marquee>
+        </font>
+        <p align="center"><img border="0" src="201.jpg" width="375" height="316">
+        <p align="center">最近更新：2001.3.14<p align="left"><font color="#008000">What's</font><font color="#000000"><img border="0" src="new.gif" width="28" height="11">?</font><p align="left"><a href="dubai.htm">我的独语</a>：一张告示也罢，一纸苦衷也罢，总之，讲讲我自己最近的故事吧<p align="left"><font color="#000080">我们每隔一周都有两节阅读课。面对桌子上一大叠书，随便翻了几本，却又颇感失望。究竟为何？请看<a href="reading.htm">《读书杂感》</a>。</font><p align="left"><font color="#000080">住在学校里，总怀念着过去的自由时光。仍然是麦子，还有他的咖啡屋……让我们再一次走进他的咖啡屋吧，感受那种文化的气息……<a href="maizi2.htm">《麦子·麦子咖啡屋》</a></font><p align="left"><font color="#000080">路，是人一步一步走出来的。其实世上本没有路，但走的人多了，也便成了路。麦子用他的双脚，走过了丝绸之路，走过了雪域高原，走出了一条属于他自己的路。<a href="road.htm">《路——麦子·西藏·人生》</a>——我的期中考试的大作。</font><p align="left"><font color="#000080">本来要去医学院的解剖室，本来将要看到可能一辈子也见不到的东西，但是，学代会偏偏要在这时召开。到底是解剖还是开会？我坚决地选择了开会，因为我必须去竞选学生会成员。我知道我已经<a href="drop.htm">《学会放弃》</a>。</font><p align="left"><font color="#000080">学校依山而建，篮球场旁边有一座算不上是“山”的小山头。每次我仰望它，都想攀到它的顶峰，但当我真正爬上它，我发现根本不可能，只有鸟儿能凭借它们的双翼，掠过这山峰。但我仍明白了一些东西……<a href="zagan.htm">《杂感》</a></font><p align="center"><font color="#008080">首页链接:</font><a href="http://www.powow.com/dongqian" target="_blank">董教授的学术主页</a>&nbsp;|&nbsp;            
+        <a href="http://givemefine.yeah.net" target="_blank">Give Me Fine!</a>|<a href="http://www.powow.com/dongbz" target="_blank">&nbsp;&nbsp;冰子小屋&nbsp;</a><p align="center"><a href="http://www.xiaoyun_g.163.net" target="_blank">http://www.xiaoyun_g.163.net</a>&nbsp;           
+        <a href="http://go.163.com/~xiaoyun" target="_blank">http://go.163.com/~xiaoyun</a>           
+        <p></td>                               
+      <td rowspan="13" width="22" height="197" valign="top" align="right"></td>                               
+      <td rowspan="13" width="142" height="197" valign="top" align="left">                               
+        <p align="center"><font color="#000080" size="3">我的公告牌</font><font color="#FF0000" size="3"><img border="0" src="new.gif" width="28" height="11"></font>                              
+        </p>                              
+        <p align="left">还是那句话，我很抱歉一个寒假都没有来碰我的主页。网友的“抗议贴子”我已拜读过了，心里确实挺愧疚，但是呢，我并不是放弃我的主页，我也常来这里看看有没有新的贴子，来了多少访问者，山恬水静一直是我网上最亲切最甜蜜的家园。这一次我终于又搞了些文字，算是对我这一段时间的一个独白抑或是关于我自己的小小的说明吧。<br>    
+        </p>                              
+        <p align="center">　                   
+        </p>                   
+        <p align="center"><font color="#008080">您是自2000年1月28日起第<img src=http://www.xz.jsinfo.net/cgi-bin/Count.cgi?ft=7&frgb=255;215;0&dd=checker|df=shantianshuijing.dat border=0>位客人</font><p align="center">　<p align="center"><a target="_blank" href="http://elsie.xilubbs.com">我的论坛!!</a><p align="center"><a href="mailto:xiaoyun_g@yeah.net">给我写信</a><p align="center">　<p align="center"><a href="goodpage/stsj/zhuanti/1st/birthday_1.htm">山恬水静一周年专版</a><p align="center"><a href="index2.html" target="_blank">中考首页</a><p align="center">　<a href="index1.html" target="_blank">原来的山恬水静首页</a><p align="center">　<p align="center"></td>                        
+    </tr>                      
+    <tr>                      
+      <td align="right" valign="top" width="149" height="75">                      
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="shuijing.htm" target="_blank"><font face="楷体_GB2312" size="5">水静</font></a></td>                      
+      <td valign="top" width="371" align="left" height="75">   
+        <p align="left">沉静的一汪碧水,滚滚东逝的长江,奏响着永恒不变的乐章</td>                      
+    </tr>                      
+    <tr>                      
+      <td align="right" valign="top" width="149" height="71">                      
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="suibi.htm" target="_blank"><font face="楷体_GB2312" size="5">随笔</font></a>                      
+        <p align="left">　</td>                    
+      <td valign="top" width="371" align="left" height="71">  
+        <p align="left">灵感碰撞的火花,思维留下的印迹,嬉笑骂怒皆成文章</td>                    
+    </tr>                    
+    <tr>                    
+      <td align="right" valign="top" width="149" height="72">                    
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="shici.htm" target="_blank"><font face="楷体_GB2312" size="5" >诗词</font></a>                    
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><font face="楷体_GB2312" size="5">&nbsp;</font><a href="shici.htm" target="_blank"><font face="楷体_GB2312" size="5" >小语</font></a></td>                    
+      <td valign="top" width="371" align="left" height="72">  
+        <p align="left">领略古人的胸襟欣赏古人的情怀品位古人的哲学</td>                    
+    </tr>                    
+    <tr>                    
+      <td align="right" valign="top" width="149" height="84">                    
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="ziji.htm" target="_blank"><font size="5" face="楷体_GB2312">自己</font></a><p align="left"></td>                    
+      <td valign="top" width="371" align="left" height="84">  
+        <p align="left">我是谁?我就是我,一个真实的自我,这就是我</td>                    
+    </tr>                    
+    <tr>                    
+      <td align="right" valign="top" width="149" height="98">                    
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="qingjie.htm" target="_blank"><font size="5" face="楷体_GB2312" >网络</font></a>                    
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><font size="5" face="楷体_GB2312">&nbsp;</font><a href="qingjie.htm" target="_blank"><font size="5" face="楷体_GB2312" >情结</font></a></td>                    
+      <td valign="top" width="371" align="left" height="98">  
+        <p align="left">自从登陆网络的第一天,我就知道我的生活离不开网络</td>                    
+    </tr>                    
+    <tr>                    
+      <td align="right" valign="top" width="149" height="1">                    
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="zongjiao.htm" target="_blank"><font face="楷体_GB2312" size="5" >宗教</font></a></td>                    
+      <td valign="top" width="371" align="left" height="1">  
+        <p align="left">让我们举心向上,走进这神圣的殿堂</td>                    
+    </tr>                    
+    <tr>                     
+      <td align="right" valign="top" width="149" height="73">                     
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="meiwen.htm" target="_blank"><font face="楷体_GB2312" size="5" >美文</font></a></td>                     
+      <td valign="top" width="371" align="left" height="73">  
+        <p align="left">文友的大作,反映我们真实的生活,我们共同的心声</td>                    
+    </tr>                    
+    <tr>                    
+      <td width="149" align="right" height="69">                    
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="link.htm" target="_blank"><font  size="5" face="楷体_GB2312">友情</font></a>                    
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><font size="5" face="楷体_GB2312">&nbsp;</font><a href="link.htm" target="_blank"><font  size="5" face="楷体_GB2312">链接</font></a><p align="left" style="margin-top: 0; margin-bottom: 0">3.14更新<img border="0" src="new.gif" width="28" height="11"></td>                   
+      <td width="371" align="left" height="69"> 
+        <p align="left">我们原本并不相识,是网络让我们走到一起</td>                   
+    </tr>                   
+    <tr>                   
+      <td align="right" width="149" height="60">                   
+        <p align="left"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="http://elsie.xilubbs.com" target="_blank"><font face="楷体_GB2312" size="5">论坛</font></a></td>                  
+      <td align="left" width="371" height="60">不给我留句话吗?</td>                  
+      <td width="32" height="60"></td>                  
+    </tr>                  
+    <tr>                  
+      <td align="right" width="149" height="76">                  
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><img border="0" src="bd14794_.gif" width="12" height="12"><a href="rights.htm" target="_blank"><font  size="5" face="楷体_GB2312">关于</font></a>                  
+        <p align="left" style="margin-top: 0; margin-bottom: 0"><font size="5" face="楷体_GB2312">&nbsp;</font><a href="rights.htm" target="_blank"><font  size="5" face="楷体_GB2312">版权</font></a></td>                  
+      <td align="left" width="371" height="76">
+        <p align="left">一些需要说说的东西</td>                  
+      <td width="32" height="76"></td>                  
+    </tr>                  
+    <tr>                  
+      <td align="right" width="149" height="23">　</td>                  
+      <td align="left" width="371" height="23"></td>                  
+      <td width="32" height="23"></td>                  
+    </tr>                  
+    <tr>                  
+      <td align="right" width="149" height="23"></td>                  
+      <td align="left" width="371" height="23"></td>                  
+      <td width="32" height="23"></td>                  
+    </tr>                  
+  </table>                  
+</div>                  
+                  
+<p align="center">　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="http://202.106.168.86/click.ng/Params.richmedia=yes&site=mcgi.163.com&category=main&type=banner"   
+target=_blank><IMG SRC=http://202.106.168.86/image.ng/Params.richmedia=yes&site=mcgi.163.com&category=main&type=banner></A> </script>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                         
+</BODY>                                       
+</HTML>                                       
+                                    
+                                   
+                                   
+                                   
+                      
+                      
+           
+          
+          
+          
+          
+          
+         

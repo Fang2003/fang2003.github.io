@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">修复GetRight 
+        3.02 文件头<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> </font><font
+        color="#004040"> </font><font color="#369681">当使用《电脑报第三期配套光盘》内的GetRight 
+        302 时意外的断线(包括WinGate断线),有可能从服务器上返回错误数据，而GetRight 
+        302将其作为完整数据包写入下载文件的头部，并中断续传。此类文件头大约如下：<br>
+        　　&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Socket Error&lt;/TITLE&gt;&lt;/HEAD&gt;<br>
+        　　&lt;BODY&gt;&lt;H1&gt;Socket Error&lt;/H1&gt;&lt;P&gt;&lt;P&gt;Connection to Remote 
+        Host timed out<br>
+        　　&lt;/BODY&gt;&lt;/HTML&gt;<br>
+        　　对于这种情况，可不予理睬，继续按下述方法下载：<br>
+        　　1在设置了GetRightLog和使用GetRight后缀时，首先将下载文件后缀增加为GetRight。<br>
+        　　2选择GetRight的Advanced|Recover Lost DownLoads菜单继续下载。<br>
+        　　3确认下载长度正确后，将文件更名，重新下载该文件，当长度大于256字节后中断。<br>
+        　　4用本软件进行修复即可。语法：<br>
+        　　GetRtFix &lt;错误文件头文件 &gt; &lt;正确文件头文件&gt;<br>
+        　　这里&lt;正确文件头文件 &gt;即是第3步下载文件，&lt;错误文件头文件&gt;是长度正确的文件。<br>
+        　　5注意！GetRtFix只能用于Windows95下(长文件名)。<br>
+        　　源程序如下：<br>
+        　　Attribute VB_Name=″Module1″<br>
+        　　Sub Main()<br>
+        　　′VB 50<br>
+        　　Dim File1S,File2S,I％,F1％,F2％,A() As Byte<br>
+        　　ReDim A(＆H100)<br>
+        　　If Command=″ ″ Or InStr(Command,Chr(32))=0 Then GoTo Err1<br>
+        　　I=InStr(Command,Chr(32))<br>
+        　　File1S=Trim(Left(Command,I))<br>
+        　　File2S=Trim(Right(Command,Len(Command)－I))<br>
+        　　If Dir(File1S)=″ ″ Or Dir(File2S)=″ ″ Then GoTo Err1<br>
+        　　F2％=FreeFile<br>
+        　　Open File2S For Binary Access Read As F2<br>
+        　　F1％=FreeFile<br>
+        　　Open File1S For Binary Access Write As F1<br>
+        　　Get F2,1,A()<br>
+        　　Put F1,1,A()<br>
+        　　Close<br>
+        　　End<br>
+        　　Err1:<br>
+        　　MsgBox ″语法：″＆Chr(10)＆Chr(13)＆″ GetRtFix &lt;错误文件头文件 
+        &gt; &lt;正确文件头文件&gt;″ ＆Chr(10) ＆Chr(13) ＆Chr(10) ＆Chr(13)＆Chr(10)＆Chr(13)＆″作者：高大华!″,,″修复GetRight文件头″<br>
+        　　End<br>
+        　　End Sub<br>
+        　　本软件将在《电脑报第四期配套光盘》内:\internet\ftp\getright\GetRtFixexe。<strong>(重庆　高大华)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

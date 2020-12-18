@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>56K 
+        PCI内置猫试用手记<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">电脑买得久了，看见许多同事买了MODEM上网，不禁也有了上网的冲动。正巧一个朋友也有此意，经过一番比较、研究，从上海购回两块56K 
+        V90 PCI内置猫。我的猫为台湾SPEEDCOM牌，ROCCWELL芯片，此卡较大，稍嫌粗糙，带语音输入输出口；朋友的猫为中胜上海公司生产，LUCCENT芯片，中文包装，小巧精致，使用声卡的语音输入输出口。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">回家后，经过一番艰苦的安装、调整，才将猫安装好。拨0169（因为是分机，要先拨0）上网后，点击屏幕右下角的小图标，显示的连线速率竟为115200bps，显然，屏幕显示的是我的电脑与猫之间的DTE(Data 
+        Terminal Equipment，数据终端设备)速率（已设置为最大115200bps）。去朋友处一看，他的猫在屏幕上显示的速率是21600bps,显然是连线速率。看来猫不同，报告的参数也不同。为了让我的猫在屏幕上显示连线速率，我到处查找资料，费了不少周折。后得一高手指点，再经过我反复试验，现将它写出和大家共享。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">我们知道，拨号软件拨号时都要对猫进行初始化，初始化的方法有两种：一种是像Windows的拨号网络里，采用在软件中让用户选择一些通信方式，比如是否采用硬件流控制等；除了软件设置外，还同时提供自编初始化参数来让那些熟悉硬件的高手自己优化（在MODEM设置的附加设置一栏中）。初始化参数是一组AT指令集，有些指令不能存储，只对一次拨号有效，有些可用AT＆W存储。查看猫的说明，有一个参数为＋MR，功能为调制报告的控制，设置它可以向超级终端返回连线速率。运行超级终端，先运行AT＋MR=1（等于2也可以，默认为0），再运行ATDT0169拨号，连上后，超级终端显示以V.34协议的28800bps、21600bps连上了。估计28800bps是初商协议，到21600bps就稳定了。当设＋MR=2时，则仅显示以V.34的21600bps连上了，看来我的猫与朋友的也差不多。唉，没想到这里的电话线这么差，难道我的56K 
+        MODEM就这么白费了？后多次试拨，最好时也仅为31200bps、24000bps，而朋友的猫则一直稳定在21600bps，从不改变，以上情况可在MODEM的日志报告中查看。当＋MR=2时，上线后，在最开始显示DTE速率115200bps连接状态的地方就直接显示为上线速率21600bps了。当我和朋友直接对拨时，也都只能达到33600bps的速率连接，从没出现过56000bps的连接。虽然V.42bis压缩协议有4:1，但也要28800bps才能利用115200bps的DTE速率带宽(因为115200/4=28800)，并且此协议对于已压缩过的文件(如ZIP文件)用处不大，而这时才能显示56K连线速率的优势，虽然网上的东西多为压缩文件。可惜我们的猫只有21600bps的连线速率，连28800bps都不到，这事岂非要成为拥有33.6K猫的同事的笑柄。但仍可欣慰的是，实践证明，我们的猫无论从浏览速度还是文件下载速度来看，都比多数同事的杂牌33.6K猫快不少(无论内置还是外置)。从下载速度来说，以《网络吸血鬼》下载一个文件为例，我们的猫的速度可达1.5K字节/s，而他们的只有600～700字节/s而已，整整相差一倍；我们的猫的峰值速度可达3.2K字节/s，他们的猫只有2K字节/s而已，但有一位同事的台湾天使牌33.6K内置猫例外，它能以26400bps的速率上线，且使用起来直逼我们的56K猫。就线路稳定性而言，我已使用了三周，仅有一次莫名其妙的掉线而已。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">综上所述，由于高速的猫在综合技术上的先进性，即使线路所无法达到标准速度，但性能还是有很大的提升。&#26;</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

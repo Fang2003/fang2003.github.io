@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> Authorware中播放MP3</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+（作者：马红　2000年08月03日 13:42）<br><br>　　Authorware使用简单，交互性好，受到多数教师的青睐。在使用Authorware编制CAI课件的过程中，发现Authorware也有它的不足，如MP3音乐非常丰富，而且文件字节量小，但在Authorware却不能直接播放。在编制CAI课件过程中发现，引入UCD库函数后就可以直接播MP3，可以大大的丰富课件内容。 <br><br>　　如果我们现在想将某一名为dlj701.mp3的文件作为背景音乐，具体做法如下： <br><br>　　1、在相关网站（如：http://yongong.topcool.net/link/domnload.htm）下载文件tmsmp3player.exe，并将其安装到Authorware目录下。 <br><br>　　2、启动Authorware,打开或新建准备播放MP3的文件，拖入一个计算图标。 <br><br>　　3、打开计算图标，在菜单栏打开Windows菜单，选择Functions选项。在Category中点击向下的箭头，选择刚刚打开或建立的文件名，此时，Load选项变为可选。点击Load选项，选择库函数MP3player.u32，这时在选择框内会出现若干个相应的函数。 <br><br>　　首先先调用tMsMP3CreatePlayer()函数进行播放初始化，其次使用tMsMP3Loadfile()函数打开要播放的MP3文件，然后使用tMsMP3Play()函数进行播放。 <br><br>　　tMsMP3CreatePlayer()函数中的messageVar可以任意进行定义，tMsMP3Play()函数中的 repeat和 times分别为0，0时表示马上进行播放；为1，0时，则重复播放到多媒体演示播放完为止；repeat为1，times为大于0的数时，重复播放times指定的次数为止。 <br><br>　　在我们这个例子中，我们在计算图标中键入： <br><br>　　tMsMp3CreatePlayer(windowHandle, “vara”) <br><br>　　tMsMp3LoadFile(“f:\dlj701.mp3) <br><br>　　tMsMp3play(0,0) <br><br>　　后就可以播放MP3音乐了。 
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001222154404
+<div align="center"><a href="xwpl_1140.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

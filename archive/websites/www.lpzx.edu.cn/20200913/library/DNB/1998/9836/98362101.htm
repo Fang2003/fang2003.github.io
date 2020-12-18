@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>建个经济实用的上网教室<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　在Internet日益普及的今天，许多学校都将Internet作为教学内容之一。但在建设上网教室时，大家都碰到这样一个问题：通过一条专线上网，上网速度虽快，但费用太高，一般学校负担不起；通过一根电话线上网，费用虽低，但多人上网时速度很慢。如何才能让学校既少花钱又给学生提供实实在在的上网教室呢？本人通过实践得出如下方案。<br>
+        　　<strong>一、设计思想</strong><br>
+        　　由于上网教室主要是用来教学生如何上网的，上网的都是新手，他们所访问的Web站点基本上也都是教师推荐的热门站点，所以，我们就可用离线浏览器将一些热门站点“克隆”下来，存放在服务器上，然后再制作一个主页，将这些站点链接起来。这样，学生访问服务器上的主页和通过主页访问各个热门站点就变成了局域网内部的信息传送。由于局域网传输速度很高，所以学生上网就不会有共用一根电话线时那种老牛拉破车的痛苦感觉了。同时由于大量的信息传送都是在局域网内部进行的，所以通过Modem传输的数据就少，偶尔访问到没下载网站的学生也不会觉得速度慢。<br>
+        　　<strong>二、硬件配置</strong><br>
+        　　工作站配置为奔腾586/100、16M内存、NE2000兼容网卡。服务器配置为PⅡ266、64M内存、4.3G硬盘、33.6K 
+        Modem、NE2000兼容网卡。另外电话线和Internet账号是不能少的。<br>
+        　　<strong>三、必备软件</strong><br>
+        　　必备软件包括Win95、中文版IE4.0、SyGate(Modem共享软件,12M,下载地址为http:∥www.sygate.com)、Teleport 
+        Pro129(离线浏览器，下载地址为http:∥www.tenmax.com)或WebZip210(下载地址为http:∥www.spidersoft.com)、FrontPage98(主页制作工具)。<br>
+        　　<strong>四、创建过程</strong><br>
+        　　我们创建的局域网是Win95对等网，这种网组成简单，使用方便。其创建过程如下：<br>
+        　　1．所有微机都安装Win95和IE4.0，然后配置成对等网络<br>
+        　　其中服务器配置为共享（顺序选取“控制版面”→“网络”→“文件和打印共享”，点选两个选项都有效）。所有机器上都添加Microsoft 
+        TCP/IP协议（顺序选取“控制面版”→“网络”→“添加”→“协议”→Microsoft→TCP/IP）。<br>
+        　　2．网络的TCP/IP设置<br>
+        　　在服务器上IP地址填192.168.0.1；子网掩码填255.255.255.0；网关填无；DNS填无。在工作站上IP地址填192.168.0.X(X=2、3、4、……，各机的IP地址不能相同)；子网掩码填255.255.255.0；网关填192.168.0.1；DNS填192.168.0.1或我们的ISP提供的DNS地址。<br>
+        　　TCP/IP设置完成后，需要确认是否可以正常工作。在各个工作站和服务器上，进入MS－DOS方式，键入命令：ping 
+        192.168.0.1，如果出现“reply form……”的提示，说明连接无误；如果出现“Request 
+        timeout”等提示，说明有问题，还需检查。<br>
+        　　3．SyGate的安装与调试<br>
+        　　下载sg20exe后，在服务器上安装它（其它的机器不需做任何设置）。安装完后，SyGate将会启动并弹出如图1所示对话框，这时不需要做任何设置。直接启动拨号网络，拨号上网。上网成功后，从工作站上进入MS－DOS方式，输入命令：ping 
+        202.96.64.68,看是否已连通。如果已连通，则说明SyGate已经干活了！<br>
+        　　缺省设置下，SyGate就工作得很好，所以我们完全不需要任何其它的设置，如果愿意的话，我们可以做一些简单的改变，让SyGate工作得更合心愿！<br>
+        　　4．离线浏览器Teleport Pro的安装使用<br>
+        　　Teleport Pro是一个很好的离线浏览器，我们可以用它来复制整个站点或某个部分。它的安装十分简单，和大多数应用程序的安装一样，按照提示安装即可。<br>
+        　　Teleport Pro的使用也非常简单，它的“New Project Wizard(新项目指南)”可使我们很容易地设定和执行一个新的Teleport 
+        Pro项目。具体操作如下：打开菜单File，选择New Project Wizard命令；或者用鼠标点击工具栏上的第一个按钮。接下来Teleport 
+        Pro询问需要它为我们做什么(如图2所示)。其中有几个选项：（1）Create 
+        a browsable copy of a website on my hard drive:在我的硬盘上建立一个可供浏览的网站副本。这是默认选项；（2）Duplicate 
+        a website,including director:复制一个网站，包括目录结构。我们可以用此功能“克隆”整个站点。这是我们迫切需要的功能，选择此项。其余选项可不考虑。单击下一步(next)继续，接着，Teleport请我们输入欲下载网站的起始地址。输入一个URL地址作为项目执行的起始位置。wwwneasenet、wwwcpcwcom等都是有效地址。下面的空白栏给出欲下载网站的名称或者是我们自己的注释。单击“下一步”继续。接下来是项目配置，根据需要选择一项。再按“下一步”继续。当我们按下“完成(Finish)”按钮时系统会询问我们是否存储Teleport 
+        Pro项目，如果选择存储，则请我们选择Project菜单中的Start命令或者按工具栏上的第八个按钮。接着我们可以清晰地看见Teleport 
+        Pro的下载网站的过程。至此，我们利用“新项目指南”完成了一个网站的下载任务。以后，用此法就可将一个个热门网站“克隆”下来。当然“克隆”的网站越多越好。最后，将这些“站点”所在的目录(例如My 
+        Internet)设置成共享。<br>
+        　　5．制作主页<br>
+        　　首选工具为FrontPage98，辅助工具为Paint shop pro5.0、3Dxara 3D2等。先新建一个普通空白页，在其上输入文字或插入图形。选中各站点名字，插入超级链接，链接到相应站点的Indexhtm文件上。以电脑报为例，选中“电脑报”，单击工具栏上的“插入”按钮，点取“超级链接”，再点取“查找文件的图标”后，出现一对话框如图3所示。注意！这里一定要点取“网上邻居”，然后再选取“Teacher计算机”（即服务器）、电脑报站点所在的共享目录，最后找到Inedx.htm文件，单击“确定”。<br>
+        　　我们点取“网上邻居”，而不选取C:或D:盘的原因是：做成的主页最后要在工作站上浏览，如果不用全局文件名，而用本地文件名（即file:///C:/My 
+        Internet/www.cpcw.com/index.htm）的话，工作站上将无法链接到此站点。主页做成后，将主页所在目录（如C:\FrontPage 
+        Webs）设置成共享。<br>
+        　　为使学员浏览方便，可将工作站上浏览器的默认主页(如图4所示)设置为我们自己做的主页。具体作法是：点击“查看”→“Internet选项…”→“常规”，在地址栏中填入\\Teacher\FrontPage 
+        Webs\Content\My webs\Indexhtm。好了，现在上网教室的软件就装好了，感受一下速度吧，爽！快！！！<br>
+        　　本网的特点是快而安全，最适合教学和培训。感兴趣的同志可自己也建一个。如有疑问请与我联系。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　（辽宁　李虎　lyxlh@163.net）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

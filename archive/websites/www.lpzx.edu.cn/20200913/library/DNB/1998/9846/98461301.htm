@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>9811请你编程<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; &nbsp; 
+        本栏目由苦丁香公司协办<br>
+        &nbsp;&nbsp;&nbsp; 本期请你编程是一个古老的数学问题，看来读者们对这样的问题都很感兴趣，埃及分数是要求将一个正的真分数分解成几个不同的单位分数的和，由于出题时没有说清楚，有的读者将分数分解成为几个相同的单位分数的和，因此求出的解不符合原题的要求。我们也为自己在出题时考虑不周向大家道歉，下面来看看江苏读者谢文丽的解答。<br>
+        &nbsp;&nbsp;&nbsp; 编程思路：若真分数的分子a能整除分母b,则真分数经过化简就可以得到埃及分数。若真分数的分子a不能整除分母，则可以从原来的分数中分解出一个分母为b/a＋1的埃及分数。用这种方法将余数部分反复分解，最终可得到结果。<br>
+        &nbsp;&nbsp;&nbsp; 源程序：<br>
+        &nbsp;&nbsp;&nbsp; main()<br>
+        &nbsp;&nbsp;&nbsp; {<br>
+        &nbsp;&nbsp;&nbsp; longinta,b,c;<br>
+        &nbsp;&nbsp;&nbsp; while(1)<br>
+        &nbsp;&nbsp;&nbsp; {<br>
+        &nbsp;&nbsp;&nbsp; printf(″请输入一个正的真分数(a/b):″);<br>
+        &nbsp;&nbsp;&nbsp; scanf(″％ld/％ld″，＆a,＆b);<br>
+        &nbsp;&nbsp;&nbsp; if((a==0)||(b==0)||(a/b&amp;gt;=1)/＊判断输入正确与否＊/<br>
+        &nbsp;&nbsp;&nbsp; continue;<br>
+        &nbsp;&nbsp;&nbsp; else<br>
+        &nbsp;&nbsp;&nbsp; break;<br>
+        &nbsp;&nbsp;&nbsp; }<br>
+        &nbsp;&nbsp;&nbsp; printf(″此分数可分解为：″);<br>
+        &nbsp;&nbsp;&nbsp; while(1)<br>
+        &nbsp;&nbsp;&nbsp; {<br>
+        &nbsp;&nbsp;&nbsp; if(b％a)/＊若分子不能整除分母＊/<br>
+        &nbsp;&nbsp;&nbsp; c=b/a＋1;/＊则分解出一个分母为b/a＋1的埃及分数＊/else<br>
+        &nbsp;&nbsp;&nbsp; {<br>
+        &nbsp;&nbsp;&nbsp; c=b/a;/＊否则输出化简后的真分数＊/<br>
+        &nbsp;&nbsp;&nbsp; a=1;<br>
+        &nbsp;&nbsp;&nbsp; }<br>
+        &nbsp;&nbsp;&nbsp; if(a==1){<br>
+        &nbsp;&nbsp;&nbsp; printf(″1/％ld\n″，c);<br>
+        &nbsp;&nbsp;&nbsp; break;/＊a为1标志结束＊/<br>
+        &nbsp;&nbsp;&nbsp; }<br>
+        &nbsp;&nbsp;&nbsp; else<br>
+        &nbsp;&nbsp;&nbsp; printf(″1/％ld＋″，c);<br>
+        &nbsp;&nbsp;&nbsp; a=a＊c－b;/＊求出余数的分子＊/<br>
+        &nbsp;&nbsp;&nbsp; b=b＊c;/＊求出余数的分母＊/<br>
+        &nbsp;&nbsp;&nbsp; if(a==3)/＊若余数为3,输出最后两个埃及分数＊/<br>
+        &nbsp;&nbsp;&nbsp; {<br>
+        &nbsp;&nbsp;&nbsp; printf(″1/％ld＋1/％ld\n″，b/2,b);<br>
+        &nbsp;&nbsp;&nbsp; break;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+        &nbsp;&nbsp;&nbsp; }<br>
+        &nbsp;&nbsp;&nbsp; }<br>
+        &nbsp;&nbsp;&nbsp; <strong>9901请你编程题目</strong><br>
+        &nbsp;&nbsp;&nbsp; 编写一个游戏：从屏幕上方随机落下一个英文字母，如在字母落地前键入该字母键，则该字母消失，从不同列又随机落下另一个字母……如果字母落地，则游戏结束。来稿请寄磁盘稿或用email来稿。请写明编程思路和源程序。欢迎提供请你编程题目。来稿截止日期：1999年1月15日。<br>
+        &nbsp;&nbsp;&nbsp; <strong>本期获奖名单：</strong><br>
+        &nbsp;&nbsp;&nbsp; 杨蓬勃（安徽）谢文丽（江苏）潘鹏（辽宁）包屹（河南）谢经荣（湖北）刘洪（安徽）薄新维（辽宁）周娟（江苏）<br>
+        &nbsp;&nbsp; <strong> 每位获奖者将获得苦丁香公司提供的光盘一张。</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

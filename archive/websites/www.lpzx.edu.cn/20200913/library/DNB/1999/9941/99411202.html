@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- WIN98无法关闭的故障处理</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; WIN98无法关闭的故障处理</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 WIN98无法关闭的故障处理 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　有时我们关闭Windows98 ，系统却没有响应，对于这个问题，笔者遇到较多，因此进行了多时的摸索，对于引起这个问题的一些原因已摸清，并总结了一些经验。现献给众友，欢迎斧正。<br>
+　　通常造成这种现象的原因有多种，可从以下几个方面入手解决：<br>
+　　一、检查是否由“退出Windows”声音文件导致。<br>
+　　在“控制面板”中双击“声音”。在“事件”框中，将“退出Windows”事件的声音设置为“无”。如果Windows98能够正常关闭，则说明该问题是由退出声音文件所引起的，要解决这一问题，可以重新安装提供声音文件的程序。<br>
+　　二、检查快速关机与某些硬件是否兼容。<br>
+　　快速关机是Windows98中的新增功能，可以大大减少关机时间。但是，该功能与某些硬件不兼容，可能会导致电脑停止响应。在“运行”对话框中的“打开”框中键入“Msconfig”启动“系统配置实用程序”，单击“高级”按钮，选中“禁用快速关机”选项。如果电脑正常关机，则快速关机功能可能与电脑上所安装的某个设备不兼容。<br>
+　　三、确认问题是否由“高级电源管理”功能引起<br>
+　　在“系统”属性框中单击“设备管理器”选项卡，在“系统设备”中双击列表中的“高级电源管理”，单击“设置”选项卡，然后取消“启用电源管理”选项。如果电脑正常关机，则问题的原因可能在于APM(高级电源管理)。<br>
+　　四、在Bootlog.txt文件中判断问题的原因<br>
+　　使用文本编辑器(如记事本)检查Bootlog.txt文件中的“Terminate=”条目。这些条目位于文件的结尾，可为问题的起因提供一定的线索。<br>
+　　对于每一个Terminate=条目，查找所匹配的EndTerminate=条目。<br>
+　　如果Bootlog.txt文件的最后一行为EndTerminate=KERNEL，Windows98可成功关闭。<br>
+　　如果Bootlog.txt文件的最后一行为下列某项条目，请检查所列出的可能原因：<br>
+　　Terminate=Query Drivers内存管理程序有问题。<br>
+　　Terminate=Unload Network与Config.sys中的实模式网络驱动程序冲突。<br>
+　　Terminate=RIT声卡或旧的鼠标驱动程序存在与计时器有关的问题。<br>
+　　Terminate=WIN32 32位程序锁定了线程。<br>
+　　五、判断在Config.sys文件或Autoexec.bat文件中是否存在冲突<br>
+　　以安全模式启动电脑，在“运行”对话框的“打开”框中，键入“Msconfig”启动“系统配置实用程序”，单击“诊断启动”。系统提示重新启动电脑时，请单击“确定”。如果电脑的启动关闭不正确，需要确定问题是由Config.sys或Autoexec.bat文件的哪一行引起的。逐个取消Config.sys和Autoexec.bat选项卡中不含Windows图标的行的复选标记，然后尝试关闭电脑。<br>
+　　六、判断在System.ini文件或Win.ini文件中是否存在冲突<br>
+　　在“运行”对话框中键入“Msconfig”启动“系统配置实用程序”，在“常规”选项卡中，单击以取消“启动选项”中的所有选项。选中“处理System.ini文件”选项。选中“处理Win.ini文件”选项。如果电脑仍然无法正常关闭，则说明System.ini或Win.ini中的条目存在问题。请仔细检查每一个条目，以便确定导致问题的原因。确定引发问题的条目之后，可以删除此条目或在此条目前加分号(；)以禁用此条目或者修改此条目以便不再引起问题。<br><b>(甘肃　杨文亮)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99411202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

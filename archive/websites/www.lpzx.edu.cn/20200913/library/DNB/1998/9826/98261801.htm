@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>如何用E-Mail访问WWW</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何用E-Mail访问WWW<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　E－mail 
+        是 Internet 
+        中使用最广泛的一项服务。它除了能收发电子邮件以外，几乎能访问所有的 
+        Internet 资源。大家都很熟悉利用 E－mail 来实现 FTP，但很少有人利用 
+        E－mail 来访问WWW，这是由于不同的WWWmail服务器有不同的命令格式，用起来比较麻烦。<br>
+        　　但是对于那些手头拮据的上网者来说，这不失是一种省钱的好主意，另外对于那些只有 
+        E－mail 功能而无 WWW 
+        功能的用户来说，这更是一个好办法。它还特别适用于那些利用一些公共账号免费上网的用户，例如169，它对外有一个公共的账号：pub 
+        或guest，该公共账号能够漫游该网内的大部分站点，但如果想访问因特网上的站点就不行了。而 
+        E－mail 则没有这样的限制，它可以通达全世界任何地方。<br>
+        　　下面以W3Gate。WwwFetch E－Mail Gateway两个Mail服务器为例介绍用E－mail访问WWW的方法(其中，方括号([])内的表示是任意可选的，可同时使用；尖括号(&lt;&gt;)内的表示是必须的；竖线(|)表示任选一个，但不能同时使用)。<br>
+        　　一、<strong>W3Gate</strong><br>
+        　　信箱地址：w3mail@gmd.de<br>
+        　　通过它可以访问WWW、FTP。你只要向上述地址发一封电子邮件，并在邮件正文中包含不超过10条 
+        GET 命令行就行了。<br>
+        　　语法：<br>
+        　　[BEGIN | begin] <br>
+        　　GET [options] URL | HELP | FAQ <br>
+        　　[END | end]<br>
+        　　你可以使用 HELP 
+        来获得有关该服务器如何使用的帮助文件，也可以使用 FAQ 
+        获得在使用该服务器过程中常见问题解答的帮助文件，而 URL 
+        就是你想访问的网页地址，W3Gate 
+        将以电子邮件的形式将该地址的主页送达你的信箱。命令大小写均可。允许最多有10条GET命令。<br>
+        　　命令选项（options）：<br>
+        　　[－t] [－u] [－a][－c columns] [－z] [－uu] [－img] [－l] [－s size]<br>
+        　　－t : 除去所有的标签，取回一个纯文本<br>
+        　　－u : 如果有可能将以相对路径保持所有的链接<br>
+        　　－a : 以绝对路径保持所有的链接<br>
+        　　－c columns : 一行显示的字符数<br>
+        　　－z : 压缩文档<br>
+        　　－uu : 在邮寄前对邮件编码（uuencode）<br>
+        　　－img : 获取所有的相关的图片<br>
+        　　－l : 获取所有的相关链接的文档<br>
+        　　－s size : 设置发送文档的长度，取值范围1K～100K<br>
+        　　如果URL 很长，一行写不下，可以用反斜线（\）来断行。<br>
+        　　实例：<br>
+        　　get －z －uu http://www.es.net/pub/rfcs/rfc1738.txt<br>
+        　　get －s 16 －uu ftp://ftp.gmd.de/misc/computersongs<br>
+        －1.4.Z<br>
+        　　如果还有什么疑问的话，可以到它的主页上去瞧瞧，会有更加详尽的说明，不过是英文的，它的主页地址是http://www.w3gate.de/welcome.en.html 
+        。如果未上因特网，也可以用W3Gate 
+        来获取它，写一封邮件就行了，内容如下：<br>
+        　　收件人: w3mail@gmd.de<br>
+        　　主题: <br>
+        　　正文：<br>
+        　　begin<br>
+        　　get －img http://www.w3gate.de/welcome.en.html<br>
+        　　end <br>
+        　　<strong>二、WwwFetch E－Mail Gateway</strong><br>
+        　　信箱地址：wwwfmail@wwwfetch.com<br>
+        　　通过它可以访问WWW、FTP。如果要获得详细的帮助，向上述信箱发一封主题为help的信就行了，正文什么也不用写。<br>
+        　　语法：<br>
+        　　URL: &lt;max 5 additional URLs separated by spaces&gt;<br>
+        　　Include: [Images,Executable, Archive,Sound,\ Movie, Postscript, Document ,Text, 
+        Compressed Files for Mac, Other ]<br>
+        　　OS: [DOS | UNIX]<br>
+        　　Files: &lt;＃ of files &lt;=5&gt;<br>
+        　　Limit: &lt;＃ of MBytes &lt;= 1.0&gt;<br>
+        　　Send: &lt;No | MIME | UUE | TEXT&gt;<br>
+        　　Split: &lt;size in KBytes&gt;<br>
+        　　注释：<br>
+        　　URL:不超过5个URL，中间用空格隔开，最好是一行一个URL。<br>
+        　　Include:指定下载文件的类型，可以多选，中间用逗号隔开。只有下列指定文件类型的文档才会被下载：Executable(exe、 
+        com)；Archive(zip、 Z、 gz、 sea、 sit、 arj、 tar、 tgz);Sound(au、 aiff、 wav、 
+        mid);Movie(mpg、 mpeg、 mov、 qt、 movie、 moov);Postscript(ps);Document(pdf、 
+        doc);Text(text、 txt);Compressed Files for Mac(hqx);Other。<br>
+        　　OS:确定返回文件名的格式。“DOS”格式（文件扩展名限制为3个字符，例如“index.htm”）或者“UNIX”格式（文件扩展名一般没有限制）。如果使用Windows 
+        3.x 请选择“DOS”，如果是Windows95 或Mac使用者，可以选择“UNIX”。默认：“DOS”。<br>
+        　　Files:取回的文件数，小于等于5。默认：2。<br>
+        　　Limit:限制取回文件的长度（MB），小于等于1M，默认：0.2。<br>
+        　　Send:选择发送文件的编码格式：“No”(不发送ZIP文件)；“MIME”(发送base64 
+        ZIP的文件)；“UUE”(发送uuencoded ZIP的文件)；“TEXT”(发送文本文件)。默认：“No”。<br>
+        　　Split:指定最大的分割文件长度（KB），最大：500KB。<br>
+        　　注意：所有参数大小写均可。参数“URL”是必须的，其他参数可选。<br>
+        　　实例：<br>
+        　　收件人：wwwfmail@wwwfetch.com<br>
+        　　主题：query<br>
+        　　正文：<br>
+        　　URL: http://www.wwwfetch.com/wwwfetch_pro/<br>
+        　　URL: http://www.wwwfetch.com/wwwfetch/<br>
+        　　Include: images,sound<br>
+        　　OS: DOS<br>
+        　　Files: 4<br>
+        　　Limit: 0.5<br>
+        　　Send: MIME<br>
+        　　Split: 100<br>
+        　　如果访问成功，你将会收到该服务器发来的一封带有附件的邮件，将附件另存为ZIP文件（这一步很重要），然后将ZIP文件解压缩到一指定目录下，然后用自己喜欢的浏览器对该目录下的index.htm进行浏览，该文档的界面非常友好，它会将所有下载的网址做成一个目录，只要单击超链接就可以浏览下载的网页了。<br>
+        　　该服务器的主页地址是http://www.wwwfetch.com/wwwfetch/。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　(浙江　朱军　 
+        E－mail:benjia@telekbird.com.cn)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年26月26日第26期18版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 软件一点通</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>46 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 软件一点通</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 软件一点通 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　●在Windows 98下使用硬盘缓存</b></p>
+　　运行SYSEDIT.EXE编辑WINDOWS目录下的SYSTEM.INI文件，寻找[VCAHE]项,其下面一般是空的,加上两行:<br>
+　　MINFILECACHE=4096<br>
+　　MAXFILECACHE=4096<br>
+　　那个4096就是你设置的缓存的大小，建议两个数值设为一样，而且如果你的内存比较大，可以设大些。注意，这是用你的物理内存，具体设多少可以自己试试。
+<p><b>　　●优化软盘性能</b></p>
+　　双击打开控制面板中的“系统”图标，选择“性能”标签，按下高级设置中的“文件系统”，单击“软盘”标签，将“每次启动计算机时都搜索新的软盘驱动器”前面的钩去掉，再按“确定”。这项改动可以缩短Windows 98的启动时间。
+<p><b>　　●删除相似的字体文件</b></p>
+　　Windows 98 安装时附带了几十种字体文件，不仅浪费了硬盘空间，也使Windows 98的启动速度变慢，还浪费了宝贵的内存，使用如下方法可以删除一些相似的字体：打开控制面板中的“字体”，在“查看”菜单中选择“按相似性列出字体”，然后在字体下拉列表中选择一种字体，如“Times New Roman”，就可以看到文件夹中显示的字体了，你可以有选择地加以删除。
+<p><b>　　●Windows 98安装程序SETUP可以使用的参数</b></p>
+　　格式：SETUP [batch] [／ie] [／im] [／is] [／iv] [／iw] [／id] [／nr] [／T:tmpdir]<br>
+　　batch   指定包含安装选项的脚本文件名及其位置。<br>
+　　／ie 跳过制作启动盘。<br>
+　　／im 跳过常规内存检查。<br>
+　　／is 不运行 ScanDisk（使用新的或刚格式化硬盘时可用）。<br>
+　　／iv 安装时不显示公告板(即有关Windows 98新特性的介绍)。<br>
+　　／iw 跳过版权确认<br>
+　　／id 跳过可用磁盘空间检查<br>
+　　／nr 跳过注册表检查。<br>
+　　／T:tmpdir   指明要存放 Setup 所复制的临时文件的目录。该目录必须已存在，但任何在此目录中的现有文件将被删除。建议将其指向非安装盘，可以减少安装盘上的文件碎片。
+<p><b>　　●Format的隐含参数</b></p>
+　　／autotest　　自动测试磁盘（即模拟格式化，完毕后显示统计信息）<br>
+　　 ／backup  　　同上，但有提示输入卷标(Volume label)<br>
+　　／z:n   　格式化后每一簇的大小，n=1=512bytes,2=2×512bytes,3=3×512bytes，依此类推，格式化时硬盘要小心使用！<br>
+　　 ／U   执行无条件格式化，将每一字节均用十六进制值F6覆盖，无法进行恢复。
+<p><b>　　●Fdisk的隐含参数</b></p>
+　　 ／mbr   重写主引导扇区，可以清除一些引导型病毒<br>
+　　 ／fprmt 　　允许512兆以下的硬盘使用FAT32（通常512M以下的硬盘不允许能使用FAT32<br>
+　　Fdisk x ／pri:size ／ext:size ／log:size<br>
+　　x = 驱动器号 (1, 2, 3... )，1对应第一个硬盘，2对应第二个硬盘……<br>
+　　／pri:size = 创建一个大小为XX兆的主分区<br>
+　　／ext:size = 创建一个大小为XX兆的扩展分区<br>
+　　／log:size = 在扩展分区创建一个大小为XX兆的逻辑驱动器<br>
+　　这些参数在编制自动分区的批命令时很实用。
+<p><b>　　●Commander.com的隐含参数</b></p>
+　　／D: 用于Config.sys文件中Shell=命令行，可以防止启动时运行Autoexec.bat。例：Shell=C:\COMMAND.COM C:\ ／D<br>
+　　／Z: 可以显示″ERRORLEVEL″ 的返回值信息，用法同上。<br><b>　　（福建　林斌）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99461202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

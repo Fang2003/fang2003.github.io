@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center">
+<p><font size="+2">第十四课&nbsp;复杂的按钮</font></p>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="66%">&nbsp;&nbsp;&nbsp;&nbsp;在这一课里，我们要来做一个复杂的能连接HTML页面的FLASH按钮，试试右面的例子。这个按钮是有三种特效的，来，我们一起慢慢做。
+<td width="34%"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name=movie value="swf/cbutton.swf">
+<param name=quality value=high>
+<embed src="swf/cbutton.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT>
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="49%">
+<table width="98%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<div align="center"><img src="images/l14_01.gif" width="113" height="40"></div>
+
+<td>
+<div align="center"><img src="images/l14_02.gif" width="112" height="40"></div>
+
+<td>
+<div align="center"><img src="images/l14_03.gif" width="112" height="41"></div>
+
+
+<tr>
+<td>
+<div align="center">Up</div>
+
+<td>
+<div align="center">Over</div>
+
+<td>
+<div align="center">Down</div>
+
+
+</table>
+
+<td width="51%">&nbsp;&nbsp;&nbsp;&nbsp;我们要做的第一个特效是鼠标移到按钮上时，让两个光影移到按钮上，这就要用到我们上一课学的MovieClip了。好了让我们从头开始。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;首先还是按下Ctrl+M设置工作区大小为300*100，按照第八课的方法，做出一个按钮，它的Up、Over、Down三帧分别画成如左图的样子。然后，回到编辑Scene的状态。在菜单中选择Insert
+-&gt;New Symbol... 选择Movie Clip，创建一个新的MovieClip。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="40%">&nbsp;&nbsp;&nbsp;&nbsp;在这个MC的Layer1层第一帧里，我们要画一个和按钮一样大的蓝色边框，中间的颜色是透明色（用调色板调颜色，把该颜色的Alpha值设为0），如右图。然后在菜单里选择Insert
+-&gt;Convert to Symbol把这个边框转变为一个图形符号(Graphic Symbol)，然后新建一层Layer2，选中这一层的第一帧，按下Ctrl+L显示符号库(Library)，把刚才做的那个边框符号拖到这一帧来。注意，要让两层里这一帧的两个符号(Symbol)完全重合，中心对准十字架（其实，更好的方法是灵活应用Copy
+frames 和 Paste frames ，自己动一下脑筋，就可以了。提示一点，可以从按钮符号里复制……呵呵:-&gt;）。然后在两个层的第八帧的方格里都单击鼠标右键，弹出菜单后选择Insert
+keyframe，插入关键帧。然后分别选择Layer1和Layer2的第一帧，把这两帧里的符号(Symbol)分别向右上和左下方移动一段距离，然后在这两帧的方格里单击右键，选择Properties...
+-&gt;Tweening -&gt;Motion，让它们作Motion运动。最后，把这两层的第八帧里的符号(Symbol)的Alpha值设为0（在符号上单击右键，选择Properties...
+-&gt;Color -&gt;Alpha。你也可以把第一帧的符号的Alpha值设稍小一点），这样，这个Movie Clip就OK了，留着过会儿用。（MC的Timeline区和第一帧状态如右图所示）
+<td width="60%">
+<table width="98%" border="1" cellspacing="2" cellpadding="0" align="center">
+<tr>
+<td>
+<div align="center"><img src="images/l14_04.gif" width="113" height="39"></div>
+
+<td>
+<div align="center"><img src="images/l14_05.gif" width="142" height="63"></div>
+
+
+<tr>
+<td>
+<div align="center">边框符号</div>
+
+<td>
+<div align="center">Movie Clip 的Timeline区</div>
+
+
+</table>
+<div align="center"></div>
+<div align="center"><br>
+</div>
+<table width="98%" border="1" cellspacing="2" cellpadding="0" align="center">
+<tr>
+<td>
+<div align="center"><img src="images/l14_06.gif" width="330" height="113"></div>
+
+
+<tr>
+<td>
+<div align="center">Movie Clip 的第一帧状态</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="50%">
+<table width="98%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td>
+<div align="center"><img src="images/l14_07.gif" width="333" height="63"></div>
+
+
+<tr>
+<td>
+<div align="center">按钮的层区和Timeline区</div>
+
+
+<tr>
+<td>
+<div align="center"><img src="images/l14_08.gif" width="328" height="112"></div>
+
+
+<tr>
+<td>
+<div align="center">按钮Over帧的状态</div>
+
+
+</table>
+
+<td width="50%">&nbsp;&nbsp;&nbsp;&nbsp;接下来我们就要把这个MC加到按钮上去了，在书签区里选择编辑按钮符号(Button
+Symbol)进入编辑按钮状态。看到刚才我们做好的按钮了吧，好新建一层Layer2，在Layer1之上。注意我们是把鼠标移到按钮上按钮才动起来，所以我们选中Layer2层的Over帧，按Ctrl+L先是符号库(Library)，按照前一课学的方法，把MC拖到工作区里来，注意，MC中心和按钮中心的两个十字架要完全重合。接着，在Layer2层的另外几帧（Up、Down、Hit）的方格里单击右键，选择Insert
+blank keyframe插入空的关键帧，这一步非常重要，不可忽略！好了，动画按钮的特效就做好了，只是我们的按钮还没有声音，也不能连接页面，别急，慢慢来。这时的按钮的层区和Timeline区以及Over帧的状态应如左图所示。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="54%">&nbsp;&nbsp;&nbsp;&nbsp;现在就要给按钮加入声音了，首先，你得准备一个WAV文件（老兄，拜托找个小一点的，否则，等你放出声音来，我要“等得花儿也谢了”:)），可惜FLASH
+4还不支持MP3文件呀！好了，在菜单栏里选择 File -&gt;Import... -&gt;然后找到那个WAV文件，选中它。好了，注意喽，因为我们要按下按钮，按钮才发声，所以，这段声音要加到哪里呢？对了，按钮符号(Button
+Symbol)的Down帧。在编辑按钮符号的状态下，选中刚才我们加入的Layer2层的Down帧，按下Ctrl+L显示符号库(Library)，看到一个小喇叭状的图标的那一个符号(Symbol)吗？那就是我们刚才引入的声音文件！这时，你只要把它拖到工作区的任何地方就可以把这段声音加入当前帧了，很简单吧。看见没有，Timeline区这一帧的方格里也多了一段波形，就是这段声音的波形。你现在可以在这一帧的方格里单击右键选择Properties...
+-&gt;Sound修改一些声音的属性，如加入淡入淡出效果，左右声道转换，以及循环次数等等。相当方便吧。好了，Import声音文件后的符号库，加入声音后按钮的Timeline区如右图所示。（另外，Import...也能引入其他格式的图像，如GIF、JPG等，使用方法和加入声音一样，都可加在你想加入的任何一帧里，你可以自己试一下）
+<td width="46%">
+<table width="98%" border="1" cellspacing="2" cellpadding="0" align="center">
+<tr>
+<td>
+<div align="center"><img src="images/l14_09.gif" width="159" height="121"></div>
+
+<td>
+<div align="center">Import声音文件后的符号库</div>
+
+
+<tr>
+<td>
+<div align="center"><img src="images/l14_10.gif" width="158" height="63"></div>
+
+<td>
+<div align="center">加入声音后按钮的Timeline区</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td width="51%">&nbsp;&nbsp;&nbsp;&nbsp;呵呵，现在按钮有声音了吧，我们还要把它连接到一个页面上去呢。在这个例子里，我们要连接的页面是example.htm，就是按下例子里按钮后弹出的那个页面。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;首先，在书签区里按下编辑场景(Scene)的标签，选择Scene1回到编辑场景状态（一定要回到编辑场景状态），在按钮上单击鼠标右键，选择Properties...
+-&gt;Action，单击加号按钮，选择Get URL，如右图。然后，选中左面一栏中的Get URL那一行语句，出现如下图的对话框。在右面一栏中的URL项中填入你要连接的URL地址，可以是相对的，也可以是绝对的URL路径，本例填的是example.htm（你可要改一下呀，你没有这个页面哟）；Window一项是填打开页面方式，就是和HTML中&lt;a&gt;标签里的target一样，是指定页面在HTML的哪个Frame打开，本例是要在新窗口打开页面，所以选择了_blank，如果不填，默认为在当前Frame打开；Variables是发送变量，我们不要填，如果要发送有用GET和用POST两种方式选择。好了，填完后按下确定，一切搞定！
+
+<td width="49%">
+<div align="center"><img src="images/l14_11.gif" width="269" height="142"></div>
+
+
+</table>
+<br>
+<img src="images/l14_12.gif" width="544" height="266"> <br>
+<br>
+<table width="98%" border="0" cellspacing="2" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;按下Ctrl+Enter看看效果，啊呀，怎么连不上页面呀？呵呵，当然了，你现在是预览嘛！等你把这个FLASH动画加入你自己的页面后，你就能链上你的页面了。那怎么把FLASH动画加到我的页面里去呢？很简单呀，……打住打住，这可是下一课的内容，在这一课里我们学的东西还需要好好消化呢，过会儿再到下一课去看看吧！嗯，这一课我们学了做动画按钮，做有声音的按钮，做超级链接按钮，好好练习一遍吧，休息片刻，再进入<a href="lesson15.htm">下一课</a>——<a href="lesson15.htm">在页面中加入FLASH动画</a>！
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson15.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

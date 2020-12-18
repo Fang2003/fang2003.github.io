@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>NOVELL网络故障处理一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：某单位一局域网，网络操作系统为NOVELL 
+        3.12，服务器为COMPAQ PS300，20台5x86/120MHz工作站、10台6x86/PR166工作站(其中三台为有盘站)，网卡采用TOPSTAR 
+        TE2000A，星型结构布线，两台D－LINK 16口集线器。一天，因需安装一套对系统参数设置要求较高的软件，故对文件服务器中的CONFIG.SYS进行调整、按要求重新制作映像文件；同时对六台受损的5x86工作站的主板进行更换(新换的主板在单机上均可正常使用)。但这样一变，小部分5x86工作站出现以下两种现象：1.当屏幕上出现“Starting 
+        MS－DOS……”后死机；2.运行完IPX和NETX后屏幕上出现： <br>
+        “You are attached to sever SN<br>
+        　　Not ready reading drive A Abort,Retry,Fail?”。<br>
+        　　故障分析与处理：依照上述故障，可推断网络主要部件及线路正常，怀疑发生故障机器的CMOS设置有误或映像文件有问题。针对现象故障2，本人进入出现上述故障工作站的CMOS中，对A驱的可选值及相关项目进行反复改动测试，故障依旧(后查出出现上述故障机主板为精英UM8810PA10 
+        V1.23PH)。出现故障现象1的机器的BIOS是Phoenix NUBIOS Version 4.04，其主板为NEC的486主板，经与同类型主板进行更换，故障依旧。怀疑映像文件有问题，选择一出现上述故障的机器，连上硬盘和软驱，在该机上以超级用户入网，查得F:\LOGIN目录下CONFIG.SYS、AUTOEXEC.BAT内容如下：<br>
+        　　CONFIG.SYS AUTOEXEC.BAT<br>
+        　　DEVICE=HIMEM.SYS IPX<br>
+        　　DOS=HIGH,UMB NETX<br>
+        　　FILES=65 F:<br>
+        　　BUFFERS=65 LOGIN<br>
+        　　本人在该机上重做一可引导盘，编辑CONFIG.SYS的内容为：<br>
+        　　DEVICE=HIMEM.SYS<br>
+        　　DOS=HIGH,UMB<br>
+        　　把F:\LOGIN下的AUTOEXEC.BAT及HIMEM.SYS、IPX.COM、NETX.COM拷入该盘。删去F:\LOGIN下的NET 
+        ＄ DOS.SYS、CONFIG.SYS，插入刚制作的软盘于A驱，在F：\SYSTEM下运行DOSGEN，生成NET 
+        ＄ DOS.SYS，再把它拷入F：\LOGIN，对它进行版本修复，置其可共享，并把A盘上的CONFIG.SYS拷入，置为可共享。之后，所有工作站均可正常上网。自此断定毛病出在CONFIG.SYS中，本人逐条去试着修改，最终发现BUFFERS的最大设定值为64。本人把A盘上CONFIG.SYS中的BUFFERS值设为64，重新生成映像文件，拷入F：\LOGIN，进行版本修复，置其可共享，并把CONFIG.SYS拷入F：\LOGIN，置其可共享。故障排除。福建 
+        &nbsp; 叶培春）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

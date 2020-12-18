@@ -1,0 +1,84 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>CG-6000手持式彩色扫描仪的安装及使用</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　 CG－6000手持式彩色扫描仪是台湾MUSTEK系列产品中的一种，目前市场价已降至700元左右，是普通家庭使用的理想产品。当然，手持式扫描仪的性能不能与台式扫描仪相比，主要差距在于扫描后的图像分辨率、扫描的精度以及扫描幅面的大小等指标。对于CG－6000手持彩色扫描仪而言，如果在使用时能灵活地进行设置，再采取其他的一些技巧，仍能达到相当好的效果。下面就CG－6000手持式彩色扫描仪的使用问题谈几点体会供参考。<br>
+        　　一、正确安装的方法<br>
+        　　该产品随机附有一块接口卡和一个驱动程序，安装时首先打开机箱，将扫描仪接口卡插入主板的ISA插口槽，然后将扫描仪连接电缆插入接口卡的圆形插口，硬件安装完成，然后可启动机器安装扫描仪驱动程序了。<br>
+        　　1.在普通电脑上的安装<br>
+        　　当机器中没有声卡、解压卡、MODEM卡等一些多媒体器件时，安装比较简单，首先在CONFIG.SYS文件中增加如下语句：<br>
+        　　DEVICE=C:\SCANW\M1904.SYS D3 I5 S4 A2AB<br>
+        　　然后在WINDOWS下依次安装“SCAN KIT UTILITY”盘和“SCAN KIT COLOR UTILITY 
+        PROGRAM”盘，只要运行其中的INSTALL程序即可，安装过程中对于出现的每一项提示或选项，均采用回车确认，使用其默认值。<br>
+        　　2.在多媒体电脑上的安装<br>
+        　　当机器中装有声卡、解压卡、MODEM卡等一些多媒体器件时，安装又可分为两种情况：<br>
+        　　(1)当你对自己机器中的各种多媒体器件所占用的中断情况比较了解时，按以下步骤进行：首先在CONFIG.SYS文件中增加如下语句：<br>
+        　　DEVICE=C:\SCANW\M1904.SYS D3 I5 S4 A2AB<br>
+        　　其中D3表示DMA3、I5表示IRQ5、A2AB表示占用的I/O接口地址(要根据实际情况设置)，不能与其他多媒体器件发生冲突，然后在WINDOWS下依次安装“SCAN 
+        KIT UTILITY”盘和“SCAN KIT COLOR UTILITY PROGRAM”盘，只要运行其中的INSTALL程序，安装过程中对于出现的每一项提示或选项，要与上述的设置一一对应进行选择。<br>
+        　　(2)当对所占用的中断情况不太了解时，可按以下步骤进行：首先在CONFIG.SYS文件中增加如下语句：<br>
+        　　DEVICE=C:\SCANW\M1904.SYS D3 I5 S4 A2AB<br>
+        　　安装时当上述所设置的地址、中断等与其他多媒体器件发生冲突时要进行调整，方法如下：<br>
+        　　1I/O接口地址的调整：从机箱中取出扫描仪接口卡，按以下方法拨动卡上的白色小开关，开关位置和对应地址(如图1)。<br>
+        (3)在WINDOWS下安装SCAN KIT UTILITY驱动程序<br>
+        　　运行其中的INSTALL，当屏幕出现提示时，首先修改SCANNER MODEL项为CG－6000，然后再修改DMA 
+        CHANNEL项和IRQ LEVEL项(根据经验，DMA CHANNEL项默认值为DMA3，一般不会发生冲突，可先不要改动它，会发生冲突的是IRQ项，然后分别调整手持扫描仪左侧的两个控制钮(如图2)。<br>
+        　　单击SCANTEST，当出现提示时，再单击YES和SCANTEST，当COMPLETE框中出现％符号时，按下手持扫描仪面板的方型按钮不放，慢慢向下移动，直至COMPLETE=100％时再单击NONE和INSTALL开始安装，单击YES和OK即可退出WINDOWS，安装完毕。<br>
+        　　(4)在DOS下安装SCAN KIT COLOR UTILITY PROGRAM驱动程序<br>
+        　　运行盘中的INSTALL，当出现提示后，选择安装路径C：或D：等，然后选择“YES”确认，默认的安装路径是C:\SCANC。选择SELET 
+        SCANNER MODEL为第一项：CG－6000，选择I/O 地址为2ABH(要根据实际接口地址使用情况而定)，再选择IRQ 
+        LEVEL为3(应与CONFIG.SYSK 中的设置一致)，选择DMA CHANNEL为3(也应与CONFIG.SYS设置一致)，当出现IS 
+        THE SCANNER’S ……时，选择YES，再选择OK，对出现的SCANNER TESTING PROGRAM主菜单，选择其中的第五项：TEST 
+        SCANNER，按YES确认，然后慢慢按下扫描仪面板的方型按钮，向下移动测试扫描过程，完成后其自动向硬盘复制文件，最后屏幕出现SCAN 
+        KIT COLOR SETUP PROGRAM主菜单(一般不要改变其设置)，直接选择第五项退出，整个安装工作完成。安装完成后，在WINDOWS中生成一个SCAN 
+        KIT UTILITY V 2.20程序组，内有三个程序项，分别是SCAN KIT UTILITY项、SCANTEST项和README项，使用SCAN 
+        KIT UTILITY项即可对彩色照片、图片或文字进行扫描操作。<br>
+        　　二、使用技巧<br>
+        　　1.巧用RESOLUTION和SCAN控制钮<br>
+        　　在CG－6000手持式彩色扫描仪上，有两个重要的控制钮，分别是RESOLUTION钮和SCAN 
+        MODE钮。当RESOLUTION控制钮位于1时，其SCG彩色扫描方式可达200DPI，此时如用D/T方式来扫描文字，可达400DPI，扫描效果十分理想，为了方便使用，表1列出了RESOLUTION控制钮在不同位置时的各种扫描方式所能得到的扫描分辨率。<br>
+        　　2.各控制钮的组合应用<br>
+        　　拿起CG－6000手持彩色扫描仪，可以发现其左右两侧分别有两组控制钮，其中左侧的两个分别用于扫描模式控制和文字图片控制，其中扫描模式用SCG、CG、MG、D/T来表示262144种彩色、496种彩色、灰度、文字扫描方式，文字图片控制钮用□、○、。、●来表示文字图片扫描方式。右侧的两组控制钮分别为扫描分辨率控制和扫描亮度控制，其中扫描分辨率控制用数字1、3/4、1/2、1/4来表示不同的分辨率，数值越大分辨率越高，数字越小，分辨率越低，通过笔者多次反复实践，获得最佳彩色扫描效果的组合运用请见图3：<br>
+        　　3.对扫入的彩色图片、照片的进一步处理<br>
+        　　由于受到硬件本身条件的限制，扫描效果还不太理想，为此必须对所扫入的图片作进一步的处理，这就要使用PHOTOSHOP这个平面图片处理软件。<br>
+        　　运行PHOTOSHOP软件，打开文件菜单，选择其中IMPORT项，出现一个下级菜单，单击其中的TWAIN，当出现SCANNER 
+        SETUP屏幕时，选择好所需的扫描模式，(此时一定要注意：手持扫描仪上的设置必须与所选择的完全一致)即可单击SCAN开始扫描，此时会出现一个扫描预热等待时间，完成后，按下扫描仪上的SCAN钮开始扫描，直至完成。而后PHOTOSHOP自动返回主菜单，选择IMAGE菜单项，再选择其中的ADJUST子项，当出现一个功能菜单时，对PHOTOSHOP软件不太熟悉的用户来讲，只要直接选择其中的LEVELS即可，其会自动对图像进行色彩调整，一幅色彩鲜艳、亮度适中的彩色照片立刻呈现在你的面前。对处理好的图片，从文件菜单中选择FILE，再选择SAVE 
+        AS就可加以保存。<br>
+        <br>
+        (青岛 翁元祥)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月30日第12期37版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">变量的作用域和生命周期<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　对于刚开始学习VB的学员来说，常常对各种变量的使用域和生命周期产生混淆。为了更好地优化VB程序，并提高程序运行的效率，就有必要透彻地掌握有关变量的定义方法、作用域及其生命周期。<br>
+        　　在VB中，声明变量的方法决定了变量的作用域和生命周期。变量按作用域化分，有以下三种：<br>
+        　　1． 全局变量（Global）<br>
+        　　全局变量采用Global语句在代码模块的“Declarations”部分中声明。该类变量的作用域覆盖整个应用程序，对应用程序中任意一个模块中的任意一个过程均有效。全局变量存在于应用程序的整个执行周期。<br>
+        　　只允许在代码模块中声明全局变量，不允许在窗体模块或过程（Procedure）体中进行声明。另外，只能够使用Global语句声明全局变量，不能用Dim语句进行声明。<br>
+        　　2． 模块级变量（Module）<br>
+        　　在模块的“Declarations”部分使用Dim语句可以声明模块级变量，如果一个窗体或代码模块中定义了某个模块级变量，则该窗体或代码模块中的所有过程均可以使用该模块中的模块级变量。但对于其它窗体或代码模块中的过程体而言，该模块级变量却不可见。<br>
+        　　模块级变量在整个应用程序的运行期间均保持有效。如果在程序运行中将某一窗体卸载（Unload），则该窗体中的模块级变量仍然维持其原值。<br>
+        　　声明模块级变量与声明全局变量的方法有些类似，均是在模块的“Declarations”部分声明。区别在于:模块级变量使用Dim语句声明，而全局变量则使用Global语句声明。<br>
+        　　3． 局部变量（Local）<br>
+        　　在一个过程（Procedure）体内使用Dim、Static或ReDim语句可以定义一个局部变量。局部变量是指只有处在其定义的过程体内部，才能够被识别和使用的数据变量，该类变量通常被用来存放计算的中间结果或者作为临时变量。由于每个局部变量仅在其定义的过程体内有效，因此不同的过程体允许定义名称相同的局部变量，彼此之间不会发生冲突。如果在某个过程体中对一个局部变量进行了修改，则在其它过程体中与该变量同名的局部变量不会受到任何影响。实际上，虽然它们的名称相同，但属于不同的变量。<br>
+        　　使用Dim语句在过程中声明的局部变量，其生命周期与该过程体相同，亦就是说，该局部变量仅在该过程体的运行期间有效。而使用Static语句声明的局部变量，则在整个应用程序的生命周期中有效。<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月08日第06期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

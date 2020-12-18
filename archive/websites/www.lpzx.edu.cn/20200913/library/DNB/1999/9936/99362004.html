@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 主板DEBUG功能的原理</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 主板DEBUG功能的原理</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 主板DEBUG功能的原理 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　精英最新推出了一款号称“侦探大师”的P6 IWT－A＋主板，此主板最独特的地方就是主板右下角有一个“DEBUG”区，并带有两位数码显示装置，这就是集成在主板上的DEBUG卡，通过DEBUG区和“DEBUG Master”技术，我们就能够快速地确定系统硬件问题的所在。DEBUG卡的作用，就是显示机器的自检状态，特别是在电脑出现故障的时候，它会显示故障代码，从而对故障部位进行提示，通过查询说明书上的故障代码参照表，我们能够很容易地确定是哪些硬件出了问题。<br>
+　　站在消费者的立场上来看，这是一个非常有用的功能。经常装机的朋友一定深有体会，当你辛辛苦苦地买回来一大堆配件，满头大汗地把它们装在一起后，忐忑不安地按下电源开关，如果一切顺利还好办，可是更常见的是机器点不亮，或者PC喇叭发出一段动听的错误声音信号，然后死锁，究竟是什么地方出了毛病都看不出来，只能挨个更换可疑的配件。如果手头没有备用配件可换，就只好把机箱整个抱到商家那里，还免不了要与“奸商”理论一番。总之，确定不了故障点，让人十分头疼。<br>
+　　好在电脑在启动过程中有一个非常完善的硬件自检过程。对于采用Award BIOS的电脑系统来说，它在加电自检那短暂的几秒钟内，就可以完成一百多个检测步骤。比如，主板加电以后，首先要对CPU进行一次检测，测试它各个内部寄存器是否正常。接着，BIOS将对CPU中其它所有的寄存器进行检测，并判断是否正确。照这样子进行下去，第三步就是检测和初始化主板的芯片组，第四步是检测动态内存的刷新是否正常，第五步将屏幕清成黑屏，初始化键盘，接下来检测CMOS接口以及电池的状况，随后扬声器就会发出我们熟悉的“嘟”的一声了。<br>
+　　硬件自检继续进行，这时该检测主机内存容量了，也就是大家所熟悉的屏幕左上角那个飞速翻滚的内存计数器，如果一切正常，则继续进行主板Cache的检测。然后依次是初始化低端的64KB内存，设置前120个中断向量，检测CMOS内部RAM状况，初始化键盘和显示卡，测试显卡的显存，测试主板的DMA控制器等等，其它还有软驱控制器、硬盘控制器、串口、并口等的检测。<br>
+　　从这个冗长的硬件自检过程大家可以注意到，几乎所有的设备都被包括进去了，在精英的这款主板上，DEBUG区的数码管将随时跟踪、显示检测的进程，一旦某个环节出了问题，自检就会停止，数码管上显示的代码就是出现故障的那个部位，使用者不必记忆这些代码，只要拿出说明书对照一下代码表就可以很容易判断是什么地方的毛病。正常情况下，启动是非常快的，也就几秒钟的时间，数码管上的数字中途几乎看不到什么停顿就停在了FF的位置上，表明一切OK。其实在工厂和一些代理商手中，早就在使用DEBUG卡来检测不良品了。而将DEBUG卡集成在了主板上，成本增加极少，但却可以带来极大的方便。比之过去凭耳朵去听几声喇叭响或者像工控机主板用几个有限的发光二极管指示硬件状态的方案要完善得多，直观得多，也准确得多。<br>
+<b>（南京　杨宁）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99362004.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

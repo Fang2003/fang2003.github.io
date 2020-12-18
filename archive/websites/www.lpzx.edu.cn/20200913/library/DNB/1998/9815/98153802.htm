@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>让你的动画有色有声</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>让你的动画有色有声</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　3DS是专业级的三维动画制作软件，目前的3DS 
+        MAX比起以前的版本，无论在性能、操作还是软件界面上都有很大改进。笔者在使用3DS 
+        MAX制作动画的过程中，为动画加上了背景音乐和画外解说，使动画增色不少。如果计算机上装有声卡，就可以加入一个任意的.wav文件来播放，即使没有声卡也可以使用Metronome(节拍器)通过PC喇叭播放有节奏的背景声音，这样使得动画在任何场合下都可以有声音。下面分别说明加入这两种声音的实现方法：<br>
+        　　1.使用节拍器<br>
+        　　(1)在主菜单的EDIT下选择Track View项，显示出轨迹窗口。<br>
+        　　(2)用鼠标单击左侧窗口Sound项的“＋”号，这样就打开了Sound轨迹窗，表现为一些黑点组成的节拍器(Metronome)轨迹。<br>
+        　　(3)移动光标到Sound轨迹窗右侧滚动条的最上面，光标会变成一个纵向的双箭头，这时拖动鼠标向下运行，轨迹窗就被分成了两部分。这两个窗口互相独立，对其中任何一个的操作都不会影响另外一个。<br>
+        　　(4)单击左侧窗口的Object项，选择要配音的动画中出现的物体名称，显示出该物体的“Position”和“Scale”。<br>
+        　　(5)这样在刚才分割出的两个窗口中一个显示声音的轨迹，一个显示物体的轨迹。<br>
+        　　(6)用鼠标右键单击声音轨迹窗，从弹出的菜单中选择Properties后将弹出一个“Sound 
+        Option”对话框。其中“Beats Per Minute”为每分钟击打次数，调整这个参数后会发现轨迹窗中黑点的间距在变化，“Beats 
+        Per Measure”为每次击打的频率。将上述两项设定好后，选中其右边的“Active”，单击OK，使节拍器起作用。<br>
+        　　(7)单击屏幕下方的播放动画按钮，就会听到伴随着动画从计算机的扬声器里发出有节奏的声音了。<br>
+        　　2.使用.wav文件<br>
+        　　(1)用鼠标右键单击Sound轨迹窗，显示“Sound Option”对话框。<br>
+        　　(2)确保“Metronome”中的“Active”项不被选中，使节拍器不再起作用。<br>
+        　　(3)单击“Choose Sound”(声音选择)按钮，出现一个文件选择对话框。在其中任选一个.wav文件，也可以在其它目录下选择一个事先录制好的.wav文件，甚至是录有自己声音解说的文件，这样在动画播放时伴有自己的声音，会让人觉得非常有趣。<br>
+        　　(4)选择了文件后，屏幕上会自动出现一个播放按钮，点击按钮可以试听声音，如果满意就点击OK按钮确认选择了声音，对话框中的“Active”自动被选中并激活。<br>
+        　　(5)退出对话框后，在声音轨迹上会出现一个蓝色和一个红色的波形。其中蓝色代表右声道，红色代表左声道。淡蓝色代表声音文件的实际长度，深蓝色代表声音重复的区域。<br>
+        　　(6)单击屏幕下方的播放动画按钮，使声音和动画一起播放。<br>
+        　　3.使声音与动画同步<br>
+        　　由于背景音乐不断重复播放，因此声音的节奏与动画播放速度可能不同步。要达到“声像同步”，可以按以下步骤去做：<br>
+        　　(1)点击“Snap Frames”(按帧捕捉)按钮，将该方式关闭。<br>
+        　　(2)点击“Zoom Region”按钮，放大Position和Scale轨迹的关键点模式。<br>
+        　　(3)用鼠标右键单击以退出“Zoom Region”方式，返回“Move Keys”模式。<br>
+        　　(4)把Sound轨迹窗中的范围条向左拉，使波形的第一音拍与动画的第0帧对齐。<br>
+        　　(5)在动画轨迹窗中把Transform范围条的右端点适当拖动，使其与第二个音拍的开始部分对齐。<br>
+        　　(6)播放动画，发现声音与动画已经配合得较好了。<br>
+        　　另外，由于动画循环的规律性，使得循环播放的动画与声音的同步播出会产生一定的延迟和误差，这只能通过不断重复上面的第(4)和第(5)步来改善。还可以选择Waveform波形标记文件，用功能曲线的方式显示波形，把循环动画的波形曲线叠加到这个波形上。并且通过分割窗口，与第一个窗口进行比较，在第二个窗口中调整范围条，最终消除延迟与误差。<br>
+        　　所有这些都完成之后，就可以尽情欣赏自己制作的“有声有色”的作品了。怎么样，有兴趣的朋友不妨来试一试!<br>
+        <br>
+        (湖北　宋　珂)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月20日第15期38版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

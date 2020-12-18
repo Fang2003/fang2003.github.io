@@ -1,0 +1,71 @@
+<HTML><!-- #BeginTemplate "/Templates/internet.dwt" -->
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='epcw.css' TYPE='text/css'>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>电脑报电子版 -- 建立自己的域名系统</TITLE>
+<!-- #EndEditable --> 
+<style type="text/css">
+<!--
+.centertitle {  font-weight: bold; text-align: center; line-height: 35px; font-size: 9pt; color: #000000}
+.lefttitle {  line-height: 35px; font-weight: bold; font-size: 9pt; color: #000000}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR='white'>
+<span class="centertitle"></span><A NAME='top'></A> 
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.yesky.com'><IMG SRC='http://www.lpzx.edu.cn/images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><a href="http://chat.yesky.com"> 
+      <img src="images/0823-3.gif" width="468" height="60" border="0"> </a></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.lpzx.edu.cn/issue/'>CPCW电子版</A> 
+      &gt; <A HREF='http://www.lpzx.edu.cn/issue/2000/'>2000 年</A> &gt; <a href="issue/2000/06/index.html">06<!-- #BeginEditable "%C6%DA" -->期<!-- #EndEditable --></a> 
+      &gt; <!-- #BeginEditable "%C0%B8%C4%BF" --><a href="issue/2000/06/internet.html">大众网络</a><!-- #EndEditable --> 
+      &gt; <!-- #BeginEditable "%B1%EA%CC%E2" -->建立自己的域名系统<!-- #EndEditable --></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 <!-- #BeginEditable "%CE%C4%D5%C2%CD%B7" -->建立自己的域名系统<!-- #EndEditable --> 
+      》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+    <TD><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　大家也许都知道因特网上的DNS域名服务系统，只要在IE或Netscape中输入站点的URL就可以方便地访问相应的站点。可是，当你使用自己装有Win98操作系统的PC机时（一定要用自己的专用PC机哟，否则会给别的共享用户带来麻烦），你可以建立自己独特的域名系统，充分发挥自己的想象力。<br>
+      　　实现这个功能的关键就在于修改Hosts文件。在Win95或98的c:\windows目录下，存在着一个自动进行域名与IP地址映射的Hosts文件。它的扩展名就是sam，是个示例文件。将它的扩展名改为txt，并用写字板打开它，可以发现里面全是可读的英文。原来这是个Windows操作系统中TCP/IP协议栈进行域名与IP地址映射的文件，Windows系统在接收到某个域名后先在此文件中检索，若无对应的IP地址，才会向域名服务器申请查找。修改此文件，将站点的IP地址映射成自己所喜欢的任何域名就可以达到建立自己的域名系统的目的。<br>
+      　　Hosts文件的基本格式是：IP地址　自己定义的域名。中间空格不可少。注释文字必须在前面加上“＃”。按以上格式编辑后，将文件另存为Hosts到c:\windows目录下（注意千万不要有扩展名哟），这样以后上网就可以键入自己定义的域名了。如果你不知道网站的IP地址，可以先把Hosts文件失效掉（很简单，将Hosts的扩展名加上，或改为别的什么名字），然后按一般步骤上网，键入域名后回车IE状态条很快就会显示出站点对应的IP地址。记下此IP，再修改Hosts文件就行了。<br>
+      　　任何Hostssam文件中都有127001 localhost这么一行，其中127001是本地系统的响应IP地址，运行ping 
+      127001或ping localhost发现网络有连接，不管你是否装了网卡。通过这个地址，同一机器上的两个程序可以进行客户/服务器连接，在用Java练习网络编程时，这个地址可以用来测试程序，十分有用。<br>
+      　　在Windows NT中，相应的Hosts文件在\winnt\system32\drivers\etc目录下，其作用和修改方法相同。相似的还有一个Lmhosts文件和Hosts文件在同一目录下，用来进行IP地址到NetBios映射，具体用法请查Lmhostssam文件。<br>
+      　　一定要注意，当修改此文件后若某天上网出现问题，千万要记住可能是Hosts文件映射出了错误。可以先使Hosts文件失效，再查其他原因。<br>
+      <b> (浙江　王涛　tideking@163net)</b><!-- #EndEditable --></TD>
+  </TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='00064501.htm#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW版权所有</A>，<A HREF='mailto:webmaster@staff.yesky.com'>YESKY天极网编辑部</A>设计制作发布<script language="JavaScript" src="http://www.lpzx.edu.cn/library/DNB/download/yeskye.js">
+</script></TD>
+</TR>
+</TABLE></BODY><!-- #EndTemplate --></HTML>

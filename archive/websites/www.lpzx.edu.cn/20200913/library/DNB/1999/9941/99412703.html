@@ -1,0 +1,102 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 被遗忘的HTML元素(下)</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 
+      &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt; <A HREF='internet.html'>大众网络</A> 
+      &gt; 被遗忘的HTML元素(下)</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 被遗忘的HTML元素(下) 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　3.MARQUEE</b></p>
+　　只可以在IE3.0以上版本的浏览器中运行的HTML元素，NetScape浏览器会忽略该元素。MARQUEE可以为我们在页面上提供一个“电子播放器”，即产生滚动字幕的页面效果。它的基本语法结构如下所示：<br>
+　　&lt;MARQUEE ALIGN=″alignment″ BEHAVIOR=″type″ BGCOLOR=″color″ DIRECTION=″direction″ SCROLLAMOUNT=″n″ SCROLLDELAY=″n″ LOOP=″n″ WIDTH=″x″ HEIGHT=″y″ HSPACE=″x″ VSPACE=″y″&gt;滚动字幕内容&lt;/MARQUEE&gt;<br>
+　　其中ALIGN用来指定滚动字幕与左右文字的对齐方式，它的值可以有top、middle、bottom等；BEHAVIOR用来指定滚动字幕的滚动方式，它的属性值有scroll、slide和alternate三个，scroll表示滚动字幕内容向同一方向重复滚动，slide表示滚动字幕内容从一端向另一端滚动并在另一端停止，alternate表示滚动字幕内容在两端之间来回往复滚动；DIRECTION指定滚动字幕的滚动方向，它的属性值有left和right两个，分别表示滚动字幕由右向左和由左向右滚动；SCROLLAMOUNT用来设置多次滚动之间的间隔距离，其单位是pixels（像素）；SCROLLING用来指定滚动字幕滚动一次所需要的时间，单位是ms（千分之一秒），其值的大小将直接影响滚动字幕的滚动速度；LOOP属性是用来指定滚动字幕的滚动次数的，当它的值为“－1”时，滚动字幕将连续滚动直到浏览器载入下一个页面；HSPACE和VSPACE则分别用来指定滚动字幕与其上一级页面在水平方向和竖直方向上的距离。
+<p><b>　　4.MULTICOL</b></p>
+　　MULTICOL元素是只能在NetScape3.0以上版本的浏览器中运行的HTML元素，尽管在IE中也不会造成太大的麻烦，用来在网页上实现分栏效果。它的基本语法结构如下所示：<br>
+　　&lt;MULTICOL COLS=″n″ GUTTER=″x″ WIDTH=″x″&gt;&lt;/MULTICOL&gt;<br>
+　　其中的COLS属性定义分栏栏数，GUTTER表示各栏之间的距离，而WIDTH表示的是每栏宽度，而不是整个分栏区域的宽度。还需要注意的是，MULTICOL在处理分栏时，并不能自动为文字换行，所以还需要在每行的最后加上强制换行标签&lt;BR&gt;。请看下例：<br>
+　　&lt;BODY&gt;<br>
+　　&lt;MULTICOL COLS=″3″ GRTTER=″10″ WIDTH=″450″&gt;<br>
+　　这首诗是周恩来同志……《敬业》第五期。<br>
+　　&lt;/MULTICOL&gt;<br>
+　　&lt;/BODY&gt;<br>
+　　需要注意的是，由于NetScape在处理中文换行问题上的不足，要使分栏效果能够正常显示，还必须在页面文件开头的META标签内加上″charset=gb2312″代码。<br>
+<p><b>　　5.SPACER</b></p>
+　　SPACER也是一个只能在NetScape3.0以上版本的浏览器中运行的HTML元素，通过运用SPACER元素，可以在页面上产生一些具有一定尺寸和位置的空格，从而实现一些特殊的效果。它的语法结构如下所示：<br>
+　　&lt;SPACER TYPE=″block″ ALIGN=″alignment″ WIDTH=″x″ HEIGHT=″y″&gt;<br>
+　　或者是<br>
+　　&lt;SPACER TYPE=″horizontal/vertical″ ALIGN=″alignment″ SIZE=″n″&gt;<br>
+　　这两种语法结构基本相同，只不过TYPE属性值为″block″时，只能通过WIDTH和HEIGHT来定义它的尺寸，而不能用SIZE属性；而当TYPE属性值为″horizontal″或″vertical″时，只能用SIZE属性来控制尺寸。TYPE属性值为″block″时，WIDTH表示空格的宽度，HEIGHT表示空格的高度，多出所在行行高的部分将会延伸到下一行；当TYPE的属性值为″horizontal″时，表示在该行插入一个水平方向上的空格，其宽度为SIZE属性所指定的数值；TYPE属性值为″vertical″时，表示在该处插入一个竖直方向上的空格，SIZE值表示的是该行与上一行之间的行距。下面请看一个用到了以上三种TYPE属性的例子：<br>
+　　&lt;body&gt;<br>
+　　&lt;spacer  type=″block″ align=″left″ width=″32px″ height=″100px″&gt;<br>
+　　&lt;spacer type=″horizontal″ size=″32px″&gt;由于现在的软件越做越大，4G以下的硬盘已被淘&lt;spacer type=″vertical″ size=″8px″&gt;汰出了主流市场……<br>
+　　&lt;/body&gt;<br>
+<p><b>　　6.LAYER</b></p>
+　　LAYER是在NetScape Communicator 4.0中才出现的HTML元素，它可以让网页中的不同元素位于不同的层上，这类似于PhotoShop中层的概念。通过使用LAYER元素，可以在页面中实现图文定位、元素重叠等效果，如果再与适当的Script语言结合，还可以实现改变重叠顺序、控制元素的显示或隐藏，甚至还可以实现动画效果。LAYER的基本语法结构如下：<br>
+　　&lt;LAYER NAME=″name″ LEFT=″x″ TOP=″y″ Z－INDEX=″n″ VISIBILITY=″visibility″&gt;……&lt;/LAYER&gt;<br>
+　　其中NAME用来给层命名，通过这个名字Script可以对该层进行操作。LEFT和TOP用来控制层在页面中的位置，分别表示层的左上角距浏览器窗口左边框和上边框的距离。Z－INDEX属性中用来控制不同的层在页面中的层叠顺序，数字小的层位于数字大的下面。VISIBILITY属性定义该层的显示属性，它的值有show、hide、inherit，其中show和hide分别表示该层为可见和不可见，而inherit则表示该层的显示属性与其上一级层的显示属性相同。请看下面的这个实例：<br>
+　　&lt;BODY BGCOLOR=″＃ffffdd″&gt;<br>
+　　&lt;layer name=″layer1″ left=″10″ top=″10″ z－index=0&gt;<br>
+　　&lt;img src=″girl.jpg″ WIDTH=″240″ HEIGHT=″240″&gt;<br>
+　　&lt;/layer&gt;<br>
+　　&lt;layer name=″layer2″ left=″190″ top=″70″ z－index=1&gt;<br>
+　　&lt;FONT COLOR=″0000ff″ SIZE=″5″ FACE=″楷体_gb2312″&gt;&lt;B&gt;Hi！你好，小女子网名毛毛，希望能与你成为好朋友&lt;/B&gt;&lt;/FONT&gt;<br>
+　　&lt;/layer&gt;<br>
+　　&lt;/BODY&gt;<br>
+　　以上我们所提到的元素只是比较重要的几个，这些元素在使用的时候，虽然仅被一种浏览器所支持，但在别的浏览器上一般也不会产生错误的信息。而有些元素，如IFRAME，在不支持的浏览器中运行后不能够正常地表达页面的意图，用与不用，就要看你的智慧了。<br>
+<b>(北京　蟋　蟀)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99412703.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

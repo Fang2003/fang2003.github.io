@@ -1,0 +1,128 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="771" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第40期 </a>&gt;&gt;<a href="wrapup.html">网络与通信</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">小资料</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>1.MIME简介<br>
+              MIMEMultipurpose Internet Mail Extentions，一般译作“多用途的网络邮件扩充协议”。顾名思义，它可以传送多媒体文件，在一封电子邮件中附加各种格式文件一起送出。现在它已经演化成一种指定文件类型Internet的任何形式的消息：E-mail，Usenet新闻和Web的通用方法。在使用CGI程序时你可能接触过MIME类型，其中有一行叫作Content-type的语句，它用来指明传递的就是MIME类型的文件如text/html或text/plain。<br>
+              2.错误的MIME头漏洞的发现<br>
+              该漏洞是由一个国外安全小组发现的，该小组发现MIME在处理不正常的MIME类型时存在这个问题，攻击者可以创建一个Html格式的E-mail，该E-mail的附件为可执行文件，通过修改MIME头，使IE不能正确处理这个MIME所指定的可执行文件附件。在此，我们来了解一下，IE是如何处理附件的：一般情况下如果附件是文本文件，IE会读它，如果是VIDEO 
+              CLIP，IE会查看它；如果附件是图形文件，IE就会显示它；如果附件是一个EXE文件呢？IE会提示用户是否执行！但令人恐惧的是，当攻击者更改MIME类型后，IE就不再提示用户是否执行而直接运行该附件！从而使攻击者加在附件中的程序、攻击命令能够按照攻击者设想的情况进行。大家不妨想像一下，如果前面提到的wincfg.exe不是木马，而是恶意程序，江民炸弹又会怎么样？刹那间，你的硬盘就完蛋了如果你不懂解法的话！在Win9X\ME以及WinNT4和Win2000下的Internet 
+              Explorer 5.0、5.01、5.5均存在该漏洞，我们常用的微软邮件客户端软件Outlook Express也存在此漏洞。<br>
+              3.错误的MIME头漏洞的危害<br>
+              让我们来看一下如果把上面所说的代码中最后这部分变为下面这样，会产生什么结果呢？<br>
+              ……<br>
+              Content-Type audio/x-wav<br>
+              name=&quot;hello.vbs&quot;<br>
+              Content-Transfer-Encoding quoted-printable<br>
+              Content-ID &lt;THE-CID&gt;<br>
+              msgbox“你的计算机好危险哦” 说明：在此可加上任意的VBS的代码<br>
+              ……<br>
+              将该程序编辑存为eml格式的文件，我们运行它，可以看到屏幕上打开一个窗体，显示“你的计算机好危险哦”。对于这种利用错误的MIME头漏调用VBS文件的形式，会有多大危害呢？想一想，当初的爱虫病毒是怎么样的？爱虫病毒还需要骗你执行才使你中毒，但一旦和错误MIME头漏洞结合起来，就根本不需要你执行了，只要你收了这封信且阅读了它，你就中招了。现在流行的欢乐时光病毒很可怕吧？如果它和错误的MIME头漏洞结合，后果会怎样，你能告诉我吗？<br>
+              不仅如此，MIME还可以与command、cmd命令相结合，进行进一步的攻击。<br>
+              对于Win9X用户来说，只要你的IE浏览器是5.0、5.01、5.5之中的任意一个版本，在没打补丁的情况下，攻击者完全可以利用欺骗的方式让你打开含有攻击命令的、带有错误MIME头的E-mail文件，达到攻击的目的。事实上，format、deletetree、move等一切MS-DOS下的命令均可加载其中。<br>
+              而对于WinNT、Win2000用户，尤其是那些不安分守己且网络安全知识贫乏的系统管理员，利用公司的主服务器上网，攻击者可以给他发封信，然后利用在以上所示代码中加上诸如：<br>
+              net user test 1234567/add<br>
+              net localgroup administrators test/add<br>
+              这样的命令增加用户或者超级用户权限，达到进一步入侵的目的。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

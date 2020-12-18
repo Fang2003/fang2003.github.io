@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 找回应有的硬盘空间</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'>目录</A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'>软件世界</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT  COLOR='#CC0000'>硬件周刊</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 
+      1999 年 &gt; <A HREF='index.html'>33 期</A> &gt; <A HREF='hardware.html'>硬件周刊</A> 
+      &gt; 双光驱安装手记</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 双光驱安装手记 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　作为一名电脑发烧友和以顽强著称的DIYer族中的一员“悍将”，最痛苦的事大概就是自己（包括朋友们）的机器不能在最优性能下工作了，所以超频、升级、杀毒、修改配置成了笔者每天的必修课。但如果有问题困扰而不知其解达数日，那我就真的快“休克”了。<br>
+　　这不，前两天，花了80元钱从旧货市场找了一块旧光驱——ACER 743E（4倍速光驱的精品，号称“鲨鱼”，好盘坏盘通吃）。按照《电脑报》上介绍的清洗光驱的步骤，拆下面板用蒸馏水四处“浇”了一遍，放在朋友的机器上试用，连他才买半年的光驱读不出的光盘，放在这ACER光驱上都读得颇顺畅。于是心中窃喜，满脸严肃地告诉朋友：旧的光驱还是有好的。<br>
+　　到家后，我迫不及待地掀开机箱盖，将新买的光驱跳线跳在“SLAVE”上。正好我原来的光驱是单独用一根硬盘线接在IDE2口上，于是，不用做什么大的手术，直接接上数据线和电源线，硬件安装就结束了。其实，按照WIN98的即插即用的特性，新装的光驱也不需要什么软件设置，双光驱应该能够正常工作。开机画面一闪而过，但凭着我多年练就的眼神，发现系统已经找到了两个光驱，但进了WIN98后，点击“我的电脑”，发现光驱还是只有一个，WIN98居然对新入境者“拒绝签证”。<br>
+　　首先想到的是，是不是因为ACER光驱太老，WIN98不认识前辈中人。于是重新开机，按F4键进入DOS状态，手工在Auotoexec.bat中加入了c:\dos\mscdex.exe ／d:mscd000 ／d:mscd001 ／l:g，在Config.sys中加入了lastdrive=l 和device=c:\ide.sys  ／d:mscd000 ／d:mscd001，再开机进入DOS状态，两个光驱盘符G盘和I盘赫然在列。在两个光驱中分别各插入一张光盘，各自列目录，一切正常，看来这已经印证了我的想法。但转念一想，又不对，我的ide.sys也是一个通用的光驱驱动程序，难道DOS下的程序都能实现的双光驱悬挂，在WIN98下反而不行了么？而且只能在DOS下使用而不能在WIN98下使用的双光驱，对我岂不是一个摆设？<br>
+　　再从WIN98上找突破口。我的硬盘（容量为4.3G）分了四个区， C盘为系统盘，D盘放置软件开发工具（如VC、VFP等），E盘放置游戏和下载软件，F盘存放重要数据和备份。为了适应当今游戏对硬盘近乎掠夺的使用，我“颇有远见”地将E盘做成了DOUBLE盘(压缩盘)。按照WIN98的缺省配置，将物理E盘变成了H盘（宿主盘），E盘成为H盘中的倍容盘（实际上是H盘中的一个具有只读、隐藏、系统属性的文件DRVSPACE.000）。那么，加上原来的光驱，我的机器共有盘符是A（软盘）、C、D、E（倍容盘）、F、G（光驱）、H（宿主盘）。看到这里，聪明的读者可能已经发现有什么地方不妥了。是的，H以前的字母已经被占满了。可是，有的朋友会想，WIN98对盘符并没有限制啊，并没有将盘符缺省只配置到H。没错，可惜我们都把WIN98想得太智能了。它在配置盘符时，会将双光驱的盘符顺序排列，当第一光驱（即接在IDE2的主盘位置的光驱）的盘符是G时，WIN98会将H作为第二光驱（即接在IDE2的副盘位置的光驱）的盘符字母。但恰好在我的机器中，H已经成为宿主盘的盘符，WIN98就这样陷入了“怪圈”，它居然不知道H后面还有字母可用。<br>
+　　进入“程序／附件／系统工具／磁盘空间管理”，选中H盘，点“高级／更改代号”，将H改为后面的字母，如K，重新启动计算机，点击“我的电脑”，发现两个光驱盘符G和H像失散多年的兄弟一样，整齐排列。成功了！<br>
+<b>(安徽　张雷)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/33/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99332302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

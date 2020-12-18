@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- ASP入门（二）——VBScript及表单交互</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; ASP入门（二）——VBScript及表单交互</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 ASP入门（二）——VBScript及表单交互 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　一、什么是VBScript？</b></p>
+　　VBScript是Microsoft Visual Basic Scripting Edition的简称，你可以把它当作是Visual Basic的一个子集，但是这仅仅是从语法上来说的，正如JavaScript和JAVA的关系一样，VBScript和Visual Basic并没有什么本质上的联系。它是一种脚本语言，由VBScript脚本引擎（其实是一个动态连接库VBScript.dll）解释执行。目前它主要用在WWW网页（只有IE能正确查看包含VBScript脚本的网页，如果Netscape要正确查看，则必须安装一个插件）以及微软的WWW服务器IIS支持的ASP。<br>
+　　VBScript的语法这里就不再赘述，请读者参考其它书籍。
+<p><b>　　二、ASP的输出</b></p>
+　　像所有讲编程的教材一样，让我们以“Hello World”开始吧。假设我们要在网页里输出“Hello World”,在HTML里是很简单的事，在ASP中怎么做呢？请看下例：<br>
+　　&lt;％Response.Write ″Hello World″％&gt;<br>
+　　把它存成一个ASP文件，执行后输出的效果如图1。<br>
+　　这里我们使用了Response对象的Write方法。Response对象是ASP内置对象之一，也就是说，我们无需创建它就可以直接使用。ASP一共内置了6个对象，它们是Server、Err、Application、Session、Request、Response,关于它们的属性和方法，大家可以参考IIS或PWS的帮助文档。<br>
+　　下面是另一种输出的方法：<br>
+　　&lt;％=″Hello World″％&gt;<br>
+　　这种语法是在ASP中特有的，它的意思是直接把等号“=”后面的内容输出到浏览器。<br>
+　　接下来让我们看一个稍复杂的例子：<br>
+　　&lt;script language=″VBScript″ runat=″server″&gt;<br>
+　　response.write(″1″)<br>
+　　&lt;/script&gt;<br>
+　　&lt;％response.write(″2″)％&gt;<br>
+　　&lt;％=″3″％&gt;<br>
+　　&lt;script language=″jscript″ runat=″server″&gt;<br>
+　　response.write(″4″);<br>
+　　&lt;/script&gt;<br>
+　　大家可能奇怪，怎么这回不像以前的写法了呢。前面说过，ASP的代码应该是用&lt;％和％&gt;括起来的呀。其实，只要在&lt;Script&gt;标签里加上runat=″Server″，那么，WWW服务器在遇到包含Runat=″server″的script语句时，会在服务器端对script进行解释，runat=″Server″的作用也就跟&lt;％％&gt;相同了。而且ASP只是一种脚本环境，至于你要用什么脚本语言编程，那是你自己的选择。在ASP安装时，已经带有VBscript和JScript的脚本引擎。缺省地，使用VBScript作为脚本语言，不过你也可以用language属性指定你所用的脚本语言。如上例，你可以在一个ASP文件中使用多种脚本语言。<br>
+　　现在我要考考你了，上例的输出结果是什么呢？“1234”吗？你试一试。输出的竟然是“4231”!原来，IIS处理ASP文件时，总是把文件依次交给系统上安装的所有脚本引擎，而JScript的顺序在VBScript前面。这就是“4”输出在最前面的原因。然后，另一条规则是，在&lt;script&gt;括起来的代码和&lt;％  ％&gt;括起来的代码间，&lt;％  ％&gt;括起来的总是先被处理。而Response.Write 和“=”则没有先后顺序，按照出现的顺序处理。这就是“23”在“1”前面的道理。
+<p><b>　　三、取得表单提交的内容</b></P>
+　　我们在网上冲浪的时候，经常会看到有些网页中有些输入框以及按扭。当在输入框中输入一些内容比如姓名，然后按下按扭时，我们所输入的内容就会被浏览器传到服务器上去。网页中的那些同我们交互的东西就组成了一个表单，在HTML里用标签&lt;form&gt;标识。表单总是被提交给一个处理程序，这个处理程序可以是CGI，也可以是ASP。用过CGI的朋友可能知道，在CGI中为了取出用户在表单中的输入信息是件很麻烦的事情，甚至有人专门写了例程来完成这件事情。然后，处理程序又将输出一些提示信息，向用户报告处理结果。从而完成一个交互过程。在ASP中，所有这些操作变得很简单了。请看下面的例子。<br>
+　　假设服务器上有一个文件form.htm，它只包含一个表单（图2），源代码如下：<br>
+　　&lt;html&gt;<br>
+　　&lt;body&gt;<br>
+　　&lt;form method=″post″ action=″test.asp″&gt;<br>
+　　姓名:&lt;input type=″input″ name=″xm″&gt;<br>
+　　&lt;input type=″submit″ value=″确认″&gt;<br>
+　　&lt;/form&gt;<br>
+　　&lt;/body&gt;<br>
+　　&lt;/html&gt;<br>
+　　点击“确认”键后，表单将请求test.asp处理表单值。我们的test.asp代码为：<br>
+　　&lt;％<br>
+　　dim a<br>
+　　a=Request.Form(″xm″)<br>
+　　Response.Write a<br>
+　　％&gt;<br>
+　　它将在浏览器端显示出我们输入的“张三”字样。<br>
+　　这里用到了Request对象，在这个对象中保存了所有由form提交过来的数据，它们以集合的形式存在，可以通过元素名取出其中的值。然后我们的程序把它输出到浏览器。真的要感谢对象，它们帮我们做了一切，我们只需要简单地取用就可以了。当然我们也可以让test.asp做更复杂的事，例如将输入的姓名存储在服务器中的数据库里，或者检查此人是否有访问下一页面的权利等。<br>
+　　好了，我们终于可以用ASP做具有交互性的网页了，而且它是如此地简单。在下一讲中，我们将接触Internet上最普通的应用所需要的操作——数据库操作。<br><b>
+　　（文／white http://www.chinaasp.com）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99432702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

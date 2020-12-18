@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用REPLACE更新你备份的文件</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>用REPLACE更新你备份的文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　我们知道，Windows95有一个“我的公文包”，可以用来方便地更新你存放在软盘上的备份文件。其实，DOS622中也有一个小程序，就是REPLACEEXE，它可用来更新不同驱动器或不同目录下的备份文件或添加新文件。例如，你在硬盘上某个目录下编辑了一些文件，并把它们备份到软盘或硬盘上其他目录下。若以后你对存放在硬盘上的这些文件作过修改，你大可不必按一般的方法用手工一个一个COPY到软盘上；若软盘上不止一个目录下包含有这些备份文件，你也用不着一个目录一个目录地COPY；若你在这个目录下新编辑了一些文件，要把这些文件备份到软盘上，而你又不知道那些是软盘上没有的新文件，你也不必去一一对照查看。你完全可以用这个小程序去自动识别并备份这些软盘上没有的新文件。下面我们就将它介绍给大家。<br>
+        　　<strong>一、用法</strong><br>
+        　　REPLACE [drive1:][path1]filename [drive2][path2][/a][/p][/r][/w]<br>
+        　　REPLACE [drive1:][path1]filename [drive2][path2][/p][/r][/s][/w][/u]<br>
+        　　说明：<br>
+        　　[drive1:][path1]filename：需更新(或取代)的源文件。<br>
+        　　[drive2:][path2]：被更新(或取代)文件的存放目录。<br>
+        　　/A：添加新的文件到目的目录(drive2:path2)。不能与/S、/U一起使用。<br>
+        　　/P：更新(或取代)或添加文件前加以证实。<br>
+        　　/R：只读属性的文件同样可被更新(或取代)。<br>
+        　　/S：更新(或取代)目的目录中所有子目录下的文件。不能与/A开关一起使用。<br>
+        　　/U：只更新(或取代)比源文件老的文件。不能与/A开关一起使用。<br>
+        　　/W：开始前等待插入磁盘。<br>
+        　<strong>　二、例子</strong><br>
+        　　1REPLACE C:\MYPAPER\＊.WPS A：\PAPER /A<br>
+        　　将C:\MYPAPER目录下后缀为WPS的新文件添加到A盘的PAPER目录下(只拷贝A：\PAPER下没有的新WPS文件)。<br>
+        　　2REPLACE C：\MYPAPER\＊.＊ A：\ /P/R/S<br>
+        　　用C：\MYPAPER目录下所有文件取代(或更新)A盘中所有子目录下的与C：\MYPAPER目录中的同名文件，包括只读属性的文件，取代前加以证实。<br>
+        　　3REPLACE C：\MYPAPER\＊.＊ A：\PAPER /U<br>
+        　　用C：\MYPAPER目录下所有文件更新(或取代)A盘PAPER目录下比源文件老的文件。<strong>(云南　邵万红)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

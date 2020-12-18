@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>升级经验谈<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　我原来的微机是1996年初购买的,主要配置为联讯EXP8551主板、Pentium 
+        75 CPU、联讯DSV3868显卡,硬盘为希捷ST51270A,花王声卡、16M SDRAM。操作系统是WIN95 
+        OSR2＋DOS622，使用至今一直运行良好，未出现任何故障。<br>
+        　　前一段时间玩FIFA98，在蹦蹦跳跳地带领中国队打进世界杯四强后，我再也不忍心这样对待咱们的国家队（谁让咱是球迷呢！），马上决定升级。<br>
+        　　在参考了《电脑报》的“DIY情报站”后，我决定将主板和CPU升级，决定采用福扬的FYI－VIA597 
+        VP3主板和IBM 6X86MX PR200。这样只需花一千元左右,而且FIFA98等大部分游戏都可很好地运行。<br>
+        　　很快CPU和主板都拿了回来，我立即动手开始升级。先看看主板的做工，果然还行，就是选料粗点儿，别管那么多了,先跳线吧。可是当跳到决定单双电压的J7时，我却有点儿犯难了，不知跳线器该往哪儿插——主板上J7的跳线座居然没焊！拿着主板我心里直嘀咕：怎么碰上这种倒霉事儿！怎么办呢？自己焊一个吧倒是很容易的事，可谁知道这块板子还有没有其他毛病？还是多等几天请朋友去中关村换一块吧。<br>
+        　　经过一个星期痛苦不堪的等待，终于又将主板盼了回来。我拿到主板后先将各跳线检查一遍，还好，这次主要的跳线没缺。把新主板在机箱里安置好后，只接上硬盘和显卡。开机，进入BIOS进行设置，先看看硬盘参数，果然不对。我将硬盘参数设为AUTO，保存设置后重新开机，可是自检时显示硬盘为ST51260A，自检完毕后死机。我重新进入BIOS，使用BIOS的硬盘自动侦测功能对硬盘进行侦测，得出三组数据，分别对应硬盘的三种模式：NORMAL、LBA、LARGE。可仔细一看，三组数据和以前硬盘的参数都不一样，我又试了几遍，测出的数据依旧不同，无奈之下我只好选择对应LBA模式的那组参数。保存设置后重新开机，自检完毕后终于出现了WIN95的蓝天白云。<br>
+        　　经过这次升级，我得到几点体会：<br>
+        　　1一个硬盘有不止一组参数，而AMI和AWARD的BIOS对硬盘参数HEAD、CYLS和LANDZ的确定有所不同。这在一般情况下不会有什么问题，但某些时候有可能会引起数据丢失（我的硬盘在升级后就检查出一些掉链）。朋友们在升级更换主板时应考虑这个问题，如果你的硬盘上有重要数据，最好先做备份。<br>
+        　　2福扬主板的主要卖点是16档电压，支持AGP和75MHz、833MHz总线。但在福扬主板的说明书上有用于支持Cyrix 
+        CPU Linear Burst功能的跳线J6，可在主板上却直接焊在Disable状态。福扬公司对此的解释是Linear 
+        Burst功能不稳定，所以在主板上去掉了这个功能。而最引人关注的是该主板上的Cache。我的主板上的Cache标注为512K，BIOS自检结果也是512K，可是用软件测试却出现了差异。当主板上插Pentium 
+        75时，用HWINFO424和HWINFO43测得的结果均为256K，而当主板上插IBM 
+        6X86MX PR200时，用HWINFO424和HWINFO43测得的结果均为64K！HWINFO肯定是有问题了，可主板是否有问题呢？我曾到福扬的主页上进行查询，第一次去时看到有个朋友也在提这个问题，福扬公司对此未做解释，当我第二次访问福扬主页时却找不到这个帖子了（难道被删除了？）。<br>
+        　　还有一个关于主板的Flash ROM的问题需要说明。有一些朋友对Flash 
+        ROM的电压有些误解，以为主板上为Flash ROM提供的5V和12V电压分别用于正常工作和升级，这种理解是非常错误的。这是由于有些Flash 
+        ROM工作在5V电压，而有些工作在12V电压。有的主板为Flash ROM提供了写保护（如华硕T2P4等），在升级BIOS时需要设置跳线。而有些主板并未提供写保护的功能，在升级BIOS时不需要跳线（如联讯EXP8551等）。<br>
+        　　3这次我用我的IBM 6X86MX做超频实验，发现其超频能力很好。我先后超频到PR233（66×3，75×25，83×2）和PR266（66×35，75×3）均能稳定工作，而且核心电压一直是29V。不过好像Cyrix的6X86MX不如IBM的性能好，包括速度和可超性。<br>
+        　　4主板的可升级能力已经有很多人讨论过了，在此我只想说说对这次升级的体会。在我买以前的微机时，5X86 
+        133＋486主板比Pentium 75＋586主板便宜二千多元，而性能相差不多。我在购买时总觉得买Pentium主板便于以后升级，可是没过多久，主板芯片组已经是HX、VX、TX的了，CPU是MMX的，而硬盘是ULTRA 
+        DMA/33，以前的主板还有什么用呢?<br>
+        　　在电脑技术飞速发展的今天，花多余的钱为升级作准备是不值得的，而想追所谓的主流机型也是永远追不上的。所以，我们在升级机器时应先想好自己升级的目的，不要盲目追潮流，让我们把更多的精力花在机器的使用和优化上吧。还是那句老话，够用就好。(河南　小　熊)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期40版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

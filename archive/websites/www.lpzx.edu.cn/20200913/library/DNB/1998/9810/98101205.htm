@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Windows95中的“EXPAND”</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Windows95中的“EXPAND”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在Windows95中，很多时候都会引起Windows95的主要文件受损。这时，用户面对的将是两种选择：要么重装Windows95，要么单独恢复受损的文件。显然，单独恢复受损的文件是上策。但面对着Windows95的安装文件，DOS的单独展开命令EXPAND.EXE是起不了作用的。那有无办法可以单独展开Windows95中的文件呢?<br>
+        　　方法是有的!不知大家有没有注意到在Windows95的安装盘中，有一个名为“EXTRACT.EXE”的文件。这个文件是专门对Windows95中的安装文件进行操作的，它的功能和DOS中的“EXPAND.EXE”相似。<br>
+        　　<strong>一、格式及参数</strong><br>
+        　　EXTRACT[/Y][/A][/D] [/E][/C]源文件名(不支持通配符) [目标文件][/L]目标路径[展开后的文件名]<br>
+        　　源文件名：源文件名指的是安装盘中后缀为.CAB的压缩文件<br>
+        　　目标文件：目标文件指的是放在源文件中的被压缩文件<br>
+        　　/Y：如果遇到文件名相同的文件时，系统不进行确认而直接将同名文件覆盖<br>
+        　　/A：对所给出的源文件，及在它以后且和所给源文件内容有关的文件进行操作<br>
+        　　/D：显示(寻找)源文件中的具体内容(也就是显示被压缩的文件)<br>
+        　　/E：单独展开指定文件<br>
+        　　/L：指定展开后的文件路径(缺省时为当前目录)<br>
+        　　/C：拷贝源文件到指定地点<br>
+        　　<strong>二、举例说明</strong><br>
+        　　下面就举几个例子，便于大家理解EXTRACT.EXE的具体用法：<br>
+        　　1.首先我们必须确定需展开的文件在哪个.CAB文件中。如我们想在WIN95－03.CAB及在它以后且和它有关的文件中寻找ANSI.SYS这个文件，我们可用：<br>
+        　　EXTRACT/A/D WIN95－03.CAB ANSI.SYS<br>
+        　　2当我们用上述方法得知ANSI.SYS是在WIN95－03.CAB中后，我们就可以将ANSI.SYS这个文件单独展开到C盘的根目录中去了。<br>
+        　　EXTRACT/E WIN95－03.CAB ANSI.SYS/L C:\<br>
+        　　使用上述命令，我们就可以轻轻松松的将所需的文件单独从Windows95的安装文件中展开了。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

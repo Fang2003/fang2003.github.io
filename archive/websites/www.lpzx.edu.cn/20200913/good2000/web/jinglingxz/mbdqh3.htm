@@ -1,0 +1,263 @@
+<html>
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>欢迎访问--精灵小子！</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a:hover {  color: #FF66CC}
+-->
+</style>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(3);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 101;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 1;
+    if (ns)
+        document.MM_Time[0][1].obj = document["Layer5"];
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer5"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 10, 19, 27, 37, 43, 56, 64, 71, 79, 100);
+    document.MM_Time[0][1].values = new Array(2);
+    document.MM_Time[0][1].values[0] = new Array(42,39,37,34,32,29,28,31,36,43,58,74,92,113,136,161,188,215,245,276,306,336,365,393,420,444,467,482,496,507,517,525,532,538,543,547,549,547,540,529,519,510,503,503,505,507,509,510,512,513,514,515,517,519,522,523,524,525,526,527,526,522,514,496,465,429,391,350,312,276,243,225,209,195,181,168,153,139,128,123,118,113,109,105,101,98,94,90,87,83,79,75,72,68,65,61,58,55,51,47);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(478,477,475,474,473,471,472,474,477,482,494,507,523,540,559,577,594,608,617,619,616,609,600,589,577,563,548,535,521,506,490,474,458,441,424,406,388,353,318,284,253,227,204,199,198,201,204,206,208,210,213,215,218,221,223,219,206,191,175,158,138,118,97,79,67,60,56,53,51,51,50,48,44,39,34,31,35,50,72,87,102,119,136,153,172,191,211,232,254,276,299,322,346,369,392,415,438,462,485,508);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][2] = new String("sprite");
+    document.MM_Time[0][2].slot = 1;
+    if (ns)
+        document.MM_Time[0][2].obj = document["Layer5"];
+    else
+        document.MM_Time[0][2].obj = document.all ? document.all["Layer5"] : null;
+    document.MM_Time[0][2].keyFrames = new Array(101, 115);
+    document.MM_Time[0][2].values = new Array(2);
+    document.MM_Time[0][2].values[0] = new Array(523,523,523,523,523,523,523,523,523,523,523,523,523,523,523);
+    document.MM_Time[0][2].values[0].prop = "left";
+    document.MM_Time[0][2].values[1] = new Array(389,389,389,389,389,389,389,389,389,389,389,389,389,389,389);
+    document.MM_Time[0][2].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][2].values[0].prop2 = "style";
+        document.MM_Time[0][2].values[1].prop2 = "style";
+    }
+    document.MM_Time[0].lastFrame = 115;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#E1E1FF" text="#000099" vlink="#66FF66" onLoad="MM_preloadImages('xwsan1-1.gif','xwsan2-2.gif','xwsan3-3.gif','xwsan4-4.gif');MM_timelinePlay('Timeline1')">
+<div id="Layer1" style="position:absolute; left:29px; top:9px; width:712px; height:79px; z-index:1"> 
+  <div align="center">
+    <p><img src="xwsbj.jpg" width="721" height="76"></p>
+  </div>
+</div>
+<div id="Layer5" style="position:absolute; left:42px; top:478px; width:83px; height:87px; z-index:5"><img src="hdb2.gif" width="66" height="70"></div>
+<!-- #BeginEditable "danghang" --> 
+<div id="Layer2" style="position:absolute; left:30px; top:91px; width:718px; height:36px; z-index:2"> 
+  <table width="720" border="1" cellspacing="3" cellpadding="2" bordercolorlight="#CCCCFF" bordercolordark="#999999" bordercolor="#6666FF" height="31">
+    <tr align="center" valign="middle" bgcolor="#9999FF"> 
+      <th width="107" height="20"><a href="mbdqh.htm" target="_top">地球小卫士</a></th>
+      <th width="115" height="20"><a href="mbwl.htm">网络小子</a></th>
+      <th colspan="2" height="20"><a href="mbkl.htm">恐龙世界</a> </th>
+      <th width="106" height="20"><a href="good2000/web/jinglingxz/mbzmn">啄木鸟信箱</a></th>
+      <th width="101" height="20"><a href="mbmz.htm">斑竹信息</a></th>
+      <th width="109" height="20"><a href="index.htm">返回主页</a></th>
+    </tr>
+  </table>
+</div>
+<!-- #EndEditable --> <!-- #BeginEditable "gooddh" -->
+<div id="Layer3" style="position:absolute; left:14px; top:154px; width:140px; height:397px; z-index:3"> 
+  <table width="136" border="0" cellspacing="2" cellpadding="2" height="304">
+    <tr valign="top" align="left"> 
+      <td height="50"><a href="mbdqh.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','xwsan1-1.gif',1)"><img name="Image3" border="0" src="xwsan1.gif" width="140" height="60"></a></td>
+    </tr>
+    <tr> 
+      <td height="62"><a href="mbdqh2.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','xwsan2-2.gif',1)"><img name="Image4" border="0" src="xwsan2.gif" width="140" height="60"></a></td>
+    </tr>
+    <tr> 
+      <td height="30"><a href="mbdqh3.htm#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','xwsan3-3.gif',1)"><img name="Image5" border="0" src="xwsan3.gif" width="139" height="59"></a></td>
+    </tr>
+    <tr> 
+      <td height="28"><a href="mbyhdjsh.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','xwsan4-4.gif',1)" target="_blank"><img name="Image6" border="0" src="xwsan4.gif" width="140" height="60"></a></td>
+    </tr>
+  </table>
+  <p align="center">&nbsp; </p>
+</div>
+<!-- #EndEditable -->
+<div id="Layer4" style="position:absolute; left:174px; top:144px; width:587px; height:552px; z-index:4"><!-- #BeginEditable "able" --> 
+  <table border="0" width="100%" cellspacing="5" cellpadding="5" height="377">
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="56%" height="1"> 
+        <p align="center"><font size="3"></font><font size="5" color="#FF00FF"><strong>从我做起,从现在开始</strong></font>
+      </td>
+      <td width="44%" rowspan="4" height="1"> 
+        <p align="center"><img src="xwst3.gif" alt="xwst3.gif (2386 字节)" width="164" height="106">
+      </td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="56%" height="34"> 
+        <p align="JUSTIFY"><font size="3">．我们可以每天想想可爱的地球，让学到的环保方法，成为生活中的一部分。</font>
+      </td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="56%" height="42"> 
+        <p align="JUSTIFY"><font size="3">．我们可以把学到关于地球的知识，作广泛的宣传。</font>
+      </td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="56%" height="1"> 
+        <p align="JUSTIFY"><font size="3">．在出门玩的时候，先想想地球，不要留下垃圾，污染了大自然。</font>
+      </td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="100%" colspan="2" height="18"><font size="3">．在不用电器物品的时候，告诉自己节省能源的重要，随手关掉开关。</font></td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="100%" colspan="2" height="34"> 
+        <p align="JUSTIFY"><font size="3">．我们可以在吃饭的时候想想地球，然后减少使用一次性餐具，饮料的铝、铁罐头注意回收。</font>
+      </td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="100%" colspan="2" height="18"> 
+        <p align="JUSTIFY"><font size="3">．水是生命的起源，注意节约用水。</font>
+      </td>
+    </tr>
+    <tr bgcolor="#CCFFCC" bordercolor="#66CC00"> 
+      <td width="50%" height="22"> 
+        <p align="center"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          </font><img src="y7-2.gif" alt="y7-2.gif (1604 字节)" width="151" height="93">
+      </td>
+      <td width="50%" height="22"><font size="3">&nbsp;&nbsp;&nbsp;&nbsp; 小朋友，只要能时时想到地球，亲自实行环保生活，做一个环保好儿童，虽然你年纪小小，却是个拯球地球的环保小尖兵喔！</font> 
+        <p><font size="3">想一想，要如何实践环保的生活？</font>
+      </td>
+    </tr>
+  </table>
+  <!-- #EndEditable --></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

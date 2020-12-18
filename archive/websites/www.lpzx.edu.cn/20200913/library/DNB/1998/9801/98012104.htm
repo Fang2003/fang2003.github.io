@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">工作站硬盘系统的网络维护技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　如果您有一套(3张或5张)DOS系统软盘和一台带有软驱的主工作站，那您就再也不必为诸多工作站的系统丢失而带着整套的DOS系统软盘疲于奔命了。只需要您在主工作站上作一次就够了。如果您没有在网络上装过DOS系统，您可能会遇到麻烦。因为当您在A盘运行DOS的安装程序之后，会发现该安装程序只能安装到C:\的某个目录下。您只能改变目录却不能改变盘符。您不妨按照下面的步骤去做：<br>
+        　　●用DOS安装盘的一号软盘启动主工作站；<br>
+        　　●键入F3退出安装程序；<br>
+        　　●运行网络启动盘上的上网程序(如IPX、NETX)；<br>
+        　　●以SUPERVISOR身份注册入网；<br>
+        　　●在F盘(设F：盘是您一个有效的网络盘的根目录下建立REPAIR_C目录)：<br>
+        　　●键入MAP ROOT C：=F:\REPAIR_C并确认您做的映射；这样您的C:盘便成了网络盘；<br>
+        　　●再次运行DOS的安装程序(在A盘上键入SETUP)；安装到默认路径(C:\DOS)这样您就可以顺利地装到网络服务器上的F:\REPAIR_C\DOS<br>
+        　　●用SYSCON为用户开放F:\REPAIR—C的[F R]权限<br>
+        　　●在F:\REPAIR_C目录下建立常规的CONFIS.SYS和AUTOEXEC.BAT文件<br>
+        　　接下来就是如何一劳永逸地用服务器上的DOS系统去修复工作站硬盘了。<br>
+        　　●建立如下的批处理文件：<br>
+        　　@ECHO OFF<br>
+        　　MAP ROOT D:=F:\REPAIR－C<br>
+        　　D:\DOS\ATTRIB －R －H C:\*.*<br>
+        　　D:\DOS\SYS D: C:<br>
+        　　D:\DOS\XCOPY D:\*.* C:\／S<br>
+        　　CLS<br>
+        　　D:\DOS\ATTRIB＋R＋H C:\COMMAND.COM<br>
+        　　ECHO THE DOS HAS BEEN INTSTALLED<br>
+        　　ECHO REBOOT ON YOUR HARD DISK IS OK!<br>
+        　　在您的硬盘需要修复系统时，只要运行以上的批处理文件即可。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

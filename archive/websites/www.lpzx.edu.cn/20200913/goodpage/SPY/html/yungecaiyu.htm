@@ -1,0 +1,225 @@
+<script language="JavaScript">
+function YY_Layerfx(yyleft,yytop,yyfnx,yyfny,yydiv,yybilder,yyloop,yyto,yycnt,yystep) { //v1.2
+//copyright (c)1999 Yaromat, Jaro von Flocken
+ if ((document.layers)||(document.all)){
+  with (Math) {yynextx= eval(yyfnx)}
+  with (Math) {yynexty= eval(yyfny)}
+  yycnt=(yyloop && yycnt>=yystep*yybilder)?0:yycnt+yystep;
+  if (document.layers){
+    eval(yydiv+".top="+(yynexty+yytop))
+    eval(yydiv+".left="+(yynextx+yyleft))
+  }
+  if (document.all){
+    eval("yydiv=yydiv.replace(/.layers/gi, '.all')");
+    eval(yydiv+".style.pixelTop="+(yynexty+yytop));
+    eval(yydiv+".style.pixelLeft="+(yynextx+yyleft));
+  }
+  argStr='YY_Layerfx('+yyleft+','+yytop+',"'+yyfnx+'","'+yyfny+'","'+yydiv+'",'+yybilder+','+yyloop+','+yyto+','+yycnt+','+yystep+')';
+  if (yycnt<=yystep*yybilder){eval(yydiv+".yyto=setTimeout(argStr,yyto)");}
+ }
+
+}
+function YY_Mousetrace(evnt) { //v1.2 copyright (c)1999 Yaromat
+ if (yyns4)
+  {if (evnt.pageX) {yy_ml=evnt.pageX;  yy_mt=evnt.pageY;}  }
+ else{
+   yy_ml=(event.clientX + document.body.scrollLeft);
+   yy_mt=(event.clientY + document.body.scrollTop);
+ }
+ if (yy_tracescript)eval(yy_tracescript)
+}
+</script>
+<html>
+
+<head>
+
+<title>SPY中文网站——热点与新闻</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Fireworks Splice HTML">
+
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+
+</head>
+
+<body bgcolor="#AE75AC" onload="" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+<div align="center" id="yyd0"
+style="BACKGROUND-COLOR: #dd0000; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 10px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #dd0000"></div><div
+align="center" id="yyd1"
+style="BACKGROUND-COLOR: #ffff00; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 20px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #ffff00"></div><div
+align="center" id="yyd2"
+style="BACKGROUND-COLOR: #6699ff; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 30px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #6699ff"></div><div
+align="center" id="yyd3"
+style="BACKGROUND-COLOR: #00dd00; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 40px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #00dd00"></div><div
+align="center" id="yyd4"
+style="BACKGROUND-COLOR: #ff33ff; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 50px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #ff33ff"></div><div
+align="center" id="yyd5"
+style="BACKGROUND-COLOR: #993366; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 60px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #993366"></div><script>
+var yyns4=window.Event?true:false; var yy_mt = 0; var yy_ml = 0;
+document.onmousemove = YY_Mousetrace;
+yy_tracescript = '';
+
+if (yyns4){ document.captureEvents(Event.MOUSEMOVE);
+  YY_Mousetrace('',',document.YY_Mousetrace1')}
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+0)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+0)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd0\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+30)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+30)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd1\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+60)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+60)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd2\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+90)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+90)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd3\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+120)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+120)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd4\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+150)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+150)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd5\']',2000,true,80,0,1);
+</script>
+<div align="center">
+  <center><table border="0" cellpadding="0" cellspacing="0" width="696" height="578">
+  <tr>
+<!-- Shim row, height 1. -->
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="18" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="120" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="30" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="26" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="170" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="255" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="30" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="7" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="13" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="27" height="1" border="0"></td>
+   <td height="3"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="1" border="0"></td>
+  </tr>
+
+  <tr valign="top"><!-- row 1 -->
+   <td rowspan="7" colspan="3" height="121"><img name="yungecauyu_r01_c01" src="../images/yungecauyu_r01_c01.jpg" width="169" height="162" border="0"></td>
+   <td rowspan="4" colspan="2" height="104"><img border="0" src="../images/未标题-10 副本.jpg" width="198" height="101"></td>
+   <td rowspan="3" height="92"><img border="0" src="../images/未标题-01 副本.jpg" width="255" height="89"></td>
+   <td colspan="4" height="32"><img name="yungecauyu_r01_c07" src="../images/yungecauyu_r01_c07.jpg" width="77" height="30" border="0"></td>
+   <td height="32"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="30" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 2 -->
+   <td colspan="2" height="36"><a href="index.htm"><img name="yungecauyu_r02_c07" src="../images/yungecauyu_r02_c07.jpg" width="37" height="34" border="0"></a></td>
+   <td rowspan="2" colspan="2" height="60"><img name="yungecauyu_r02_c09" src="../images/yungecauyu_r02_c09.jpg" width="40" height="56" border="0"></td>
+   <td height="36"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="34" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 3 -->
+   <td colspan="2" height="24"><img name="yungecauyu_r03_c07" src="../images/yungecauyu_r03_c07.jpg" width="37" height="22" border="0"></td>
+   <td height="24"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="22" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 4 -->
+   <td height="12"><img name="yungecauyu_r04_c06" src="../images/yungecauyu_r04_c06.jpg" border="0" width="255" height="12"></td>
+   <td rowspan="2" colspan="4" height="35"><img name="yungecauyu_r04_c07" src="../images/yungecauyu_r04_c07.jpg" width="77" height="33" border="0"></td>
+   <td height="12"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="12" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 5 -->
+   <td rowspan="2" colspan="2" height="22">
+    <a name="1"></a>
+    </td>
+   <td height="23"></td>
+   <td height="23"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="21" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 6 -->
+   <td colspan="5" height="1"><img name="yungecauyu_r06_c06" src="../images/yungecauyu_r06_c06.jpg" width="332" height="4" border="0"></td>
+   <td height="1"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="4" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 7 -->
+   <td rowspan="17" height="449"></td>
+   <td rowspan="15" colspan="3" height="297">&nbsp;&nbsp; &nbsp;&nbsp;<p>&nbsp;&nbsp;&nbsp;  
+    <font color="#FFFFFF">这一期我给大家带来了热点与新闻的第一期和我们实验初中的简介，希望大家喜欢！</font><p><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <a href="../other/热点与新闻.pps"><img border="0" src="../images/r.gif" width="200" height="30"></a></font><p>　<p><font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#00FF00"><a href="yungecaiyu.htm#2">
+    <marquee bgcolor="#AE75AC" width="184" height="25" style="font-size: 18pt; font-family: 华文新魏; color: #FFFF00; font-weight: bold">济南实验初中情况简介</marquee>
+    </a></font><p>　</td>   
+   <td rowspan="15" colspan="3" height="297"></td>   
+   <td height="1"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="33" border="0"></td>   
+  </tr>   
+  <tr valign="top"><!-- row 8 -->   
+   <td rowspan="16" height="454"><img name="yungecauyu_r08_c01" src="../images/yungecauyu_r08_c01.jpg" width="18" height="418" border="0"></td>   
+   <td height="18"><a href="desktop_theme.htm"><img border="0" src="../images/未标题-1 副本.jpg" width="121" height="22"></a></td>  
+   <td rowspan="16" height="454"><img name="yungecauyu_r08_c03" src="../images/yungecauyu_r08_c03.jpg" width="29" height="419" border="0"></td>  
+   <td height="18"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="21" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 9 -->  
+   <td height="7"><img name="yungecauyu_r09_c02" src="../images/yungecauyu_r09_c02.jpg" width="120" height="5" border="0"></td>  
+   <td height="7"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="5" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 10 -->  
+  </center>  
+   <td rowspan="2" height="24">  
+    <p align="right"><a href="screen_saver.htm"><img border="0" src="../images/未标题-3 副本.jpg" width="121" height="22"></a></p>  
+  </td>  
+  <center>  
+   <td height="12"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="10" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 11 -->  
+   <td height="12"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="10" border="0"></td>   
+  </tr>   
+  <tr valign="top"><!-- row 12 -->   
+   <td height="8"><img name="yungecauyu_r12_c02" src="../images/yungecauyu_r12_c02.jpg" width="120" height="6" border="0"></td>   
+   <td height="8"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="6" border="0"></td>   
+  </tr>   
+  <tr valign="top"><!-- row 13 -->   
+   <td height="24"><a href="soft_av.htm"><img border="0" src="../images/未标题-2 副本.jpg" width="121" height="22"></a></td>  
+   <td height="24"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="20" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 14 -->  
+   <td height="7"><img name="yungecauyu_r14_c02" src="../images/yungecauyu_r14_c02.jpg" width="120" height="5" border="0"></td>  
+   <td height="7"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="5" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 15 -->  
+   <td height="24"><a href="yungecaiyu.htm"><img border="0" src="../images/未标题-4 副本.jpg" width="121" height="22"></a></td>  
+   <td height="24"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="19" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 16 -->  
+   <td height="7"><img name="yungecauyu_r16_c02" src="../images/yungecauyu_r16_c02.jpg" width="120" height="5" border="0"></td>  
+   <td height="7"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="5" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 17 -->  
+   <td height="24"><a href="desktop_theme2.htm"><img border="0" src="../images/未标题-5 副本.jpg" width="121" height="22"></a></td>  
+   <td height="24"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="20" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 18 -->  
+   <td rowspan="6" height="311"><img name="yungecauyu_r18_c02" src="../images/yungecauyu_r18_c02.jpg" width="121" height="269" border="0"></td>  
+   <td height="22"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="20" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 19 -->  
+   <td height="18"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="14" border="0"></td>  
+  </tr>  
+  <tr valign="top"><!-- row 20 -->  
+   <td height="90"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="88" border="0"></td>   
+  </tr>   
+  <tr valign="top"><!-- row 21 -->   
+   <td height="29"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="27" border="0"></td>    
+  </tr>    
+  <tr valign="top"><!-- row 22 -->    
+   <td rowspan="15" colspan="3" height="297">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="2"></a>&nbsp;&nbsp;&nbsp;&nbsp;      
+    <font color="#00FF00"><br>     
+    &nbsp;&nbsp; 济南实验初中是一所在济南乃至山东省享有较高声誉的实施素质教育的学校，它以其“严格的管理 文明的校风 良好的师德       
+    优异的成绩”赢得了泉城各界的广泛赞誉。学校广大教师爱岗敬业，甘于奉献；学生行为规范，举止文明；学校环境优雅，整洁，现代化设施齐全，处处充满了生机与活力。&nbsp;</font>     
+    <p><font color="#00FF00">&nbsp;&nbsp;&nbsp; 学校创建于1993年九月，位于市中区西部经六路，占地约十亩。学校建设坚持面向现代化，两座约8000m2的教学楼和实验楼内设有闭路电视教学系统的标准教室、多媒体教室、语音教室、微机教室和设施齐全的理化生实验室，卫星地面接收转播系统及已经与internet联网的微机校园网，为校园实现教育、教学、管理的现代化提供了良好的物质基础。</font> 
+    <p>   
+    &nbsp;&nbsp;&nbsp;<font color="#00FF00"> 学校目前共设三个年级，28个教学班，学生总数达1700余名。现有校级干部四人，中层干部八人，教职工128人。校长张秀萍同志在教育战线上辛勤耕耘了三十余载，不负领导和社会的众望，带领广大教师白手起家，艰苦创业以自己对教育事业的执著，忘我的工作精神和求实务实的工作作风，把实验初中的全体教工紧紧凝聚在一起，创设了良好的精神氛围，形成了学校特有的“积极进取，艰苦奋斗，甘于奉献，争创一流”的“实验精神”，为学校的发展奠定了雄厚的思想基础</font><br>      
+    <p>&nbsp;&nbsp;&nbsp; <font color="#00FF00">指导思想。在课堂这个师生共演的舞台上，把双基落，德育渗透，非智力因素的开发，创新精神与实践能力的培养融为一体   
+    把知识结构与认知规律相结合，建立民主平等的师生关系，加强互动，把思维活动、情感交流相交错，优化课堂教学过程，激发学生学习内驱力，提高学生思维的主动性。在这些教学思想的指导下，我校教师广泛开展争优创优活动，大胆进行课堂教学改革，学校通过全校规么的献课活动、跟踪听课等形式及时对课堂教学给予指导。每学期末均进行教学成果展示，对于学期内在课堂教学上有所突破的课例，在全校范围内进行交流。见校以来，学校优质课比例一直保持较高水平，培养了一批学有所长的学生，近千名学生在全国、省、市数理化生竞赛、小红花征文等活动中获奖，学校也获得学科奥林匹克优生学校、小红花征文先进单位等荣誉称号。</font></p>  
+    <p><font color="#00FF00"><a href="yungecaiyu.htm#1"><img border="0" src="../images/ANIM_ARR.gif" width="32" height="24">返回</a></font></p>  
+    </td>     
+   <td rowspan="2" height="152"></td>   
+   <td height="96"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="94" border="0"></td>   
+  </tr>   
+  <tr valign="top"><!-- row 23 -->   
+   <td colspan="5" height="56"></td>   
+   <td height="56"><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="54" border="0"></td>   
+  </tr>   
+   
+<!--   This HTML was automatically created with Macromedia Fireworks 3.0   -->   
+<!--   http://www.macromedia.com   -->   
+   
+</table>   
+  </center>   
+</div>   
+<!--------------------------- STOP COPYING THE HTML HERE --------------------------->   
+   
+</body>   
+   
+</html>   
+   

@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">什么是BIOS设置<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp; </strong><font
+        color="#369681">我们所使用的计算机都是由一些硬件设备组成的，而这些硬件设备会由于用户的不同需要而在品牌、类型、性能上有很大差异。例如，对于硬盘，就可能存在容量大小和接口类型等方面的不同，而不同的硬件配置所对应的参数也不同，因此，我们在使用计算机之前，一定要确定它的硬件配置和参数，并将它们记录下来，存入计算机，以便计算机启动时能够读取这些设置，保证系统正常运行。<br>
+        　　通常情况下，我们通过设置程序对硬件系统设置参数。由于ROM(只读存储器)具有只能读取、不能修改且掉电后仍能保证数据不会丢失的特点，因此这些设置程序一般都放在ROM 
+        中，我们常常称其为BIOS设置。此外，运行设置程序后的设置参数都放在主板的CMOS 
+        RAM芯片中，这是由于随着系统部件的更新，所设置的参数可能需要修改，而RAM的特点是可读取、可写入，加上CMOS有电池供电，因此能长久地保持参数不会丢失，但电池如果使用时间较长，电力不足，也可能会产生掉电现象，系统设置参数会丢失，这时只需要更换一只新电池并重新进行设置就可以了，从上面我们也可以看出，BIOS设置和CMOS设置是不完全相同的，二者不能混淆。<br>
+        　　<strong>一、BIOS设置程序的基本功能</strong><br>
+        　　BIOS的设置程序目前有各种流行的版本，由于每种设置都是针对某一类或几类硬件系统，因此会有一些不同，但对于主要的设置选项来说，大都相同，一般分为下面几项：<br>
+        　　＊基本参数设置<br>
+        　　包括系统时钟、显示器类型、启动时对自检错误处理的方式。<br>
+        　　＊磁盘驱动器设置<br>
+        　　包括自动检测IDE接口、启动顺序、软盘硬盘的型号等。<br>
+        　　＊键盘设置<br>
+        　　包括上电是否检测硬盘、键盘类型、键盘参数等。<br>
+        　　＊存储器设置<br>
+        　　包括存储器容量、读写时序、奇偶校验、ECC校验、1M以上内存测试及音响等。<br>
+        　　＊Cache设置<br>
+        　　包括内/外Cache、Cache地址／尺寸、BIOS显示卡Cache设置等。<br>
+        　　＊ROM SHADOW设置<br>
+        　　包括ROM BIOS SHADOW、VIDEO SHADOW、各种适配卡SHADOW<br>
+        　　＊安全设置<br>
+        　　包括硬盘分区表保护、开机口令、Setup口令等。<br>
+        　　＊总线周期参数设置<br>
+        　　包括AT总线时钟(ATBUS Clock)、AT周期等待状态(AT Cycle Wait State)、内存读写定时、Cache读写等待、Cache读写定时、DRAM刷新周期、刷新方式等。<br>
+        　　＊电源管理设置<br>
+        　　是关于系统的绿色环保节能设置，包括进入节能状态的等待延时时间、唤醒功能、IDE设备断电方式、显示器断电方式等。<br>
+        　　＊PCI局部总线参数设置<br>
+        　　关于即插即用的功能设置，PCI插槽IRQ中断请求号、PCI IDE接口IRQ中断请求号、CPU向PCI写入缓冲、总线字节合并、PCI 
+        IDE触发方式、PCI突发写入、CPU与PCI时钟比等。<br>
+        　　＊板上集成接口设置<br>
+        　　包括板上FDC软驱接口、串并口、IDE接口的允许／禁止状态、串并口、I／O地址、IRQ及DMA设置、USB接口、IrDA接口等。<br>
+        　　＊其它参数设置<br>
+        　　包括快速上电自检、A20地址线选择、上电自检故障提示、系统引导速度等。<br>
+        　　<strong>二、BIOS设置程序的进入方法</strong><br>
+        　　进入BIOS设置程序通常有三种方法<br>
+        　　1开机启动时按热键<br>
+        　　在开机时按下特定的热键可以进入BIOS设置程序，不同类型的机器进入BIOS设置程序的按键不同，有的在屏幕上给出提示，有的不给出提示，几种常见的BIOS设置程序的进入方式如下：<br>
+        　　Award BIOS：按Ctrl＋Alt＋Esc，<br>
+        　　 　　　　　屏幕有提示；<br>
+        　　AMI BIOS:按Del或Esc，屏幕有提示；<br>
+        　　COMPAQ BIOS:屏幕右上角出现光标<br>
+        　　　　　　　时按F10，屏幕无提示；<br>
+        　　AST BIOS：按Ctrl＋Alt＋Esc，屏幕无<br>
+        　　　　　　 提示。<br>
+        　　2用系统提供的软件<br>
+        　　现在很多主板都提供了在DOS下进入BIOS设置程序而进行设置的程序，在Windows 
+        95的控制面板和注册表中已经包含了部分BIOS设置项。<br>
+        　　3用一些可读写CMOS的应用软件<br>
+        　　部分应用程序，如QAPLUS提供了对CMOS的读、写、修改功能，通过它们可以对一些基本系统配置进行修改。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期7版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

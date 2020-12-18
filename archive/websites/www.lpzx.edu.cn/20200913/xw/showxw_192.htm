@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 如何在Authorware中制作不中断的音乐</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+&nbsp; &nbsp; 首先要看您所用的音乐是什麽样的格式　MIDI或WAV　 若使用前者　可以先在流程线的最上端放置一个计算图示(Caculation Icon),里面使用MIDIPlay函数如此会在程式执行前播第一次音乐,但如果音乐播完了怎麽办呢?<br><br>　 在计算图示下放置一个永久(Perpetual)的修件式(Conditional)交谈条件请设为~SoundPlaying　附著图示仍为计算图示　计算图示中先放置MIDIStop函数再放置MIDIPlay函数即可在音乐停止後立即重覆播映音乐<br><br>　 WAV格式的音乐制作方式与上者大致相同　 流程线的最上端放置的是音乐图示(Sound Icon)　请设定音乐图示只播映一次　 接著在音乐图示下放置一个永久(Perpetual)的修件式(Conditional)交谈　条件仍然为为~SoundPlaying　附著图示为音乐图示　设定音乐图示只播映一次　 如此即会在程式执行的过程中不停地重覆播映音乐
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001106100352
+<div align="center"><a href="xwpl_187.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

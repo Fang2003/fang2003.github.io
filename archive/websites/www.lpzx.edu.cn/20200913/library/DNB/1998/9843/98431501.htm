@@ -1,0 +1,119 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>跟我学用Linux命令<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　 Linux虽然是免费的，但它的确是一个非常优秀的操作系统，与MS－WINDOWS相比具有可靠、 
+        稳定、速度快等优点,且拥有丰富的根据UNIX版本改进的强大功能。下面，作为一个典型的DOS 
+        和WINDOWS用户，让我们一起来学习Linux的一些主要命令，希望大家能尽快进入到Linux的世界里。<br>
+        　　<strong>一、启动</strong><br>
+        　　Linux的启动操作过程和DOS相似(尽管如此，但作为操作系统本身，Linux在启动和退出时所作的工作要比DOS多得多),也可以通过按下Ctrl＋Alt＋Del三键进行热启动。不同的是Linux启动到最后时，需要进行登录。下面是一个典型的登录过程：<br>
+        　　……<br>
+        　　RedHat Linux release 5.1<br>
+        　　Kernel 2.0.32 on an i686<br>
+        　　login:<br>
+        　　你键入：root&lt;CR&gt;后，计算机显示输口令(password:)，输入你的口令（如果是第一次启动，则是你在安装时所输入的口令)即可。当计算机出现一个“＃”提示 
+        符时，表明你登录成功!<br>
+        　　[root@localhost root]＃_ 　　 Linux提示符<br>
+        　　C:\&gt;_　　　　　　　　　DOS提示符<br>
+        　　<strong>二、常用的一些命令：</strong><br>
+        　　</font><font color="#004040">1.显示文件目录命令ls(DOS下为DIR)</font><font
+        color="#369681"><br>
+        　　在Linux中用ls命令显示文件及目录(当然，你仍然也可用DIR命令，只不过在这里的参数不同)。例如：＃ls&lt;CR&gt;<br>
+        　　root mnt boot dev bin usr xiong tmp etc games<br>
+        　　看起来似乎简单(就相当于DOS中的“DIR／W”)，但你会发现你看到的有些难懂，连哪些是目录哪些是文件都不清楚，哪些又是可执行文件呢?不要紧，请输入：＃ls 
+        －F＋root／ mnt／ boot／ dev／ bin／ usr／ xiong＊ tmp／ etc／ games ／ readme<br>
+        　　看清楚了吧，带＊为可执行文件(相当于DOS中的EXE和COM文件)，带／为子目录，其它的为通用文件。另外，我们可用ls 
+        －l显示文件目录的详细情况(相当于DOS中的DIR命令)。千万注意区分大小写!!如LS 
+        －f;Ls等都是错误的。另外，ls命令还有许多参数，你可以用man ls或ls－－help去进一步了解。<br>
+        　　</font><font color="#004040">2.改变当前目录命令cd(DOS下为CD)</font><font
+        color="#369681"><br>
+        　　在DOS中，我们可以用C:\&gt;CD\MNT\cdrom或cd\mnt\cdrom<br>
+        　　C:\mnt\cdrom&gt;cd ..或cd..或CD..<br>
+        　　C:\mnt&gt;cd\或C:\mnt&gt;cd \<br>
+        　　而在Linux中为cd ／mnt／cdrom，目录名的大小写必须与实际相同，cd后必须有空格。<br>
+        　　pwd 显示当前目录<br>
+        　　cd .. 必须为小写，必须有空格<br>
+        　　cd ／ 总目录为／，cd与/必须有空格<br>
+        　　</font><font color="#004040">3.建立子目录mkdir(DOS下为MD或MKDIR)</font><font
+        color="#369681"><br>
+        　　在Linux中只能用mkdir，可用相对路径和绝对路径，请比较：<br>
+        　　C:\&gt;md xiong或md \xiong或md\xiong <br>
+        　　DOS系统<br>
+        　　[root@localhost ／]＃mkdir xiong或mkdir ／xiong<br>
+        　　Linux系统<br>
+        　</font><font color="#004040">　4.删除子目录命令rmdir(DOS下为RD)</font><font
+        color="#369681"><br>
+        　　在Linux中用rmdir命令删除子目录，例如：<br>
+        　　rmdir ／mnt／cdrom 相当于rd \mnt\cdrom <br>
+        　　注意：同DOS一样，要删除的子目录必须是空的，而且必须在上一级目录中才能删除下一级 
+        子目录。<br>
+        　　</font><font color="#004040">5.删除文件命令RM(DOS下为DEL或EARSE)</font><font
+        color="#369681"><br>
+        　　在Linux中用RM命令删除文件，例：<br>
+        　　　　rm ／ucdos.bat 相当于del \ucdos.bat <br>
+        　　</font><font color="#004040">6.文件改名命令MV</font><font color="#369681">(DOS下为REN或RENAME)在Linux中用mv命令给文件改名，例：<br>
+        　　mv ／mnt\floppy p相当于 ren \mnt\floppy p<br>
+        　　说明：在Linux中的mv命令除了文件改名外，还有文件移动的功能，请看例子：<br>
+        　　mv ／mnt／floppy ／bin 相当于DOS中的命令 move \mnt\floppy \bin<br>
+        　　</font><font color="#004040">7.文件复制命令cp</font><font color="#369681">(DOS下为COPY)<br>
+        　　在Linux中用cp命令进行文件复制，例：<br>
+        　　cp ／ucdos／＊ ／fox 相当于copy \ucdos\＊.＊ \fox <br>
+        　　注意：DOS中的＊.＊在Linux中用＊代替。<br>
+        　　</font><font color="#004040">8.获取帮助信息命令man</font><font
+        color="#369681">(DOS下为HELP)<br>
+        　　在Linux中用man命令获取帮助信息，例：<br>
+        　　man ls 相当于help dir <br>
+        　　ls －－help 相当于dir／ <br>
+        　　</font><font color="#004040">9.显示文件的内容less</font><font color="#369681">(DOS下为TYPE)<br>
+        　　在Linux中用less命令进行文件显示工作，例如，我们要显示man1子目录下的mwm.lx的内容，只需输入：[root@localhost 
+        man1]＃less mwm.lx&lt;CR&gt;即可。在Linux中，我们也可用另外一个命令“more”来显示文件内容，例如：more 
+        mwm.lx。你会看到，这两个命令非常相似，实际上，less命令的功能要比more强一些，你可以自己去摸索。在Linux中，还提供了两个DOS中没有的阅读文件的命令，它们是head和tail命令，分别用来显示文件的头部和后部的部分内容。使用格式为：head(tail) 
+        [m]&lt;filename&gt;，缺省n时，显示10行，例如：<br>
+        　　head ／usr／man／mwm.lx 显示文件mwm.lx前10行的内容<br>
+        　　head 15 ／usr／man／mwm.lx 显示文件mwm.lx前15行的内容<br>
+        　　tail 17 ／usr／man／mwm.lx 显示文件mwm.lx后17行的内容<br>
+        　　</font><font color="#004040">10.重定向与管道</font><font color="#369681"><br>
+        　　大家知道，在DOS中，我们可以通过重定向与管道方便地进行一些特殊的操作，如：dir&gt;direct将当前目录放入文件direct中；type 
+        readme&gt;&gt;direct，将文件readme的内容追加到文件direct中；又如：type 
+        readme.txt|more,分页显示文本文件readme.txt的内容。在Linux中的重定向与管道操作同DOS中的操作几乎一样，上面两个例子在Linux中应为：ls&gt;direct; 
+        less readme.txt|more(注：实际上，Linux中的more和less命令本身具有分页功能)。<br>
+        　　</font><font color="#004040">11.外壳程序(shell)：命令解释器(command)</font><font
+        color="#369681"><br>
+        　　在DOS系统中，我们绝大多数用户都是用的command.com这个命令解释器。当然，你也可换用Norton或DOS4.0以后的dosshell。在Linux中，有好几种shell。常见的有：ash,bash,ksh,tcsh,zsh等，从上面的环境变量中SHELL=／bin／bash可以看出你用的是哪种shell，它位于何处。计算机默认的一般是bash。<br>
+        　　 以上讲到的仅仅是与DOS功能相似的一些Linux命令，而作为一个多用户、多任务的操作系统，其强大的功能还远不止于此。希望更多的人用上这个优秀的操作系统,相信你一定不会后悔的。<strong>(浙江　熊　健)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

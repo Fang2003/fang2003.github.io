@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 在Authorware如何启动动画光标</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+&nbsp;  Win98中可爱多变的动画光标使得桌面似乎活了起来，那么，能不能在Authorware里也用上动画光标呢？笔者仔细揣摩，发现在Authorware（4.x版或者5.0版）里启用动画光标非常的简单，禁不住要和盘托出，与大家一起分享。<br><br>&nbsp;  在Authorware里要想启用动画光标，比较简单的做法就是：直接从Authorware提供的Windows Application用户自定义函数库Winapi.u32中载入所需Windows API函数，然后进行简单的编程，从而载入动画光标。下边给出具体的实现过程：<br><br>一、启动您的Authorware4.0或者Authorware 5 Attain。<br><br>二、新建一个文件（Authorware会自动把它取名为Untitled）。<br><br>三、载入所需的函数。<br><br>1.单击快捷工具栏中的“Functions”按钮（或者按快捷键“Ctrl+Shift+F”），打开“Functions”对话框(如下图)。<br><br>2.单击“Functions”对话框里“Category:”组合框的按钮，在弹出的列表框中，单击选中“[Untitled]”项。<br><br>3.单击“Load...”按钮，这时会出现一个“Load function”对话框(如下图)。<br><br>4.在“文件名（N）：”文本框里，输入“c:\Authorware 4\Winapi.u32”（这里不要输入“”），将会弹出“Custom functions in Winapi.u32”对话框(如下图)。<br><br>5.在函数列表框中，找到并单击选中“DestoryCursor”。<br><br>6.单击“Load”按钮，将函数DestoryCursor载入Authorware应用程序（实际上，函数并未真正载入应用程序，而只是有一条链接被连接到了包含代码的文件中）。<br><br>7.类似的，重复上述3～6步（在第5、第6步里，随着要载入的函数不同而相应有所不同），将函数LoadCursorFromFile、GetClassLong、SetClassLong分别载入应用程序中。<br><br>8.所需的函数已经全部装载完毕，单击“Done”按钮，结束函数装载。<br><br>四、保存文件为：“动画光标.a4p”或者“动画光标.a5p”。<br><br>五、从图标工具栏中，拖一个计算图标到流程线上，命名为“载入动画光标”。<br><br>六、在计算图标“载入动画光标”中，输入如下代码（直接粘贴过去也可以，其中“----”后均为相关程序的注释、说明语句）<br><br>----下边的代码将当前的窗口句柄WindowHandle赋值给变量HWND hWnd。<br><br>HWND hWnd:=WindowHandle<br><br>----下边的代码指定要改变长值的字节偏移,变量int nIndex赋值-12,偏移量-12对应着窗口光标设置。<br><br>int nIndex:=-12<br><br>----GetClassLong函数检索指定偏移量中的一个长值,放到给定窗口的额外窗口内存中。<br><br>----下边的代码使用GetClassLong函数得到当前窗口的光标设置,并将其赋值给变量HCURSOR hCursor。<br><br>HCURSOR hCursor:=GetClassLong( HWND hWnd, int nIndex)<br><br>----DestroyCursor函数用于破坏光标设置,释放光标点所用的任何存储器。<br><br>----这里,要破坏当前窗口的光标设置,它已由变量HCURSOR hCursor所标识。<br><br>DestroyCursor( HCURSOR hCursor)<br><br>----变量LPCSTR lpFileName用于标识动画光标文件,您可以结合实际情况进行赋值。<br><br>LPCSTR lpFileName:= FileLocation^&quot;大自然 等待.ani&quot;<br><br>----LoadCursorFromFile函数用于从指定文件中载入光标资源。<br><br>----变量LONG dwNewLong用于标识动画光标,<br><br>----此处将LPCSTR lpFileName里的光标资源载入,并赋值给变量LONG dwNewLong。<br><br>LONG dwNewLong:=LoadCursorFromFile( LPCSTR lpFileName)<br><br>----SetClassLong函数在指定窗口所属的窗口类的附加类内存的指定偏移量处设置一长值。<br><br>----下边的代码将LONG dwNewLong标识的动画光标载入到当前的窗口中。<br><br>SetClassLong( HWND hWnd, int nIndex, LONG dwNewLong)<br><br>七、直接按快捷键“Ctrl+R”，运行一下，单击右键，怎么样？酷吧？<br><br>☆　☆　☆　☆　☆　☆&nbsp; ☆　☆　☆&nbsp;  ☆　☆　☆&nbsp; ☆　☆　☆&nbsp; ☆　☆　<br><br>以上是在Authorware里载入动画光标的一般方法。一旦动画光标被载入，启用的方法很多，下边就简单介绍几种：<br><br>一、在按钮上显示。<br><br>二、在热区上显示。<br><br>三、在热对象上显示。<br><br>这三种启用的方法非常相似，只要在相应的“Properties：Response”对话框中，将“Cursor：”设置为非默认值而且是第4类“SetCursor(4)”以外的任意一种光标类型就可以了。<br><br>赶快按快捷键“Ctrl+R”，运行一下，怎么样？够专业吧？<br><br>最后，如果您想要在程序运行的任何时候还原默认光标，只需要在计算图标中利用如下代码，一切搞掂：<br><br>DestroyCursor( LONG dwNewLong)<br><br>type:=0<br><br>SetCursor(type)
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001121103724
+<div align="center"><a href="xwpl_847.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

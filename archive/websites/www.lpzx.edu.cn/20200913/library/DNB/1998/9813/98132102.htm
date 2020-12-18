@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NETWARE服务器随机存储器的扩展<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　去朋友单位时发现，该单位NETWARE服务器内存由16M升为32M，但性能没有多大改善，服务器硬盘仍然转个不停，究其原因发现其硬件内存方面虽然升级了，但NETWARE服务器内存设置没有任何改变。<br>
+        　　NETWARE服务器最大支持4G的随机存储器，当随机存储器低于16M时，NETWARE系统自动进行管理，而大于16M时，需进行随机存储器扩展，也就是说即使用户在安装服务器时已安装好了大于16M的内存，而NETWARE也只能用上16M内存。<br>
+        　　让NETWARE使用多于16M通常有两个办法：<br>
+        　　1.建立DOS配置文件，在CONFIG.SYS其中加载设备驱动程序HIMEM.SYS。以硬盘起动为例：在C盘根目录下建立CONFIG.SYS文件，仅一行DEVICE=C:\DOS\HIMEM.SYS即可。<br>
+        　　2.在控制台下使用REGISTER进行内存注册。以32M内存为例，具体方法是：在控制台下键入REGISTER 
+        MEMORY 1000000 1000000，前一个1000000是后16M的起始地址，后一个1000000是后16M的内存长度，可以在控制台下键入MEMORY命令检测注册是否成功，注册成功应显示：Total 
+        server memory:32,＊＊＊ Kilobytes。如果想长期有效，可将其写入AUTOEXEC.NCF中，即在控制台下键入LOAD 
+        INSTALL，选择System Options再选择Edit AUTOEXEC.NCF File，在load monitor命令行的前一行写入REGISTER 
+        MEMORY 1000000 1000000。退出服务器后重新启动服务器，这时你会看到服务器各缓冲参数都有较大提高。<br>
+        　　以下是前后对比情况表：(仅供参考，以下数值会因加载.NLM文件有所不同)<br>
+        　　服务器中缓存数越大，可读文件的空间就越大，服务器硬盘读数压力就越小，看来用REGISTER注册各缓存数量最大，当然性能最优。<br>
+        　　运行环境：NETWARE 3.12 内存 32M<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(安徽　徐锋)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月6日第13期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

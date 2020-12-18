@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 我的世界你最懂——扫描仪结构及工作原理（下）</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 我的世界你最懂——扫描仪结构及工作原理（下）</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 我的世界你最懂——扫描仪结构及工作原理（下） 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><P><b>　　五、电路系统</b></p>
+　　扫描仪电路系统的作用是转换、处理、传输图像信号。扫描仪电路系统主要由模数转换器、图像处理器和接口电路组成。步进电机驱动电路、图像处理器、缓冲器和输出接口安装在扫描仪后侧的电路板上，感光元件CCD、模数转换器装在扫描头后侧的电路板上，扫描仪电路框图如图7所示。<br>
+　　1．模数转换器<br>
+　　模数（A／D）转换器接收感光元件CCD传来的模拟电信号，将它转换成为二进制数字信号（每一位二进制数即对应一个像素的数据）后，再送图像处理器处理。<br>
+　　模数转换器的数据宽度决定扫描仪的色彩位数和灰度级。如标称24位色彩的扫描仪，红（R）绿（G）蓝（B）各个通道分别采用8位的A／D转换器转换图像信号，可将每一颜色的图像分为2～8共256等级，形成2～24种色彩，这也是我们常说的24位真彩色。<br>
+　　2．图像处理器<br>
+　　图像处理器将（A／D）转换器传来的二进制数字信号，进行运算、处理后经接口电路送往计算机。将图像传送给计算机以前，扫描仪至少要校正好图像的白平衡、亮度、对比度等参数，而扫描仪的一些新技术如色彩提升、硬件去网功能等也要求扫描仪进行处理。由于不同扫描仪生产厂商处理图像的技术、运算方法不同，使扫描输出的图像有相当大的差异。<br>
+　　运算、处理扫描后产生的大量数据需要很多时间，目前很多高速扫描仪将一个专门进行运算的CPU电路置于扫描仪内部，并配上缓冲存储器，这种方法能节约20％以上的时间。图8是Umax Astra 1200S的接口电路板，板上保留有CPU（8031）安装空位，其后代2000、2100、2400的电路板上安装有CPU，速度比1220系列快很多。<br>
+　　3．硬件接口<br>
+　　扫描仪的硬件接口指扫描仪与电脑的联接方式，常见扫描仪的接口有SCSI接口、EPP接口和USB接口。SCSI接口扫描仪数据传输速度快，缺点是售价高，安装较为复杂；EPP接口和USB接口扫描仪安装方便，对家庭和办公用户非常适用。<br>
+　　4．电源<br>
+　　早期扫描仪耗电量大，使用内置式电源，内置式交流供电装置无论采用何种屏蔽方式，仍无法避免电磁干扰对扫描质量的影响，甚至影响到扫描仪的正常工作。沉重的金属屏蔽层也大大增加了扫描仪的重量。随着扫描仪耗电量的迅速下降，目前大多扫描仪采用了外置式直流电源供电，并在扫描仪内的电路板上安装有稳压电路，能有效的减少电磁干扰对扫描质量的影响。
+<p><b>　　六、结束语</b></p>
+　　扫描仪还有滚筒扫描仪、手持式扫描仪、条码读入器、卡片阅读机、透明胶片扫描仪等品种，这些扫描仪与平台扫描仪工作原理相似，内部结构则完全不同，本文仅对最常见的CCD平台扫描仪作了一般介绍，希望能对你了解扫描仪有一定的帮助。<br>
+<b>(重庆 周新）</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99424003.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

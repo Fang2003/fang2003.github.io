@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>HEROESⅢ修改大法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>HEROESⅢ修改大法</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　不久前，最新的《HEROESⅢ》推出来了，小弟几经“苦战”，终有所得，现将“战果”公布如下：<br>
+        　　提到修改，自然是改终极的宝物与怪物。三代的存放方法与二代有所不同。例：英雄带4队兵，分别有7，8，9，4个，用FPE修改，查时先用F1切换为WORD模式，然后查找：<br>
+        　　7，0，8，0，9，0，4，0<br>
+        　　若未找到，可更改兵的个数依法再查。查到后，按E修改：(兵种类型及标号)<br>
+        　　<u>?? 00 00 00</u> ?? 00 00 00 ?? 00 00 00 ?? 00 00 00 <br>
+        　　　兵种<br>
+        　　FF FF FF FF <u>FF FF FF FF</u> FF FF FF FF <u>07 00 00 00</u><br>
+        　　　　　　　　　没有兵　　　　　　　　数量<br>
+        　　08 00 00 00 09 00 00 00 04 00 00 00 00 00 00 00<br>
+        　　00 00 00 00 00 00 00 00 00 00 00 00<br>
+        　　……<br>
+        　　<u>62 00 00 00</u> <u>FF FF FF FF</u> <u>00 00 00 00</u> FF FF FF FF<br>
+        　　身上所佩宝物　无用　　　魔法书<br>
+        　　<u>?? 00 00 00</u> FF FF FF FF ?? 00 00 00 FF FF FF FF<br>
+        　　未佩的宝物代码<br>
+        　　……<br>
+        　　宝物代码：<br>
+        　　00　Magic book<br>
+        　　01　不知何用<br>
+        　　02　类=代金鹅<br>
+        　　12　Sentian's shield(Defense＋12,Attack－3)<br>
+        　　0C　Titan's Glalius(Attack＋12,Defanse－3)<br>
+        　　18　thunder Helmet(Rnowledge＋10,Power－2)<br>
+        　　1E　Titan's Cuirass(Power＋10,Knowledge－2)<br>
+        　　24　Helm of Heavenly Enlightement(AD，PK＋6)<br>
+        　　28　Dragon Scale Armor(AD＋4)<br>
+        　　2C　Crowl of Dragontooth(PK＋4)<br>
+        　　48　Angle's Wing:Allow to Fly(特有用)<br>
+        　　5A　Boot of Lavitation:Cross the Water(不能点到水上，必须用mouse放在对岸才能Cross)<br>
+        　　71　Orb of Inhibition:即二代的反魔球<br>
+        　　56　Fire<br>
+        　　57　Air<br>
+        　　58　Water<br>
+        　　59　Earth(有这四件宝物，你的Hero可以学会所有Magic）<br>
+        <strong>(孙丁　小余儿)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月22日第11期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

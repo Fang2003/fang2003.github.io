@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='stylesheet' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 刻录机提速DIY</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>49 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 刻录机提速DIY</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 刻录机提速DIY 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　最近在网上得到一个令人振奋的消息——RICOH（理光）7040系列刻录机能够在不花一分钱的前提下，全面更新为7060系列！<br>
+　　按照文章的说法，RICOH 7040系列在打造之初，就是按照6速写CDR的标准设计的。但当时市面上可以稳定接受6速写的CDR空白光碟很少见，而大多数碟片为了考虑自身的销售，根本不在封套上标注这个“限速事项”。所以理光公司担心消费者购买刻录机后，选取6速写CDR时会屡试不爽，回头怀疑是刻录机有问题，就强行在这款机器的Firmware中，将CDR的最高刻录速度定为4速。并期待空白光碟质量提升的时候，不仅推出最高6速写的新机种（即现在6速写CDR、4速擦CDRW、24速读取碟片的7060，也就是前面提到的那个型号），亦可通过收费的方式，为老用户打开新功能。<br>
+　　经过反复的摸索，我终于升级成功了。看到接近500M的文件不到10分钟就刻录完成，真的忍不住笑出声来！<br>
+　　Firmware是类似电脑主板BIOS的东东，同升级主板BIOS一样，可以使用Flash软件擦除其旧版本，再写入新的版本。但是，升级刻录机的Firmware同升级主板BIOS一样，也应防止断电,并要做好旧版本的备份，以便在需要时重新写回。<br>
+　　我实验了一下，理光Firmware的擦写工具Rflash.exe会报错：提示硬件不同、CODE不同，不允许更新。估计理光公司使用了代码检测程序，升级时要检测软件同硬件的规格是否一致。<br>
+　　这个问题使用程序“RMorph.exe”，就能越过Firmware的代码检测，将刻录机擦写成7060。我下载后进行了尝试，结果在自己的机器上行不通，不知道是什么原因。最后还是在DOS状态下写入，才升级成功。由于这两种方法都有成功的例子，所以我逐一加以介绍。<br>
+<p><b>　　方法一：使用RMorph.exe程序在Windows98中进行</b></p>
+　　首先，下载下面几个文件并解压到一个目录中。(比如“C:&gt;123”)。<br>
+　　http://www.johny.sk/cdrinfo/files/RMorph.zip （RMorph.exe文件）<br>
+　　http://www.johny.sk/cdrinfo/files/Mp7060a_Firmware_v1.5.zip  （理光刻录机在Windows95/98/NT下面的Firmware擦写程序Rflash.exe，以及RICOH 7060A刻录机的最新1.5版本Firmware: M10a150.bin）<br>
+　　其次，运行RMorph.exe文件，将会出现一个类似DOS应用程序的对话框。别慌，这不是说明要在DOS下运行。按任意键后，出现刻录机的选择框，选好你现在的刻录机（我的MP 7040A对应的字母是‘K’，就按‘K’键啦），输入MP 7060A 的新版Firmware文件路径，按回车键即可。<br>
+　　运行Firmware擦写程序Rflash.exe，将自动显示现在为“RICOH CDR/RW MP7040A Ver1.10K”，准备升级的版本为“RICOH CDR/RW MP7060A Ver 1.50”。别忘了在“BACK UP CURRENT F/W”的选择框中打勾，备份旧版本的Firmware。然后就可以按“NEXT”，再按照提示一步步完成。<br>
+　　擦写完毕后，机器要求关机重启。需要注意的是，在Windows 98的关闭菜单中，要选择“关闭计算机”一项，在完全关机后再按电源开关开机才行。而不是使用“重新启动计算机”，否则会出错。<br>
+　　此时，你应该看到在开机自检时，刻录机一项，已经变成RICOH CDR/RW 7060A了。
+<p><b>　　方法二：在DOS状态下进行</b></p>
+　　如果你像我一样不幸，即使运行了破解程序，在使用Rflash.exe进行Firmware刷新时，仍然提示CODE错误，不允许操作。那么也别着急，在纯DOS状态下，强制的刷新也会取得一样的效果。<br>
+　　因为这种擦写是在DOS下进行的，理光的那段CODE检测程序还来不及起作用。或者说，这种方法是强行将Firmware清空，再将新的版本写进去，完全与硬件无关。<br>
+　　用这种方法，一定要下载“7040ados12.exe”这个文件（ftp://ftp.met.com.tw/pub/cdrw/7040ados12.exe）。解开后，有Atammp3.exe和M00a120.bin两个文件，我们主要用到前者——DOS状态下的Firmware擦写程序。后者是7040A的1.2版本的Firmware。另外，还要下载Mp7060a_Firmware_v1_5.zip这个文件。解出Windows擦写程序Rflash.exe和MP 7060A的1.50版本Firmware，我们主要用到后者。将这几个文件拷到一个目录中，(如“C：&gt;123”)。<br>
+　　重新启动计算机，并在主板自检完毕后按F8键，选择安全命令行方式引导系统。进入C:&gt;123目录。键入“Atammp3.exe /T M10a150.bin ”（/T参数是强制写入），然后根据提示操作，注意这个过程有一段接近20秒钟的停顿，千万不要以为死机了而重新启动。<br>
+　　等到DOS提示符出来了，就关闭电源，再开机，怎样，也变成RICOH CDR/CDRW 7060A了吧？<br>
+　　升级成功之后，各种刻录编辑软件运行正常，并增加了6速刻录选项，使得刻录速度大大加快。　　<br><b>
+（辽宁　SAM）</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99492102.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

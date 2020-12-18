@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>低倍速CD-ROM的优化使用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　目前，CD－ROM的速度已经达到16倍速、24倍速或32倍速，但还有相当一部分计算机用户的CD－ROM是速度较低的老式光驱，这种老式CD－ROM在DOS6.22上运行时极为正常，但由于不是即插即用硬件，因而在Windows 
+        95下的使用就变得有些复杂了。<br>
+        　　Windows 95是按32位程序来传输和读取数据的，而低倍速CD－ROM是按16位程序来传输和读取数据的，因此低倍速CD－ROM在Windows下大多不能稳定读取数据，难道低倍速CD－ROM真的不能在Windows 
+        95中正常使用吗?不是的，Windows 95中包含了大量的为正常运行老式16位程序而设的程序，足以保证低倍速CD－ROM的运行。<br>
+        　　具体可以采取以下的办法解决：<br>
+        　　1.将低倍速CD－ROM设置成四倍速或更高速度。启动Windows 95，选择“开始/设置/控制面板/系统/性能/文件系统/CD－ROM”，在“最佳的访问方式”框中选择“四倍速或更高速”，选择“确定”。重新启动Windows后，大多数的低速CD－ROM可以正常工作。<br>
+        　　2.升级老式CD－ROM的驱动程序。<br>
+        　　3.先在Config.sys文件下添加该CD－ROM的驱动程序，如ACER倍速光驱则添加DEVICE=C:\ACER\ACERCD.SYS/D:MSCD0000一行，确认C盘根目录下BOOTLOG.PRV文件中已经存在以下两行：<br>
+        　　[0009FE22]Dynamic load device C:\WINDOWS\system\IOSUBSYS\cdfs.vxd<br>
+        　　[0009FE24]Dynamic load success C:\WINDOWS\system\IOSUBSYS\cdfs.vxd<br>
+        　　(注：方括号中的数字不一定要与之相同)<br>
+        　　然后重新启动电脑，Windows会自动识别你的低速光驱，并用比MSCDEX.EXE更好的CDFS.VXD来驱动光驱。此时测定光驱的数据传输速率，会有明显提高。<br>
+        　　4.采用Windows 98的通用IDE光驱驱动程序。在安装Windows 98过程中，先生成一张应急启动盘，此盘中有一通用的IDE光驱驱动程序OKICDROM.SYS，将此驱动程序拷贝至硬盘，以替换原有的驱动程序，即在Config.sys中加上DEVICE=C:\OKICDROM.SYS/D：MSCD0000一行(假设驱动程序放在C盘根目录下)，在Autoexec.bat中加上C：\WINDOWS\COMMAND\MSCDEX.EXE/D： 
+        MSCD0000，重新启动电脑之后，光驱速率会有明显提高。<br>
+        　　5.如果以上方法都不行，则要作出一些让步，先在Config.sys和Autoexec.bat文件下添加该CD－ROM的驱动程序，然后选择“开始/设置/控制面板/系统/性能/文件系统”，出现“文件系统”对话框后，选择“疑难解答”按钮下的“禁用32位保护模式的磁盘驱动程序”，并确定，重新启动Windows95，在Windows下即可正常使用低速的CD－ROM了。不过，在这种情况下，Windows95是以兼容16位程序的方式运行。系统性能大大降低，一般情况下不推荐使用这种方式。<br>
+        　　6.采用最新版本的操作系统Windows 98以获得最佳性能。在安装Windows 
+        98后，笔者原来在Windows 95下安装不成功的ACER 525倍速光驱，终于顺利安装成功，不再需要在Config.sys中加载旧的驱动程序了，而且读取数据速度明显快了很多，个别以前在Windows 
+        3.2中不能读取的盘片也可以读取了。<br>
+        　　低速CD－ROM虽然读盘速度比较低，但它们具有读盘精确、质量稳定等优点。如果你不忍心丢弃，那么就试试以上这几种方法吧!</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

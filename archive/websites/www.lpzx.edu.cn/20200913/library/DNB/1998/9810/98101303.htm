@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>巧用比例法截取VCD片段</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>巧用比例法截取VCD片段<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　多媒体技术的发展使我们能够用电脑观看VCD节目。如果能将其中任意一段精彩场面截取下来，存放在硬盘中，工作之余看上几眼，确实是一大乐事。我们知道，VCD盘采用了特殊的扇区结构，使DOS下的COPY命令无效。《金山影霸Ⅱ》中的VCDCOPY软件仅能拷贝盘上的整个文件，用它拷贝卡拉OK碟尚可，拷贝文艺节目便显得力不从心。能否截取VCD上任意一段VCD节目呢?我们可以通过以下方法来实现。<br>
+        　　目前的大多数VCD光盘均采用ISO9660格式存放数据。它的每个扇区包含2048字节，一秒钟的VCD节目占75扇区，一分钟占4500扇区。这样一分钟的数据量将为9216M字节。我们可以依此来估算截取节目将占用的硬盘空间。由于VCD节目在光盘上是连续存储的，这样我们就可以采用比例的方法来截取。<br>
+        　<strong>　一、相关文件</strong><br>
+        　　CDUMP.EXE：主截取文件，给定起始扇区和扇区长度即可将光盘上的数据截取到硬盘。<br>
+        　　SCANCD.EXE：用来获取光盘所占用的总扇区数。<br>
+        　　VCDCOPY.EXE：用来获取光盘上节目真正的起始扇区。<br>
+        　　<strong>二、截取方法</strong><br>
+        　　1.使用XING观看VCD节目时，用“File\Open”的方式打开VCD盘上F:\MPEGAV\下的数据文件(通常为MUSIC.DAT或AVSEQ01.DAT)，将长度显示设置为时间显示，记下节目的总时间,确定你想截取的时间范围(以分为单位)。<br>
+        　　2.退出Windows，运行SCANCD，确定文件所占用的总扇区数。<br>
+        　　命令格式为：D:\CDTOOLS\SCANCD F:(假定驱动器F：为光驱)<br>
+        　　3.运行VCDCOPY，确定文件起始扇区。<br>
+        　　命令格式为：D:\CDTOOLS\VCDCOPY F:\MPEGAV\MUSIC.DAT D:\TEMP(路径因个人计算机不同而有差异，使用中请注意调整)<br>
+        　　然后按Ctrl＋Break中断，记下文件起始扇区。<br>
+        　　4.计算所要截取节目的起始扇区和扇区数。<br>
+        　　截取起始扇区=文件起始扇区＋(开始时间÷文件总时间)×(总扇区数－文件起始扇区)<br>
+        　　扇区数=4500×(结束时间－开始时间)<br>
+        　　5.运行CDUMP，截取VCD节目。<br>
+        　　命令格式为：D:\CDTOOLS\CDUMP －R 截取起始扇区 总扇区数 
+        目标文件名</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

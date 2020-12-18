@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>硬盘备份工具HD95COPY使用须知</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+    <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+      <TR> 
+        <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+        HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+        <TD WIDTH="484" HEIGHT="69"> 
+          <P ALIGN="center"><A
+        HREF="http://netfin4.china.com/?adlink|2|CPCW-Front-Top|1|468x60|247MEDIA" TARGET="_top"><IMG
+        SRC="http://netfin4.china.com/?adserv|2|CPCW-Front-Top|1|468x60|247MEDIA" BORDER="0"
+        WIDTH="468" HEIGHT="60"></A><BR>
+            中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+        </TD>
+      </TR>
+    </TABLE>
+    <table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>硬盘备份工具HD95COPY使用须知</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　由于有了硬盘备份工具(硬盘克隆工具)，所以几分钟重装一遍Win95已不是神话,HD95COPY(FAT32CP)就是个简单、通用性好的备份工具，用它进行备份和还原的操作均不超过三步：第一步起一个文件名；第二步选择要备份的驱动器；第三步点一下“BACKUP”按钮，备份就完成了。还原备份也是同样简单。还可以用以下命令行执行：<br>
+        　　HD95COPY /D=C /F=d:\aaa /B (将C盘上的内容备份到D盘，文件名是aaa)<br>
+        　　HD95COPY /D=C /F=d:\aaa /Y (将C盘上aaa的备份内容还原到D盘。)<br>
+        　　要充分用好HD95COPY(FAT32CP)的功能，请注意以下问题：<br>
+        　　1.HD95COPY用于FAT16硬盘的复制，如果硬盘分区是FAT32，请用FAT32CP，其用法与HD95COPY完全相同。<br>
+        　　2.HD95COPY在纯DOS下使用，完全支持Win95长文件名，DOS版本要求在5.0及以上。FAT32CP自然要在支持FAT32的DOS版本下运行，即Win95 
+        OSR2和Win98的DOS环境(版本7.1)。<br>
+        　　3.备份的硬盘和还原的硬盘大小没有必要完全一样，但因为HD95COPY是按簇复制的，所以备份硬盘和还原硬盘的簇的大小必须完全相同。当硬盘分区的大小为128M－255M、256M－511M、512M－1023M或1024M以上时，这些硬盘分区簇的大小是一样的，可以互相备份。FAT32硬盘的簇都是4KB，所以在FAT32硬盘之间可以通用，也就是说，使用FAT32CP就象使用COPY命令一样通用。<br>
+        　　4.存放备份文件的介质没有限制，可以是软盘、ZIP盘、刻录光盘等，也可以是任何一台联网工作站。<br>
+        　　5.在备份和还原之前，建议对硬盘进行检查并整理硬盘碎片，如果硬盘有坏扇区，HD95COPY可能进行不下去，或者在还原时出错。还有一个建议是将硬盘分区表转换为FAT32，这样备份和还原不用考虑硬盘簇的大小。转换FAT的工具建议使用Partition 
+        Magic 4.0，它是一款使用极为方便的硬盘分区软件。<br>
+        　　6.HD95COPY不是Win95应用软件，不用在Win95上进行安装，只要复制下来就行了。其程序文件仅160KB，因此可以将其拷贝到一张引导盘上，用软盘引导计算机，然后进行备份或还原。<br>
+        　　7.用HD95COPY备份后，可以按程序界面中的“Verify”按钮进行校验，但FAT32CP暂时没有这个功能。<br>
+        　　8.C盘备份的内容可以顺利地还原到D盘，但使用时有时会出错，这大多不是HD95COPY的问题，因为被还原的内容可能有INI文件或注册表，INI文件或注册表中可能包含有路径信息，所以建议备份和还原在同一个分区中进行。<br>
+        　　9.HD95COPY是对硬盘一个分区进行备份，所以不能把备份文件放在要备份的分区。比如，你不能在备份C盘时，将备份文件放在C盘的某个目录下，而必须是另一个分区或存放在其它介质上。<br>
+        <strong>(山东　王肖杰)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月29日第12期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+    <DIV ALIGN="center">
+      <CENTER>
+      </CENTER>
+    </DIV>
+    <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+    <NOSCRIPT> 
+    <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+    </NOSCRIPT> 
+  </center></div>
+</body>
+</html>

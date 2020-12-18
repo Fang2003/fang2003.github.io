@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>ActiveX控件在Excel97中的运用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">Excel97在工作表或图表上可使用ActiveX控件，根据我使用的体会，在工作上处理控件时，必须注意和了解如下事项：</font> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#369681"><strong> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (一)用Excel5.0/95工作簿文件格式保存Excel97工作簿时，将选择ActiveX控件信息</strong>。当用户通过双击鼠标来编辑内嵌在其它应用程序文档中的Excel97工作簿时，该工作簿上的控件将不会正常工作。如果用户是通过用右键单击工作簿，然后选中快捷菜单上的“打开”命令来编辑工作簿的话，工作簿上的控件就能正常工作了。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"><strong>(二)当ActiveX控件处于激活状态时，将禁用某些MicrosoftExcelVisualBasic方法和属性</strong>。例如，当某一控件激活时，就不能使用Sort方法，故下述按钮单击事件处理过程中的代码将失败(因为用户单击按钮后，该按钮就处于激活状态)。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">PrivateSubCommandButton1Click<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Range(″a1:a10″)SortKey1:=Range(″a1″)<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">EndSub<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">解决办法是通过选激活工作表上其它元素的方法来绕过这种问题。例如，可用下列代码对单元格区域排序：</font> 
+        &nbsp; <br>
+        &nbsp;&nbsp;&nbsp; <font color="#369681">PrivateSubCommandButton1Click<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Range(″a1″)Activate<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Range(″a1:a10″)SortKey1:=Range(″a1″)<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">CommandButton1Activate<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">End Sub<br>
+        </font>&nbsp;&nbsp; <strong> <font color="#369681">(三)在MicrosoftExcel中，用OLEObjects集合中的OLEObject对象代表ActiveX控件</strong>。如果要用编程的方式向工作表添加ActiveX控件，可用OLEObjects集合的Add方法。例如向第一张工作表添加命令按钮。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Worksheets(1)OLEObjectsAdd″FormsCommandButton1″，_<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Left:=10,Top:=10,Height:=20,Width:=100<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">因为ActiveX控件也可用OLEObjects集合中的OLEObject对象代表，所以也可用该集合中的对象来设置控件的属性。例如要设置控件“CommandBotton1”的“左边位置”属性。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Worksheets(1)OLEObjects(″CommandButton1″)Left=10<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">那些不属于OLEObject对象属性的控件属性，可通过由Object属性返回的实际控件对象来设置。例如要设置控件“CommandButton1”的标题。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Worksheets(1)OLEObjects(″CommandButton1″)<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">ObjectCaption=″runme″<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">因为所有的OLE对象也是Shapes集合的成员，所以也可用该集合设置若干控件的属性。例如要对齐第一张工作表上所有控件的左边框。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">ForEachsInWorksheets(1)Shapes<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">IfsType=msoOLEControlObjectThensLeft=10<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">Next<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">请注意，当在控件所在工作表的类模块之外使用控件的名称时，必须用工作表的名称限定该控件的名称。在工作表上ActiveX控件的事件处理过程中，Me关键字所指向的是工作表，而非控件。<strong>(江苏 
+        周奎)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

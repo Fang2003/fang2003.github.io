@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>双硬盘安装记</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+      <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+        <TR> 
+          <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+          <TD WIDTH="484" HEIGHT="69"> 
+            <P ALIGN="center"><A HREF="http://vote.cpcw.com" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/images/ad/vote.gif" BORDER="0" WIDTH="468" HEIGHT="60"></A><BR>
+              中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+          </TD>
+        </TR>
+      </TABLE>
+    </center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><div align="center"><center><table
+    border="0" width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>双硬盘安装记</strong></font> </td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/bkgrd.gif">　　计算机技术的迅猛发展，使得硬盘的容量也一年一个样。不久以前还显得“宽敞”的硬盘，随着操作系统的升级以及应用软件的增加，已显得捉襟见肘、难于应付了。此时，添加第二硬盘似乎成了最佳选择。我在安装双硬盘时遇到一些问题，经过一番摸索后终于柳暗花明，现写出来与朋友们探讨一下，希望对加装第二硬盘的朋友有所帮助。<br>
+        　　所选加装第二硬盘的机器配置为：奔腾166 CPU、华硕T2P4主板，一直在83×2跳线方式下运行正常。原硬盘为昆腾大脚2.1G，分为C盘和D盘，加装的硬盘为昆腾火球6.4G(七代)。为方便安装，在经销商处将新硬盘分区及格式化(分为C盘及D盘)。新老硬盘均选择FAT32模式，考虑到新硬盘速度较快，所以打算将其做主盘，原硬盘做从盘，分区时将新硬盘的C盘作为引导盘。<br>
+        　　回家打开机箱，挂上硬盘，主从盘跳线设置完毕，修改好CMOS参数后重新启动，原以为应该一切OK。可谁知竟折腾了半天，还拔坏了一根硬盘线。<br>
+        　　首先将新硬盘固定好后，将原硬盘设置为从盘。检查连线无误后开机，顺利进入DOS，可无论如何找不到E盘(新硬盘的D盘)、F盘(老硬盘的D盘)，这是遇到的第一个问题。分区找不到，应该和系统别的部件没关系。于是，从分区上着手检查，怀疑新硬盘分区未分好，由于原硬盘上有重要资料，为以防万一，将原硬盘拔下，重新设置CMOS参数，开机进入DOS后，果然，在未挂从盘的情况下，D盘也找不到，因此确定新硬盘分区未分好。重新分区、格式化，再将从盘装回，开机，一切正常。第一问题迎刃而解。<br>
+        　　接下就是安装操作系统了(正版Windows 95 OSR2)，执行SETUP安装程序后，开始检查各个驱动器，未发现异常，提示继续安装，可每次均回到DOS状态的Windows 
+        95的目录下，无法安装Windows 95。过去也多次安装过操作系统，均未发现此类问题，况且是正版软件，本身不会有问题，由于是在加装了第二硬盘后才出现这种现象，于是判断一定和加装第二硬盘有关。<br>
+        　　仍采用拔插法，将老硬盘卸下，单独进行新硬盘操作系统的安装，故障现象依旧。为判定故障是否和别的硬件相关，又将新硬盘卸下，将老硬盘设置为主盘后重新装回，启动机器进入Windows 
+        95，一切正常(老硬盘上Windows 95此时未删除)。说明故障与别的硬件无关，问题一定出在新加的硬盘上，可昆腾硬盘一向以质量可靠、性能稳定而著称，况且是新盘，不会有质量问题。以前听说过安装Windows 
+        95时，任何分区上都不能有WIN.COM、WIN386.EXE两个文件，否则无法安装，可老硬盘卸下后仍旧不能解决问题，说明也不是这个原因。但作为一种摸索，还是试一试，将新老硬盘一并挂上，设置好参数，将老硬盘的C盘格式化，结果很令人失望。此时，真有山重水复疑无路的感觉。忽然想到了超频，这可是原本未考虑的问题，不是有资料显示昆腾硬盘可以稳定工作在133MHz外频下吗?此时机器的外频才83MHz啊!怎么可能呢?没办法，反正死马当活马医，试一试，将CPU跳线改为标准设置66×2.5，重新开机安装Windows 
+        95，熟悉的安装画面出现在屏幕上，整个安装过程顺利完成。至此，双硬盘安装成功。<br>
+        　　机器又开始工作了，是以无法超频为代价，有以下一些体会：<br>
+        　　1.超频是关系到系统能否稳定工作的主要原因，DOS和Windows对系统要求有较大差别，前者可顺利引导不等于后者也能顺利引导，由于安装了双硬盘，且在同一个IDE口上，这对系统外频要求提高了。在安装双硬盘时如系统不太稳定，应首先考虑超频的影响。换言之，虽然这个硬盘的超频性能非常优良，但加装了双硬盘后会直接影响到系统的超频性能。关于这一点，我也试过，在66MHz外频下将系统安装完毕后(此时机器能顺利引导至Windows 
+        95)，再将跳线改为83×2，系统则无法引导至Windows 95，再将老硬盘卸下，新硬盘在83MHz下工作正常。<br>
+        　　2.结合以往升级内存及超频的经验，可以总结出：硬盘速度的快慢是影响整个系统速度的首要因素。也就是说，造成系统瓶颈的顺序首先是硬盘的速度，然后是总线频率，再者为内存，最后才是CPU，由于昆腾火球七代采用了更先进的技术和更大容量的高速缓存，在这台机器上，尽管将外频降低了，但整机速度已比以往有明显提高。原来启动Photoshop 
+        5.0需四十多秒，现在只需二十五秒，要知道，这只是普通奔腾166 CPU啊!<br>
+        <strong>(浙江　庞健)</strong><p align="right"><font COLOR="#000000">本文出自：<a
+        href="index.htm">《电脑报》1999年04月12日第14期</a></font> </td>
+      </tr>
+    </table>
+    </center></div><div ALIGN="center"></div><script>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</script>
+<NOSCRIPT>
+
+    <dd ALIGN="center"><a
+      HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><img
+      SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+      WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></a></dd>
+</NOSCRIPT>
+    </div>
+			<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+			<A HREF="http://www.sitemeter.com/stats.asp?site=pcwno" TARGET=_blank>
+			<NOSCRIPT>
+				<IMG SRC="http://www.sitemeter.com/meter.asp?site=pcwno" ALT="Site Meter" NoSave BORDER=0 WIDTH=20 HEIGHT=20>
+			</NOSCRIPT>
+			<SCRIPT LANGUAGE="JavaScript">
+				document.write("<img src="http://www.lpzx.edu.cn/library/DNB/1999/9914/%5C%22http:/www.sitemeter.com/meter.asp?site=pcwno&amp;refer=%22+escape(document.referrer)+%22&amp;hours=%22+(new" Date()).getHours()+"&minutes="+(new Date()).getMinutes()+"\" BORDER=0 ALT=\"Site Meter\" WIDTH=20 HEIGHT=20>");
+			</SCRIPT>
+			</A>
+			<!--WEBBOT bot="HTMLMarkup" Endspan -->
+</td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

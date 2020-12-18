@@ -1,0 +1,67 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>专 家 坐 堂</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#480024"><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><strong><font color="#FFFFFF">专 家 坐 堂</font></strong></big></big></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="center"><font color="#000000"><span
+        style="line-height: 1.5">　　<strong>重新分区的方法</strong></span></font></p>
+        <p class="ourfont"><font color="#000000"><span style="line-height: 1.5">　　湖北读者张德明问：我的电脑是去年6月份购买的，配置如下：AMD 
+        K6 233、VP3主板、32M SDRAM、带4M显存的9750显卡、CMI8330声卡、昆腾火球3.2G硬盘、Sony 
+        24倍速光驱、NEC 1.44M软驱，系统为PWIN97升级到PWIN98。该机在使用过程中出现了如下一些奇怪的问题，请专家帮助解答。<br>
+        　　1．该机在MS－DOS方式下使用DIR列目录时随机性死机，具体情况是用DIR/P或不加参数时出现死机，但有时又一切正常。我怀疑是因为DIR病毒作怪，用AV98、KILL8301检查无病毒，用KV300查毒，读到一个文件时无法通过，必须选忽略才能继续。<br>
+        　　2．该机自安装WIN98后格式化的软盘无法用于DOS6.22的安装，当屏幕提示插入一张软盘作启动盘时插入WIN98格式化的软盘后总是提示“该盘无法使用”，换一张盘也一样，但该软盘在WIN98中使用一切正常。难道WIN98格式化的盘不能被DOS6.22识别？<br>
+        　　3．这是我觉得最奇怪的问题，不知为何最近试图删除原先分区（C、D两个分区，各1.6G）时总是提示“无法删除该分区”，即C和D区任何一个都无法删除，而我想将硬盘重新划为一个C区来使用。<br>
+        　　4．当我用WIN98中带的FAT32转换器转换时总是出现“该计算机已安装了系统控制程序，请先移去再进行转换”。<br>
+        　　5．我有一个Power DVD解压软件，手头的VCD2.0版光碟播放一切正常，但有些VCD却不能播放，系统提示“找不到光盘中的文件”，改用超级解霸3.0也只能用文件格式播放，请问是不是Power 
+        DVD不能识别这些光盘？<br>
+        　　答：1．可能引起第一个问题的原因有：硬盘出现物理故障或存储的数据有错，你可以运行Scandisk来对硬盘进行全面检查，修复各种逻辑错误，如果在检查磁盘表面过程中出现长时间停顿，那么表明硬盘有坏磁道；部分系统文件遭到破坏，必要时请重新安装系统；系统感染了病毒，请用最新版的杀毒软件来检查，另外补充一点，DIR病毒已经非常古老了，目前几乎完全绝迹，所以你遇到它的概率非常小。<br>
+        　　2．首先说明，WIN98格式化的软盘能够在DOS6.22下使用。DOS6.22在安装时要求插入已格式化的空白盘，如果你用WIN98格式化软盘时复制了系统文件，或者软盘上有坏扇区，或者用DriveSpace压缩过，那么该盘的自由空间可能不能满足DOS6.22安装程序的要求，因此它会给出“无法使用”的提示。<br>
+        　　3．在使用FDISK删除包括系统所在分区的所有分区时，最好从软盘启动并运行FDISK，先删除扩展分区中所有逻辑盘，然后删除扩展分区，最后才能删除主分区。在删除每个逻辑盘时，必须正确输入该盘的卷标才能进行下去，这是FDISK为了防止误操作而专门设计的一项功能。另外，如果某个分区使用DriveSpace压缩过，那么FDISK也不允许直接删除该分区，事先必须解压缩该分区。<br>
+        　　4．这句提示表明系统中安装有与FAT32不兼容的磁盘工具，最有可能是DriveSpace或者第三方的压缩工具。如果是的话请对硬盘进行解压，或者卸载不兼容的磁盘工具软件，然后再进行转换。当然，如果你准备直接对硬盘分区，那么在刚进入WIN98的FDISK时选择允许FAT32格式，此后只要分区容量大于512MB，FDISK会自动对该分区使用FAT32。<br>
+        　　5．尽管VCD使用的都是MPEG I压缩算法，但目前存在多种版本的VCD，这些版本在如何组织光盘上的文件、提供何种节目菜单等问题上的规定不太一样，能够识别包括非标准格式在内的所有VCD版本的播放软件并不多见。此外，有些光盘实际上并未按照任何版本的VCD格式来组织光盘文件，而仅仅是把影像数据文件直接拷贝到光盘中，对于这样的光盘来说只能通过手工选择文件来播放。</span></font></p>
+        <p class="ourfont" align="center"><font color="#000000"><span style="line-height: 1.5"><strong>台式机、便携机对接异常的处理</strong></span></font></p>
+        <p class="ourfont"><font color="#000000"><span style="line-height: 1.5">　　陕西读者刁宏伟问：有两台机器的配置如下，台式机：K6－266、32M内存、4.3G硬盘、24倍速光驱，装有WIN98，硬盘没有进行32位的文件转换；便携机：5x86 
+        133、4M内存、810M硬盘，装有DOS 6.22和Windows3.1。我利用并口线将两机相联，并使用了DOS 
+        6.22下的Interlnk和Intersvr程序。但用DOS 6.22启动台式机时所有硬盘分区均为无效。用WIN98格式化并制作的系统软盘，拷入DOS 
+        6.22的Interlnk 和 Intersvr两个文件后，用此盘启动台式机能够读出硬盘。但是又出现了另一个问题：台式机在此状态下作为服务器时原来均大于1G的三个硬盘分区都显示为268MB，并且在便携机（客户机）中读出的台式机硬盘文件名均为单个怪字符，如！、◆等等，文件长度也变为几个字节到1024个字节不等。但是用便携机作为服务器而台式机作客户机时一切正常，不知是何原因？<br>
+        　　此便携机在安装PWIN97时总出现一般性的安装错误，并且错误位置不同，按“确定”后自动退出安装，怀疑是内存太小不能正常安装，但是用MEM命令显示有3.8M的自由内存空间，大于安装所需的2.8M内存，请问是何原因？<br>
+        　　答：从你描述的现象来看，很有可能你在台式机中安装WIN98时使用了WIN98的FDISK来分区，在缺省选项下，该FDISK会自动把大于512M的硬盘分区设置成FAT32格式，因此，即使你没有进行过到32位文件系统的转换，但硬盘分区已经是FAT32格式了。在资源管理器中左边的树形窗口中，选中驱动器符并查看其属性，属性对话框中便会显示出此驱动器的文件系统是FAT32还是FAT（即FAT16）。由于DOS 
+        6.22不支持FAT32文件系统，因此用DOS 6.22系统盘启动机器时，台式机上的硬盘分区均无效。而用WIN98格式化并制作的系统软盘支持FAT32格式，因此用它启动台式机能够认识各硬盘分区。当使用Interlnk和Intersvr通过两机的串口或并口通信时，服务器只向客户机提供自己的驱动器的少量信息以完成映射到客户机上的功能，而当客户机要读写服务器上的硬盘时，服务器只完成物理扇区的读写，而不通过自己的文件系统来解释所读出的内容，这些解释工作将由客户机自己完成。显然，便携机中的DOS 
+        6.22仍然不能识别台式机上的FAT32格式，所以使用便携机作客户机时，不能正确读出台式机上三个硬盘的大小，并且出现文件名中有怪字符及文件大小不正确的现象。而使用台式机作客户机时，台式机的WIN98系统能够顺利解释便携机上的FAT16文件系统，因此一切正常。<br>
+        　　第二个问题的原因应该正如你所怀疑的那样，你的便携机内存容量太小了。当初WIN95推出时曾称能在只有4MB内存的机器上安装并运行，但即使在有8MB内存的机器上，WIN95也运行得不怎么顺畅，问题很多。WIN97和WIN98比WIN95要求内存更多一些，而中文版则又要比同版本号的英文版要求内存多一些。因此，你的便携机不宜安装PWIN97。</span></font></p>
+        <p align="right"><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

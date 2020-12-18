@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 局域网连接internet的三种方式</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/loga.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>39 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 局域网连接internet的三种方式</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 局域网连接internet的三种方式 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　随着电脑的普及，人们上网的需要也增加了，有的是办公室实验室中几台PC要同时拨号上网，有的是家里两台电脑要一起上网，有的则是局域网用户共用MODEM上网。有没有办法让所有用户以共享方式上网呢?当然有，我们可以针对不同的要求采取三种不同的方式连上Internet。
+<p><b>　　一、使用共享拨号软件</b></p>
+　　办公室、家庭上网基本上以浏览为主，那么采用这种共享拨号服务的软件最方便。它简便易用并且花费很少。这种软件实在太多了，有许多虽然功能繁多，但是设置繁琐，使用不便。经过多种对比选择，我们推荐wingate(http:∥wwwwingatenet)与pppsharlite(http:∥pppindiacom/int/pppshar)。wingate功能很多，设置也简单，并且支持ISDN适配器，但缺点是它的未注册版本只支持两个用户同时上网，并且只有30天试用期。pppsharlite功能虽少，但对主要上网浏览的用户来讲已足够了，且它的未注册版支持六个用户同时上网，还没有试用期。<br>
+　　下面讲一下pppsharlite配置中应注意的问题。<br>
+　　1先安装浏览器，再装pppsharlite。<br>
+　　2在“服务器”(即装有MODEM和pppsharlite的PC)中MODEM是拨号适配器，网卡是网络适配器，TCP/IP对二者进行了绑定，决不可给它们设置相同的IP地址。<br>
+　　3在“控制面板”中双击“网络”，打开后点击“TCP/IP网络适配器”，点击“属性”出现“IP地址”标签，选定“指定IP地址”，在“IP地址”栏中填入“19216801”，在“子网掩码”栏中填入“2552552550”。<br>
+　　选择“DNS配置”标签，选择“启用DNS”，在“主机名”和“域”栏中填入ISP提供的IP地址，其他可以缺省，最后点击确定。<br>
+　　点击“TCP/IP拨号网络适配器”，点击属性，在“IP地址”标签中选择自动获得一个地址。<br>
+　　3在客户机上的设置<br>
+　　在“TCP/IP网络适配器”中的“IP地址”中，填入19216802，第二台设为19216803，依次类推。<br>
+　　在“DNS配置”中“主机名”为“服务器”名，“域”空缺，在“服务器”中搜索顺序中添入“服务器”的IP地址即19216801，共享缺省。<br>
+　　在浏览器中，选查看菜单中Internet选项，选择“连接”，选中“通过局域网接到Internet”，再选“通过代理服务器访问”。单击高级，其中“http”、“FTP”、“socks”、“secrve”地址填上19216801，端口前三个为80，socks为1080。<br>
+<p><b>　　二、使用Internet访问共享服务器</b></p>
+　　有的单位用户很多，需要高的速率，并且可能有扩展要求，可以采用Internet访问共享服务器(简称共享器)。这里的共享器指的是那些可以实现局域网中共享电话线与调制解调器上网的网络设备。<br>
+　　我们实验室采用了某公司的组合式网络通共享器。它可支持一到三个MODEM，也可支持ISDN，速率可达到168～192kbps。它可与1－4台集线器或交换机连接，支持253个用户同时使用。<br>
+　　我们现在使用一只56K的MODEM，支持10多台PC，感觉还可以。它采用Web式管理，可以很方便地设置，可惜是英文界面。
+<p><b>　　三、使用Proxy代理服务器</b></p>
+　　Intranet是指在企业内部网中使用了Internet技术，可以向内部用户提供www服务、E－mail服务等，可以以Web方式动态管理数据库。Intranet用户如果以直接方式进入Internet，一是安全不易保证，二是紧缺的IP地址容易浪费，这时可以采用Proxy代理服务器。Proxy代理服务器直接与Internet相连，占用一个IP地址，而Internet用户由它分配一个IP地址(即内部虚拟IP)，这时的Internet用户是直接与Proxy服务器相连，通过它间接访问Internet，享受Internet服务。由于未与Internet直接相连，保证了安全，Proxy服务器起到了防火墙的作用，并且节约了IP地址。<br>
+　　建立Proxy服务器必须装代理服务器软件，我们以Microsoft的Proxy servier 20为例，指出安装时要注意的事项。<br>
+　　1使用两块网卡<br>
+　　在Proxy服务器中使用两块网卡，一块占用真实IP地址，与Internet连接，一块使用虚拟IP地址与Intranet相连，并由它给用户分配虚拟IP地址，通过这两块网卡实现Internet与Intranet的连通。<br>
+　　2客户机使用虚拟IP地址<br>
+　　客户机占用的虚拟地址在设置时应注意必须是在Proxy服务指定范围内的。<br>
+　　3Proxy server与Proxy client<br>
+　　Proxy代理服务器中安装Proxy server 20后，还要给客户机安装Proxy client以实现客户机与服务器的连通，客户机应为Windows 95或Windows NT workstation工作站。<br><b>(河北　孙鹏　杨秀丹)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/39/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99393902.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

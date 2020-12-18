@@ -1,0 +1,244 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>VB中Winsock控件实现远程数据库查询</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第06期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{VB中Winsock控件实现远程数据库查询}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 你可能已经习惯了在自己的电脑中查询本机数据库中的信息，但当你身处异地想获得一位客户的详细资料时你该怎么办呢？这时你就要借助远程数据库查询软件才能实现了。下面本文将介绍如何利用Visual 
+              Basic来编写远程数据库查询软件。<br>
+              编程思路：客户端利用Winsock的SendData 方法将待查内容发送到服务器端，服务器端利用data控件对数据库进行查询，最终利用Winsock的SendData 
+              方法将查询结果发送到客户端。<br>
+              绘制窗体：<br>
+              一、服务器端<br>
+              新建一个工程在窗体中加入：<br>
+              Winsock控件，名称为sckServer，procotol为scktcpprocotol<br>
+              DATA控件，名称为data1 connect为Access，databasename为D:\shenfen.mdb<br>
+              shenfen.mdb包含姓名、性别、身份证、民族、地址5个字段其类型均为文本。<br>
+              TEXTBOX控件，共加入6个TEXTBOX控件名称为TEXT1—TEXT6，其中TEXT2—TEXT6分别与DATA1控件中的各字段相关联<br>
+              二、客户端<br>
+              新建一个工程在窗体中加入：<br>
+              winsocK控件名称为sckClient，procotol为scktcpprocotol<br>
+              TEXTBOX控件，共加入两个TEXTBOX控件名称为TEXT1—TEXT2<br>
+              COMMANDBUTTON控件，名为cmdSendData<br>
+              程序源码：<br>
+              1.服务器端<br>
+              Option Explicit<br>
+              Private retname As String<br>
+              Private retsex As String<br>
+              Private retold As String<br>
+              Private all As String<br>
+              Private Sub Command1＿Click<br>
+              Print all<br>
+              End Sub<br>
+              Private Sub Form＿Load<br>
+              sckServer.LocalPort ＝ 1975 ＇设置端口号<br>
+              sckServer.Listen ＇开始监听1975号端口<br>
+              ＇读取当前服务器信息并显示<br>
+              MsgBox ″服务器的IP地址为：″ ＆ sckServer.LocalIP vbOKOnlx″提示″<br>
+              MsgBox ″服务器的名称为：″ ＆ sckServer.LocalHostName vbOKOnlx″提示″<br>
+              End Sub<br>
+              Private Sub Form＿UnloadCancel As Integer<br>
+              If sckServer.State &lt;&gt; sckClosed Then sckServer.Close<br>
+              ＇退出时中断连接<br>
+              End Sub<br>
+              Private Sub sckServer＿ConnectionRequestBxVal requestID As Long<br>
+              ＇当新的连接请求来到时，检查是否已经与其他计算机建立过连接，<br>
+              ＇如果已经连接关闭连接<br>
+              If sckServer.State &lt;&gt; sckClosed Then sckServer.Close<br>
+              ＇建立新的连接如果使用控件数组，<br>
+              ＇则可以在不关闭当前连接的情况下与多台计算机建立连接<br>
+              sckServer.Accept requestID<br>
+              End Sub<br>
+              Private Sub sckServer＿DataArrivalBxVal bxtesTotal As Long<br>
+              Dim Received As String<br>
+              Dim jj As String<br>
+              Dim ww As String<br>
+              ＇当有数据来到时将数据保存在Received中并显示<br>
+              sckServer.GetData Received vbString<br>
+              Text1.Text ＝ Received<br>
+              ww ＝ MidReceived 3<br>
+              jj ＝ MidReceived 1 2<br>
+              ＇判断待查字段<br>
+              If jj ＝ Chr33 ＆ Chr33 Then GoTo shefen<br>
+              Data1.Recordset.FindFirst ″姓名 ＝ ＇″ ＆ ww ＆ ″＇″<br>
+              GoTo last<br>
+              shefen Data1.Recordset.FindFirst ″身份证 ＝ ＇″ ＆ ww ＆ ″＇″<br>
+              last retname ＝ Text1.Text<br>
+              retsex ＝ Text3.Text<br>
+              retold ＝ Text4.Text<br>
+              If Data1.Recordset.NoMatch Then<br>
+              all ＝ ″″<br>
+              Else<br>
+              all＝Text6.Text＋Text2.Text＋Text3.Text＋Text4.Text ＋ Text5.Text<br>
+              End If<br>
+              sckServer.SendData all<br>
+              ＇将符合条件的纪录的所有字段信息打包发回客户端,字段间可用特殊字符隔开以便客户端处理<br>
+              End Sub<br>
+              2.客户端<br>
+              Option Explicit<br>
+              Private SendTime As Integer<br>
+              Private name1 As String<br>
+              Private sex As String<br>
+              Private old As String<br>
+              Private Sub cmdSendData＿Click<br>
+              Dim jwx As String<br>
+              name1 ＝ ″″<br>
+              sex ＝ ″″<br>
+              old ＝ ″″<br>
+              If Text1.Text &lt;&gt; ″″ Then<br>
+              name1 ＝ Chr63 ＆ Chr63 ＆ Text1.Text<br>
+              ＇将待查姓名前加入两个Chr63使服务器端可判断待查字段为姓名<br>
+              ElseIf Text2.Text &lt;&gt; ″″ Then<br>
+              name1 ＝ Chr33 ＆ Chr33 ＆ Text2.Text<br>
+              ＇将待查姓名前加入两个Chr33使服务器端可判断待查字段为身份证号<br>
+              Else MsgBox ″输入不得为空″  ″警告″<br>
+              End If<br>
+              sckClient.SendData name1<br>
+              ＇发送name1<br>
+              End Sub<br>
+              Private Sub Form＿Load<br>
+              ＇远程主机名可在“控制面板－网络－标识”中查到或输入服务器的IP地址<br>
+              sckClient.RemoteHost ＝ ″jwx″<br>
+              sckClient.RemotePort ＝ 1975 ＇设置远程端口与服务器端一致<br>
+              ＇开始连接<br>
+              sckClient.Connect<br>
+              Do<br>
+              DoEvents<br>
+              Loop Until sckClient.State ＝ sckConnected Or ＿<br>
+              sckClient.State ＝ sckError<br>
+              ＇监测连接状态<br>
+              If sckClient.State ＝ sckError Then<br>
+              MsgBox ″无法连接到服务器″ 48 ″提示″<br>
+              cmdSendData.Enabled ＝ False<br>
+              GoTo sj<br>
+              End If<br>
+              MsgBox ″成功连接到服务器：″ ＆ sckClient.RemoteHostIP vbOKOnlx ″提示″<br>
+              sj<br>
+              End Sub<br>
+              Private Sub Form＿UnloadCancel As Integer<br>
+              If sckClient.State &lt;&gt; sckClosed Then sckClient.Close<br>
+              End Sub<br>
+              Private Sub sckClient＿Close<br>
+              ＇关闭连接<br>
+              sckClient.Close<br>
+              cmdSendData.Enabled ＝ False<br>
+              End Sub<br>
+              Private Sub sckClient＿DataArrivalBxVal bxtesTotal As Long<br>
+              Dim Received As String<br>
+              ＇当有数据来到时将数据保存在Received中并显示<br>
+              sckClient.GetData Received vbString<br>
+              Text1.Text ＝ Received<br>
+              cmdSendData.Enabled ＝ False<br>
+              End Sub<br>
+              Private Sub Text1＿Change<br>
+              cmdSendData.Enabled ＝ True<br>
+              End Sub<br>
+              Private Sub Text2＿Change<br>
+              cmdSendData.Enabled ＝ True<br>
+              End Sub<br>
+              关于Winsock控件的详细使用方法请参考MSDN，本程序调试环境：Win98第二版，Access 97 Visual Basic6.0企业版。 
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

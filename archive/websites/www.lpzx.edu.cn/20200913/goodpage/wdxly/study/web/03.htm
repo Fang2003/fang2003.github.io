@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<title>在网页中加入菜单</title>
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="90%">
+
+<tr>
+<td width="100%"><table border="0" width="100%">
+<tbody>
+<tr>
+<TD width="100%" align="center"><span class="text11" style="COLOR: rgb(252,177,3)">在网页中加入菜单<br>
+</span>
+
+</tbody>
+</table>
+<table border="0" width="100%">
+<tbody>
+<tr>
+<td width="100%"><span style="font-size: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+没想过在你的网页中加入菜单吗?你实在应该试一试,让鼠标移动或点击页面上的菜单栏时象WINDOWS那样弹出一个下拉菜单,噢!&quot;这个世界清静了&quot;。下面说一说几种常用的菜单设计方法。<br>
+<br>
+1.采用图层的方式来设计菜单<br>
+<br>
+　　效果：
+当鼠标移动上去时弹出相应的子菜单，离开菜单条或点击子菜单选项后及时关闭所有的子菜单。<br>
+<br>
+　　先创建一个LAYER &quot;MENUBAR&quot;作为你的菜单栏，Z-INDEX：2，在LAYER
+“MENUBAR”中加入表格，规定好菜单条内容比如有三项，每项对应一个LAYER
+MOREMENU#，并将之隐藏，在菜单条中定义相应事件ONMOUSEOVER，使子菜单SHOW出来，在子菜单MOREMENU#中定义相应的链接和属性隐藏，并且定义事件ONMOUSEUP以关闭子菜单。然而这样做的结果是，当鼠标打开了一个子菜单，而又没有点击其中的链接，子菜单就会在页面中保留下来，只有重新在菜单中激活ONMOUSEOVER才能关闭。这未免有点遗憾,在新网ChinaDns.com的主页中(
+http://www.chinadns.com/)中采用了在子菜单MOREMENU#中加入一个链接（右上角的那个黑叉）来关闭子菜单，这也是一种解决方法。不过这种方法你必须要完成鼠标点击的操作，怎样完成鼠标移动后的自动关闭呢？实际上你只需要在LAYER
+“MENUBAR”的下面紧接着再定义一个LAYER
+，高度只需要很小，宽度则要与你的MENUBAR一样宽，Z-INDEX：1（只要比LAYER
+”MENUBAR“的Z-INDEX值小就行)，在其中定义事件ONMOUSEOUT为关闭各个子菜单。这样在页面中这个LAYER是看不见的，当你的鼠标离开MENUBAR或是MOREMENU#后，实际上你的鼠标首先要经过这个LAYER，开始执行它的ONMOUSEOUT。这样你就不用担心这些子菜单老是留在网页上碍眼了。<br>
+<br>
+　　效果：类似于TAB的菜单栏<br>
+<br>
+　　先要做好大小一样的图标，将它按TAB的形状排列，在它的下面设计好数个图层，大小都一样，位置也都一样，这样就产生了重叠效果，将对应于TAB1的图层LAYER1先设为SHOW，以作为默认的层面，而其它的则隐藏。在TAB1的图片中设置ONMOUSEUP，将LAYER1显示，其它隐藏，在TAB2的图片中同样设置ONMOUSEUP，将LAYER2显示，而其它隐藏，以此类推。当然你还可以顺便把TAB的图片换一换，不过最好大小不变。<br>
+<br>
+2.采用表格的方式来设计菜单<br>
+<br>
+　　效果：当点击菜单栏时,自动向下或是向右展开子菜单项,而相邻的菜单向下向后顺延,再点击还原。<br>
+<br>
+　　首先创建一个COL 1，ROW 2的表格，第一行作为菜单栏，在第二行中再创建一个COL
+1，ROW X的表格，这里关键是要定义第二个表格的ID和STYLE的DISPLAY属性，例如将ID定为MENU1，STYLE
+的DISPLAY属性则必须定为NONE，因为要将它先隐藏起来。现在你要head之间定义一个函数，就象下面这个样子：<br>
+&lt;script lanuage=&quot;JavaScript&quot;&gt;<br>
+function changemenu(tablemenu)<br>
+{<br>
+if (tablemenu.style.display==&quot;none&quot;) <br>
+tablemenu.style.display=&quot;&quot;;<br>
+else<br>
+tablemenu.style.display=&quot;none&quot;;<br>
+}<br>
+&lt;/script&gt;<br>
+好了，现在来定义第一个表格第一行菜单栏的功能了，在这行表格的td中加入代码，就象这样<br>
+&lt;td language=&quot;javascript&quot;onmouseup=&quot;change(menu1);&quot;
+height=&quot;32&quot;&gt;菜单栏&lt;/td&gt;<br>
+保存页面，在浏览器中看看，点击菜单栏下面的菜单项就弹出来了。嗯，没有了手的形状，不要紧，在上一行代码的td后面加上一句style=&quot;cursor:hand&quot;。<br>
+<br>
+<br>
+3.采用帧页的方式来设计菜单<br>
+<br>
+　　关于在页面的框架中实现树目录结构示意,其实也是一种菜单结构的体现,这种方式最容易，可是也最烦琐，在帧框架中做好一个菜单栏页面，然后你要为每个菜单打开后的结果做出相应的页面，然后在每个菜单项中定义链接来打开相应的结果页面，要注意的就是打开的结果页面，要指定在菜单栏的框架之中，否则就要天下大乱了。网易的BBS中就采用了这种设计方式，再配上目录状的图标，看上去蛮像那么回事的。<br>
+　　以上的例子着重于菜单设计的思路，至于菜单的美观等问题嘛，唉！只好你自己看着办啦！
+</span><P align="center"><span style="font-size: 9pt">贵州 <a href="mailto:morphie@21cn.com">张河黔</a></span></P>
+
+</tbody>
+</table>
+
+
+</table>
+</center>
+<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></div>
+</body>
+</html>

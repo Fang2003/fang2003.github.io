@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 揭开代理服务器的面纱</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/banner.bmp"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><a href="index.html"><FONT color="#CC0000">目录</font></a></FONT></a></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'>软件世界</A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'>硬件周刊</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 32 期 &gt;  <A HREF='internet.html'>大众网络</A> &gt; 揭开代理服务器的面纱</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 揭开代理服务器的面纱 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<b>一、什么是代理服务器</b><br>
+　　在浏览器和一些常用的断点续传下载工具中，我们会发现在它们的设置里都有关于Proxy Server的设定内容，不过在默认的情况下大家都没有设置，因此也就不太注意，有些人甚至根本就不知道它究竟是什么意思。其实Proxy Server就是代理服务器。<br>
+　　我们现在使用的因特网是一个典型的客户机／服务器结构，当我们的本地机与因特网连接时，通过本地机的客户程序比如浏览器或者软件下载工具发出请求，远端的服务器在接到请求之后响应请求并提供相应的服务。那么代理服务器起什么作用呢？代理服务器处在客户机和服务器之间，对于远程服务器而言，代理服务器是客户机，它向服务器提出各种服务申请；对于客户机而言，代理服务器则是服务器，它接受客户机提出的申请并提供相应的服务。也就是说，客户机访问因特网时所发出的请求不再直接发送到远程服务器，而是被送到了代理服务器上，代理服务器再向远程的服务器提出相应的申请，接收远程服务器提供的数据并保存在自己的硬盘上，然后用这些数据对客户机提供相应的服务。<br>
+　　对于拨号上网的用户来说，合理设置并使用代理服务器有很多好处。第一，能加快对网络的浏览速度。代理服务器接收远程服务器提供的数据保存在自己的硬盘上，如果有许多用户同时使用这一个代理服务器，他们对因特网站点所有的要求都会经由这台代理服务器，当有人访问过某一站点后，所访问站点上的内容便会被保存在代理服务器的硬盘上，如果下一次再有人访问这个站点，这些内容便会直接从代理服务中获取，而不必再次连接远程服务器。因此，它可以节约带宽、提高访问速度。第二，使用代理服务器可以解决因特网上域名和IP地址的转换问题，间接充当DNS服务器。<br>
+　　<b>二、代理服务器的设置</b><br>
+　　1．Internet     Explorer用户：<br>
+　　选择“查看”→“Internet选项”→“连接”→“代理服务器”→“高级”，设置相应的代理服务器地址。<br>
+　　2．Netscape的用户：<br>
+　　选择“Edit”→“Preferences”→“Advance”→“Proxies”→“Manual Proxy Configuration”→“View”，设置相应的代理服务器地址。<br>
+　　3．在断点续传下载工具中的设置也很简单。以Net Vampire(网络吸血鬼)为例，选择“Options”→“Netwrok...”→“Proxies”，选择“Add”按钮，“Title”栏填一个好记的名字，“Address”栏填代理服务器的地址（可与浏览器相同），“Port”栏内填入端口地址，“Type”栏内选择“HTTP（GET／POST）”，其它可用默认项。一般来说，国内的代理服务器比国外的代理服务器速度要快。应该知道的是，如果我们要访问的站点在我们访问之前，使用该代理服务器的其他用户都未曾访问过，那么使用代理服务器访问该站点可能会比我们直接访问要慢。<br><b>(河北　周建军)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/32/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99322801.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

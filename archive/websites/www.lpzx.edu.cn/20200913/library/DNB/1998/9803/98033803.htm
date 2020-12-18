@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Windows 3.1下实现CD唱片自动播放</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Windows 
+        3.1下实现CD唱片自动播放<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在Windows 
+        95下，将一张CD唱片放入光驱，光驱便会自动播放。那么如何在Windows 
+        3.1下实现CD的自动播放呢?其实只要有一套QPCD(Quick Player CD V1.0共享版)就能实现。这是一个DOS下的CD播放器，可以全自动播放CD，包括PC 
+        GAME带音轨的CD。<br>
+        　　首先将QPCD的三个文件(包括：QPCD.EXE、QPCDSR.QPC、QPCD.DOC)拷入硬盘C:\QPCD目录下，用PIF编辑器给QPCD.EXE建立一个PIF文件，PIF文件内容如下：程序文件名：C：\QPCD\QPCD.EXE；窗口标题：唱片自动播放；启动目录：C：\QPCD；在执行选项中选中后台(即：在“后台”两字前打勾)，其它选项可选默认值，设置好后取名为QPCD.PIF，并保存在Windows目录下。最后给QPCD.PIF在启动组中新建一图标。选择启动组的新建文件项，然后在程序项特性对话框的命令行中输入QPCD.PIF，并选中运行时最小化。<br>
+        　　Quick Player CD V1.0共享版可以在即将上市的《电脑报配套光盘第四辑》中找到。(贵　州　张　安)<br>
+        </font></p>
+        <p align="right"><font color="#369681"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1998年1月19日第3期38版</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

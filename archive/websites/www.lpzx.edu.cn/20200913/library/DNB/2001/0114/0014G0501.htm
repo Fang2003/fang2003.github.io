@@ -1,0 +1,137 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/game.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>网吧CS服务器架设指南</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第14期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="game.html">游戏广场</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->网吧CS服务器架设指南<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="0" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 编者按：可能会有读者朋友感到奇怪，“菜鸟学堂”为什么会出现网吧服务器架设的一类东西，其实很简单，“菜鸟学堂”并不是只针对单机游戏的玩家，只要是关于游戏的一些基本的实用知识和技术，“菜鸟学堂”都会为大家送上详细解说的文章。 
+              CS全称Counter Strike，中文名反恐群英，是目前世界上最红火的在线FPS游戏。根据统计，仅仅在一周之内计算得出的CS玩家就超过200万名。伴随着CS1.0的发售，CS也在国内越来越红火，但是在线FPS游戏对网络的线路要求比较高，如果对手使用宽带而你只是使用MODEM的话，不怕你是多厉害的高手也很难取胜。同时还有很多家里没有电脑的朋友，难道这些朋友就要丧失CS的乐趣了么？这里有一个解决方法，就是到网吧去玩游戏。网吧游戏通常有两种建立服务器的方法： 
+              一、直接进入游戏，进入LAN GAME并Create一个游戏，其他人从LAN GAME里自动搜索出服务器进入。但是这种方法有一个致命的问题，就是作为服务器的那台机器会有非常大的负担，在PⅢ550的机器上有10个玩家连接进入以后，服务器的玩家就可以明显感到画面延迟现象出现。所以不推荐使用这种方法建立服务器。 
+              二、利用游戏本身带的专用服务器程序建立服务器。这种方法通常需要一台单独的机器运行服务器程序，以20个玩家来说，一起多分摊一个机器的上机费用应该说负担很小，更何况很多网吧有自己单独的服务器来运行各种游戏的服务器程序满足玩家的需求。因此这种方式是最合适的方式。 
+              下面我就为大家介绍一下建立专用CS服务器的方法： 首先的我们需要做的是安装《半死不活》(Half Life以下简称HL)和CS，需要注意的是服务器和客户端都要保持HL和CS的版本一致，否则是无法进行连接的。程序可以直接从其他机器复制而来。不管是HL还是CS，都带有一个名为hlds.exe的程序，这就是专门用来架设服务器的程序。直接双击它以后运行的是HL，所以我们必须对它进行一些相应的配置。CS的配置文件有以下三个：Server.cfg、Mapcycle.txt、Motd.txt，文件都在Cstrike目录下。这三个文件都是文本文件，可以使用任何文本编辑器进行编辑。Server.cfg是服务器的基本配置文件，主要的设置都在这里进行，下面是一些常用的设置，并附带解释： 
+              1.Server.cfg 　　可用任何文本编辑器进行编辑。 　　0为No，1为Yes。 sv＿aim0 是否自动瞄准 pausable0	
+              是否客户端可暂停游戏 　　hostname "CSchina.yeah.net CS'Server "　 服务器名字 mp＿timelimit 
+              30 更换地图时间 mp＿c4timer 45 炸弹倒计时时间 mp＿chasecam 0 是否固定镜头(如果选1，进入服务器后只能在固定地点观战，否则未加入队伍的人可以自由观看) 
+              mp＿forcechasecam 1 死后是否可以自由观看，参数选1为只可以查看自己人，2为死后只能固定在死亡地点 mp＿falldamage 
+              1 高处落下具有伤害 mp＿flashlight 1 是否有战术手电 mp＿footsteps1 是否有脚步声 mp＿freezetime 
+              4 每局开始固定买物品时间 mp＿friendly＿grenade＿damage1 是否手雷友军伤害 mp＿friendlyfire 
+              1 是否友军伤害 mp＿autoteambalance2 自动调整双方人数差异最低限制，当一方人数超过另一方2人时会将多出的人分配到少人的队伍 
+              mp＿roundtime4 每回合时间 rcon＿password  服务器密码 mp＿tkpunish 0 是否对伤害友军的人进行惩罚(踢出服务器) 
+              mp＿mapvoteratio 0.2 投票比率 mp＿logfile1 是否服务器留下记录文件 logon 开始记录 mp＿playerid 
+              0 为所有人在状态栏都可看到所有人的名字；1为只能看到自己人的名字；2为看不到任何人名字；0为默认 mp＿fadetoblack0 
+              人物死亡后屏幕变黑，0为不变，1为默认 mp＿buytime 可以购买物品时间，例如mp＿buytime 1.8为108秒那可以购买，1.5分钟为默认 
+              mp＿winlimit15 一方胜利次数达到次数更换地图 allow＿spectators1 允许观察员角度，0为不允许，1为允许，1为默认 
+              mp＿hostagepenalty=3 规定时间内伤害人质超过三人自动踢出 2.mapcycle.txt为地图设置文件，服务器将按该文件里设置的地图进行循环。可以在cstrike/maps目录下查看.bsp文件，既是地图文件，可将你想循环的地图的名字输入mapcycle.txt中，注意不要带文件后缀。比如如de＿dust.bsp，只取de＿dust。注意每个地图之间用硬回车隔开。 
+              　　3.motd.txt为服务器说明文件，当每个玩家进入服务器后看到的第一个窗口就是。可以随意按照自己喜欢写。最好注明服务器的基本设置。 
+              有了一个上述设置的服务器基本就算准备好了，但是别急，可不是运行HL.exe来进入游戏哦，用的是HLS.exe，而且要带上参数。下面再来说说服务器运行参数： 
+              F\Hserver\hlds.exe -game cstrike -port 27016+maxplayers 22 +map　cs＿office 
+              +nomaster -sv＿lan 1 -game strike 指定运行游戏为CS +maxplayers 22游戏最大人数22人(游戏只支持20人，多余两人为观众) 
+              -port 7016 指定游戏连接端口为27016同一服务器指定不同的端口可以开多个CS服务器 +map cs＿office	
+              指定第一张地图为cs＿office+servercfgfile server2.cfg Listen Server 指定启动的配置文件名称。此参数可以不使用，即用同一游戏开的不同端口服务器都使用相同配置文件 
+              -nomaster 让服务器不上WON认证，避免因为出国网络不通导致的服务器问题。 +sv＿lan1 指定为一个LAN server。其他人进服务器的时候进Lan 
+              game即可自动搜索出服务器。 按照以上方式运行的服务器会在一个DOS窗口下运行，当窗口上的红色部分FPS里开始显示闪动数字的时候服务器就已经架设成功了。 
+              关于更多服务器架设问题以及疑难解答，请到www.cschina.net及其论坛进行讨论。 <!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

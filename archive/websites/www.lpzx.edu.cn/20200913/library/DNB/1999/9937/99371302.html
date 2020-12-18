@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<link rel="stylesheet" href="images/epcw.css" TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在DELPHI编程中确定系统运行模式</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-software&realm=software' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9937.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'></A></TD>
+<TD BGCOLOR='#FFCC66'>&nbsp;</TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9937.html'>37 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 在DELPHI编程中确定系统运行模式</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在DELPHI编程中确定系统运行模式 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　系统运行模式就是指：WINDOWS是运行在哪种模式中,在WINDOWS3.X 中有正常模式,386增强模式;而现在的WINDOWS95/98有安全模式,运行在网络中的安全模式,正常模式等。如何才能区分系统是运行在上述的哪一种方式之下呢?在此，笔者就用DELPHI编程为您演示。<br>
+　　说明:笔者调用API函数中的GETSYSTEMMETRICS函数来完成下面的程序，其API函数在WINDOWS.PAS中有声明代码。<br>
+　　首先,新建一个工程,在FORM1上放上一个LABEL1和BUTTON1,其属性都不变,字体可设置大一些,然后输入以下代码:<br>
+　　unit GETMODE;<br>
+　　interface<br>
+　　usesWindows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,StdCtrls;<br>
+　　type  TForm1 = class(TForm)<br>
+　　Label1: TLabel;<br>
+　　Button1: TButton;<br>
+　　procedure Button1Click(Sender: TObject);<br>
+　　procedure FormCreate(Sender: TObject);<br>
+　　private{ Private declarations }<br>
+　　public { Public declarations }<br>
+　　end;<br>
+　　var  Form1: TForm1;<br>
+　　implementation {＄R ＊.DFM}<br>
+　　procedure TForm1.FormCreate(Sender: TObject);<br>
+　　begin<br>
+　　FORM1.CAPTION:=′确定WINDOWS运行模式的演示程序′;<br>
+　　BUTTON1.CAPTION:=′获取系统运行模式′;<br>
+　　end;<br>
+　　procedure TForm1.Button1Click(Sender: TObject);<br>
+　　VAR<br>
+　　RET:LONGINT;  ／／声明变量<br>
+　　begin<br>
+　　RET:=GETSYSTEMMETRICS(SM_CLEANBOOT);  ／／调用API函数<br>
+　　CASE RET OF   ／／CASE API函数的返回值<br>
+　　1:LABEL1.CAPTION:=′您的系统正运行在安全模式下′;<br>
+　　2:LABEL1.CAPTION:=′您的系统正运行在带有网络环境的安全模式下′;<br>
+　　ELSE LABEL1.CAPTION:=′您的系统正运行在正常模式下′;<br>
+　　END;<br>
+　　end;<br>
+　　end.<br>
+<b>(上海　季昭君)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/37/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99371302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">如何处理“内存不足”的故障<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　所谓“内存不足”，是指在启动或运行DOS应用程序和Windows应用程序时，系统报“Out 
+        of memory&quot;或“内存不足&quot;的错误信息。<br>
+        　　“内存不足”是一种很常见的故障，运行DOS应用程序和Windows应用程序引起“内存不足”的原因不完全相同。如果是在运行DOS应用程序时出现“内存不足”的故障，可按以下方法进行检查和处理：<br>
+        　　1.检查系统是否提供对扩充内存的支持，必须保证CONFIG.SYS文件中的EMM386.EXE命令中含有RAM参数，关于RAM参数的设置请参考《电脑报》相关文章；<br>
+        　　2. 如果故障仍存在，检查DOS内核程序与其它运行的应用程序是否兼容，某些程序是否占用了大量的常规内存，并作出相应的处理。<br>
+        　　实例：运行WPS 
+        时，屏幕显示“内存不够”，系统无法运行。考虑到在运行WPS之前曾执行过一些其它程序，可能是这些程序没有完全从内存中退出，于是重新启动，运行金山汉字系统，WPS 
+        编辑软件仍无法进入，用DOS 6.22的Mem命令查看内存，仅剩200KB左右的空间，且CHLIB文件占用主内存达255KB，即字库放在了常规内存中，而金山系统是应该可以自动使用扩展内存存放字库的，查看系统配置情况，在CONFIG.SYS中设有：<br>
+        　　DEVICE=C：\DOS\HIMEM.SYS<br>
+        　　DOS=HIGH<br>
+        　　这就是说，DOS内核程序调入扩展内存后，虽然扩大了可用主内存空间，但是由于扩展内存与金山系统发生冲突，以致汉字库无法载入扩展内存。解决的办法有两种：<br>
+        　　&middot;去掉DOS=HIGH设置，将DOS内核程序从扩展内存撤出，即可正常运行。<br>
+        　　&middot;将“/DEVICE=C：\DOS\HIMEM.<br>
+        SYS&quot;改为“/DEVICE=C：\DOS\HIMEM.SYS/INT15=320&quot;，因金山系统使用的是扩展内存的低端，这一区域若有其它程序驻留，字库就不能正常载入，利用INT15参数给系统先预留出一部分传统的扩展存储器(即不由XMS规范管理而由INT15直接使用的扩展存储器)，字库和DOS内核都可使用扩展内存了，这样设置之后，在金山汉字系统状态下可用的主内存空间可达512KB，比不设置时多出250KB左右。<br>
+        　　如果在运行Windows应用程序时，出现“内存不足”的故障，可按下列方法进行检查和处理：<br>
+        　　1.首先应检查Windows的资源使用情况，如果资源占用较多，可用资源较少，打开新文件时会出现“内存不足&quot;的问题。这时可以清理屏幕，减少窗口的数目，关闭不用的应用程序，包括TSR内存驻留程序，将Windows应用程序最小化为图标，如果问题只是在运行一特殊的应用程序时出现，则与应用软件销售商联系，可能是数据对象的管理不好所致；<br>
+        　　2.如果问题没有解决，清除或保存Clipboard(剪贴板)的内容，使用Control 
+        Panel Desktop选项将墙纸(Wallpaper)设置为None；<br>
+        　　3.如问题仍存在，可用PIF编辑器编辑PIF文件，增大PIF文件中定义的Memory 
+        Requirements：KB Required的值；在标准模式下，选择Prevent Program Switch，该开关选项打开后，退出应用程序返回Windows；如果是386增强模式，则要将Display 
+        Usage设置成Full Screen(全屏幕方式)，将Execution设置为Exclusive，将Video 
+        memory设置为尽可能低的方式；<br>
+        　　4. 如果问题仍存在，则重新开机进入Windows系统，并且确保在“启动&quot;图标中没有其它无关的应用软件同时启动运行，在WIN.INI文件中也没有Run或Load命令加载的任何无关的应用程序。<br>
+        　　实例：一台微机，硬件配置为：PCI总线的ALI主板，486DX－100CPU，540MB硬盘，16MB内存，S3 
+        64V＋显示卡，2MB显存，三洋4倍速光驱。进入Windows3.2并启动WORD 6.0时系统提示：“内存不足，WORD 
+        6.0无法启动&quot;。其实，任何一个在Windows下运行的应用程序，它所使用的资源都必须纳入存放各种资源的内存区(也称为资源堆)中，否则不能运行。然而作为一个资源堆的内存区并不大，只有64KB。而且其数量也相当有限。在Windows 
+        3.0中只有一个GDI资源堆(存放图形操作程序)和一个USER资源堆(存放用户界面操作程序)，在Windows 
+        3.1中作了改进，允许使用一个GDI资源堆和三个USER资源堆。不论微机配置了多少物理内存，Windows3.X能够使用的资源堆都只有四个64KB的内存块。所以，不能用增加内存容量的办法来解决所谓的“内存不足&quot;问题。出现“内存不足&quot;的问题后一般可以按以下办法处理。首先，退出那些不需要运行的应用程序，然后，再检查系统的可用资源为多少。如果可用资源大于30％，一般可以运行新的程序。当有多个应用程序在系统中运行时，可以退出一个，检查一次可用资源，如果某个应用程序在退出前后，可用资源的百分比没有变化，说明这个应用程序没有释放它所占用的资源。如果要收回这些没有释放的资源，只能退出Windows后，再重新进入Windows。为了确保在启动进入Windows时系统的可用资源足够，在“启动&quot;图标中应该没有无关的应用软件同时启动运行，在WIN.INI文件中也没有由Run或Load命令加载的任何无关的应用程序，因为这些同时启动的无关应用程序可能已经占用了很多资源，使得要使用的应用程序无法运行。一般说来，经过这样处理，就不会出现“内存不足&quot;的问题了。<br>
+        　</font></p>
+        <p class="ourfont"><font color="#369681">(重庆　夏然)　</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

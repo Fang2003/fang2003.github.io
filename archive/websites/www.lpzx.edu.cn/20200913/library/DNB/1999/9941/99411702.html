@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 3D术语集释</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 3D术语集释</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 3D术语集释 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　Texture Mapping(纹理贴图)</b></p>
+　　是在物体着色方面最引人注意、也是最拟真的方法，同时也多为目前的游戏软件所采用。一张平面图像(可以是数字化图像、小图标或点阵位图)会被贴到多边形上。例如，在赛车游戏的开发上，可用这项技术来绘制轮胎胎面及车体着装。
+<p><b>　　Mip Mapping(Mip贴图)</b></p>
+　　这项材质贴图的技术，是依据不同精度的要求，而使用不同版本的材质图样进行贴图。例如：当物体移近使用者时，程序会在物体表面贴上较精细、清晰度较高的材质图案，于是让物体呈现出更高层、更加真实的效果；而当物体远离使用者时，程序就会贴上较单纯、清晰度较低的材质图样，进而提升图形处理的整体效率。
+<p><b>　　Bump Mapping(凹凸贴图)</b></p>
+　　这是一种在3D场景中模拟粗糙外表面的技术。将深度的变化保存到一张贴图中，然后再对3D模型进行标准的混合贴图处理，即可得到具有凹凸感的表面效果。
+<p><b>　　Bilinear Interpolation(双线过滤)</b></p>
+　　这是一种较好的材质影像插补的处理方式，会先找出最接近像素的四个图素，然后在它们之间作差补效果，最后产生的结果才会被贴到像素的位置上，这样不会看到“马赛克”现象。这种处理方式较适用于有一定景深的静态影像，不过无法提供最佳品质，也不适用于移动中的物件。
+<P><b>　　Trilinear Interpolation(三线过滤)</b></p>
+　　这是一种更复杂材质影像插补处理方式，会用到相当多的材质影像，而每张的大小恰好会是另一张的四分之一。例如有一张材质影像是512×512个图素，第二张就会是256×256个图素，第三张就会是128×128个图素等等，总之最小的一张是1×1。凭借这些多重解析度的材质影像，当遇到景深极大的场景时(如飞行模拟)，就能提供高品质的贴图效果。一个“双线过滤”需要三次混合，而“三线过滤”就得作七次混合处理，所以每个像素就需要多用2倍以上的计算时间。还需要两倍大的存储时钟带宽。但是“三张过滤”可以提供最高的贴图品质，会去除材质的“闪烁”效果。对于需要动态物体或景深很大的场景应用方面而言，只有“三线过滤”才能提供可接受的材质品质。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99411702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

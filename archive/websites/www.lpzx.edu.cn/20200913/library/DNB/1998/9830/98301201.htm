@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用Excel进行矩阵计算<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp;<strong> 
+        一、Excel的数组、数组名和矩阵函数的设置</strong><br>
+        　　1矩阵不是一个数，而是一个数组。在Excel里，数组占用一片单元域，单元域用大括号表示，例如{A1：C3}，以便和普通单元域A1：C3相区别。设置时先选定单元域，同时按Shift＋Ctrl＋Enter键，大括弧即自动产生，数组域得以确认。<br>
+        　　2Excel的一个单元格就是一个变量，一片单元域也可以视为一组变量。为了计算上的方便，一组变量最好给一个数组名。例如A={A1：C3}、B={E1:G3}等。数组名的设置步骤是：选定数组域，点“插入”菜单下的“名称”，然后选择“定义”，输入数组名如A或B等，单击“确定”即可。<br>
+        　　3矩阵函数是Excel进行矩阵计算的专用模块。常用的矩阵函数有MDETERM(计算一个矩阵的行列式)、MINVERSE(计算一个矩阵的逆矩阵)、MMULT(计算两个矩阵的乘积)、SUMPRODUCT(计算所有矩阵对应元素乘积之和)……函数可以通过点击“=”号，然后用键盘输入，可以通过点击“插入”菜单下的“函数”，或点击fx图标，然后选择“粘贴函数”中相应的函数输入。<br>
+        　　<strong>二、矩阵的基本计算</strong><br>
+        　　数组计算和矩阵计算有很大的区别，我们用具体例子说明。<br>
+        　　已知A={3 -2 5，6 0 3，1 5 4}，B={2 3 -1，4 1 0，5 2 -1}，将这些数据输入Excel相应的单元格，可设置成图1的形状，并作好数组的命名，即第一个数组命名为A，第二个数组命名为B。计算时先选定矩阵计算结果的输出域，3×3的矩阵，输出仍是3×3个单元格，然后输入公式，公式前必须加上=号，例如=A＋B、=A－B、=A＊B等。A＋B、A－B数组运算和矩阵运算没有区别，“=A＊B”是数组相乘计算公式，而“=MMULT(A，B)”则是矩阵相乘计算公式，“=A/B”是数组A除数组B的计算公式，而矩阵相除是矩阵A乘B的逆矩阵，所以计算公式是“=MMULT(A,MINVERSE(B))”。公式输入后，同时按Shift＋Ctrl＋Enter键得到计算结果。图1中的数组乘除写作A＊B、A/B，矩阵乘除写作A&middot;B、A÷B，以示区别。<br>
+        　　<strong>三、矩阵计算的应用</strong><br>
+        　　下面让我们来计算一个灰色预测模型。<br>
+        　　灰色预测是华中理工大学邓聚龙教授创立的理论，其中关键的计算公式是计算微分方程＋B1x=B2的解，{B<sub>1</sub>，B<sub>2</sub>}=(X<sup>T</sup>X)<sup>－1</sup>(X<sup>T</sup>Y)，式中：XT是矩阵X的转置。<br>
+        　　作为例子，已知X={-45.5 1，-79 1，-113.5 1，-149.5 1}　Y={33，34，35，37}<br>
+        　　在Excel表格中，{B2：C5}输入X，{E2：H3}输入X的转置。处理转置的方法是：选定原数组{B2：C5}，点“编辑”菜单的“复制”，再选定数组转置区域{E2：H3}，点“编辑”菜单的“选择性粘贴”，再点“转置”即可。{J2：J5}输入Y，然后选取{L2：L3}为B1、B2的输出区域，然后输入公式：<br>
+        　　=MMULT(MINVERSE(MMULT(E2:H3,B2:C5)),MMULT(E2:H3,J2:J5))<br>
+        　　公式输入完毕，同时按Shift＋Ctrl＋Enter键，B1、B2的答案就出来了，如图2。<br>
+        　　如果计算的矩阵更复杂一些，就必须分步计算。不过，使用Excel也是很方便的。　　<strong>(江苏　陈岁松)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9830/issue/1998/30/index.htm">《电脑报》1998年8月10日第30期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

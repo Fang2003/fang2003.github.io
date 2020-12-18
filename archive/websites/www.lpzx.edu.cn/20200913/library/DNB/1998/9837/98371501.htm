@@ -1,0 +1,113 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何阅读ps文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; <font face="楷体_GB2312">　大编者按——在INTERNET上查找资料的朋友可能会经常碰到＊.ps文件，这些＊.ps文件可能是某个大学的入学申请表，也可能是某个软件的使用文档，或者是某个公司的简历。你把这些文件下载下来后可能会发现不知道怎样读它！用EDIT等文本编辑器打开一看，文件开头都是些乱七八糟的字符,用Microsoft 
+        word也不能读它，再打开图像编辑软件如Photoshop还是读不了！那么这些＊.ps文件到底是什么东西呢？ 
+        <br>
+        </font><br>
+        　　什么是PS？<br>
+        　　这里的ps是PostScript的缩写.PostScript是Adobe公司开发的一种可编程打印控制语言。大家平常看到的所谓“PostScript&quot;打印机就是指支持“PostScript”语言的打印机。<br>
+        　　现在常用的打印控制语言有三种：<br>
+        　　一种是针打的标准，EPSON公司的EPSON打印控制语言，凡是针式打印机都标明同EPSON兼容，其实这里的兼容就是指支持EPSON打印控制语言；一种是HP的PCL，即Print 
+        Control Language的缩写；还有一种就是今天要介绍的PostScript。<br>
+        　　＊.ps文件就是指这个文件已经用PostScript语言处理过了，可以直接在PostScript打印机上输出（相当于文本文件加上HTML标记后就成了HTML文件一样）。例如我们只需用下面命令：copy/b 
+        filename.ps prn即可把一个＊.ps在PostScript打印机上打印出来。<br>
+        　　大家可能觉得这样做很麻烦，直接用个文本文件或WORD文件不就可以了吗？既然INTERNET上流行＊.ps文件，自然有它的道理了。<br>
+        　　假设一个大学要在网上发布入学申请表，最简单的办法是搞一个文本文件，任何机器都可识别，但是在文本文件里无法加入排版信息，这样每个人寄回来的表格格式可能都不一样。用WORD当然可以，但如果机器没装WORD怎么办？如果是一台工作站根本不能装WORD又怎么办呢？<br>
+        　　PostScript是一种页面描述语言，由Adobe公司于1985年开发成功（Adobe正是靠PostScript起家的）PostScript最重要的用途是以设备无关方式描述图形，这样，同一个描述可以不加修改地在任一台PostScript打印机上输出。另外，用PostScript还可以在计算机屏幕及其它绘图设备上绘图，可以在屏幕上显示相应的PostScript文件。PostScript由于可以满足上述条件，所以在网上广为流行。<br>
+        阅读PS文件的工具<br>
+        　　＊.ps是网上广为流传的文件格式,如何使用这种文件格式呢?下面介绍一个最著名的PostScript实用工具Ghostscript。 
+        <br>
+        　　Ghostscript是一个Postscript解释器，它可以在许多操作系统上运行，如DOS，WINDOWS31，WINDOWS95，WINDOWS 
+        NT，MACHINTOSH，UNIX，OS/2，VAX/VMS等。Ghostscript主要有两个功能：<br>
+        　　1.屏幕输出：可以在屏幕上显示Postscript文件。<br>
+        　　2 打印输出：可以在非Postscript打印机上打印Postscript文件。<br>
+        　　现在Ghostscrip的WIN95最新版是5.10版，Ghostscript采用的是命令解释行，使用不太方便。运行Ghostscript后屏幕出现如下所示的命令窗口：<br>
+        　　GS&gt;_<br>
+        　　注意这是Ghostscript的窗口提示符，而不是DOS下的提示符。在该提示符下使用有关命令即可。<br>
+        　　比如输入：<br>
+        　　GS&gt;(tiger.ps) run<br>
+        　　就可以在屏幕上显示 tiger.ps 
+        文件。具体的命令你得学习随机提供的用户手册。<br>
+        　　由于命令解释方式使用不太方便，Ghostscript还提供了一个前端产品：GSVIEW。GSVIEW不能单独运行，必须先安装了Ghostscript，然后才能运行GSVIEW。GSVIEW的WINDOWS版是标准的WINDOWS程序，使用十分方便，这里介绍最新版GSVIEW 
+        2.4。<br>
+        　　下面通过介绍各个菜单项的作用来说明GSVIEW的功能（仅列了最常见的菜单选项）：<br>
+        　　1.File<br>
+        　　Open:打开一个文件，目前GSVIEW支持的文件格式有：＊.ps,＊.eps,＊.epi,＊.pdf.在文件选择窗口中选中你希望的文件即可在屏幕上阅读文档了。<br>
+        　　Select file:同Open相似，但不显示文件，主要用于在打印文件前先选择一个文件（你可能只想打印文件，对浏览文件不感兴趣）。<br>
+        　　Extract.. :从当前文档中拷贝几页到一个新的.ps文件中。<br>
+        　　Close:关闭文档。<br>
+        　　Info:提示当前文档的一些信息，如文件名，页数，创建日期，标题，页码顺序等。<br>
+        　　Print:打印。如果你的打印机不支持Postscript，则选择该选项。然后根据屏幕提示选择你当前使用的打印机类型，分辨率（各个打印机可用的分辨率不一样），打印页码即可开始打印。多么简单！<br>
+        　　Print file:如果你的打印机是Postscript打印机，则选该选项直接打印，GSVIEW直接将打印序列发到打印机，什么都不做。<br>
+        　　Show message:显示程序运行的一些消息，如Ghostscript DLL的位置等，同用户关系不大。<br>
+        　　Exit:退出GSVIEW。<br>
+        　　以上其实就可以满足基本需要了，当然GSVIEW还提供了其它许多功能。<br>
+        　　2.Edit<br>
+        　　Copy:这里的Copy和一般程序里的Copy概念不一样，这里是将当前页显示的内容作为BMP图片拷贝到剪贴板中。<br>
+        　　Paste To:将用Copy命令拷贝到剪贴板中的内容输出到BMP文件中。<br>
+        　　Text Extract :将.ps文件中的文本输出到文本文件中。<br>
+        　　Find:在文档中查找字符串。<br>
+        　　3.Oretenation<br>
+        　　显示方式，如可以左转90度，右转90度等。<br>
+        　　4.Media<br>
+        　　Display Settings:设置显示方式：如分辨率，放大分辨率等。下面还列出了许多纸张类型，如A4、A3.....等，就不一一列出。<br>
+        　　GhostScript和GSVIEW的获得及安装<br>
+        　　读者可通过以下地址下载GhostScript和GSVIEW：<br>
+        　　http://www.cs.wisc.edu/～ghost/aladdin/<br>
+        get510.html<br>
+        　　你总共需要下载以下四个文件：<br>
+        　　GSV24W32.ZIP 553,953<br>
+        　　GS510W32.ZIP 568,543<br>
+        　　GS510INI.ZIP 827,092<br>
+        　　GS510FN1.ZIP 1,170,038<br>
+        　　将以上四个文件拷贝到一个子目录中，然后用WINZIP打开GSV24W32.ZIP，在WINZIP中直接运行其中的SETUP即可(编者注:我们在该网址发现了GSVIEW 
+        2.6版本－GSV26W32.ZIP,用它代替第一个文件下载,用WINZIP 
+        将其解压至一个目录,把另三个文件拷至该目录,执行SETUP)。<br>
+        相关资源<br>
+        　　下列站点中有一些关于PS的资源：<br>
+        　　http://www.adobe.com/prodindex/postscript/<br>
+        main.html<br>
+        　　postscript的老家,包括postscript描述语言的最新版postscript 3的资料,白皮书及相关资源。<br>
+        　　http://www.lasergo.com/<br>
+        　　又一个观察postscript文件的工具,并提供一个Netscape Navigator插件,可以在Netscape 
+        Navigator中观看ps文件。<br>
+        (武汉　钱　庆)　</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

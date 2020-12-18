@@ -1,0 +1,179 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 9907请你编程</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/banner.bmp"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><a href="index.html"><FONT color="#CC0000">目录</font></a></FONT></a></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'>硬件周刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 32 期 &gt;  <A HREF='software.html'>软件世界</A> &gt; 9907请你编程</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 9907请你编程 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好！“请你编程”又与你们见面了。“请你编程”得到了广大朋友的关心和支持，我在这里表示衷心的感谢。“请你编程”是一个读者朋友直接参与的栏目，是一个体现自我的园地，希望有编程愿望的朋友，无论是编程高手，还是初学者都能参与进来，我们将会认真对待每一份作品。下面请看本期辽宁读者张大鲲的程序。<br>
+　　<b>9907请你编程解题思路</b><br>
+　　要求完成地球数字与外星数字之间的转换功能，关键在于外星数字的进位问题，即给定一个合法的外星数字，如何利用一种规则, 产生出下一个合法的外星数字, 先假定这一问题已经解决, 那么：<br> 
+　　1. 地球数字转换成外星数字: 若为一位数字, 则和外星数字相同; 若为2位或2位以上数字, 根据外星数字连续排列的特点, 地球数字与10的距离应该等于外星数字与10的距离, 也就说,地球数字X为10以后的第几个数字, 相应的外星数字X′也是10以后的第几个数字,因此只须确定出给定的地球数字与10之间的距离, 即可通过初值为10的外星数字求出下一个外星数字, 以及下一个的下一个数字, 直到距离相同为止, 便是所要求的X′。<br>
+　　2 .外星数字转换成地球数字: 若为一位数字, 则和地球数字相同, 若为2位或2位以上数字,同样, 只需确定出它与外星数字10的距离, 再加上10, 即为实际地球数字的值。<br>
+　　源程序<br>
+　　＃include<stdio.h><br>
+　　＃include<stdlib.h><br>
+　　＃include<string.h><br>
+　　char num[] = ″00000000000″; ／＊ 最大数据不超过 9876543210\n ＊／<br>
+　　void next_extra_num(); <br>
+　　void change();<br>
+　　main()<br>
+　　{ FILE ＊fp1;<br>
+　　char temp[81], ＊p_comma;<br>
+　　int i, j, m, n;<br>
+　　int times, value, count;<br>
+　　fp1 = fopen(″ufo.txt″, ″r″);<br>
+　　if(fp1 == NULL) {printf(″File cannot open!\n″);<br>
+　　exit(0);}<br>
+　　fgets(temp, 80, fp1);<br>
+　　temp[strlen(temp)－1] = ′\0′; <br>
+　　p_comma = strchr(temp, ′,′); ／＊ 指向字符 ″,″ ＊／<br>
+　　＊p_comma = ′\0′;<br>
+　　m = atoi(temp);<br>
+　　n = atoi(＋＋p_comma);<br>
+　　i = 0;<br>
+　　while(!feof(fp1) ＆＆ i < m) <br>
+　　{ fgets(num, 6, fp1);／＊ 最大合法数据为 ″1022\n\0″, 共 6 位 ＊／<br>
+　　num[strlen(num)－1] = ′\0′;<br>
+　　if(strlen(num) == 1)<br>
+　　printf(″％s\n″, num); ／＊一位数字则直接输出＊／<br>
+　　else {times = atoi(num)－10; ／＊ 确定与10的距离, 即调用函数须循环的次数 ＊／<br>
+　　 num[0] = ′1′;<br>
+　　 num[1] = ′0′;<br>
+　　 num[2] = ′\0′; <br>
+　　 for(j = 0; j < times; j＋＋)<br>
+　　 next_extra_num(); <br>
+　　 printf(″％s\n″, num);}<br>
+　　i＋＋;}<br>
+　　i = 0;<br>
+　　while(!feof(fp1) ＆＆ i < n) <br>
+　　{fgets(num, 12, fp1); <br>
+　　num[strlen(num)－1] = ′\0′;<br>
+　　if(strlen(num) == 1)<br>
+　　printf(″％s\n″, num);／＊直接输出一位数字＊／<br>
+　　else {value = atoi(num); ／＊保留输入的原值＊／<br>
+　　num[0] = ′1′;<br>
+　　num[1] = ′0′;<br>
+　　num[2] = ′\0′;<br>
+　　count = 0;<br>
+　　while(atoi(num) != value) {next_extra_num();<br>
+　　count＋＋;／＊ 确定与10的距离 ＊／}<br>
+　　printf(″％d\n″, count＋10);}<br>
+　　i＋＋;}<br>
+　　 fclose(fp1);}<br>
+　　void next_extra_num()<br>
+　　{ int length, i; ／＊ 数组的长度  ＊／<br>
+　　length = strlen(num);<br>
+　　num[length－1]＋＋; ／＊ 计算下一个数字 ＊／<br>
+　　while(!order_or_not(length)) <br>
+　　for(i = length－1; i > 0; i－－)<br>
+　　change(i, ＆length); ／＊按照规则修改数字＊／}<br>
+　　order_or_not(length) ／＊是否排序＊／<br>
+　　int length;<br>
+　　{int i;<br>
+　　for(i = 0; i < length; i＋＋)<br>
+　　if(num[i] <= num[i＋1]) <br>
+　　return(0); ／＊返回 0 值＊／<br>
+　　return(1);}<br>
+　　void change(i,p_length)<br>
+　　int i, ＊p_length;<br>
+　　{ int j;<br>
+　　if(num[i] == num[i－1] ) <br>
+　　{num[i] = ′0′; ／＊ 后一位变成 0, 并进位 ＊／<br>
+　　num[i－1]＋＋;／＊ 进位加 1 ＊／}<br>
+　　if(num[i－1] < num[i]) <br>
+　　num[i－1] = num[i]＋1;／＊ 新值等于后一个数字的值加 1 ＊／<br>
+　　if(num[i－1] == ′9′＋1) <br>
+　　{ for(j = ＊p_length; j >= 0; j－－)<br>
+　　num[j＋1] = num[j];<br>
+　　num[0] = ′1′;／＊把它变为 10, 同时 ＊／<br>
+　　num[1] = ′0′;<br>
+　　(＊p_length)＋＋; ／＊ 改变数组的长度 ＊／}}<br>
+　　<b>9909请你编程题目</b><br>
+　　在2099年，举行了第N届地球小姐的选美大赛。各国佳丽云集桃花岛，角逐第N届地球小姐的称号。评选的时候，这些美眉站成一个M＊N的一个矩阵，由评委给她们打分。这个分数为一个整数，最小为－100，最大为＋100。可以很容易根据分数评选出冠军。但在这之后，赛会还要评选出一组团体冠军。<br>
+　　评选要求为两点：<br>
+　　1.这组团体冠军必须为大的M＊N矩阵中的一个X＊Y的小矩阵。X、Y可以为1。<br>
+　　2.M＊N矩阵中的任一子矩阵都称为一个″团体″，这组团体冠军的总分必须为所有的″团体″总分中最大的。 <br>
+　　例如：有一个3＊3的矩阵：<br>
+　　1 2 3 <br>
+　　2 3 4<br>
+　　9 －99 10<br>
+　　最大的子矩阵为3 4 10，她们的总分为17。所以，团体冠军的总分就为17。<br>
+　　现在就请你编一个程序，选出团体冠军,要求如下：<br>
+　　1.输入从文本文件beauty.txt中读入。格式为：第一行为一个正整数C，表示共有C组输入数据。每组输入数据格式为：第一行为两个正整数M、N，表示美眉们站成一个M＊N的矩阵。以下为M行，每行N个整数，表示各位美眉的分数。整数之间用空格分开。其中2<=M、N<=100、C<=10。<br>
+　　2.输出到屏幕上，共C行，每行5个整数：X1、Y1、X2、Y2、SCORE，其中X1、Y1、X2、Y2表示团体冠军的位置，SCORE表示团体冠军的分数。如果有多个团体冠军并列，只需要输出其中一组即可,整数之间用空格分开。<br>
+　　输入范例：<br>
+　　1<br>
+　　3 3<br>
+　　1 2 3<br>
+　　2 3 4<br>
+　　9 －99 10<br>
+　　输出范例：<br>
+　　1 3 3 3 17<br>
+　　本期题目由上海的oldbug提供。<br>
+　　来稿请寄磁盘稿或用E－mail投稿，请写明解题思路和源程序（包含详细的注解），将来稿寄到电脑报编辑部的收信地址或E－mail信箱，同时欢迎提供请你编程的题目。来稿截止日期：1999年9月15日。<br>
+　　本期获奖者名单<br>
+　　王春新(湖北)　  马拥军（浙江）　<br>
+　　付永安（杭州）     陈行辉（广西） <br>   
+　　李进新（上海）     张玉源（重庆）<br>
+　　杨大成（内蒙）     杨  莉（天津）<br>
+　　田安奎（重庆）    张啸清（云南）<br>
+　　每位获奖者将获得苦丁香公司提供的光盘一张。
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/32/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99321301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

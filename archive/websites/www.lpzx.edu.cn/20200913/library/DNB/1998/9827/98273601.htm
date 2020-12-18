@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何正确处理内存出错故障</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　启动系统或运行应用程序时，系统报：“error：unable 
+        to control A20 line”、“memory write/read failure”或报：“memory allocation 
+        error”等，这些问题都属内存出错故障，它与内存减少、内存不足及奇偶检验错误不同。<br>
+        　　系统报“内存出错”有三种情况，分别由不同原因造成。一是开机自检时报“内存出错”，引起该故障的原因主要是内存条或内存控制器的硬件故障；二是在CMOS中设置了启动系统时不自检1M以上内存，而在运行应用程序时系统报“内存出错”，引起该故障的原因可能是内存条或内存控制器的硬件故障，也可能是软件故障；三是开机自检通过，进入DOS或Windows平台，在运行应用程序时报“内存出错”，引起该故障的原因主要是软件故障。<br>
+        　　对于由软件故障造成的内存出错，可按下列步骤检查和处理：<br>
+        　　1.如果是在DOS环境下运行应用程序时报“内存出错”，则怀疑是否是内存分配出错，检查DOS与运行的应用程序是否冲突，并作出相应的处理。一般可通过重新启动系统或重新编写系统配置文件来解决，对应用程序的问题则可通过相应的修改来解决。<br>
+        　　2.如果是在Windows环境下运行应用程序时报“内存出错”，则怀疑是否是由应用程序非法访问存储器造成的，一般可通过清除内存驻留程序，减少活动窗口，调整配置程序或重新安装系统和应用程序来解决。<br>
+        　　3.如果问题只是在运行一特殊的应用程序才出现，可能是由该软件造成的。<br>
+        　　4.用KILL或KV300＋检测系统是否带有病毒，有则杀毒。<br>
+        　　硬件故障造成的内存出错比较常见，CMOS设置错误、内存条接触不良、内存条安装组合错误、内存条硬件损坏、内存控制器出错等均会造成内存出错，一般可按下列步骤检查和处理：<br>
+        　　1.由于开机自检即显示“内存出错”，首先进入CMOS设置，检查CMOS中关于内存条的参数设置是否正确，是否与内存条的配置情况相符；比如，如果设置的内存读写周期或内存读写等待时间小于内存条实际值，则应增大内存读写周期或者增加内存读写等待时间。<br>
+        　　2.如果故障仍存在，检查内存条与内存插座槽之间接触是否良好，并作出相应的处理。<br>
+        　　3.如果故障仍未排除，检查内存条的安装组合是否正确。 
+        一般主板的存储器安装插座分为几个体(Bank)，每个体中有二至四个存储器安装插座，可安装二至四个存储器条。由于72线的内存条一次可以提供32位有效数据（30线内存条已淘汰，在此不予讨论），对于Pentium类CPU，其数据线为64位，要一次能存取64位数据，就必须同时安装两个72线内存条，所以586级微机的主机板，一般必须按偶数安装72线内存条，即一次应安装2条或4条72线SIMM存储器条。如果主板上的内存条插座是168线的，由于168线的内存条一次就可以提供64位有效数据，所以只安装一条也能正常工作。安装内存条时应注意以下几点： 
+        <br>
+        　　&middot;对大多数PC机来说,不能在同一个Bank内将容量不同的SIMM条混插在一起。很多PC机都可安装不同容量的SIMM条，但装在同一组Bank中的所有SIMM条必须具有相同的容量。<br>
+        　　&middot;对于很多PC机来说，若把不同速度的SIMM条混插在一起，即使它们的容量相同，也会带来麻烦。例如，计算机中已有运行速度为60ns(纳秒)的16MB内存，如果在主板的空闲内存槽中再插入速度为70ns的SIMM条，系统就有可能会拒绝引导或在启动后不久就陷于崩溃。对于某些微机来说，若把速度低的SIMM条放至第一组，则可解决速度混合问题，计算机会按最低速度存取。<br>
+        　　&middot;对于大多数PC机来说，必须将一组中的所有插槽都插满，或者将一组全部置空(当然第一组不行)，在一组插槽中不能只插一部分内存条。<br>
+        　　&middot;PC机可接受的内存大小有一个上限(最大值可从PC机说明书中找到。若没有说明书，唯一的方法就是从实践中找到最大值了)。<br>
+        　　&middot;SDRAM是新一代的动态存储器，又称为同步动态存储器或同步DRAM。虽然有不少主板支持SDRAM与EDO内存混合安装，但是最好还是不要混用。原因是SDRAM只能在3.3V电压下工作，而EDO内存则多数在5V电压下工作。虽然主机板上对DIMM和SIMM分别供电，但它们的数据线总是要连在一起的，如果SIMM(72线内存)与DIMM(168线SDRAM)混用，尽管开始系统可以正常工作，但在使用一段时间后，可能会造成SDRAM的数据输入端被损坏。当然，如果你的SDRAM是适合宽电压(3V～5V)工作的产品，就不会出现这种损坏情况。<br>
+        　　4.如果故障还未解决，则用替换法检查内存条是否已损坏，并作出相应的处理。<br>
+        　　5.如果以上措施均不能奏效，则怀疑主板或控制芯片有问题，可送专业人员检修。(重庆　冬凌) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Linux的特点</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Linux的特点<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; <strong>1)多任务</strong>　可同时执行多道程序。<br>
+        　　<strong>2)多用户</strong>　多个使用者可同时在相同机器上操作(通过终端或虚拟控制台)。<br>
+        　　<strong>3)多平台</strong>　可在许多不同的CPU上执行，不只是 Intel 
+        CPU。<br>
+        　　<strong>4)多处理器</strong>　SMP在Intel及SPARC 平台上可用(其它平台正在发展中)，而且Linux可使用在数个疏结的(loosely－coupled)MP应用程序，包括 
+        Beowulf系统上及Fujitsu AP1000＋SPARC－based 超级电脑上。<br>
+        　　<strong>5)在386/486/Pentium/Pentium Pro上以保护模式运行</strong>　真正的多任务，具有进程间内存地址保护，因此个别程序出错不会波及整个系统。<br>
+        　　<strong>6)灵活的请页机制</strong>　视需求将执行代码调入内存——Linux 
+        只从硬盘上读入一个程序真正需要的部分。<br>
+        　　<strong>7)执行程序的共享式写入时拷贝(copy－on－write)分页机制</strong>　这就是说多道进程可以使用相同的内存来执行。如果其中之一尝试写入那块内存，那一页(4KB的内存)会被拷贝到其它地方去。写入时拷贝有两项好处:增加速度及降低内存使用量。<br>
+        　　<strong>8)应用程序及硬盘cache（高速缓存）使用统一的内存池(memory 
+        pool)</strong>　因此所有未使用的内存可用来当作cache，而cache的大小在执行大程序时可以减少。<br>
+        　　<strong>9)具有动态链结库(DLL)</strong>　当然，也有静态程序库。<br>
+        　　<strong>10)可做内核现场保存（core dumps）以作事后的分析</strong>　不仅允许在一程序执行时使用DEBUG(debugger)，也可在它发生故障之后使用。<br>
+        　　<strong>11)所有的原始程序源码都可得到</strong>　包括整个核心及所有的驱动程序，发展工具及所有应用程序。<br>
+        　　<strong>12)具有伪终端功能</strong>　执行TALNET，可以访问远程主机！<br>
+        　　<strong>13)核心的387模拟</strong>　程序不需要自行做数学运算模拟。每一部执行Linux的机器看起来都有数学辅助处理器，即使你使用的是386或486SX也是如此。 
+        当然，如果你的电脑已经包含一个FPU，如486、Pentium之类，它将被使用而不用模拟功能，而你甚至可以编译核心，将数学运算模拟拿掉以减少内存的使用．<br>
+        　　<strong>14)支持数种普通的文件系统</strong>　包括minix、Xenix及所有普通的 
+        System V文件系统，而且它自己有一个先进的文件系统，提供最多达4TB的文件系统，以及至多可到 
+        255 个字长的文件名。<br>
+        　　<strong>15)全面支持TCP/IP网络协议</strong>　包含 ftp、telnet、NFS等。同时支持Appletalk服务器、Netware客户机及服务器、Lan 
+        Manager (SMB)客户及及服务器。其它支持的网络协议有：IPv4、IPv6、AX.25、X.25、IPX、DDP 
+        (Appletalk)、NetBEUI、Netrom。稳定的核心中目前包含的稳定网路协议有TCP、IPv4、IPX、DDP、和AX.25。<strong>(张文强)　</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

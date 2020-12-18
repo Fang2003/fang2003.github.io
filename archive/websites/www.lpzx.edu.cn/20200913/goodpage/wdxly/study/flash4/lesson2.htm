@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center"><br>
+<font size="+2">第二课 &nbsp;&nbsp;从线开始</font><br>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;有了上一课的基础，我们的FLASH之旅就要正式开始了。这节课就要给大家讲一下如何用FLASH做出一根由短变长的直线来。（如右图）
+<td width="300"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="30" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/line.swf">
+<embed src="swf/line.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="30">
+</embed>
+</OBJECT>
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="49%"><img src="images/l2_01.gif" width="365" height="244">
+<td width="51%" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;进入FLASH后，FLASH会为你打开一个新的Scene。按Ctrl+M修改Movie设置，出现左图所示画面，把Dimensions的Width和Height分别改为300,30，点击OK钮，这样就把Movie的大小改为了300*30了。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;然后按Ctrl+Shift+Alt+G使工作区出现格子，按Ctrl+Alt+G（或按磁铁状图标）使绘图时鼠标只能在格子上移动。这时工作区应如下图所示。<br>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td>
+<div align="center"><img src="images/l2_02.gif" width="307" height="45"></div>
+
+
+</table>
+<br>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;这时我们看到Timeline区与Layer1对应的Timeline只有第一帧有一个空心圆点，这表示第一帧是一个空的关键帧（有点表示该帧为关键帧，实心表示有内容）如右图。
+<td>
+<div align="center"><img src="images/l1_16.gif" width="347" height="50"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="15%"><img src="images/l2_03.gif" width="105" height="99">
+<td width="49%" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;点取画直线工具，画图工具栏下出现如左图标。在这里，我们选择红色为当前色（左图中黑方块变红色），线宽选2.0。然后在工作区上画上一条很短的红线（如右图）。注意鼠标只能在格子上移动。
+<td width="36%"><img src="images/l2_04.gif" width="316" height="48">
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="79%" valign="top"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;把鼠标移到30帧的方格处单击右键，出现如右图的菜单，选择Insert Blank Keyframe或按F7，在30帧处插入一个空的关键帧(Keyframe)。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;这时工作区的短红线消失了，因为你现在编辑的是第30帧了，而短红线是画在第一帧的。现在，在工作区画上一根较第一帧长的红线（线的起始点与第一帧相同）。如下图。<br>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td>
+<div align="center"><img src="images/l2_06.gif" width="310" height="45"></div>
+
+
+</table>
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;然后右击Timeline中第一帧下的小方格，选择Properties...。出现下面的界面，选择Tweening，点选Shape，不需做任何改动单击OK（确定）。
+</p>
+
+<td width="21%"><img src="images/l2_05.gif" width="247" height="299">
+
+</table>
+<br>
+<table width="75%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="44%"><img src="images/l2_07.gif" width="248" height="130">
+<td width="32%">
+<div align="center">选Shape后按确定。</div>
+
+<td width="24%"><img src="images/l2_08.gif" width="100" height="87">
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="35%"><img src="images/l2_09.gif" width="251" height="123">
+<td width="65%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这时我们看到Timeline中从第一帧到第三十帧出现了一个箭头，Timeline的背景色也变成了淡绿色（如左图），表示从第一到第三十帧做形变运动。此时如果打开洋葱皮按钮，就可以看到当前帧附近几帧中物体的位置。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;现在这个动画就做好了，让我们按Ctrl+Enter看一下效果如何。不错吧，把30帧的直线的颜色改变后再看看效果。最后，选择菜单中的 File -&gt;Save 存盘(FLA格式，以后修改这个动画时用FLASH打开这个文件)，但如果你的网页要使用这个动画的话就要选择 File -&gt;Export Movie 存成SWF格式。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;怎么样，做成了自己的第一个FLASH动画，有没有成就感？好让我们趁热打铁，进行我们的下一课：<a href="lesson3.htm">做一个变形物体</a>。
+
+</table>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson3.htm">下一课</a></div>
+
+
+</table>
+</div>
+
+</body></html>

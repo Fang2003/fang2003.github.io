@@ -1,0 +1,98 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>AGP显卡安装手记<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; &nbsp;1998年最热闹的莫过于AGP3D加速卡，这主要表现在各3D图形处理芯片厂商快节奏的新产品开发和激烈的市场竞争，以及支持AGP主板的迅速流行。可以说目前中高档的显卡绝大多数都采用AGP接口，AGP正在成为显卡接口的新标准。你甚至要找一片PCI的i740、Riva128显卡都会非常困难。但AGP显卡风潮的到来毕竟太快了，对于大多数用户而言，他们更多地是听到铺天盖地的AGP之类名词，却很少有机会实际操作，下面笔者以华硕AGP－V3000显示卡为例将安装AGP显卡的一些基本方法与各位交流。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>认识AGP显卡</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 拿到AGP显卡后可以注意观察一下它的结构。其实采用相同图形处理芯片的显卡，无论是AGP的还是PCI的，显卡上的元件以及布局都非常相似，唯一的区别在接口插脚部分。华硕AGP－V3000显卡采用的是nVidia的Riva128图形处理芯片，它也有PCI版本的（3DP－V3000/PAL/NTSC），而且经过实测，性能并不比AGP版本的差。华硕AGP－V3000AGP显卡的主要组成部分如图一所示。需要说明的是：&amp;middot;显示芯片：又叫图形处理芯片，是整块AGP显卡的核心处理芯片，其作用就像电脑系统中的CPU。不同的图形处理芯片往往决定了显卡不同的2D、3D图形处理能力，而且采用相同芯片的各种显卡，性能往往非常相似。从外观上看，显卡上最大的那片集成电路芯片一定是图形处理芯片，由于目前的图形处理芯片的集成度相当高，发热量大，所以在处理芯片上往往加有散热片，甚至有散热风扇，华硕AGP－V3000采用的是SGS－THOMSONRiva128128位3D图形处理芯片，具备非常快的处理速度。<br>
+        &nbsp;&nbsp;&nbsp; &amp;middot;显示内存：AGP显卡通常使用SDRAM、SGRAM内存芯片，相对而言，SGRAM会有更高的性能，但这也需要驱动程序充分地利用SGRAM的优良特性，华硕AGP－V3000采用的是4片容量分别为1MB的SGRAM，总共4MB，这也是Riva128芯片能够支持的最大显存容量，不过其改进版本Riva128ZX将可以支持8MB显存。<br>
+        &nbsp;&nbsp;&nbsp; &amp;middot;VideoBIOS：是储存显示软件的芯片，开机后屏幕上出现的显卡基本信息也是固化在该BIOS芯片中，华硕AGP－V3000的VideoBIOS采用的EEPROM芯片，可以利用软件进行刷新，非常便于升级。目前几乎所有的AGP显卡都采用这样的BIOS设计。<br>
+        &nbsp;&nbsp;&nbsp; &amp;middot;AGP接口插脚：是衔接显示卡与主板AGP插槽的接口，这也是与PCI显卡外观上最大的区别所在。<br>
+        &nbsp;&nbsp;&nbsp; &amp;middot;VIP－A和VIA－B插座：VIA扩展子卡插座，用于插入华硕AGP－V3000显示卡的扩展子卡VIP模块，该模块主要提供DVD以及MPEG2硬解压功能。<br>
+        &nbsp;&nbsp;&nbsp; 与AGP显卡相对应的主板上的AGP插槽如图三所示，在图中，上部三只最长的插槽是ISA扩展槽，中央的三只白色短槽是PCI扩展槽，向下紧靠PCI扩展槽的便是AGP扩展槽。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>AGP显示卡的硬件安装</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 一切准备工作做好后我们就可以开始安装了。AGP显示卡的硬件安装可按以下步骤进行：<br>
+        &nbsp;&nbsp;&nbsp; 1.断开主机和显示器电源，建议你最好拔掉电源线插头；<br>
+        &nbsp;&nbsp;&nbsp; 2.打开机箱，寻找并确认主板上的AGP总线插槽，卸下机箱后部与AGP插槽对应的金属防尘片，露出条形窗口；<br>
+        &nbsp;&nbsp;&nbsp; 3.把AGP卡对准AGP扩展槽，使有输出接口的档板面向机箱后侧，然后适当用力平稳地将卡向下压入槽中。注意显示卡底部金手指上的凹部与扩展槽中相应凸部对齐，确保显示卡电路板底部的金手指与插槽接触良好。<br>
+        &nbsp;&nbsp;&nbsp; 4.将显示卡的金属档板用螺丝固定在条形窗口顶部。<br>
+        &nbsp;&nbsp;&nbsp; 5.将显示器的15针插头插入机箱后侧显示卡的VGA接口插座中，并且拧紧连接口两侧的螺丝。这样可以防止接触不良。硬件安装至此完毕。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>软件的安装步骤</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 正确安装AGP显示卡驱动程序和DirectX是用好AGP显示卡的必要条件，大多数AGP显示卡均与其驱动程序配套提供DirectX（目前最新的版本为6.0）。此外，还必须安装主板芯片组的AGPDriver（AGP硬件驱动程序），AGPDriver中的XXGART.VXD虚拟设备驱动（管理）程序提供了主板芯片组对AGP接口的支持。所以我们可以把AGP显示卡的软件安装分为三个步骤，1）升级操作系统；2）安装显示卡驱动程序和DirectX；3）安装主板芯片组的AGPDriver（注意：Windows98不需要第一步）。<br>
+        &nbsp;&nbsp;&nbsp; 第一步、升级操作系统<br>
+        &nbsp;&nbsp;&nbsp; Windows98自身支持AGP，如果你不打算安装Windows98，必须安装Windows95OSR2.0，并运行USBSUPP.EXE将其升级为支持AGP的Windows95OSR2.1。USBSUPP.EXE中的VMM32.VXD虚拟设备管理程序为AGP提供了对DIME的支持。（注：《电脑报配套光盘PC世界》1998年第1期提供了中、英文版的USBSUPP.EXE）运行USBSUPP.EXE时系统首先给出“即将在你的系统中安装MicrosoftUBSSupplement”的提示，经确认后自动启动并运行磁盘扫描程序，检查磁盘无误后开始拷贝文件，完毕后提示重新启动系统。如果你在“控制面板”/“系统”/“程序”/“添加/删除”标签的程序列表中发现“UBSSupplementtoOSR2”列表项，则表示USBSUPP.EXE已正确运行。<br>
+        &nbsp;&nbsp;&nbsp; 第二步、安装显示卡驱动程序<br>
+        &nbsp;&nbsp;&nbsp; 安装显示卡驱动程序有以下三种方法：<br>
+        &nbsp;&nbsp;&nbsp; 方法一：硬件安装完成后开启电脑时，Windows95自动侦测到显示卡的存在，并出现找到新硬件设备的画面时，选择安装驱动程序，如果你是熟手，且清楚的知道显示卡驱动程序在安装盘的何目录中，可以使用这种安装方法；<br>
+        &nbsp;&nbsp;&nbsp; 方法二：Windows95启动并出现找到新硬件设备的画面时，选择不安装驱动程序（Windows以后将不再提示）选项，而后执行安装盘中提供的SETUP安装程序（下文中会以华硕AGP－V3000显示卡为例，详细介绍显示卡驱动程序的这种安装方法）。<br>
+        &nbsp;&nbsp;&nbsp; 方法三：利用“控制面板”/“添加新硬件”进行安装。<br>
+        &nbsp;&nbsp;&nbsp; 第三步、安装AGPDriver<br>
+        &nbsp;&nbsp;&nbsp; AGPDriver与采用的控制芯片组有关，通常由主板供应商提供。下面以微星MS－5168主板（SiS5591、5595chipset芯片组）为例，简述在Windows95OSR2.1中安装AGPDriver的安装步骤和方法：1）安装AGP显示卡驱动程序后进入系统；2）将MS－5168主板驱动程序安装光盘放入CD－ROM中，光盘片中的程序安装界面会自动出现。如果安装程序没有出现，请执行安装光盘片中的SETUP.EXE；3）选择“SiS5591AGP＆PMCDriver”选项（此时系统给出提示，要求安装AGP显示卡驱动程序后再安装AGPDriver）开始安装；4）系统提示“INSTALLSiS5591GARTVXD，VERSION1.OO”并开始安装；5）安装完毕按提示重新启动系统。<br>
+        &nbsp;&nbsp;&nbsp; 重新启动系统后，如果你在“控制面板”/“系统”/“程序”/“添加/删除标签”的程序列表中发现“SiS5591GARTVXD”列表项，则表示AGPDriver已正确运行。<br>
+        &nbsp;&nbsp;&nbsp; 华硕AGP－V3000AGP显示卡驱动程序的安装过程和故障处理华硕AGP－V3000AGP显示卡可以在Windows95、WindowsNT4.0、WindowsNT3.51、DOS、Windows3.X中安装，以下介绍其在Windows95/98的安装过程。<br>
+        &nbsp;&nbsp;&nbsp; 1.在Windows95/98中安装<br>
+        &nbsp;&nbsp;&nbsp; 1）当华硕AGP－V3000显示卡插入系统后开启电脑时，Windows95会自动侦测到AGP－V3000显示卡的存在，并出现找到新硬件设备的画面，这时请选择不安装驱动程序（Windows以后将不再提示）选项；<br>
+        &nbsp;&nbsp;&nbsp; 2）进入Windows95后，将华硕AGP－V30001.02版（实际上华硕已提供了2.0正式版的驱动程序，可去http://www.asus.com.tw/查询）的安装光盘放入CD－ROM中，光盘片中的驱动及应用程序安装界面会自动出现。如果安装程序没有出现，请执行安装光盘片中的SETUP.EXE；<br>
+        &nbsp;&nbsp;&nbsp; 3）选择“安装AGP－V3000驱动程序”选项；<br>
+        &nbsp;&nbsp;&nbsp; 4）在新出现的“欢迎”窗口和“华硕AGP－V3000的特色”窗口按“下一步（N）”按钮；<br>
+        &nbsp;&nbsp;&nbsp; 5）继而出现的是复制文件窗口，窗口中显示文件复制过程，文件复制完毕后请按下“下一步(N)”按钮；<br>
+        &nbsp;&nbsp;&nbsp; 6）此时，安装MicrosoftDirectX5的对话框会出现，安装画面显示安装程序正在硬盘中寻找DirectXRuntime程序组件，如果在系统中找不到这些组件，安装程序会将DirectX5安装到硬盘中。当所有驱动程序安装完毕，系统提示重新启动后即完成安装。<br>
+        &nbsp;&nbsp;&nbsp; 2.安装选项<br>
+        &nbsp;&nbsp;&nbsp; 在华硕AGP－V3000显示卡驱动及应用程序安装界面还有以下选项，分别介绍如下：<br>
+        &nbsp;&nbsp;&nbsp; 1）安装DirectX5Microsoft的DirectX5提供了3D硬件加速能力，所以要在Windows95中用软件看VCD或MPEG文件，必须在安装播放软件之前先安装Microsoft的DirectX5，然后再安装MPEG播放软件；<br>
+        &nbsp;&nbsp;&nbsp; 2)删除AGP－V3000驱动程序如果想换用其它显示卡，可执行此选项来卸除AGP－V3000显示卡驱动程序；当然，也可在“控制面板”的“添加/删除程序”中完成。<br>
+        &nbsp;&nbsp;&nbsp; 3）安装VideoPlayer<br>
+        &nbsp;&nbsp;&nbsp; “VideoPlayer”是配合华硕AGP－V3000的影音光盘播放软件，支持VCD（＊。DAT）和MPEG（＊。MPG）播放。华硕公司建议不要在1280×1024和1600×1200高彩模式下播放影音光盘；不要在播放影音光盘时将其它程序窗口重叠在播放窗口上，否则可能出现问题。<br>
+        &nbsp;&nbsp;&nbsp; 4）安装ASUSLIVE3000<br>
+        &nbsp;&nbsp;&nbsp; “ASUSLIVE3000”是配合华硕AGP－V3000的视频播放设置程序，安装后第一次运行“ASUSLIVE3000”时需使用其Option菜单的VideoSource命令设置连接视频源类型（SVideo或Composite）、制式（PAL或NTSC），还可以调整视频输出画面的亮度、对比度、色饱和度与色调。<br>
+        &nbsp;&nbsp;&nbsp; 3.安装AGP显示卡驱动程序后可能出现的问题及处理问题一、AGP显示卡驱动程序安装完毕，系统没要求重新启动，且重新启动后，安装的驱动程序不起作用。<br>
+        &nbsp;&nbsp;&nbsp; 是由于原系统中存在旧驱动程序造成的，此时应在“控制面板”/“系统”/“设备管理”的设备列表中检查“显示适配器”条目下的项目，如果与所安装显示卡不符，应按下述方法重新安装：<br>
+        &nbsp;&nbsp;&nbsp; 1)选定“控制面板”/“系统”/“系统属性”单/“设备管理”标签的设备列表中检查“显示适配器”条目下的旧驱动程序项目后，单击“属性”按钮，打开“显示属性”单；<br>
+        &nbsp;&nbsp;&nbsp; 2)在“显示属性”单的“驱动程序”标签中单击“更新驱动程序”按钮，会出现“更新设备驱动程序向导”对话框；<br>
+        &nbsp;&nbsp;&nbsp; 3)在“更新设备驱动程序向导”对话框的复选框中选劝不，从列表中选择”后，单击“下一步”按钮，会出现驱动程序列表；<br>
+        &nbsp;&nbsp;&nbsp; 4)在驱动程序列表选定你的AGP显示卡驱动程序，单击“完成”按钮；<br>
+        &nbsp;&nbsp;&nbsp; 5)以后按照提示插入安装显示卡驱动程序安装盘，指定目录，按“确定”按钮后系统开始安装，完毕后按提示重新启动即可。<br>
+        &nbsp;&nbsp;&nbsp; 问题二、AGP显示卡驱动程序安装完毕重新启动后，Windows95提示显示设置不正确。<br>
+        &nbsp;&nbsp;&nbsp; 这往往是由于原系统中旧显示卡驱动程序未完全删除造成的，去“控制面板”/“系统”/“设备管理”的设备列表中将“显示适配器”条目下旧显示卡项目删除重新启动，如果问题没解决，按问题一所述方法重新安装驱动程序。<br>
+        &nbsp;&nbsp;&nbsp; 问题三、检查显示驱动程序属性单的资源标签，发现与设备PCIstandardPCI－to－PCIbridge发生冲突，设备列表中还列出了发生冲突的地址。<br>
+        &nbsp;&nbsp;&nbsp; 这种情况不会影响使用。此冲突提示在Windows95OSR2.1中方会出现，笔者在配置相同的二台电脑（微星MS－5168主板，微星4415AGP显示卡）上分别安装了Windows95OSR2.1和Windows98，比较发现AGP和PCIstandardPCI－to－PCIbridge的确使用把相互交叉的地址段E4000000－E5FFFFFF和E7000000－E700FFFF，但Windows98中无冲突提示，只要两个设备不同时使用相互交叉的地址段，就不会发生冲突。 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期39版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

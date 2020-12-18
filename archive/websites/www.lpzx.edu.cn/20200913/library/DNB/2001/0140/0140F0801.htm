@@ -1,0 +1,145 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="771" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第40期 </a>&gt;&gt;</font>专题快递</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">探索启动的奥秘</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>了解Windows98的启动过程，初学电脑的朋友可以更好地认识系统，并能够处理一些简单的启动故障，下面就一起去看看吧。<br>
+              一、启动的过程<br>
+              接通电脑电源，并点亮显示器，同时键盘、机箱上的指示灯闪烁。显示器将检测显示卡信息(图1)，这个过程比较短暂，画面几乎是一闪而过。<br>
+              完成显卡检测后，会发出嘟嘟的响声，然后进入下一画面，此时的界面中将显示系统BIOS信息，同时包括显示电脑硬件配置信息，包括CPU、内存等信息参数(图2)。<br>
+              完成上面过程后，会显示一个系统配置列表。然后根据CMOS 设置的参数，硬盘将磁头定位在物理扇0柱0面1扇上，接着先后读取扇区结束标志55AAH、主引导记录MBR、硬盘分区表HDPT，然后根据硬盘分区表提供的数据，硬盘将磁头定位在活动分区(主DOS 
+              引导分区)的引导扇区上(一般为物理扇0柱1面1扇)，接着先后读取扇区结束标志55AAH、操作系统参数。这一过程虽然复杂，但目的却很简单，是将操作系统读取内存中，储存在ROM(只读存储器)中的Bootstrap 
+              Loader程序和自诊断程序移动到RAM(随机存储器中)，随着Bootstrap Loader的运行，操作系统将系统文件送到RAM中。然后系统会执行Io.sys和Msdos.sys两个文件，此时屏幕上会出现“Starting 
+              Windowsn98……”的信息。<br>
+              需要说明的是，Windows启动时需要Command.com，Io.sys，Msdos.sys，Drvspace.bin 四个文件，在初始化过程中还要读取Autoexec.bat，Config.sys，System.ini，Win.ini，User.dat，System.dat六个文件。<br>
+              当进入蓝天白云画面后，在此画面中，下方的蓝色条是不断闪烁的，此时在后台系统将运行一些系统文件，如果你的系统中已经配置了“Config.sys”文件，那么此时会被执行，同时系统还将执行“Command.com”文件，使电脑能够进入DOS 
+              的实模式，启动基本成功。<br>
+              然后会根据Autoexec.bat、msdos.sys进一步配置Windows98，并决定进入哪一种模式，如果进入窗口模式，还要根据user.dat，system.dat，Win.ini 
+              ，system.ini 等读取相关文件，自动对Windows系统进行初始化，此时屏幕已经黑屏，并在屏幕左上角出现一个闪烁的光标，与此同时，启动过程将自动读取Windows 
+              的注册表文件，并完成启动过程，出现Windows的初始画面，就可以运行Windows系统了。<br>
+              在整个的启动过程，固化在主板中的ROM BIOS将监测硬件配置是否异常，比如板卡的接线、连接安装情况等是否正常，如果发生硬件故障，那么画面上将什么都不会出现，同时停止启动。<br>
+              二、启动也提速<br>
+              Windows系统启动过程需要对整个计算机软硬件进行初始化，所以很多朋友会觉得启动过程过于缓慢，如何提高Windows98的启动速度呢？<br>
+              1.优化BIOS<br>
+              进入BIOS设置程序，在“STANDARD CMOS SETUP”中将硬盘的检测方式设置为“IDE Auto Detection”，并将其他没有挂接磁盘或光驱的IDE接口设置为“None”。<br>
+              在“BIOS FEAUTURES SETUP”中将“System Boot Up Speed”设置为“High”，并将Quick 
+              Power On Self Test、Boot From LAN First设置成为“Disabled”，将“Boot Sequence”选项设置为“C 
+              Only”或者“C，A”方式，设定“ Boot Up Floppy Seek”为设为“Disabled”，然后设置“System 
+              BIOS Cacheable”为“Enabled”。还可以在CPU选项中设置“CPU L1 Cache”、“CPU L2 Cache”或“External 
+              Cache”、“Internal Cache”设置为Enabled方式。<br>
+              2.修改msdos.sys<br>
+              在DOS方式下，取消msdos.sys的只读属性，然后使用Edit程序打开对其编辑。首先需要设置“Autoscan=0”，可以跳过Windows98被非正常关闭之后，自动运行scandisk磁盘扫描程序，从而可以加快启动速度。设置“BootDelay”的值为0，用以指定Windows98引导前“Start 
+              Windows”提示信息停留时间。加入Bootmenu=0命令行禁用启动菜单，即系统启动时不出现启动选项。<br>
+              3.配置“系统配置实用程序”<br>
+              在Windows98启动时会自动运行一些程序，比如超级解霸的自动播放监视器等，我们可以将它们禁止运行，以达到快速启动的目的。具体方法是点击“开始/程序/附件/系统工具/系统信息”，并选取菜单“工具/系统配置实用程序”，并在启动选项卡中图3)，取消不必要的随系统自动运行的程序。比如说，SystemTray是管理驻留内存的程序，可以保留。LoadPowerProfile是电源管理方案，可以将其关闭。ScanRegistry的作用是在Windows启动时检查注册表，可以将其取消。TaskMonitor是计划任务监视器，可以将其取消。SchedulingAgent是计划任务的时间表，也可以取消。<br>
+              4.跳过启动画面<br>
+              Windows98在启动时会显示蓝天白云画面，可以通过跳过该启动画面加速系统启动过程，实现方法是，可以在系统启动时按住ESC键取消，或者打开根目录下的Msdos.sys文件，在其(Options)节添加Logo=0命令行。<br>
+              5.简化系统配置文件<br>
+              可以将系统配置文件Config.sys 和自动批处理文件 Autoexec.bat 删除，以改善系统的性能和启动速度，如果因为两个文件中加载了实模式驱动程序，反而会影响系统启动时间，如果要保留，注意不要加载光驱的驱动程序，以免启动时增加光驱的检测次数，增加光盘的读盘时间。<br>
+              6.定期整理硬盘碎片<br>
+              要经常使用Windows98提供的“磁盘碎片整理程序”进行硬盘碎片整理，这样可以重新整理硬盘上文件和未使用的空间，以加速文件的读取和程序的运行，减少硬盘寻道时间，实现方法是，点击“开始/程序/附件/系统工具/磁盘碎片整理程序”，在“选择驱动器”对话框中，单击“设置”按钮，并选取“重新安排程序文件以使程序启动得更快”。<br>
+              7.设置预读<br>
+              在“我的电脑”上单击鼠标右键，选择“属性”，在“系统属性”对话框中选择“性能”选项卡，单击“文件系统”按钮，在“硬盘”选项卡中，将电脑种类设置为“台式机”，将“预读式优化”滑块设置到“全部”，然后单击“确定”按钮即可。<br>
+              8.取消文件系统的疑难解答<br>
+              Windows为排除电脑故障，设置了文件“疑难解答”，可以在“系统 属性”对话框的“性能”选项卡中单击“文件系统”按钮，然后选择“疑难解答”选项卡，并将其全部取消(图4)。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

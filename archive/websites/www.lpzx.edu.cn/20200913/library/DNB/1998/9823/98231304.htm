@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用JavaScript编制跑马灯<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　跑马灯是主页中常用到的技巧，一个跑马灯往往会起到画龙点晴的效果。现在你只需将下面例子根据需要稍做修改后插入到自己的网页文件中，就会有别具一格的跑马灯了。<br>
+        　　例1：在浏览器的状态行中从左至右用打字效果显示<br>
+        　　&lt;SCRIPT Language=″JavaScript″&gt;<br>
+        　　var T=″《电脑报》欢迎您!″；<br>
+        　　var interval=250；<br>
+        　　t=10；<br>
+        　　function A()<br>
+        　　{len=T.length;<br>
+        　　window.status=T.substring(0,t＋1);<br>
+        　　t＋＋;<br>
+        　　if(t&gt;=len) {t=0};<br>
+        　　window.setTimeout(″A()；″，interval);}<br>
+        　　&lt;／SCRIPT&gt;<br>
+        　　&lt;BODY OnLoad=″A()；″&gt;<br>
+        　　例2：在网页中开设一个小窗口，在其中先用打字效果显示文本，再从左至右跑马<br>
+        　　&lt;SCRIPT Language=″JavaScript″&gt;<br>
+        　　var msg=″《电脑报》电子版欢迎您!″；<br>
+        　　var interval=250；<br>
+        　　var space10=″　　″；<br>
+        　　var t=0;<br>
+        　　function A1()<br>
+        　　{document.tmForm,<br>
+        tmText.value=msg.substring(0,t＋1)；<br>
+        　　t＋＋;t＋＋;<br>
+        　　if(t&gt;=msg.length){t=0;<br>
+        　　window.setTimeout(″A2()；″，interval);}<br>
+        　　else<br>
+        　　window.setTimeout(″A1();″，interval);}<br>
+        　　function A2(){<br>
+        　　document.tmForm.tmText.value=msg.substring(t,msg.length)＋space10＋msg.su<br>
+        　　bstring(0,msg.length)；<br>
+        　　t＋＋;t＋＋；<br>
+        　　if (t&gt;msg.length) {t=0};<br>
+        　　window.setTimeout(″A2()；″，interval);}<br>
+        　　&lt;／SCRIPT&gt;<br>
+        　　&lt;BODY OnLoad=″A1()；″&gt;<br>
+        　　&lt;CENTER&gt;&lt;FORM Name=tmForm&gt;<br>
+        　　&lt;INPUT type=Text Name=tmText Size=45&gt;<br>
+        　　&lt;／FORM&gt;&lt;／CENTER&gt;&nbsp;&nbsp; 　　<strong>(广西　张运宝)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月15日第23期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

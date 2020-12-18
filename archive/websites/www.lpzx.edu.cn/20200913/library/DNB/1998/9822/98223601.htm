@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>ALD主板的维修 
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        &nbsp;&nbsp;&nbsp; 故障现象：一台电脑，CPU是AMD 5X86/133，主板是ALD。一次开机时，显示器出现图像刷新不彻底的毛病，有时甚至不能启动，当听见“嘟、嘟”两声后，显示器一片漆黑。如用手敲打主机再开机，有时能启动。<br>
+        　　故障分析与处理：首先用KV300检查，没有发现病毒。估计是某处接触不良，马上检查显示器和主机内连线，均正常；将显示器跳过电影卡，直接与显示卡相连，故障依旧，显然故障点也不在电影卡。打开主机，仔细检查显示卡，没有发现任何异常，将卡插到其它PCI插槽，故障仍没排除。由于开机时主机有反应，而且在运行程序时，虽然发生显示故障，运行结果仍正常，所以可以排除CPU损坏的可能性。最后确定为主板损坏，由于主板的保修期已过，将坏的主板扔了挺可惜，不如“死马当作活马医”，自己修。仔细检查主板，没有发现任何异常。用电烙铁将焊锡点一一补焊，希望能解决问题。之后安装好主板，开机，故障更严重了，任我用手敲打主机，电脑再也不能启动。失望之余，翻开主板的说明书，发现ALD93C428主要负责PCI总线、EIDE、CPU、内存、CACHE等元件；而ALD93C439主要负责ISA总线的各种逻辑、中断等。而我的显示卡是PCI 
+        9440卡，因此发生的故障可能与ALD93C428有关。于是，我将主板拆下，重点检查ALD93C428，用螺丝刀轻轻拨动其引脚，果然发现有3只引脚虚焊，用烙铁小心将其焊牢，再安装好各部件，开机，一次成功。<br>
+        　　但好景不长，两星期后，我的电脑又不行了，这次，电脑开机后什么反应都没有。开机检查电源，各路输出电压均正常。检查主板的电压调整电路，发现该降压电路是由TL431(小功率集成并联稳压电路)、D882(NPN大功率三极管)及少许电阻构成。用万用表检查降压电路的输出，即D882的发射极，其输出电压仅为1.2V，远低于正常值的3.45V；再测量D882基极电压，为4.8V。由于好的三极管的发射极—基极电压为0.7V左右，而现在D822的发射极—基极电压竟达3.6V，可以判断D882损坏。D882的参数为：Icm=3A，Vceo=45V,Pcm=30W。笔者没有D882，但考虑到AMD5X86的功耗较小，其工作电流为1A左右，就用现有的JE340(Icm=1.5A,Pcm=20W,Vceo=100V)代替。考虑到原主机板上D882没有加散热器，这可能是D882损坏的主要原因，就找了一块20×40×1的铝片当散热器，固定在JE340上。将修复的主机板安装好，插上各种插件，再开机，熟悉的画面又呈现眼前。<br>
+        　　经过以上修理，我的电脑运行正常，至今未出现问题。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9822/1998/22/index.htm">《电脑报》1998年6月8日第22期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>改设打印方式后打印机不能打印<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp; &nbsp; 
+        　山东读者甘弗雷来信问：我有一块SIS5571主板，一开始打印口设为NORMAL状态，I/O地址分别设为03BC和0378、IRQ=7时，联接OK15320打印机均可打印。接下来将打印口改设为ECP、EPP状态，即使再设回NORMAL，在DOS622、WIN311、DOS70、WIN95下都无法打印。故障表现为：打印机可联机，若打印机中没装纸时，则显示“打印机纸空”故障。但安上纸后，在以上平台下执行打印，即使运行了打印程序(较平时快得多)，打印机也不动作，也不返回故障信号。反复设置CMOS或放电都无效，如果屏蔽主板打印口后，另加一多功能卡，则可正常打印。请专家帮忙诊断硬件是否损坏，能否恢复?<br>
+        　　答：估计你主板的打印口有问题，因为屏蔽主板打印口后，另加一多功能卡则可正常打印。EPP口(enhanced 
+        parallel port)即“增强并行口”，它是由Intel、Xircom、Zeith和其它一些公司开发的，目的是在外部设备间进行双向通信。ECP(extended 
+        capabilities port)即“扩展并行口”，它是由Microsoft和Hewlett－Packard开发的接口规格，具有和EPP一样高的速率和双向通信能力，但在多任务环境下，它能使用DMA(直接存储器访问)，所需缓冲区也不大，因此能提供更加稳定的性能。只有在主板和打印机都支持EPP或者ECP方式的情况下，才能设置为该方式，并且需要采用相应的驱动程序，否则不能打印。但是，当不支持某种方式而又作了该种设置时，一般不会损坏接口硬件(笔者作过实验)，而仅仅是不能工作而已。因此请再检查主板上的打印接口插槽有无问题。如果确认是主板打印适配器出了问题，那么只能改用多功能卡了。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

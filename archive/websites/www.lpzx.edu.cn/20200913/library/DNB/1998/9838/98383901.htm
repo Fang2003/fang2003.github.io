@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>四世同堂办公网<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 
+        我们计划科以前办公时，是用软盘传递数据和在各个计算机上分散保存数据，这种工作方式效率低下，而且经常遗失数据，因此我们想到了办公网络。我们科计算机档次参差不齐，有286计算机两台、386计算机一台、486计算机两台、PENTIUM级以上计算机五台，我们戏称为“四世同堂”。经过仔细考虑，我们选择了NETWARE3.12与WINDOWS95珠联璧合的方式组网。<br>
+        现该办公网络已稳定运行一年多，为我们各项任务的顺利完成起到了很大作用。实践证明该网有如下优点：一、投资少；二、稳定可靠；三、维护简单；四、业务数据的传输和保存有序、安全。下面我就把这一方案介绍给大家。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 一、硬件采购及连接<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 我们科的10台PC共配备了一台CD－ROM(足矣!后面将介绍此光驱的共享方法)和一台UPS，因而需要采购如下器材：1.终结器一套(5元)2.BNC头12对(2.5元/对)3.BNC网卡11块(NE2000兼容以太网卡，60元/块)4.引导芯片5个(2元/个)5.细缆200米(2元/米)6.塑料线卡钉400个(80元)7.压线钳一把(120元)上述器材共花费1305元，采购回来后即可开始硬件连接，网卡和BNC头采购时都留有富余量，以备不时之需，UPS连在作为服务器的计算机上。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 二、NETWARE3.12文件服务器的安装<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        选一台档次高的计算机做服务器进行软件安装。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 1．所用安装光盘的NETWARE.312目录下应含有如下子目录：BASICMHS、INSTALL、MIGRATE、NETVIEW、SYSTEM、SYSTEM1_8、UNICODE、WSDOS、WSDRV、WSOS2和WSWIN。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 2.将服务器硬盘分为两个区C:和D:,其中C:为引导盘，容量100M,在CONFIG.SYS文件中应有FILES=60,BUFFERS=40两句，DOS不要驻留高端。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 3.接上光驱，启动机器，进入\NETWARE.312执行INSTALL,此时会在C:中建立SERVER.312子目录，并将SYSTEM1－8中的文件全部拷贝至该目录中。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 4.进入C:\SERVER.312,执行SERVER进入网络操作系统，并提示输入服务器名(如NX_SERVER)和IPX内部网络号(如3512D2F7)。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 5.在网络操作系统提示符下(如NX_SERVER:)输入：LOADISADISKLOADNE20006.为NIC(网卡)挂上通信协议：BINDIPXTONE20007.安装INSTALL模块：(1)输入命令：LOADINSTALL(2)在DISKOPTION选项中选PARTITIONTABLES,将非DOS活动分区转化为NETWARE分区，按ESC键返回上一层菜单(3)在VOLUMEOPTION中按INS键加入SYS卷，此卷大小可定为200M,SYS卷建好后再按INS键建一数据卷，将剩下空间均分配给此数据卷，数据卷建好后返回上一层，再次选择SYS卷，进行设置。(4)在SYSTEMOPTION中选COPYFILES,把SYSTEM和PUBLIC文件从光盘中拷入SYS卷(这时需要输入文件在光盘中的路径，如D:\NETWARE.312)。(5)在SYSTEMOPTION中选CREATESTARTUP.NCF和CREATEAUTOEXEC.NCF,创建启动文件。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 其中STARTUP.NCF文件内容如下：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; LOADISADISKPORT=1F0INT=E<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; AUTOEXEC.NCF文件内容如下：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; FILESERVERNAMENX_SERVER<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; IPXINTENALNET3512D2F7<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        LOADNE2000PORT=300INT=3FRAME=ETHERNET_802.3(注：缺省值为802.2,PORT值和INT值必须和网卡的实际值相符，可运行网卡安装程序测出上述二值。)BINDIPXTONE2000NET=001MOUNTALL8.完成上述工作后，退出，重新启动机器，服务器即可正常工作。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 三、有盘工作站的建立<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 我们采用ODI方式入网，具体步骤如下：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 1.将WSDOS下所有文件拷入第一张软盘，并标记为WSDOS。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 2.将WSDRV下所有文件拷入第二张软盘，并标记为WSDRV。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 3.将WSWIN下所有文件拷入第三张软盘，并标记为WSWIN。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 4.将WSDOS软盘插入计算机，执行INSTALL,若要使该计算机支持WINDOWS,则请在安装过程的第3步回答YES,进入第4步时，插入WSDRV盘，选NOVELL/EAGLENE2000选项后输入节点地址(如21E101E1),输入地址后按提示插入WSDOS盘即可。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 5.在C:\NWCLIENT目录下编辑NET.CFG文件，将帧类型由802.2改为802.3,重新启动计算机即可。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 四、多重无盘工作站的建立<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 1.将IPX.COM和NETX.EXE拷入一系统软盘中，此软盘中应有如下CONFIG.SYS和AUTOEXEC.BAT文件。CONFIG.SYS文件内容如下：DEVICE=HIMEM.SYSDEVICE=SETVER.EXEFILES=30BUFFERS=30AUTOEXEC.BAT文件内容如下：@ECHOOFFPROMPT＄P＄gPATHA:F:LOGIN2.启动有盘工作站并以SUPERVISOR身份入网。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 3.执行以下命令：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; MAPG:=SYS:SYSTEM<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; MAPF:=SYS:LOGIN<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; F:\LOGIN&amp;gt;G:DOSGENA:TIMAX.SYS<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; FLAGTIMAX.SYSS<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; COPYA:\AUTOEXEC.BATF:\LOGIN<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 4.在F:\AUOGIN目录下建一BOOTCONF.SYS文件，内容如下：0X001,21E0FFBE=TIMAX.SYS5.用上述方法可做出不同环境的引导文件，将不同的网卡地址加入BOOTCONF.SYS中，并将引导芯片插入网卡就能自动引导。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 五、打印服务器的建立<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 1.打印机硬件连接：将打印机连在服务器上并在DOS环境下测试打印机。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 2.在任一台工作站上以SUPERVISOR身份入网。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 3.执行PCONSOLE，选择PRINTSERVERINFORMATION；按INS键建立新的打印服务器，输入打印服务器名，如NXPSER。在NXPSER上敲回车后执行以下命令：PRINTSERVERCONFIGURATIONPRINTCONFIGURATIONNOTINSTALL0TYPE:PARALLEL,LPT1<br>
+        &nbsp;&nbsp;&nbsp; 4.选择打印设备(1)运行PRINTDEF(2)选PRINTDEVICES|IMPORTPRINTDEVICE，选EPLQ800.PDF。<br>
+        (3)执行下述命令：<br>
+        EDITPRINTDEVICES|DEVICEMODESDEVICEFUNCTIONSFORMS5.配置打印机(1)运行PRINTCON；(2)输入命令：EDITPRINTJOBCONFIGURATIONS；(3)按INS,输入PRINTJOBNAME如Q1；(4)在DEVICE栏选EPSONLQ－800/LQ－1000。<br>
+        &nbsp;&nbsp;&nbsp; 6.打印实现<br>
+        &nbsp;&nbsp;&nbsp; (1)打印服务器加载，在服务器AUTOEXEC.NCF文件中加入如下一行，就可实现服务器启动时自动加载打印服务器：LOADPSERVERNXPSER(2)远程打印：在F:\PUBLIC目录下编辑PP.BAT文件，内容如下：CAPUREQ=Q1NBNTT112FF,每台工作站要打印文件时只需先执行PP一次即可。<br>
+        &nbsp;&nbsp;&nbsp; 六、WINDOWS95与NETWARE3.12的连接<br>
+        &nbsp;&nbsp;&nbsp; 1.将WINDOWS95安装光盘放在光驱中。<br>
+        &nbsp;&nbsp;&nbsp; 2.依次单击“开始”、“设置”、“控制面板”、“网络”、“添加”、“适配器”、“添加”。<br>
+        在“厂商”栏选Novell/Anthem，在“网络适配器”栏选Novell/AntherNE2000，然后按“确定”。在“网络组件”中将NetBEUI项删除，在“基本网络登录方式”寻Microsoft网络客户”，在“标识”栏输入计算机名(如P200),在“工作组”中输入NXPCB,“计算机说明”中输入附注，如PENTIUM,在“访问控制”栏寻共享级访问控制”，在“资源”栏里选IRQ=3I/O=300－31F，然后按“确定”。重启动PC后屏幕上会出现“输入网络口令”对话框，在“用户名”栏输入NOVELL用户名，在“口令”栏输入口令，在“登录服务器”栏输入NX_SERVER后按“确定”即可登录NOVELL网，上网后会出现一网上邻居图标，用鼠标右键单击该图标，寻映射网络驱动器”，在驱动器栏选H:，并选中登录时重连接，确定后每次启动WINDOWS95就会自动连上NX_SERVER。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; 七、IDE接口CD－ROM的共享<br>
+        根据实际需要，我们将光驱安装在一台工作站上，具体方法为：<br>
+        &nbsp;&nbsp;&nbsp; 1．在安装有光驱的工作站上，打开“控制面板”后，依次点击“系统”、“性能”、“文件系统”、“此计算机的主要用途”，在这里将该计算机设为&amp;quot;网络服务器&amp;quot;。<br>
+        &nbsp;&nbsp;&nbsp; 2．在需要共享光驱的每台(包括本台)工作站上，打开控制面板，依次点击“网络”、“标识”、“工作组”，输入NXPCB（每个计算机都输入此名）。<br>
+        &nbsp;&nbsp;&nbsp; 3．在装有光驱的工作站上，双击&amp;quot;我的电脑&amp;quot;，用鼠标右键点击CD－ROM，然后在&amp;quot;共享&amp;quot;栏进行设定。<br>
+        （湖北刘一才）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月5日第38期39版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

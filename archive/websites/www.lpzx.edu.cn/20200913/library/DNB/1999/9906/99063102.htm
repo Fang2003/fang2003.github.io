@@ -1,0 +1,94 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>NOVELL网无盘启动WIN95进阶</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font color="#FFFFFF">NOVELL网无盘启动WIN95进阶</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　与 Windows NT 网中无盘启动 Windows 95 相比,在 
+        NOVELL网中 (NetWare 3.12 版本以上) 实现无盘启动Windows95要简单得多,此类文章已有介绍,故不再赘述,须注意的是,安装过程中有些步骤得特别小心,若有一小点的差错,屏幕上出现的将不是令人向往的 
+        Windows桌面,而是一行行的错误提示,实在让人头痛。<br>
+        　　现将笔者在安装过程中的一点经验介绍给大家,希望对大家有所帮助。<br>
+        　　1.NOVELL 网中无盘工作站启动 Windows 95 有两种模式:实模式和保护模式。所谓实模式即先运行一些基于 
+        DOS 的网络软件连上服务器后,再进入 Windows 95 (此方法《电脑报》1998年第39期有介绍),而保护模式则是直接运行 
+        Windows 95 的内置连网软件以保护方式连上服务器进入 Windows 95 
+        。建议你使用保护模式运行 Windows 95 ,因为只有在保护模式下才能充分利用 
+        Windows 95 的独特功能，且安装方法也比实模式要简单得多。(此方法《电脑报》1998年第48期中有介绍)<br>
+        　　2.服务器最好使用 NetWare 4.11 版本以上,因为此版本提供对长文件名的支持及 
+        TCP／IP 协议等功能,使以后的维护工作更加方便快捷。<br>
+        　　3.服务器中一定要加入长文件名支持,以便让那些基于在Windows 95上运行的软件能正常工作,具体方法如下:<br>
+        　　 a.在NetWare 3.1x ,4.10 服务器控制台键入<br>
+        　　load os2<br>
+        　　add name space os2 to sys (sys 为卷名)<br>
+        　　然后将“load os2”此句加到Autoexec.ncf中<br>
+        　　b.在NetWare 4.11服务器的控制台键入: <br>
+        　　load long<br>
+        　　add name space long to sys <br>
+        　　(或采用a项的方法)<br>
+        　　4.安装 Windows 95 共享文件需一台能正常运行Windows 95的有盘工作站,在此工作站中，最好采用 
+        NOVELL 公司提供的NetWare Client32 For Win95 
+        客户软件来登录服务器进行安装。<br>
+        　　5.MSBATCH.INF 文件的制作并不是很重要,不需要用BATCH.EXE程序进行配置生成,在安装时，只需选择不创建默认值,直接安装共享文件即可。安装完成后,在共享 
+        Windows 的目录中仍会有这个 MSBATCH.INF 
+        文件。去掉只读属性进行编辑，将Hdboot=1改为Hdboot=0,将Display 
+        workstation=0 改为 Display workstation=1 即可。安装时根据提示进行安装,就可以不需要为每一台不同型号的工作站配置专门的MSBATCH.INF文件。<br>
+        　　6.无盘工作站安装时,有如下建议：<br>
+        　　a.在提示选择安装路径时请不要填入共享Windows 95 的文件目录,可以填入如“F:\winuser\001”这样的路径。<br>
+        　　b.在提示选择安装类型时请选择“自定义”。<br>
+        　　c.所有硬件都不要检测,组件也不要安装,等能正确进入Windows 95 
+        后再安装。<br>
+        　　d.若是普通Ne2000兼容网卡,在安装网卡时，将“控制面板” －&gt;“网络”中“客户”改为“Microsoft”中的“NetWare网络客户”。<br>
+        　　e.安装 NETBEUI 协议及 IPX 兼容协议。<br>
+        　　f.双击“NetWare网络客户”，首选服务器填上 NOVELL 服务器名,最好不要选择“启用登陆脚本处理”。<br>
+        　　g.设定NE2000兼容网卡，IRQ=3 PORT=300。<br>
+        　　h.设定登录方式为Windows登录。<br>
+        　　7.MACHINES.INI文件的修改很重要,千万不要弄错格式。<br>
+        　　例如某用户安装 Windows 的路径为“F:\winuser\001”,则格式为:<br>
+        　　[BBBBBBBBBBBB] (此为无盘工作站网卡号)<br>
+        　　SYSDATPATH=F:\WINUSER\001 <br>
+        　　F=\\FS\SYS\<br>
+        　　(“FS”为服务器名)<br>
+        　　8.将声卡,显示卡等驱动程序拷入共享 Windows 的 system 目录下,当安装驱动程序提示输入驱动程序路径时填入x:\Windows\system.<br>
+        　　9.NetWare 的系统登录脚本中不要有“COMSPEC=F:\DOS\COMMAND.COM”的语句,否则启动 
+        Windows时会出现“不能加载EXPLORER.EXE,请重装Windows”的错误提示,如果在安装时没选择“启用登录脚本处理”则不会出现此问题.<br>
+        　　10.NetWare 4.0 以上支持多重启动<br>
+        　　若 DOS 启动文件为 NET＄DOS.SYS, Windows 启动文件为NET＄WIN.SYS。在SYS:LOGIN目录下编辑BOOTCONF.SYS文件：0XAAAAAAAA,BBBBBBBBBBBB=NET＄DOS.SYS 
+        NET＄WIN.SYS<br>
+        　　（其中0X:表示16进制，AAAAAAAA:802.2,802.3协议的网络号，BBBBBBBBBBBB:指无盘工作站网卡号）<br>
+        　　如有什么不明之处,欢迎来信共同切磋，我的E－mail为 <a
+        href="mailto:newjoy@163.net">newjoy@163.net</a></span></font></p>
+        <p align="right"><big><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月8日第06期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

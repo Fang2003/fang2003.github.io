@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> V016 - 跳跃函数（Jump） </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+GoTo <br><br>GoTo(IconID@&quot;Icon Title&quot;) <br><br>跳到 Icon Title 图示上　继续展示的动作　 <br><br>JumpFile　JumpFileReturn <br><br>JumpFile(&quot;filename&quot;) <br><br>JumpFile(&quot;filename&quot;, &quot;variable1, ...&quot;) <br><br>JumpFile(&quot;filename&quot;,&quot;variable1,...&quot;,&quot;directory&quot;) <br><br>JumpFileReturn(&quot;filename&quot;) <br><br>JumpFileReturn(&quot;filename&quot;, &quot;variable1, ...&quot;) <br><br>JumpFileReturn(&quot;filename&quot;,&quot;variable1,...&quot;, &quot;directory&quot;) <br><br>将这二个函数视为呼叫的函数　因为它们都会呼叫 A3W 的程式　也就是说可以将不同的程式分开存档　当使用到这个程式时　再将它们呼叫进入到记忆体之中　 <br><br>JumpFileReturn 虽然也是呼叫另外一个程式　但是系统会记得此呼叫的原始程式为何　所以当使用者离开被呼叫的程式时　就会回到原来的程式上继续执行　 <br><br>如果想要与 Quit 函数配合使用　记得将 Quit 函数的参数设定为 0　若不是这个参数　结果程式的控制会有些问题　会影响到 JumpFileReturn 的设定　 <br><br>第二个引数主要是给程式中间传递用　可以指定那几个变数需要传给被呼叫的程式使用　这些变数就可以从原始的程式带到被呼叫的程式上　 <br><br>当想要设定变数的名称时　有一个简便的方法　如果这些变数的名称都类似　则可以配合万用字元 * 使用　所有符合的变数都会传到新的程式中　 <br><br>最後一个引数是设定记录 record 的目录　系统内定的目录为 Windows\A3w_data　可以改变这个目录　如果程式应用在网路上　使用者非常众多　这个引数就有必要存在　因为您可以指定每一个使用者一个目录　这个目会储存此位使用者所使用程式的过程　也就是记录档案会写在这个目录之中　如此当使用者开机时　就会读到自己的记录档案　 <br><br>JumpOut　JumpOutReturn <br><br>JumpOut(&quot;program&quot;) <br><br>JumpOut(&quot;program&quot;, &quot;document&quot;) <br><br>JumpOutReturn(&quot;program&quot;) <br><br>JumpOutReturn(&quot;program&quot;, &quot;document&quot;) <br><br>这二个函数与 JumpFile 相似　但是它们所呼叫的不是 A3W 程式　而是任何其它的程式　在 program 中所填入的就是这个程式的名称与路径位置　 <br><br>第二个引数 document 则是传给新程式的文件　如果您所呼叫的是一个 Word 程式　就可以传给它一个文字档案　如此当 Word 开启後　也会同时开启这个文字档案　 <br><br>当呼叫程式出现错误时　可以查询 IOStatus　IOMessage 看看到底错误在何处<br><br>JumpPrintReturn <br><br>JumpPrintReturn(&quot;program&quot;, &quot;document&quot;) <br><br>JumpPrintReturn(&quot;&quot;, &quot;document&quot;) <br><br>可以呼叫程式来列印文件　所呼叫的程式可以放置在 program 上　而文件可以放置在 docment 上　若不知道所要列印的程式为何　可以选择不填入名称　只留下双引号即可　 <br><br>ResumeFile　ResumeFileName <br><br>ResumeFile() <br><br>ResumeFile(&quot;recdirectory&quot;) <br><br>string := ResumeFileName() <br><br>string := ResumeFileName(&quot;recdirectory&quot;) <br><br>在介绍这个函数前　必须知道这二个函数与 File Setup 对话方块之中的 Resume 核对方块有关　因为只有设定为 Resume　程式才会有回来的名称　 <br><br>ResumeFile() 函数主要是到使用者的记录中　读取上一次离开时的程式名称　然後开启这个程式　继续上一次尚未执行完的程式　使用的方式很简单　 <br><br>而 ResumeFileName() 函数的功能主是到使用者的记录中　读取上一次离开时的程式名称　然後将这个名称传给所指定的变数　您可以利用函数来做判断　 <br><br>二个函数中　都可以放置引数　它代表记录的目录　 <br><br>TimeOutGoTo <br><br>TimeOutGoTo(IconID@&quot;Icon Title&quot;) <br><br>本函数会监督使用者的动作　如果使用者在系统变数 TimeOutLimit 中所设定的时间内　没有任何反应时　会自动跳到 Icon Title 图示上展示　 <br><br>在使用这个函数前　必须先指定 TimeOutLimit 变数值　如果在使用函数之前将变数值设定为 10　表示在 10 秒钟过後　使用者仍然没有任何动作时　就会跳到 TimeOutGoTo 函数上执行　所以此时可以使用函数来指定　 <br><br>如果 TimeOutGoTo(IconID@&quot;Presentation&quot;) 是我们的设定　则 10 秒钟後使用者没有任何反应时　会跳到 Presentation 这个图示上执行　 <br><br>曾安德　编著
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001114155706
+<div align="center"><a href="xwpl_343.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

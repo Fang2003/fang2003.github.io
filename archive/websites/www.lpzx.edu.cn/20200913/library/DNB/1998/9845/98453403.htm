@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>误删注册表导致死机的处理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> &nbsp; 
+        　江西读者李勇问：我在计算机上安装了《电脑报配套光盘第2期》上的许多软件，后来又卸载了部分软件。我想在注册表中肯定有许多“垃圾”，就打开了注册表，在HKEY_LOCAL_MACHINE分支中查找无用的子键或者键值。由于一时疏忽，将某个子键的主键也删除了。后来在Windows 
+        95的DOS环境中运行程序时，发现屏幕上只有一些纵横交错的网状光栅线，无任何提示。按“关闭”、“返回”以及其他任何键均无反应，系统死机了，只好强行关机。<br>
+        　　答：首先要说明的是，在修改注册表之前，必须使用注册表编辑器的“导出注册表文件”选项保存一份当前的注册表，然后再修改。你所说的现象在许多读者来信中都谈到这个问题，下面介绍几种常用方法：<br>
+        　　1.在出现此错误时，可以将注册表的备份文件恢复过来，其方法是：<br>
+        　　(1)进入纯DOS环境中。<br>
+        　　(2)在Windows目录下执行如下命令：<br>
+        　　attrib －h －r －s system.da0<br>
+        　　attrib －h －r －s user.da0<br>
+        　　copy system.da0 system.dat<br>
+        　　copy user.da0 user.dat<br>
+        　　(3)重新启动计算机。<br>
+        　　2.将C盘根目录下的System.lst拷贝成System.dat，其方法是：<br>
+        　　在DOS环境中执行如下命令：<br>
+        　　attrib －h －r －s c:\system.lst<br>
+        　　copy c:\system.lst c:\windows\system.dat<br>
+        　　然后重新启动计算机。<br>
+        　　3.如果你对注册表比较熟悉，则可以将你删除的主键恢复过来，其方法是：<br>
+        　　(1)在纯DOS环境下，使用RegEdit ／C命令将System.lst导出到一个文本文件SYS.TXT中。<br>
+        　　(2)在SYS.TXT文件中查找你所删除的主键，将此主键及其下面的所有子键保存成一个文件，如AAA.REG。<br>
+        　　(3)在Windows 95下打开注册表编辑器，然后将AAA.REG导入到注册表中。<br>
+        　　有关注册表内部结构请参见《Windows 95／98注册表详解、配置与应用实例》一书（清华大学出版社出版）。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月23日第45期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

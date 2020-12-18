@@ -1,0 +1,141 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>惠普服务器第二块网卡的安装</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0121/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0121/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第21期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->惠普服务器第二块网卡的安装<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->单位的服务器为惠普 ＮｅｔＳｅｒｖｅｒ 
+              Ｅ５５ Ｇｏｌｄ型ＰⅡ４５０，６４Ｍ内存，９．０ＧＢ ＳＣＳＩ硬盘，内置１０／１００Ｍ自适应网卡，所连２０台电脑为赛扬２６６ＭＨｚ，３２Ｍ内存，客户端均采用１０Ｍ网卡。网络操作系统为ＮＯＶＥＬＬ 
+              ＮＥＴＷＡＲＥ ５ 中文版２５ＵＳＥＲ，采用以太网，拓扑结构为星型。用户分为营业厅和会计室营业室均采用无盘站。问题出现在前一段时间，营业厅用户反映网络速度慢，尤其是进行当日现金汇总时，竟用３０分钟左右。经询问，并非经常如此。后得知原来会计室当时正进行大量的日常业务处理。<br>
+              解决方案：试着在服务器上增加第二块网卡，分成两个网段，分担网络流量，看能否解决问题。具体加装网卡的方法如下：<br>
+              一、增加新硬件<br>
+              ３ＣＯＭ ９０５Ｂ ＰＣＩ １０／１００Ｍ 自适应网卡一块以下简称３ＣＯＭ 卡。<br>
+              二、操作步骤<br>
+              １．打开服务器的机箱，可以看到惠普Ｅ５５服务器主板上有１个ＡＧＰ插槽，６个ＰＣＩ插槽，１个ＩＳＡ插槽。惠普说明书上说ＩＲＱ 按以下所示方式共享：<br>
+              ＰＣＩ插槽１和插槽５<br>
+              ＰＣＩ插槽２和插槽６<br>
+              嵌入式ＳＣＳＩ和插槽３<br>
+              嵌入式ＬＡＮ和插槽４<br>
+              ＩＳＡ插槽和ＰＣＩ插槽６共享<br>
+              ＰＣＩ插槽按照以下顺序引导２、１、５、６、３、４<br>
+              如果视频卡跳线已设置则插槽１和插槽５也可以与视频卡共享。<br>
+              为在系统内支持６个ＰＣＩ 附件插槽，惠普ＮｅｔＳｅｒｖｅｒ Ｅ５５ ＧＯＬＤ 配有主次ＰＣＩ总线。（ＰＣＩ插槽１和插槽２是主ＰＣＩ总线，ＰＣＩ插槽３和插槽６是次 
+              ＰＣＩ总线）惠普建议我们在配置次 ＰＣＩ 总线前，将高性能卡置于主总线上。我们将３ＣＯＭ卡插入ＰＣＩ插槽１（紧靠ＡＧＰ插槽的那个ＰＣＩ插槽）。<br>
+              ２．惠普服务器采用ＰＨＯＥＮＩＸＢＩＯＳ的ＢＩＯＳ版本号４．０６．０１ ＰＯ。系统加电后，按Ｆ２进入ＢＩＯＳ设置。选择“ＣＯＮＦＩＧＵＲＡＴＩＯＮＰＣＩ”菜单选择“ＰＣＩ 
+              ＳＬＯＴ ＤＥＶＩＣＥＳ”，选择“ＰＣＩ ＩＲＱ ＬＯＣＫＩＮＧ”，出现４项设置我们仅把“ＩＮＴＡ ＦＯＲ ＳＬＯＴ １＆５”改为５其它３项为ＡＵＴＯ保存ＢＩＯＳ设置并退出。<br>
+              ３．系统重新启动后，当屏幕出现ｐｈｏｅｎｉｘｂｉｏｓ ｓｙｓｔｅｍ ｃｏｎｆｉｇｕｒａｔｉｏｎ时按Ｐａｕｓｅ键我们可以看到中断显示：<br>
+              ＥＭＢＥＤＤＥＤ ＳＣＳＩ ＩＲＱ １０，ＥＭＢＥＤＤＥＤ ＬＡＮ ＩＲＱ １１，ＰＣＩ ＳＬＯＴ １ ＥＴＨＲ ＩＲＱ ５，ＰＣＩ 
+              ＳＬＯＴ ２－６ ＥＴＨＲ ＩＲＱ ＥＭＰＴＹ。<br>
+              在这里我们可以看到ＰＣＩ插槽１的中断已被强制设置为 ５。<br>
+              ４．启动服务器，在控制台上“”提示符下键入ＮＷＣＯＮＦＩＧ，进入“配置选项”，选择“驱动程序选项（装载／卸载磁盘和网络驱动器”，选择“配置网络驱动程序”选择“发现并装载附加驱动程序”。ＮＯＶＥＬＬ 
+              ＮＥＴＷＡＲＥ ５ 会自动加载３ｃ９０ｘ网卡的驱动程序，选择保存后回到“配置选项”。这里说明一下，ＮＯＶＥＬＬ ＮＥＴＷＡＲＥ 
+              ５ 用 ＮＷＣＯＮＦＩＧ 命令 代替了以往版本的ＩＮＳＴＡＬＬ命令。<br>
+              ５．最后编辑ＡＵＴＯＥＸＥＣ．ＮＣＦ文件因《电脑报》以前介绍过故不再详述。<br>
+              ６．把连接会计室的网线插入３ＣＯＭ网卡，重新启动服务器。 <br>
+              在给服务器装上第二块网卡后，营业厅计算机平均汇总时间为５分钟，且网络响应时间明显加快。<br>
+              吉林 刘史忠<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

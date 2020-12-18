@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用FoxPro实现英语单词排序&nbsp; 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　最近有些拥有计算机的人在用诸如译林、UCDICT等翻译软件学习英语时，要将查询的历史记录按顺序打印出来，以便记忆。其格式如下：<br>
+        　　famous<br>
+        　　adj著名的;极好的<br>
+        　　essential<br>
+        　　n要素;本质;要点;精髓<br>
+        　　adj本质的;实质的;根本上的;必要的<br>
+        　　communicator<br>
+        　　n传达者;发报机<br>
+        　　……<br>
+        　　上述格式的特点是每个英语单词之间有一空行，每个单词的解释有若干行，我们只要将第一行的单词存入一字符型的字段中，将其若干行解释内容存入一备注型字段中，对字符型字段进行排序之后，即可输出排好序的内容，而格式完全不变，源程序如下:<br>
+        　　＊＊＊程序名:ecprg<br>
+        　　＊＊＊排序之前的文件名:eclog,排序之后的文件名:ectxt<br>
+        　　set talk off<br>
+        　　crea table ec (aa c(60))　＆＆创建一个数据库,用来存放排序之前的单词<br>
+        　　appe from eclog sdf<br>
+        　　sele 2<br>
+        　　crea table tmp (aa c(40),bb m(10))　＆＆创建临时数据库<br>
+        　　sele 1<br>
+        　　go top<br>
+        　　do while noteof()<br>
+        　　if !empty(aa)<br>
+        　　sele 2<br>
+        　　appe blan<br>
+        　　repl aa with trim(aaa)<br>
+        　　sele 1<br>
+        　　do while !empty(aa)<br>
+        　　skip<br>
+        　　sele 2<br>
+        　　repl bb with bb＋trim(aaa)＋chr(13)　＆＆加回车换行符,以保持原有格式<br>
+        　　sele 1<br>
+        　　enddo<br>
+        　　else<br>
+        　　sele 1<br>
+        　　skip<br>
+        　　endif<br>
+        　　enddo<br>
+        　　sele 2<br>
+        　　set uniq on　＆＆打开唯一性开关,避免出现重复的单词<br>
+        　　inde on lower(aa) to tmp　＆＆以小写为准进行排序<br>
+        　　set prin to ectxt<br>
+        　　set devi to prin<br>
+        　　do while not eof()<br>
+        　　@prow(),0 say trim(aa)<br>
+        　　@prow()＋1,0 say trim(bb)<br>
+        　　skip<br>
+        　　enddo<br>
+        　　set devi to scre<br>
+        　　set prin to<br>
+        　　close data<br>
+        　　!del ecdbf<br>
+        　　!del tmp＊<br>
+        　　retu<br>
+        　　以上程序在FOXPRO 25、386～586机上运行通过。(广东　刘冬生）<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月11日第18期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

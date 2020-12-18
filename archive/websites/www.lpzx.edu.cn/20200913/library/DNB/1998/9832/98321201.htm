@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HD95COPY轻松备份硬盘</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>HD95COPY轻松备份硬盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp;&nbsp;现DOS下的磁盘拷贝工具HD－COPY曾经深得众多PC迷的喜爱，值得高兴的是，到了Win95下，针对大容量硬盘的超级拷贝工具HD95依然可以让我们把备份工作做得得心应手。<br>
+        新版的HD95包括HD95COPY和FAT32CP两部分，有了它，因为一点小故障而花上几十分钟来重装系统的烦恼就可以避免了，你甚至还可以在一个内部网络中装一次Win95，然后用它建立一个映像文件，挨个儿“Restore”就成(这要求各机器的C盘的扇区、簇等均一致)。<br>
+        下面以HD95COPY为例说明其用法。一般情况下应在DOS状态运行HD95(系统崩溃之后我们也只能在DOS下来“亡羊补牢”)。运行后出现主窗口，假设我们要将系统中的C盘内容进行备份(同HD－COPY针对整个软盘一样，HD95针对的也是硬盘的某一分区的全部)，备份文件建立在E:\HD95COPY\WIN95中。<br>
+        1先选择“File”菜单下的“BackupFile”，就弹出选择备份文件对话框，单击E:\HD95COPY\WIN95文件夹，键入文件名TEST，缺省的扩展名是HD2和F32。<br>
+        2选好备份映像文件后单击主窗口下的“Drive”菜单，选择要备份的分区，这里选择C盘。<br>
+        3单击主窗口下的“Backup”，确认后就开始备份，备份过程中主窗口下面的状态栏显示出备份完成的百分比。<br>
+        备份工作就此完成，生成的映像文件“个头”同备份源盘文件总量相等。<br>
+        4恢复系统<br>
+        从DOS状态下运行HD95COPY，选择“File/BackupFile”，找到E:\HD95COPY\WIN95\TESTHD2，单击“Drive”，选择C盘，单击“Restore”，软件会询问你“DoyoureallywanttooverwritedriveC:?”和是否要“OverwritebootsectorofdriveC:”，确认，映像文件的全部数据开始恢复到C盘，覆盖掉C盘上原来的全部数据。完成后重新启动机器即可。整个过程只要几分钟就可完成。<br>
+        如果要将映像文件恢复到不同的机器上，引导分区(C盘)要求扇区、簇等与备份源盘相同，否则不能往下进行，其它分区则无此要求。内部网络上将映像文件所在文件夹设置成共享，同样进行即可。<br>
+        要注意的是，HD95拷贝的是硬盘中全部的信息，包括错误信息，备份前最好先用系统工具检查一遍，恢复前也得先确保目标盘没有坏道等物理损伤，要不HD95一律当好盘照写不误，就会丢失一些数据，对引导盘来说，这可能是致命的。<br>
+        HD95还可以带参数快速运行，一般常用参数有：/D=&amp;lt;drive&amp;gt;(指定目标盘)/F=&amp;lt;backupfile&amp;gt;(指定映像文件，自动加上扩展名HD2)/F=＄＄＄(将备份的时间作为映像文件名，如98－07－22HD2)/B(忽略所有问题强行备份)/Y(忽略所有问题强行恢复)/LANG=D(使用德语，缺省为使用英语)/REG(自动更新注册表)例如：HD95COPY/D=C/F=H:\BACKUP\TEST98/Y(强行恢复H:\BACKUP\TEST98HD2到C：盘。)HD95COPY/REG(不恢复文件，只更新注册表。)(湖北 
+        张洁 简武)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年32月32日第32期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

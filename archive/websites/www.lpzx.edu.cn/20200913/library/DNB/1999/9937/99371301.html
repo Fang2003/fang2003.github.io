@@ -1,0 +1,214 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<link rel="stylesheet" href="images/epcw.css" TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VB做个漂亮的进度条</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-software&realm=software' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9937.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'></A></TD>
+<TD BGCOLOR='#FFCC66'>&nbsp;</TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9937.html'>37 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VB做个漂亮的进度条</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VB做个漂亮的进度条 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一切都在变，就连进度条这个小东西也在发生着变化，由以往的单色形式变成了现今更加亮丽的过渡色形式甚至更为复杂漂亮的形式，给软件也增添了不少色彩。我在这里要告诉各位制作一种非常简便实用的制作方法：<br>
+　　<b>一、实现原理</b><br>
+　　采用一个完整的图片来作为进度条，每次当进度条改变时，采用先贴图再用背景色擦去不需显示的一段进度的方法来实现进度条的变化，可实现制作任何复杂美观的进度条。<br>
+　　<b>二、准备工作</b><br>
+　　首先需准备一个如下图样式的进度条图片（当然你可以做你自己喜欢的样式）。然后在窗体中加入一PictureBox控件，属性设置如下：<br>
+	AutoSize：True<br>
+	Appearance：Falt<br>
+	AutoRedraw：True<br>
+	ScaleMode: Pixel<br>
+	Picture：″准备的图片″<br>
+　　再加一辅助控件（只用于保存图片，方便快捷地使用进度条）Image，属性设置如下：<br>
+　　Picture：″准备的图片″<br>
+　　<b>Visible：FALSE</b><br>
+　　说明：本文所讲的进度条并不是狭义上那种安装程序中常见的仅表示一个事件进程的进度条，而是把那些条形的，表示一个量的大小的图示统称为进度条。以此概念为基础让我们先来看看它的一些用途和类别，然后给出各类进度条的实现。<br>
+　　进度条的用途:<br>
+　　※在一般软件中表示执行进度<br>
+　　※在多媒体播放器中表示音量大小、频率节奏的变化…<br>
+　　※在游戏中表示角色的能量、生命值…<br>
+　　进度条的分类:<br>
+　　由以上用途可知,进度条大体可分为两类<br>
+　　第一类：自动变化的进度条（如安装程序中的进度条）<br>
+　　第二类：可由用户操作的进度条（如音量调节）<br>
+　　以下是两类进度条的代码。<br>
+　　实现第一类的方法：<br>
+　　Const MaxValue = 100<br>
+　　Const MinValue = 0<br>
+　　Dim Gene As Single<br>
+　　Dim ProValue As Single<br>
+　　Sub InitData()<br>
+　　Gene = Picture1.ScaleWidth / (MaxValue － MinValue)<br>
+　　End Sub<br>
+　　Sub SetProBar(value As Single)<br>
+　　Dim X As Single<br>
+　　ProValue = value<br>
+　　If ProValue &gt; MaxValue Then<br>
+　　ProValue = MaxValue<br>
+　　Else<br>
+　　If ProValue &lt; MinValue Then<br>
+　　ProValue = MinValue<br>
+　　End If<br>
+　　End If<br>
+　　Text1.Text = ProValue<br>
+　　X = (ProValue － MinValue) ＊ Gene<br>
+　　With Picture1<br>
+　　Picture1.Picture = Image1.Picture<br>
+　　Picture1.Line (X, 0)－(.ScaleWidth, .ScaleHeight), vbWhite, BF<br>
+　　End With<br>
+　　End Sub<br>
+　　以上是实现第一类进度条的全部代码，它有相当的独立性，不管你准备的进度条有多长，此代码都可无须改变而应用于你的系统中。其中，MAXVALUE、MINVALUE为此进度条所表示的最大最小值，可由实际应用而定。<br>
+　　PROVALUE 为当前的进度值，可由它得到当前值，以便处理。<br>
+　　SETPROBAR 为实际使用的过程，在软件中通过调用此过程来改变进度条的长度。VALUE 的取值为 MINVALUE～MAXVALUEINITDATA 是初始化进度条长度和实际要表示的范围的比例因子，在软件中首先要调用此过程完成初始化工作。  <br>
+　　<b>第二类实现方法：</b><br>
+　　要实现此类进度条，只需在第一类的基础上再加上响应用户操作的部分即可<br>
+　　具体所加代码如下：<br>
+　　Private Sub picture1_MouseMove(Button As Integer, Shift As Integer, X As Single,Y As Single)<br>
+　　If Button = 1 Then<br>
+　　Picture1_MouseDown Button, Shift, X, Y<br>
+　　End If<br>
+　　End Sub<br>
+　　Private Sub Picture1_MouseDown(Button As Integer, Shift As Integer, X As Single,Y As Single)<br>
+　　If Button = 1 Then<br>
+　　ProValue = Int(X / Gene ＋ MinValue ＋ 1)<br>
+　　SetProBar ProValue<br>
+　　End If<br>
+　　End Sub<br>
+　　应用示例：<br>
+　　建一工程，然后加入下列控件，并写入所示代码即可。<br>
+　　控件：两个PictureBox，组成控件数组（属性设置如上）但：picture1(0)的BorderStyle:None<br>
+　　两个Label，组成控件数组并分别以与自已Index 值相同的PictureBox为父控件（只需把Label绘在或粘贴在相应的PictureBox上即可）属性：<br>
+　　AutoSize：True<br>
+　　Alignment：Center<br>
+　　BackStyle：Transparent<br>
+　　Label（1）：  Caption：″当前音量0″<br>
+　　Enabled：False<br>
+　　Label（0）：  Caption：″0％″<br>
+　　一个Timer:属性：Interval：50<br>
+　　<b>三、实例</b><br>
+　　一个自动的进度条和由用户控制的进度条。<br>
+　　Option Explicit<br>
+　　′如果有多个进度条且表示值的范围不同<br>
+　　′则可设立一组范围值，最好能通过INDEX<br>
+　　′值同自已的进度条建立对应关系，以方便处理<br>
+　　Const MaxValue = 100<br>
+　　Const MinValue = 0<br>
+　　Dim Gene As Single<br>
+　　Dim ProValue(1) As Single<br>
+　　′生成比例因子，必须首先执行<br>
+　　Sub InitData()<br>
+　　Gene = Picture1(0).ScaleWidth / <br>
+     (MaxValue － MinValue)<br>
+　　End Sub<br>
+　　′根据当前进度值设置进度条，INDEX指出是哪个进度条的值<br>
+　　Sub SetProBar(value As Single, Index As Integer)<br>
+　　Dim X As Single<br>
+　　Dim BkColor As Long<br>
+　　ProValue(Index) = value<br>
+　　′对当前进度值超出范围的处理<br>
+　　If ProValue(Index) &gt; MaxValue Then<br>
+　　ProValue(Index) = MaxValue<br>
+　　Else<br>
+　　If ProValue(Index) &lt; MinValue Then<br>
+　　ProValue(Index) = MinValue<br>
+　　End If<br>
+　　End If<br>
+　　′在存在多个进度条时分别设置各进度条的不同文本 <br>  
+　　Select Case Index<br>
+　　Case 1<br>
+　　Label1(Index).Caption = ProValue(Index) ＆ ″％″<br>
+　　Case 0<br>
+　　Label1(Index).Caption = ″当前音量″ ＆ ProValue(Index)<br>
+　　End Select<br>
+　　′计算出当前进度值所对应的进度条位置<br>
+　　X = (ProValue(Index) － MinValue) ＊ Gene<br>
+　　With Picture1(Index).Picture = Image1.Picture<br>
+　　′把当前进度值所对应的进度条位置之后的图片用白色盖住<br>
+　　′它是此法实现思路的核心<br>
+　　Select Case Index<br>
+　　Case 1<br>
+　　bkcolor = vbWhite<br>
+　　Case 0<br>
+　　bkcolor = vbMenuBar<br>
+　　End Select<br>
+　　Picture1(Index).Line (X, 0)－(.ScaleWidth, _ .ScaleHeight), bkcolor, BF<br>
+　　End With<br>
+　　End Sub<br>
+　　′首先初始化比例因子<br>
+　　Private Sub Form_Load()<br>
+　　InitData<br>
+　　End Sub<br>
+　　′在用户操作INDEX为0的进度条时的响应<br>
+　　Private Sub picture1_MouseMove(Index As Integer, _<br>
+　　   Button As Integer, Shift As Integer, X As Single, Y As Single)<br>
+　　If Button = 1 And Index = 0 Then<br>
+　　Picture1_MouseDown Index, Button, Shift, X, Y<br>
+　　End If<br>
+　　End Sub<br>
+　　′根据当前鼠标坐标的X值（进度条若为纵向则使用Y值）<br>
+　　′计算出所对应的当前进度值，然后设置进度条<br>
+　　Private Sub Picture1_MouseDown(Index As Integer, _<br>
+　　   Button As Integer, Shift As Integer, X As Single, Y As Single)<br>
+　　If Button = 1 And Index = 0 Then<br>
+　　ProValue(Index) = Int(X / Gene ＋ MinValue ＋ 1)<br>
+　　SetProBar ProValue(Index), Index<br>
+　　End If<br>
+　　End Sub<br>
+　　′在演示中以定时器定时设置进度<br>
+　　′实际使用时当然是按事件完成的<br>
+　　′百分比来设置进度<br>
+　　Private Sub Timer1_Timer()<br>
+　　Static curval As Single<br>
+　　SetProBar curval, 1<br>
+　　curval = (curval ＋ 1) Mod MaxValue<br>
+　　If curval = 0 Then<br>
+　　curval = MinValue<br>
+　　End If<br>
+　　End Sub <br><b>(河南  李捷)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/37/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99371301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

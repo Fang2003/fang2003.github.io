@@ -1,0 +1,91 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>演绎“生命游戏”</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font color="#FFFFFF">演绎“生命游戏”</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　本世纪70年代，人们曾疯魔一种被称作“生命游戏”的小游戏，这种游戏相当简单。假设有一个像棋盘一样的方格网，每个方格中放置一个生命细胞，生命细胞只有两种状态：“生”或“死”。游戏规则如下：<br>
+        　　1． 如果一个细胞周围有3个细胞为生（一个细胞周围共有8个细胞），则该细胞为生，即该细胞若原先为死，则转为生，若原先为生，则保持不变；<br>
+        　　2． 如果一个细胞周围有2个细胞为生，则该细胞的生死状态保持不变；<br>
+        　　3． 
+        在其它情况下，该细胞为死，即该细胞若原先为生，则转为死，若原先为死，则保持不变。<br>
+        　　依此规则进行迭代变化，使细胞生生死死，会得到一些有趣的结果。该游戏之所以被称为“生命游戏”，是因为其简单的游戏规则，反映了自然界中的生存规律：如果一个生命，其周围的同类生命太少的话，会因为得不到帮助而死亡；如果太多，则会因为得不到足够的资源而死亡。<br>
+        　　用计算机模拟这个“生命游戏”也相当简单，可以用一个M×N像素的图像来代表M×N个细胞，其中每一个像素，代表一个细胞，像素为黑色表示细胞为生，像素为白色代表细胞为死。<br>
+        　　设定图像中每个像素的初始状态后依据上述的游戏规则演绎生命的变化，由于初始状态和迭代次数不同，将会得到令人叹服的优美图案。<br>
+        　　下面给出的小程序是用TC2.0编写。演示100×100个生命细胞初始状态全为生时的变代情况，变化时边缘细胞不参与变化。随着迭代次数的不同，在屏幕显示的图案精彩纷呈，像万花筒般引人入胜。<br>
+        　　＃include &lt;graphics.h&gt;<br>
+        　　main(){<br>
+        　　int orgData[100][100],resData[100][100];／＊分别记录每次迭代的初始和结果状态＊／<br>
+        　　int nCount,nRows,nCols,i,j,times; ／＊times记录迭代次数＊／<br>
+        　　int GraphDriver=DETECT,GraphMode;<br>
+        　　for (i=0;i&lt;100;i＋＋) ／＊初始化数据，令每一个细胞为生＊／<br>
+        　　for (j=0;j&lt;100;j＋＋) orgData[i][j]=1;<br>
+        　　initgraph(＆GraphDriver,＆GraphMode,′′′′); 
+        ／＊初始化屏幕显示＊／<br>
+        　　setcolor(WHITE);<br>
+        　　rectangle(270,190,370,290); ／＊作显示边框＊／<br>
+        　　for (times=1;times&lt;200;times＋＋){<br>
+        　　for (nRows=1;nRows&lt;99;nRows＋＋) {<br>
+        　　for (nCols=1;nCols&lt;99;nCols＋＋){<br>
+        　　／＊计算每一个细胞周围的活的细胞数＊／<br>
+        　　nCount=orgData[nRows－1][nCols－1]＋orgData[nRows－1][nCols]<br>
+        　　＋orgData[nRows－1][nCols＋1]＋orgData[nRows][nCols－1]<br>
+        　　＋orgData[nRows][nCols＋1]＋orgData[nRows＋1][nCols－1]<br>
+        　　＋orgData[nRows＋1][nCols]＋orgData[nRows＋1][nCols＋1];<br>
+        　　switch(nCount){<br>
+        　　／＊周围有3个活细胞，该细胞为生，在屏幕上用黑色像素表示＊<br>
+        　　case 3: putpixel(nCols＋210,120＋nRows,BLACK);<br>
+        　　resData[nRows][nCols]=1;break;<br>
+        　　／＊周围有2个活细胞，该细胞不变，在屏幕显示也不变＊／<br>
+        　　case 2: resData[nRows][nCols]=orgData[nRows][nCols];<br>
+        　　break;<br>
+        　　／＊其它情况下，细胞为死，在屏幕上用白色像素表示＊／<br>
+        　　default:resData[nRows][nCols]=0;<br>
+        　　putpixel(nCols＋210,120＋nRows,WHITE);<br>
+        　　}<br>
+        　　}<br>
+        　　}<br>
+        　　for (i=1;i&lt;99;i＋＋)<br>
+        　　for (j=1;j&lt;99;j＋＋) orgData[i][j]=resData[i][j];<br>
+        　　getch();<br>
+        　　}<br>
+        　　}<br>
+        　　在计算机上运行上述程序，得到迭代次数为45、69、74、78、97、116、119和156时的图像分别如上图所示。<br>
+        　　在实际模拟时，可以取更多的生命细胞，也可以考虑生命细胞的初始状态是依一定概率设定的随机状态，变化时也可以让边缘细胞参与变化。只要对上述程序略作更改，就会得到另外一系列美妙绝伦的图案。(有兴趣的朋友可与我联系：<a
+        href="mailto:changlin@mailcity.com">changlin@mailcity.com</a>)<strong>(甘肃　梁昌霖)</strong></span></font></p>
+        <p align="right"><big><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月8日第06期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

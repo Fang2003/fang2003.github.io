@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 老主板也能瞬时开机</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 老主板也能瞬时开机</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 老主板也能瞬时开机 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　身边的朋友一个个舞弄着我给选配的新硬件，不时吹风：“别看你玩机器早，我能STR，你能吗”？——羞煞我也！你能，我也可以！经过一番折腾，使用VX芯片的586机器也能“STR”，实现了20秒开机，惊得友人目瞪口呆！<br>
+　　真正的硬件STR（Suspend To RAM）需要主板和软件的共同支持，即机器把当前的系统状态信息保存在RAM中，关机后由主板电源供电不使信息丢失，下次开机时没有冗余的系统检测，而是直接读取保存在RAM中的信息，快速进入关机前的状态。此处所说的“STR”，由于硬件上的不支持，实际上只是一种软实现而已，完全由软件来实现。其原理和硬实现的原理差不多：由软件在硬盘上开辟一块空间，用于保存当前系统的状态信息，下次开机时自检完毕后直接读取存在硬盘上的这些信息而快速进入系统。由此可见软实现的速度要比硬实现稍慢。但还是非常诱人的哦！<br>
+　　要实现“瞬间开机”功能，需要具有以下配置：<br>
+　　硬件：虽说是老机器，但也不能太寒酸。CPU需要P133以上，内存最好配到64MB，还有一块大容量高速4.3GB以上的硬盘，至于主板，凡是没有STR功能的都可以。<br>
+　　软件：安装Windows2000 Professional。能软实现“瞬间开机”功能的操作系统目前只有它了！其实上面的硬件配置就是为Windows2000 Professional准备的。<br>
+　　具体设置如下：<br>
+　　打开“控制面板”中的“电源管理”选项（如图1），点击“休眠”，选中“启用休眠支持，它就是使老机器能实现“瞬时开机”功能的“英雄”！根据硬盘剩余空间的大小，Windows2000会确定休眠所需的磁盘空间。Windows2000之所以能实现瞬间开机，就是将当前的系统状态信息完全保存在磁盘中，当下次开机时，直接读取保存在磁盘中的信息，恢复到当时的状态。比如：Windows2000有动态分配资源的功能，在休眠前你的MODEM是关闭的，休眠重启后，即使你的MODEM已经打开，Windows2000依旧不会使用之；如果休眠前你的MODEM已打开（即被分配资源可以拨号），休眠重启后，什么时候打开你的MODEM都可以使用。<br>
+　　如果你的主板不是太老的话，可以点击“高级电源管理”，选中“启用高级电源管理支持”；单击“确定”退出,Windows2000默认的安装不启用这两项功能。要查看是否安装成功，可以点击“开始”、“关机”，看是否增加了“等待”和“休眠”两个选项（如图2）。做完上述工作，就已经具备“瞬时开机”功能！（或者打开“控制面板”中的“显示”属性来设置；注意不要在“显示”中的“电源”、“电源使用方案”中设置“休眠”的时间，因为一旦进入休眠，你就得重新开机或按复位键，具体可根据个人爱好设置。）<br>
+　　让我们来看看具体功效：<br>
+　　1、点击“开始”→“关机”，选择“休眠”（注意：必须选择“休眠”功能才能实现），确定，Windows2000 Professional即开始进入冬眠状态并保存当前的系统信息。信息保存完成后就可以关机了。这一步和正常的关机没多大区别。<br>
+　　2、重新开机，Windows2000 Professional给出提示：系统正在从保存状态重新启动，可以按空格键来中断进程，进行正常启动。几秒后，要求输入密码，旋即进入操作系统，以前打开的程序、编辑的状态依然如故。如正常打开WORD2000需要25秒左右的时间，而休眠重启后出现WORD窗口，毫无延迟（休眠前未关闭）。看一下机器启动时间（不包括开机自检的时间）：20秒！如果正常启动，可得接近2分钟呢！要知道，像Windows98/Windows2000这样大型的系统，586机器多少也得跑个1分半钟。以后每次关机，只要选择“休眠”就可以了，再次开机风驰电掣，何乐而不为呢？<br>
+　　感觉实在是爽！拥有老机器的朋友，不妨加点内存和硬盘，如果你的机器平时启动自检就很快的话，那种“瞬时开机”的感觉可以和BX级别媲美哦！<br>
+<b>（江苏　吴付愿）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99412002.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,72 @@
+<HTML><!-- #BeginTemplate "/Templates/oa.dwt" -->
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='epcw.css' TYPE='text/css'>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>电脑报电子版 -- 如何修改Foxpro数据库</TITLE>
+<!-- #EndEditable --> 
+<style type="text/css">
+<!--
+.centertitle {  font-weight: bold; text-align: center; line-height: 35px; font-size: 9pt; color: #000000}
+.lefttitle {  line-height: 35px; font-weight: bold; font-size: 9pt; color: #000000}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR='white'>
+<span class="centertitle"></span><A NAME='top'></A> 
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.yesky.com'><IMG SRC='http://www.lpzx.edu.cn/images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><a href="http://chat.yesky.com"> 
+      <img src="images/0823-3.gif" width="468" height="60" border="0"> </a></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.lpzx.edu.cn/issue'>CPCW电子版</A> 
+      &gt; <A HREF='http://www.lpzx.edu.cn/issue/2000/'>2000 年</A> &gt; <a href="issue/2000/06/index.html"><!-- #BeginEditable "%C6%DA" -->06期<!-- #EndEditable --></a> 
+      &gt;<!-- #BeginEditable "%C0%B8%C4%BF" --> <a href="issue/2000/06/oa.html">OA专刊</a><!-- #EndEditable -->&gt; 
+      <!-- #BeginEditable "%B1%EA%CC%E2" -->如何修改Foxpro数据库<!-- #EndEditable --></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 <!-- #BeginEditable "%CE%C4%D5%C2%CD%B7" -->如何修改Foxpro数据库<!-- #EndEditable --> 
+      》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+    <TD><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　随着计算机技术的迅速发展，计算机的应用与普及程度也越来越高。绝大多数单位已不同程度地将计算机技术应用于工作的某个方面。早期的数据库应用系统大多采用FoxBase＋或Foxpro编程，由于这种数据库技术的局限性，缺乏对数据完整性、安全性和一致性方面的控制手段，没有大型数据库的“事务处理”的概念，在运行过程中，由于异常事件，如断电、网络故障、服务器、工作站锁死等因素，会造成部分使用中的数据库遭到破坏，当打开损坏的数据库时，将出现提示“不是dbf数据库”，导致数据不可用。<br>
+      　　经过工作实践，反复摸索，我发现可以利用Pctools或其他十六进制的编辑工具如WinHex等工具软件修复，将损失降到最小程度。下面，简述其修复过程。<br>
+      　　1背景知识：数据库文件的前32个字节为数据库控制信息。其中，第5、6字节分别存放记录个数的低8位和高8位。例如：一数据库有2345（十六进制数为：929）条记录，则该数据库的第5、6字节分别存放29，09；以下每32个字节连续存放每个字段的定义，其中每32个字节的第17字节存放字段宽度；字段定义完后两字节为0d，20，之后连续存放记录数据（每字段宽度之和加1个字节即list 
+      stru命令显示出的“＊＊total＊＊ xxx”个字节存放一条记录），最后，以1A结束。<br>
+      　　2修复原理：数据库损坏后，多数情况为后面的几条记录损坏。通过直接修改数据库包含记录条数的方法使损坏的数据可用，然后，补录后几条记录即可。<br>
+      　　3修复过程：1在DOS下，利用Pctools工具包中的filefix命令“预修复”（由程序自动审查完好记录的个数）损坏的数据库，在修复结果中查看并记录下已修复的记录个数，如：2343，换算为十六进制数为927；2利用Pctools或其他的十六进制的编辑工具如:WinHex等工具软件将该数据库的第5字节改为27；3将数据库的前四个字节修改为原文件的备份文件或同目录下完好数据库的前四个字节；4存盘退出。<br>
+      　　注：如果数据库包含备注型字段，对于FoxBase＋数据库可以直接用filefix修复，但Foxpro数据库，由于其备注型字段内容存放在fpt文件中，而filefix无法直接修复。<br>
+      　　以上方法在DOS622，Foxpro25 for DOS，Pctools 90下测试通过，错误或不妥之处请指教。<br>
+      <b> (山东　李景海)</b><!-- #EndEditable --></TD>
+  </TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='00065001.htm#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW版权所有</A>，<A HREF='mailto:webmaster@staff.yesky.com'>YESKY天极网编辑部</A>设计制作发布<script language="JavaScript" src="http://www.lpzx.edu.cn/library/DNB/download/yeskye.js">
+</script></TD>
+</TR>
+</TABLE></BODY><!-- #EndTemplate --></HTML>

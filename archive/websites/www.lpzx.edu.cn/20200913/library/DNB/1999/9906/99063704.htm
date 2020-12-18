@@ -1,0 +1,58 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">FoxBASE 
+        +答疑信箱<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　1． 运行FoxBASE＋时,为什么会出现系统提示“打开文件太多！”，怎样排除此类错误？<br>
+        　　答：这种错误是由于Config.sys文件中设置打开的文件数目少于FoxBASE＋要求的数目引起的。有两种情形导致这种错误：一是Config.sys中设置的文件数少于20；二是Config.sys设置正确，但该文件未存放在DOS根目录或DOS能找到的地方。对于第一种情况，可以通过重新设置正确的文件数来排除错误；对于第二种情况的处理更简单，只要将设置正确的Config.sys文件移到DOS根目录下即可。<br>
+        　　2． 使用关系型数据库文件有哪些注意事项？<br>
+        　　答：在建立、操作关系型数据库时有以下几项注意事项：1同一数据库中不允许有相同的字段名；2不允许有相同的记录(即不同记录行不能完全相同)；3同一字段(即同一列)中数据的类型必须一致；4从行的角度而言，记录的顺序可以任意调换，从列的角度而言，不同字段可以任意交换位置，即行或列的次序不影响库文件的实质内容；5同一库文件中，不同的记录具有相同的格式，这是由记录类型来决定的。<br>
+        　　3. 数值型字段长度在计算机中是如何规定的？<br>
+        　　答：1对于整数型数据，位数就表明该字段长度，如整数665共3位，则整数665作为某字段内容的字段长度是3；2对于带小数的数据，字段长度为整数部分位数与小数部分位数之和再加上小数点的位数1，如某字段内容为665.15，则该字段长度是6；3对于字符型数据，每个西文字符计1位，每个汉字字符计2位，如“学生NUM”的字段长度是7。<br>
+        　　4． 在FxoBASE＋中，表达式“5&lt;A&lt;7”和X=Y=“学生”是否正确？<br>
+        　　答：在FoxBASE＋中，“5&lt;A&lt;7”这样的表达式是不正确的，必须替换为“A&gt;5 
+        .AND. A&lt;7”,意思是变量A既大于5又小于7；X=Y=“学生”这种连续赋值的方式在FoxBASE＋中也是不允许的，FoxBASE＋规定：“=” 
+        赋值符一次只能给一个变量赋值，可采取以下两种方式进行赋值：1X=“学生” 
+        Y=X ；2X=“学生” Y=“学生”。<br>
+        　　5．“=”与“STORE”是否兼有屏幕显示功能？<br>
+        　　答：有些学员在使用赋值命令“=”与“STORE”后，赋值的同时还出现显示，就提出“=”与“STORE” 
+        是否兼有屏幕显示功能的问题。其实，在以后的学习中，我们还会遇到同样类似的命令：AVERAGE、SUM等，这些命令都有一个很显著的特点，即在赋值或计算完后，将在屏幕上显示出赋值内容或计算结果。这是FoxBASE＋的一种系统状态设置导致的人机对话方式，而不是这些命令本身具有显示功能，可通过命令“SET 
+        TALK OFF”关闭人机对话方式来消除显示出赋值内容或计算结果。在需要时，通过命令“SET 
+        TALK ON”打开人机对话方式，在实际应用中，我们可以根据需要随时关闭或打开这种人机对话方式。<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月08日第06期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

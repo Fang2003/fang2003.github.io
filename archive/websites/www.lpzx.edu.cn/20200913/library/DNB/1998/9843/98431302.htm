@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>制作剪贴板查看程序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> 
+        Win95的用户都知道，在Win95中很难找到剪贴板查看程序，那是因为Win95默认为选择典型安装。用不着再去安装剪贴板查看程序，其实用VB5可以很简单地制作出Win95的剪贴板查看程序。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> 在这里使用剪贴板对象的GetFormat、GetText和GetData方法判断和显示剪贴板的内容。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> 程序如下：<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ’picClip为一图片框，Visible属性为False、Autosize属性为True<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ′txtClip为一文本框，Visible属性为False、MultiLine属性为True、ScrollBars属性为Both<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ′Label1为标签框数组，Caption可分别设为Link、Text、Bitmap、Metafile、DIB、Palette<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Option Explicit<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Private InitValue()AsInteger<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ′Disp为一子程序，判断和显示剪贴板的内容SubDisp()<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Dim i As Integer<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Fori=0ToLabel1UBound<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> If ClipboardGetFormat(InitValue(i))Then<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Label1(i)ForeColor=＆HFF＆<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Else<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Label1(i)ForeColor=vbBlack<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> EndIfNext<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ′是否文本类型<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> If ClipboardGetFormat(vbCFText)Then<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> txtClipText=ClipboardGetText<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> txtClipVisible=True<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Else<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> txtClipVisible=False<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> EndIf<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ′是否图形类型<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> If ClipboardGetFormat(vbCFBitmap)Then<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> picClipPicture=<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ClipboardGetData(vbCFBitmap)<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> picClipVisible=True<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> Else<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> picClipVisible=False<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> End If<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> End Sub<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> PrivateSubCommand1_Click()<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"> ′调用Disp子程序显示剪贴板的内容<br>
+        &nbsp;&nbsp;&nbsp; Disp<br>
+        &nbsp;&nbsp;&nbsp; End Sub<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_Load()<br>
+        &nbsp;&nbsp;&nbsp; ReDimInitValue(0ToLabel1UBound)<br>
+        &nbsp;&nbsp;&nbsp; InitValue(0)=vbCFLink<br>
+        &nbsp;&nbsp;&nbsp; InitValue(1)=vbCFText<br>
+        &nbsp;&nbsp;&nbsp; InitValue(2)=vbCFBitmap<br>
+        &nbsp;&nbsp;&nbsp; InitValue(3)=vbCFMetafile<br>
+        &nbsp;&nbsp;&nbsp; InitValue(4)=vbCFDIB<br>
+        &nbsp;&nbsp;&nbsp; InitValue(5)=vbCFPalette<br>
+        &nbsp;&nbsp;&nbsp; End Sub<br>
+        &nbsp;&nbsp;&nbsp; ′调整文本框的大小使之与剪贴板的大小相适应<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_Resize()<br>
+        &nbsp;&nbsp;&nbsp; DimWidth1,Height1AsSingle<br>
+        &nbsp;&nbsp;&nbsp; Width1=ScaleWidth－txtClipLeft<br>
+        &nbsp;&nbsp;&nbsp; If Width1&amp;lt;120ThenWidth1=120<br>
+        &nbsp;&nbsp;&nbsp; Height1=ScaleHeight<br>
+        &nbsp;&nbsp;&nbsp; txtClipMove_<br>
+        &nbsp;&nbsp;&nbsp; txtClipLeft,0,Width1,Height1<br>
+        &nbsp;&nbsp;&nbsp; End Sub&nbsp; <strong>(湖北&nbsp; 刘玉锋)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

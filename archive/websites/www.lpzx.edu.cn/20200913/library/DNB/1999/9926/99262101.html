@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 开机显示信息全修改</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.cpcw.com/'><IMG SRC='images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=link&user=issue-hardware&realm=hardware' TARGET='_blank'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-hardware&realm=hardware' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999'>1999 年</A> &gt; <A HREF='index.html'>26 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 开机显示信息全修改</TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 开机显示信息全修改 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　如果你已经修改了自己电脑开机时右上方的EPA能源之星图案（俗称开机LOGO），那么当你看完本文时，你就可以实现对开机时BIOS显示的所有文字信息的修改了，比如开机系统提示 ZhangYanBIOS v9.9 Found DVDROM: xxx ZIP250 Pentium Ⅲ 550等，怎么样！让你体验到前所未有的个性化电脑。<br>
+　　本文是针对使用Award BIOS的主板进行修改的，并且要求你对BIOS以及Flash BIOS和十六进制编辑器有所了解，这方面的知识和关于修改EPA图案的方法可以参考前几期的《电脑报》，下面我们就开始修改开机信息的行动。<br>
+　　行动一：准备相应的修改程序<br>
+　　程序1：MODBIN.EXE Award公司发布用于修改BIOS二进制文件（就是存放BIOS的文件），它只能直接修改BIOS开机显示的极少信息的工具，但也就是它暴露了BIOS的全部信息，别着急往下看。<br>
+　　程序2：AWDFLASH.EXE还是Award公司发布用于备份和复原BIOS的程序。<br>
+　　程序3：一个十六进制的编辑器，比如PcTools5.0，但我向大家推荐能直接运行在Win98下的Softscape Tools 2.0或UltraEdit。<br>
+　　程序4：一个多任务的操作系统，比如Win95或Win98（太普及了！）。<br>
+　　行动二：修改信息<br>
+　　到DIY的时候了，一步一步来。<br>
+　　第一步：进入Win95/98，在MS－DOS方式下运行AWDFLASH.EXE，将你的主板的BIOS备份成TEMPBIOS.BIN（文件名任意，扩展名是BIN），然后退出AWDFLASH。<br>
+　　第二步：运行MODBIN.EXE在Load File中选择刚刚生成的TEMPBIOS.BIN并确认，确认完后切换到Win95/98（注意：别关闭MODBIN.EXE的MS－DOS窗口），此时你会发现在MODBIN.EXE的目录（文件夹）中，多出了一个ORIGINAL.TMP文件，哈哈！这个文件就包含了BIOS的全部信息。<br>
+      　　第三步：在不关闭MODBIN.EXE的MS－DOS窗口的情况下，开启一个新的MS－DOS窗口运行十六进制的编辑器，用十六进制的编辑器编辑ORIGINAL.TMP文件，你将会看到并能修改BIOS开机所显示的一切文字信息和BIOS有关的一切文字信息，比如开机时按del键进入的BIOS设置菜单的文字等等等，剩下的就看你怎么高兴怎么改了。<br>
+　　第四步：修改完信息后退出十六进制的编辑器，切换到原先的MODBIN.EXE的MS－DOS窗口在Update File中确认TEMPBIOS.BIN被修改，并退出。<br>
+　　第五步：退出Win95/98，在纯DOS状态下(最好制作一张干净的启动盘，什么驱动程序都不加)，运行AWDFLASH.EXE将刚修改完的TEMPBIOS.BIN 复原到主板的BIOS中，OK！<br>
+　　修改BIOS文字信息行动是完了，但我的话还没完。大家都知道用来保存和升级BIOS的BIN文件，它实际上是由多个文件组成并经过压缩处理的文件，这些文件有BIOS程序主文件，EPA图像文件，Logo BitMap文件等等。你可以用CBROM.EXE程序查看.BIN文件中的文件组成信息。而我们所修改的就是其中的BIOS程序主文件ORIGINAL.TMP，所以要想修改BIOS中的文字信息就要将ORIGINAL.TMP从BIOS的.BIN文件中释放出来。其实CBROM.EXE已经可以从BIOS的.BIN文件中释放和装入一部分文件，但并没有提供释放BIOS程序主文件ORIGINAL.TMP的功能，我想可能是由于Award公司认为这个主文件最好不应该交由用户修改吧。所以推出了MODBIN.EXE程序来对BIOS程序主文件ORIGINAL.TMP进行小量的修改。但偏偏……<br>
+　　我对主板BIOS的认识并不深，我想它还会有其它有趣的应用吧。文中所提到的程序可以到我的网站http://www.netease.com/~yanking 和 http://zhangyanweb.yeah.net 中下载或 http://topage.126.com 。当然也欢迎与我交流 yanking@netease.com 。最后希望你的行动顺利完成。<br>
+<b>(北京　张雁)</b></TD></TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/26/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99262101.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

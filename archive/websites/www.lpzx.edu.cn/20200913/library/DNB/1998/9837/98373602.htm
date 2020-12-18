@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>删除注册表中的错误数据<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 
+        故障现象：出现蓝天白云画面后，系统给出提示：“从alopl(07)＋00000070到设备‘3652’的非法VXD动态链接调用，服务1。Windows配置非法。必须重新运行Windows安装程序解决这一问题。要继续运行Windows，请按‘Y’或ENTER。要退出当前程序，请按‘N’，如果继续运行Windows，系统将变得不稳定。继续吗?PressYforYesorNforNO:Y”上述提示在启动中文Windows95(OSR2.0)显示的是一堆乱码，其中的英文字符可识别；按“Y”进入Windows95后运行程序时，常出现上述提示，两提示中的英文字符相同。只是第一行的显示改为“从alopl(05)＋0000003EA到设备‘alsndsys’的非法VXD动态链接调用”。<br>
+        &nbsp;&nbsp;&nbsp; 故障是用户安装ALS007声卡的设备驱动程序后出现的，虽然声卡可以工作，系统却变得不稳定了，是不是必须重新运行Windows安装程序解决这一问题呢?故障分析与处理：根据提示“alsndsys非法VXD(虚拟设备驱动程序)动态链接调用”，首先检查了ALS007声卡的设备驱动程序盘，用户声称该安装盘是购买声卡时商家提供的随卡驱动程序盘，且该盘的Readme.txt中声称支技Windows95。找来《电脑报配套光盘第三辑》中的ALS007声卡ForWindows95驱动程序，比较文件Alsndsys.drv，发现前者日期为1996－04－09、49552字节，后者日期为1996－12－24、51952字节，因此准备用后者替换前者。<br>
+        &nbsp;&nbsp; 首先应删除原设备驱动程序，但在“控制面板\系统\设备管理”中删除“声音、视频和游戏控制器”下所有条目，按“刷新”按钮或重新启动时，系统立即自动检测到即插即用声卡并自动重新恢复了声卡的设备驱动程序，继续给出上述提示。<br>
+        &nbsp;&nbsp; 如何删除声卡的原设备驱动程序呢?只好借助注册表了。操作步骤如下：<br>
+        &nbsp;&nbsp; 1.选择“开始\运行”，在“运行”对话框中键入“Regedit”，进入注册表编辑器；<br>
+        &nbsp;&nbsp; 2.用注册表编辑器“编辑菜单”中的“查找”和“查找下一个”命令查找字符串“alopl”和字符串“ALS007”，删除与之相关的所有“主键”和“键值”；<br>
+        &nbsp;&nbsp; 3.退出注册表编辑器，重新启动，令人讨厌的提示没有了，系统处于正常工作状态。<br>
+        &nbsp;&nbsp; 
+        重新启动时，系统自动检测到声卡并提示插入声卡安装盘，安装《电脑报配套光盘第三辑》中的ALS007声卡ForWindows95驱动程序后，声卡也能正常工作。事后又重新安装商家提供的原声卡随卡驱动程序，故障的确是该版本驱动程序与中文Windows95(OSR2.0)不兼容造成的。<br>
+        &nbsp;&nbsp; 小结：1.Windows95注册表中的错误数据，会导致系统工作不正常；可以利用注册表编辑器删除这些错误的数据，使系统恢复正常。2.早期的有些设备驱动程序，可能与后期的Windows95不兼容，应注意及时升级设备驱动程序。<br>
+        &nbsp;&nbsp; 
+        笔者用“删除注册表中的错误数据”方法成功地解决了好几起类似故障，当某软件未卸除干净出现“错误”提示时，可以在注册表中删除提示内容中指定的“字符串”的相关“主键”和“键值”；CD－ROM工作不正常时，也可在注册表中删除所有与字符串“CD－ROM”相关的“主键”和“键值”，均能使系统恢复正常，感觉良好，至今尚未发生过因修改注册表不当造成系统瘫痪的意外事故。但还是请同行们注意，修改注册表不当会造成系统瘫痪，建议修改前备份注册表。(重庆周新) 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

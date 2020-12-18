@@ -1,0 +1,133 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>巧设参数实现多系统启动</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{巧设参数实现多系统启动}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 本来笔者的系统是用批处理文件来实现Windows 
+              98与Windows Me的双重启动。最近内存价大减，又添了一根64M的内存，又想用Windows 2000的IIS 5.0。经过一番实践终于成功实现三系统启动。<br>
+              首先进行硬盘分区，我用的是15G的硬盘，分为五个区，用Pqmagic或Fdisk分成FAT32。前三个区分2G，用来装三个系统。<br>
+              1.先安装Windows Me，直接安装在C盘下。完成后备份根目录下的文件。备份时在查看“文件夹选项”中勾上显示所有文件和显示文件扩展名。备份放在G盘下Windows 
+              Me文件夹内。<br>
+              2.装Windows 98，用Windows 98的引导盘直接引导安装。在提示安装路径时可以选D盘下。这样Windows 98的IO.SYS和MSDOS.SYS覆盖了Windows 
+              Me的两个文件。同样在“文件夹选项”中勾上显示所有文件和显示文件扩展名，备份C盘根目录下的文件。备份放在G盘下Windows98文件夹内。<br>
+              3.Windows 98来引导安装Windows 2000。安装在E盘下，千万不要格式成NTFS格式，这时Windows 2000产生了一个BOOTSECT.DOS文件用来引导Windows 
+              2000 和Windows 98的双启动。先备份C根目录下的所有文件，备份放在G盘下Windows 2000文件夹内。<br>
+              至此三系统安装完毕。最棘手的是Windows 98和Windows Me启动都用IO.SYS和MSDOS.SYS。我记得在NTLDR下有两个开关参数：“/WIN95”和“/WIN95DOS”，用来实现NT下Windows 
+              95和DOS的转换。其原理是为了防止冲突，启动DOS时，Windows 95的IO.SYS和MSDOS.SYS分别更名为WINBOOT.SYS和MSDOS.W40；启动Windows95时，DOS的IO.SYS和MSDOS.SYS将更名为IO.DOS和MSDOS.DOS。用Windows 
+              98代替Windows 95；用Windows Me代替DOS不就成了，就不知Windows 2000下这能不能用。<br>
+              想到这里就开始着手三系统的转换。找到C盘下的BOOT.INI。这文件是实现多重系统引导的。修改BOOT.INI，改之前的BOOT.INI大致如下：<br>
+              Boot loader<br>
+              Timeout＝30<br>
+              Default＝multi 0disk 0rdisk 0partition 3\WINNT<br>
+              Operating systems<br>
+              Multi 0disk 0rdisk 0partition 3\WINNT＝″Microsoft Windows 2000 
+              Professional″ /fastdetect<br>
+              C:\＝″Microsoft Windows98″<br>
+              删去“C:\＝″Microsoft Windows98″”并在其后增加如下几行：<br>
+              C:\＝″Microsoft Windows98″/win95<br>
+              C:\＝″Microsoft WindowsMe″/win95dos<br>
+              完成之后提取备份Windows Me下的IO.SYS和MSDOS.SYS更名为IO.DOS和MSDOS.DOS存入C盘根目录下。重新启动，根据不同的选择，启动不同的操作系统。三系统果然成功，这比用软件引导方便得多。<br>
+              这样就可以在Windows 98下玩游戏，用Windows Me丰富、易用的多媒体工具上网娱乐，在Windows 2000下调试程序和网站。<br>
+              同样修改BOOT.INI还可以装入Linux，有兴趣的朋友不妨尝试四系统。<br>
+              三系统成功之后，发现一些小问题。在进入Windows 98后重启进入Windows Me总要提示是否安全模式启动，Windows 
+              98的MS-DOS也受Windows Me的Autoexec.exe影响不太正常，不知能否解决。还望有兴趣的朋友多多交流：jltyp＠21cn.com。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

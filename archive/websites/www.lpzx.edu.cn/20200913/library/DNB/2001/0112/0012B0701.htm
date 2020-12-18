@@ -1,0 +1,185 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>在Ｌｉｎｕｘ中安装Ｏｒａｃｌｅ（下）</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第12期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{在Lｉｎｕｘ中安装Oｒａｃｌｅ（下）}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{五、过程性语言扩展PL／SQL<br>
+              对SQL的过程性语言扩展（PL／SQL）是Oｒａｃｌｅ最著名的特点。这种强大的专业数据库管理语言允许你对声明的SQL加以逻辑控制。一般情况，PL／SQL的存储过程用命令行ｓｑｌｐｌｕｓ，图形化的Dｅｖｅｌｏｐｅｒ／2000（Lｉｎｕｘ上目前还没有）或其他工具开发，允许你从Oｒａｃｌｅ众多的查询接口（Oｒａｃｌｅ 
+              Aｐｐｌｉｃａｔｉｏｎ Sｅｒｖｅｒ Pｙｔｈｏｎ Pｅｒｌ JDBC 或者C）访问数据库。参看存储进程的一个小范例：<br>
+              ｃｒｅａｔｅ ｏｒ ｒｅｐｌａｃｅ ｐａｃｋａｇｅ ｓｔｏｒｅｄ＿ｓａｍｐｌｅ ａｓ ｆｕｎｃｔｉｏｎ ｇｅｔ＿ａｎｎｕａｌ＿ｓａｌａｒｙ 
+              ｅｍｐ＿ｎｕｍｂｅｒ ｉｎ ｎｕｍｂｅｒ ｒｅｔｕｒｎ ｎｕｍｂｅｒ<br>
+              ｅｎｄ ｓｔｏｒｅｄ＿ｓａｍｐｌｅ<br>
+              ／ｃｒｅａｔｅ ｏｒ ｒｅｐｌａｃｅ ｐａｃｋａｇｅ ｂｏｄｙ ｓｔｏｒｅｄ＿ｓａｍｐｌｅ ａｓ ｆｕｎｃｔｉｏｎ ｇｅｔ＿ａｎｎｕａｌ＿ｓａｌａｒｙ 
+              ｅｍｐ＿ｎｕｍｂｅｒ ｉｎ ｎｕｍｂｅｒ ｒｅｔｕｒｎ ｎｕｍｂｅｒ<br>
+              ｉｓ<br>
+              ａｎｎｕａｌ＿ｓａｌａｒｙ ｎｕｍｂｅｒ<br>
+              ｍｏｎｔｈｌｙ＿ｓａｌａｒｙ ｎｕｍｂｅｒ<br>
+              ｂｅｇｉｎ<br>
+              ｓｅｌｅｃｔ ｓａｌ ｉｎｔｏ ｍｏｎｔｈｌｙ＿ｓａｌａｒｙ ｆｒｏｍ ｅｍｐ ｗｈｅｒｅ ｅｍｐｎｏ ＝ ｅｍｐ＿ｎｕｍｂｅｒ<br>
+              ａｎｎｕａｌ＿ｓａｌａｒｙ ＝ ｍｏｎｔｈｌｙ＿ｓａｌａｒｙ  24<br>
+              ｒｅｔｕｒｎ ａｎｎｕａｌ＿ｓａｌａｒｙ<br>
+              ｅｎｄ ｇｅｔ＿ａｎｎｕａｌ＿ｓａｌａｒｙ<br>
+              ｅｎｄ ｓｔｏｒｅｄ＿ｓａｍｐｌｅ／<br>
+              上面程序的执行过程是接收一个员工号，返回该员工的年薪。相关的函数ｇｅｔ＿ａｎｎｕａｌ＿ｓａｌａｒｙ封装在PL／SQL包ｓａｍｐｌｅ＿ｐａｃｋａｇｅ中。如果把该程序存为文件ｓａｍｐｌｅ．ｓｑｌ，你可以通过ｓｑｌｐｌｕｓ运行它，如下所示：<br>
+              ｏｒａｃｌｅ＠ｓｆｏｒｚａ ｄｅｍｏ＄ ｓｑｌｐｌｕｓ<br>
+              SQLPｌｕｓ Rｅｌｅａｓｅ 8．0．5．0．0 － Pｒｏｄｕｃｔｉｏｎ ｏｎ Sｕｎ Mａｒ 7 133632<br>
+              1999<br>
+              ｃ Cｏｐｙｒｉｇｈｔ 1998 Oｒａｃｌｅ Cｏｒｐｏｒａｔｉｏｎ． Aｌｌ ｒｉｇｈｔｓ ｒｅｓｅｒｖｅｄ．<br>
+              Eｎｔｅｒ ｕｓｅｒ－ｎａｍｅ ｓｃｏｔｔ<br>
+              Eｎｔｅｒ ｐａｓｓｗｏｒｄ<br>
+              Cｏｎｎｅｃｔｅｄ ｔｏ<br>
+              Oｒａｃｌｅ8 Rｅｌｅａｓｅ 8．0．5．0．0 － Pｒｏｄｕｃｔｉｏｎ<br>
+              PL／SQL Rｅｌｅａｓｅ 8．0．5．0．0 － Pｒｏｄｕｃｔｉｏｎ<br>
+              SQL＞ ＠ｓａｍｐｌｅ<br>
+              Pａｃｋａｇｅ ｃｒｅａｔｅｄ．<br>
+              Pａｃｋａｇｅ ｂｏｄｙ ｃｒｅａｔｅｄ．<br>
+              SQL＞ ｓｅｔ ｓｅｒｖｅｒｏｕｔｐｕｔ ｏｎ<br>
+              SQL＞ ｅｘｅｃ<br>
+              ｄｂｍｓ＿ｏｕｔｐｕｔ．ｐｕｔ＿ｌｉｎｅｓｔｏｒｅｄ＿ｓａｍｐｌｅ．ｇｅｔ＿ａｎｎｕａｌ＿ｓａｌａｒｙ7782<br>
+              58800<br>
+              PL／SQL ｐｒｏｃｅｄｕｒｅ ｓｕｃｃｅｓｓｆｕｌｌｙ ｃｏｍｐｌｅｔｅｄ．<br>
+              SQL＞<br>
+              通过其他的编程接口，也可以使用这个PL／SQL包。关于Pｙｔｈｏｎ／DC Oｒａｃｌｅ，参见Cｏｎｎｅｃｔｉｏｎ对象的ｐｒｏｃｅｄｕｒｅｓ成员，关于JDBC，参见ｊａｖａ．ｓｑｌ．CａｌｌａｂｌｅSｔａｔｅｍｅｎｔ。<br>
+              Oｒａｃｌｅ有众多的内置函数。事实上，大多数可以用外部代码完成的功能都可以通过PL／SQL高效地完成。请参考PL／SQL手册，可以获得比较常用的功能。如果准备做大量的Oｒａｃｌｅ编程，可以参阅PL／SQL手册以便熟悉各种函数。<br>
+              六、管理Oｒａｃｌｅ ｆｏｒ Lｉｎｕｘ<br>
+              运行相对不那么复杂的数据库，在Oｒａｃｌｅ中完成一些日常操作，例如建立新数据库或者性能调谐，会显得相当复杂。有一些关键的配置文件需要维护，如ｉｎｉｔ．ｏｒａ 
+              ｃｏｎｆｉｇ．ｏｒａ和ｔｎｓｎａｍｅｓ．ｏｒａ。<br>
+              一般有好几种办法指定一些关键参数，如当前的SID。可以在上述的文件中声明，也可以在环境变量中声明，或者是通过Oｒａｃｌｅ工具的运行参数。<br>
+              同Lｉｎｕｘ一样，Oｒａｃｌｅ提供的安全机制如果管理不当，就形同虚设。花时间熟悉各种访问规则和设置，以及各种特殊Oｒａｃｌｅ用户账号的角色，还是值得的。<br>
+              Oｒａｃｌｅ的性能调谐是一个非常大，也非常专的话题。调谐得当，可以很大程度地提高性能。Oｒａｃｌｅ运行与CPU、内存、外存的关系是相当复杂的，这些因素必须考虑。另外，PL／SQL包，存储过程，临时表空间，表结构本身，所有这些都会随着使用而日趋复杂，保证数据库的结构优化，没有垃圾，绝对比定期从ｃｒｏｎ运行ｖａｃｕｕｍ复杂得多。Oｒａｃｌｅ 
+              DBAｄａｔａｂａｓｅ ａｄｍｉｎｓｔｒａｔｏｒ，数据库管理员深受电脑专业人员的青睐，这并不奇怪。Oｒａｃｌｅ的强大功能和灵活性，也同时意味着多得让人发疯的各种小秘密、小技巧、小陷阱。如果需要在Oｒａｃｌｅ上完成许多工作，找找ORｅｉｌｌｙ 
+              Oｒａｃｌｅ专辑。那里，你会找到比Oｒａｃｌｅ迷宫式文档好得多的信息来源。<br>
+              七、Oｒａｃｌｅ ｆｏｒ Lｉｎｕｘ ｖｓ． Oｒａｃｌｅ ｆｏｒ NT<br>
+              Oｒａｃｌｅ在NT上的销量超过了SQL SERVER，是NT上的第一大数据库，NT上的Oｒａｃｌｅ为许多管理功能提供了图形界面，类似的功能在UNIX／Lｉｎｕｘ上只能通过ｓｑｌｐｌｕｓ访问。它的图形界面，设计得与NT控制面板的其他部分颇为相似。Lｉｎｕｘ 
+              DBA必须熟悉ｓｑｌｐｌｕｓ。NT的问题是，许多管理任务要求用户在主控台（机器屏幕前）完成，如果想远程管理就需要昂贵的第三方软件。而UNIX上的Oｒａｃｌｅ管理可以从任何经过授权的远地进行，效果同在机器主控台一样。<br>
+              NT上的Oｒａｃｌｅ使用一个进程内的多个进程，而UNIX／Lｉｎｕｘ上的Oｒａｃｌｅ使用多个独立的，相互独立的内存空间（注：UNIX上也有多线程的部分：Mｕｌｔｉｔｈｒｅａｄｅｄ 
+              Sｅｒｖｅｒ，MTS，相当于前文提到的ｌｉｓｔｅｎｅｒ的多线程版本）。NT上的实现方式避免了进程间通信，有小小的性能优势，但UNIX上的实现方式提供了高得多的可靠性和数据完整性，因为一个Oｒａｃｌｅ进程不可能侵入另一个Oｒａｃｌｅ进程的地址空间。在NT和VMS上，创建一个新的进程比创建一个新的线程昂贵得多，而且NT的进程间切换很慢，因此微软建议程序员只要有可能就使用多线程。在UNIX上，建立新进程是比较高效的。而在Lｉｎｕｘ上，建立新进程和新的内核线程——ｋｅｒｎｅｌ 
+              ｔｈｒｅａｄ都使用同一个基本系统调用，效率相当高。<br>
+              八、一些好工具<br>
+              Oｒａｃｌｅ同时发布了Oｒａｃｌｅ Aｐｐｌｉｃａｔｉｏｎ Sｅｒｖｅｒ OAS的Lｉｎｕｘ版本。对OAS的深入探讨在本文范围之外，但它确实是连接后端Oｒａｃｌｅ数据库，建立Iｎｔｅｒｎｅｔ或Iｎｔｒａｎｅｔ应用的一个强有力的工具。OAS提供JAVA开发能力，可以将HTTP和IIOP与OCI网络接口串在一起，具备友好的界面以便设计Wｅｂ表单和报表，还有其他方便的工具。<br>
+              Oｒａｃｌｅ如此流行，自然也有相应的一批开源软件（Oｐｅｎ Sｏｕｒｃｅ）工具。其中的OWS ｋｉｌｌｅｒ 是一个基于JAVASｅｒｖｌｅｔ的可以替代OAS的Wｅｂ接口工具，与Aｐａｃｈｅ 
+              Wｅｂ服务器、Aｐａｃｈｅ的Jｓｅｒｖ JAVA Sｅｒｖｅｌｅｔ模块集成，提供对Oｒａｃｌｅ数据库的访问。（注：OWS Oｒａｃｌｅ 
+              Wｅｂ Sｅｒｖｅｒ是Oｒａｃｌｅ Aｐｐｌｉｃａｔｉｏｎ Sｅｒｖｅｒ早期版本的名称）。<br>
+              可以在Mａｔｔｓ Hｏｕｓｅ 找到更多的工具以管理Oｒａｃｌｅ的存储过程、提供快速的报表功能。<br>
+              掌握Oｒａｃｌｅ比较难，但如果你需要高级的SQL，或者PL／SQL的功能，或者ｔｒｉｇｇｅｒ，或者各种扩展，或者先进的交易管理，或者必须和Oｒａｃｌｅ系统共存，那么Lｉｎｕｘ是一个极佳的Oｒａｃｌｅ平台。<br>
+              资源链接：<br>
+              在Rｅｄｈａｔ上安装Oｒａｃｌｅ 8．0．5和OAS 3的详细指导 ｈｔｔｐ／／ｊｏｒｄａｎ．ｆｏｒｔｗａｙｎｅ．ｃｏｍ／ｏｒａｃｌｅ<br>
+              下载Oｒａｃｌｅ 8和Oｒａｃｌｅ Aｐｐｌｉｃａｔｉｏｎ Sｅｒｖｅｒ：ｈｔｔｐ／／ｔｅｃｈｎｅｔ．ｏｒａｃｌｅ．ｃｏｍ／ｔｅｃｈ／ｌｉｎｕｘ／ｓｅｃｔｉｏｎ．ｈｔｍ<br>
+              Oｌｉｖｅｒ Aｎｄｒｉｃｈｓ Pｙｔｈｏｎ ＆ Lｉｎｕｘ Pａｇｅ ｈｔｔｐ／／ａｎｄｒｉｃｈ．ｎｅｔ／ｐｙｔｈｏｎ<br>
+              Bｌａｃｋｄｏｗｎ．ｏｒｇ －－ Lｉｎｕｘ JDKｈｔｔｐ／／ｗｗｗ．ｂｌａｃｋｄｏｗｎ．ｏｒｇ／<br>
+              Pｙｔｈｏｎｄ的Oｒａｃｌｅ模块 ｈｔｔｐ／／ｗｗｗ．ｚｏｐｅ．ｏｒｇ／Dｏｗｎｌｏａｄ／DCOｒａｃｌｅ／<br>
+              Oｒａｃｌｅ SQLJ －－ 在Jａｖａ中嵌入SQL ｈｔｔｐ／／ｗｗｗ．ｏｒａｃｌｅ．ｃｏｍ／ｊａｖａ／ｓｑｌｊ／ｉｎｄｅｘ．ｈｔｍｌ<br>
+              OWS Kｉｌｌｅｒ ｈｔｔｐ／／ｗｗｗ．ａｄｅｌａ．ｓｋ／ｋｕｚｅｌａ／OWSKｉｌｌｅｒ／<br>
+              Mａｔｔｓ Hｏｕｓｅ：ｈｔｔｐ／／ｗｗｗ．ｍａｔｔｓｈｏｕｓｅ．ｃｏｍ／ｐｒｏｃｅｄｉｔ／<br>
+              在FｒｅｅBSD上运行Oｒａｃｌｅ ｆｏｒ Lｉｎｕｘ：ｈｔｔｐ／／ｗｗｗ．ｆｒｅｅｂｓｄ．ｏｒｇ．ｒｕ／ｌｉｎｕｘ－ｏｒａｃｌｅ．HOW－TO．ｈｔｍｌ<br>
+              （陕西 小箭）}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

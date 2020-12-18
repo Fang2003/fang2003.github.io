@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>背景时钟</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta NAME="keywords" CONTENT="clock, watch, time, background, 背景时钟, 背景, 时间, 时钟, 日期 ,日历">
+
+<meta NAME="description" CONTENT="独特的背景时钟脚本，时钟显示在背景内。">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="stylesheet" href="goodpage/wdxly/study/style.css"></head>
+
+<body bgcolor="#004080" text="#FFFFFF" link="#FFFFFF" vlink="#FFFFFF" alink="#FFFFFF">
+<P align="center"><FONT size="+1" color="Lime"><B>&nbsp;背景时钟</B></FONT></P>
+<div align="center">
+<table width="87%" border="0">
+<tr>
+<td height="697"><font face="Arial, Helvetica, sans-serif">&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;TITLE&gt;Background Clock&lt;/TITLE&gt;</font>
+<p><font face="Arial, Helvetica, sans-serif">&lt;script language=javaScript&gt;<br>
+&lt;!--// </font></p>
+<p><font face="Arial, Helvetica, sans-serif">function clockon() {<br>
+thistime=new Date()<br>
+var hours=thistime.getHours()<br>
+var minutes=thistime.getMinutes()<br>
+var seconds=thistime.getSeconds()<br>
+if (eval(hours) &lt;10) {hours=&quot;0&quot;+hours}<br>
+if (eval(minutes) &lt;10) {minutes=&quot;0&quot;+minutes}<br>
+if (seconds &lt;10) {seconds=&quot;0&quot;+seconds}<br>
+thistime=hours+&quot;:&quot;+minutes+&quot;:&quot;+seconds<br>
+<br>
+if(document.all) {<br>
+bgclocknoshade.innerHTML=thistime<br>
+bgclockshade.innerHTML=thistime<br>
+}<br>
+<br>
+if(document.layers) {<br>
+document.bgclockshade.document.write('&lt;div id=&quot;bgclockshade&quot;
+style=&quot;position:absolute;visibility:visible;font-family:Verdana;color:FFAAAAA;font-size:120px;top:10px;left:152px&quot;&gt;'+thistime+'&lt;/div&gt;')<br>
+document.bgclocknoshade.document.write('&lt;div id=&quot;bgclocknoshade&quot;
+style=&quot;position:absolute;visibility:visible;font-family:Verdana;color:DDDDDD;font-size:120px;top:10px;left:150px&quot;&gt;'+thistime+'&lt;/div&gt;')<br>
+document.close()<br>
+}<br>
+var timer=setTimeout(&quot;clockon()&quot;,200)<br>
+}</font></p>
+<p><font face="Arial, Helvetica, sans-serif">//--&gt;<br>
+&lt;/script&gt;</font></p>
+<p><font face="Arial, Helvetica, sans-serif">&lt;link rel=&quot;stylesheet&quot;
+href=&quot;../style.css&quot;&gt;&lt;/head&gt;</font></p>
+<p><font face="Arial, Helvetica, sans-serif">&lt;body onLoad=&quot;clockon()&quot;&gt;<br>
+</font><font face="Arial, Helvetica, sans-serif">&lt;div id=&quot;bgclockshade&quot;
+style=&quot;position:absolute;visibility:visible;font-family:Arial;color:FF8888;font-size:120px;top:102px;left:152px&quot;&gt;&lt;/div&gt;</font></p>
+<p><font face="Arial, Helvetica, sans-serif">&lt;div id=&quot;bgclocknoshade&quot;
+style=&quot;position:absolute;visibility:visible;font-family:Arial;color:DDDDDD;font-size:120px;top:100px;left:150px&quot;&gt;&lt;/div&gt;</font></p>
+<p><font face="Arial, Helvetica, sans-serif">&lt;div id=&quot;mainbody&quot;
+style=&quot;position:absolute;visibility:visible&quot;&gt;<br>
+&lt;/div&gt;</font></p>
+<p><font face="Arial, Helvetica, sans-serif">&lt;/body&gt;<br>
+&lt;/html&gt;</font></p>
+<p>说明：时钟显示的位置需要你修正TOP,LEFT参数来确定。TOP表示层距离显示器顶部的象素值，LEFT表示距离左侧的象素值。</p>
+
+
+</table>
+<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN>
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+</body>
+</html>

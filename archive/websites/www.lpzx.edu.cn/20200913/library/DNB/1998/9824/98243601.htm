@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>正确处理盘符交错问题<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　一台微机，原来只有一个硬盘DISK1，它被安装在IDE1口上，设置为Master方式。DISK1被分为两个逻辑硬盘，分别为DISK1－C盘(位于基本DOS分区上，且处于激活状态)和DISK1－D盘(处于扩展DOS分区)，其中DISK1－C盘上安装了操作系统如Windows 
+        95和MS－DOS，DISK1－D盘上安装了一些应用软件。现在，我们在IDE2口上增加一个原来某微机上的主硬盘DISK2，为简单起见，不防假设这个硬盘也被设置为Master状态，且IDE1口、IDE2口上均只有一个设备(现在越来越多的人学会了充分利用两个IDE口，当只有两个IDE设备时，从不把两头“猪”关在一个栏内，免得“猪们”互相“争抢食物”而“妨碍快跑”)。假设DISK2有一个基本DOS分区，在原来的机器上，它是C盘(此处称为DISK2－C，以便区分，以后类似)，其扩展DOS分区被划分为两个逻辑驱动器，在原来的机器上，分别为DISK2－D和DISK2－E。硬盘增加后，我们在BIOS中将两个硬盘的参数设置正确(或全部设置为Auto方式)，然后开机启动，会出现什么现象呢?<br>
+        　　首先，Windows 95将会顺利启动，然后，打开“我的计算机”，你会发现DISK1－C在新系统中还是C，而新系统的D从原来的DISK1－D变成了DISK2－C，新系统的E是原来的DISK1－D，新系统的F是原来的DISK2－D，新系统的G是原来的DISK2－E。很多人挂接第二个硬盘后，本来期望盘符按如下方式排列：DISK1－C为新系统的C，DISK1－D为新系统的D，DISK2－C为新系统的E，DISK2－D为新系统的F，DISK2－E为新系统的G。期望和所得的并不一致，这被称为盘符交错现象。<br>
+        　　盘符交错是正常的，因为MS－DOS对硬盘的管理方法(虽然此方法或许不大合理)就是这样。MS－DOS把第一个物理硬盘的激活的DOS分区叫做C，第二个物理硬盘的有效的激活DOS分区叫做D，第一个物理硬盘的扩展DOS分区叫做E、F等等，剩下的字母分配给第二个物理硬盘的扩展DOS分区。如果没有第二个物理硬盘，或第二个物理硬盘没有基本DOS分区，那么D就分配给第一个物理硬盘的扩展DOS分区的第一个逻辑驱动器了。<br>
+        　　正常的盘符交错现象会产生一些“反常”的问题，最常见的就是某些软件因为盘符变化而导致路径错误，从而不能使用。比如，假设我们把Windows 
+        95安装在D盘上，在系统加挂一个有激活DOS分区的第二硬盘后，Windows 
+        95就不能启动了。虽然可以通过修改Msdos.sys和注册表来修正这个问题，可是这比较麻烦。有没有可能避免盘符交错呢?<br>
+        　　要避免盘交错现象，对于Windows 95系统来说，最简单的方法莫过于利用它的“即插即用”功能。在BIOS中将第二硬盘(不妨假设安装在第二个IDE口，设置为Master状态)设置为“没有”(即None，不要设置为自动方式，即AUTO)，开机，Windows 
+        95启动后，Windows 95的“即插即用”功能就可以提示检测到新硬件，并自动分配盘符给它，此时盘符的分配和很多人的期望就一致了。由于原来主硬盘上的所有软件所在的盘符都没有变化，因此在硬盘上的软件可以照常运行，盘符交错问题就解决了。<br>
+        　　既然BIOS里面将第二硬盘都设置为“None”了，Windows 95怎么还会检测到它呢?原来Windows 
+        95在启动完毕后，就不需要原来的16位BIOS了(这也是32位操作系统的共同特点)，取而代之的是Windows 
+        95自带的32位BIOS。<br>
+        　　不过，在有的时候，这种方法也会失灵。某次笔者在一台装有Windows 
+        95机器上，用此法增加一个老式的富士通105M硬盘时，Windows 95顺利检测到了，且为它分配了盘符，将小硬盘上的文件拷贝到大硬盘上也没有报错，但在打开所拷贝的文件时，有趣的现象发生了：WINZIP一次又一次地解开笔者想打开的ZIP文件，并且不停地重复操作，蓝色的进程条不断前进到100％，然后退回到0％后再开始。打开一个小的DOS窗口，用DIR发现硬盘容量在慢慢减少，关掉WINZIP后剩余空间方恢复正常。好在这个富士通105M硬盘是我专门用来倒腾大批数据的，此法不灵，也不是只有这个“必由之路”。<br>
+        　　假设要增加的硬盘原来是空的(或可以做为空盘使用)，那么我们可以在分区时，对这个硬盘不做基本DOS分区，只做扩展DOS分区(并根据需要和喜好划分为1～X个逻辑盘)。做好准备工作后(如将数据转录到其它硬盘上)，将此硬盘挂接在机器上，然后在BIOS里面将硬盘设置正确(包括CHS、模式等)。如此这般，启动Windows 
+        95或DOS后，原主硬盘上所有软件都可以正常工作，新增硬盘上的软件也可以被完整无错地拷贝到大硬盘上。随着旧计算机的升级和淘汰，目前很多人手里都有小硬盘，这些小硬盘往往被揣在怀里，专门用来传递大量的数据。对于这种数据交换硬盘，建议采用该种方法以防止盘符交错。<br>
+        　　此外，某些计算机硬盘厂商，为解决硬盘盘符交错问题提供了一些辅助软件。你可以上它们的主页瞅瞅，或许会有惊喜的发现——不过它们往往要求你用两个它们的产品。<strong>　<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

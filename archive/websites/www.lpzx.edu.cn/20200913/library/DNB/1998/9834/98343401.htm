@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　广州读者童鸥问：我的打印机是Epson 
+        LQ－100，不知何故，在Windows3.1或Windows95下打印中文时都出现乱码？电脑的配置为：Intel 
+        486DX－100 CPU，Trident 9440显卡(2M显存)，12M内存，装有英文Windows3.1和Cstar2.0。在Windows下，如色彩设为16色，则可以正常打印，设为256色或以上时则出现乱码，但在DOS下用UCDOS、CXDOS等都可正常打印出中文。<br>
+        　　升级到586后，电脑配置为：Pentium MMX 166 CPU，S3 Virge显卡(4M显存)，32M 
+        SDRAM内存，装有英文Windows95和Cstar2.0，打印时依然出现乱码，甚至设为16色也不行，我试过Richwin和UCWIN，都不奏效。问题是出在Epson打印机还是英文Windows 
+        95上?我没试过用中文Windows，可我并不想用中文Windows。渴求解答！<br>
+        　　答：根据来信所说的现象，向你提供以下几点意见，供你进一步检查：<br>
+        　　1.打印机在DOS和DOS中文平台上能够正常打印汉字，说明打印机本身没有什么问题。<br>
+        　　2.由于使用英文版的Windows3.1和Windows95，系统自身没有汉字库和汉字处理程序，因此应该检查汉字平台的打印字库是否安装成功。<br>
+        　　3.检查打印驱动程序是否安装得当，如果在安装操作系统时没有选择合适的打印驱动程序，则应该在Windows3.1和Windows95环境下，分别安装相应的打印驱动程序。<br>
+        　　4.此外，不知道你打印英文是否也出现乱码，如果是这样，则可能与病毒或者系统自身故障有关，可通过杀毒以及修复（或者重新安装）系统来解决。<br>
+        　　5.如果打印和显示汉字都出现乱码，则和显示驱动程序有关。在16色显示时采用的是ROM 
+        BIOS中的驱动程序，256色以上显示时应该采用显示卡专用的驱动程序。请你在Windows3.1和Windows95下分别重新安装相应的显示驱动程序，看看能否解决问题。<br>
+        　　福建读者吕奕民问：1.启动PWIN97后，用MMM1.0监视内存，发现Physical 
+        Memory Available(可用物理内存)只有21.156MB，关闭Realplay 5后，内存又回升为22.704MB，关闭ICQ后，内存为23.016MB，随后回到22.940MB，打开Netscape 
+        Message后，内存降至16.472MB，现在只有12.612MB了，而且有不断下降趋势；当打开《东方快车》后，再试着打开Office文档时，Memory急剧下降，并跳出警告标志无法执行下去，非关闭《东方快车》不可。这是什么原因，如何解决？<br>
+        　　2.IE4.0升级到4.01后，浏览中文页面如上海热线时，屏幕选项出现乱码，有时将字体改为中文后就正常了，但有时又不行，浏览某些页面时会显示错误信息，如“＊＊＊＊行出错”等。以上是IE的BUG吗？若不是，该如何操作？<br>
+        　　我的电脑配置是：Pentium 200 MMX CPU、ABIT TX5主板、WINFAST 3D S600显卡(4M显存)、 
+        64M SDRAM内存、TOP STAR 16声卡、BIGFOOT 4.3G硬盘、USRobotics Sportster Voice 33.6 
+        Modem、SAMSUNG 500S显示器。<br>
+        　　答：1.在多任务系统中，随着活动任务数的增加，内存可用空间减少，这本身是正常的。实际上，每打开一个窗口、一个下拉菜单或者一个对话框等，都要占用内存资源。你在使用中启动了多道程序，特别Netscape、Office都是消耗内存资源的大户，当资源不足时当然无法启动。当然，内存中有病毒活动时，也会占用大量内存资源，因此可检查有无病毒。<br>
+        　　启动MMM1.0后，它就一直监视内存的活动，利用它可以调整内存、减少内存碎块。整理时可采用手动和自动两种方式，在自动方式下，每30秒整理一次碎块。MMM1.0在工作的过程中，也要占用内存资源，把它作为转储暂存空间。一旦整理完成，MMM1.0将会释放它暂时使用的内存空间。因此内存的使用是一个动态的过程，从MMM1.0的显示也可以看出，可用内存的大小随时可能发生变化。为了进一步提高内存的使用效率，解决你的问题，可以用APK 
+        Windows Memory Compacting Engine、Exe Dependancy Scanner等内存管理软件试一试。<br>
+        　　2.在浏览中文Web时出现乱码，是很多人都遇到过的问题。究其原因，可以简单地归结为信息的编码方法和解码（译码）方法不相同。因此解决问题的方法就是找到和编码方法一致的解码方法。各种不同情况导致乱码的表现形式不同，例如，在BG环境下看BIG5编码的文字，汉字显示为类似日文的假名；而浏览器、操作系统和中文平台配合不当时汉字可能显示为小方框等。来信没有说明出现乱码的形式，笔者无法进一步分析，请你根据实际情况采用汉字转换软件或者更换系统工作环境试试。<br>
+        　　甘肃读者马晓波问：我的电脑配置为：Pentium 166 CPU，Intel 430TX主板，32M 
+        SDRAM内存，维用8倍速光驱，Seagate 4.3G硬盘，普通声卡，丽台600DX显卡。使用两个月左右，由于不慎，系统出现故障，重新装入系统后，光驱却出现挑盘现象，许多原来能读的盘现在根本读不出（光盘放入后指示灯始终不亮，但偶尔可听到光驱在转），能读的盘速度也明显变慢，3分钟～4分钟才能将目录读出，奇怪的是，只要目录读出后，速度却快了一些，请问该问题如何解决？<br>
+        　　答：光驱出现挑盘的现象，首先应怀疑光驱本身有问题。但是，你的光驱仅仅使用两个月，应该没有问题。而且问题又出在重装系统之后，估计问题是由其它原因造成的。建议按照以下步骤检查：<br>
+        　　1.检查有无病毒，当病毒感染光驱驱动程序或者病毒在内存活动时可能出现不能读盘或者读盘十分缓慢的现象；<br>
+        　　2.检查光驱的驱动程序是否与光驱匹配，安装是否正确；<br>
+        　　3.在硬件方面，检查光驱使用的接口插座是否正常、光驱的主从方式选择是否得当、电源线和信号线是否接触良好；<br>
+        　　4.如果不能解决问题，可用交换法，在其它机器上检查你的光驱是否工作正常，然后再进一步找出原因。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/33/index.htm">《电脑报》1998年9月7日第34期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

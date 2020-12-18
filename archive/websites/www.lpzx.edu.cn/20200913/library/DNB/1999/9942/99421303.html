@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VC++在状态栏显示时钟</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VC++在状态栏显示时钟</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VC++在状态栏显示时钟 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在VC的控件中有个Status bar可以在窗体状态栏中添加日期和时间。其实通过简单的代码，你就能创建一个有时钟显示的状态栏，并且还能设置时钟栏的显示方式。举例如下：<br>
+　　首先，用MFC AppWizard按默认方式创建一个单文档界面的应用程序框架。<br>
+　　然后，编写代码：<br>
+　　1）在String Table中添加New String，在此定义为ID_INDICATOR_CLOCK，将其Caption设为00：00：00（由于状态栏根据Caption确定时间窗格的缺省宽度，使用此值将为时间的显示预留空间）。注意，本步操作时有两种方式：<br>
+　　一种建立新的String Table，并添加String；另一种则在原有String Table中添加。当用后一种方式操作时，若完成后，时钟栏并不显示时间，则需要将此New String在String Table中对应的Value值加1（可在resource.h中修改）。<br>
+　　2）在MainFrm.cpp中indicators声明处添加ID_INDICATOR_CLOCK,代码如下：<br>
+　　…<br>
+　　static UINT indicators[] =<br>
+　　{<br>
+　　ID_SEPARATOR,   <br>
+　　ID_INDICATOR_CLOCK,<br>
+　　ID_INDICATOR_CAPS,<br>
+　　ID_INDICATOR_NUM,<br>
+　　ID_INDICATOR_SCRL,<br>
+　　};<br>
+　　…<br>
+　　这一步中ID_INDICATOR_CLOCK的插入位置将影响时间窗格在状态栏中的显示位置。<br>
+　　3）安装定时器：在MainFrm.cpp中OnCreate函数处添加代码如下：<br>
+　　int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)<br>
+　　{  ……<br>
+　　SetTimer(1,1000,NULL);／／安装定时器，并将其时间间隔设为1000毫秒<br>
+　　return 0;<br>
+　　}<br>
+　　4）编写时间处理函数：利用ClassWizard为CMainFrame类加入WM_TIMER的消<br>
+　　息处理函数OnTimer，并添加代码如下：<br>
+　　void CMainFrame::OnTimer(UINT nIDEvent) <br>
+　　{／／ TODO: Add your message handler code here and／or call default<br>
+　　CTime time;<br>
+　　time=CTime::GetCurrentTime();／／得到当前时间<br>
+　　CString s=time.Format(″％H:％M:％S″);／／转换时间格式<br>
+　　m_wndStatusBar.SetPaneText(m_wndStatusBar.CommandToIn－<br>
+　　dex(ID_INDICATOR_CLOCK),s); ／／显示时钟<br>
+　　CFrameWnd::OnTimer(nIDEvent);}<br>
+　　5）销毁定时器：利用ClassWizard为CMainFrame类加入WM_CLOSE的消息处理<br>
+　　函数OnClose，并添加代码如下：<br>
+　　void CMainFrame::OnClose() <br>
+　　{／／ TODO: Add your message handler code here and／or call default<br>
+　　KillTimer(1);／／销毁定时器<br>
+　　CFrameWnd::OnClose();}<br>
+　　最后，编译运行。<br>
+　　怎么样，你的时钟还不错吧。此外，你还可以通过调用CStatusBar的成员函数SetPaneStyle，SetPaneInfo来设置你的时钟栏的显示方式。例如：在MainFrm .cpp中OnCreate函数处添加如下代码，即可将你的时钟栏pop out：<br>
+　　 int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)<br>
+　　 {…<br>
+　　m_wndStatusBar.SetPaneInfo(m_wndStatusBar.CommandTo－<br>
+　　Index(ID_INDICATOR_CLOCK),ID_INDICATOR_CLOCK,SBPS_POPOUT,50); <br>
+　　return 0;}<br>
+　　了解了如何添加时钟，添加别的窗格也是大同小异。这样，你就可以随心所欲地定制自己的状态栏了。<br>
+<b>　　(河北　张剑寅)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99421303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

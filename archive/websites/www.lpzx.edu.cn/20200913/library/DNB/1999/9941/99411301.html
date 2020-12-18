@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- “彩蝶”伴“鼠”飞</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; “彩蝶”伴“鼠”飞</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 “彩蝶”伴“鼠”飞 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　我们都想使自己的程序有一些与众不同的东西，让第一次使用的人感到新奇。把下面的代码加入你的VB程序中，就能使程序运行时鼠标旁边有4个彩蝶在翩翩起舞。<br>
+　　Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)<br>
+　　DrawWidth = 5<br>
+　　Static CX(3) As Single, cy(3) As Single′用Static声明的变量可在过程重启时仍保存上次的值<br>
+　　Dim xx(3) As Single, yy(3) As Single<br>
+　　Dim i As Integer<br>
+　　For i = 0 To 3<br>
+　　PSet (CX(i), cy(i)), Me.BackColor′用背景色画点,将上次画的彩点覆盖掉<br>
+　　′取以鼠标为圆心250为半径的圆内的随机点<br>
+　　xx(i) = (Rnd ＊ 500 － 250) ＋ X<br>
+　　yy(i) = (Rnd ＊ 500 － 250) ＋ Y<br>
+　　Next i<br>
+　　For i = 0 To 3<br>
+　　PSet (xx(i), yy(i)), RGB(Rnd ＊ 255, Rnd ＊ 255, Rnd ＊ 255)'画4个颜色随机变化的彩点<br>
+　　′保存4个随机点的位置,以便下个MouseMove事件中能通过画背景色的点来覆盖它们<br>
+　　CX(i) = xx(i)<br>
+　　cy(i) = yy(i)<br>
+　　Next i<br>
+　　DrawWidth = 1<br>
+　　End Sub<br>
+　　如果在窗体上有Label控件,彩点会把它们擦掉,我们可以判断出随机点是否接近Label控件,从而决定是否画彩点。例如有三个Label控件，将下面代码替掉斜体部分就能使Label控件不受影响。<br>
+　　For i = 0 To 3<br>
+　　If (xx(i) &lt;= Label1.Left － 30 Or yy(i) &lt;= Label1.Top － 30 Or yy(i) &gt;= Label1.Top ＋ Label1.Height ＋ 30 Or xx(i) &gt;= Label1.Left ＋ Label1.Width ＋ 30) _<br>
+　　And (xx(i) &lt;= Label2.Left － 30 Or yy(i) &lt;= Label2.Top － 30 Or yy(i) &gt;= Label2.Top ＋ Label2.Height ＋ 30 Or xx(i) &gt;= Label2.Left ＋ Label2.Width ＋ 30) _<br>
+　　And (xx(i) &lt;= Label3.Left － 30 Or yy(i) &lt;= Label3.Top － 30 Or yy(i) &gt;= Label3.Top ＋ Label3.Height ＋ 30 Or xx(i) &gt;= Label3.Left ＋ Label3.Width ＋ 30) Then′如彩点不在Label控件范围内<br>
+　　PSet (xx(i), yy(i)), RGB(Rnd ＊ 255, Rnd ＊ 255, Rnd ＊ 255)′画4个颜色随机变化的彩点<br>
+　　Else    ′在Label控件范围内则不画点<br>
+　　xx(i) = 0<br>
+　　yy(i) = 0<br>
+　　End If<br><b>(江西　程志刚)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99411301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

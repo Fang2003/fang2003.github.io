@@ -1,0 +1,6 @@
+STYLE .px16 { font-size: 16px }
+.px14 { font-size: 14px }
+.px12 { font-size: 12px }
+A { COLOR: rgb(166,66,0); TEXT-DECORATION: none }
+A:hover { COLOR: #FF8C4A; TEXT-DECORATION: none }
+A:unknown { COLOR: #ff6600; TEXT-DECORATION: none }

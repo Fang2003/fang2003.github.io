@@ -1,0 +1,122 @@
+ 
+<HTML>
+<!-- #BeginTemplate "/Templates/software.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='epcw.css' TYPE='text/css'>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>电脑报电子版 -- 如何调用系统控制面板</TITLE>
+<!-- #EndEditable --> 
+<style type="text/css">
+<!--
+.centertitle {  font-weight: bold; text-align: center; line-height: 35px; font-size: 9pt; color: #000000}
+.lefttitle {  line-height: 35px; font-weight: bold; font-size: 9pt; color: #000000}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR='white'>
+<span class="centertitle"></span> 
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR VALIGN='top'> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+  <TR> 
+    <TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.yesky.com'><IMG SRC='images/logo.gif' WIDTH='140' HEIGHT='60' ALT='天极网' BORDER='0'></A></TD>
+    <TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'> 
+      <a href="http://chat.yesky.com"><img src="images/0823-3.gif" width="468" height="60" border="0"></a>
+    </TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR VALIGN='bottom'> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<table width='615' border='0' cellspacing='0' cellpadding='2' align='Center'>
+  <tr> 
+    <td width='615' colspan='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/index.html'>CPCW电子版</A> 
+      &gt; <A HREF='http://www.cpcw.com/issue/all.html'>2000年</A> &gt; <a href="index.html"><!-- #BeginEditable "%C6%DA" -->27期<!-- #EndEditable --></a> 
+      &gt; <!-- #BeginEditable "%C0%B8%C4%BF" --><a href="software.html">软件世界</a><!-- #EndEditable --> 
+      &gt; <!-- #BeginEditable "%B1%EA%CC%E2" -->如何调用系统控制面板<!-- #EndEditable --></td>
+  </tr>
+</table>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+  <TR ALIGN='center' VALIGN='bottom'> 
+    <TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+  <TR> 
+    <TD><SPAN CLASS='title'>《 <!-- #BeginEditable "%CE%C4%D5%C2%CD%B7" -->如何调用系统控制面板<!-- #EndEditable --> 
+      》</SPAN></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR> 
+    <TD><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　 我们都知道，在Windows系统中，控制面板是用来帮助用户对系统进行设置的，控制面板文件是一种特殊的动态链接库，它以cpl为扩展名（意为Control 
+      Panel，中文“控制面板”）存放在系统文件夹中，我们就可以用Windows的Rundll32.exe来执行其中的例程，现以Authorware 
+      4.0为例，介绍实现的方法：<br>
+      　　（1）启动Authorware；<br>
+      　　（2）新建一个文件，将文件名设为sample.a4p；<br>
+      　　（3）按“Ctrl＋Shift＋F”键，打开Function窗口；<br>
+      　　（4）选择sample.a5p，点击Load按钮，打开winapi.u32文件，并引入其中的函数Winexec()；<br>
+      　　(5)放置一个交互图标于流程线上；<br>
+      　　（6）放置一个计算图标于交互图标下，交互方式为按钮，并取名为“打开控制面板”；<br>
+      　　（7）双击“打开控制面板”计算图标，在里面写上：Winexec(“rundll32.exe shell32.dll,Control_RunDLL”,1)，注意，不能够把里面的任何一个字符写错了，否则就不能够运行了；<br>
+      　　（8）运行文件，单击“打开控制面板”按钮，就可以直接打开Windows的系统控制面板了。<br>
+      　　最后，我要告诉大家，如果要打开指定的控制面板里的对象，也可以通过这种方法来实现，以打开桌面属性为例，方法是在计算图标里写上：Winexec(“rundll32.exe 
+      shell32.dll,Control_RunDLL desk.cpl”,1)。<!-- #EndEditable --></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR> 
+    <TD>&nbsp;</TD>
+    <TD ALIGN='right'><A HREF='00272201.htm#top'>页 首</A></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+  <TR ALIGN='center' VALIGN='bottom'> 
+    <TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR ALIGN='center'> 
+    <TD>&nbsp;</TD>
+    <TD> <a name='top'></a> <img src='http://cq.cpcw.com/cgi-bin/Count.cgi?ft=2|md=8|df=cpcw.dat|dd=E|cache=F|expires=18000' width='1' height='1' alt='312345678'> 
+      <script language='JavaScript'>
+document.write('<a href=http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw target=_blank><img src=\'http://best.nease.net/cgi-bin/log.cgi?user=cpcw&refer='+escape(document.referrer)+'&cur='+escape(document.URL)+'\' border=0 alt=\'网易中文排行榜\' width=15 height=15></a>');
+</script>
+      <noscript> <a href='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' target='_blank'> 
+      <img src='http://best.nease.net/cgi-bin/log.cgi?user=cpcw&refer=http%3A//www.cpcw.com/&cur=http%3A//www.cpcw.com/issue/1999/50/99500302.html#NoJavaScript' width='1' height='1' border='0' alt='网易中文排行榜'></a> 
+      <!-- Start of NedStat Basic code --> <a href="http://usa.nedstatbasic.net/cgi-bin/viewstat?name=cpcwissue"><img
+src="http://usa.nedstatbasic.net/cgi-bin/nedstat.gif?name=cpcwissue"
+border=0 alt="" nosave width=1 height=1></a> <!-- End of NedStat Basic code --> 
+      <!-- Start of ReferStat --> 
+      <script type="text/javascript" language="JavaScript">
+<!--
+d=document;
+d.write("<img src=\"http://usa.nedstatbasic.net");
+d.write("/cgi-bin/referstat.gif?");
+d.write("name=cpcwissue&refer=");
+d.write(escape(top.document.referrer));
+d.write("\" width=1 height=1 align=\"right\">");
+// -->
+</script>
+      <!-- End of ReferStat --></noscript> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW版权所有</A>，<A HREF='mailto:webmaster@staff.yesky.com'>YESKY天极网编辑部</A>设计制作发布<script language="JavaScript" src="http://www.lpzx.edu.cn/library/DNB/download/yeskye.js">
+</script></TD>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

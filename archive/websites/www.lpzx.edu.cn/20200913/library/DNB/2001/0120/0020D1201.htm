@@ -1,0 +1,165 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>医疗保险局域网的组建</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0120/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0120/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第20期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Ｗｉｎｄｏｗｓ共享入侵<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 随着黑客技术的不断进步，网络漏洞越来越多的被披露，入侵网络已经不是那么难的事了，利用工具软件固然是个好办法，可要是能利用Ｗｉｎｄｏｗｓ自带的命令来完成远端入侵，恐怕是好多想成为黑客的初学者最大的愿望吧。虽然这篇稿子只能提供单机Ｗｉｎｄｏｗｓ 
+              ９ｘ的共享入侵，但它的方法最为简单，不需要黑客软件的辅助，适合于初学者研究其入侵的原理。<br>
+              我们刊发这篇稿子的目的也就是让大家知道原理以及怎么去防范，而不是要大家成为黑客。<br>
+              入侵流程<br>
+              １．先获得对方的ＩＰ地址<br>
+              要想入侵当然得知道对方的ＩＰ地址了。对于怎么才能取得对方的ＩＰ地址，这里不多说，仅提供利用ＯＩＣＱ取得对方ＩＰ地址的方法：<br>
+              在ＱＱ中，找到你要攻击的人的图标，先向她或他发一个信息，然后马上转到Ｗｉｎｄｏｗｓ的ＤＯＳ窗口下，键入<br>
+              ｎｅｔｓｔａｔ －ｎ<br>
+              Ｎｅｔｓｔａｔ用于显示与ＩＰ、ＴＣＰ、ＵＤＰ及ＩＣＭＰ协议的相关数据统计，一般用于检验本机端口的网络连接情况。常用的参数有：<br>
+              Ｎｅｔｓｔａｔ －ａ 用于显示一个所有的有效连接信息列表，包括已经建立的连接（ｅｓｔａｂｌｉｓｈｅｄ）、监听连接请求（ｌｉｓｔｅｎｉｎｇ）的连接。<br>
+              Ｎｅｔｓｔａｔ －ｎ 用于显示所有已建立的有效连接。<br>
+              Ｎｅｔｓｔａｔ －ｒ 显示关于路由表的信息和当前有效的连接<br>
+              Ｎｅｔｓｔａｔ －ｅ 显示关于以太网的统计数据，其项目包括：传输的数据表总字节数、错误数、删除数、数据表的数量和广播的数量。<br>
+              使用上面的命令后，我们会看到图１所示的画面，而且由此可以判断对方的计算机一定使用的是Ｗｉｎｄｏｗｓ操作系统，（否则我们是看不到结果的）。<br>
+              图中的Ｐｒｏｔｏ表示你使用的是ＴＣＰ协议来传输数据包Ｌｏｃａｌ Ａｄｄｒｅｓｓ表示发送数据的ＩＰ地址及端口号；Ｆｏｒｅｉｇｎ 
+              Ａｄｄｒｅｓｓ表示接收端的ＩＰ地址及端口号；Ｓｔａｔｅ表示当前的状态为ｅｓｔａｂｌｉｓｈｅｄ（确认）。<br>
+              ２．使用Ｎｂｔｓｔａｔ命令得到对方计算机的共享资源资料<br>
+              Ｎｂｔｓｔａｔ是关于ＴＣＰ／ＩＰ协议上的ＮｅｔＢＩＯＳ数据统计。运用ＮｅｔＢＩＯＳ你可以查看本地计算机或远端计算机上的ＮｅｔＢＩＯＳ名称表格项。常用的参数有：<br>
+              Ｎｂｔｓｔａｔ －ｎ 显示寄存在本地的名字和服务程序。<br>
+              Ｎｂｔｓｔａｔ －ａ ＩＰ 通过ＩＰ显示远端计算机的物理地址和名称列表，所显示的内容就和本机自己运行的Ｎｂｔｓｔａｔ －ｎ所显示的内容一样。<br>
+              Ｎｂｔｓｔａｔ －ｓ ＩＰ 显示使用该ＩＰ的远端计算机的ＮｅｔＢＩＯＳ连接表。<br>
+              我们要使用的命令格式为：<br>
+              ｎｂｔｓｔａｔ －ａ ＜对方的ＩＰ地址＞<br>
+              你会看到如下的两种结果<br>
+              第一种<br>
+              Ｈｏｓｔ ｎｏｔ ｆｏｕｎｄ，这个讯息表示找不到该主机的共享资源，得到这个讯息并不代表不支持共享，因为如果远端机关闭了ＰＯＲＴ 
+              １３７、ＰＯＲＴ １３８、ＰＯＲＴ １３９等端口或者不是使用的Ｗｉｎｄｏｗｓ操作系统的话，你也同样会收到这条信息。要是想凭此来判断是否没有共享资料是很难的。<br>
+              第二种 <br>
+              图３显示的是一个使用ＮｅｔＢＩＯＳ的远端机器的名称表（ＮｅｔＢＩＯＳ Ｒｅｍｏｔｅ Ｍａｃｈｉｎｅ Ｎａｍｅ Ｔａｂｌｅ），看到它就可以知道对方有共享资源。上面的信息中Ｎａｍｅ表示远端机器的名称；Ｔｙｐｅ表示对方共享资源的类型，Ｓｔａｔｕｓ表示共享资源的当前状态。<br>
+              ３．现在你已经有了５０％的机会可以入侵该主机了<br>
+              方法一：<br>
+              １编辑Ｗｉｎｄｏｗｓ目录下的ＬＭＨＯＳＴＳ．ＴＸＴ将对方的ＩＰ地址输入，格式为：<br>
+              ＜对方的ＩＰ地址＞ ＜机器的名称＞<br>
+              按图４所示的方式将对方的主机ＩＰ地址和机器名称添加进去。<br>
+              （对于Ｗｉｎｄｏｗｓ ９Ｘ来说它目录在Ｃ＼Ｗｉｎｄｏｗｓ＼ｌｍｈｏｓｔｓ目录下对于Ｗｉｎｄｏｗｓ ＮＴ它位于ｓｙｓｔｅｍ３２＼ｄｒｉｖｅｒｓ＼ｅｔｃ目录下。）<br>
+              ２单击“开始”→“查找”→“计算机”，在查找名称里输入刚才的电脑名称，或它的ＩＰ地址，找到这个计算机，点击它进入，如果你足够幸运，你会直接进入它（前提是你的网络速度足够快）；若它的主人是个稍微有点防范意识的人，它会提示你输入密码。现在破解密码的方法很多，这里从安全角度出发，不再提供破解方法。而实际上，在网络上需要密码来进入的电脑实在太少了，７０％的机器直接就可以进去。（可悲啊，防范意识太差了，希望在看完这篇文章后，你能给自己的共享文件夹加上共享密码。）<br>
+              方法二：<br>
+              这个方法比较简单，就是利用Ｗｉｎｄｏｗｓ的“ｎｅｔ ｕｓｅ”命令将对方的共享资源映射为自己的网络硬盘。它主要用于建立或取消到达共享点的映像驱动器的连接。如果要求你必须提供用户ＩＤ和口令。它的命令格式为：<br>
+              ｎｅｔ ｕｓｅ ＜你所需要建立的网络硬盘驱动器号＞ ＜＼＼对方计算机的ＩＰ地址＼共享资源名称＞<br>
+              这里需要提醒大家的是此处所指的共享资源包括了共享的硬盘或文件夹。<br>
+              要知道对方的共享资源名称，使用Ｗｉｎｄｏｗｓ自带的命令“ｎｅｔ ｖｉｅｗ”即可，它的作用是查看目标服务器上的共享资源，任何局域网的人都可以发出此命令而不需要密码和用户ＩＤ。<br>
+              其命令格式为：<br>
+              ｎｅｔ ｖｉｅｗ ＜＼＼对方计算机的ＩＰ地址＞<br>
+              看见了吧，这个ＩＰ可是有Ｉ驱动器共享的哦。<br>
+              如果这个共享资源有网络密码，那会给你一个输入密码的提示，这里就不多说了。<br>
+              入侵的原理及防范措施<br>
+              上面的入侵，实际上是利用了Ｗｉｎｄｏｗｓ系统的“网络资源共享”，及Ｗｉｎｄｏｗｓ的“映射网络驱动器”，简单吧。<br>
+              知道了入侵的原理，现在让我们来看看如何防范。<br>
+              如果你看了上面的介绍就跑去试验，那拜托了，被抓了可千万不要说是因为看了我写的文章哦＾＿＾！大家都知道Ｗｉｎｄｏｗｓ有个“网络监视器”吧，它在你的“开始”→“程序”→“附件”→“网络工具”菜单下。（什么？你没有？那你一定是没有安装了。）它的安装和Ｗｉｎｄｏｗｓ所有的附件程序安装一样，只是在默认安装时是不安装的，你只须在“添加－删除程序”里选择“安装Ｗｉｎｄｏｗｓ”，在附件里把“网络监视器”打上钩，“选择下一步”安装就可以了，这里不多说了。当你使用前面的方法侵入远端计算机的时候，利用“网络监视器”可以轻松地把你的抓住。它会显示出“用户”、“连接时间”、“主机名”及“共享的文件”等信息，不管你是局域网还是Ｉｎｔｅｒｎｅｔ入侵，它都能显示出是哪个使用者，哪一台电脑对本机正在干什么事！<br>
+              如图６所示，先在“网络监视器”里查看现在与你相连接的计算机，然后把你觉得不正常的计算机封杀掉（断开它的连接就ＯＫ了）。选择你认为不正常的计算机名称，点击“断开连接”图标（就是工具条上第二条）就行了。<br>
+              需要提醒大家的是：如果没有必要，最好不要共享你的任何文件夹和驱动器，如果必须要共享的话，那你也尽可能设置成只读共享并加上密码。在使用后一定要记得关闭共享功能哦。<br>
+              再有就是加装个防火墙软件来保护你的资料了，这个不用我多说吧。<br>
+              ＯＫ，Ｗｉｎｄｏｗｓ的初级入侵就讲到这里了，需要说明的是以上例子中的ＩＰ是经过技术处理的，不是合法的ＩＰ，所以请不要用上面的ＩＰ来验证，出了问题，我可不负责任哦：）。 
+              重庆 狙击手<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

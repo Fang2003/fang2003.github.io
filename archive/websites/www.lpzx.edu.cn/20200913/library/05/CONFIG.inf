@@ -1,0 +1,9 @@
+bmp:1.bmp,2.bmp;
+hot:0,0,100,50,Viewer.Load('explufo.htm');
+hot:0,75,100,50,Viewer.Load('right.htm');
+hot:0,150,100,50,Viewer.Load('3touch\3touch.htm');
+hot:0,225,100,50,Music.Play();
+hot:0,300,100,50,Music.Pause();
+hot:0,450,100,50,System.Mini();
+hot:0,525,100,50,System.Close();
+viewer:150,0,650,600;

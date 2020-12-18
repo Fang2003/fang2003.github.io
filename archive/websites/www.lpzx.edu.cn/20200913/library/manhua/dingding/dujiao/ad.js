@@ -1,0 +1,1 @@
+document.write('<A HREF="http://banners.orbitcycle.com/router/chinainc/goldbook/0000/a-NC686V.html" TARGET="ad"><IMG SRC="http://banners.orbitcycle.com/banners/chinainc/goldbook/0000/a-NC686V.html" BORDER=0 HEIGHT=60 WIDTH=468></A>');

@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>制作网页上的滚动字幕<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　滚动字幕(一个字符串在网页上的一个文本框中不停地滚动,循环显示)是网页上最常见的JavaScript语言的应用实例。也许你想知道它是如何实现的，或者你想把它添加到自己的网页中去。下面我就来向你介绍如何在网页上实现滚动字幕。<br>
+        　　<strong>一、程序实例</strong><br>
+        　　(文件名:ScrollTexthtm)<br>
+        　　功能:字符串Textstr在文本框form1text1中向左滚动,循环显示。<br>
+        　　&lt;HTML&gt;<br>
+        　　&lt;HEAD&gt;<br>
+        　　&lt;TITLE&gt;ScrollTexthtm&lt;/TITLE&gt;<br>
+        　　&lt;SCRIPT LANGUAGE=″javascript″&gt;<br>
+        　　var Textstr=″Welcome To My Homepage!″;<br>
+        　　var step=1;<br>
+        　　function ScrollText()<br>
+        　　{<br>
+        　　Textstr=Textstrsubstring(step,Textstrlength)＋Textstrsubstring(0,step);<br>
+        　　documentform1text1value=Textstr;<br>
+        　　setTimeout(″ScrollText()″,500);<br>
+        　　}<br>
+        　　&lt;/SCRIPT&gt;<br>
+        　　&lt;/HEAD&gt;<br>
+        　　&lt;BODY&gt;<br>
+        　　&lt;FORM NAME=″form1″&gt;<br>
+        　　网页上的滚动字幕!&lt;BR&gt;<br>
+        　　&lt;INPUT TYPE=″text″ NAME=″text1″ SIZE=30&gt;<br>
+        　　&lt;/FORM&gt;<br>
+        　　&lt;SCRIPT LANGUAGE=″javascript″&gt;<br>
+        　　ScrollText();<br>
+        　　&lt;/SCRIPT&gt;<br>
+        　　&lt;/BODY&gt;<br>
+        　　&lt;/HTML&gt;<br>
+        　　<strong>二、程序说明</strong><br>
+        　　滚动字幕的实现原理是:每隔一定时间将字符串中的第一个字符移动到字符串的尾部,再把该字符串在文本框中重新输出。上面程序中ScrollText()函数就是实现这一功能的。具体实现步骤如下:<br>
+        　　1将字符串Textstr的子串Textstrsubstring(0,step)与子串Textstrsubstring(step,Textstrlength)交换位置后组成新的字符串,赋给Textstr(注:step是每次移动的字符数)。<br>
+        　　2把重新排好的字符串Textstr赋给documentform1text1value,使文本框中输出新的字符串。<br>
+        　　3用setTimeout(″ScrollText()″,500)语句设置下一次调用ScrollText()函数的时间间隔为05秒(500/1000秒)。<br>
+        　　<strong>三、注意事项</strong><br>
+        　　1上面的程序只有在支持JavaScript语言的浏览器(NETSCAPE/MSIE 30以上版本)中观看,才能实现滚动字幕的效果。<br>
+        　　2如果你想在滚动字幕中使用汉字的话,则应使字符串的长度为偶数,并且每次移动的字符数也应为偶数。以免出现双字节的汉字被从中截断,分开显示,输出乱码的现象。<br>
+        　　3JavaScript语言是区分大小写字符的,因此请你在写程序时注意保持变量名,函数名的书写形式一致。<strong>(北京　陈剑辉)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月4日第17期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

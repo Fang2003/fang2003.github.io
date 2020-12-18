@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>声卡引起的死机故障的解决 
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　　故障现象：机器配置为：AMD5X86－133CPU、金鹰Eagle－486主板、Award 
+        PnP BIOS、联讯S3325P声卡、昆腾2.1G硬盘、16MB内存、NEC1.44软驱、松下四速CD－ROM，由于原来的声卡损坏，重新买了一块联讯MED3931声卡，该卡是一款性价比比较好的SRS16位PnP声卡。<br>
+        　　将买回的声卡在ISA槽内插装好，并在Windows95下完成其驱动程序的安装，Windows95自动重新启动，一切正常，有悦耳的Windows95启动声。于是关机盖好机箱，当再次开机时，出现内存自检结束后死机的现象，正常情况下应继续检测声卡和软驱，再进入硬盘引导Windows95。我想可能是声卡损坏，于是将声卡拔下，开机后恢复正常，为了确认声卡是否已损坏，再次将声卡插上，重新开机，这次又一切正常，有Windows95的启动声音。看来声卡并没有损坏，可能是我刚才没插紧所致。这时，我打算重新启动到DOS 
+        6.22下安装声卡驱动程序。但当我重新启动时，却又再次发生上述故障，我想可能是病毒引起的，于是重新拔掉声卡，格式化硬盘，重新安装DOS 
+        6.22和Windows3.2。关机插好声卡，开机安装好声卡驱动程序，重新启动后，声卡工作正常。再次关机、开机也正常，看来好像真是病毒引起的。接下来安装Windows95和声卡驱动程序，Windows95自动重新启动，一切正常，有悦耳的Windows95启动声音。然而当机器再次启动时，又出现了刚才的现象。难道是声卡与Windows95之间有冲突?拔掉硬盘的IDE线，开机故障依旧。拔下声卡，接上硬盘，开机又正常。<br>
+        　　故障分析及处理：根据上述现象分析，可以看出，问题可能出在声卡、主板BIOS和Windows95三者之间。于是拿起MED3931声卡的说明书，想从中找到解决问题的办法。然而我从头看到尾，却未发现有关这方面的说明。因此只好准备阅读安装盘上MED3931驱动程序目录下的Readme文件。然而当我转入MED3931目录下时，突然发现其下面还有一为EEPROM的子目录。此时我意识到，解决问题的关键可能就在此。果然，在EEPROM目录下的Readme文件告诉我：“如果MED3931安装在PnP 
+        BIOS的主板上，且不能正常工作，可能是主板BIOS检测给定声卡的IRQ、DMA与其它设备有冲突。如果这样，请执行本目录下的EEPROM.BAT文件，以便修改主板BIOS的相关内容”。哦，原来是这么回事!马上键入EEPROM，回车，并插上声卡重新开机，一切正常，有悦耳的Windows95启动声音，再来两次重新启动，也一切正常，这证明问题得到彻底解决。<br>
+        　　为什么未装Windows95时声卡工作正常，而安装了Windows95后就出现故障呢?原来Windows95将主板PnP 
+        BIOS中的有关声卡的IRQ和DMA设置内容进行了修改，而当修改后的IRQ、ADD或DMA与系统冲突时，就会出现上述故障，这时只要用声卡驱动程序组内自带的有关程序，修改PnP 
+        BIOS的相关内容即可解决。<br>
+        　　编后：各位道友(同道中的朋友口山，嘿嘿!)，看了这十多期的《电脑医院》，你有什么感觉。为了便于各位DIY朋友收集、整理电脑维护、维修方面的文章，小编特辟专辑刊出电脑实战摩机经验，如你有什么更好的Idea，尽快来信哟!下期将为你推出“显卡维护专辑”，敬请关注，不看不知道，一看可就吓你一跳哟，嘿嘿!</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月25日第20期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

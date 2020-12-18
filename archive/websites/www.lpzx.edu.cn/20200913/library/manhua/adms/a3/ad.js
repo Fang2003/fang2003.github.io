@@ -1,0 +1,1 @@
+document.write('<A href="http://adserver.media999.com/?SHT=goldbook_ron_page1&target=_blank" target="media"><img src="http://adserver.media999.com/?SIT=goldbook_ron_page1" BORDER=0></A>');

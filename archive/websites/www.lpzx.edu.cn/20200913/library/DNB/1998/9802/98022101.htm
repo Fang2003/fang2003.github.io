@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">SECURITY速查网络安全漏洞<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在Novell网络中，如某一用户的权限过大或口令不安全都会对整个网络的安全构成威胁。所以定期对网络的安全情况进行检查是很有必要的。<br>
+        　　Novell Netware 3.12提供的SECURITY命令，就可以迅速得到网络配置的安全情况。<br>
+        　　首先，以管理员身份登录，在SYS：SYSTEM目录键入SECURITY&lt;ENTER&gt;，系统会对整个网络进行安全检查，并将安全报告显示在屏幕上。也可以执行F：\SYSTEM\SECURITY&gt;REPORT.TXT命令，利用DOS的重定向功能将安全报告存放在文本文件REPORT.TXT中。以便于用文字处理软件打开REPORT.TXT进行分析处理。<br>
+        　　以下所列是在报告中经常出现的网络安全弱点：<br>
+        　　(1)Objects with no password assigned(对象未分配口令)<br>
+        　　如果某一对象未分配口令，则任何用户都可以以其用户名登录上网，获取其个人的文件资料，并可以获得网络中的全部用户的清单。这是网络安全中的一个主要漏洞。<br>
+        　　(2)Objects with insecure password(对象口令不安全)<br>
+        　　Novell建议用户将几个不相关的单词以某种符号连接起来作为口令(如“WHO＊YOU－ARE”)，因为这种口令是不容易被猜测的。SECURITY还要求用户至少每60天改变一次口令。<br>
+        　　SECURITY可以查出口令相同或口令少于五个字符的用户，还可以查出用户口令是否过期，过期后还可以使用旧口令的次数等信息。这样管理员就可以根据这些提示对用户的口令加以修改。<br>
+        　　(3)Objects with security equivalence to supervisor(对象的安全性等效于管理员)<br>
+        　　当一用户的安全性等效于管理员时，他就拥有对文件服务器的全部访问权。为了方便对网络的管理，可以设定几个等效于管理员的用户。通过此命令，可以查出网络中的等效管理员是否合法，也可以查出管理员口令是否已泄漏。<br>
+        　　(4)Objects that have privileage in the root directory of a volume(对象在卷根目录中具有特权)<br>
+        　　授予用户在卷根目录层中的特权就等于授予用户在整个卷中的特权。在卷的根目录中授予“授权权”会使得用户在其所在卷的任何子目录中对所有的用户授予任何权限。<br>
+        　　(5)Objects that do not have a login script(对象无登录底稿)<br>
+        　　登录底稿保存在用户的邮箱中，为使每一用户都能发送邮件，所有用户对邮件目录都具有Create和Write权。这样入侵者就可以给没有登录底稿的用户编写一个底稿，这也是一个潜在的安全漏洞。<br>
+        　　(6)Objects with excessive rights in the standard directories(对象在标准目录中权限过大)<br>
+        　　每一用户在标准目录中都应具有以下权限：<br>
+        　　SYS：SYSTEM　[　]<br>
+        &nbsp;&nbsp;&nbsp; SYS：PUBLIC　[ROS]<br>
+        　　SYS：LOGIN　[ROS]<br>
+        　　SYS：MAIL　[WC]<br>
+        　　当用户在这些目录中的权限过大时，会对网络的安全运行构成极大的威胁。<br>
+        　　使用SECURITY命令，可以迅速得到整个网络的安全报告，如发现安全漏洞，则必须进行及时的纠正。</font></p>
+        <p class="ourfont"><font color="#369681">　　(江苏　汪浩　朱翠萍)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月12日第2期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

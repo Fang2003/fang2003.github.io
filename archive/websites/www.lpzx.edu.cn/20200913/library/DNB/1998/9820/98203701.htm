@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>QDI586主板的电源电路分析 
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        &nbsp;&nbsp; 
+        随着电脑制造技术的不断提高，出现了使用单、双电压供电的CPU，而且速度不同的CPU要求不同的工作电压。为使主板能与众多CPU兼容，保证CPU能安全可靠地工作，仅靠微机电源的几组输出是不够的，主板为此专门设计了系统电源电路，该电路能提供多种电压输出，满足不同CPU的需求。在目前的QDI586主板中，分为有跳线和无跳线两种，具有SpeedEasy功能(主板无跳线)的电源电路比有跳线的电源电路复杂，市场中QDI的SpeedEasy主板能自动识别CPU类型并自动提供合适的工作电压，下面就QDI的P5I430TX 
+        TITANIUM IB＋电源电路作一简要分析。<br>
+        　　一、SpeedEasy主板电源电路结构、工作原理<br>
+        　　1. Vcc3形成原理<br>
+        　　主板电源电路要求能提供CPU的内核电压(Core Volatge)Vcore， CPU与其外围电路的接口电压(I/O 
+        Voltage)Vcc3，以及为时钟电路、DIMM存储器、BGA芯片提供电源的Vcc－dimm，这些电压都是由微机电源的Vcc(＋5V)经变换而成的。<br>
+        　　(1)Vcc－dimm形成电路，见图1<br>
+        　　(2)Vcc3形成电路<br>
+        　　总体上说，该电路(图1)是一简单的三端稳压电路。其中，VQ5提供基准电压，VQ6为调整管，R222和R221组成取样电路，C50是消自激电容。一般地，Vcc－dimm被设计成3.3V。在SpedEasy主板中，该电压还送往U2的1脚以形成Vcc3，如图2。<br>
+        　　2.CPU核心电压Vcore形成原理<br>
+        　　Vcore形成电路较为复杂，要能输出多级电压以适应不同CPU的电压要求，这主要靠RC5041M来完成。<br>
+        　　(1)RC5041M的内部结构<br>
+        　　RC5041M实际上是一个DC－DC(直流—直流)转换器，图3是其内部方框图。<br>
+        　　(2)Vcore电压形成电路，图4是其应用电路。<br>
+        　　(3)RC5041M的特点功能<br>
+        　　RC5041M具有输出精度高、可编程的特点，其内置的D/A转换器能直接接受来自于CPU的4位VID(Voltage 
+        identification，电压识别)代码，通过对其VID端电平的编程控制可获得从2.1V到3.5V的各级电压(邻级电压差为100mV)，通过简单的外围电路配合，可输送高达15A的电流。RC5041M内部振荡器频率可通过修改外围电路元件参数来确定，一般将其设置在200KHz到1MHz之间，RC5041M还提供给主板电源极佳功能：当输出电压超出允许值时，POWER 
+        GOOD电路能监测到来自VFB端的电压变化，并发送一中断信号给CPU，以保护CPU。另外，RC5041M还具有输出过电压保护和电流反馈功能。RC5041M各引脚功能、VID代码与输出电压的对照见表1、表2。<br>
+        　　(4)DC－DC变换器<br>
+        　　图5是RC504M的基本工作原理图<br>
+        　　当S闭合时，输入电压Vin经L向负载RL供电，流过L的电流IL由下式决定：IL=Ton(Vin－Vout)/L，其中Ton为S的闭合时间。当S打开时，二极管D为储存在L中的电能提供了泄放通道，此时IL=Vout(Ts－Ton)/L，其中Ts为S的开关周期，Ts－Ton为S的断开时间，通过这两个等式，可得到该转换器输入电压与输出电压的关系：Vout=Vin(Ton/Ts)，若考虑到D的开启电压Vd和S的压降损失Vsw，则可较精确地得到如下关系式：Vout=(Vin＋Vd－Vsw)Ton/Ts－Vd。对照图4和图5，很容易发现VQ1相当于二级管D，VQ3和VQ4相当于开关S，L13即为L。<br>
+        　　二、SpeedEasy主板的特点、功能<br>
+        　　对于SpeedEasy主板，它能自动检测CPU的类型，判断用户使用的单电压CPU还是双电压CPU，并能相应发出G1和G2控制信号(见图2)。对于单电压CPU，G1呈逻辑高电平，G2呈逻辑低电平，这时Vcc3是由Vcore形成的，CPU纯由Vcore来供电，Vcc3等于Vcore。对于双电压CPU，G1呈逻辑低电平，G2呈逻辑高电平，Vcc3将由Vcc－dimm形成，CPU在Vcore和Vcc3的双重作用下工作。一般地，Vcc3为固定电压值，而Vcore则受VID逻辑电位控制。VID逻辑电位是由所使用的CPU类型和型号来决定，主板中的BIOS会根据CPU的内部参数自动判断其类型并提供相应的VID代码和G1、G2两个控制信号，保证主板电源电路能准确地工作。与此相关的电路本文不作介绍。<br>
+        　　对于非SpeedEasy主板来说，其电源电路相对简单，图1和图4电路仍被采用，但图2电路和VID代码形成电路都被取消了，取而代之的是跳线。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9820/1998/20/index.htm">《电脑报》1998年5月25日第20期37版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在FoxPro程序中输入WPS打印控制符<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;&nbsp; <font
+        color="#369681">编制报表程序时，有时候，我们可以将报表输出到文件中，然后利用WPS系统进行打印，使所打印的报表线条连贯漂亮。<br>
+        &nbsp;&nbsp;&nbsp; 由于WPS系统所用的打印控制符是专用的，因此，一般说来在所输出的表格文件中不包含打印控制符，那究竟应怎样才能较好地解决这个问题呢？笔者经过实践，认为以下几种方法可以较好地解决这个问题。<br>
+        &nbsp;&nbsp;&nbsp; 第一种方法是利用WPS系统的N命令进行源程序编辑，这样我们可以将控制符按一般的方法输入到程序的字符串中。这种方法比较简单，但是由于我们编制程序时需要不断调试运行，因此用此方法编制程序，需要不断地在FoxPro与WPS系统之间进行切换，降低了编程速度。<br>
+        &nbsp;&nbsp;&nbsp; 第二种方法是利用剪贴板进行编程。办法是我们先利用WPS系统的N命令将程序中所需的控制符先输入到程序中，并在该段程序的前两行先加上语句DOWHILEF，然后在前面一行加上TEXT，最后在该段程序的后一行先加上语句ENDTEXT，然后再加上ENDDO，这样我们在编制程序时，就可以利用剪贴板将控制符剪贴到合适的位置。<br>
+        &nbsp;&nbsp;&nbsp; 最后一种办法是直接利用Alt键进行输入。我们可以先将打印控制符利用WPS系统的N命令输入到一个文本文件中，然后利用DEBUG或PCTOOLS工具查看一下各个控制符的ASCII码，然后在程序编制时直接利用Alt键进行输入。例如，我们可以查得“标准体4号字”控制符的ASCII为H92，H84，换算成十进制为132，146，因此当我们在程序中要输入控制符“标准体4号字”时，我们可以先按住Alt键，然后连续按键盘右侧的小键盘上的数字132，然后松开Alt键，接着再用同样的方法输入数字146，此时程序中就会出现一个不可辨认的字符，即“标准体4号字”的控制符。其它的控制符也可用相似的方法进行输入。<br>
+        &nbsp;&nbsp;&nbsp; 经过以上方法编程，当程序运行时，产生的表格文件中就可以直接包含有WPS的打印控制符了，因而可以直接用WPS系统不经过编辑就直接进行打印了。<strong>(浙江 
+        翁坚超)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月7日第47期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

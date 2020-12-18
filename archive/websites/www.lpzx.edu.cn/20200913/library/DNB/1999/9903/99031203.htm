@@ -1,0 +1,68 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>教你隐藏控制面板中的选项</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">教你隐藏控制面板中的选项<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　Control 
+        Panel即控制面板，它是Windows中的一个系统工具，用它可对Windows作一些重要的系统设置，但有时我们并不想让别人在自己的机子上瞎改一气，因此就须隐藏部分敏感项目。Control 
+        Panel本身有一个配置文件control.ini,通过改动此文件可达到这一目的。<br>
+        　　此文件在C:\windows\目录下(假设你的Windows装在此目录下)，用写字板可以打开它。以下就是我的该文件第一段的内容。只须这样一设置，我的控制面板中便什么也没有了。下面讲讲它的语法。具体为：在control.ini中增加[don'tload]字段，在其后跟上＊.cpl=no,即表示该选项不在控制面板中显示。<br>
+        　　[don'tload]<br>
+        　　joystick.cpl=no 表示隐藏“游戏控制器”<br>
+        　　midimap.drv=no表示隐藏“区域设置”<br>
+        　　access.cpl=no表示隐藏“辅助选项”<br>
+        　　appwiz.cpl=no表示隐藏“添加／删除程序”<br>
+        　　desk.cpl=no表示隐藏“显示”<br>
+        　　inetcpl.cpl=no表示隐藏“Internet”和“用户”<br>
+        　　intl.cpl=no表示隐藏“区域设置”<br>
+        　　joy.cpl=no表示隐藏“游戏控制”<br>
+        　　main.cpl=no表示隐藏“打印机、键盘、鼠标、输入法、字体”<br>
+        　　mmsys.cpl=no表示隐藏“多媒体、声音”<br>
+        　　modem.cpl=no表示隐藏“调制解调器”<br>
+        　　netcpl.cpl=no表示隐藏“网络”<br>
+        　　odbccp32.cpl=no表示隐藏“32位ODBC”<br>
+        　　password.cpl=no表示隐藏“密码”<br>
+        　　powerefg.cpl=no表示隐藏“电源管理”<br>
+        　　sticpl.cpl=no表示隐藏“扫描仪与数字相机”<br>
+        　　sysdm.cpl=no表示隐藏“系统”和“添加新硬件”<br>
+        　　telephon.cpl=no表示隐藏“电话”<br>
+        　　themes.cpl=no表示隐藏“桌面主题”<br>
+        　　timedate.cpl=no表示隐藏“日期／时间”<br>
+        　　tweakui.cpl=no表示隐藏“TweakUI”<br>
+        　　我在第一次用TweakUI的时候，就把控制面板里包括TweahUI自身的所有东西全都隐藏了，结果要用的时候什么都找不到了。后来发现了control.ini文件，打开一看，才明白TweakUI只不过是改动了这个文件罢了。<strong>(湖北　尹阆)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

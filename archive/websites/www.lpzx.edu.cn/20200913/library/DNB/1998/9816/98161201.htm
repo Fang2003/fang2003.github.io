@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>中文Windows98安装双显示器历险记<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 　早就听说中文Windows98增加了许多东西，什么内置IE4.0，支持DVD、USB等等，但其中最让笔者好奇的是支持双显示器，所以测试版一拿到手后，就迫不急待地研究起来。<br>
+        　　笔者的P166MMX上原是一块S3 AURORA 64V＋，打开机箱，加入一块S3 TRIO 
+        64V＋，加上电源，怎么了?“嘟嘟”叫个不停，显示器也一片漆黑!曾听一位朋友说过486主板上双显卡报错的现象，586主板是否也是如此?不太甘心，没听微软强调对装双显要特殊主板支持，所以白忙了半天，猛然想到第二块显卡没接显示器，是不是……，马上接上，哈哈，其中一个显示器果然睁开了眼!(奇怪的是，亮的是后加的TRIO 
+        64V＋上的显示器)，启动时98立即检测到了新设备，并自动安装好了驱动程序。再次启动时，另一个显示器也出现了一个长方形框：<br>
+        　　“If you can read this message,windows has successfully initialized this display 
+        adapter,to use this adapter as part of your windows desktop,open the display option in the 
+        control panel and adjust the setting on the monitors tab。”<br>
+        　　进入“控制面板”“显示”“显示属性”“监视器”，如图1。<br>
+        　　点击“on S3 Aurora 64V＋”，选取“将此设备当成桌面的一部分。”，窗口中新出现了“2”，点击这个“2”，另一个显示器立即弹出一个放大的“2”，以标识显示器的序号。此时可用鼠标将“1”，“2”在窗口中左右上下拖动，以排列两个显示器的位置关系。如图2所示。<br>
+        　　确定后，你就可以将桌面上的窗口在两个显示器中任意拖动了。有什么好处?可以一边满屏看VCD，一边干活；上网时让两个网页同时把屏幕撑满，等等……<br>
+        　　过足了双显瘾后，笔者拆下显卡却发现用原来的显卡不能进入Windows98的图形界面，但DOS方式一切正常，反复试都不行，这可惨了，莫非要重装Windows98，那可又要浪费几个小时了。此时想起在安装时Windows98是把后装的显卡上的显示器作主显，可能将它拆除后，Windows98找不到显卡而无法显示图形界面。于是，试着打开Windows98中的system.ini，找到下面一段：<br>
+        　　displaydrv=S3 Trio 64V＋<br>
+        　　将它改成：<br>
+        　　displaydrv=S3 Aurora 64V＋<br>
+        　　重新启动，终于出现期待已久的Windows98的蓝天白云，一切OK!<strong> 
+        &nbsp;&nbsp; (上海　罗云彬)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

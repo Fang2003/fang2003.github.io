@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>自编图形浏览器<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 图形文件显示在VB编程中可通过调用LoadPicture函数来实现，本文通过一个实例实现了图形文件的快速查看，设计好的界面如图所示。在本例中通过驱动器列表框控件(DriveListBox)、目录列表框控件(DirListBox)、文件列表框控件(FileListBox)联合使用，定位要显示的图形文件的路径，在文件列表框选中文件名，就可在图片框控件中预览图形，并能根据图形的大小自动调整显示的区域。<br>
+        　　程序代码如下：<br>
+        　　Private Sub Form_Load()<br>
+        　　File1.Pattern=″＊.bmp;＊.ico;＊.wmf″　‘设置文件列表框的显示文件类型<br>
+        　　Picture1.AutoSize=－1　‘将图片框尺寸设为自动改变模式<br>
+        　　End Sub<br>
+        　　Private Sub Drive1_Change()<br>
+        　　Dir1.Path=Drive1.Drive　‘使目录列表框的路径随驱动器列表框内容变化<br>
+        　　End Sub<br>
+        　　Private Sub Dir1_Change()<br>
+        　　File1.Path = Dir1.Path　‘使文件列表框的路径随目录列表框的内容变化<br>
+        　　End Sub<br>
+        　　Private Sub File1_Click()<br>
+        　　Picture1.Picture=LoadPicture(File1.Path＋″\″＋File1.filename)　‘装载图片到图片框控件<br>
+        　　End Sub<br>
+        　　Private Sub Command1_Click()<br>
+        　　End<br>
+        　　End Sub （重庆　李　毅）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月5日第38期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

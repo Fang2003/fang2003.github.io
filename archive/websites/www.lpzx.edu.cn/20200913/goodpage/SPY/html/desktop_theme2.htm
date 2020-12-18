@@ -1,0 +1,235 @@
+<script language="JavaScript">
+function YY_Layerfx(yyleft,yytop,yyfnx,yyfny,yydiv,yybilder,yyloop,yyto,yycnt,yystep) { //v1.2
+//copyright (c)1999 Yaromat, Jaro von Flocken
+ if ((document.layers)||(document.all)){
+  with (Math) {yynextx= eval(yyfnx)}
+  with (Math) {yynexty= eval(yyfny)}
+  yycnt=(yyloop && yycnt>=yystep*yybilder)?0:yycnt+yystep;
+  if (document.layers){
+    eval(yydiv+".top="+(yynexty+yytop))
+    eval(yydiv+".left="+(yynextx+yyleft))
+  }
+  if (document.all){
+    eval("yydiv=yydiv.replace(/.layers/gi, '.all')");
+    eval(yydiv+".style.pixelTop="+(yynexty+yytop));
+    eval(yydiv+".style.pixelLeft="+(yynextx+yyleft));
+  }
+  argStr='YY_Layerfx('+yyleft+','+yytop+',"'+yyfnx+'","'+yyfny+'","'+yydiv+'",'+yybilder+','+yyloop+','+yyto+','+yycnt+','+yystep+')';
+  if (yycnt<=yystep*yybilder){eval(yydiv+".yyto=setTimeout(argStr,yyto)");}
+ }
+
+}
+function YY_Mousetrace(evnt) { //v1.2 copyright (c)1999 Yaromat
+ if (yyns4)
+  {if (evnt.pageX) {yy_ml=evnt.pageX;  yy_mt=evnt.pageY;}  }
+ else{
+   yy_ml=(event.clientX + document.body.scrollLeft);
+   yy_mt=(event.clientY + document.body.scrollTop);
+ }
+ if (yy_tracescript)eval(yy_tracescript)
+}
+</script>
+<html>
+
+<head>
+
+<title>SPY中文网站——问题与解答</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="Fireworks Splice HTML">
+
+<meta http-equiv="Page-Enter" content="revealTrans(Duration=1.0,Transition=23)">
+
+</head>
+
+<body bgcolor="#649AC6" onload="" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" >
+<div align="center" id="yyd0"
+style="BACKGROUND-COLOR: #dd0000; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 10px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #dd0000"></div><div
+align="center" id="yyd1"
+style="BACKGROUND-COLOR: #ffff00; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 20px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #ffff00"></div><div
+align="center" id="yyd2"
+style="BACKGROUND-COLOR: #6699ff; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 30px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #6699ff"></div><div
+align="center" id="yyd3"
+style="BACKGROUND-COLOR: #00dd00; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 40px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #00dd00"></div><div
+align="center" id="yyd4"
+style="BACKGROUND-COLOR: #ff33ff; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 50px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #ff33ff"></div><div
+align="center" id="yyd5"
+style="BACKGROUND-COLOR: #993366; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px; BORDER-RIGHT: #000000 1px; BORDER-TOP: #000000 1px; clipBottom: 3px; clipLeft: 0px; clipRight: 3px; clipTop: 0px; HEIGHT: 3px; LEFT: 60px; POSITION: absolute; TOP: 50px; WIDTH: 3px; Z-INDEX: 1; layer-background-color: #993366"></div><script>
+var yyns4=window.Event?true:false; var yy_mt = 0; var yy_ml = 0;
+document.onmousemove = YY_Mousetrace;
+yy_tracescript = '';
+
+if (yyns4){ document.captureEvents(Event.MOUSEMOVE);
+  YY_Mousetrace('',',document.YY_Mousetrace1')}
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+0)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+0)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd0\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+30)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+30)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd1\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+60)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+60)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd2\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+90)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+90)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd3\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+120)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+120)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd4\']',2000,true,80,0,1);
+
+YY_Layerfx(0,0,'yy_ml+cos((15*sin(yycnt/70))+150)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','yy_mt+sin((15*sin(yycnt/70))+150)*150*(sin(10+yycnt/20)+0.2)*cos(yycnt/20)','document.layers[\'yyd5\']',2000,true,80,0,1);
+</script>
+<div align="center">
+  <center><table border="0" cellpadding="0" cellspacing="0" width="695">
+<!-- fwtable fwsrc="Untitled" fwbase="desktop_theme.jpg" -->
+  <tr>
+<!-- Shim row, height 1. -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="16" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="122" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="21" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="7" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="34" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="20" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="22" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="72" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="7" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="22" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="33" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="101" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="36" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="15" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="83" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="6" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="11" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="26" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="41" height="1" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="1" border="0"></td>
+  </tr>
+
+  <tr valign="top"><!-- row 1 -->
+   <td colspan="19"><img border="0" src="../images/deskto9.jpg" width="695" height="27"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="27" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 2 -->
+   <td rowspan="2" colspan="16"><img border="0" src="../images/未标题-02 副本.jpg" width="617" height="57"></td>
+   <td colspan="2"><a href="index.htm"><img name="desktop_theme_r02_c17" src="../images/desktop_theme_r02_c17.jpg" border="0" width="37" height="34"></a></td>
+   <td rowspan="2"><img name="desktop_theme_r02_c19" src="../images/desktop_theme_r02_c19.jpg" width="41" height="57" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="34" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 3 -->
+   <td colspan="2"><img name="desktop_theme_r03_c17" src="../images/desktop_theme_r03_c17.jpg" width="37" height="23" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="23" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 4 -->
+   <td colspan="8"><img name="desktop_theme_r04_c01" src="../images/desktop_theme_r04_c01.jpg" width="314" height="13" border="0"></td>
+   <td colspan="11"><img name="desktop_theme_r04_c09" src="../images/desktop_theme_r04_c09.jpg" width="381" height="13" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="13" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 5 -->
+   <td colspan="4"><img name="desktop_theme_r05_c01" src="../images/desktop_theme_r05_c01.jpg" width="166" height="39" border="0"></td>
+   <td colspan="4"><img name="desktop_theme_r05_c05" src="../images/desktop_theme_r05_c05.jpg" border="0" width="148" height="39"></td>
+   <td colspan="11"><img name="desktop_theme_r05_c09" src="../images/desktop_theme_r05_c09.jpg" width="381" height="39" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="39" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 6 -->
+   <td colspan="3"><img name="desktop_theme_r06_c01" src="../images/desktop_theme_r06_c01.jpg" width="159" height="18" border="0"></td>
+   <td rowspan="18" colspan="2"><img name="desktop_theme_r06_c04" src="../images/desktop_theme_r06_c04.jpg" border="0" width="41" height="336"></td>
+   <td rowspan="18" colspan="14"><img border="0" src="../images/deskto3.gif" width="481" height="52">
+    <p>　
+    <p><span style="position: absolute; left: 238; top: 220"><textarea rows="5" name="S1" cols="64"></textarea></span></p>
+    <p>&nbsp;</p>
+    <p><span style="position: absolute; left: 372; top: 339"><select size="1" name="D1" multiple>
+      <option selected>问题</option>
+      <option selected>解答</option>
+    </select></span></p>
+    <p><span style="position: absolute; left: 372; top: 339"></span>
+    <p><span style="position: absolute; left: 240; top: 340">
+    <applet code="fphover.class" width="120" height="24">
+      <param name="hovercolor" value="#0000FF">
+      <param name="text" value="提交">
+      <param name="color" value="#649AC6">
+      <param name="effect" value="glow">
+      <param name="url" valuetype="ref" value="desktop_theme3.htm">
+      <param name="textcolor" value="#FFFF00">
+      <param name="font" value="Dialog">
+      <param name="fontstyle" value="regular">
+      <param name="fontsize" value="14">
+    </applet>
+    </span>
+    <p>　</td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="18" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 7 -->
+   <td rowspan="18"><img name="desktop_theme_r07_c01" src="../images/desktop_theme_r07_c01.jpg" width="16" height="429" border="0"></td>
+   <td rowspan="2"><a href="desktop_theme.htm"><img border="0" src="../images/未标题-1 副本.jpg" width="121" height="22"></a></td>
+   <td rowspan="18"><img name="desktop_theme_r07_c03" src="../images/desktop_theme_r07_c03.jpg" width="21" height="428" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="9" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 8 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="10" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 9 -->
+   <td><img name="desktop_theme_r09_c02" src="../images/desktop_theme_r09_c02.jpg" width="122" height="6" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="6" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 10 -->
+   <td><a href="screen_saver.htm"><img border="0" src="../images/未标题-3 副本.jpg" width="121" height="22"></a></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="20" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 11 -->
+   <td><img name="desktop_theme_r11_c02" src="../images/desktop_theme_r11_c02.jpg" width="122" height="7" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="7" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 12 -->
+   <td><a href="soft_av.htm"><img border="0" src="../images/未标题-2 副本.jpg" width="121" height="22"></a></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="19" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 13 -->
+   <td><img name="desktop_theme_r13_c02" src="../images/desktop_theme_r13_c02.jpg" width="122" height="6" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="6" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 14 -->
+   <td rowspan="2"><a href="yungecaiyu.htm"><img border="0" src="../images/未标题-4 副本.jpg" width="121" height="22"></a></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="12" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 15 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="7" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 16 -->
+   <td rowspan="2"><a href="desktop_theme2.htm"><img border="0" src="../images/未标题-5 副本.jpg" width="121" height="22"></a></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="10" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 17 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="14" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 18 -->
+   <td rowspan="7"><img name="desktop_theme_r18_c02" src="../images/desktop_theme_r18_c02.jpg" width="122" height="299" border="0"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="67" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 19 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="6" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 20 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="10" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 21 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="67" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 22 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="15" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 23 -->
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="33" border="0"></td>
+  </tr>
+  <tr valign="top"><!-- row 24 -->
+   <td colspan="16"></td>
+   <td><img src="http://www.lpzx.edu.cn/goodpage/SPY/shim.gif" width="1" height="101" border="0"></td>
+  </tr>
+
+<!--   This HTML was automatically created with Macromedia Fireworks 3.0   -->
+<!--   http://www.macromedia.com   -->
+
+</table>
+  </center>
+</div>
+<!--------------------------- STOP COPYING THE HTML HERE --------------------------->
+
+</body>
+
+</html>
+

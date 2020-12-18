@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">给UNIX加把屏幕锁<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　UNIX操作系统大多安装在网络服务器上，为了避免维护人员不在时无关人员对服务器进行误操作，我用C语言编写了一个小程序实现了屏幕锁的功能，该程序在AT＆T 
+        UNIX 4.0和SCO UNIX 5.0上均运行通过，源程序如下：<br>
+        　　＃include ″curses.h″/＊curses为UNIX提供的屏幕处理函数＊/<br>
+        　　main()<br>
+        　　{int flag=0;<br>
+        　　int i;<br>
+        　　int passwd[4];/＊口令长度为4＊/<br>
+        　　noecho();/＊屏幕不回显键盘的输入＊/<br>
+        　　while(flag!=1)<br>
+        　　{<br>
+        　　for(i=0;i&lt;=3;i＋＋)<br>
+        　　{move(20,20);<br>
+        　　passwd[i]=getch();<br>
+        　　mvprintw(20,20＋i,″＊″);/＊每敲一下键在屏幕上显示一个“＊”＊/<br>
+        　　}<br>
+        　　if(passwd[0]==′h′＆＆passwd[1]==′a′＆＆passwd[2]==′w′＆＆passwd[3]==′k′)<br>
+        　　{/＊口令为hawk＊/<br>
+        　　mvprintw(10,20,″输入正确!″);<br>
+        　　flag=1;<br>
+        　　}<br>
+        　　move(20,20);<br>
+        　　clrtoeol();/＊清除有“＊”的行＊/<br>
+        　　for(i=0;i&lt;=5;i＋＋)<br>
+        　　passwd[i]=′′;/＊清除passwd＊/<br>
+        　　}<br>
+        　　refresh();<br>
+        　　endwin();<br>
+        　　echo();<br>
+        　　/＊屏幕恢复＊/<br>
+        　　}<br>
+        　　用下述命令可将该程序编译成可执行程序(设该程序为lock.c，生成的可执行文件为a.out)：＄ 
+        cc lock.c a.out －lcurses。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(湖北　石鹰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

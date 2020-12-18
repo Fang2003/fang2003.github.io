@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Novell网的维护及错误排除<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　现象1:在服务器启动过程中，突然停下来询问服务器的名称、内部网络号等，然后停下等待键入命令或死机。<br>
+        　　原因:该现象是由于系统卷损坏造成的，NETWARE系统核心server.exe装入Startup.ncf中的硬盘驱动程序后，无法从损坏的系统卷中找到autoexec.ncf，故出现上述现象。<br>
+        　　解决方法:在该种情况下，只能装入卷修复模块vrepair.nlm来进行修复，装入之后，重新启动，选择1－修复卷，然后选择要修复的卷名，系统即调用vrepair自动将系统进行修复，检查FAT表，并对磁盘表面进行扫描，修复之后即能正常启动。<br>
+        　　现象2:工作站没有依照逻辑方式连接在文件服务器上。屏幕显示：Error 
+        opening boot disk image file(打开boot盘映像文件错误)。<br>
+        　　可能原因：1.在NETWARE 3.12下，SYS:LOGIN目录下的NET＄DOS.SYS、BOOTCONF.SYS、NET＄BIND.SYS、NET＄BVAL.SYS文件存放的是登录数据库，登录数据库中存放用户权限、屏蔽、组等信息，如果损坏，则会出现以上错误。<br>
+        　　2.网络没有被适当地设置或安装。<br>
+        　　3.没有连接好电缆。<br>
+        　　解决方法:方法1.运行vrepair.exe进行修复。<br>
+        　　方法2.请重新设置工作站的网络卡。<br>
+        　　方法3.请检查工作站和文件服务器间的电缆连接。<br>
+        　　现象3：开机启动，机器自动装入NOVELL NETWARE核心server.exe，该文件启动后当装入IDEDISK.DSK硬盘驱动程序时，屏幕显示：<br>
+        　　Redirection table inconsistent partition table(重定向表与分区表不一致)。<br>
+        　　然后死机，不能启动；<br>
+        　　用vrepair.nlm模块进行修复，却显示Volume not defined(卷未定义)。<br>
+        　　原因:分区表丢失。<br>
+        　　解决方法:由于分区表丢失，所以不能用vrepair进行修复，由于有相同的备份盘，其分区与该硬盘一致，所以决定不重新安装NETWARE，而采取复制分区表的方法进行恢复，首先要清除原分区表，用INSTALL.NLM模块可做到。<br>
+        　　装入INSTALL.NLM，然后选择“Volume Option”项，进入卷分配画面，按说明删除分区，但该方法会将原来的FAT与FDT表清除；<br>
+        　　FAT及FDT等结构如下：<br>
+        　　每隔33个扇区分别存放4份HOTFIX及4份MIRROR，Redirection区后为卷定义表，随后为FAT表，Redirection区共994个4K的块，每个MIRROR表占20个扇区，由此算出FAT数据扇区号，用Norton 
+        DiskEdit工具将扇区进行备份，然后用ALT＋W将选中的扇区写入坏盘即可。<br>
+        　　重新启动，装入vrepair.nlm模块，进行FAT、FDT检测，将发现一些错误，现在vrepair可修复这些逻辑错误了，安装SYS卷，进入NDS目录服务，发现有一些数据丢失，但以前的重要数据都恢复出来了。<br>
+        　　现象4:来自文件服务器的反应明显减慢。<br>
+        　　可能原因：1.感染了病毒。<br>
+        　　2.工作站上的网络卡损坏或老化。<br>
+        　　3.网络连线损坏。<br>
+        　　4.文件服务器上的网络卡损坏或老化。<br>
+        　　5.文件服务器的速度没有被设置在最高速度上。<br>
+        　　6.文件服务器的硬盘损坏。<br>
+        　　7.卷中有太多的删除文件。<br>
+        　　解决方法:1.用杀毒软件清除病毒,检查速度,若仍慢,请按下述步骤试试。<br>
+        　　2.请参照随附计算机的说明书,将CPU的速度调整到最快。<br>
+        　　3.利用工具软件Norton检查、修复硬盘。<br>
+        　　4.执行PURGE,清除已被删除的文件。<br>
+        　　5.如果一个工作站或服务器显得很慢,请插入一张新的网络卡到机器中,检查它的速度。<br>
+        　　6.如果速度仍然比正常的速度慢,请重新安装网络卡和电缆线。</font></p>
+        <p class="ourfont"><font color="#369681">　　(四川　张青松)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

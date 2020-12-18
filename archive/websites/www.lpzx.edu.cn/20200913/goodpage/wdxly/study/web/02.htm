@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>网页中下拉菜单的设计</title>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td width="100%">
+<table border="0" width="100%">
+<TBODY>
+<tr>
+<td width="100%"><p align="center"><span class="text11" style="COLOR: rgb(252,177,3)">网
+页 中 下 拉 菜 单 的 设 计 &nbsp;</span>　</p>
+
+
+</TBODY>
+</table>
+<table border="0" width="100%">
+<TBODY>
+<tr>
+<TD width="100%" align="left">
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul>
+<ul><span class="text" style="color: rgb(98,98,98);font-size: 9pt">&nbsp;徐波
+</span></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　在网页制作时，为了更好地组织信息，使显示的信息分类明确、层次清晰，网页制作者往往费尽心机。常用的方法有用树型结构显示信息，用表格进行网页布局，用框架(frame)组织页面等等。但对于习惯了Windows操作系统的用户来说，利用菜单操作可以算是最自然的方法了。下面我们就来看一下怎样在网页中设计下拉式菜单。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　下拉式菜单由若干个显示在窗口顶部的主菜单条和各个菜单条下面的子菜单组成。每个子菜单往往还包含几个子菜单项。通常，只有菜单条显示在窗口中，并且当鼠标指针指向菜单条时，菜单条的子菜单才显示出来。当鼠标指针离开菜单时，子菜单则隐藏起来，回到只显示主菜单条的状态。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　根据上述下拉菜单的特点，我们就可以开始在网页中制作下拉菜单了。我们在网页的顶部放置一个区域，用于显示主菜单条，每一个主菜单条作为一个超链接横向置于该区域中，当然除非菜单项没有子菜单，一般情况下这里的超链接不指向任何地址，只用它来激活子菜单。区域的格式见程序1。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;DIV ID='pad'
+……&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;A ID='pad1'
+onmouseout=&quot;mouseout();hideMenu();&quot;onmouseover=&quot;mouseover();</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　doMenu('idpad1');&quot;
+onclick=&quot;window.event.returnValue=false;&quot;&gt;菜单项一&lt;/A&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;A ID='pad2'
+onmouseout=&quot;mouseout();hideMenu();&quot;onmouseover=&quot;mouseover();</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　doMenu('idpad2');&quot;
+onclick=&quot;window.event.returnValue=false;&quot;&gt;菜单项二&lt;/A&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　…… </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/DIV&gt;</span><span class="text" style="color: rgb(98,98,98);font-size: 9pt"></span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　接着，我们根据主菜单条的个数定义相应的子菜单，为每个子菜单定义一个区域，该区域中第一个元素是一条横线，然后每个子菜单作为一个超链接置于该区域中，由于子菜单纵向排列，每个超链接后加&lt;BR&gt;换行。当然这个区域现在还不能显示出来，但当它被激活时，其显示位置应位于其他对象之上，所以其style属性置为STYLE='
+display:none;z-index:9;'。 注意每个超链接的ID均应与其主菜单的ID相同，以便于统一处理。格式见程序2。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;SPAN
+ID='idpad1' STYLE='display:none;z-index:9;' onmouseout='hideMenu();'&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;HR
+STYLE='position:absolute;left:0;top:0;color:white' SIZE=1&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;DIV &gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad1'
+HREF='11.htm' onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项一一&lt;/A&gt;&lt;BR&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad1'
+HREF='12.htm' onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项一二&lt;/A&gt;&lt;BR&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;HR
+STYLE='color:white' SIZE=1&gt;&lt;!--如有必要可以用横线对子菜单分组--&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad1'
+HREF='13.htm' onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&nbsp;子菜单项一三&lt;/A&gt;&lt;BR&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　…… </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/DIV&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/SPAN&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　经过上面的步骤，下拉菜单的格式已经定义好了，下面的任务就是控制这些子菜单的显示和隐藏。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　当鼠标移动到主菜单条上时，应显示其子菜单，我们通过执行doMenu(MenuID)响应主菜单的onmouseover事件来完成。过程的参数MenuID是代表子菜单的区域的ID，过程执行时先设置window.event.
+cancelBubble=true，并计算子菜单显示的位置，包括左上角和右下角坐标。然后执行下列语句来显示子菜单所在区域：
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　CurMenu.style.clip
+=&quot;rect(0 0 0 0) &quot;;CurMenu.style.display=&quot;block&quot;;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　当鼠标移出主菜单时有两种情况，一种情况是鼠标在子菜单及其主菜单之间移动，这时不能隐藏子菜单；另一种情况是鼠标移出了子菜单及其主菜单的区域，这时需要隐藏子菜单。我们通过执行hideMenu()响应主菜单的onmouseout，同时执行hideMenu()响应子菜单所在区域的onmouseout事件来完成。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　网页中的另外两个函数mouseout()
+和mouseover()
+的功能很简单，分别用于处理鼠标移动时菜单项的颜色变化。 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　完整的源代码参见《电子与电脑》网站www.pccomputing.com.cn。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　网页浏览的效果如图1所示，运行环境为IE4.0以上版本。
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　（图注WANGYE）
+图1 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;HTML&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;HEAD&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;TITLE&gt;网页中的下拉菜单&lt;/TITLE&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/HEAD&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;SCRIPT
+LANGUAGE=&quot;JavaScript&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　var IsDroped
+=false;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　function
+mouseout() </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　{</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+window.event.srcElement.style.color='white';//鼠标移开时置为白色 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　function
+mouseover() </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　{</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+window.event.srcElement.style.color='red';//鼠标进入时置为红色//鼠标进入时置为红色
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　function
+doMenu(MenuID) </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　{</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 var CurMenu=
+document.all(MenuID);</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 //为避免闪烁,如果下拉菜单已经显示则不重画.
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 if
+(IsDroped==true) </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 {</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+window.event.cancelBubble=true;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 return false;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+window.event.cancelBubble=true;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 TempMenu=
+CurMenu;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 //计算下拉菜单的位置
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 x=
+window.event.srcElement.offsetLeft + window.event.srcElement.offsetParent.offsetLeft;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 x2=x +
+window.event.srcElement.offsetWidth;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 y=
+pad.offsetHeight;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+CurMenu.style.top=y;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+CurMenu.style.left=x;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+CurMenu.style.clip=&quot;rect(0 0 0 0)&quot;;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+CurMenu.style.display=&quot;block&quot;;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 //延时2毫秒后再显示菜单,保证ToolbarMenu.offsetHeight有值,避免从主菜单移向下拉菜单时下拉菜单消失.
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+window.setTimeout(&quot;showMenu()&quot;, 2);</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 return true;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　function
+showMenu() </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　{</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 y2=y +
+TempMenu.offsetHeight;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+TempMenu.style.clip=&quot;rect(auto auto auto auto)&quot;;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 IsDroped
+=true;//下拉菜单已经显示 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　function
+hideMenu() </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　{</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 //如果在下拉菜单的范围之内移动则不隐藏.
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 cY=
+event.clientY + document.body.scrollTop;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 if (cY&gt;=y
+&amp;&amp;cY&lt;y2 &amp;&amp;event.clientX &gt;=(x+5) &amp;&amp;event.clientX &lt;=x2
+|| </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 cY&gt;1
+&amp;&amp;cY&lt;y &amp;&amp;event.clientX &gt;=(x+5) &amp;&amp;event.clientX &lt;=
+x2-10) </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 {
+window.event.cancelBubble=true;return;} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 //隐藏 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+TempMenu.style.display=&quot;none&quot;;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+window.event.cancelBubble=true;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 IsDroped=false;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　} </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/SCRIPT&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;body
+topmargin=0 leftmargin=0 marginheight=0 marginwidth=0&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;DIV ID='menu'
+STYLE='position:absolute;background-color:white;width:100%;top:0;left:0;'&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;DIV ID='pad'
+STYLE='position:relative;height:20;width:100%;font:bold 11pt 宋体;background-color:#007FFF;color:white;'&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A
+TARGET='_top' TITLE='' ID='pad1' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();hideMenu();&quot;onmouseover=&quot;mouseover();
+doMenu('idpad1');&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;菜单项一
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/A&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;SPAN
+style=&quot;color:white&quot;&gt;&nbsp;&nbsp;&lt;/SPAN&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A
+TARGET='_top' TITLE='' ID='pad2' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();hideMenu();&quot;onmouseover=&quot;mouseover();
+doMenu('idpad2');&quot;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onclick=&quot;window.event.returnValue=false;&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;菜单项二
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/A&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/DIV&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/DIV&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;SPAN
+ID='idpad1'
+STYLE='display:none;position:absolute;width:140;background-color:#007FFF;padding-top:0;padding-left:0;padding-bottom:20;z-index:9;'
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout='hideMenu();'&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;HR
+STYLE='position:absolute;left:0;top:0;color:white' SIZE=1&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;DIV
+STYLE='position:relative;left:0;top:8;'&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad1'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 HREF='11.htm'
+TARGET='_top' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项一一
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+&lt;/A&gt;&lt;BR&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad1'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 HREF='12.htm'
+TARGET='_top' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项一二
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+&lt;/A&gt;&lt;BR&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad1'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 HREF='13.htm'
+TARGET='_top' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项一三
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/A&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/DIV&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/SPAN&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;SPAN
+ID='idpad2'
+STYLE='display:none;position:absolute;width:140;background-color:#007FFF;padding-top:0;padding-left:0;padding-bottom:20;z-index:9;'
+onmouseout='hideMenu();'&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;HR
+STYLE='position:absolute;left:0;top:0;color:white' SIZE=1&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;DIV
+STYLE='position:relative;left:0;top:8;'&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad2'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 HREF='21.htm'
+TARGET='_top' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项二一&lt;/A&gt;&lt;BR&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad2'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 HREF='22.htm'
+TARGET='_top' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项二二&lt;/A&gt;&lt;BR&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad2'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 HREF='23.htm'
+TARGET='_top' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;子菜单项二三&lt;/A&gt;&lt;BR&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;HR
+STYLE='color:white' SIZE=1&gt;&lt;!--分隔行--&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;A ID='pad2'
+STYLE='text-decoration:none;cursor:hand;font:bold 11pt 宋体;color:white' </span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onclick=&quot;parent.close()&quot;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　
+onmouseout=&quot;mouseout();&quot;onmouseover=&quot;mouseover()&quot;&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &nbsp;退出系统&lt;/A&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　 &lt;/DIV&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/SPAN&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;!--页面的其它内容--&gt;
+</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/BODY&gt;</span></p>
+<p><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　&lt;/HTML&gt;</span><span class="text" style="color: rgb(98,98,98);font-size: 9pt"></span><span class="text" style="color: rgb(98,98,98);font-size: 9pt"></span><span class="text" style="color: rgb(98,98,98);font-size: 9pt">　　</span></p>
+
+
+</TBODY>
+</table>
+
+
+</table>
+</center>
+</div>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>100MHz意味着什么（续）</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　98年第10期电脑报我们看到了Pentium 
+        Ⅱ系统在100MHz总线下的表现，它对现有大部分普通程序性能的提升幅度有限，大约在4％～8％之间。这次，我们再来见识见识100MHz 
+        Socket7架构的表现。<br>
+        　　在1997年5月，当Intel公司发布了Pentium Ⅱ处理器后，66MHz系统总线频率就很明显地成了阻碍速度进一步提高的主要因素。大家知道，CPU的工作频率=系统总线频率×倍频数，300MHz的 
+        CPU在66MHz总线上需要4.5的倍频数，随着400MHz甚至500MHz CPU的推出，如果系统仍工作在66MHz总线上，就会给主板制造商带来设计上的麻烦。解决方案很明显：提高系统总线频率！虽然75MHz和83.3MHz很适合超频，但如果想要使系统有很大改观的话，那就是100MHz！<br>
+        　　为了封住批评家的嘴，Intel决定让他们的Pentium 
+        Ⅱ系统向前迈出一大步：将系统总线从66MHz提高到100MHz。不过，对于成百上千的Socket 
+        7主板/CPU业主来说，难道他们只有呆在黑暗中，永远站在66MHz的位置上吗？站在Intel的立场上说，是的。Intel意图将主流市场拉到Pentium 
+        Ⅱ平台上，并靠大量出售CPU以获取利润，在PC史上，从来都是靠提升新产品的性能而不是对旧系统进行改进支持来占领市场的。Intel想要扼杀Socket 
+        7市场，并且完全赢得对SLOT 1架构的垄断。<br>
+        　　不过，没有一个计划是天衣无缝的，尽管Intel公司看来几乎就做到了这一点。在AMD看来，Intel能够把系统总线提升到100MHz，AMD也可以！在K6成功后，AMD立即发布了下一代K6产品的规格，包括K6 
+        3D。在维持同Socket 7架构兼容的基础上，K6 3D既支持66MHz外频，又支持100MHz外频。正如我们希望的那样，几个非Intel芯片组厂商也推出了满足高速系统总线的芯片组，VIA推出的是MVP3，ALi推出的是Aladdin 
+        V，SiS推出的是5591。<br>
+        　　要使系统在100MHz总线频率下稳定工作，目前有两个因素令人担心，它们是内存和PCI外围设备。内存是以系统频率在工作，大部分的SDRAM甚至EDO 
+        RAM在83MHz的频率下工作时都没有问题，但当速度提到100MHz时，情况就不同了。随着第一个100MHz 
+        Socket 7主板的正式发布，考验SDRAM的时刻也到了。另外一个因素就是PCI总线及其插卡。目前PCI总线是在系统频率的一半下工作，也就是说，当系统总线频率是66MHz时，PCI总线的工作频率是33MHz。当系统跑在75MHz的速度时，PCI总线的速度大约提高了13％，绝大部分PCI卡在这个速度下工作得很好，但仍有少数发生问题；当系统速度提到83MHz时，此时PCI总线的速度为41.6MHz，不能正常工作的PCI卡就更多一些了；当系统在100MHz外频下运行时，PCI的速度达到了50MHz！你可以想象这会发生什么情况，对于绝大部分的PCI卡来说，这意味着要在超过其额定频率51％的速度下工作。虽然PCI 
+        2.1规范理论上支持66MHz工作频率，事实上只有很少的PCI卡能够达到这个要求，大部分制造商是按33MHz的规范生产的。<br>
+        　　那么，我们怎样才能跨越这道障碍呢？答案十分简单，那就是将PCI总线频率设定从2分频改为3分频，即100MHz×1/3 
+        = 33.3MHz。希望当100MHz主板正式推出的时候，它能够给我们提供这个设定跳线，使我们可以使用现有的PCI卡，这就像现在的主板上可以允许用户在BIOS中设定ISA总线的工作频率一样。<br>
+        　　一、100MHz Socket 7系统的测试<br>
+        　　要在现有的主板中找到支持100MHz的产品是很困难的，我（原作者，下同）在无意中发现Tyan 
+        Titan Turbo ATX－2可以支持100MHz外频。跳线方法如下：<br>
+        　　JP23 1－2=OFF<br>
+        　　JP23 3－4=ON<br>
+        　　JP31=ON<br>
+        　　不过它在100MHz下工作很不稳定。<br>
+        　　我还试了5种不同的SDRAM内存条：2×32MB Corsair SDRAM； 2×32MB SmarTech 
+        SDRAM; 2×32MB Advanced Megatrends SDRAM; 1×64MB Corsair ECC SDRAM; 1×64MB Advanced 
+        Megatrends SDRAM。在所有的实验中，SmarTech, Advanced Megatrends, Corsair 
+        (64MB)SDRAM可以使系统启动，但只有Corsair (64MB)才可以让我勉强运行程序并得到下面的测试数据。另外，为了避免硬盘崩溃，我还把硬盘的读写模式由PIO 
+        Mode4下调到PIO Mode2。显示系统使用的是Matrox Millennium，它可以在50MHz下很好地工作。CPU使用的是AMD 
+        K6 233，跳在250MHz时系统不是很稳定，跳在300MHz时，系统不能启动；Cyrix 
+        6x86MX在100MHz外频下不能启动，而Intel Pentium MMX 233稍好一些，但WIN95装载失败，在100×3=300MHz时不能启动，但它在83.3×3.5=291.5MHz下却工作得很好。从这里可以看出，Pentium 
+        MMX和6x86MX并不是为100MHz系统设计的，因此，在目前的X86处理器中，只有K6和Pentium 
+        Ⅱ才能工作在100MHz外频下。<br>
+        　　二、测试用系统：<br>
+        　　处理器:AMD K6/233 ANR @ 3.2V Core<br>
+        　　内存条:1×64MB Advanced Megatrends ECC SDRAM<br>
+        　　硬盘:Western Digital Caviar AC21600H<br>
+        　　显示卡:Matrox Millennium (2MB WRAM)<br>
+        　　操作系统:Windows 95 SR2<br>
+        　　三、测试结果(见表)：（表中，系统1指K6/233工作在100MHz×2.0方式；系统2指K6/233工作在66MHz×3.0方式。）<br>
+        　　大部分情况下，100MHz Socket 7系统的性能比现行系统能够提高约10％～ 
+        12％，同Pentium 
+        Ⅱ系统相比，提升的幅度令人满意。原因十分明显，正如上面所说，在Socket7系统中，二级高速缓存的工作频率就是系统的总线频率，一旦把工作频率从66MHz提高到100MHz， 
+        它的性能就会提高50％。而在Pentium Ⅱ系统中，二级高速缓存同CPU芯片封装在一起，它以CPU工作频率的一半在运行，系统总线频率的提高不会给它带来什么明显的变化。<br>
+        　　延长Socket 7架构寿命的最好解决方案是将二级高速缓存放在CPU中，或者像Pentium 
+        Ⅱ一样，把它放在另外的独立总线上并以CPU核心频率的一半运行，同时保持与Socket 
+        7向后兼容。尽管AMD和Cyrix公司的这种想法提出了一段时间，但目前我们还未看到有任何具体的产品出现。AMD声称K6＋3D会集成256KB二级缓存，不过我们只有在今年晚些时候来验证他们会不会食言。<br>
+        　　在即将到来的几个月中，我们将会看到许多支持100MHz的主板上市，不过对于Socket7系统，你还得等待K6 
+        3D来发挥系统的最大效率。当100MHz系统总线有了很大发展后，谁又将第一个冲破Intel的速度屏障呢？正如75MHz总线频率出现在66MHz系统上一样，不过这次也许是……133MHz？</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月23日第11期33版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

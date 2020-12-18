@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 如何将图标放置在“通知区域”内</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'>目录</A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT  COLOR='#CC0000'>软件世界</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'>硬件周刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>33 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 如何将图标放置在“通知区域”内</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 如何将图标放置在“通知区域”内 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Windows95的任务栏中，时钟所在的区域叫作“通知区域”。我们熟知的一些应用软件，如：《金山词霸》、《超级解霸》等软件在启动后，便放置一个小图标在该区域内。这个图标可以变化：当应用软件窗口正常打开时，该区域内显示一个软件打开的图标；当应用软件窗口最小化时，显示一个软件关闭的图标，使用非常方便。下面我们就谈谈在VC＋＋中如何编制一个可以将图标放置在“通知区域”内的程序。<br>
+　　Windows95用一个NOTIFYICONDATA数据结构来定义了任务栏图标的全部信息，其中的内容是：<br>
+　　DWORDcbSize;／／NOTIFYICONDATA结构的大小<br>
+　　HWND hWnd;／／任务栏状态区内图标所属窗口的句柄<br>
+　　UINT uID; ／／应用程序定义的任务栏图标号<br>
+　　UINTuFlags; ／／标示结构中哪些字段有效
+　　UINTuCallbackMessage; ／／应用程序定义的回调消息号，一旦在任务栏图标范围内发生鼠标事件时，窗口将接收到消息<br>
+　　HICONhIcon; ／／图标句柄<br>
+　　charszTip[64];／／图标的提示字符<br>
+　　WINSHELLAPI BOOL WINAPI Shell_NotifyIcon(DWORD dwMessage,NOTIFYICONDATA pnid)函数向系统发送添加、修改和删除任务栏图标的消息。<br>
+　　其中消息号dwMessage有三个值：<br>
+　　NIM_ADD 添加一个图标<br>
+　　NIM_DELETE删除一个图标<br>
+　　NIM_MODIFY修改图标的属性。<br>
+　　 下面，我们具体介绍如何在VC＋＋中进行编制。<br>
+　　应用VC＋＋的AppWizard创建一个新的基于对话框的应用程序项目：Notify。<br>
+　　为应用程序添加两个图标（Icon）：IDI_OPEN_ICON,IDI_MINI_ICON，它们分别对应对话框正常打开和最小化时的图标。<br>
+　　对话框IDD_NOTIFY_DIALOG的风格中增加“Minimize box”和“Maximize box”，即具有“最小化”和“最大化”。<br>
+　　对话框中有一个按钮：IDCANCEL，用于关闭对话框。<br>
+　　为对话框类“CNotifyDlg”添加如下成员变量：<br>
+　　BOOL m_bOpen;<br>
+　　NOTIFYICONDATA m_notify;<br>
+　　注释：m_bOpen用于判断对话框是正常打开还是最小化，以便设置不同的图标。在对话框类CNotifyDlg的构造函数CNotifyDlg::CNotifyDlg(CWnd＊ pParent ／＊=NULL＊／)内／／}}中AFX_DATA_INIT后为m_bOpen赋初值：m_bOpen=TRUE;<br>
+　　m_notify是任务栏图标对应的数据结构。<br>
+　　为对话框类CNotifyDlg添加如下成员函数：<br>
+　　void AddIcon();<br>
+　　在对话框初始化时，该函数将图标添加到“通知区域”内。<br>
+　　void ModifyIcon();<br>
+　　当对话框正常显示或最小化时，应用该函数使“通知区域”内显示不同的图标。<br>
+　　void DeleteIcon();<br>
+　　当对话框关闭时，该函数删除“通知区域”内的图标。<br>
+　　这些函数的具体内容如下：<br>
+　　void CNotifyDlg::AddIcon()<br>
+　　{ m_notify.cbSize=sizeof(NOTIFYICONDATA);<br>
+　　m_notify.hWnd=GetSafeHwnd();<br>
+　　m_notify.uID=0;<br>
+　　m_notify.uFlags=NIF_ICON|NIF_MESSAGE|NIF_TIP;<br>
+　　m_notify.uCallbackMessage=WM_COMMAND;<br>
+　　m_notify.hIcon=(HICON)LoadImage(AfxGetInstanceHandle(),<br>
+　　MAKEINTRESOURCE(IDI_OPEN_ICON),<br>
+　　IMAGE_ICON,16,16,NULL);<br>
+　　lstrcpy(m_notify.szTip,″程序正常打开″);<br>
+　　Shell_NotifyIcon(NIM_ADD,＆m_notify);}<br>
+　　void CNotifyDlg::ModifyIcon()<br>
+　　{ m_notify.hIcon=(HICON)LoadImage(AfxGetInstanceHandle(),<br>
+　　MAKEINTRESOURCE(m_bOpen?IDI_OPEN_ICON:IDI_MINI_ICON),<br>
+　　IMAGE_ICON,16,16,NULL);<br>
+　　lstrcpy(m_notify.szTip,(m_bOpen?″程序正常打开″:″程序最小化″));<br>
+　　Shell_NotifyIcon(NIM_MODIFY,＆m_notify);}<br>
+　　void CNotifyDlg::DeleteIcon()<br>
+　　{ m_notify.uFlags=NULL;<br>
+　　Shell_NotifyIcon(NIM_DELETE,＆m_notify);}<br>
+　　在对话框类CNotifyDlg的初始化成员函数内加入以下语句：<br>
+　　AddIcon();<br>
+　　将对话框类CNotifyDlg的成员函数OnSysCommand(UINT nID,LPARAM lParam)修改为以下形式：<br>
+　　void CNotifyDlg::OnSysCommand(UINT nID, LPARAM lParam)<br>
+　　{ if ((nID ＆ 0xFFF0) == IDM_ABOUTBOX)<br>
+　　{CAboutDlg dlgAbout;<br>
+　　dlgAbout.DoModal();}<br>
+　　else<br>
+　　{if(nID==SC_MINIMIZE)／／对话框最小化<br>
+　　{m_bOpen=!m_bOpen;<br>
+　　ModifyIcon();<br>
+　　ShowWindow(SW_HIDE);／／隐藏对话框}<br>
+　　else<br>
+　　 CDialog::OnSysCommand(nID, lParam);}<br>
+　　}<br>
+　　利用ClassWizard为对话框添加消息函数：<br>
+　　BOOL CNotifyDlg::OnCommand(WPARAM wParam, LPARAM lParam) <br>
+　　{ ／／ TODO: Add your specialized code here and／or call the base class<br>
+　　if(wParam==0)<br>
+　　{ if(lParam==WM_LBUTTONDBLCLK)／／当双击鼠标左键时<br>
+　　{m_bOpen=!m_bOpen;<br>
+　　ModifyIcon();<br>
+　　if(m_bOpen)<br>
+　　ShowWindow(SW_SHOWNORMAL);／／正常显示对话框<br>
+　　else<br>
+　　ShowWindow(SW_HIDE); ／／隐藏对话框}<br>
+　　return TRUE;} <br>
+　　return CDialog::OnCommand(wParam, lParam);}<br>
+　　 在对话框成员函数OnCancel()内添加如下语句：<br>
+　　DeleteIcon();／／退出时删除图标<br>
+　　到此，程序编制完毕，经过编译后可以运行。<br>
+　　你可以看到：当程序开始运行时，在“通知区域”内有一个该程序窗口正常打开的图标；当将该对话框最小化或用鼠标双击该图标时，该区域内显示一个该程序窗口最小化的图标。如果再用鼠标双击该图标，则程序窗口又正常打开了。<br><b>(重庆　何林春)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/33/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99331301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用IE内置的Style命令实现网页特效</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 用IE内置的Style命令实现网页特效</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用IE内置的Style命令实现网页特效 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　IE本身内含Style命令。Style属性可以应用在&lt;meta&gt;标签中，更可广泛应用在&lt;div&gt; &lt;table&gt; &lt;tr&gt; &lt;td&gt; &lt;body&gt; &lt;center&gt; &lt;img&gt; &lt;input&gt; &lt;font&gt; &lt;form&gt; &lt;frame&gt; &lt;label&gt; &lt;map&gt;等标签中。<br>
+<p><b>　　页面切换效果：</b></p>
+　　在页面前部<head>与</head>之间加入″&lt;META HTTP－EQUIV=″Page－Enter″ CONTENT=″filter:RevealTrans(Duration=3.000, Transition=23)″&gt;″<br>
+　　说明：duration为页面切换的时间，3.000表示3秒钟，一般可以直接输入3便可；transition为切换效果，从1～23共22种不同的切换效果，其中23为随机效果。<br>
+<p><b>　　滤镜效果：</b></p>
+　　语法：STYLE=″filter:filtername(fparameter1, fparameter2...)″<br>
+　　(Filtername为滤镜的名称，fparameter1、fparameter2等是滤镜的参数)<br>
+　　滤镜说明：<br>
+　　Alpha：设置透明层次<br>
+　　blur：创建高速度移动效果，即模糊效果<br>
+　　Chroma：制作专用颜色透明<br>
+　　DropShadow：创建对象的固定影子<br>
+　　FlipH：创建水平镜像图片<br>
+　　FlipV：创建垂直镜像图片<br>
+　　glow：加光辉在附近对象的边外<br>
+　　gray：把图片灰度化<br>
+　　invert：反色<br>
+　　light：创建光源在对象上<br>
+　　mask：创建透明掩膜在对象上<br>
+　　shadow：创建偏移固定影子<br>
+　　wave：波纹效果<br>
+　　Xray：使对象变得像被 x光照射一样<br>
+　　1.滤镜:alpha<br>
+　　语法：STYLE=″filter:Alpha(Opacity=opacity, FinishOpacity=finishopacity，Style=style, StartX=startX，StartY=startY，FinishX=finishX，FinishY=finishY)″ <br>
+　　说明：Opacity: 起始值，取值为0～100, 0为透明，100为原图。<br>
+　　FinishOpacity:目标值。<br>
+　　Style：1或2或3<br>
+　　StartX：任意值<br>
+　　StartY：任意值<br>
+　　例子：filter:Alpha(Opacity=″0″,FinishOpacity=″75″,Style=″2″) <br>
+　　2.滤镜:blur<br>
+　　语法：STYLE=″filter:Blur(Add = add, Direction = direction, Strength = strength)″<br>
+　　说明：Add:一般为1，或0。<br>
+　　Direction: 角度,0～315度，步长为45度。<br>
+　　Strength: 效果增长的数值,一般5即可。<br>
+　　例子：filter:Blur(Add=″1″,Direction=″45″,Strength=″5″)<br>
+　　3.滤镜:chroma<br>
+　　语法：STYLE=″filter:Chroma(Color = color)″<br>
+　　说明：color:＃rrggbb格式，任意。<br>
+　　例子：filter:Chroma(Color=″＃FFFFFF″)<br>
+　　4.滤镜:DropShadow<br>
+　　语法：STYLE=″filter:DropShadow(Color=color, OffX=offX, OffY=offY, Positive=positive)″<br>
+　　说明：Color:＃rrggbb格式，任意。<br>
+　　Offx:X轴偏离值。<br>
+　　Offy:Y轴偏离值。<br>
+　　Positive: 1或0。<br>
+　　例子：filter:DropShadow(Color=″＃6699CC″,OffX=″5″,OffY=″5″,Positive=″1″)<br>
+　　5.滤镜:FlipH<br>
+　　语法：STYLE=″filter:FlipH″ <br>
+　　例子：filter:FlipH <br>
+　　6.滤镜:FlipV<br>
+　　语法：STYLE=″filter:FlipV″ 
+　　例子：filter:FlipV <br>
+　　7.滤镜:Glow<br>
+　　语法：STYLE=″filter:Glow(Color=color, Strength=strength)″<br>
+　　说明：Color:发光颜色。<br>
+　　Strength:强度(0－100)<br>
+　　例子：filter : Glow(Color=″＃6699CC″,Strength=″5″)<br>
+　　8滤镜:Gray<br>
+　　语法：STYLE=″filter:Gray″<br>
+　　例子：filter:Gray<br>
+　　9.滤镜:Invert<br>
+　　语法：STYLE=″filter:Invert″<br>
+　　例子：filter:Invert<br>
+　　10.滤镜:Mask<br>
+　　语法：STYLE=″filter:Mask(Color=color)″<br>
+　　例子：filter:Mask (Color=″＃FFFFE0″)<br>
+　　11.滤镜:Shadow<br>
+　　语法：filter:Shadow(Color=color, Direction=direction)<br>
+　　说明：Color:＃rrggbb格式。<br>
+　　Direction: 角度,0－315度，步长为45度。<br>
+　　例子：filter:Shadow (Color=″＃6699CC″, Direction=″135″)<br>
+　　12.滤镜:Wave<br>
+　　语法：filter: Wave(Add=add，Freq=freq，LightStrength=strength，Phase=phase，Strength=strength)<br>
+　　说明：Add:一般为1，或0。<br>
+　　Freq:变形值。<br>
+　　LightStrength:变形百分比。<br>
+　　Phase:角度变形百分比。<br>
+　　Strength:变形强度。<br>
+　　例子：filter: wave(Add=″0″, Phase=″4″, Freq=″5″, LightStrength=″5″, Strength=″2″)<br>
+　　13.滤镜:Xray<br>
+　　语法：STYLE=″filter:Xray″ <br>
+　　例子：filter:Xray<br><b>
+　　（广州　陈辉生）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99452702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

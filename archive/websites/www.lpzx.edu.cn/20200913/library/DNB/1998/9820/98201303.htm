@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在VB中设计倒计时程序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在程序设计时，经常需要用倒计时，倒计时程序一般不能用时间函数来进行设计，常用的方法是在计时器的触发过程中设置计数变量来进行控制，程序如下：<br>
+        　　Dim hh,mm,ss<br>
+        　　Sub Form_ Load()<br>
+        　　hh=0:mm=5:ss=0<br>
+        　　timer1.Interval=1000<br>
+        　　End Sub<br>
+        　　Sub Timer1_Timer()<br>
+        　　s=IIf(ss&lt;10,″0″＆ss,″″＆ss)<br>
+        　　m=IIf(mm&lt;10,″0″＆mm,″″＆mm)<br>
+        　　h=IIf(hh&lt;10,″0″＆hh,″″＆hh)<br>
+        　　t=h＆″:″＆m＆″:″＆s<br>
+        　　Me.Caption=t<br>
+        　　ss=ss－1<br>
+        　　If hh=0 And mm=0 And ss=－1 Then<br>
+        　　msg=″练习时间已到，按回车键结束!″<br>
+        　　MsgBox msg,48,″注意″<br>
+        &nbsp;&nbsp;&nbsp; End If<br>
+        &nbsp;&nbsp;&nbsp; If ss=－1 And mm&gt;0 Then mm=mm－1:ss=59<br>
+        &nbsp;&nbsp;&nbsp; If mm=0 And hh&gt;0 Then hh=hh－1:mm=59<br>
+        &nbsp;&nbsp;&nbsp; End Sub<br>
+        　　程序说明：程序中用到三个窗体级变量hh、mm、ss，它们分别代表初始的小时、分钟、秒，可根据情况在程序中指定，也可配合文本框在程序开始运行时输入，程序中用到一个计时器，它每秒钟被触发一次，程序运行时在窗体的标题栏动态地显示倒计时，当计时完毕则显示对话框提示，同时结束程序的运行。<strong>(广东 
+        李勇)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月25日第20期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

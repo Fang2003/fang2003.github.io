@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在VFP5.0中实现中英文自动切换<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 在用VFP5.0开发应用系统时，结合数据进行处理，应用最多的是文本框对象，特别是进行中英文的输入时，来回切换非常繁琐，所以我们可以借助自定义子类，来实现中英文输入的自动切换。其步骤如下：<br>
+        &nbsp;&nbsp;&nbsp; 通过系统菜单栏“文件/新建/类…”启动“新类”对话框，填入类名：gsTextBox,并设置父类为：TextBox。按“确定”键进入类设计器画面。新增一个属性，来作为对象是否启动中文输入法的控制码。<br>
+        &nbsp;&nbsp;&nbsp; 通过系统菜单栏“类/新建属性…”启动“新建属性”对话框，按上表设置属性，其中可视性设为：公共。最后设置GotFocus与LostFocus事件过程：<br>
+        &nbsp;&nbsp;&nbsp; Gotfocus Event事件过程：<br>
+        &nbsp;&nbsp;&nbsp; If this是否中文<br>
+        &nbsp;&nbsp;&nbsp; =imestatus(1)<br>
+        &nbsp;&nbsp;&nbsp; else<br>
+        &nbsp;&nbsp;&nbsp; =imestatus(0)<br>
+        &nbsp;&nbsp;&nbsp; endif<br>
+        &nbsp;&nbsp;&nbsp; Lostfocus Event事件过程：<br>
+        &nbsp;&nbsp;&nbsp; =imestatus(0)<br>
+        &nbsp;&nbsp;&nbsp; 到此，类已经定义完成，以后只要在设计表单时，通过表单控件“工具栏/查看类/添加…”把自定义类加入，并且设置“是否中文”属性即可实现中英文输入的自动切换。<br>
+        &nbsp;&nbsp;&nbsp; 如果大家有什么问题或见解可与我联系。<br>
+        &nbsp;&nbsp;&nbsp; <strong><a href="mailto:E－mail：gs1@163.net(吉林">E－mail：gs1@163.net(吉林</a> 
+        郭颂)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月19日第40期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

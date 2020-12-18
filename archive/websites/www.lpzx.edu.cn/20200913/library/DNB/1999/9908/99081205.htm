@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>用PC-TOOLS修改WPS97稿纸格式的页脚</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><big><strong>用PC-TOOLS修改WPS97稿纸格式的页脚</strong></big></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p class="ourfont">　　WPS97的稿纸格式的页脚是“WPS97文字处理系统”，在通常情况下不能更改，如果我们可以将之改成自己需要的内容，对于使用稿纸格式的文字工作者或单位来说，是非常有意义的。我通过摸索，发现一种方法可将它改成我需要的内容，修改后WPS97的所有功能均不受影响。<br>
+        　　修改步骤如下：<br>
+        　　1.在DOS状态下进入EDIT编辑程序，输入“WPS97文字处理系统”(用半角输入)，在下一行输入自己要替换的文字如“北海远东电脑科技”(同样是用半角输入)。然后用文件名“WINWPS.TXT”存盘退出。<br>
+        　　2.将WPS97所在的目录下的“WINPWS.EXE”文件拷贝到软盘(或其它路径下)中，同时将“WINWPS.EXE”备份。<br>
+        　　3.重新启动计算机，进入DOS状态。在Windows状态下修改“WINWPS.EXE”会显示“old 
+        disk utility write error”，出现系统写错误。<br>
+        　　4.进入PC－TOOLS 5.0，在文件窗口选择WINWPS.TXT文件后，按“E”键选择编辑功能，再按“F1”键转到查看十六进制码，分别记录下来：“5750 
+        5339 37CE C4D7 D6B4 A6C0 EDCF B5CD B3”(“WPS97文字处理系统”)，“B1B1 BAA3 
+        D4B6 B6AB B5E7 C4D4 BFC6 BCBC”(“北海远东电脑科技”)；按“ESC”键返回文件窗口另选“WINWPS.EXE”，按“F”键选择文件搜索功能，按“F1”键，选择十六进制码输入框，输入“CEC4 
+        D7D6 B4A6 C0ED”，即“文字处理”，回车，系统开始寻找，找到后(即屏幕上显示Search 
+        argument found in relative sector 0002862 offset 0383 Press ″e″ to view／edit the 
+        sector or ″g″ to continue searching)，按“E”键进入编辑状态，输入“B1B1 
+        BAA3 D4B6 B6AB B5E7 C4D4 BFC6 BCBC”。要替换的文字不能超过“WPS97文字处理系统”的长度，如果短于此长度可以用十六进制码“20”凑够。<br>
+        　　5.按“F5”键存盘返回文件窗口，按“ESC”键退出PC－TOOLS。<br>
+        　　6.重新启动计算机，进入Windows界面，将改动后的“WINWPS.EXE”拷贝到硬盘上原来的目录下，替换原来的文件。<br>
+        　　7.重新运行WPS97，选用稿纸格式进行编辑或打印时，稿纸的页脚已经改变为“北海远东电脑科技”。<br>
+        　　有兴趣的朋友不妨参照以上步骤将“WPS97文字处理系统”改为自己需要的内容。<br>
+        <strong>(广西　覃远东)</strong></p>
+        <p align="right"><font color="#000000"><span class="ourfont">本文出自：<a
+        href="index.htm">《电脑报》1999年3月01日第08期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

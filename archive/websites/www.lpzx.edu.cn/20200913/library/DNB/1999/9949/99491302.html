@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='stylesheet' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在C＋＋Builder中实现快速动画</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>49 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 在C＋＋Builder中实现快速动画</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在C＋＋Builder中实现快速动画 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　快速动画是指每隔一段很小的时间间隔就快速擦去原有画面，并重新画上新的画面的动画技术。快速动画成功的关键就在于擦去和重画的速度必须很快，否则画面就会有闪烁现象。<br>
+　　在VB中制作快速动画比较简单，只要把窗体的AutoRedraw属性设置为true，再直接调用API函数BitBlt，画完一帧Refresh一次。但C＋＋Builder的窗体没有AutoRedraw属性，只要一使用BitBlt，窗体就会自动刷新，由于一帧画面往往要几次用到BitBlt，画面就闪烁起来了。解决的办法就是自己定义一个不可见的缓冲区，其大小应与目标窗体相同，先在缓冲区上把一帧的画面画完，再用一次BitBlt函数把缓冲区的图案贴到窗体上。请看例子：<br>
+　　／／在TForm1 ＊Form1;的后面添上这三句<br>
+　　Graphics::TBitmap ＊p;<br>
+　　Graphics::TBitmap ＊q;<br>
+　　int xx=0;<br>
+　　／／－－－－－－－－－－－－－－－－－－－－－<br>
+　　void __fastcall TForm1::FormCreate(TObject ＊Sender)<br>
+　　{p=new Graphics::TBitmap;／／这存放的就是要贴到窗体上的小图案<br>
+　　p－&gt;Handle=LoadBitmap(HInstance，″aaa″);／／从资源文件中载入小图案<br>
+　　q=new Graphics::TBitmap;／／定义缓冲区q<br>
+　　q－&gt;Width=Width;／／使缓冲区的大小与窗体相同<br>
+　　q－&gt;Height=Height;<br>
+　　PatBlt(q－&gt;Canvas－&gt;Handle，0，0，q－&gt;Width，q－&gt;Height，0);／／把缓冲区的背景变为黑色<br>
+　　}<br>
+　　／／－－－－－－－－－－－－－－－－－－－－<br>
+　　void __fastcall TForm1::FormDestroy(TObject ＊Sender)<br>
+　　{／／程序结束时释放内存<br>
+　　delete p;<br>
+　　delete q;<br>
+　　}<br>
+　　／／－－－－－－－－－－－－－－－－－－－－<br>
+　　void __fastcall TForm1::Timer1Timer(TObject ＊Sender)<br>
+　　{／／窗体上要加上一个Timer控件<br>
+　　xx＋=2;<br>
+　　PatBlt(q－&gt;Canvas－&gt;Handle，0，0，Width，Height，0);／／把缓冲区的背景变为黑色，同时擦去了旧的画面<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，0，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);／／正在缓冲区上制作一帧的画面，这几句是不可见的<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，50，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，100，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，150，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，200，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，250，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);<br>
+　　BitBlt(q－&gt;Canvas－&gt;Handle，xx，300，p－&gt;Width，p－&gt;Height，p－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);<br>
+　　BitBlt(Canvas－&gt;Handle，0，0，Width，Height，q－&gt;Canvas－&gt;Handle，0，0，SRCCOPY);／／把缓冲区的画面贴到窗体上<br>
+　　}<br>
+　　如果实际应用时，像上面的程序那样，把画动画的语句放在Timer控件的OnTimer事件中，就可能会有一个小问题。如果用户暂停了动画，窗体又正好产生了重画事件(比如窗体被最小化后又被恢复)，那窗体上的画面就会消失。这是因为窗体被重画时，只画了窗体的通用部分，Windows并不知道原来的窗体上有自定义的画面。要想让Windows把画面恢复原样，必须把画动画的语句放在窗体的OnPaint事件中，Timer控件的OnTimer事件中只写决定图案位置的语句(如本例中的xx＋=2；)和一句RePaint。修改后具体的程序我就省略了，请大家自己完成吧，愿大家都做出令自己满意的精彩动画。<br><b>
+　　（四川　施维民)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99491302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

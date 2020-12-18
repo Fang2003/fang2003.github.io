@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>配置个性化的“发送”功能<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 《电脑报》1997年41期中《巧用Windows95发送功能》一文曾介绍了Windows95下SendTo文件夹的妙用，由此想到在具有多个用户登录的电脑中，能否像桌面图标配置那样使SendTo文件夹也体现出个性化呢?已经登录的用户(比如登录姓名为xyz)，其配置信息保存在Windows\profiles\xyz文件夹中(Windows指的是你安装Windows95的目录)，其中的Desktop文件夹为桌面图标配置，Nethood为网上邻居配置，Recent为近期查阅过的文档，Start 
+        Menu为开始菜单配置。于是自然想到在xyz文件夹中新建立SendTo文件夹，并在其中配置好指向各个发送目的地的快捷方式。马上重新登录进入个人桌面，结果鼠标右键快捷菜单中的“发送”项还是公用配置的内容，令人失望!Windows95难道不能认识跟了你姓的“发送”吗?其实不然，问题的关键在于需要修改注册表，方法如下：<br>
+        　　运行regedit.exe，打开如下路径：<br>
+        　　我的电脑\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell 
+        Folders，修改键名为SendTo的键值，使其为“c:\windows\profiles\xyz\sendto”，这还不算完，接下来，选择在此路径下的User 
+        Shell Folders，新建一个字符串键名为SendTo，使其键值为“c:\windows\profiles\xyz\sendto”，至此大功告成。你可将记事本、个人“临时文件夹”等添加到你的SendTo里去，方便多了。　　<strong>(四川　吕向群)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月4日第17期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

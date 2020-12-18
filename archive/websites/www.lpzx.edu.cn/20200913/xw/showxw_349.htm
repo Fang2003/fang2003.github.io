@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> V011 - 档案函数（File） </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+AppendExtFile <br><br>AppendExtFile(filename, string) <br><br>number := AppendExtFile(filename, string) <br><br>将 string 加在文字档案的最後面　 <br><br>这个函数与 WriteExtFile 不太相同　因为 WriteExtFile 会产生一个新档　而 AppendExtFile 不会产生新档　它只是找到档案　然後在档案最後将字串加上　 <br><br>如果找不到此档案名称　则系统会自动产生此档案　这比较特殊　如果想要为新的使用者产生档案　直接使用这个功能即可　 <br><br>Catalog <br><br>string := Catalog(&quot;directory&quot;) <br><br>string := Catalog(&quot;directory&quot;, &quot;F&quot;) <br><br>string := Catalog(&quot;directory&quot;, &quot;D&quot;) <br><br>列出指定 directory 以下的所有目录与档案　 <br><br>这个结果会以字串的方式传回到变数之中　您可以将变数显示出来　或者是读取变数中的某一行来做运算　使用引数 &quot;F&quot; 只列出档案　使用引数 &quot;D&quot; 则会列出目录　 <br><br>CreateFolder <br><br>CreateFolder(&quot;directory&quot;) <br><br>产生所指定的目录 directory　 <br><br>如果使用者想要将目录产生在特定的路径　请在 directory 之中输入完整的目录与路径名称　否则此目录会产生在目前的目录下　 <br><br>DeleteFile <br><br>DeleteFile(&quot;filename&quot;) <br><br>number := DeleteFile(&quot;filename&quot;) <br><br>删除指定 filename 档案　 <br><br>FileType <br><br>number := FileType(&quot;filename&quot;) <br><br>将指定的 filename 以数值的方式传回其类别　各个数值均代表不同的意义　请参考下表　 <br><br>数值 意义 <br><br>0 目录 <br><br>1 档案不存在 <br><br>2 未包装的档案 .A3W&nbsp; <br><br>3 包装过的播映档案 .APP <br><br>4 模组档案 .MOD&nbsp; <br><br>5 声音档案 .PCM .WAV&nbsp; <br><br>6 影片档案 .MVE&nbsp; <br><br>7 　 <br><br>8 外部函数档案 .UCD .DLL&nbsp; <br><br>9 文字档 .TXT <br><br>10 执行档 .EXE .COM .BAT <br><br>11 其它 <br><br>12 资料库档案 .APL <br><br>13 包装过的资料库档案 .APR&nbsp; <br><br>ReadExtFile <br><br>string := ReadExtFile(filename) <br><br>将指定的 filename 所有文字内容　以字串的方式传回　 <br><br>字串变数可以用来设计有关文字内容的判断或计算　但是档案的内容　必须以 ASCII 的格式建立　 <br><br>RenameFile <br><br>RenameFile(&quot;filename&quot;, &quot;newfilename&quot;) <br><br>number := RenameFile(&quot;filename&quot;, &quot;newfilename&quot;) <br><br>将指定的 filename 改名为 newfilename　 <br><br>请指定所要改变名称的档案路径　否则系统只会以目前的目录为搜寻的地方　 <br><br>WriteExtFile <br><br>WriteExtFile(filename, string) <br><br>number := WriteExtFile(filename, string) <br><br>将 string 写到 filename 文档案中　 <br><br>与 AppendExtFile 不太相同的是它会将原来的文字覆盖　所以在使用 WriteExtFile 函数时　请特别注意这个功能　同样的　如果此文字档案不存在　则系统会自动产生档案　 <br><br>曾安德　编著
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001114160827
+<div align="center"><a href="xwpl_342.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

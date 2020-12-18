@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>PC100SDRAM揭迷<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">PC100SDRAM(同步动态内存)出现之后，市场上也出现了许多假冒PC100的内存条，鱼龙混杂，令消费者上当受骗，同时我们在使用正宗PC100内存条时，也常常遇到各种问题。在第35期“如何识别PC100SDRAM一文对此已作初步探讨，本文将对PC100SDRAM作进一步的补充。<br>
+        严格的PC100规范<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">事实上有不少内存条生产厂商，尤其是杂牌内存条厂商没有严格遵循INTEL公司的PC100认证过程生产，这个推荐性的认证过程要求各厂商提供产品进行兼容性测试。由于PC100的认证标准很苛刻，许多厂商至今仍难以完全达到测试标准，所以一些厂商往往避开这个过程。而且既使某个厂商的某个产品批号进行了兼容性测试，也不一定保证这个厂商的所有产品、所有批号都满足兼容性测试规范。另外，也可能主板、内存槽和芯片组等系统生产厂商没有为PC100SDRAM的稳定工作提供一个稳定、容错的电气环境。那些知名度很高的厂商，为保证产品质量，进行了广泛的设计模拟，时序分析，为系统提供了稳定的电气工作环境。而有些厂商为降低研发费用，在设计阶段省略了这些过程，使得内存不能稳定可靠工作，导致机器工作出错、死机。随着技术和工艺的改进，也许几年后厂商能生产出不受系统工作环境干扰的内存。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">我们知道系统的工作频率越高，对设计和制造的要求也越严格。当工作频率低于30MHz时（在无线电频率中，定义为高频HF)，设计制造很容易满足工作要求，如果工作频率达到或超过100MHz(在无线电频率中，称为甚高频VHF），芯片引脚，连接各电子元件的导线，都可能因电容、电感、输入输出阻抗，而成为发射电磁波的天线。在印刷电器板上的各种导线，芯片引脚也会发射一定频率电磁波，这些在设计时就需要加以考虑平衡，以求设计出合格的系统。INTEL公司推出的PC100兼容性规范，得到多数内存生产厂商支持，此规范定义了严格的电气指标，保证满足这个规范的产品，能可靠、兼容地工作。同时INTEL公司还为母板的设计、制造提供了规范化文件，对布线的长度、线宽、距离、间隔、PCB层数都有严格规定，连SPD中的EEPROM参数设置也作了规范，为系统设计减少开发时间，保证系统可靠、稳定地工作。<br>
+        关于PC100标识规范<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">PC100规范定义了严格的电气特性，但没有定义标记PC100内存的方法，所以各厂商沿用自己的方法标记内存条，这给我们识别鉴定内存造成很大困难。要满足INTELPC100内存规范，有两个值须满足：TCK（时钟间隔）&amp;lt;10ns,TAC（相对性时钟的数据读取时间)&amp;lt;6ns。下表列出世界主要内存生产厂商使用的标志前缀。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">各厂商自己独立的产品代号，没有统一的性能指标注解。有幸的是满足PC100兼容规范的内存，须注明INTEL定义的产品号(P/N)，用户在购买内存时，应认清这个PC100内存标记，并了解其含义。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">一般PC100内存的产品号(P/N)表示为：PCx－abc－defx:工作频率，用MHz表示(例如：66MHz、100MHz、125MHz、123MHz)。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">a:最小CAS等待时间，用时钟数表示，一般是'2'或'3'。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">b:最小tRCD(RAS相对CAS的延时),用时钟数表示，一般是‘2’。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">c:最小tRP(RAS预充电时间),用时钟数表示，一般是2。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">d:最大tAC(相对时钟下沿的数据读取时间),一般是6（6ns)或6.5(6.5ns),6ns对多数内存系统来说是最优的。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">e:SPD版本号，所有PC100SDRAM,内存条上有EEPROM,用来记录此内存条结构、工作模式等内容，其内容记录是标准化的，记录版本在不断更新。此处应注明内存条符合INTEL公司的PC100Version1.2。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">f:保留，其值为'0'。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">因而典型的PC100SDRAM内存条，应注明：PC100－322－620<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">CAS等待时间=3clk<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">tRCD=2clk<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">tRP=2clkt<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">tAc=6ns<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">SPDRev=1.2<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">内存技术性能参数<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">1.CAS等待时间<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">我们使用内存条时，要考虑工作速度和CAS等待时间，工作速度用其在给定频率下时钟时间间隔表示，T=1/F,F是工作频率，例如工作在125MHz的内存条时钟间隔T=8ns,工作在142.857MHz的内存条时钟间隔T=7ns,工作于166.66MHz的内存条时钟间隔T=6ns。CAS等待时间定义为当一个读命令在时钟上升沿发出时至数据在输出端可以提供的时延，这个值一般是2或者3个时钟周期，它决定了内存的性能，对内存条系统的工作速度有很大的影响，CAS等待时间为2的芯片在同等工作频率比CAS等待时间为3的芯片速度更快，性能更好。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">如果内存条上会有SPD(参数存有检测),我们无须通过BIOS设定CAS等待时间，芯片组能自动从检测前端工作速度来设定．但这要求芯片组支持SPD功能，而且PC100R内存条上有SPD。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">2.额定可用频率（GUF）<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">如何知道内存的额定可用频率，一个简单易行的方法是把生产厂商给定的最高频率下调一些，这样得到的值称额定可用频率GUF,如8ns的内存条，最高可用频率是125MHz,那么额定可用频率（GUF）应是112MHz,最高可用频率与额定可用频率（前端系统总线工作频率）保持一定余量，可最大限度保证系统，稳定容错地工作。因此如果想把系统超频到125MHz、133MHz,我们最好使用7ns(143MHz)的内存才能保证系统稳定工作。&nbsp; 
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9845/1998/45/index.htm">《电脑报》1998年11月23日第45期39版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

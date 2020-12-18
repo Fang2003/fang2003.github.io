@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>如何在ESS系列声卡上使用汉王听写系统</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+    <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+      <TR> 
+        <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+        HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+        <TD WIDTH="484" HEIGHT="69"> 
+          <P ALIGN="center"><A
+        HREF="http://netfin4.china.com/?adlink|2|CPCW-Front-Top|1|468x60|247MEDIA" TARGET="_top"><IMG
+        SRC="http://netfin4.china.com/?adserv|2|CPCW-Front-Top|1|468x60|247MEDIA" BORDER="0"
+        WIDTH="468" HEIGHT="60"></A><BR>
+            中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+        </TD>
+      </TR>
+    </TABLE>
+    <table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>如何在ESS系列声卡上使用汉王听写系统</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="center"><strong>问题原因</strong></p>
+        <p align="left">　　汉王听写系统以其最自然的文字录入方式受到广大用户的喜爱。该系统要求Sound 
+        Blaster 100%兼容声卡，但对于有些兼容声卡，如ESS系列，就不太支持。笔者为一台使用ESS声卡的机器安装了汉王听写系统，经调整后，效果很好。现介绍如下：<br>
+        　　机器配置为联想商用机系列，Pentium MMX－233 32M Win95。汉王听写系统汉王99，汉王笔HWpen 
+        8.1版，HWvioce1.0版，使用ESS 1869声卡。<br>
+        　　首先，安装完汉王99以后，能通过麦克风设置，但耳机中杂音增大，并且，即使经过口音适应以后，识别率仍不理想。双击任务栏中小喇叭图标，发现其音量控制面板上各项被调整得十分混乱(麦克风设置会自动对声卡做出调整)。另外，此时只要打开“Viavoice属性”(即使不更改其中任何设置)，声卡控制面板的各选项就被莫明其妙地改动。由此可知，汉王99对ESS声卡的初始化和调整存在不兼容的现象。<br>
+        　　在汉王系统中，其工作过程如下：首次使用时，首先调整“麦克风设置”，它会自动对声卡初始化，并根据输入的声音自动对声卡进行音量调整。此时，可以看到声卡的音量控制面板各项发生了变化，然后，根据这些变化自动调整“Viavoice属性”中关于声音的各选项，以获得最佳的识别效果。虽然汉王系统亦对ESS系列做了调整，但三者之间并不匹配。于是，就出现了如上所述的混乱现象。</p>
+        <p align="center"><strong>解决方案</strong></p>
+        <p align="left">　　知道了问题的原因，我决定取消通过“麦克风设置”进行的自动设置，而直接在“Viavoice属性”中手动更改。首先，选择合适的用户名，再单击声音标签，滑动输入、输出滑块到合适的位置。其中，输入滑块的位置至关重要，它决定了提供给Viavoice进行识别声音的大小和质量。具体位置可以先试着调整一下，然后进行口音适应，以正常语音进行录音，观察音量指示大小，反复几次，使其落在绿色区域即可。至于输出滑块位置是调节耳机音量的，只要听着舒服就行了。<br>
+        　　这里有几个问题需要注意：1因为绕过了“麦克风设置”，所以，无论任何时候都不要运行它，否则它将对声卡进行错误的初始化。2因很多多媒体程序都会对声卡的设置更改，所以，每次听写前都要运行“Viavioce属性”，对声音的输入、输出进行调整。并且，每次都要在同一位置。因此务必记住这一位置。3一定要在“Viavoice属性”调整好之后，再进行口音适应。由于每个用户都有自已的口音适应，注意在“Viavoice属性”中调整以保持一致，具体位置因人而异。<br>
+        　　为了获得更好的识别率，还要进行以下调整：<br>
+        　　1.在开始——设置——控制面板——多媒体——声音标签中ESS声卡提供的三种录音质量(CD质量、收音质量、电话质量)均不符合要求。收音质量的录音效果太差，影响识别率；CD质量对系统开销太大，使识别速度十分缓慢，且容易出现非法操作错误。最好自定义一下，单击自定义按扭，选择“22KHz 
+        16位单声道”，然后自定义如“FM质量”，再选择自定义的“FM质量”，以后不需再改动。另外，别忘记选择“只使用首选设备”，防止杂音串入。<br>
+        　　2.汉王系统允许同一用户针对不同噪音环境进行不同的口音适应。我针对高噪音环境和低噪 
+        音环境进行了不同的口音适应，在“Viavoice属性”中将输入滑块调到约三分之一处进行噪音条件下的口音适应，(此时降低了传递给计算机的音量大小，会抑制环境噪音的串入，当然，应适当提高说话音量)，将滑块调到约二分之一处进行安静条件下的口音适应。听写时再根据环境噪音状况在“Viavoice属性”中做相应设置(调整各滑块位置与口音适应时一致)。我在白天进行听写输入时，选择高噪音的口音适应。此时，即使办公室的电话铃声都没有对识别造成丝毫影响。<br>
+        　　其它系列的声卡的调整大体如此，有些声卡有AGC功能(自动增益控制)的将其设为“off”(可能要更改跳线)，另外，其它捆绑了IBM 
+        Viavioce的听写系统的声卡不兼容问题也可按以上调整。经过调整以后，在我这台机器上进行一般文章的听写时，识别率可达到95%以上。<br>
+        <strong>(吉林　闫丽)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月29日第12期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+    <DIV ALIGN="center">
+      <CENTER>
+      </CENTER>
+    </DIV>
+    <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+    <NOSCRIPT> 
+    <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+    </NOSCRIPT> 
+  </center></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 浅析TNT2显卡造成的死机现象</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 浅析TNT2显卡造成的死机现象</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 浅析TNT2显卡造成的死机现象 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　我们注意到许多TNT2显卡的拥有者在玩3D游戏时，或多或少都会发生一些问题。最典型的就是在玩3D游戏时，会有死机现象发生。许多人对此迷惑不解，以为是Windows系统出了问题，甚至为此而格式化硬盘重装操作系统，或者升级显卡的驱动程序。实际上，在大多数情况下，这跟Windows的设置和驱动程序都没有关系。<br>
+　　如果TNT2显示卡在我们喜爱的3D游戏中是这种表现的话，我们是否还值得花这么多的钱去买呢？当然不值得。然而事实上这跟TNT2显示卡本身也毫无关系，这个问题的根源在于主板。有些主板，特别是一些低档的主板，其AGP总线电流供应不足。大部分的TNT2显卡在工作时都需要由AGP总线提供充足的电流，然而许多主板厂商都没有充分重视这个问题，这就导致了AGP供电不足，从而发生死机现象。<br>
+　　你完全可以自己检测一下究竟是什么原因引发死机：到http://www.3dfiles.com/bgrsoftware下载“Direct Control”，通过它，你可以屏蔽掉主板的AGP支持。运行“Direct Control”，然后点击左上角的“Options”，选择“direct draw”→“advanced” →“AGP Support”，然后选择“disable”。设置生效后，再试一下那些曾经死机的游戏，如果游戏不再死机了，那说明你的主板AGP供电有问题；如果游戏继续死机，那么也许是你的驱动程序或系统资源冲突的问题。<br>
+　　另一个是主机电源问题，也许它不能提供AGP所必须的3.3伏电压。AGP显卡在工作时需要14安培的电流，而一些230瓦的电源显然无法作到这一点。为了测试这个问题，你可以使用“Powerstrip”，它可以降低你TNT2显卡的时钟频率。当安装完Powerstrip后，你可以在“advanced”选项中选择“performance”来降低你TNT 2的核心时钟频率，再看一下死机的现象是否减少。如果没有，那么就是你的主板引起的电压问题。<br>
+　　通过这两个测试步骤之后，你就可以判断出是否是你的主板引发死机问题。如果屏蔽掉AGP支持，死机问题得以解决，那么你可以暂时将AGP支持屏蔽掉继续使用现在的主板，等今后再升级BIOS，或者去另外买一块主板。根据我的经验，一般来说，升级BIOS之后，主板供电问题都可以解决；如果升级了BIOS仍然不能解决问题的话，那你只好忍痛出血——换主板了。<br>
+　　目前这个问题的解决方法是采用双电源供电Super2AGP （Super Squre AGP）的技术，磐英的BX3和MVP3G系列主板都采用了该技术。该技术采用两组电源，分别给CPU及AGP显示卡供电，提供高达20A 的电流，能充分满足TNT2 Ultra、Voodoo3等大功率显卡的需求。即使是未来的GeForce 256、Voodoo4，Super2AGP也能满足需要（GeForce 256采用1500万晶体管，比TNT2多一倍，0.18微米，频率更高，功耗大大超过TNT2）。<br>
+<b>（广东　王海）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99362003.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

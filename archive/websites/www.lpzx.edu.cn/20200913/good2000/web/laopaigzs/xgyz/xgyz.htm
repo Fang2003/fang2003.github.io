@@ -1,0 +1,178 @@
+<html>
+
+<head>
+
+<style type="text/css">
+  .spanstyle { position:absolute; visibility:visible; top:-50px; font-size:12; color:#FF0000; font-weight:bold;}
+</style>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>我们的学校（图片均可点击放大）</title>
+<bgsound src="../images/hdlq.mid" loop="1">
+</head>
+
+<body onLoad="makesnake()" background="../images/bj.jpg" bgproperties="fixed">
+<script>
+var X, Y
+var step = 20
+var flag = 0
+var message = "欢迎来到老排工作室！！！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-50}
+function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1}
+function makesnake() {
+    if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+        for (i=0; i<message.length-1; i++) {
+            var thisspan = eval("span"+(i)+".style")
+            thisspan.posLeft=xpos[i]
+            thisspan.posTop=ypos[i]     }   }
+    else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+            for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+  thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<script language="JavaScript">
+var speed=100;
+function infoscroll(seed, looped)
+{  var msg="欢迎你来到老排工作室!        让我们一起推动中国网络进步！";
+  var putout = " ";
+  var c = 1;
+  if (seed > 100)
+  {  seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 100 && seed > 0)
+  { for (c=0 ; c < seed ; c++)
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 0){
+    if (-seed < msg.length)
+    { putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,speed);}
+    else
+    { window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,speed);}}}
+infoscroll(100,1)
+</SCRIPT>
+
+<p><a href="../index.htm"><img border="0" src="../dali/a/images/a11.gif" width="96" height="36"></a>&nbsp;&nbsp; 
+<img border="0" src="images/xgyz.jpg" width="311" height="69">&nbsp; &nbsp;&nbsp; 
+<a href="../index.htm"><img border="0" src="../dali/a/images/a16.gif" width="100" height="45">  
+</a>&nbsp;</p>  
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="656">  
+  <tr>  
+    <td width="50%" height="190"><a href="xgyz01.htm"><img border="0" src="images/x02.jpg" width="271" height="153">
+      </a>
+      <p>白州学子向往的大门</td>
+    <td width="50%" height="190">&nbsp;&nbsp;&nbsp; 下关一中诞生于1947年，是云南省重点中学。我们俩95年进入初中以来，在严谨的教风、勤奋的学风和优良的校风抚育下不断成长。     
+      <p>&nbsp;&nbsp;&nbsp; 衷心感谢多年来老师对我们的辛勤培育，祝愿母校越办越好！     
+      <p>(本页图片均可点击放大）</td>    
+  </tr>    
+  <tr>    
+    <td width="50%" height="237"><a href="xgyz02.htm"><img border="0" src="images/x09.jpg" width="300" height="200">  
+      </a>  
+      <p>每天早上我们沐浴着晨曦，开始学习。</td>  
+    <td width="50%" height="237"><a href="xgyz03.htm"><img border="0" src="images/x04.jpg" width="300" height="200">  
+      </a>  
+      <p>学习之余，体育锻炼是不可缺少的。</td>  
+  </tr>  
+  <tr>  
+    <td width="50%" height="229"><a href="xgyz04.htm"><img border="0" src="images/x11.jpg" width="300" height="200">  
+      </a>  
+      <p>校内道路四通八达，学习设施齐全（小心迷路）</td>  
+    <td width="50%" height="229"><a href="xgyz05.htm"><img border="0" src="images/x05.jpg" width="300" height="200">  
+      </a>  
+      <p>环境优美的学生宿舍，干净舒适。</td>  
+  </tr>  
+</table>  
+<p>　</p>  
+<table border="0" cellpadding="0" cellspacing="0" width="100%">  
+  <tr>  
+    <td width="50%"><a href="xgyz06.htm"><img border="0" src="images/x03.jpg" width="300" height="200"></a>&nbsp;   
+      <p>我们在图书馆中能方便的获取多方知识。</td>  
+    <td width="50%"><a href="xgyz07.htm"><img border="0" src="images/x10.jpg" width="300" height="200">  
+      </a>  
+      <p>此路直指北京（大学）。</td>  
+  </tr>  
+  <tr>  
+    <td width="50%"><a href="xgyz08.htm"><img border="0" src="images/x08.jpg" width="300" height="200">  
+      </a>  
+      <p>科学馆上“开拓、奉献”的校训光芒照我心。</p>  
+    </td>  
+    <td width="50%"><a href="xgyz09.htm"><img border="0" src="images/x07.jpg" width="300" height="200">  
+      </a>  
+      <p>郁郁葱葱的校园，处处生机盎然。</p>  
+    </td>  
+  </tr>  
+</table>  
+<p>　</p>  
+<table border="0" cellpadding="0" cellspacing="0" width="100%">  
+  <tr>  
+    <td width="50%"><a href="xgyz10.htm"><img border="0" src="images/x12.jpg" width="300" height="200">  
+      </a>  
+      <p>办学水平蒸蒸日上。</p>  
+    </td>  
+    <td width="50%"><a href="xgyz11.htm"><img border="0" src="images/x14.jpg" width="300" height="200"></a>&nbsp;&nbsp;  
+      <p>&nbsp;近年来学校屡获殊荣。</p>  
+    </td>  
+  </tr>  
+  <tr>  
+    <td width="50%"><a href="xgyz12.htm"><img border="0" src="images/x13.jpg" width="300" height="200">  
+      </a>  
+      <p>校友亭中留载着满天桃李……</td>  
+    <td width="50%"><a href="xgyz13.htm"><img border="0" src="images/x06.jpg" width="300" height="200">  
+      </a>  
+      <p>未来的一中，前程无限。</td>  
+  </tr>  
+</table>  
+  
+<p><img border="0" src="../images/124.gif" width="868" height="16"></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+老排工作室倾力制作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="mailto:lr9528@21cn.com"><img border="0" src="../images/mail.gif" width="50" height="50">&nbsp;&nbsp; 
+联系我们</a></p>
+  
+</body>  
+  
+</html>  

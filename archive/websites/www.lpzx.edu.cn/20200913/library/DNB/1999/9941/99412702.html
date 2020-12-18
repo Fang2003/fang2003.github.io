@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VRML网页制作谈</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; VRML网页制作谈</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VRML网页制作谈 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　有关虚拟现实技术VRML（Virtual Reality Markup Language)及其在Internet上应用的一些情况，《电脑报》曾作过一些介绍，但少于具体介绍制作虚拟现实网页的细节。今天我就用Autodesk公司的三维动画软件3DSMAX为工具，向大家简单介绍如何制作虚拟现实网页及要注意的一些问题。<br>
+　　首先，你最好有3DSMAX2.0以上版本（1.0版需外挂模块支持，本例用2.0版。2.5以上版本支持VRML的更高标准VRML 97），在进入3DSMAX界面后，按一般制作三维动画的方法对要创建的虚拟现实对象建模，赋予材质及贴图，指定动画。这些工作完成之后，点击Creat/Helpers，在下面的下拉列表框中选取VRML2.0，出现一个工具面版，面版上列出了12个VRML辅助工具，添加相应的辅助工具，然后点击File/Export,出现一个对话框，单击“存为类型”下拉列表框，选取“VRML2.0(＊.WRL)"文件类型，最后取一个相应的名称，单击“保存”,会出现一个VRML EXPORT对话框，先不管它，取默认值即可。单击OK就生成了一个以WRL为后缀的文件，可以直接用Netscape浏览器打开浏览。因Netscape浏览器自带有VRML的插件，而IE需另外安装插件。<br>
+　　下面介绍几个主要的VRML辅助工具:<br>
+　　Anchor辅助工具使场景中的对象与另一个URL链接，类似HTML文档的超级链接；或与场景中的另一摄影机链接，类似电影中的镜头切换。<br>
+　　TouchSensor辅助工具可启动一个动画。这是一个非常有意思的辅助工具。比如你在VRML场景中建了一个自己家的模型。并设计了一个开门的动画，这时你就可以在场景中添加一个TouchSensor辅助工具，然后单击“pick tigger object”在场景中选取一个触发物（如门把手），再单击“pick action object”在场景中选取门，当用户来到你家门口时，只要一点击门把手，门就会打开。是不是很有意思。<br>
+　　Inline Object辅助工具将另一个WRL文件合并到场景中，类似3DSMAX中的merge功能。它的另一重要功能是，通过关联一个Inline Object文件，可以复制对象的多个拷贝。<br>
+　　LOD辅助工具替代模型的不同版本。同样一个建筑的模型，在远方看比在近处看需要的细节少，这时可通过替代不同的版本来加快显示，这主要是基于Internet有限的连接速率的考虑。这方面的问题，后面还将谈到。<br>
+　　AudioClip和Sound两个辅助工具是联合使用的，它们主要提供虚拟的声音效果。比如在场景中一辆汽车驶近你，汽车离你越近，声音就越大；汽车离你越远，声音就越小。<br>
+　　掌握了以上内容之后，我们还应明白一点，由于受到Internet的带宽及传输速率的限制，我们不可能像在作3DSMAX场景时那样给模型制作非常精细的建模，贴上复杂的贴图，布置庞大的场景。如果将这样的场景输入到Web中，恐怕用户在没有欣赏到你漂亮的VRML场景之前，早已因漫长的下载过程而失去了耐心。所以，WRL文件应尽量短小以缩短用户下载的时间，这就要求我们在为VRML作场景时使用一些特定的技巧，比如在建模时减少基本几何体的分段数以节约面数，删除场景中不可见的面，使用optimize编辑修改器对模型进行优化，用纹理贴图替代几何图形，使用Instances(关联复制）等。Instances是一个非常有用的技术，当场景中有多个关联复制品时，组成关联复制品的对象的面在VRML中却只定义一次。这样，你就可以多次使用关联复制品增加场景对象而不会增加文件的长度。<br>
+　　另一个有用的技巧是在场景中放置足够多的摄影机，精心调整视角，并给摄影机取一个合适的名字。当用户在浏览时，可通过单击右键来选择不同的摄影机在场景中导航。此外,WRL文件还可以在HTML页面中显示,并能灵活控制其大小。所用到的HTML语句是&lt;embed src=″filename.wrl″ width=″x″ height=″y″&gt;&lt;/embed&gt;　<br><b>　 (湖北　魏启明)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99412702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

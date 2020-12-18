@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Novell网安全维护“三板斧”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　在目前的局域网中，Novell网占了相当大的比例。本文根据笔者多年来从事网络教学和网络维护的经验，以目前广泛采用的Netware3.12网络操作系统为例，介绍安全使用Novell网的三种方法，希望能给众多的网络管理人员和网络用户有所帮助。<br>
+        　　<strong>一、让超级用户(Supervisor)在指定的工作站上登录服务器</strong><br>
+        　　为了防止一般用户使用Supervisor的功能，常常给Supervisor用户设置口令，只有系统管理员知道其口令并能以Supervisor的身份登录，但有时此口令可能被他人窃取，从而对网络进行一些破坏性的操作。为了防止这种现象的发生，可指定在某一台或几台机器上使用Supervisor的口令，其他工作站用Supervisor登录时，系统拒绝登录。具体设置方法如下：从任何一台工作站以Supervisor登录服务器，执行网络命令“SYSCON”，之后出现“AvailableTopics”窗口，选择此窗口中的“UserInformation”选项，在弹出的用户列表窗口“UseNames”中选择“Supervisor”用户，又出现“UserInformation”的窗口，选择此窗口中的“StationRestrictions”选项，弹出“AllowedLoginAddresses”窗口。此时按“Insert”键，将出现一个小窗口“NetworkAddres:____”，在光标闪烁处输入指定工作站的地址，如：“002B00042891”，输入正确后按回车确认(此地址即工作站的节点地址，一般是一个32位的16进制数)。如需要，此时还可以用同样的方法设置另外几台工作站的地址号码，所设置的地址号码均显示在“AllowedLoginAddresses”的窗口列表中，如要取消已限制登录的工作站，可将此工作站的地址号码从窗口的列表中删掉即可。经这样设置后，用户使用Supervisor登录时，只能在所限制的工作站上登录，在其他工作站上登录时，Supervisor及其口令均无效。<br>
+        　　<strong>二、禁止工作站的软、硬盘与服务器相连</strong><br>
+        　　工作站安装软、硬盘驱动器后，一方面给普通用户提供了便利，同时另一方面也给网络的安全带来了隐患，如给病毒入侵网络提供了方便，用户可非法拷贝网络服务器上的数据或将与网络无关的软件或文件拷入服务器等。为了防止以上现象的发生，可将有盘(软、硬盘)的工作站在上网后自动设置成为无盘工作站。<br>
+        在Netware3.12中将26个字母(A～Z)中的A～E定义成为工作站本地驱动器，将F～J定义成为网络驱动器，将K～Z定义成为搜索驱动器。要将有盘工作站在上网后设置成无盘工作站，即在登录后取消A～Z为本地驱动器的定义，可用网络命令MAP将A～E表示5个本地盘符的字母分别映射到服务器上一个或几个指定的目录下，让工作站的物理软、硬盘失效。具体实现方法如下：<br>
+        　　1.在服务器上建立一个公用目录USE(用户自定)，并将此目录USE开放给每一用户，并使用户对此目录具有足够的访问权限[RWCEMFA]。<br>
+        　　2.修改系统登录原稿。将要从有盘工作站登录的所有用户归于同一个用户组YHGROUP(用户自定)，之后在系统登录原稿“SystemLoginScript”中增加以下的命令行：IFMEMBERor″YHGROUP″THENMapA:=SYS:MapB:=SYS:MapC:=SYS:MapD:=SYS:MapE:=SYS:ENDIF经以上设置后，有盘工作站一旦登录服务器，本地的软、硬盘便失效，断开了与服务器的连接，对网络起到了较为可靠的保护。<br>
+        　　<strong>三、安装网络防杀病毒软件</strong><br>
+        　　安装网络防杀病毒软件是保障网络正常运行的另一有效方法。防止计算机病毒侵入网络后对网络系统造成破坏，保证网络在无病毒状态下安全运行是每一个网络管理人员的重要工作职责。然而，由于网络操作系统的自身特点，对病毒的预防和清除远远不像单机那样简单，一旦因病毒而造成系统故障，甚至导致系统瘫痪，一般情况下其损失将非常严重。为此，希望网络管理人员能给自己的网络安装一套网络防杀病毒软件。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(南京　李馥娟)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

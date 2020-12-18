@@ -1,0 +1,110 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0139/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0139/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="771" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第39期 </a>&gt;&gt;<a href="wrapup.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">“内猫”起死回生记</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>笔者一月前借给朋友的一只内置MODEM突告“死亡”，故障现象是不能拨号，我拿回来以后就放到自己机器上试验，开机后Windows能发现新硬件，安装驱动程序也一切正常，用“诊断”查看“猫”的详细信息，也能反应出速率等一系列信息，只是在拨号时听不到拨号音，随即出现无法拨号的出错信息，心中大喜，这说明“猫”的“心脏”还活着。因朋友住在农村，初步估计是受到雷电感应电压而损坏了线路部分的元件，有救活的可能。<br>
+              接下来仔细把“猫”察看了一番:该“猫”采用双面印刷板制造，贴片元件较多，使用了ESS2898S+ESS2818P的芯片。为了便于分析和诊断，我通过查找资料，绘出了主要线路部分的电路图(见图):（^39030801a^）<br>
+              分析该电路图，我认为该“猫”能用“诊断”查看到详细信息，说明ESS芯片工作正常，能和计算机通信。要启动电路听拨号音，首先要由ESS2898S芯片的58脚发出一个高电平给Q13，控制固体继电器K2吸合，这样电话信号就能加到圆桥组成的极性保护电路上，使Q12导通，模拟电话接通的状态，使线路呈现低阻恒定值。于是拨号音就通过T1耦合加到相关电路上，才能使下一步——拨号得以继续进行。现在听不到拨号音，那首先应该检查Q13和K2是否正常。用万用表在线测得Q13的e、b电阻很小，保护二极管D6则完全击穿导通，测K2(1A05V)触点无粘连，加5V电压能导通，于是用一只普通的NPN塑封开关三极管和一只IN4148替换上。这时我心想，有R1、C70、C71的过压保护作用，L3、L4、R59、R60也应该查一查，仔细一看，贴片电阻R59、R60表面有烧焦起壳的痕迹，用放大镜只能隐隐约约看到表面的阻值字符为“1XX”。从该电路上分析应该是小阻值的，既有保护作用，又有线路环阻补偿作用，于是找了两只阻值为“101”的贴片换上。再检查Q12组成的模拟导通电路，发现12V稳压管D9正、反向电阻为同值约100多欧姆，换上新品，再检查一下C72、R58、D7、D8、D11和光耦组成的振铃接收部分，未发现有异常，估计此“猫”是在连接状态下被击坏的，否则的话这部分电路阻抗低必然首当其冲。<br>
+              接着我将“猫”上机做试验，连接后立即听到清脆的拨号音响起，接着“哗——”的握手音响起，等到“猫”安静下来，熟悉的网页出现在眼前，心中大喜。查看速率竟然比损坏以前还高，原来最高为50.7K，现在达到53.3K。使用了一段时间后没有出现异常，且特殊振铃功能也正常，说明该“猫”已经完全救活。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

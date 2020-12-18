@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> Authorware常见问题的解决</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+&nbsp; &nbsp; Authorware是一种基于图标和流程线为结构的多媒体创作工具。它融合了编辑系统与编程语言的特色，可以有效地简化多媒体作品的创作过程，因而，自问世以来一直受到广大用户的普遍欢迎，成为众多多媒体开发工具的佼佼者。下面就将本人长期使用Authorware的一些经验技巧介绍给大家。<br><br>&nbsp; &nbsp; 一、精确调整热区及动画、位图文件的位置大小<br><br>&nbsp; &nbsp; 在Authorware编辑过程中，不少用户为精确调整热区及动画、位图文件的位置大小而大伤脑筋。本人在工作过程中摸索出一些解决这一问题的方法。<br><br>&nbsp; &nbsp; 当确定了多媒体课件的展示窗口（Presentation Window）之后，将计算机屏幕分辨率设置为大于课件展示窗口的大小。这样，我们可先随意拖动显示、动画等图标放置于交互图标右侧，设置“热区”交互响应（Hot Spot Response），给出交互响应图标名称，然后在交互图标前放置流程起始标记（小旗子），运行本交互程序，之后在展示窗口外点击任一设计程序窗口，即可在展示窗口内看到每个热区的虚线框，单击各虚线框，通过鼠标拖拉并配合键盘方向键移动，即可方便精确地调整热区位置大小了。<br><br>&nbsp; &nbsp; 对于动画文件，如果想精确地放置在底图的某个位置，只要在底图图标前放一流程起始标记，在动画图标后放置一流程结束标记，运行程序，在显示窗口中拖动动画，并通过边角8个控点，即可精确调整其位置及大小。制作交互式课件，调整交互方式下的位图或动画与原底图位置的匹配很不方便，我们不妨转变一下思路。先将欲匹配的所有图标放在同一流程线上，放置流程起始和结束标记，运行程序并调整好各自位置，然后除底图外再将其它图标放置在交互图标右侧，便轻松地解决了上述问题。<br><br>&nbsp; &nbsp; 二、为动画文件指定搜索路径<br><br>&nbsp; &nbsp; Authorware在打包时是不能将动画文件输入其内部的。因此，如果您的多媒体课件中使用了动画，在运行打包文件时，有时程序会中断，弹出一个对话窗口。要求您指定动画文件的存贮位置。解决的方法有两种：一是将动画文件与打包文件存放在同一目录下，但这样会使文件目录显得有些混乱；二是在源程序文件打包前为动画文件指定搜索路径。在Authorware4中，可打开Modify&gt;File&gt;Properties的Interaction窗口，点击Search Path，输入指定的路径。在Authorware3.x中，打开File&gt;File Setup，点击Content Search Path，输入指定的路径。这里有一点需要注意，如果您的多媒体课件是在光盘运行，那么在指定搜索路径时一定不要给出盘符（如：E：\Filename\Avi\），因为不同的计算机光盘的盘符是不同的，只要逐层写清目录名称也就可以了（如：\Filename\Avi\）。<br><br>&nbsp; &nbsp; 三、可执行文件中图像特效的使用及外部动画的驱动<br><br>&nbsp; &nbsp; 我们有时遇到这样一种情况，源程序运行时一切正常，而打包后运行时，屏幕提示图标指定的转换特效不能使用，动画不能运行，屏幕提示找不到外部动画驱动程序。这是因为Authorware必须需要外部驱动程序才能实现特效转换及动画文件的运行，并且这些外部驱动程序应与打包程序文件放在同一目录下。解决这一问题很简单，只要将“Xtras”文件夹（实现各种特效）及A3QT32.xmd、A3VFW32.xmd、A3MPEG32.xmd（该三个文件为Authorware3.5版本以上开发面向Windows 95/NT课件的动画驱动程序。＊.Dir动画除外）拷贝到打包文件同一目录即可。<br><br>&nbsp; &nbsp; 另外，如果打包课件在其它有些计算机上动画仍不能正常运行，很可能与该计算机未能正确安装数字视频系统文件有关，故上述不能一概而论。<br><br>&nbsp; &nbsp; 四、超大图像显示及层的运用<br><br>&nbsp; &nbsp; 在制作多媒体课件时，有时装入的图像由于超过展示窗口的大小，不能一次显示在屏幕上，这时您可以通过屏幕漫游查看全部的图像内容。具体做法是：您首先选择该显示图标，然后打开Attributes&gt;Effects，点击In Area，选择此项时，原对话框扩展，包含更多的选项。点击下方Movable栏中的In Area Only，设置仅在规定范围内漫游。在左方扩展对话框的Position栏中可以看到默认为Base选项，在对话框左上角有一行提示“Drag object to base position”，您可以在展示窗口中拖动图像确定其漫游开始位置；然后点击End，左上角提示变为“Drag object to end position”，在展示窗口中拖动图像以设定图像的漫游区域，OK退出。这样，当程序打包运行时，您便可以使用鼠标拖动图像漫游显示其全部内容了。<br><br>&nbsp; &nbsp; 在Authorware运行过程中，系统默认当前图标的内容总是放在最上层，有时为了实现一些特殊效果，如不同图像层局部透视、底层移动动画等就需要分别设定不同的层。您同样可以打开Attributes&gt;Effects，通过为每个显示图标设定不同的层；如有图像移动，则双击移动图标，在Layer中设定层，即可实现上述特殊效果。Authorware对于数字视频动画的播放只能在最上层。<br><br>&nbsp; &nbsp; 五、如何利用双声道<br><br>&nbsp; &nbsp; 在多媒体教学课件的制作过程中，为增添艺术效果，常常为其设置背景音乐。但Authorware一般是不能同时播放两个＊.Wav文件的。我们可以前景使用＊.Wav声音文件，而将背景设为MIDI音乐，通过装入扩展函数A4wmme.u32，使用MIDIPlay(FileName, tempo, wait)实现MIDI音乐的播放。在Authorware4中，还可以打开Insert&gt;Control&gt;ActiveX…&gt;ActiveMovieControl Object，通过插入控件来实现双声道的播放。<br><br>&nbsp; &nbsp; (北京 史建斌 刘欣然)<br><br>　摘自中学物理—老师和学生之友网站<br><br>
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001106094953
+<div align="center"><a href="xwpl_191.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

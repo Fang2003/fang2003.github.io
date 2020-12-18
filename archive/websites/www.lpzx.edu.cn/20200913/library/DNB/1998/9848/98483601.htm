@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在Windows98下使用双显示器</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; </span>Windows98的一个引人注目的特点，就是它可以支持双显示器。但大多数电脑爱好者由于条件所限，不能亲自体验个中奥秘。最近本人利用手中设备，对Windows98支持双显示器进行了测试，基本了解了其工作过程。现将测试情况披露于此，以飨读者。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; </span>本人测试所用配置如下：<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 兼容机：华硕TX97－E主板、PentiumMMX166CPU（跳成3×75MHz使用）、MAXTOR三代3.2G硬盘、64M内存。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 主显示卡：华硕3DP－V264GT/PRO显卡（4M显存，ATIRAGEPRO芯片）。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 第二显示卡：华硕PCI－V264GT/PLUS显卡（2M显存，ATIRAGEⅡ＋芯片）。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 主显示器：美格XJ700T17英寸（接主显示卡）。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 第二显示器：PackardBell1512SL15英寸(接第二显示卡)。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 注意：由于本人所用显示卡均为华硕V264GT/×××系列，所以请朋友们在阅读本文时分清型号，不要搞糊涂了。<br>
+        在测试过程中，发现显示卡的插槽位置对测试能否成功很重要，所以先介绍一下TX97－E主板的PCI槽的顺序，华硕主板说明书介绍，主板上具有MediaBus的PCI槽为第4PCI槽，从左到右依次为第4、第3、第2、第1PCI槽。在没有插第二块显示卡之前，我的V264GT/PRO主显卡是插在第3PCI槽的。进行本次测试时，将第二显示卡（V264GT/PLUS）插在主板的第1PCI槽中，然后将PackardBell1512SL15英寸彩显和第二显卡连接好。开机后，发现启动屏幕显示在15英寸彩显上，可见Windows98已经把我的第二显示卡(V264GT/PLUS)作为主显示卡了。在15英寸彩显进入Windows98图形界面之前，美格17英寸彩显上提示：“如果你能读到本信息，就说明Windows已经成功地安装了此显示卡，要将此显示卡作为你的Windows桌面的一部分，请在控制面板里打开显示属性选项，在设置一栏里调整设置”。提示中提到的显卡是V264GT/PRO显示卡。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 然而，当15英寸彩显顺利进入Windows98后，17英寸彩显却不能进入Windows98，仍然显示上述信息。怎么回事呢？通过查看此显示卡属性，发现Windows98已经指出此卡存在问题：“多屏幕显示支持不能启动此设备。通常用于视频的内存区被另一个程序或设备占用。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 要启用多屏幕显示支持，请从Config.sys中删除EMM386或其它内存管理程序，并重新启动计算机(见图1)。”按照以上提示，将Config.sys中的所有语句全部删除，甚至将Autoexec.bat也删除，但重新启动后故障依旧。修改主板BIOS设置，仍然无效。这时突然想到，原打算将V264GT/PRO作为主显示卡，因为V264GT/PRO比V264GT/PLUS高级，所以想当然认为Windows98会将较高级的显示卡作为主卡，然而事实并非这样。Windows98却将V264GT/PLUS作为主卡，支持双显示器不能成功，是不是和PCI槽的顺序（位置）有关系呢？试着将两个显示卡的位置对调，将对应的显示器连接好，开机！果然，启动画面显示在美格17英寸显示器上，然后在进入之前，15英寸显示器上显示出提示信息，除第一行不一样外，其它均和刚才显示在美格彩显上的提示一样。待美格17英寸显示器进入Windows后，15英寸彩显也顺利的同时进入了Windows的图形界面，哈，成功了！<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 点击鼠标右键，选择“属性/设置”，可看到标着1、2数字的两个显示器图标(见图2)，可以用鼠标选中任意一个显示器图标，然后把它拖到另一个显示器图标的上、下、左、右方或任意方向。这有什么用处呢？其实很简单，假如第二显示器放在主显示器的左方，就可以将第二显示器的图标移动到第一显示器图标的左方，和实际摆放的位置相对应，这样，当从主显示器向左移动鼠标时，鼠标指针就会移动到左方的第二显示器上，就好像是一个大屏幕一样。我的两个显示器就是这样放的。为使用上的方便，应该使图标位置与显示器实际摆放位置相对应。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 
+        经过试用发现，两个显示器均可以独立调整分辨率和色彩，互不影响，只是在打开第二显示器时，两个显示器均有一条很淡的暗色扫描线上下缓慢移动（第二显示器为从下到上），但不影响使用。使用时，用鼠标选中活动窗口或程序图标，就可以将其从一个显示器移动到另外一个显示器上，甚至可以将整个开始菜单条移动到第二显示器上，非常方便，但活动窗口最大化时不能移动。Windows下的常用程序如OFFICE97、PhotoShop、CorelDRAW等都可以移到第二显示器上，且正常工作。但有些程序如《超级解霸》移动后则工作不正常，速度变慢，在主显示器上70幅/秒，移过去后只有7幅/秒左右，并且还常常不能正常显示。有些程序根本不能移过去。不过，此功能还是有一定的用处，如果要看VCD（可用主显示器），另一个要用OFFICE97，就正好派上用常图二如果想停用双显示器功能，不必将显示卡拔出，只要打开显示属性，单击“设置”，然后再单击希望禁用第二显示器的图标。选择监视器（应为深蓝色）之后，从“将Windows桌面延伸到该监视器”复选框中清除该复选项。然后单击“应用”或“确定”，便能成功禁用第二显示器。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 应该注意的是，虽然Windows98有支持双显示器功能，但不能支持每一种显示卡，根据Windows98的说明，它目前只支持采用下列芯片的PCI卡和AGP卡：<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; ATIMach64GX（支持DirectDraw）<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; Trident9685/9680/9682/9385/9382/9385－1PCI<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; S3764V＋(765)、Trio64V2<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; S3ViRGE（支持DirectDraw和Direct3D）<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; S3Aurora(S3M65)Cirrus5436、7548,5446<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; ATIRage1和2（VT以上）<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; ATI3DRagePro<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; 另外，此功能只能工作在Windows98下，Windows98下的“MS－DOS方式”也能使用。但从Windows98退出到DOS状态时，只有主显示器能显示，第2显示器只有光标闪烁，如果是在启动时直接进入DOS状态，则第2显示器什么都不显示（处于等待状态）。<br>
+        <span class="ourfont">&nbsp;&nbsp;&nbsp; <a
+        href="mailto:读者朋友如有疑问，请发E－MAIL：liuy@pub.zhanjiang.gd.cn">读者朋友如有疑问，请发E－MAIL：liuy@pub.zhanjiang.gd.cn</a>。<br>
+        <br>
+        广东刘向阳</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9848/1998/48/index.htm">《电脑报》1998年12月14日第48期36版</a></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

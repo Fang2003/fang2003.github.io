@@ -1,0 +1,134 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/hardware.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>深入探秘Ｐｅｎｔｉｕｍ４（续）</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第19期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/Templates/hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->深入探秘Ｐｅｎｔｉｕｍ４（续）<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 编者按：我们在１６期“今日硬件”中就缓存带宽和缓存延迟深入地对Ｐｅｎｔｉｕｍ４做了基准测试和分析，本期我们就Ｐｅｎｔｉｕｍ４的分支预测、整型指令和浮点指令运算能力继续深入研究。<br>
+              ●分支预测<br>
+              为了测试ＣＰＵ的分支预测能力，我们采用“Ｑｕｅｅｎｓ”作为基准测试工具。“Ｑｕｅｅｎｓ”是一个经典的益智游戏：你必须在一个ｎ×ｎ的棋盘上放置ｎ个“皇后（ｑｕｅｅｎ）”，而且要保证任何一个“皇后”不能把其他的“皇后”吃掉，这实际上是一种布棋策略，通过复杂的逻辑推算来寻求解决方案，其中包含了很多分支预测编码。<br>
+              “Ｑｕｅｅｎｓ”的循环其实只是一个很枯燥的由简单指令构成的指令序列：加载→比较→选择；加载→比较→选择；再加载→再比较→再选择……每一个指令都要依赖于先前的指令。从流程图看来，就形成了一个巨大的树形分支运算，包含了多重循环，这也提供了一个巨大的待处理数据流。<br>
+              浅灰色柱形数据为计算在３２×３２的棋盘上放置３２个“皇后”所需的时间，深灰色数据为折算到标准化的１ＧＨｚ时的结果。通过对ＰｅｎｔｉｕｍⅢ 
+              ８００ＭＨｚ和ＰｅｎｔｉｕｍⅢ １ＧＨｚ的测试结果比较，我们可以看出ＣＰＵ的分支预测的能力和主频有关。而同频的Ｐｅｎｔｉｕｍ４和Ａｔｈｌｏｎ比较，前者所需的时间要略长一点。<br>
+              ●整型指令与浮点指令<br>
+              从运行指令的效率来看，内存延迟对于整型指令非常重要，而内存总带宽对于浮点指令编码更加重要。<br>
+              为了更好地理解这一点，可以举一个简单的例子：执行最常用的整数运算需要一两个周期，而对于常用的浮点运算需要３至７个周期。当今主流的ＣＰＵ通过流水线（ｐｉｐｅｌｉｎｉｎｇ），每个周期可以计算一个ＦＡＤＤ指令（浮点加法运算），计算一个乘法指令则需要２个周期，而Ｐｅｎｔｉｕｍ４计算一个双精度浮点类型的除法至少需要３８个时钟周期。幸运的是，很多指令能够并行执行。<br>
+              目前主流ＣＰＵ大都具有乱序执行、深度浮点指令运算和大容量缓冲区，使得高速缓存延迟对浮点运算性能影响不大。在一个浮点运算指令等待数据时，其他的浮点运算指令可以从缓冲区获得数据，而不需要等待那些花费时间较长的指令结束运算。Ｐｅｎｔｉｕｍ４和Ｉｔａｎｉｕｍ均通过Ｌ２级高速缓存（延迟为６个周期）加载浮点运算指令，只要有数据，ＦＰＵ（浮点运算单元）便可以很快地进行运算。因此，浮点指令优化编码较之整型指令编码更加依赖于内存带宽。<br>
+              让我们看看采用堆排列基准作测试的结果吧：<br>
+              具有双通道数据处理能力的Ａｔｈｌｏｎ １．２ＧＨｚ ＤＤＲ系统在浮点运算方面有很大的优势（测试数据＞１６ＫＢ），这说明了内存带宽对于浮点运算具有重要的作用。<br>
+              ●浮点运算性能<br>
+              在前几年，计算机的浮点运算性能对工程师和科学家而言很重要，而现在却大不一样了，浮点运算性能对于很多３Ｄ游戏也显得至关重要了，因此从某种角度讲，浮点运算性能被看作是一个衡量ＣＰＵ性能的关键指标。<br>
+              我们采用Ｆｌｏｐｓ（一段用Ｃ语言编写的代码）来作为浮点运算性能的基准测试工具，它包含了我们频繁使用的指令，如ＦＡＤＤ（浮点加法）、ＦＳＵＢ（浮点减法）和ＦＭＵＬ（浮点乘法），通过混合运算指令来测试系统的浮点运算性能。它是专门用来测试强大的ＦＰＵ功能的，因为有７０％以上的指令是针对浮点运算的。表１是各种ＣＰＵ对于单个指令计算能力的比较，数据单位为时钟周期。<br>
+              从上表可以看出，Ｐｅｎｔｉｕｍ４在遇到大量的ＦＤＩＶ（双精度浮点除法）运算时会出现问题，仅仅进行一个双精度的除法时就需要３８个时钟周期，即如果混合指令中包含一个ＦＡＤＤ和ＦＤＩＶ时，计算ＦＡＤＤ需要等待３７个时钟周期。<br>
+              参照Ｆｌｏｐｓ的混合运算指令模式，有以下几种情况（百分比表示各基本指令在混合指令中的比例）：<br>
+              我们仔细看一下测试的结果：Ｐｅｎｔｉｕｍ４ １．５ＧＨｚ和ＰｅｎｔｉｕｍⅢ １ＧＨｚ比较，除在模式１和５中，前者在混合指令中并没有什么优势。究其原因可能是Ｐｅｎｔｉｕｍ４ 
+              １．５ＧＨｚ在其他几种混合模式中，由于在进行ＦＤＩＶ运算时没有足够的ＦＡＤＤ指令而使得整体的计算时间加长。<br>
+              我们再用表３来仔细地分析一下上述结果。第一个例子比较简单，Ａｔｈｌｏｎ 能够充分发挥双通道数据运算的能力，即每个时钟周期可以计算一个ＦＡＤＤ和一个ＦＭＵＬ指令，而Ｐｅｎｔｉｕｍ４却需要两个周期，所以得到第一栏的结果。Ｐｅｎｔｉｕｍ４具有一个独立单元来运算ＦＤＩＶ，所以后面两栏只计算运行ＦＤＩＶ所需的时间就可以了，而Ａｔｈｌｏｎ和ＰｅｎｔｉｕｍⅢ的情况和ＦＭＵＬ计算单元相关，即它们运行ＦＤＩＶ指令是通过ＦＭＵＬ间接计算的，所以还必须加上运行ＦＭＵＬ的时间。<br>
+              但实际上，除了在工程设计和科学研究中需要运行大量的ＦＤＩＶ外，普通的运用中ＦＤＩＶ占的比例是很少的，当然出现只有ＦＡＤＤ和ＦＭＵＬ的情况也很少。所以，从统计学的观点来讲，第二栏所得出的结果可能更贴近现实的情况。<br>
+              值得注意的是：目前很多基准测试工具并没有对像Ｐｅｎｔｉｕｍ４和Ａｔｈｌｏｎ这样的ＣＰＵ作特别的优化编译，更别说应用程序（软件）了，所以让我们有这样的感觉：和ＰｅｎｔｉｕｍⅢ比较，Ｐｅｎｔｉｕｍ４没有明显的优势。但我们相信，Ｐｅｎｔｉｕｍ４和Ａｔｈｌｏｎ逐渐进入主流市场，肯定会出现各种针对性的优化指令和应用软件。（重庆 
+              Ｈａｒｄｓｋｙ）<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

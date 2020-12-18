@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在VC＋＋中访问和修改系统注册表</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/.'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='file://///Linux/www.cpcw.com/issue/1999/45/maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='file://///Linux/www.cpcw.com/issue'>电脑报电子版</A> 
+      &gt; <A HREF='file://///Linux/www.cpcw.com/issue/1999'>1999 年</A> &gt; <A HREF='file://///Linux/www.cpcw.com/issue/1999/45/.'>45 期</A> &gt; <A HREF='file://///Linux/www.cpcw.com/issue/1999/45/software.html'>软件世界</A> 
+      &gt; 在VC＋＋中访问和修改系统注册表</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 在VC＋＋中访问和修改系统注册表 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Windows95／98的注册表包含了Windows95／98的系统配置、PC机的硬件配置、Win32应用程序和用户的其他设置信息。注册表和INI文件不同，它是多层次的树状数据结构，具有六个分支（根键），每个分支又由许多的键和键值组成，而每个键则代表一个特定的配置项目。<br>
+　　在实际的编程工作中，我们遇到了如何在Visual C＋＋中对Windows95／98注册表整个树状结构信息进行访问和修改的问题，如查询和修改注册表中用户姓名和公司名称的有关信息。通过编程实践，我们实现了在Visual C＋＋中查询和修改系统注册表的有关信息。下面以一个实例说明具体的编程方法。<br>
+　　在Visual C＋＋ 6.0或5.0环境中新建一基于对话框的工程，设置了两个命令按钮，名为“查询用户信息”和“修改用户信息”，用来查询和修改注册表中用户姓名和公司名称。这里须要指出的是，用户的信息位于系统注册表中 \HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\ 的位置，键值名RegisteredOwner和RegisteredOrganization分别表示用户的姓名和用户公司的名称。<br>
+　　1.查询用户信息的代码<br>
+　　HKEY hKEY;   ／／定义有关的 hKEY, 在查询结束时要关闭。<br>
+　　LPCTSTR data_Set=″Software\\Microsoft\\Windows\\CurrentVersion\\″;<br>
+　　／／打开与路径 data_Set 相关的 hKEY，第一个参数为根键名称，第二个参数表。<br>
+　　／／表示要访问的键的位置，第三个参数必须为0，KEY_READ表示以查询的方式。<br>
+　　／／访问注册表，hKEY则保存此函数所打开的键的句柄。<br>
+　　long ret0=(::RegOpenKeyEx(HKEY_LOCAL_MACHINE,data_Set, 0, KEY_READ, ＆hKEY));<br>
+　　if(ret0!=ERROR_SUCCESS) ／／如果无法打开hKEY，则终止程序的执行<br>
+　　{MessageBox(″错误: 无法打开有关的hKEY!″);<br>
+　　return;}<br>
+　　／／查询有关的数据 (用户姓名 owner_Get)。<br>
+　　LPBYTE owner_Get=new BYTE[80];<br>
+　　DWORD type_1=REG_SZ ;  DWORD cbData_1=80; <br>
+　　／／hKEY为刚才RegOpenKeyEx()函数所打开的键的句柄，″RegisteredOwner″。<br>
+　　／／表示要查 询的键值名，type_1表示查询数据的类型，owner_Get保存所。<br>
+　　／／查询的数据，cbData_1表示预设置的数据长度。<br>
+long ret1=::RegQueryValueEx(hKEY, ″RegisteredOwner″, NULL,<br>
+　　＆type_1, owner_Get, ＆cbData_1);<br>
+　　if(ret1!=ERROR_SUCCESS)<br>
+　　{<br>
+　　MessageBox(″错误: 无法查询有关注册表信息!″);<br>
+　　return;<br>
+　　}<br>
+　　／／ 查询有关的数据 (公司名 company_Get)<br>
+　　LPBYTE company_Get=new BYTE [80];<br>
+　　DWORD type_2=REG_SZ;  DWORD cbData_2=80; <br>
+　　long ret2=::RegQueryValueEx(hKEY, ″RegisteredOrganization″, NULL,＆type_2,company_Get, ＆cbData_2);<br>
+　　if(ret2!=ERROR_SUCCESS)<br>
+　　{<br>
+　　MessageBox(″错误: 无法查询有关注册表信息!″);<br>
+　　return;<br>
+　　  }<br>
+　　／／ 将 owner_Get 和 company_Get 转换为 CString 字符串, 以便显示输出。<br>
+　　CString str_owner=CString(owner_Get);<br>
+　　CString str_company=CString(company_Get);<br>
+　　delete[] owner_Get;   delete[] company_Get;<br>
+　　／／ 程序结束前要关闭已经打开的 hKEY。<br>
+　　::RegCloseKey(hKEY);<br>
+　　……<br>
+　　这样，上述程序执行完毕，字符串str_owner和str_company则表示查询到的用户的姓名和公司的名称，在VC＋＋中便可用对话框的方式将其显示出来。<br>
+　　2．  修改用户信息的代码（注意和上述的查询代码属于不同的函数体）<br>
+　　在程序中我们先显示一个对话框，要求用户输入新的用户姓名和公司名称并按确认键，将取得CString类型的有关字符串。要先将其转换为LPBYTE（即unsigned char＊）型的数据类型，以便后面的函数调用。下面是程序中用到的将CString型转换为LPBYTE的转换函数：<br>
+　　LPBYTE CString_To_LPBYTE(CString str)<br>
+　　{<br>
+　　LPBYTE lpb=new BYTE[str.GetLength()＋1]; <br>
+      　　&lt;str.GetLength(); i＋＋)lpb[i]=str[i];&gt;<br>
+      　　for(int i=0; ibr&gt; 　　lpb[str.GetLength()]=0;<br>
+　　return lpb;<br>
+　　}<br>
+　　以下则是具体的修改注册表用户信息的代码：<br>
+　　CString str_owner, str_company;<br>
+　　…… ／／通过对话框输入新的用户信息，保存到str_owner和str_company<br>
+　　／／定义有关的 hKEY, 在程序的最后要关闭。<br>
+HKEY hKEY; <br>
+　　LPCTSTR data_Set=″Software\\Microsoft\\Windows\\CurrentVersion″;<br>
+　　／／打开与路径 data_Set 相关的hKEY，KEY_WRITE表示以写的方式打开。<br>
+　　long ret0=(::RegOpenKeyEx(HKEY_LOCAL_MACHINE, <br>
+　　data_Set, 0, KEY_WRITE, ＆hKEY));<br>
+　　if(ret0!=ERROR_SUCCESS)<br>
+　　{<br>
+　　MessageBox(″错误: 无法打开有关的hKEY!″);<br>
+　　return;<br>
+　　}<br>
+　　／／修改有关数据(用户姓名 owner_Set)，要先将CString型转换为LPBYTE。<br>
+　　LPBYTE owner_Set=CString_To_LPBYTE(str_owner);<br>
+　　DWORD type_1=REG_SZ;<br>
+　　DWORD cbData_1=str_owner.GetLength()＋1; <br>
+　　／／与RegQureyValueEx()类似，hKEY表示已打开的键的句柄，″RegisteredOwner″<br>
+　　／／表示要访问的键值名，owner_Set表示新的键值，type_1和cbData_1表示新值。<br>
+　　／／的数据类型和数据长度<br>
+　　long ret1=::RegSetValueEx(hKEY, ″RegisteredOwner″, NULL,<br>
+　　type_1, owner_Set, cbData_1);<br>
+　　if(ret1!=ERROR_SUCCESS)<br>
+　　{<br>
+　　MessageBox(″错误: 无法修改有关注册表信息!″);<br>
+　　return;<br>
+　　}<br>
+　　／／修改有关的数据 (公司名 company_Set)<br>
+　　LPBYTE company_Set=CString_To_LPBYTE(str_company);<br>
+　　DWORD type_2=REG_SZ;  <br>
+　　DWORD cbData_2=str_company.GetLength()＋1; <br>
+　　long ret2=::RegSetValueEx(hKEY, ″RegisteredOrganization″, NULL,<br>
+　　type_2, company_Set, cbData_2);<br>
+　　if(ret2!=ERROR_SUCCESS)<br>
+　　{<br>
+　　MessageBox(″错误: 无法修改有关注册表信息!″);<br>
+　　return;<br>
+　　  }<br>
+　　执行上面的修改注册表的操作后，可打开注册表查看具体的数值，可以看到已经成功地修改了有关的数据了。<br>
+　　以上实例讲述了如何在VC＋＋中访问Windows98／95的系统注册表，我们可以很方便地查询及修改注册表的任何位置的有关信息。以上的程序在Visual C＋＋ 6.0中调试通过（Visual C＋＋ 5.0与之类似），且运行结果正确。<br><b>
+　　（广东　粟利民　孙强）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99451302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何制作主页的背景音乐<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 当你进入某些主页时，耳旁会响起动人的乐曲。这些背景音乐可以通过HTML语句来实现，下面就是它的制作过程：一、背景音乐的格式常见音乐格式有Windows的.wav，WWW的.au等，但最适合做主页背景音乐的是以.mid为后缀的MIDI音乐文件。它非常小且十分普及，也无需安装专门的软件播放。<br>
+        &nbsp;&nbsp;&nbsp; 二、背景音乐的HTML语法<br>
+        &nbsp;&nbsp;&nbsp; 先选一首MIDI音乐，如Titanic.mid。把＜EMBEDSRC=″Titanic.mid″＞放在＜BODY＞和＜/BODY＞之间的任意地方，就会出现一个用来控制音乐播放的播放器图案。如果要做一个漂亮的控制面板则可使用：＜EMBEDSRC=″Titanic.mid″WIDTH=145 
+        HEIGHT=60＞。如果要用作背景音乐，只要取消控制面板，使音乐在后台循环播放即可：＜EMBEDSRC=″Titanic.mid″HIDDEN=TRUEAUTOSTART=TRUELOOP=TRUE＞。注意：MIDI文件的权限应改为所有人都可读。<br>
+        &nbsp;&nbsp;&nbsp; 三、语法详解<br>
+        &nbsp;&nbsp;&nbsp; SRC=“档案名称和路径”：设置MIDI音乐的路径和名称；<br>
+        &nbsp;&nbsp;&nbsp; AUTOSTART=“TRUE/FALSE”：设置是否音乐文件一传完后就开始播放，默认为FALSE(否)<br>
+        &nbsp;&nbsp;&nbsp; LOOP=“TRUE/FALSE/整数”：设置重播次数，TRUE为无限次重播，FALSE为不重播，LOOP=某个整数，为重播多少次。<br>
+        &nbsp;&nbsp;&nbsp; VOLUME=“0－100”：设置音量，默认为系统本身的音量；<br>
+        &nbsp;&nbsp;&nbsp; STARTTIME=“分：秒”：设置歌曲开始播放的时间，如STARTTIME=“00：10”为从第10秒开始播放；<br>
+        &nbsp;&nbsp;&nbsp; ENDTIME=“分：秒”：设置歌曲播放结束的时间；<br>
+        &nbsp;&nbsp;&nbsp; WIDTH和HIGH=“整数”：设置控制面板的宽与高；<br>
+        &nbsp;&nbsp;&nbsp; CONTROLS=“CONSOLE/SMALLCONSOLE/PLAYBUTTON/PAUSEBUTTON/STOPBUTTON/VOLUMELEVER”：设置控制面板的外观。CONSOLE为正常大小的面板，SMALLCONSOLE为较小的面板，PLAYBUTTON为显示播放按钮，PAUSEBUTTON为显示暂停按钮，STOPBUTTON为显示停止按钮，VOLUMELEVER为显示音量调节，若要隐藏控制面板可用HIDDEN=TRUE。<br>
+        &nbsp;&nbsp;&nbsp; 以上各项可根据需要加在＜EMBED＞中。这样，当别人浏览你的主页时也就能享受到优雅的音乐了。(广西 
+        张运宝)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

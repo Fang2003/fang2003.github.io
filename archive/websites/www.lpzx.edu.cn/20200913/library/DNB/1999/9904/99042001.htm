@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>在大众PA-2007上使用AMD K6-2</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">在大众PA-2007上使用AMD 
+        K6-2<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　曾几何时，大众的PA－2007主板配上AMD－K6 
+        CPU被誉为穷电脑迷的黄金组合，成为BBS上大家谈论的热门话题。本人为一不折不扣的电脑迷，在1998年初花几千元购买了一台电脑,主板选用的是大众的PA－2007，CPU为AMD的K6－200。然而，新的软件层出不穷，让我感觉到我的电脑有些力不从心，便有了升级的打算。为了充分利用原有部件，节约资金，决定选用价廉物美的AMD的散装K6－2/300AFR－66，这是AMD推出的一款66MHz外频的K6二代CPU，最适合那些没有100MHz外频的主板使用。<br>
+        　　1998年底，我以700元购得一块散片66MHz外频的K6－2/300，CPU编号为26351，生产日期为1998年第46周，又花20元买了一只专用风扇，将CPU安装到主板上，在CPU面上抹上薄薄一层散热硅脂，再装上风扇，并将CPU电压调为2.1V，(因为大众PA－2007在K6/266正式发布前就开发出来了，故没有K6/266以及K6－2所需要的2.2V电压)，倍频调为4.5倍频。机器可以工作，只是CPU型号显示为486DX66－S，可能是因为BIOS版本太老的缘故，先不管它。进入Win95，接入Internet网络，然后到大众网页www.fic.com.tw上将其PA－2007的最新BIOS版本1.13CD13拉回来，解开后，重新启动机器，在不驻留任何非系统文件的DOS实模式下对BIOS进行升级。升级后的BIOS不仅可以正确识别我的CPU为K6－2/300，而且CMOS中多了几项原来没有的新功能。升级BIOS时，要注意的是大众为PA－200提供两个不同版本，如果主板南桥芯片为586A，则使用1.13CD13版本；如果南桥芯片为586B，则应该用1.13CN13版本升级，不可弄错。<br>
+        　　至此，机器升级初步完成，经过试运行，发现比升级前速度显著改善，我以前在玩“拖拉机”扑克游戏时，如果同时再打开WinAMP播放MP3音乐，发牌速度明显变慢，但现在已看不到WinAMP的工作对“拖拉机”速度有任何影响。<br>
+        　　玩电脑还有一大乐趣就是花1分钱买的货，让它当2分的使。下一步当然是现在流行的超频了，考虑到K6－2采用0.25微米工艺，发热低，应该比K6好超频，而且又有K6－2超频成功的先例，便将倍频按照大众网页上介绍的方法调为5倍频(主板说明书上没有)。OK，开机显示为K6－2/333，将外频设为75MHz，倍频调到4.5倍频，开机同样显示为K6－2/333(实为337.5)，而且进入Win 
+        95系统很正常。但是，再以66×5.5或者75×5均无法开机。想到现在是用2.1V电压，比K6－2额定电压2.2V低，适当提高电压可否超到更高的频率呢？因为我从某个网站上看到我这种款式的CPU超400MHz可以开机。于是很不甘心，重新上网搜索关于PA－2007主板的有关资料。功夫不负有心人，还终于在国外网站看到以0.1V级差调节PA－2007主板CPU电压的方法。首先将CPU电压取为额定值，跳66×5.5或者75×5可以开机，但依然无法正常进入DOS系统；将CPU电压设为2.25V，可以进入DOS系统，引导Win 
+        95时死机；将CPU电压调为2.3V，66×5.5或者75×5进入DOS和Win 95系统均正常，跳75×5.5不能开机；CPU电压调为2.5V，可以开机自检，系统显示为K6－2/400(实为412)，进入DOS系统后很快死机，不能引导Win 
+        95，CPU电压调为2.6V，进入DOS几分钟后死机，进入Win 95则系统快要引导完毕时报错。经权衡，决定用2.3V电压，采用75×5方式使用，至今十分稳定。<br>
+        　　为了让那些手头依然使用PA－2007的朋友顺利升级，将有关PA－2007的倍频跳线设置以及2.7V以下电压选择设置公布于下：<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 倍频设置:<br>
+        　　&nbsp;&nbsp;&nbsp;&nbsp; 倍频 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FREQ1 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FREQ2 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FREQ3<br>
+        　&nbsp;&nbsp;&nbsp;&nbsp; 4 倍频 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 － 2 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; 4.5 倍频 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3<br>
+        　&nbsp;&nbsp;&nbsp;&nbsp; 5 倍频 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 － 2 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; 5.5 倍频 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 － 2 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 － 2 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 － 3<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; CPU电压设置:<br>
+        &nbsp;&nbsp;&nbsp; <img src="http://www.lpzx.edu.cn/library/DNB/1999/9904/image/20-1.gif" width="340" height="222"
+        alt="20-1.gif (26943 字节)"><br>
+        　　在此，建议各位朋友升级到K6－2时，CPU电压不要超过2.4V，以免损坏CPU。另外，我的这款CPU采用了CXT内核技术，此技术将用于K6－3，目前部分K6－2/400已采用。不知为什么在66MHz外频的部分K6－2/300也使用了CXT内核，但是，如果没有相应BIOS支持，其表现没有同频的无CXT内核技术的CPU好。我给大众去E－MAIL询问有关事项，他们回函说将不再推出PA－2007支持CXT内核的新BIOS版本。大家有其它问题与心得，欢迎来信交流，我的E－MAIL：<a
+        href="mailto:bluesnow@188.net">bluesnow@188.net</a><br>
+        (湖北 袁君)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用隐形字符制作加密口令<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        &nbsp;&nbsp;&nbsp; 在FoxPro数据库管理系统中，最重要的莫过于程序的保密问题了。为了防止无关人员访问数据库，人们设计了各种加密口令，但它们都有几个共同的问题：一是他人可通过阅读源程序或其他方式巧取口令(即使.EXE文件也可反编译为.PRG文件)；二是若口令放在口令盘上，软盘易损坏，甚至丢失。那么有没有一个更为稳妥的方法呢?答案是肯定的。笔者利用FoxPro 
+        2.5B for DOS编写了如下一个小程序，只要把它放在系统主程序之前，将使系统保密程度大大提高：<br>
+        　　set talk off<br>
+        　　set color to /n<br>
+        　　clear<br>
+        　　set color to w/r<br>
+        　　define window lockwin from 5,5 to 15,72 title &quot;口令检测窗口&quot;double<br>
+        　　acti window lockwin<br>
+        　　@2,10 say &quot;请操作员输入正确的口令，输完后回车：&quot;<br>
+        　　set color to /w<br>
+        　　@2,45 say space(5)<br>
+        　　@2,45 say '　'<br>
+        　　set color to w/r<br>
+        　　n=1<br>
+        　　do while n&lt;=3<br>
+        　　set cons off<br>
+        　　acce to password<br>
+        　　set cons on<br>
+        　　if password=ltrim(str(val(time())*10))＋'　'<br>
+        　　&amp;&amp;上行单引号内的空格用“Alt＋255”进行输入，即按住Alt不放，再依次按小键盘上的255，然后一起放开<br>
+        　　exit<br>
+        　　endif<br>
+        　　if n=3<br>
+        　　clear<br>
+        　　wait space(14)＋&quot;对不起，您无权使用本系统，按任意键退出!&quot;<br>
+        　　clear<br>
+        　　quit<br>
+        　　endif<br>
+        　　@n＋3,20 say &quot;口令错，请再次仔细输入!&quot;<br>
+        　　n=n＋1<br>
+        　　enddo<br>
+        　　clear all<br>
+        　　&amp;&amp;以下接系统主程序<br>
+        　　从程序上我们可以看出，口令password通过取时间函数而获得，其值为时钟点数(小时)的10倍，并随时间的移动而不断变化；其后的隐形空格使窃看源程序者以为是个真空格而不知所云。至于合法用户，比如现在是23点多，则口令输入230，并按“Alt＋255”，即可进入系统。 
+        <strong>&nbsp; (浙江 郭会清)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月1日第21期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

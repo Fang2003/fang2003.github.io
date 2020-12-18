@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp; 　 
+        新疆读者江洋问：一台486组装机，配置为：VL4200主板、486DX4／100 CPU、8M内存、1.2G硬盘、4倍速光驱、双软驱。操作系统为PWIN95和DOS6.22。启动时，按F4键切换到DOS6.22，以前操作均正常，最近，由于安装双硬盘时未成功，再启动则出现下列提示信息后死机：“Drivespace 
+        Configuration Error. ADD DOS=LOW to CONFIG.SYS before attempting to Select command prompt 
+        only again.”Config.sys文件配置为：DEVICE=C:\DOS\HIMEM.SYS，DEVICE=C:\DOS\EMM386.EXE 
+        RAM，DOS=HIGH,DOS=UMB，BUFFERS=10,0，FILES=40。使用软盘启动，其结果仍是执行Config.sys文件（内容同上）后，便出现上面的提示信息并死机，删除第二条命令或加入DOS=LOW后可以启动，但装入UCDOS后常规内存就只剩下450K左右（在PWIN95的DOS下为480K左右），运行一些稍大的软件都会提示“内存不足”，用KV300＋检查未发现病毒。请问该怎样处理？<br>
+        　　答：这种情况经常出现在安装了PWIN95的DriveSpace的机器上，现象为：在启动到DOS6.x的过程中，DriveSpace报告以上的错误信息并死机，究其原因，绝大多数是由于内存管理出现问题而造成的。例如，Config.sys中包含了某个硬件的驱动程序，而由于程序编制方面的原因，该驱动程序在找不到硬件时，不能正确释放已分配的各种内存，致使内存管理混乱，最后引起DriveSpace报错。由于DriveSpace的实模式驱动程序Drvspace.bin占用常规内存实在太多，如果不安装EMM386并建立UMB的话，很多DOS软件都运行不起来。你可将Config.sys文件中的HIMEM.SYS和EMM386.EXE都换成PWIN95自带的，并试着改变EMM386的开关项，如把RAM改为NOEMS，调整EMM386的开关需要耐心，多试几种组合（可参考DOS6.22所带的帮助），因为经验表明，EMM386的开关设置与各种机器的型号及硬件配置有相当大的关系，不当的设置常常会引起死机。另外，你还应在Config.sys中添加一行“DEVICEHIGH=C:\PWIN95\COMMAND\DRVSPACE.SYS 
+        ／MOVE”，把DriveSpace的实模式驱动程序移到UMB中，这样可以节省640K以下的部分常规内存，自由常规内存最多可达到600K左右（具体值与BIOS的版本、机器安装的设备和装载的驱动程序有关）。<br>
+        　&nbsp; 河北读者李峰问：我的机器配置如下：IBM 6X86 PR200 CPU、希捷43G硬盘、VOODOO 
+        RUSH显卡，S3 Sonic Vibes PCI声卡、旗舰TX PRO主板，装有WIN98，现更换一块福扬VP3主板后，系统出现以下故障：<br>
+        　&nbsp; 1.软驱指示灯从开机一直亮十多分钟后才熄灭，在亮的过程中，软驱可以使用，灯熄就不能使用，我的软驱在更换主板前是好的，是不是新主板的软驱口有问题?经检查，软驱数据线没有插错?<br>
+        　&nbsp; 2.显卡一直不能正常安装，每次按提示安装驱动程序并重新启动后，系统依然提示显卡安装不正常，只能显示16色。<br>
+        　&nbsp; 3.启动后一直找不到PCI声卡，综合上面的故障，我想是不是主板有问题?请专家给予解惑!<br>
+        　 另外，请问我的TX PRO主板是不是用的Intel的TX芯片组?<br>
+        　 
+        答：你所描述的故障，其实就是一个问题造成的，因为更换主板，WIN98系统设置可能有冲突，造成总线控制设备驱程序不能正常安装，你可以照以下步骤排除故障：<br>
+        　　1.在“我的电脑／控制面板／系统／设备管理器”中删除带黄色“!”的项目及“系统设置”中的“PCI 
+        BUS”等。<br>
+        　　2.重新启动WIN98，肯定会提示找到各种控制设备如软盘驱动器、PCI 
+        Bridge等，可按照提示安装系统各种设备的驱动程序即可。<br>
+        　　TX PRO主板采用的不是Intel的芯片组，它用的SiS的5571芯片组，功能和Intel 
+        TX芯片组相当。<br>
+        　 
+        &nbsp;&nbsp;&nbsp; 江苏读者江淘问：在阅读报刊时，得知可以改变控制面板、打印机等文件夹的图标，但忘记了如何操作，请大侠给予指点，谢谢!<br>
+        　　答：通过修改注册表可达到此目的，借此机会向大家介绍几则修改注册表的技巧：<br>
+        　　1改变菜单弹出速度：在“HKEY_CURRENT_USER\Control\Panel\Desktop”中添加一新键值“MenuShowDelay”，将其键值设为1。<br>
+        　　2去掉桌面上“我的电脑”、“回收站”等图标：在“HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer”中新建一“DOWRD”值，名称为“NoDesktop”，其键值为1。<br>
+        　　3在注册表中查找如下标志：<br>
+        　　控制面板：{21EC2020－3AEA－1069－A2DD－08002B30309D}<br>
+        　　拨号网络：{992CFFA0－F557－101A－88EC－00DD10CCC48}<br>
+        　　我的电脑：{20D04FE0－3AEA－1069－A2D8－088002B30309D}<br>
+        　　打印机：{2227A280－3AEA－1068－A2DE－08002B30309D}<br>
+        　　回收站：{645FF040－5081－1010B－9F087－0AAA002F954E}<br>
+        　　将其“默认”的文件名或文件名后的数值改换成你想要的图标文件就可以了。<br>
+        　 
+        &nbsp;&nbsp;&nbsp; 江西读者朱康问：我有几台康柏机，一次对一台康柏机的硬盘进行彻底整理。先备份有用数据，接着对硬盘进行重新分区、格式化，然后重做系统。以后，发现无法像其它康柏机那样按F10键进入CMOS设置界面，这是为何?<br>
+        　　答：在康柏机中，硬盘上有很小一块分区是用来存放CMOS信息及入口程序的，在重新进行分区时应注意保留这一块分区。你在对硬盘进行分区及格式化时，很可能把硬盘原有的CMOS信息及入口程序的内容格式化了，所以无法进入CMOS设置界面。如果你用FDISK命令来查看其它未重新分区的康柏机， 
+        会发现有一个没有名字的隐含分区。要重新进入被误操作的康柏机的CMOS设置界面，可以自己做COMS设置引导盘来解决。先找一台同型号的康柏机，进入CMOS设置界面，里面有CMOS设置盘的创建程序，用此程序可以创建引导盘。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月16日第44期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

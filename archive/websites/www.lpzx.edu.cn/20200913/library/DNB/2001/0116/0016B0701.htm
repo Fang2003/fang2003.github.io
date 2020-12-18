@@ -1,0 +1,156 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>TCP＿Wrapper防火墙的安装与配置</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->TCP＿Wrapper防火墙的安装与配置<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->TCP＿Wrapper软件包是一种基于TCP/IP协议之上的、运行于UNIX/Linux系统、基于访问控制技术的一种网络防火墙软件。它使用C语言编写。软件功能是提供访问控制机制和记录网络服务。需要特别指出的是，它是一种提供源代码的软件，用户仅需在自己的系统上编译并简单配置即可。它不仅支持Linux，而且还支持AIX，SunOSSolaris，BSD 
+              UNIX，HP-UX，IRIX，NCR UNIX，SCO OpenServer，UnixWare，SVR4，FreeBSD，Ultrix，UNICOS等系统。<br>
+              一、工作原理<br>
+              当系统收到服务请求时，启动tcpd进程，由tcpd进程检查客户机IP地址是否与/etc/hosts.allow文件和/etc/hosts.deny文件中的IP地址匹配，从而判断对服务请求是否拒绝。同时还记录到syslog文件中。<br>
+              二、安装<br>
+              本文以SCO OpenServer为例安装TCP＿Wrapper。将TCP＿Wrapper软件包解压缩到任一目录中，例如/tmp/tcp＿wrapper，输入：<br>
+              tar xvf tcp＿wrappers＿7.6.tar<br>
+              用vi打开Makefile文件，修改#REAL＿DAEMON＿DIR=/etc行，将前面的注释符#去掉，然后输入：<br>
+              make SYS-type<br>
+              SYS-type是系统类型。如make sco-os5。其它系统类型参阅Makefile文件。等编译完成后，会有tcpd等可执行文件。首先用tcpdchk检查tcpd是否有问题，若有，则列出警告信息，需要重新编译，直到无任何警告为止。Tcpdmatch在本文后面介绍。<br>
+              三、配置<br>
+              在/etc目录下创建hosts.allow(允许访问)和hosts.deny(拒绝访问)文件。文件格式为每行两个域，用冒号分隔开，如：service-list 
+              host-list。这两个文件的格式是相同的。关键字ALL用在service-list域表示匹配所有的服务，用在host-list域表示匹配所有的IP地址。关键字LOCAL只能放在host-list域，表示匹配本地所有主机名。在hosts.deny文件中写入：<br>
+              ALL  ALL<br>
+              第一个ALL表示所有网络服务，第二个ALL表示所有主机。例如，在hosts.allow文件中写入：<br>
+              ftpdtelnetdrlogind  192.168.0.10<br>
+              第一个域也可用ALL关键字代表所有服务。这两个文件表示除192.168.0.10可以使用ftp、telnet及rlogin外，其它主机的网络服务请求均被拒绝。<br>
+              将安装过程中编译好的ftpd移动到/etc目录中，编辑/etc/inetd.conf文件，将相应服务的第六个域改为/etc/tcpd。例如：<br>
+              ftp stream tcp nowait root /etc/ftpd ftpd 修改为<br>
+              ftp stream tcp nowait root /etc/tcpd ftpd<br>
+              第七个域表示网络服务进程名称。其它还有telnetd，fingerd，rlogind等等，只须将第六个域都改为/etc/tcpd即可。<br>
+              四、使用<br>
+              配置完成后，重新启动tcp协议或重启系统，使配置生效。例如：<br>
+              #tcp stop<br>
+              #tcp start<br>
+              使用tcpdmatch，可以检查某个IP是否允许某些服务。例如，本机IP为192.168.0.1，检查192.168.0.10是否允许用ftp访问本机，输入：<br>
+              #./tcpdmatch ftpd 192.168.0.10<br>
+              clientaddress 192.168.0.10<br>
+              serverprocess ftpd<br>
+              matched/etc/hosts.allow line 1(匹配：/etc/hosts.allow文件第一行)<br>
+              accessgranted (访问：允许)<br>
+              检查192.168.0.200是否允许用telnet访问本机：<br>
+              # ./tcpdmatch telnetd 192.168.0.200<br>
+              clientaddress 192.168.0.200<br>
+              serverprocess telnetd<br>
+              matched/etc/hosts.deny line 1(匹配：/etc/hosts.deny文件第一行)<br>
+              accessdenied(访问：拒绝)<br>
+              同时，将网络访问记录到syslog文件中。syslog文件的位置，请查阅/etc/syslog.conf文件。在SCO OpenServer中为/usr/adm/syslog。打开这个文件，记录了网络服务连接。通过经常查看syslog文件，可以掌握本机的网络安全状况。下面是一个syslog文件的示例：<br>
+              Mar 18 112555 myhost fingerd1511 refused connect from 192.168.0.10(拒绝finger连接)<br>
+              Mar 18 112635 myhost fptd1512 connect from 192.168.0.10(允许ftp连接)<br>
+              Mar 18 112811 myhost rlogind1513 connect from 192.168.0.10(允许rlogin连接)<br>
+              Mar 18 160612 myhost telnetd1850 connect from 192.168.0.10 
+              (允许telnet连接)<br>
+              五、后记<br>
+              在不同的系统中，某些地方可能会有些差异。比如，在SCO OpenServer中ftp守护进程名是ftpd，在UnixWare中的名称却是in.ftpd；还有就是syslog文件的位置可能也不尽相同，这些都是需要注意的地方。虽然使用TCP＿Wrapper可以提高网络安全性，但是这种仅仅靠设置IP地址的访问控制技术，也不是绝对可靠的，千万不可因此而感到高枕无忧。对此软件感兴趣的朋友可以到http://www.kl.gz.cn/wtn/tcp＿wrappers＿7.6.tar下载。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

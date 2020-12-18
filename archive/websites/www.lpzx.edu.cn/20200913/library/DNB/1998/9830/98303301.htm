@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>新一代3D加速卡Permedia3<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 当各家3D图形加速芯片厂商纷纷发布新一代3D芯片时，业界著名厂商3Dlabs当然也不甘寂寞，让其他人抢了头彩，也在7月13日公布了下一代产品——Permedia3。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3是Permedia系列的最新一代产品，集成了2D、3D、Video和VGA的高性能128位芯片，最快每秒可以处理2.5亿个像素。Permedia3全面支持微软的DirectX6应用程序接口，在推进2D、3D、Video和3D应用程序性能的同时也提高了游戏性能。就像Permedia2和最早的Permedia一样，Permedia3也是3Dlabs公司力图将其在顶端3D硬件市场上取得的成功经验带进消费市场的产品。最早的Permedia并不令人满意，也未能引起游戏玩家的注意，Permedia2在迎合游戏市场的需求方面比Permedia要好得多，它的填充率比Voodoo稍高一些，而且具有一个强有力的几何引擎，不过由于缺少一些基本的3D特效如雾化表等，使得Permedia2的游戏性能也不够好，不过，由于具备强有力的几何性能和3Dlabs在CAD市场的影响，Permedia2还是赢得了许多图形界人士的喜爱。<br>
+        &nbsp;&nbsp;&nbsp; 最新推出的Permedia3能够弥补前代产品的这些不足吗？它的市场定位在哪里？实际上，从性能指标及规格来看，Permedia3更像是NVidia公司的RivaTNT。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>Permedia3的技术特点</strong></font></p>
+        <p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; Permedia3的3D架构被设计成能够在单时钟周期内实现更高级的视觉效果，如Single－passMultitexturing意味着在单个时钟周期中，Permedia3能够在一个表面上贴上两个纹理图。QuakeⅡ游戏就使用了多重贴图（Multitexturing）技术以求达到更真实的3D效果，微软的DirectX6也支持多重贴图。<br>
+        &nbsp;&nbsp;&nbsp; 3Dlabs负责市场的副总裁尼尔&amp;middot;特里维特认为，这个多重贴图功能可以使Permedia3在QuakeⅡ中的表现比单块Voodoo2卡更好。他同样认为Permedia3是目前唯一能够在单个时钟周期中同时做Bumpmapping（凹凸材质贴图，它可以给出一个表面起伏、有质感的3D表面）和表面纹理贴图的芯片。Permedia3具有128位高带宽的存储器接口，也可以在单时钟周期内完成两个经双线性过滤（Bilinear－filtered）的纹理或一个经三线性过滤的纹理贴图（Tri－linearmip－mapping），带有表面纹理的Bump－mapping（凹凸材质贴图）、Z缓冲处理（Z－buffering）、α混合（Alpha－blending）、Stenciling、雾化（Fogging）等3D特效。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3令人印象最深的新功能是它的纹理管理单元，3Dlabs称之为VirtualTexturingSystem，它具有自动管理纹理数据存放的最佳位置是在系统内存上还是在显示内存上的能力。同时，纹理管理单元将纹理数据分为4K大小的存储页面，这些页面可被单独访问，不管是在PCI总线还是在AGP总线上，在执行模式时可在内存中换进换出。由于同芯片内部的L1纹理缓存相关联，就可以减少纹理数据的装入时间，因而能够加快着色的时间并达到峰值填充率。虚拟纹理贴图技术还允许在PCI总线上从系统内存中读取纹理数据，就像AGP系统一样，提供了对系统带宽的优化利用，避免了形成分散的局部纹理数据。<br>
+        &nbsp;&nbsp;&nbsp; 
+        为什么纹理管理单元能够加快着色的时间呢？我们来看看一个通常的游戏场景，在它里面有许多由不同源纹理组成的图像。通常，当一个新物体出现时，一些整幅的纹理数据（通常为256×256大小）就会被新的纹理数据所替换，这会减慢着色时间。如果不进行整幅的数据交换，而只是替换部分可见的纹理数据，就会大大减少总线上的数据传输量，也减轻了总线的负担。这也意味着由于只有用到的纹理数据存放在显示内存中，那么图形卡就可以使用较少的纹理内存，也就减少了成本。<br>
+        &nbsp;&nbsp;&nbsp; “AGP是非常好的东西，它使你在纹理数据量超过显示内存的容量时，也可得到高性能，但是，如果你想得到最高性能，你必须将最经常使用的纹理数据从主内存缓冲到显示内存中，而Permedia3正是这样做的。”特里维特解释说。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3能够提供与当今CPU技术相匹配的性能，它的峰值速率为每秒处理800万个多边形指令。同Permedia2的游戏性能相比，当使用多重纹理贴图时，它的性能提升了大约6倍。它同Permedia2的比较见附表。<br>
+        &nbsp;&nbsp;&nbsp; 另外，为了减轻CPU的负担，Permedia3架构中还整合了一个增强的带有多重纹理透视算法的Delta浮点引擎和硬件多边形选择，它可以直接处理Direct3D缓冲数据。为了提高显示图形的质量，Permedia3架构还支持全场景抗锯齿（Full－sceneAnti－aliasing），支持真彩色显示和高分辨率的32位Z缓冲。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3支持4MB～16MB的显示内存，用以驱动高分辨率的显示，可以使用SDRAM或SGRAM，速度最快可达200MHz。Permedia3中集成了一个速度高达270MHz的RAMDAC，在1280×1024、真彩色的分辨率下，刷新率可以达到137Hz；在1600×1200、真彩色的分辨率下，刷新率可以达到96Hz；在1920×1080、真彩色的分辨率下，刷新率可以达到90Hz，这些正是图形开发者所需要的特性。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3的视频核心部分还支持加速高质量的DVD软件回放，可以减少对CPU的依赖，包括MPEG－2运动图像补偿、YUV－RGB信号转换、任意的XY轴比例缩放，带有双线性过滤。它还具有两个80MB/S的VIP视频端口，可以外接其他视频硬件用于输出视频信号。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3将支持非常广泛的高质量的驱动程序，如：OpenGL、DirectX6和Direct3D6。Permedia3支持AGP2×模式，具有全边带传输和纹理执行功能，它也同PC98规格中的PCI2.2规范兼容。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>Permedia3的市场定位</strong></font></p>
+        <p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 3Dlabs计划让Permedia3针对同以前一样的市场，不过这次会对主流市场起到更大的推动作用。目前估计它的2D性能同Banshee和G200差不多。Permedia3支持DirectX6.0，实际上，它专为DirectX6.0做了优化，可以得到10％的额外的性能提高。因此，Permedia3或许会成为一款真正的游戏玩家的芯片，它所提供的功能和性能正是高品质游戏所需的。当然，3Dlabs也不会忘记传统的3D图形专业市场，Permedia3带有完整的ICD，也支持OpenGL1.2。Permedia3是首款全兼容OpenGL1.2的芯片。<br>
+        目前，3Dlabs仍未明确表示是否支持AMD的3DNow!指令集，不过，如果有大量的用户要求，或者支持3DNow!的CPU开始进入工作站市场，3Dlabs就会紧跟潮流，让它的驱动程序支持3DNow!技术。<br>
+        &nbsp;&nbsp;&nbsp; Permedia3采用456引脚BGA封装，使用0.25微米工艺制造，每100000片的采购单价为45美元。虽然目前还未公布有哪些OEM商，不过那些用Permedia2制造显示卡的厂商可能会继续制造Permedia3显示卡，这包括Diamond、CreativeLabs、STB和Elsa这些业界著名厂商。第一款Permedia3显示卡有望在今年第四季度面世，但这要看3Dlabs的工厂是否能即时完成从0.35微米工艺到0.25微米工艺的转换。实际上，NVidia也面临着同样的问题，由于0.25微米工艺转换尚未完成，NVidia被迫用0.35微米工艺制造产品，这意味着最初的RivaTNT可能达不到希望的125MHz核心频率，如果他们不能尽快将RivaTNT提升到设计工作频率，3Dfx的VoodooBanshee或许会对RivaTNT构成严重威胁。在未来的几个月中，你会看到竞争将日趋激烈。(重庆卢德龙) 
+        <br>
+        </font></p>
+        <div align="center"><center><table border="1" width="70%" cellspacing="0">
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">　</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">Permedia2/2v</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">Permedia2a</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">Permedia3</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">总线接口</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">PCI2.1/AGP1x</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">AGP1x</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">PCI2.2/AGP2x</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">存储器接口</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">64位</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">64位</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">128位</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">时钟频率</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">83-85MHz</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">90MHz</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">125MHz</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">RAMDAC</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">230MHz</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">250MHz</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">270MHz</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">显示内存</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">2-8MBSG/SDRAM</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">2-8MBSG/SDRAM</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">4-16MBSG/SDRAM</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">DIRECTX支持</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">HEIDI支持</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">尚未宣布</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">OPENGL支持</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">VEFA支持</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">最大分辨率</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">1920×1080</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">1920×1080</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">1920×1080</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">Z缓冲</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">15/16</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">15/16</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">16/24/32位</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">α缓冲</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">NO</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">NO</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+          </tr>
+          <tr>
+            <td width="23%" align="left"><font color="#369681"><span class="ourfont">视频I/O</span></font></td>
+            <td width="19%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="22%" align="left"><font color="#369681"><span class="ourfont">YES</span></font></td>
+            <td width="26%" align="left"><font color="#369681"><span class="ourfont">YRS</span></font></td>
+          </tr>
+        </table>
+        </center></div><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期33Z版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

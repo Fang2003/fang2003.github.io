@@ -1,0 +1,170 @@
+<html><!-- #BeginTemplate "/Templates/internet.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用CSS美化页面</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0118/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0118/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+        <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用CSS美化页面<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->众所周知，在网页制作中。要想排版清新、布局自然、页面漂亮，适当使用CSS是非常必要的。那么，CSS到底有些什么作用和功能呢？我们在此探讨一下：<br>
+              1.可以用CSS定义文字的大小及颜色，使之不受“查看→文字大小”的改变而改变。例如代码：<br>
+              &lt;STYLE type=text/css&gt;<br>
+              BODY <br>
+              FONT-FAMILY 宋体 FONT-SIZE 9ptcolor#cccccc<br>
+              <br>
+              TD <br>
+              FONT-FAMILY serif FONT-SIZE 10pt<br>
+              <br>
+              &lt;/STYLE&gt;<br>
+              其中就定义了body中的字体为：宋体，大小为9pt，颜色为灰白色。而td中的字体为serif，大小为10pt。也许你很纳闷：双重定义的结果是怎么样 
+              的？答案是就近原则，取最近的定义。<br>
+              2.定义两段文字或者两行文字的距离。例如代码：<br>
+              &lt;P style=&quot;MARGIN-BOTTOM 0px MARGIN-TOP 5px&quot;&gt;灰白人生欢迎你&lt;/p&gt;<br>
+              就表示这句话和其上面的距离为0px，和下面一段话的距离为5px。<br>
+              3.综合使用CSS和滤镜可以定义出特效字体和效果，例如代码：<br>
+              &lt;style type=text/css&gt;<br>
+              .3dfont <br>
+              FILTER glowcolor=444444strength=0 shadowcolor=eeeeeedirection135 
+              POSITION relative WIDTH 60%font-size12ptFONT-FAMILY楷体_GB2312<br>
+              <br>
+              &lt;/style&gt;<br>
+              在网页的适当位置加入&lt;font class=3dfont&gt;扬子欢迎你&lt;/font&gt;，其中“扬子欢迎你”的字样将带给你惊喜。<br>
+              4.如果你在使用表格的时候需要框架，但是嫌使用table定义的框架太丑陋。那么也可以通过CSS定义风格表格框架。例如代码：<br>
+              &lt;style type=text/css&gt;<br>
+              .framered <br>
+              BORDER-BOTTOM #444444 1px solid BORDER-LEFT #aaaaaa 1px solid 
+              BORDER-RIGHT #444444 1px solid BORDER-TOP #aaaaaa 1px solid 
+              FONT-SIZE 9pt<br>
+              <br>
+              .frametop <br>
+              BORDER-BOTTOM #aaaaaa 0px solid BORDER-LEFT #444444 0px solid 
+              BORDER-RIGHT #aaaaaa 0px solid BORDER-TOP #444444 1px solid 
+              FONT-SIZE 9pt<br>
+              <br>
+              &lt;/style&gt;<br>
+              在使用表格的时候只需要定义为&lt;table class=framered……就可以看到风格的框架。如果你只是需要框架的上面(或左面加上面)，只须修改就可以实现。<br>
+              另外，如果一个表格只有一个行，一个列。那么你可以在table和td定义不同的颜色，使整个结构看起来很有立体感。<br>
+              5.运用CSS还可以适当安排图片，比如说如果想使用某张图片做背景，可以用CSS定义让该图片平铺，可向x方向平铺也可向y方向平铺。代码为：BACKGROUND-REPEAT 
+              repeat<br>
+              6.用CSS定义左右边距也是一样使用排版的手段。例如代码：<br>
+              &lt;body leftmargin=0 topmargin=4&gt;<br>
+              就表示定义了整个版面在显示屏上面上面距离为4pt，左边为0pt。<br>
+              7.在制作按钮以及文本输入框的时候，也可以用CSS使得具有自己特色。例如代码：<br>
+              &lt;INPUT class=account<br>
+              maxLength=16 name=username<br>
+              onmouseout=&quot;this.style.color='#000000'&quot;<br>
+              onmouseover=&quot;this.style.color='#3366cc'&quot; size=12<br>
+              style=&quot;BACKGROUND-COLOR rgb255255255 BORDER-BOTTOM 
+              1px double BORDER-LEFT 1px double BORDER-RIGHT 1px double BORDER-TOP 
+              1px double COLOR rgb000 FONT-FAMILY 新细明体 宋体 Arial FONT-SIZE 
+              9pt&quot;<br>
+              padding-bottom1px﹖&gt; &lt;/SPAN&gt;<br>
+              &lt;INPUT name=Submit style=&quot;BACKGROUND-ATTACHMENT scroll 
+              BACKGROUND-COLOR #ffffff BACKGROUND-POSITION 0% 50% BACKGROUND-REPEAT 
+              repeat BORDER-BOTTOM rgb000 1px dashed BORDER-LEFT rgb000 
+              1px dashed BORDER-RIGHT rgb000 1px dashed BORDER-TOP rgb000 
+              1px dashed FONT-SIZE 9pt HEIGHT 18px WIDTH 57px&quot; type=submit 
+              value=登陆&gt;<br>
+              其中就定义了文本输入框，长度为16pt，当鼠标移动到上面的时候颜色为黑色，鼠标移出的时候颜色为蓝色，大小为12pt，输入的字体为新细明体、 
+              宋体、大小为9pt。<br>
+              定义的按钮背景色为白色，没有平铺，字体为9pt，厚度为18pt，宽度为57pt。<br>
+              CSS的用途还将很多，由于本人能力和时间有限，现提出一些仅供参考。本文所有实例均可在我的个人站点找到：http://yangzitop.home.chinaren.com 
+              。敬请来信批评指正！yangzi321@sina.com。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

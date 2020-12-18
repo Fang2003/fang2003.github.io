@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>COMS设置不当引起软驱出现故障一例</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;　　故障现象：一台Pentium 
+        120多媒体电脑，配有32兆EDO内存，3.5英寸和5.25英寸高密软驱各一个，安装了Windows 
+        95 OSR2和Windows3.2中文版，并设置为双引导。在Windows 95中执行软盘上的文件时，常常出现“与系统相连的设备不能正常运转”的提示；在MS－DOS窗口下用软盘拷贝文件，虽无出错提示，但拷出的文件要么字节数不够，要么字节数虽够但不能执行。<br>
+        　　故障分析与排除：起初怀疑是系统感染了病毒，用《电脑报配套光盘》上提供的杀毒软件检查，并未发现有病毒，用KV300、KILL等软件查杀毒也是一无所获，基本排除了病毒的可能性。后将该软驱装到别的微机上，使用正常，也排除了软驱本身有问题的可能；怀疑是Windows95中的软驱驱动程序有误，遂打开“控制面板”中的“系统”图标，选择“设备管理”，查看其中的“磁盘驱动器”和“软盘控制器”，均未发现异常。万般无奈，只好把Windows95重新安装一遍，可是故障依旧，甚至连显示卡和声卡的驱动程序也装不上了。看来该故障与Windows95无关。找出Windows95的启动盘，打算从A驱启动系统。由于先前在CMOS里设置了先由C盘启动，因此进入CMOS重新设置，将“BIOS 
+        FEATURES SETUP”栏的“Boot Sequence”设为“A，C”，回到CMOS的主菜单时无意中打开了“CHIPSET 
+        FEATURES SETUP”栏，发现其中“DRAM Timing Control”项的当前值为“TURBO”，是最快的一档，这是否就是问题的所在呢?将之降低一档，改为“FAST”，保存后重新由硬盘启动系统，进入Windows 
+        95后，试运行以前不能正确运行的软盘，发现故障已经消除。<br>
+        　　小结：遇到故障时，尤其是在Windows95的使用过程中，不要急于重新安装系统，应细心检查系统的各项设置，特别是CMOS中的设置内容。实践证明，有许多软故障都是由于CMOS设置不当导致系统运行稳定性降低引起的。</font></p>
+        <p class="ourfont" align="left"><font color="#369681">(山东 陈锡宗)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月20日第15期36版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

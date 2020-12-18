@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VB5.0应用程序的启动与退出设计<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="center"><strong><font
+        color="#369681">设置启动窗体</font></strong></p>
+        <p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 在缺省情况下，应用程序中的第一个窗体被指定为启动窗体。应用程序开始运行时，此窗体就被显示出来(因而最先执行的代码是该窗体Form_Initialize事件中的代码)。如果想在应用程序启动时显示别的窗体，就得改变启动窗体，其方法如下：<br>
+        1从“工程”菜单中，选劝工程属性”。<br>
+        2选劝通用”。<br>
+        3在“启动对象”下拉列表中，选取要作为新启动窗体的窗体。<br>
+        4选劝确定”。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>没有启动窗体时的启动</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 有时候需要在应用程序启动时不加载任何窗体。例如想先运行装入数据文件的代码，然后再根据数据文件的内容决定显示几个不同窗体中的哪一个。为此，可在标准模块中创建一个名为Main的子过程，并将其设为启动对象。<br>
+        SubMain()<br>
+        DimintStatusAsInteger<br>
+        ′调用一个函数过程来检验用户状态<br>
+        intStatus=GetUserStatus<br>
+        ′根据状态显示某个启动窗体<br>
+        IfintStatus=1Then<br>
+        frmMainShow<br>
+        Else<br>
+        frmPasswordShow<br>
+        EndIf<br>
+        注意：这个过程必须是一个子过程，且不能在窗体模块内。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>结束应用程序</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 当所有窗体都已关闭并且没有代码正在执行时，事件驱动的应用程序就停止运行。如果最后一个可见窗体关闭时仍有隐藏窗体存在，那么，应用程序表现为已经结束了(因为没有可见的窗体)，可实际上却仍在继续运行，直至所有隐藏窗体都关闭为止。之所以出现这种情况，是因为对已卸载窗体的属性或控件的任何访问，都将导致隐含地、不予显示地加载那个窗体。<br>
+        为了避免出现这类问题，最好的办法是确保所有的窗体都已卸载，可以使用Forms集合和Unload语句。例如在主窗体上可以用一个名为cmdQuit的命令按钮来退出程序，如果应用程序只有一个窗体，则Click事件过程可简单为：PrivateSubcmdQuit_Click()UnloadMeEndSub如果应用程序使用多窗体，通常把代码放入主窗体的Unload事件过程可以卸载这些窗体。可以使用Forms集合确保找到并关闭所有窗体。<br>
+        PrivateSubForm_Unload<br>
+        DimiasInteger<br>
+        ′在窗体集合中循环并卸载每个窗体<br>
+        Fori=0toFormsCount－1<br>
+        UnloadForms(i)<br>
+        Next<br>
+        EndSub (江苏 周奎)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月31日第33期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

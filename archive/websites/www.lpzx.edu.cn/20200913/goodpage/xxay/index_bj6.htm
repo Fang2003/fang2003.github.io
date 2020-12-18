@@ -1,0 +1,148 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("sprite");
+    document.MM_Time[0][0].slot = 1;
+    if (ns)
+        document.MM_Time[0][0].obj = document["Layer1"];
+    else
+        document.MM_Time[0][0].obj = document.all ? document.all["Layer1"] : null;
+    document.MM_Time[0][0].keyFrames = new Array(2, 41, 81, 120, 160, 200);
+    document.MM_Time[0][0].values = new Array(4);
+    document.MM_Time[0][0].values[0] = new Array(-28,-27,-25,-25,-24,-23,-22,-22,-21,-20,-20,-19,-19,-18,-17,-17,-16,-15,-14,-13,-13,-12,-11,-10,-9,-7,-6,-5,-3,-1,0,2,5,7,10,14,18,23,31,40,51,60,69,77,84,92,99,106,112,119,126,132,139,145,152,158,164,171,177,184,190,197,203,209,216,222,228,234,241,247,253,260,266,273,279,286,293,301,309,317,325,332,340,348,355,362,369,376,383,389,395,400,406,411,416,420,425,429,433,437,441,445,449,452,456,459,463,466,469,472,474,477,479,482,484,485,487,488,489,489,489,488,486,484,482,479,476,473,470,466,463,459,455,451,447,443,439,434,430,426,422,417,413,409,405,402,398,394,391,387,384,380,377,374,372,369,367,365,364,364,365,367,370,374,378,382,385,389,392,395,398,401,403,406,408,410,413,415,417,419,422,424,426,428,430,433,435,437,439,442,444,446,448,450,453,455,457,460,462);
+    document.MM_Time[0][0].values[0].prop = "left";
+    document.MM_Time[0][0].values[1] = new Array(80,89,99,108,118,127,137,146,156,165,174,184,193,203,212,222,231,241,250,260,269,279,288,298,307,317,326,336,346,355,365,375,384,394,404,413,422,431,438,442,440,434,427,419,411,402,393,384,375,366,356,347,337,327,318,308,298,288,278,268,258,248,239,229,220,211,202,193,184,175,167,159,151,143,135,128,121,115,109,105,102,101,100,100,101,102,104,107,109,113,116,120,123,127,131,136,140,144,148,153,158,162,167,172,177,183,188,194,199,205,211,217,223,230,236,243,249,256,263,272,280,289,298,306,315,324,332,341,349,358,367,375,384,393,401,410,419,428,437,445,454,462,470,478,486,493,501,508,515,522,529,536,543,550,557,563,570,576,583,588,593,597,599,600,600,599,599,597,596,595,594,592,591,590,588,587,586,585,583,582,581,579,578,577,575,574,572,571,570,568,567,566,564,563,562,560,559,558,557);
+    document.MM_Time[0][0].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][0].values[0].prop2 = "style";
+        document.MM_Time[0][0].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][0].values[2] = new Array(100,99,99,99,99,99,99,98,98,98,98,98,98,98,97,97,97,97,97,97,96,96,96,96,96,96,96,95,95,95,95,95,95,94,94,94,94,94,94,94,93,93,93,93,93,93,93,93,92,92,92,92,92,92,92,92,91,91,91,91,91,91,91,91,90,90,90,90,90,90,90,90,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,89,90,90,90,90,90,90,90,90,90,90,91,91,91,91,91,91,91,91,91,91,92,92,92,92,92,92,92,92,92,92,93,92,92,92,92,92,92,92,92,92,92,91,91,91,91,91,91,91,91,91,91,90,90,90,90,90,90,90,90,90,90,89,89,89,89,89,89,89,89,89,89);
+    document.MM_Time[0][0].values[2].prop = "width";
+    if (!ns)
+        document.MM_Time[0][0].values[2].prop2 = "style";
+    document.MM_Time[0][0].values[3] = new Array(71,70,70,70,69,69,69,69,68,68,68,67,67,67,67,66,66,66,65,65,65,65,64,64,64,63,63,63,63,62,62,62,61,61,61,61,60,60,60,60,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,59,58,58,58,58,58,58,58,58,58,58,58,58,58,57,57,57,57,57,57,57,57,57,57,57,57,57,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,56,57,57,57,57,57,58,58,58,58,58,59,59,59,59,59,60,60,60,60,60,61,61,61,61,61,62,62,62,62,62,63,63,63,63,63,64,64,64,64,64,64,64,64,64,64,64,64,64,64,65,65,65,65,65,65,65,65,65,65,65,65,65,66,66,66,66,66,66,66,66,66,66,66,66,66,67);
+    document.MM_Time[0][0].values[3].prop = "height";
+    if (!ns)
+        document.MM_Time[0][0].values[3].prop2 = "style";
+    document.MM_Time[0][1] = new String("behavior");
+    document.MM_Time[0][1].frame = 201;
+    document.MM_Time[0][1].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="leaf2.jpg">
+<table width="558" border="0" cellspacing="0" cellpadding="0" height="491" bordercolor="#FF0033">
+  <tr> 
+    <td width="528" height="61"><img src="taoshu.gif" width="478" height="70"></td>
+    <td width="30" height="61"><img src="ship-dh011x1.gif" width="80" height="59"></td>
+  </tr>
+  <tr> 
+    <td width="528" align="left" valign="middle" height="57"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:100px; height:71px; z-index:1; left: -28px; top: 79px; overflow: hidden"><font color="#0000FF"><b><img src="wugui.gif" width="92" height="59" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><b><font color="#FF0000"><span class="mdd6">北京奥申委是怎样组成的？</span></font></b> 
+          </p>
+          </div>
+      </div>
+    </td>
+    <td width="30" align="center" valign="top" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="528" align="left" valign="top" height="88"> 
+      <p> 　<span class="mdd7">　北京2008年奥林匹克运动会申办委员会（简称北京奥申委），是经国务院批准，专门进行2008年奥运会申办工作的办事机构。北京奥申委成立于1999年9月6日，由北京市政府、国家体育总局、中央和国务院有关部门和奥林匹克事务专家，优秀运动员代表，教育界、科技界、文化界人士，企业家和社会其他知名人士组成。 
+        　　　　北京市市长刘淇同志任北京奥申委主席，国家体育总局局长、中国奥委会主席袁伟民同志任执行主席，国家体育总局党组书记、副局长李志坚同志、北京市副市长刘敬民同志任常务副主席，国际奥委会执委何振梁同志、中国奥委会原副主席魏纪中同志任顾问，国际田联副主席楼大鹏同志任体育主任，中国奥委会秘书长屠铭德同志和北京市政府副秘书长王伟同志分别担任秘书长。<br>
+        　　北京奥申委的常设领导机构是执行委员会，下设办公室、研究室、对外联络部、新闻宣传部、体育部、工程规划部、财务部和技术部等8个工作部门。 </span></p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

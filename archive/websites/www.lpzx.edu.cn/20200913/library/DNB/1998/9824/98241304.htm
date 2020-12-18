@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在应用程序中调用Internet 
+        Explorer 4.0<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　 随着Internet的发展与普及，越来越多的应用程序提供了Internet功能，在许多应用程序中，我们都可以看到Http:∥www.Microsoft.com之类的连接。当点击这些连接时，就可以自动打开Internet 
+        Explorer去访问。<br>
+        　　现在，让我们用Visual Basic 5.0来实现这样的功能。<br>
+        　　1．确认已经安装了Internet Explorer 4.0，然后在菜单“工程\引用”中选中“Microsoft 
+        Internet Controls”。<br>
+        　　2．新建一个Form和一个Command Button。在 Click()事件中加入如下代码：<br>
+        　　Private Sub Command1_Click()<br>
+        　　Dim IE As InternetExplorer<br>
+        　　Set IE=New InternetExplorer<br>
+        　　IEVisible=True<br>
+        　　IENavigate ″http:∥www.soundblaster.com″<br>
+        　　′IE还有AddressBar、Menu、FullScreen等几个属性可以对它进行弹性的控制。<br>
+        　　End Sub<br>
+        　　OK,运行程序，按一下按钮，看看发现了什么？　<strong>　(陕西　任沁明)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

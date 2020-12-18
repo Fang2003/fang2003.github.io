@@ -1,0 +1,138 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>VB编程俱乐部</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+      <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+        <TR> 
+          <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+          <TD WIDTH="484" HEIGHT="69"> 
+            <P ALIGN="center"><A HREF="http://pcsoft.cpcw.com" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/images/ad/pcsoft.gif" BORDER="0" WIDTH="468" HEIGHT="60"></A><BR>
+              中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+          </TD>
+        </TR>
+      </TABLE>
+    </center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><div align="center"><center><table
+    border="0" width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>VB编程俱乐部</strong></font> </td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/bkgrd.gif">　　VB编程俱乐部推出以后，我们每天都会收到热心读者的来信，并且许多上互联网的朋友也加入到我们的网站中来相互讨论、交流。欢迎爱好编程的读者加入到VB编程俱乐部来，共同学习、共同进步。<br>
+                        　　在提交问题或解答问题时，请使用 VBForums@126.com 或 VBForums@bigfoot.com 
+                        这两个邮件地址，也可以通过网站http://VBForums.yeah.net 在 BBS上讨论。<br>
+        　　<strong>问题1：</strong>请问在VB中如何关闭别的应用程序窗口?我用API的FindWindow函数找到IE4的窗口,但用API的CloseWindow函数只使该窗口最小化,而不能关闭，应该怎样做?<br>
+        　　<strong>答：</strong>首先，建立一个类模块，利用 API察看器程序，将需要用到的常量定义和API函数粘贴过来，如：<br>
+                        　　Public ConstWM_CLOSE = &amp;H10<br>
+                        　　Public Const WM_QUIT = &amp;H12<br>
+        　　Declare Function FindWindow Lib &quot;user32&quot; Alias &quot;FindWindowA&quot; (ByVal 
+        lpClassName As String, ByVal lpWindowName As String) As Long<br>
+        　　Declare Function PostMessage Lib &quot;user32&quot; Alias &quot;PostMessageA&quot; (ByVal hwnd 
+        As Long, ByVal wMsg As Long, ByVal wParam As Long, ByVal lParam As Long) As Long<br>
+        　　接下来，就可以利用 FindWindow 
+        函数获取窗口句柄，然后向这个窗口发送 WM_CLOSE 或 WM_QUIT 
+        信息让窗口自行关闭:<br>
+        　　Handle = FindWindow(&quot;IEFrame&quot;, vbNullString)<br>
+        　　PostMessage Handle,WM_CLOSE,0,0 或 PostMessage Handle,WM_QUIT,0,0 均可。<br>
+        　　<strong>问题2：</strong>我在Access97中建立了一个库存查询，由于有一种产品没有出库，只有入库，造成库存查询中没有这种产品的库存，请问怎样解决这个问题？<br>
+        　　<strong>答：</strong>Access 97支持三种连接方式：左连接、右连接、等值连接。你的问题主要是使用了等值连接！在等值连接方式下，只有两个表中键值相等的行才会出现在结果表中，其他行被放弃，所以出现了你所见到的情况。只要使用左连接或右连接就可以解决你的问题，例如使用以下SQL语句可以实现：<br>
+        　　SELECT 入库.产品编码, 入库.名称, 入库.数量 AS 入库数量, 出库.数量 
+        AS 出库数量 FROM 入库 LEFT JOIN 出库 ON 入库.产品编码 = 出库.产品编码<br>
+        　　这样，只要货物入库，无论是否出库，均可以查询出来。<br>
+        　　<strong>问题3：</strong>Windows 9x的文件拷贝既有动画，又有复制进度条显示，VB中如何实现？此动画能在Windows中提取出来吗？<br>
+        　　<strong>答：</strong>在 VB 中使用进度控件和AVI显示控件就可以做到像Windows 
+        9x 那样的效果了。此AVI动画在 VB5 的光盘上可以找到。<br>
+        　　<strong>问题4：</strong>在Windows环境下如何用VB实现任务栏右下角的小图标?并通过该图标对应用程序进行控制?如果要用到API函数,应如何使用?用哪些API函数?还有无别的方法来实现？<br>
+        　　<strong>答:</strong>在VB光盘的tools\unsupport\systray目录下有一个例子,将此目录复制到硬盘,编译生成一个OCX控件，在自己的程序中使用此控件,可以实现将程序图标放于右下角系统图标区，这方法比调用API要简单得多。<br>
+        　　<strong>问题5：</strong>如何在VB中获取可执行文件及Windows 95快捷方式的图标？<br>
+        　　<strong>答：</strong>使用API函数 LoadImage 就可以实现图标的获取：<br>
+        　　Declare Function LoadImage Lib &quot;user32&quot; Alias &quot;LoadImageA&quot; (ByVal hInst As 
+        Long,ByVal lpsz As String, ByVal un1 As Long,ByVal n1 As Long, ByVal n2 As Long, ByVal un2 
+        As Long) As Long<br>
+        　　通过LoadImage函数从指定的文件中读取 ICON、BitMap、Cursor等资源。本函数的参数组合比较多，而且使用起来复杂，详细讨论请读者参与到 
+        VBForums 网站来中进行。<br>
+        　　<strong>问题6：</strong>怎样利用Mscomm32控件判断MODEM是否打开，或者正在工作，并且怎样判断拨号时是否遇忙音？<br>
+        　　<strong>答：</strong>用Mscomm32控件向接MODEM的串口发送“AT”命令，有回应“OK”就表示MODEM已打开，否则表示关闭。检测正在工作可用Mscomm32的CDHolding属性来判断（可参考VB帮助）。拨号后若MODEM返回“BUSY&quot;，则表示忙音。在执行前，必须先设置好MODEM，并可查看一些关于MODEM的AT命令的资料！<br>
+        　　<strong>问题7：</strong>如何实现鼠标移到窗口上时变大，移出窗体时变小（如《东方快车》）？<br>
+        　　<strong>答：</strong>用Form 的 Mouse_Move事件来检查鼠标是否在窗口内：<br>
+        　　如果在窗口内就使窗口尺寸变大(Me.Height = 大窗口高度值)；<br>
+        　　如果鼠标离开就使窗口尺寸变小(Me.Height = 大窗口高度值)；<br>
+        　　但是，最好不要直接对窗口的尺寸进行增减，应该首先判断窗口尺寸是否已经是所需窗口的大小，最后设定窗口始终在最前方。下面附上代码，供参考：<br>
+        　　'首先应设置Form1.BorderStyle = 0<br>
+        　　Option Explicit <br>
+        　　Dim a As Long <br>
+        　　Dim b As Long <br>
+        　　Private Sub Form_Load() <br>
+        　　a = 3500 <br>
+        　　b = 1000 <br>
+        　　Form1.BackColor = vbMagenta <br>
+        　　Form1.Width = a <br>
+        　　Form1.Height = b <br>
+        　　End Sub <br>
+        　　'鼠标移动到窗口则窗口变大反之则变小 <br>
+        　　Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As 
+        Single) <br>
+        　　Form1.Width = 8200 <br>
+        　　Form1.Height = 2450 <br>
+        　　If (X &gt; 8000) or (Y &gt; 2000) or (X &lt; 200) or (Y &lt; 200) Then '在理论上应取0&lt;X&lt;8200 
+        or 0&lt;Y&lt;2450 ，考虑到读屏幕上的鼠标较慢会产生错误, 
+        这个范围可根据实际情况选取。 <br>
+        　　Form1.Width = a <br>
+        　　Form1.Height = b <br>
+        　　End If <br>
+                        　　End Sub (VB版主 庞一鸣) 
+                        <p align="right"><font COLOR="#000000">本文出自：<a
+        href="index.htm">《电脑报》1999年04月12日第14期</a></font> </td>
+      </tr>
+    </table>
+    </center></div><div ALIGN="center"></div><script>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</script>
+<NOSCRIPT>
+
+    <dd ALIGN="center"><a
+      HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><img
+      SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+      WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></a></dd>
+</NOSCRIPT>
+    </div>
+			<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+			<A HREF="http://www.sitemeter.com/stats.asp?site=pcwno" TARGET=_blank>
+			<NOSCRIPT>
+				<IMG SRC="http://www.sitemeter.com/meter.asp?site=pcwno" ALT="Site Meter" NoSave BORDER=0 WIDTH=20 HEIGHT=20>
+			</NOSCRIPT>
+			<SCRIPT LANGUAGE="JavaScript">
+				document.write("<img src="http://www.lpzx.edu.cn/library/DNB/1999/9914/%5C%22http:/www.sitemeter.com/meter.asp?site=pcwno&amp;refer=%22+escape(document.referrer)+%22&amp;hours=%22+(new" Date()).getHours()+"&minutes="+(new Date()).getMinutes()+"\" BORDER=0 ALT=\"Site Meter\" WIDTH=20 HEIGHT=20>");
+			</SCRIPT>
+			</A>
+			<!--WEBBOT bot="HTMLMarkup" Endspan -->
+</td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

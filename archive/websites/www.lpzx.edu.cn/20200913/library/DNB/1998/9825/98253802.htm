@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Photoshop5.0在Win95中的安装</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Photoshop5.0在Win95中的安装<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　Photoshop5.0较之4.0版有许多改进的地方，但是它对机器中已安装字体的识别能力却没有4.0强，尤其是对中文字体。当你使用TypeTool工具时会发现Font选项中少了许多字体类型，某些中文字体不显示中文名，而是以文件名代替，一旦你的电脑里安装很多字体，查找使用起来会相当麻烦，不过只要在安装时注意以下两点，上述问题就可得到解决：<br>
+        　　1.安装时不选“Typical”（典型），选择“Custom”（定制）项(图一)。因为定制安装中有一个“CMap 
+        files”选项，一定要选上(图二)。如果没有安装“CMap fils”，以后运行Photoshop，选用某些字体时，将会提示你“缺少CMap文件，无法使用该字体”。<br>
+        　　2.Photoshop安装完毕后，先不要运行，将位于 c:\program files\common 
+        files\adobe\typespt\目录下的adobefnt.LST文件用Win95自带的写字板打开，你会发现里面什么内容也没有。运行Photoshop，不用执行任何操作，退出。再打开adobefnt.LST文件，里面有内容了，而且是由许多类似如下以％Begin 
+        Font开头,以％End Font结尾的段落组合而成的：<br>
+        　　％Begin Font<br>
+        　　Handler: WinTTHandler<br>
+        　　FontType: True Type<br>
+        　　FontName: HBT<br>
+        　　FamilyName: 黑变<br>
+        　　StyleName: HBT<br>
+        　　WritingScript: SimplifiedChinese<br>
+        　　WinName: 黑变<br>
+        　　％End Font<br>
+        　　原来Adobefnt.LST就是Photoshop的字体管理文件，运行Photoshop则会初始化该文件．每一种在TypeTool工具中显示的字体类型都包含在该文件中。仔细分析一下会发现一个规律，即各个段落中的FamilyName一一对应TypeTool工具中的字体名称，FontName和WinName就是字体在Win95中的文件名。<br>
+        　　根据这一规律，我们就可以依照自己的需要来修改它了，比如：“幼圆字体”在Photoshop中显示“youyuan”，如果想让它显示＂幼圆＂，只要在adobefnt.LST文件中找到对应段落，将FamilyName的“youyuan”改成“幼圆”即可(图三)。如果某种字体未能包含在TypeTool工具字体选项中，只要根据上述段落写入adobefnt.LST中就可以正常显示了。(浙江　吴坚胤)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

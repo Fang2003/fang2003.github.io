@@ -1,0 +1,723 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>咱们来测测显卡温度</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+      <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+        <TR> 
+          <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+          <TD WIDTH="484" HEIGHT="69"> 
+            <P ALIGN="center"><A HREF="http://vote.cpcw.com" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/images/ad/vote.gif" BORDER="0" WIDTH="468" HEIGHT="60"></A><BR>
+              中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+          </TD>
+        </TR>
+      </TABLE>
+    </center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><div align="center"><center><table
+    border="0" width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B">
+          <p align="center"><font face="黑体" color="#FFFFFF"><strong>咱们来测测显卡温度</strong></font></p>
+        
+        </td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/bkgrd.gif">　　编者按：芯片发展到今天，速度越来越快，温度也越来越高，这已成为制约性能提高的关键一环。在各类报刊几乎所有的关于硬件的测试报告中，“温度”这一项也已成为标准测试数据之一。作为DIYer，我们怎样自己来测试芯片温度?这篇文章介绍了作者如何自己动手测试创新TNT显卡的芯片温度，并通过测试，针对一些媒体的文章提出了自己的看法，很有代表性，不妨一看。<br>
+        　　我的系统配置如下：赛扬300A超频至450MHz＋64M内存＋中文Winodws 98＋创新TNT，主频为100MHz，TNT的BIOS为2.046版本，驱动程序为nVidia 
+        3月9日提供的“雷管”改进版4.11.01.0116，显卡超频软件为MaxClock1.4版。<p
+        align="center"><strong>测试准备</strong></p>
+        <p>　　由于没有找到测试金属温度的理想的仪器（大多测温仪的探头只适用于液体或气体），所以我干脆就用DT9208数字万用表上的测温功能来测试了。当然DT9208数字万用表的测温探头也不适用于金属表面的直接测量，而且精度也只到±1℃，不过使用起来还是很方便的。<br>
+        　　先在创新TNT的芯片的散热片上固定一个586CPU上用的风扇，由于显卡芯片的散热片上没有固定螺栓的地方，我只好用双面胶将风扇中心圆圈部分粘在散热片叉指上，并用细漆包线将散热片和风扇扎紧（因为TNT的芯片比散热片小，所以漆包线能穿过散热片与芯片粘连部分的边缘将风扇固定），当然用塑料固定线也很方便，一根才几分钱（就是那种用来固定机箱里许多排线的塑料线）。然后我将显卡散热片上已经钻出的2mm深1mm宽的小孔里涂上白色散热硅胶，并将探头伸入内部并固定好，再将另外一个探头用导热粘胶（一种粘性厚胶垫，本身可以用来为不规则元件表面散热）粘在焊有TNT芯片的显卡线路板（PCB）的另一面对应处（此处线路板的铜箔已做成多孔散热状）。<br>
+        　　当天的室温偏高而且潮湿。测试时，我将立式机箱的左侧板一直打开。两个数字万用表在开机前测到的温度都是21℃。</p>
+        <p align="center"><strong>初步测试</strong></p>
+                        <p>&nbsp;&nbsp;&nbsp; 先将增加的风扇电源连接好，开机后，前20秒系统自检，20～40秒引导Windows 98系统，40秒后系统稳定。5分钟后，显卡散热片和PCB板的温度基本稳定。显卡内核频率为90MHz（初始值），显存频率Mem 
+                          Clock为110MHz（初始值）。温度变化如表一。</p>
+                        <table border="1" width="61%" cellspacing="0" cellpadding="0" align="center">
+                          <tr> 
+                            <td width="33%" align="center">时间（秒）</td>
+                            <td width="33%" align="center">散热片温度（℃）</td>
+                            <td width="34%" align="center">PCB温度（℃）</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">0</td>
+                            <td width="33%" align="center">21</td>
+                            <td width="34%" align="center">21</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">20</td>
+                            <td width="33%" align="center">23</td>
+                            <td width="34%" align="center">25</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">40</td>
+                            <td width="33%" align="center">25</td>
+                            <td width="34%" align="center">29</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">60</td>
+                            <td width="33%" align="center">27</td>
+                            <td width="34%" align="center">31</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">80</td>
+                            <td width="33%" align="center">28</td>
+                            <td width="34%" align="center">33</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">120</td>
+                            <td width="33%" align="center">29</td>
+                            <td width="34%" align="center">34</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">180</td>
+                            <td width="33%" align="center">30</td>
+                            <td width="34%" align="center">36</td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" align="center">300</td>
+                            <td width="33%" align="center">31</td>
+                            <td width="34%" align="center">37</td>
+                          </tr>
+                        </table>
+                        <p> 　　由此可见，开机后，显卡温度迅速上升，到5分钟后基本稳定，散热片的温度的变化基本在10℃左右，而PCB板由于没有风扇冷却比散热片的温度还高7℃，但完全在可接受的范围内。<br>
+                          　　在以上基础上，将风扇电源切断，停止对散热片的强风冷却，温度的变化令人惊讶(如表二)！</p>
+                        <table border="1" width="59%" align="center" cellspacing="0" cellpadding="0">
+                          <tr> 
+                            <td width="33%" align="center"> 
+                              <div align="center">时间（秒）</div>
+                            </td>
+                            <td width="33%" align="center"> 
+                              <div align="center">散热片温度（℃）</div>
+                            </td>
+                            <td width="34%" align="center"> 
+                              <div align="center">PCB温度（℃）</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">0</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">31</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">37</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">40</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">36</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">38</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">80</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">41</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">41</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">120</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">44</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">44</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">160</div>
+                            </td>
+                            <td width="33%"> 
+                              <p align="center">48 
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">46</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="30"> 
+                              <div align="center">200</div>
+                            </td>
+                            <td width="33%" height="30"> 
+                              <div align="center">50</div>
+                            </td>
+                            <td width="34%" height="30"> 
+                              <div align="center">48</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">240</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">50</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">52</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">280</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">54</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">52</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">320</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">56</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">53</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">360</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">56</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">53</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">400</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">58</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">55</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">440</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">60</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">56</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">480</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">60</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">57</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">520</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">61</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">57</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">560</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">62</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">58</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">600</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">63</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">59</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">780</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">67</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">62</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">960</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">68</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">63</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">1140</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">69</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">63</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <p> 　　20分钟内，散热片温度由原来的30℃上升到70℃，升幅整整40℃！PCB板的温度也上升了近30℃，而这只是在Windows 
+                          98系统中开了几个窗口，根本就没有进行任何3D操作！由这些数据基本可以看出，TNT芯片即使在一般应用时也有相当高的发热量，而且这还是在显卡芯片初始工作频率下的情况。某国外网站的文章中提到的“TNT在平常非3D工作状态下发热量很小”的说法是站不住的。<br>
+                          　　如此状态下，即使TNT芯片耐热，在封闭的机箱里其他部件是否也能像TNT一样耐热呢？由于这么大的热量没有直接排放的通道，机器中的某些不稳定的部件就容易出问题了。</p>
+        <p align="center"><strong>运行3D游戏测试</strong></p>
+                        <p>&nbsp;&nbsp;&nbsp; 　　下面看一下运行3D游戏后的情况(如表三)。我运行Unreal开头的演示动画的原因是：Unreal对硬件的要求之大远超过Quake2，而且演示动画可以周而复始地进行。同时，我将画面的分辨率设定为1024×768。</p>
+                        <table width="60%" border="1" cellspacing="0" cellpadding="0" align="center">
+                          <tr> 
+                            <td> 
+                              <div align="center">时间（秒）</div>
+                            </td>
+                            <td> 
+                              <div align="center">散热片温度（℃）</div>
+                            </td>
+                            <td> 
+                              <div align="center">PCB温度（℃）</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">0</div>
+                            </td>
+                            <td> 
+                              <div align="center">69</div>
+                            </td>
+                            <td> 
+                              <div align="center">64</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">40</div>
+                            </td>
+                            <td> 
+                              <div align="center">69</div>
+                            </td>
+                            <td> 
+                              <div align="center">64</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">80</div>
+                            </td>
+                            <td> 
+                              <div align="center">70</div>
+                            </td>
+                            <td> 
+                              <div align="center">65</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">120</div>
+                            </td>
+                            <td> 
+                              <div align="center">71</div>
+                            </td>
+                            <td> 
+                              <div align="center">66</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">160</div>
+                            </td>
+                            <td> 
+                              <div align="center">72</div>
+                            </td>
+                            <td> 
+                              <div align="center">68</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">200</div>
+                            </td>
+                            <td> 
+                              <div align="center">73</div>
+                            </td>
+                            <td> 
+                              <div align="center">68</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">240</div>
+                            </td>
+                            <td> 
+                              <div align="center">74</div>
+                            </td>
+                            <td> 
+                              <div align="center">69</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">280</div>
+                            </td>
+                            <td> 
+                              <div align="center">74</div>
+                            </td>
+                            <td> 
+                              <div align="center">69</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">320</div>
+                            </td>
+                            <td> 
+                              <div align="center">75</div>
+                            </td>
+                            <td> 
+                              <div align="center">69</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">360</div>
+                            </td>
+                            <td> 
+                              <div align="center">75</div>
+                            </td>
+                            <td> 
+                              <div align="center">69</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">480</div>
+                            </td>
+                            <td> 
+                              <div align="center">76</div>
+                            </td>
+                            <td> 
+                              <div align="center">70</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td> 
+                              <div align="center">600</div>
+                            </td>
+                            <td> 
+                              <div align="center">77</div>
+                            </td>
+                            <td> 
+                              <div align="center">71</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <p> 　　运行3D游戏后，显卡芯片的温度再度上升，竟达到吓人的77℃！快变成真正的“炸药”了！而且，由于芯片和散热片、散热片和温度探头间的接触问题和传热导速度，此时芯片内的温度肯定比测得的数据还要大，真是难以想象。还是赶快退出游戏把风扇接上吧！此时测得的数据如表四。<br>
+                          &nbsp;&nbsp;&nbsp; 虽然风扇价格便宜，也不起眼，但这时的作用太明显了，2分钟后，显卡散热片的温度又回到了令人放心的数字了。</p>
+        <p align="center"><strong>极限测试</strong></p>
+                        <p>&nbsp;&nbsp;&nbsp; 　　接下来，开着风扇，可以安心地做超频与温度的测试了。<br>
+                          　　我先用MaxClock来调整创新TNT的内核频率Chip Clock和显存频率Mem Clock，然后再进入Unreal测试温度直到温度数字稳定，改变Chip 
+                          Clock和Mem Clock的大小来观察频率与温度的关系。</p>
+                        <table border="1" width="60%" cellspacing="0" cellpadding="0" align="center">
+                          <tr> 
+                            <td width="33%" align="center"> 
+                              <div align="center">时间（秒）</div>
+                            </td>
+                            <td width="33%" align="center"> 
+                              <div align="center">散热片温度（℃）</div>
+                            </td>
+                            <td width="34%" align="center"> 
+                              <div align="center">PCB温度（℃）</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">0</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">77</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">71</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">60</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">53</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">60</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">120</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">42</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">50</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">180</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">38</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">45</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">240</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">36</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">43</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">300</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">36</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">43</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%"> 
+                              <div align="center">960</div>
+                            </td>
+                            <td width="33%"> 
+                              <div align="center">55</div>
+                            </td>
+                            <td width="34%"> 
+                              <div align="center">41</div>
+                            </td>
+                          </tr>
+                        </table>
+                        <p> 　　先将Chip Clock由原来的90MHz改为100MHz，运行Unreal数分钟后，温度由原来的35/41℃变为35/42℃，基本上没有变化。再将Chip 
+                          Clock设定为110MHz，Mem Clock继续保持初始的110MHz，温度上升到36/43℃，还是没有多大变化。现在将显存Mem 
+                          Clock同时设定在125MHz上，这样就达到了110/125MHz的超级TNT的频率了，结果温度还是只维持在36/44℃的水平上。笔者个人认为，在风扇的作用下，只要TNT芯片的工艺没问题，超频也是轻而易举的事！根本没有某些文章中提到了所谓某些TNT显卡(比如我的)有生产工艺的问题。<br>
+                          　　不过，即使在ChipClock/MemClock达到110/125MHz的情况下，Unreal在1024×768下的速度也仅由初始频率下的19.8fps上升到21.8fps，总性能才提升10％（由于测试数字小，误差就大，同样情况下，Quake2的增长幅度仅5％），远没有一些文章中提到的超频后的TNT能多发挥出28％的离奇能力来，看来要发挥TNT超值部分的能力还得靠CPU来帮忙吧！</p>
+                        <table border="1" width="61%" height="223" cellspacing="0" cellpadding="0" align="center">
+                          <tr> 
+                            <td width="33%" align="center" height="16"> 
+                              <div align="center">时间（秒）</div>
+                            </td>
+                            <td width="33%" align="center" height="16"> 
+                              <div align="center">散热片温度（℃）</div>
+                            </td>
+                            <td width="34%" align="center" height="16"> 
+                              <div align="center">PCB温度（℃）</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">0</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">36</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center">43</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">40</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">43</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center">47</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="20"> 
+                              <div align="center">80</div>
+                            </td>
+                            <td width="33%" height="20"> 
+                              <div align="center">49</div>
+                            </td>
+                            <td width="34%" height="20"> 
+                              <div align="center">51</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">120</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">54</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center">55</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">160</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">59</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center">58</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">200</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">63</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center">61</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">240</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">66</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center">64</div>
+                            </td>
+                          </tr>
+                          <tr> 
+                            <td width="33%" height="19"> 
+                              <div align="center">280</div>
+                            </td>
+                            <td width="33%" height="19"> 
+                              <div align="center">死机</div>
+                            </td>
+                            <td width="34%" height="19"> 
+                              <div align="center"></div>
+                            </td>
+                          </tr>
+                        </table>
+                        <div align="center"></div>
+                        <p><br>
+                          　　最后再进行死亡模式测试！在超频的情况下（ChipClock/MemClock=110/125MHz）关闭风扇，看看到什么温度下死机！记住刚才在77℃的高温下TNT都挺过来了。测试结果见表五。<br>
+                          　　显卡芯片上的散热片和PCB板的温度迅速上升，4分半钟后温度分别上升到67℃和64℃后死机。由于热传导的速度比较慢，此时芯片里面的温度应该远高于67℃，可能比77℃还要高，结果显卡的“心脏”就停止了“跳动”。 
+                        </p>
+                        <p align="center"> <b>测试结果</b></p>
+                        <p> &nbsp;&nbsp;&nbsp; 通过上面的测试可以得出这样的看法：<br>
+                          　　·RIVA TNT芯片确实是个会产生高热量的芯片，这也许就是0.35μm工艺所无法解决的毛病吧。 
+                          <br>
+                          　　·用提高内核和显存频率的方法来提高TNT的3D能力有限。 <br>
+                          　　·TNT显卡的芯片在机器启动后就开始产生热量，当然，加速3D时会产生更多的热量，但并不是想象中的那么多。<br>
+                          　　此外，我还测试了CPU在整个过程中的发热情况，结果非常理想，无论我如何进行显卡超频和测试（CPU外频一直为100MHz），CPU的温度由开机时的20℃上升到35℃后就再也不上升了。<br>
+                          　　由于测试条件简陋，以上的数据还无法做到定量分析，但从其中温度的变化还是能看出TNT中的许多奥妙的！<br>
+                          <strong>(陈烨)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月12日第14期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div><div ALIGN="center"></div><script>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</script>
+<NOSCRIPT>
+
+    <dd ALIGN="center"><a
+      HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><img
+      SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+      WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></a></dd>
+</NOSCRIPT>
+    </div>
+			<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+			<A HREF="http://www.sitemeter.com/stats.asp?site=pcwno" TARGET=_blank>
+			<NOSCRIPT>
+				<IMG SRC="http://www.sitemeter.com/meter.asp?site=pcwno" ALT="Site Meter" NoSave BORDER=0 WIDTH=20 HEIGHT=20>
+			</NOSCRIPT>
+			<SCRIPT LANGUAGE="JavaScript">
+				document.write("<img src="http://www.lpzx.edu.cn/library/DNB/1999/9914/%5C%22http:/www.sitemeter.com/meter.asp?site=pcwno&amp;refer=%22+escape(document.referrer)+%22&amp;hours=%22+(new" Date()).getHours()+"&minutes="+(new Date()).getMinutes()+"\" BORDER=0 ALT=\"Site Meter\" WIDTH=20 HEIGHT=20>");
+			</SCRIPT>
+			</A>
+			<!--WEBBOT bot="HTMLMarkup" Endspan -->
+</td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

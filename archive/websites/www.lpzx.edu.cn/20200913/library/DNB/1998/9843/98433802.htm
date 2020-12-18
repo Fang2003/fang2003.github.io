@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CAKEWALK中的滑音制作</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>CAKEWALK中的滑音制作<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">许多业余电脑音乐爱好者在制作MIDI乐曲时，常常被这样的问题所困惑：不管是把MIDI键盘还是将虚拟键盘上的弯音轮怎样推来推去，最多只能作出大二度的滑音。这对于制作像吉他或萨克斯等乐器的声部来说，简直就像鸟儿被绑住了翅膀，只能作出机械呆板的键盘味十足的东西来。要是有一把MIDI吉他或MIDI电吹管就好了！可惜对于绝大多数非专业玩家来说，这无异是天方夜谭。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">其实，绝大多数音源都支持大跨度的滑音，甚至包括像WINGROOV、SYG50这样的软音源。问题是你怎样把它的这一强大功能“揪”出来。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">下面以笔者所用的DREAM128音源卡为例，说明如何在CAKEWALK中制作任意跨度的滑音。DREAM128支持GS格式，所以本文所述方法适用于一切GS兼容的音源或声卡。WINGROOV软音源由于支持某些GS控制功能，也适用于此法。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">首先打开CAKEWALK软件VIEW菜单中的SYSX,则会弹出一个系统专有信息窗口(如图)。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">在这个窗口中，可以见到有256个BANK。任意选择一个空的BANK，按“EDITBYTES”键进入。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">这时会弹出一个系统信息编辑窗口，我们可以在这个窗口中输入GS系统信息。有关弯音的GS信息格式是：F041004212402n10vvF7。其中n指的是通道号（Channel0～15），vv指的是弯音范围（40H～58H），缺省为42H,即大二度。例如我们想送出信息，使通道1的弯音范围为小三度（5个半音），则应输入：F04100421240211045F7。又如想使通道5的弯音范围为2个八度，则应输入：F04100421240251058F7。以此类推。注意vv要用16进制表示，且从40H算起。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">输入完系统信息后按“OK”键退出，并按“SAVEBANK”键取名存盘，比如弯音范围为小三度可取名为BEND5.SYX，这样以后编新曲子时就可以直接调用。同时，要记住相应弯音范围系统信息的BANK编号。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">然后，选择指定的音轨，按鼠标右键打开“EVENTLIST”窗口，按“INSERT”键插入一个MIDI事件。双击“NOTE”位置，把NOTE改为SYSTMEEXCLUSIVE，回到“EVENTLIST”窗口，把该事件的VALUE值改为上面所说的相应的BANK编号，并把节拍栏中的值改为你所需要插入的位置的数值。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">以后，只要乐曲一进行到该位置时，该系统信息会被发送给音源，音源就会根据系统信息的值作出相应调整。此时再推动MIDI键盘上的弯音轮，你会高兴地发现弯音变化范围已经和你所指定的一模一样了。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">在使用完大范围弯音后，最好记住把弯音范围调整回缺省值，以免后面的乐曲走调。只需把大二度弯音范围的系统信息插入乐曲相应位置即可。在SYSX窗口中，还有一个AUTO键，当相应的系统信息被设置成AUTO后，只要该乐曲文件一打开，系统信息就会自动送入音源。在CAKEWALK软件中，对应于GM、GS、XG格式均附有现成的系统复位信息BANK，可以直接调用。我们可以在乐曲开始位置放置系统复位信息，并设为AUTO模式，这样可以避免很多意想不到的麻烦。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">对于XG兼容的音源或软音源，如MU10、MU80、SYG50等，可以参考相应的XG系统信息格式，在SYG50的帮助文件里就有很详细的说明。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">最后再列出其他几种常用GS系统信息，供参考（数字均为16进制）：</font> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <font color="#369681">Reverbtime:F041004212400134vvF7Chorusmasterlevel:F04100421240013AvvF7(vv缺省值为64)　&nbsp; 
+        &nbsp; </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#369681">Chorusdepth:F04100421240013EvvF7Mastervolume:F041004212400004vvF7(vv缺省值为7F)<br>
+        <br>
+        (广东师勇)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期38版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

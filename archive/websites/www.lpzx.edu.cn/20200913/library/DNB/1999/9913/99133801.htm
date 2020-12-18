@@ -1,0 +1,139 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>用Director做电子相册</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+
+<table BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+  <tr>
+    <td WIDTH="221" HEIGHT="69"><a HREF="../../../../www_lpzx_edu_default.html"><img SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></a></td>
+    <td WIDTH="484" HEIGHT="69"><p ALIGN="center"><A
+    href="netschool/index.htm" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/netschool/wlxy.jpg" BORDER="0"
+    WIDTH="468" HEIGHT="60"></A><br>
+    中文十大网站之一，广告效果极佳，欢迎在此<a href="bill/index.htm">刊登广告</a>。 
+    </td>
+  </tr>
+</table>
+</center></div>
+  <center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>用Director做电子相册</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/%B5%D7%CE%C6.gif"><p align="left">　　大家肯定拍过很多照片，加起来也有厚厚的好几本相册了吧！可是有的照片发黄了，有的照片遗失了，怎样才能长久地保存这些难忘的“瞬间”呢？有办法，制作成电子相册就可以了。这是一种很精致，有声音、有文字甚至还能加上动画的电子相册。<br>
+        　　在制作电子相册前，首先要有数字化的照片，如果有数码照相机，就可以直接把照片输入到计算机中，要不就利用扫描仪把照片扫入计算机，保存的时候可以用BMP、JPEG、GIF等常见图像格式。<br>
+        　　下面，我将介绍怎样用Director来制作一本精致的电子相册。<br>
+        　　<strong>一、声音的录制</strong><br>
+        　　先录好以WAV为后缀的声音文件(因为Director中只能引入WAV声音文件)，在Windows的录音机中，点“Options”菜单下的“Record 
+        Settings”中的“Sound Quality Scheme”，将“声音质量”设为“CD音质”，这种音质，容量虽大但失真小(如图1)。<img
+        src="image/38-1.gif" width="216" height="133" alt="38-1.gif (5936 字节)" align="right">按下红色录音按钮，输入一段话如：“嗨！大家好，我是×××，欢迎观赏我的电子相册。”然后试听，满意就存盘。再创建一个新的声音文件，录制以下一段话“谢谢观赏，再见！”也保存好。<br>
+        　　<strong>二、3D文字的制作</strong><br>
+        　　在Director中输入的文字是二维的，所以用一个专门制作3D文字的软件Cool3d先制作好文字，再引入到Director中去。分别输入以下文字如：“童年的梦、再见、上一页、下一页、退出以及你的姓名”。然后，把光标移到其他地方，3D的文字就出现了。选择“Image”菜单下的“Save 
+        As”下的BMP文件(存为BMP图像文件)或者选“VidelRile”项，存成AVI动画文件。<br>
+        　　<strong>三、电子相册的制作</strong><br>
+        　　Director是美国Macromedia公司的产品(和著名的Authorware是同一家公司)，它的图标就是一把导演椅。你的任务就是当一个导演，把一些角色进行组织、编排。事实上，用Director制作出的电子相册非常精致、美观，具有永久的保存价值。<br>
+        　　1.建立角色库<br>
+        　　先从File/Import中分别选中照片(这些照片最好事先用Photoshop、Photoimpact等软件进行过艺术渲染)的正确路径、文件名，再按“Import”按钮引入。<br>
+        　　然后再从外面引入WAV声音文件，引入“童年的梦、你的姓名、 
+        上一页、下一页、退出、再见！”等3D文字，以及一个相框，引入角色的方法与上面照片的引入相同。于是Cast(角色库)中就出现了这些角色(如图2)。<img
+        src="image/38-2.gif" width="236" height="134" alt="38-2.gif (5161 字节)" align="left"><br>
+        　　有了这些“角色演员”，我们就可以来制作电子相册了！<br>
+        　　2.组织分镜表<br>
+        　　在Director中制作电子相册，首先得有“帧”的概念，“帧”在Director的Score(分镜表)中称为Frame，播放的时候，指针是从Frame1开始往后播放的。有了帧的概念后，制作电子相册就直观多了(如图3)。<img
+        src="image/38-3.gif" width="262" height="149" alt="38-3.gif (7921 字节)" align="right"><br>
+        　　同时打开Score和Cast窗口，先从“Cast”中拖动相框到“Score”的通道1Frame 
+        1中，再在“Stage”(舞台)上调整大小、位置，选中Frame 1～Frame 200,按下“Ctrl＋B”，使相框撑满。<br>
+        　　再拖入标题“童年的梦”到通道2Frame 1，使之在“Stage”(舞台)上并放在相框的中间。在“Score”中选Ink效果下的“Bkgnd 
+        Transparent”项，使其透明。<br>
+        　　拖动选中通道2Frame 1～Frame 10，然后按“Ctrl＋B”。再拖动WAV声音角色到特效通道中的声音通道Sound1中，并拖动选中Frame 
+        1～Frame 10，按“Ctrl＋B”，为电子相册配上声音。<br>
+        　　在节奏通道的Frame 10上双击，打开对话窗，选中其中的“Wait for 
+        Mouse Click or Key Press”项，再按“OK”返回(如图4)。<br>
+        　　这样就在Frame 10中设置了一个等待，直到你按下鼠标键或者键盘上的任意键后，才会往后继续播放。<br>
+        　　把第一张照片从Cast(角色库)中拖到Score(分镜表)的通道2Frame 11中，选“Score”中的Ink效果下的“Bkgnd 
+        Transparent”项，使其透明。<br>
+        　　如需要背景音乐，可以从外面引入；如需文字说明，一种方法是在外面用Cool3d、Photoshop等软件做好后引入，另一种方法是直接在Director中创建文字。<br>
+        　　拖动文字“上一页”到通道3Frame 11中，拖动“下一页”到通道4Frame 
+        11中，拖动“退出”到通道5Frame 11中，调整在Stage(舞台)中的位置，把它们放在相框的下面，排列整齐。<br>
+        　　选中“上一页”，在Score左上角按“Script”选“New Scricpt”，在Script脚本中输入以下Lingo语言(如图5)：<img
+        src="image/38-5.gif" width="176" height="129" alt="38-5.gif (3579 字节)" align="right"><br>
+        　　on mouseup<br>
+        　　go frame 1<br>
+        　　end<br>
+        　　选中“下一页”，在“下一页”的Script脚本中输入：<br>
+        　　on mouseup<br>
+        　　go frame 21<br>
+        　　end<br>
+        　　选中“退出”,在“退出”的Script脚本中输入：<br>
+        　　on mouseup<br>
+        　　go frame 200<br>
+        　　end<br>
+        　　双击通道1,按“Ctrl＋B”，使相框撑满。<br>
+        　　第二、第三直至最后一张相片的制作方法都与第一张基本相同，所要修改的只是Lingo语言中的Frame要进行相应的增加，在这里，一张相片所占的Frame数是20。所以，在上述的Script角本中使“上一页”和“下一页”的Frame数都相应增加20。因为刚才在“退出”的Script角本中输入：go 
+        frame 200，所以，这本相册的照片可以放10张，如果需要增加，只要把200改成300(15张)、400(20张)就可以了。每一张照片的最后一帧都要打开节奏通道的对话窗，选其中的“Wait 
+        for Mouse Click or Key Press”项，再按“OK”返回。这样就在这个帧设置了一个等待，直到你按下鼠标或者任意键后，才会往后播放。<br>
+        　　现在，我们来做电子相册的背面。把“再见！”拖到通道2Frame 
+        201，在Stage(舞台)上把它放到顶部，再拖一个“再见！”到2Frame 210，放在舞台的中间，选中Frame 
+        201——Frame 210，按下“Ctrl＋B”。选择工具栏中的“→”播放一下，文字就从上往下移动了。<br>
+        　　再把“谢谢观赏，再见！”从Cast中拖到声音通道Soune 1中，选中Frame 
+        201～210，按下“Ctrl＋B”，这样就配好了声音。<br>
+        　　最后可以在通道3Frame 211中放入你的姓名等内容，要制作成从下往上运动，只要把前一个姓名放在底部，最后一个放在中间，相差10个帧，再按下“Ctrl＋B”就可以了。<br>
+        　　想要播放一下，很简单，只要选择工具栏中的“→”播放(刚才已经介绍过)，或者在Windows菜单下启动ContralPannel(控制面板)，按其中的“→”<img
+        src="image/38-6.gif" width="210" height="52" alt="38-6.gif (2560 字节)" align="right">按钮播放，有声有色、有动有静，你的照片可以随意往前、往后观赏(如图6)。<br>
+        <img src="image/38-7.gif" width="270" height="266" alt="38-7.gif (7553 字节)"
+        align="left">　　如果想要背景音乐，也很简单，在Director中有两个声音通道，可以同时播放两个声音，刚才，我们只用了Sound 
+        1，现在我们可以把背景音乐放在Sound 2中(背景音乐可以从外边引入)。<br>
+        　　如果想要脱离Director系统进行播放也可以，Director有这样的功能，我们可以把电子相册制作成可执行文件，可以随意在Windows3.X或Win95系统中播放(注意：窗口Options设置中Create 
+        for一定要选Windows3.1)。要注意的是，制作成可执行文件后你的电子相册的内容就不能修改了。把Director文件变成EXE文件称为“打包”——Create 
+        Projector。在File菜单下的Create Projector窗口中,设定其中要“打包”文件的路径、文件名，然后按“Create”按钮即可(如图7)。怎么样，很简单吧！<br>
+        　　相信在看完这篇文章后，你们都可以制作出一本令人羡慕的电子相册。<br>
+        <strong>(上海　樊　钏)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月5日第13期</a></font> 
+        </td>
+      </tr></table>
+            </center>
+          </div>
+        <CENTER>
+          <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+          <NOSCRIPT> </NOSCRIPT>
+        </CENTER>
+        <NOSCRIPT>
+        <DD ALIGN="center">
+          <CENTER>
+            <A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A>
+          </CENTER>
+        </DD>
+        </NOSCRIPT> 
+      
+
+</TABLE></CENTER></DIV></body></html>

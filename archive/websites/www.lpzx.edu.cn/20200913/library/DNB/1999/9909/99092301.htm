@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>修 复 被 破 坏 的 BIOS</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>修 复 被 破 坏 的 BIOS</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　读了2月8日第6期23版《主板复苏记》一文，立刻勾起了我的一段回忆，特此提笔，希望能与各位读者交流一下。<br>
+        　　1998年12月25日晚上（我的计算机时钟绝对准确），在进行完日常的一系列操作后，又准备对系统进行一下“挖潜”工作，我相信这是大多数PC 
+        发烧友的共同爱好。主板的BIOS已经被升级过好几次了，而且目前我还没找到更新的BIOS升级数据文件，所以我把目光转向了主板附带光盘上的DMI（Desktop 
+        Management Interface，桌面管理接口）程序。DMI为用户提供了一个与系统硬件直接对话的机会，它里面提供的许多功能是CMOS设置不具备的，如调整主板上的二级缓存大小和CPU 
+        Internal Cache大小等等，几乎每一项设置都对我有着极大的诱惑力。第一次使用DMI时，为了安全起见，用软盘启动，并且跳过了Autoexec.bat和Config.sys文件，成功地修改了包括CPU 
+        Internal Cache在内的很多内容。有了第一次的成功经验，决定将步子迈得大些，再尝试一下修改DMI提供的设置。<br>
+        　　这一次我在Windows的MS－DOS方式下直接启动DMI程序，我想它无非是按照一定格式修改一些与系统各硬件相关的信息，不会完全重写BIOS，危险性要比升级Flash 
+        BIOS低得多，更何况Windows 98也不会对危及系统的操作置之不理，所以没有过多的担心。在浏览完DMI提供的“内部信息”后，修改了其中几项，然后按下F10键更新系统信息，屏幕上的内容在停顿了几秒钟后，弹出了不可更改信息的提示，然后，所有项的内容变得完全一样了。我想反正也没改写成功，估计问题不大，只要正常退出就没事了，于是按Esc键退出程序。回到Windows 
+        98，看到系统有一个关于程序错误的提示，这种提示不知每天要遇上多少次，所以漫不经心地将它关闭了。当然不会就此罢休，于是再次进入MS－DOS方式下，键入“DMICFG”，回车后，黑屏，键盘没有任何响应，更惨的是按下Reset键后，喇叭里传来一长两短和两声乐音的报警，屏幕上再也看不到那些熟悉的版本信息了，同时软驱灯在亮着。一个可怕的念头快速闪过脑海，但是又被我迅速地否定掉了，谁愿意发生那件事呢？接下来就是一连串无谓的“检查”：不断地按下Reset键；时不时关断电源；打开机箱拔插一下各连线；给CMOS放电；甚至取下CPU。除了拔下硬盘或软驱后，报警声改为连续短音外，其他没有什么变化，最后证明BIOS已被破坏！<br>
+        　　通常解决BIOS被破坏的办法是找一块好的BIOS芯片替换一下，然后进行一连串复杂的操作才能修复。正好是周末，去哪里寻找相同的BIOS芯片呢？抱着一丝希望，我把自己所有有关电脑的书籍、报刊、杂志拿出来，开始寻找解决办法。很快，我找到了理论依据：Flash 
+        BIOS是以区块（Block）来作为消除和写入单位的，其中有一部分是Boot 
+        Block，一般情况下，这一部分区块是不会被破坏的，因为它需要加载＋12V的电压（BIOS的其它部分只需加载＋5V的电压），当Flash 
+        BIOS的其它区域被破坏时，Boot Block中的程序可利用磁盘重建整个Flash 
+        ROM，但是，它只支持ISA显卡。看来真有希望了!<br>
+        　　第二天，我找来一块ISA显卡装上，接好各连线，接通电源。报警声消失了，显卡的版本信息出现在漆黑已久的屏幕上，Award 
+        Boot Block启动信息出现了，最后系统顺利地启动了。接着屏幕上出现了一大堆英文提示，说找不到硬盘，并且提示了几种可能性。我以为是这个Boot 
+        Block不支持FAT32，也就没多加理会，毕竟这与看到计算机重新启动相比，实在是太微不足道了。虽然键盘还没完全正常，比如键盘上的各指示灯全不亮，有时候大小写也出现问题，但这并不影响接下去的工作。由于升级Flash 
+        BIOS所需的文件全部在硬盘上，此时无法使用硬盘，所以忙给朋友打电话，请他帮我从大众公司的主页上下载所需的文件。取得胜利的时刻到了：拿到带有升级文件的启动盘，放入软驱，顺利启动，从软盘上运行Flash 
+        BIOS升级程序……终于成功地将被破坏的BIOS恢复了。但是硬盘仍然无法找到，回想起自己曾经在慌乱中到机箱中乱拔过一气，很可能是把硬盘数据线弄松了。于是重新将数据线插牢，一切就又都恢复正常了。(北京　唐明) 
+        </p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

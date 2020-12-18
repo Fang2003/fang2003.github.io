@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>“网上高手速成完全手册”答疑</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>“网上高手速成完全手册”答疑<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　拙作“网上高手速成完全手册”在《电脑报》(第29期20、21版)发表后，很多朋友来信询问各种问题，现就来信中的典型问题做一解答。<br>
+        　　<strong>一、关于注册表的修改</strong><br>
+        　　1.Modem的所在COM口速率如何设为921600？<br>
+        　　在桌面按住“我的电脑”→“属性”→“设备管理器”→“端口(Com 
+        ＆Lpt)”，选择你的Modem所在的端口，如COM2，选择端口属性，将端口设置中的波特率改为最大值921600，流量控制选择“硬件”。在高级属性中将接收缓冲区及传输缓冲区设到最大。<br>
+        　　2.如何修改maxsockets键值？<br>
+        　　点击“开始”→“运行”→“regedit.exe”(回车)，打开注册表编辑窗口寻找：<br>
+        　　\HKEY_LOCALMACHINE\System\CurrentControlSet\Services\VxD\NWLink\Ndi\params\maxsockets\max，将内容改为1020。<br>
+        　　以上的修改要在机器重新启动后才能生效。上述修改方式仅供各位参考，所以改过后，不一定能正确执行,速度也不一定能提升多少,完全因Modem而异。若改后出现问题，请改回来(注意记下修改前的值)。<br>
+        　　其他键值的修改，可以使用MTUSpeed这个软件完成。MTUSpeed使用非常简单，不再多述。<br>
+        　　<strong>二、文中提到的一些软件的下载地址</strong><br>
+        　　&middot;MTUSpeed：<br>
+        　　http://www.nantong.com/share/MTUspeed.zip<br>
+        　　&middot;Magic Mail Monitor：<br>
+        　　http://www.nantong.com/share/magic252.zip<br>
+        　　&middot;Gravity：<br>
+        　　ftp://ftp.microplanet.com/grav21.exe<br>
+        　　ftp://cortez.microplanet.com/grav21.exe<br>
+        　　&middot;System Command 4.0 Delux：<br>
+        　　http://pcsoft98.yeah.net<br>
+        　　<strong>三、现在可以连接的部分国内新闻组</strong><br>
+        　　瀛海威：space.sheny.ihw.com.cn<br>
+        　　CEI自由软件： news.freesoft.cei.gov.cn<br>
+        　　宁波电信 news.nb.zj.cninfo.net<br>
+        　　常州电信 news.clinux.ml.org<br>
+        　　济南万千 webking.online.jn.sd.cn<br>
+        　　广州网易 news.nease.net<br>
+        　　<strong>四、代理服务器的设置问题</strong><br>
+        　　代理服务器(Proxy)由于很多是非公开的，一旦公开很可能遭到封闭！所以连接不上属于正常现象。并且有些代理服务器只对指定范围内的IP服务。<br>
+        　　1.Netscape Navigator下的设置（以4.0以上版本为例）：<br>
+        　　选择Edit下的Preferences,双击左边的Category栏中的Advanced项，在其下选择 
+        Proxies ,右边即出现Proxy的设置栏，有以下三个选项：<br>
+        　　Direct Connection to the Internet（直接连通Internet）<br>
+        　　Manual Proxy Configuration （手动设置Proxy）<br>
+        　　Automatic Proxy Configuration （自动设置 Proxy）<br>
+        　　选择中间的 Manual Proxy Configuration ，同时按旁边的View 
+        按钮，即出现一个 Mannual Proxy Configuration的 窗口，在HTTP一栏中填上 
+        198.161.102.27 ，在旁边的Port 填上 8080 ，按 OK ，即完成设置。<br>
+        　　此后，输入网址连接一个站点时，会首先连接Proxy中转站然后再连至目的站点，由于代理服务器通常缓存了大量站点的内容资料，因而速度有一定提高，当然，各个国家地区的速度会有所不同，可选择不同的Proxy进行连接。如果你想取消使用Proxy，请选择 
+        Direct Eonnection to Internet即可。<br>
+        　　2.IE4.0下的设置（以中文版为例）：<br>
+        　　选择查看下的 Internet选项 ，在上边选连接 
+        ，在下面出现的窗口中选择中间的通过代理服务器访问Internet 
+        ，再选取高级选项，在 HTTP 类型那行将代理服务器地址一栏填上198.161.102.27 
+        ，端口 填上 8080 , 按 确定 即完成设置。<br>
+        　　如果你想取消使用Proxy，请取消选择通过代理服务器访问Internet 
+        即可<br>
+        　　下面再补充几个速度较快的代理服务器地址(163可用） ：<br>
+        nana.nana.co.jp port:80<br>
+        　　wwwcache.infn.it port:3128<br>
+        　　proxy.chemetall.de port:80<br>
+        　　gw.monicals.com port:3128<br>
+        　　有关169代理服务器的问题由于牵涉的问题较多，我将另文介绍。如果有什么问题，请到我主页的“老虎论坛”参加讨论，把你的问题留下，我会给你解答的！地址是：http://202.102.15.149/～person/tiger或者http://disc.server.com/discussion.cgi?id=6632，我的E－mail:gxb@163net,ICQ:1472639</p>
+        </font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年32月32日第32期19版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

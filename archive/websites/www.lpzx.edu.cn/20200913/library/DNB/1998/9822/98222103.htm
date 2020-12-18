@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">在NOVELL网上设置个性化的Windows<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　《电脑报》1997年第30期《NOVELL网络上的WINDOWS操作系统安装》一文刊登后，读者反响很大。但是按照该文建立的Windows用户不能对Windows作任何基于个人偏好的修改，本文作者通过为每一用户建立一个Windows个人目录成功地解决了这一问题。<br>
+        　　我们单位的机房硬件环境是服务器:P166/32M/2.5G/D－link网卡;工作站(35台,配置相同):486DX100/4M/无盘/NE2000兼容网卡;传输介质:双绞线10MBPS。软件环境是Novell 
+        Netware 3.12。<br>
+        　　在Novell网上安装Windows的步骤如下(以 Windows 3.2中文版为例):<br>
+        　　1.安装之前确保工作站的扩展内存和扩充内存已被HIMEM.SYS和EMM386.EXE管理。<br>
+        　　2.在工作站用SUPERVISOR注册入网,用SETUP/A命令将Windows安装到服务器上，安装目录为F:\WIN32。完毕后用 
+        FLAG命令将F:\WIN32目录下的所有文件加上 S（shareabel）属性。用SYSCON给每一个用户分配对 
+        F:\WIN32目录的F、R 权限。<br>
+        　　3.进入服务器的F:\WIN32目录用SETUP/N命令将Windows安装在工作站的F:\WINDOWS目录下。<br>
+        　　4.将F:\WINDOWS目录内的文件复制到每一个用户的个人Windows目录内。如用户A1的个人Windows目录是F:\A1\WINDOWS，则复制F:\WINDOWS内的文件到F:\A1 
+        \WINDOWS目录内。<br>
+        　　5.为各用户修改PROGMAN.INI文件。修改文件中[GROUPS]小节的内容,将打开组文件的路径修改为用户 
+        的个人WINDOWS 目录路径。例如,[GROUPS〗小节中原有一语句为GROUP1=F:\WINDOWS\CMAINGRP.GRP现改为GROUP1=F:\A1\WINDOWS\CMAINGRP.GRP。照此将这一小节中的所有语句路径改好。<br>
+        　　6.为了启动方便，可以给用户的个人注册正本中加入搜索语句（如：MAP 
+        INS S1:= F:\A1\WINDOWS）。<br>
+        　　7.安装后用WIN/S命令启动Windows 。 若想用WIN 
+        命令不加参数直接启动Windows,则需在工作站启动盘上为Windows的启动指出寻找EMM386.EXE文件的位置。可在启动盘CONFIG. 
+        SYS 中的DEVICE=EMM386.EXE 语句后加上/Y=D:\PATH\EMM386.EXE参数。其中D：代表盘符，PATH代表路径。<br>
+        　　8.在启动Windows时有时会遇到不能正常启动的情况,这种情况的产生原因很多， 
+        一种常见的原因是鼠标和网卡的中断冲突。很多常见的网卡的中断默认为3， 
+        这可能和计算机主板COM2口的中断冲突。在CMOS中屏蔽COM2口，就可使启动正常。<br>
+        　　9.在使用Windows，一般用户对个人的Windows目录拥有较大的权限（甚至S权限）。这样用户使用起来就比较方便，可以对Windows作个人偏好修改，并保持设定而不对其他用户。每个普通用户对F:\WINDOWS目录没有访问权限，系统管理员可以通过复制文件的方法对凌乱的用户个人Windows目录进行整理。<br>
+        　　按这种方法安装的Windows 
+        在我们单位的机房应用半年多以来效果良好。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(河南　赵俊峰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月8日第22期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>美萍7.5+IE插件的攻防</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第12期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{美萍7.5+IE插件的攻防}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{最近郑州美萍电脑软件工作室推出了美萍电脑安全卫士V7．5标准版（以下简称美萍），据说是中国最好的网吧管理软件。可是小生经过几天的实践，认为它还是有不太完善的地方。<br>
+              防守<br>
+              启动美萍后打开开始菜单，点取设定系统选项，可以看到安全卫士共有新建、帮助、管理、模式、记录、网站六个选项卡。限于篇幅我们主要说一下管理选项卡。管理选项卡中又有密码、安全、启动、外壳、选项、限制六个选项卡。现分别介绍如下：<br>
+              1．密码：在这里可以设定你进入系统设置、美萍系统的退出和关机的密码，还可以卸载美萍。但是这个卸载按钮的功能却只是解除美萍软件对Wｉｎｄｏｗｓ系统所做的更改，并不是把美萍从你的硬盘上完全请出去。你说这个按钮的名字是不是应该换一换？<br>
+              2．安全：安全选项卡是对你的硬盘管理权限进行操作。这里有“隐藏的驱动器”和“禁止文件删除、改名操作的驱动器”两个功能。不过下面有一个“注意”你看到了没有？它是这样写的：“注意：禁止文件删除，改名功能使用了Wｉｎｄｏｗｓ的底层调用，经过测试它在大多数机器上都能正常使用。但如果你使用此功能后经常出现死机的话请不要选择此功能。驱动器隐藏功能建议都选上，它对系统没有任何影响。”估计大多数用户在看到这句话后是不会选择禁删文件功能的禁删文件功能对临时文件夹没有作用）。<br>
+              3．启动：在这里你可以设定启动美萍后调用的程序、美萍状态下的右键菜单和在Wｉｎｄｏｗｓ启动后是否直接进入美萍管理状态以及启动时是否屏蔽F4，F5，F8键、启动时是否禁止磁盘扫描。其中启动时屏蔽F4，F5，F8键和启动时禁止磁盘扫描两项实际上是在C盘根目录下的ｍｓｄｏｓ．ｓｙｓ文件中加入了ｂｏｏｔｋｅｙｓ＝0和ａｕｔｏｓｃａｎ＝0两条命令。这样你的电脑在开机时就不会对任何按键做响应，如果启动失败也不会进行磁盘扫描，其实这样做的目的是为了避免在开机时有机会进入安全模式。但是小生发现假如ｍｓｄｏｓ．ｓｙｓ文件中原先有ｂｏｏｔｋｅｙｓ＝1和ａｕｔｏｓｃａｎ＝1两条命令的话，美萍只是在ｍｓｄｏｓ．ｓｙｓ文件的最后加上ｂｏｏｔｋｅｙｓ＝0和ａｕｔｏｓｃａｎ＝0两条而不会对前面的ｂｏｏｔｋｅｙｓ＝1和ａｕｔｏｓｃａｎ＝1两条命令做修改，希望在美萍以后的版本中能解决这一问题。<br>
+              4．外壳：设置界面是美化美萍显示界面，不动也罢。在插件设置中可以加入一些美萍允许调用的程序，例如Wｉｎｚｉｐ等。<br>
+              5．选项：这里才是美萍对Wｉｎｄｏｗｓ系统进行功能限制的设置部分，建议全部选上，不再一一赘述。<br>
+              6．限制：这是一个IE的功能插件。它的作用有禁止某个目录及子目录被访问和禁止下载某种扩展名文件。例如可以禁止访问ｄｅｓｋｔｏｐ目录、禁止下载．ｅｘｅ和．ｚｉｐ。<br>
+              进攻<br>
+              我们假设网吧的管理人员根据美萍提供的功能做了很好的限制，在美萍的虚拟桌面上只留下Iｎｔｅｒｎｅｔ Eｘｐｌｏｒｅｒ、OICQ等几个上网必备的工具且电脑无法从软盘、光盘启动。<br>
+              1．小生发现在Wｉｎｄｏｗｓ登录框出现前系统会加载第一次的ｓｍｅｎｕ，你可以选结束任务。第二次ｓｍｅｎｕ是在Wｉｎｄｏｗｓ启动基本完成加载系统输入法时，同样结束任务。这样你就不会被美萍管着啦。<br>
+              2．在Wｉｎｄｏｗｓ启动基本完成时，如果你敲一下Wｉｎ键，也许会出现开始菜单（这里要把握好时机）。这样进入美萍时开始菜单仍会保留下来。请注意，这可是Wｉｎｄｏｗｓ正常的开始菜单！<br>
+              3．如果你不幸已经被美萍管着，那么就只有靠IE和腾讯公司的浏览器TBｒｏｗｓｅｒ了。<br>
+              打开IE，你首先见到的是美萍公司的主页。还好，这只是一个参数，和你原来设置的IE主页是不一样的。打开查看下拉菜单，点一下浏览栏，点一下文件夹，你可以在左边的文件夹窗口中看到桌面、我的电脑、我的文档、Iｎｔｅｒｎｅｔ 
+              Eｘｐｌｏｒｅｒ、回收站几个图标。双击我的文档，原来IE的界面就变成资源管理器了。但是你现在还是无法看到其它的硬盘文件。<br>
+              把你现在看到的网页“另存为”到我的文档中，然后双击它。如果TBｒｏｗｓｅｒ是默认的浏览器那它就会自动打开，否则你就直接双击TBｒｏｗｓｅｒ吧。你有没有发现，在TBｒｏｗｓｅｒ中你可以自由设置Iｎｔｅｒｎｅｔ选项？把你刚才“另存为”的页面设为主页，然后再点一下IE的主页按钮，看看左边的窗口中是什么？是C盘的树状结构！<br>
+              4．如果你的电脑里的确没有TBｒｏｗｓｅｒ，那么也许会有ACDｓｅｅ、WｉｎRａR等工具软件。在你刚才“另存为”的页面所对应的文件夹中肯定会有几张图片吧？双击某个图片以打开ACDｓｅｅ，在浏览状态中点两下向上按钮，你就可以看到C盘的文件！或者你可以直接在路径栏中打入你要访问的硬盘，所有的文件都在你的掌握之中。使用WｉｎRａR的效果是一样的。<br>
+              如果你的网管没有装这些工具软件，别灰心，一定会有Oｕｔｌｏｏｋ的。<br>
+              在网上找到一个用于打开邮件编辑器的超级链接，在编写邮件的状态下选取加入附件，还看不到硬盘资源是不是？别着急，在文件名的输入栏中打入一个硬盘上一定会有的文件名。例如ｃ＼ｓｍｅｎｕ＼ｓｍｅｎｕ．ｅｘｅ或ｃ＼ｗｉｎｄｏｗｓ＼ｅｘｐｌｏｒｅｒ．ｅｘｅ。看到加入的附件躺在附件栏里了是吗？这时再点一下加入附件的按钮，是不是可以看到当前文件目录中所有的文件？再向上，哇，整个C盘都露出来了。如果你是用网上的免费邮箱，效果也是一样的。<br>
+              其实还有更简单的方法。进入资源管理器后点一下文件下拉菜单，选取新建快捷方式，然后点浏览，是不是可以看到C盘的文件？点取ｃ＼ｃｏｍｍａｎｄ．ｃｏｍ，还有DOS可以用呢！<br>
+              此外我们还有“下载”这一手绝招。虽然美萍可以禁止下载文件，但我们可以在当前位置运行呀！这样文件会被下载到ｃ＼ｗｉｎｄｏｗｓ＼ｔｅｍｐ＼后自动打开。例如下载一个美萍安全卫士密码探测器，几秒钟就可以获得本机上美萍所设置的三项密码。你是否可以反客为主？或者干脆从美萍的主页上下载一个美萍重新安装，这样会清除原先所有的设置，包括密码。不过你要重新启动一下Wｉｎｄｏｗｓ才会有效。<br>
+              总结<br>
+              1．从桌面上删除我的文档。<br>
+              2．从硬盘中删除一切可能对美萍不利的软件。<br>
+              3．禁止任何形式的MS－DOS方式。<br>
+              4．使用美萍视窗锁王进行安全设置。这是美萍软件工作室制作的一款安全保护软件。它利用Wｉｎｄｏｗｓ底层的VｘD技术在Wｉｎｄｏｗｓ 
+              95／98下实现了对硬盘的全面保护。可以对硬盘上的任意分区、目录实现隐藏防删除，防改写只读抗恶性病毒传染，资料防窃等。<br>
+              5．使用美萍网管大师的网络集中管理模式。美萍网管大师软件是配合美萍电脑安全卫士进行网络集中管理而使用的，它集实时计时计费计账于一体利用一台管理机可远程控制整个网络内的所有计算机。可对任何机器进行开通停止、限时、关机、热启动等操作。（劲草）}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

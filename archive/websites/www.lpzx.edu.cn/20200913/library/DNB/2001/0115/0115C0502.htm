@@ -1,0 +1,120 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/hardware.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>雷鸟和毒龙实现133MHz外频</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0115/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0115/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->雷鸟和毒龙实现133MHz外频<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 广大电脑爱好者对雷鸟和毒龙大多情有独钟，它们的性价比及良好的超频性能是吸引大家的原因。现在以毒龙800和EPOX的8KTA3为例，为大家简单介绍一下雷鸟和毒龙的CPU是如何上到133MHz外频的。 
+              拿到主板的第一件事，就是将100/133跳线，跳到133MHz外频上，开机点不亮，难道是主板有问题？于是跳回100MHz外频，开机后进BIOS降低CPU倍频，增加电压到1.80V，再关机跳到133MHz，然后开机，还是点不亮，后来通过上网查资料以及广大DIY超频爱好者的经验心得，找到了部分雷鸟和毒龙CPU在某些主板上不能上133MHz外频的原因。 
+              ##1 一、先看AMD CPU的L6金桥 DIY玩家们一般认为在100MHz外频下，将CPU倍频降低、加CPU电压、加主板电压，然后跳线至133MHz外频即可，例是这样做只有少数幸运的玩家可以将机器点亮。很多的玩家都知道CPU的L1金桥的作用，对于L6金桥的作用就了解不多了，L6金桥的作用比L1金桥的作用更重要，L6金桥决定了CPU出厂时的原始倍频。这也就是CPU能否上133MHz外频的关键所在。 
+              L6金桥：共有五个桥(以毒龙800为例)： 如图：其中一个桥只是一个小金点，其余四个桥才是对应的点，这其中有连着的，有断开的，它们意义是：连着的桥，加倍频数无效，断开有效(切勿搞反)。这四个桥是这样定义的：从小金点处算起，它们的加倍频数分别是1/2、1、2、4，什么是加倍频数？我的理解是这样的： 
+              加倍频数 = CPU原始出厂倍频-基本倍频数 (这里的基本倍频数是常数3) 例：毒龙800的CPU，它的加倍频数即为：8-3=5。通过上面介绍的四个金桥接法马上就可以得出1/2和2加倍频数对应的桥是连结的，而1和4加倍频数所对应的桥是断开的，这样才符合加倍频数相加(1+4)+3基本倍频数=8倍频。 
+              话说到这里，DIY玩家一定明白，为什么有的 CPU上不了133MHz外频了吧，因为某些主板(例如：EPOX的8KTA3等)它本身是通过CPU出厂的原始倍频来决定是否能上133外频的，而不是我们通常认为的BIOS里修改的倍频数。因此，刚开始用133外频点不亮机器也就不足为怪了。 
+              ##1 二、降低CPU出厂倍频方法，就是连结或断开L6金桥 以毒龙800为例：我准备将它的8倍频改为7倍频，通过计算得出加倍频数7-3=4，由L6金桥可以看出原来的8倍频是1/2和2加倍频数对应的桥是连结的，而1和4加倍频数所对应的桥是断开的，要想得到4倍频数只需将1加倍频数对应的桥连上即可，用2B铅笔连好后，跳线至133MHz，133MHz×7=941MHz开机成功！ 
+              又如毒龙700的CPU，欲降低这类CPU的出厂倍频，有点费事：由7倍频可知1/2、1、2这三个加倍频数对应的三个金桥均为连结的，我们可以将7倍频降为5倍频，由计算得出加倍频数应是5-3=2，即L6金桥的连断方式是：1/2、1、4连结、2断开，这么改就需要将原来断开的4桥连上，而原来连着的2就要断开。若想断开金桥，可以用电子雕刻器，但这么做对CPU是极其危险的。 
+              以此类推，大家就可以找到在主板上跳133MHz外频的方法了。以上所介绍方法是在CPU加压、L1金桥全连的情况下完成的。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

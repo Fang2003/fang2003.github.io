@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>新一代3D加速芯片RIVA 
+        TNT </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        &nbsp;&nbsp; 在RIVA 128芯片大获成功，并且在世界范围内取得了数百万片的累计销量之后，著名的3D加速芯片设计厂商NVIDIA于数月前乘胜推出了RIVA 
+        128的加强型芯片RIVA 128ZX，还没等我们看到使用RIVA 128ZX的显示卡出现在市场上，NVIDIA又发布了新一代超级3D加速芯片RIVA 
+        TNT的设计规格。想要知道RIVA TNT有多厉害，只需这样比较：一块使用RIVA 
+        TNT单芯片的显示卡，将在3D性能上完全超越两块使用SLI连接的3Dfx 
+        Voodoo2，而且其128位的2D加速引擎当然会比RIVA 128有所加强——真是超乎想象！虽然说这一切还要等RIVA 
+        TNT正式上市时才能够完全证实，但考虑到同样是单芯片的RIVA 128相对低廉的售价，RIVA 
+        TNT实在是值得期待。<br>
+        　　 RIVA TNT最吸引人的地方并不是某项性能的提高，而是其整个体系结构有了很大的发展。RIVA 
+        TNT具有两个渲染引擎和两个效果处理引擎，其独特的双引擎、双流水线架构使之肯定能超越Intel刚刚推出的显示芯片i740，甚至很有可能超过3Dfx 
+        Voodoo2芯片集。RIVA TNT的设计规范咄咄逼人：2.5亿点/秒的像素填充率和每秒800万个三角形的处理能力。那么RIVA 
+        TNT如何能够实现这样惊人的性能呢？这得从它的3D流水线结构说起(见图)。<br>
+        　　首先，RIVA TNT的高速内核需要一个恒定的数据流供其进行处理，所以，结构中设有预读取队列从AGP或PCI总线读取数据，系统就能以较高的速度向图形流水线输入数据而减少等待时间。预读取队列与一个4KB的节点缓存连接，由节点缓存将多边型数据送给两个并行工作的渲染引擎，每个渲染引擎都拥有浮点运算处理器和像素处理器各一个，它们负责处理全部的像素预处理任务。随后，两个渲染处理引擎将数据输出至各自的效果处理引擎来完成光线和特殊效果的处理(包括纹理贴图)。在效果处理的同时,RIVA 
+        TNT另外设有8K的贴图缓存将贴图数据及时地送给效果处理引擎以加快处理速度。紧接着，数据被送进一组独立的FIFO(先入先出)队列，它在双渲染处理引擎和帧缓存之间起着一级缓存的作用。FIFO通过128位的异步帧缓存接口将RIVA 
+        TNT内部时钟为100MHz的数据送往时钟可高达200MHz的帧缓存，以进一步提高系统效率。最后，RIVA 
+        TNT内建一个250MHz的RAMDAC，可以在较高的分辨率下提供更高的刷新频率。<br>
+        　　RIVA TNT支持4MB/8MB/16MB的显示内存，而且全面支持AGP 2×接口和PCI接口。在应用程序接口(API)方面，RIVA 
+        TNT全面支持DirectX 6.0，包括新加入的突起映射(Bump Mapping)、单像素多纹理和模板缓存(Stencil 
+        Buffer)等特性，并且针对Direct3D作了完全的优化。NVIDIA还提供了一套通过了兼容性测试的OpenGL 
+        ICD驱动程序。此外RIVA TNT具有NTSC/PAL电视输出和CCIR－656视频捕捉接口,能够支持MPEG－1/2、DirectShow和Indeo硬件视频加速。在3D特性方面，RIVA 
+        TNT拥有100％硬件三角形发生器，支持逐像素的MIP映射和单像素多材质的贴图模式，而且拥有各向异性的过滤器，即支持沿某个轴向对材质进行过滤，可以较简单地实现三线MIP映射等复杂的过滤器功能。同时，RIVA 
+        TNT所有的操作都是32位的，全32位的渲染操作将使32位的色彩模式在程序中更加容易实现，而对于32位的Z－buffer(Z缓存)，其中Z－buffer本身用去24位，剩下的8位则可作为模板缓存使用。<br>
+        　　所有这些性能在下面这个RIVA 128ZX和RIVA TNT的性能对照表中可以看得很清楚：<br>
+        　　由上述资料不难看出，RIVA TNT的性能的确是空前的，如果这一切都能够按计划在年内实现的话，不仅是3Dfx 
+        Voodoo2，就连Video Logic与NEC合作开发、还未出世的PCX3(Power VR3)也会受到很大的压力。<br>
+        　　参考文献来源：http://www.nvidia.com<br>
+        (江苏　朱　云)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9820/1998/20/index.htm">《电脑报》1998年5月25日第20期33版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

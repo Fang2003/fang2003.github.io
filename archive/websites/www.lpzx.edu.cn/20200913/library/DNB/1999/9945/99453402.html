@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用Cell统计学生成绩</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 用Cell统计学生成绩</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用Cell统计学生成绩 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Cell是国人编写的优秀电子表格软件，与Excel相比，其功能与特征更适合国人使用，而且还是共享软件(《电脑报》第25期有详细的介绍)。在Cell中有大量的实用办公模板，但没有学校常用的学生成绩统计模板。一般学校对学生的考试成绩要求进行总分计算、总分排序、各科最高分、最低分、平均分、及格人数、及格率等项目的统计，且缺考和零分不统计，这些要求在Cell中均能轻松实现。<br>
+　　打开Cell，建立一张新工作表，根据班级人数、科目建立表1。首先计算总分，用鼠标选定要计算的区域C2：H41，然后点击工具栏上的“横向求和”按钮即可求出各学生的各科成绩总分。然后选定H2：H41区域，点击“编辑”菜单下的“清除”，选择“清除公式”，这一步的目的是将H2：H41区域内的求和公式清除。因为Cell不能对含有组合单元、公式图表的区域进行排序工作，我们选定B2：H41，点击工具栏上的“降序排序”按钮进行总分排序。在A2、A3单元中，分别输入“1”、“2”后，选择A2：A41区域，点击工具栏上的“等差填充”按钮即可将总分名次1至40标出。<br>
+　　其余的统计项目可利用Cell提供的丰富函数，如常见函数、字符串函数、统计函数、表函数等输入计算公式求得。现介绍如下：<br>
+　　1.先选中C42单元；<br>
+　　2.按“=”或用鼠标点击工具栏上的“输入公式”按钮，输入计算公式“round(average(C2：C41，loopcell()&gt;0)，1)”(公式中loopcell()&gt;0是为了只统计参加考试学生的成绩，缺考、零分不计。round函数的使用是为了对结果四舍五入，统一小数位数，下同)，可求得语文的平均分；<br>
+　　3.选定C42：H42区域，点击“编辑”菜单下的“填充公式序列”或工具栏上的“填充公式序列”按钮，可快速在各科平均分单元中填入求平均分的公式，即可求出余下各科及总分的平均分；<br>
+　　4.选定C43单元，按“=”输入计算公式“min(C2：C41，loopcell()&gt;0)”，求出语文的最低分，重复步骤3，选定C43：H43区域，即可求出其余各科及总分的最低分；<br>
+　　5.选定C44单元，按“=”输入计算公式“max(C2：C41，loopcell()&gt;0)”，求出语文的最高分，重复步骤3，选定C44：H44区域，即可求出其余各科及总分的最高分；<br>
+　　6.选定C45单元，按“=”输入计算公式“count(C2：C41，loopcell()&gt;=60)”(设及格分为60)，求出语文的及格人数，重复步骤3，选定C45：G45区域，可求出其余各科的及格人数;<br>
+　　7.选定C46单元，按“=”输入计算公式“string(round((count(C2:C41,loopcell()&gt;=60)/count(C2:C41,loopcell()&gt;0))＊100,1))＋″％″”，求出语文的及格率，重复上述步骤(3)，选定C45：G45区域，可求出其余各科的及格率。最后得到表2所示的统计结果。<br>
+　　在Cell中自定义模板十分方便，只需将欲定义的文件拷贝到Cell所在目录下的\exe\template\我的模板\目录中即可。将上表取名存盘后，拷贝到Cell所在目录下的\exe\template\我的模板\目录下，以后就可以轻松处理不同班级的学生成绩了。<br><b>(贵州　秦后明　王霜蕾)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99453402.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

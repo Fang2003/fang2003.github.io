@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 软盘驱动器常见故障的处理</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>44 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 软盘驱动器常见故障的处理</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 软盘驱动器常见故障的处理 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><b>　　故障现象一：</b>用DOS系统下的DIR命令列磁盘目录时出现以下故障现象：<BR>
+　　1.读取数据及进行软盘格式化时显示:“Disk boot failure” ；<br>
+　　2.不能读盘，根据屏幕提示，试用“再试”或“跳过”指令均无法读取；<br>
+　　3.选“再试”或“跳过”时可列磁盘信息， 而使用在其它软驱上写入文件的软盘时，则无法读取。<br>
+　　分析与维修：根据故障现象可知，该故障不出自控制电路部分，系机械故障。用手工调整的办法可校正。先把软驱从机箱中取出，拆开软驱外壳，连上电源和信号线，再把一张在正常软驱上格式化后的磁盘插入软驱，观察软驱的动作情况，用一红色铅笔在磁头停止处做一标记，以便调整。将磁头向前(或向后)移动至底端(或顶部)。反复试验，再根据提示分析仔细调整。若工作正常，再换一张盘用软盘格式化等指令试验，检测能否正常启动，测试时有时出现读盘正常，但进行格式化后时却出现单面格式化现象，故要重复作3～4次检测。过程如下：<br>
+　　将软驱小车移动至零道附近处，插入已写入文件的软盘，每移动一次记录一次，在移动试验过程中会出现不同提示信息：<br>
+　　A、Sector not Found Reading drive  A,   abort retry fail?<br>
+　　该情况一般表示超过零道，须向零道相反方向后退；<br>
+　　B、General Failure reading drive C( 一般性错误和失败),abort retry fail?<br>
+　　C、Data error reading drive A(数据错误)。<br>
+　　当提示“Data error reading drive A(数据错误)"时，此时说明接近零道，逐步调整磁头的位置和角度。当读完信息后，在磁头停止处用一红色铅笔作个记号便于调整时参考。当磁头的位置和角度确定后，先将磁头临时固定，然后松开固定于步进电机上的4颗螺丝，使电机步进轮与其下的弧形弹片脱离，再缓缓地固紧螺丝，用 DIR命令重复2～3次列盘片信息，直至从零道到最后一道都可读出为止。读盘可用工具软件(如HD─COPY)。<br>
+<b>　　故障现象二：</b>读/写磁盘时，有时在DOS环境下显示“General  Failure( 一般无效 ) "出错信息；有时在Windows 95环境下显示“不能访问A:， 设备未准备好”的出错信息；有时带动磁盘旋转的步进电机不转，听不见电机旋转声。<br>
+　　分析与维修：根据故障现象，判断为控制电路故障所致。故要更换集成电路或电路板。由于必须买到相同型号的元件或成品电路板，且要用专用工具拆除和重装或重焊，通常业余环境下难以进行。<br>
+<b>　　故障现象三：</b>在某一应用程序中用DIR 命令列磁盘目录时，显示：“File not found(没有找到文件) ”， 再用CHKDSK命令检查，出现以下错误提示：<br>
+　　“Errors found,Fparameter not specified， Corrections will not be written to disk， 622 lost allocation units found in 55 chains， 636,928 bytes disk space would be freed"。<br>
+　　分析与维修：根据故障现象，判断该盘中有文件，但有许多簇丢失，要对其进行修复，过程如下：首先用HD─COPY软件中的READ读出软盘数据，用“Put to file”将软盘缓冲区数据映射成硬盘文件，再插入一张未写入新内容的软盘B，用“Write”拷贝，保留原软盘A不动。<br>
+　　然后插入复制盘B进行检查，此时显示：“The  backup  copy  of  this  driver's   file allocation table is incorrect (磁盘备份文件分配表FAT有误)”，选“Fixed ”项，再选“Skip Undo(或跳过Undo)”。修复时一般应选保存项，以防修复失误，运行至“已修复”时，用DIR 命令查看， 如故障依旧， 则判断Scandisk功能无效。<br>
+　　接下来用HD─COPY中的“Get from  file” 功能将硬盘中的映像文件恢复，拷入磁盘，用Norton 8.0中的NDD修复，选“Diagnose disk”，提示：“Boot record  program is invalid(磁盘的引导区无效)”，选“YES” 进行修正；选择“Skip Undo file” 时，屏幕上提示：“有丢失的簇”，跳过修复族一项(一般修复的簇均为文件片段，对于程序亦大多无效，对于文本文件，建议选用此项)。退出NDD，用DIR命令显示，发现有文件且能使用。再用CHKDSK进行恢复检查，发现部分恢复，仍有部分故障依旧，最后将盘中文件拷贝，对软盘进行格式化后重新写入。<br>
+　　最后，用HD─COPY恢复原盘A，用KV300 进行清除，故障排除。<br><b>
+　　(湖北　王斌)  </b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99442301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>CPCW网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

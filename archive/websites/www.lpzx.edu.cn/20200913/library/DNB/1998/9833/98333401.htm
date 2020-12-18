@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　贵州读者楚文江问：1我单位的Novell网由一台服务器和十一台无盘工作站(无硬盘和软驱)组成，服务器为Pentium 
+        166/32M内存，工作站为Pentium 133/8M内存，均是联想原装机，网络操作系统为Netware 
+        4.1。我们想让无盘工作站共享服务器上的Windows 32，但在服务器上安装后却只能在工作站上以标准模式启动Windows 
+        32，无法启动增强模式。现象是：在工作站上键入“win”启动Windows后，屏幕出现“Unable 
+        to start Enhanced Mode Windows due to invalid path specification for EMM386”的提示，并返回DOS状态，若执行“win/s”，则可进入标准模式。按照贵报第315期第21版《Netware 
+        312安装技巧二则》和第322期第21版《无盘工作站上共享Windows及其应用软件》两篇文章介绍的有关Windows增强模式启动的技巧，一一尝试后均不见效，将两文的方法综合使用也无济于事。我们的Netware和Windows 
+        32都是正版软件。不知在网上用增强模式启动Windows是否真的无望?<br>
+        　　2另外，我单位在用CAD绘图时，在网上生成大量临时文件，虽然都可被自动删除，但长期这样是否会在硬盘上形成大量碎片?贵报第317期第21版《Novell网运行及维护的十点体会》一文提到：“用Norton或PCTools等工具软件定期整理服务器硬盘，压缩文件碎片……”等等，但无论是DOS自带的工具还是文中提及的工具，似乎都不能对网络进行操作，该怎样整理这些文件碎片?<br>
+        　　答：1EMM386的用途是为其它程序提UMB(上位内存)和扩充内存，为了达到这一目的，它利用80386以上CPU才有的内存分页功能，经过EMM386的管理后，系统实际上是运行在虚拟80386方式下。而Windows在启动时需要先置CPU为实模式，然后再进行保护模式，并且Windows自带的内存管理器在增强模式下同样要利用CPU的分页功能，为了与EMM386进行协调，Windows在启动时需要找到EMM386所在的文件。在Novell网上，工作站的启动盘存放于net＄dos.sys文件中，该文件在工作站启动时映射成为工作站的A盘，但启动完结后此A盘就不存在了，因此Windows无法在A盘中找到EMM386，也就不能启动到增强模式。为此需要在启动盘的Config.sys中为EMM386增加一个开关“/Y”，改变EMM386的缺省路径，例如修改为：“DEVICE=EMM386.EXE 
+        /Y=F:\PATH\EMM386.EXE RAM”，其中的F盘为工作站启动后可见的网络驱动器，PATH为EMM386所在目录，需要指出的是，该目录下的EMM386最好要与启动盘中的EMM386版本一致。<br>
+        　　2CAD等软件频繁进行文件操作，确实会在服务器硬盘上产生大量的文件碎片，为提高服务器的工作效率，应定期整理服务器硬盘。笔者查阅了Novell公司的Web站点，其技术资料指明不可能也不应该从工作站上运行各种优化工具来整理服务器的硬盘，而应在服务器本身上进行，并且在整理过程之前应把服务器与整个网络断开，不允许工作站在整理期间访问服务器，对于重要数据还应事先备份。Norton和PCTools的工具都可以完成优化服务器硬盘的工作。<br>
+        　　湖南读者乐敏问：我是贵报的忠实读者，我的电脑为Compaq机，CPU为Pentium 
+        133，在使用过程中遇到了问题，请专家帮助解决。电脑开机后为何无自举界面，按Del键也不能进入CMOS设置，《电脑报》的某期《硬件周刊》中说，按F10键可进入CMOS设置，但一试也不行，请问如何设置CMOS?<br>
+        　　答：不同的机器进入CMOS设置的方式略有不同，“老机器”有的要按Ctrl＋Alt＋Esc，较新的机器一般按Del键或F2键，而Compaq机器需要按F10键才能进入，并且在自检时只显示极少的信息。你按F10键后仍然不能进入CMOS设置，造成这一问题可能有三种原因：第一，按键的时机未掌握正确，应在机器启动时发两声响后按键，此时光标应正好在屏幕的右上方。第二，Compaq机器的设置程序比较特殊，它被放在系统硬盘上一个大小为3MB的非DOS分区中，该分区在机器出厂时已预留好了，如果用户给硬盘重新分区时删掉了这个分区或者其中的数据已被破坏的话，启动时按F10键也不能进入CMOS设置，你可用FDISK查看该分区是否还存在，如果已被删除，那么只好运行随机配的软件上的设置程序了。第三，如果该分区正常的话，那么你的机器可能感染了某种引导型病毒，因为运行硬盘上的设置程序需要640K以内的所有常规内存，而引导型病毒往往要占用638K～640K之间的内存，造成设置程序无法运行。<br>
+        　　湖北读者张剑林问：我有一台Compaq电脑及LQ－1600KⅡ型打印机，在安装Windows 
+        95时，系统要求选择打印机，但只能选1600K型，没有Ⅱ型的驱动程序。最近我用Word 
+        6或Excel 7(后台或前台)打印文档时，最后一行总是没打印出来，打印机就自动停止工作。后来出现这类问题时，我只好打印多份，打印出来的文件只有最后一份内容不全。但现在打印多份文件时，每份都不全，简直无法工作。我按照Windows 
+        95中的“疑难解答”提供的办法一步一步的解决，直到增加内存，都无法解决。请帮忙解决此问题!<br>
+        　　答：1600K与1600KⅡ型是兼容的，使用前者的驱动程序应该不会引起什么问题。由于不了解你遇到问题的详细情况，现给出以下思路供你解决问题时参考：<br>
+        　　1看看在写字板或记事本中打印多页文档是否也会出现这类现象，如果不出现的话，那么问题可能出在Word和Excel本身，可用杀毒软件检查是否有宏病毒；在打印非连续纸时，由于1600K进纸机构的原因，纸张下端有一部分是无法打印的，为此可在Word中调整纸张大小，使它比打印纸的实际尺寸稍小一些，或把页边距略微设大一些；也可将文字处理软件升级到Office 
+        97。<br>
+        　　2如果其它Windows 95应用程序打印时也出现问题，可在DOS下用WPS试试，如果打印正常了，那么问题可能出在打印驱动程序或Windows 
+        95系统，可试试删除驱动程序后再重装一遍；在“打印机属性”中把纸张的非打印区域全部设为零；硬盘自由空间不够会使得Windows 
+        95无法提供足够的虚拟内存，可删除临时文件并整理文件碎片；将操作系统升级到Windows 
+        95 OSR2或Windows 98。<br>
+        　　3如果DOS打印也不正确，那么把打印机接到其它型号的计算机上试试，如果打印正常，则问题可能出在本机的CMOS设置或打印接口电路上，进入CMOS设置，若打印端口的工作模式设为EPP或ECP，那么改为Normal试试；检查打印机各接头是否插牢固了。<br>
+        　　4如果在其它机器上问题依旧，那么可能是打印机本身出现故障，请与生产该打印机的公司的维修部联系进行维修。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月31日第33期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

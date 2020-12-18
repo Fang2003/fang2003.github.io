@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 3D MAX神奇的编程工具——MAXScript</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 3D MAX神奇的编程工具——MAXScript</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 3D MAX神奇的编程工具——MAXScript 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在第42期中，我们曾给大家介绍过3D MAX的Expression控制器。这次我们将为大家介绍一个功能更强大的工具——MAXScript。<br>
+　　MAXScript是一种编程语言，在结构上，MAXScript和我们经常使用的Basic或C语言非常相似。在功能上MAXScript和Expression在控制场景动画方面是一样的。但是，同Expression控制器相比，MAXScript一次可改变多个对象的多个参数。此外，MAXSCript还提供了存取3D MAX核心函数的功能，它的作用，后面还将提及。下面我还是用实例来介绍这个MAXScript工具。<br>
+　　大家还记得在《3D MAX神奇的Expression控制器》一文中，我们用Expression控制器为“汽车”指定的动画效果吗？如果用MAXScript编写程序，（在MAX中称为脚本）我们也能达到同样的效果，你心动了吧！那就跟我一起来！
+　　按原文重新生成“汽车”，点击命令面板中的Utilities/MAXScript(如果面板上没有列出，可单击“More”按钮调出），出现MAXScript用户界面，相关的几个命令按钮，仅从它们的名称上，我们就能猜出它们的功能。这里唯一要提到的是“Open Listener”钮，当我们完成一段程序想运行它时，单击该钮就打开了“Script Listener”窗口，如果程序运行正确，Script Listener窗口中会用蓝字体显示“OK！”否则出现相应的错误提示，并用红色显示。这里，我们单击New Script按钮，在出现的MAXScript编辑窗口中输入：<br>
+　　animate on<br>
+　　for t=3 to 100 by 1 do at time t<br>
+　　(<br>
+　　a=＄torus01rotationz_rotation/4<br>
+　　＄box01rotationz_rotation=a<br>
+　　)<br>
+　　animate off<br>
+　　返回MAX的工作视窗，单击工具栏中的Select And Rotation按钮，再单击Reference Coordinate System下拉按钮，选取Local坐标轴模式，单击Restrict to Z按钮以锁定Z轴，在Top视窗中选取Torus01,按下屏幕下面的Animate钮，按一般指定关键帧的方法为Torus01指定一段动画来模拟行驶中的汽车方向盘的旋转。回到MAXScript编辑窗口，单击“File/Evaluate All”,这时你如果打开“Open Listener”窗口，窗口会显示蓝色的“OK!”字样，表示程序运行正确，单击MAX界面下面的“Play”按钮，看一看发生了什么，是不是和用Expression控制器的效果一样。<br>
+　　现在回过头来看看这个简单的脚本。
+　　脚本的第一行是一个命令“animate on”,它和最后一行的“animate off”配合，意味着这之间的语句所产生的变化都将记录为动画。作用等同于“Animate”按钮。<br>
+　　脚本的第二行对稍有编程知识的朋友们来说理解起来都非常容易，这是一个简单的for/loop循环，这里t的初始值为3，以产生一个车身转动滞后方向盘3帧的效果。<br>
+　　脚本的第三行的括号和第六行的反括号配合使用，用来定义for/loop循环所要执行的一系列命令。<br>
+　　脚本的第四行定义了一个变量a,使它的值为方向盘Torus01在Z轴旋转角度的1/4。<br>
+　　在脚本的第五行，我们将此值赋予车身BOX01，作为BOX01在Z轴的旋转量。<br>
+　　也许细心的读者已经发现，在本例中，我们必须给方向盘Torus01指定一个关键帧动画。在第42期所讲的Expression例中，Expression控制器刚被赋值，车身BOX01就有响应，当我们在场景中旋转方向盘Torus01时，车身BOX01也跟着旋转,其实这一点正是Expression和MAXScript的主要区别，Expression只要一赋值，就会连续监视场景的变化。而MAXScript在执行之前是不能监视场景变化的，只有在执行后，MAXScript才跟踪场景的变化并作出相应的反应。<br>
+　　当然，本例的动画效果用Expression来控制更合理些。但MAXScript有显而易见的优势，比如在本例中，你可以改变大量参数，像动画数值范围，位移，可见性，材质和颜色等等，所要做的只是添加或改变几行代码。如果使用Expression，虽然也可以达到相同的效果，但是，你必须为每一个动画轨迹使用一个Expression控制器。这将是一个非常繁琐的过程。<br>
+　　在3D MAX的最新版本3D MAX R3中，MAXScript更是作为一个重要的工具推出。其新增的Macro Recorder功能可自动记录下几乎所有你的操作，并将它转换成MAXScript脚本。上面我曾经提到，MAXScript有对3D MAX核心函数的存取功能，这就意味着，利用MAXScript，你可以方便地生成自已的插件。比如你如果用3D MAX R3来完成本例，在练习一开始就打开“Macro Recorder”选项，当你完成所有的步骤后，再选中“Macro Recorder”中的所有脚本，按下鼠标左键，将脚本拖拽到工具栏中，这样就直接生成了一个可直接制作汽车的插件（该把它叫作Car Factory)。以后只要你单击该插件按钮，一个简易的汽车模型就会出现在视窗中，而且它的车身随方向盘旋转的关系已经设定。<br>
+　　由于版面的原因，在这里我只是对MAXScript作了一个简单的介绍，算是抛砖引玉。总之，MAXScript对三维动画爱好者来说，是一个非常激动人心的工具，如果你的编程技术和三维动画技术都很好的话，那么制作一个自有版权的MAX插件该是件多么惬意的事情啊。<br><b>
+(湖北　魏启明）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99453802.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,84 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>办公室的“虫灾”</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">办公室的“虫灾”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　大家好，新的一年又到了，三公子先给大家拜个早年，并给《电脑报》的新读者介绍一下：捉虫笔记。这个栏目主要是报告国内外软件存在的一些问题。(术语叫Bug)，并尽可能提供解决办法。三公子首先报告国内软件的Bug情况，我们来看看几个国内著名软件的问题吧：<br>
+        　　Bug:《东方快车98》，如果将其安装在F盘或随后的其他盘，那么它的DOS版本就无法运行。原因在于启动DOS版本用的DFKC98D.BAT(在C:根目录下)有错误，建立一个新的批命令覆盖原有文件，内容为：<br>
+        　　e:\!sunv\ec\dfkc\ccdos\cdos.exe ％1 ％2 ％3 ％4 ％5 ％6 ％7 ％8 ％9<br>
+        　　e:\!sunv\ec\dfkc\ccdos\dfkc98.exe ％1 ％2 ％3 ％4 ％5 ％6 ％7 ％8 ％9<br>
+        　　Bug:《98规范王码》会产生“镜像”问题。这个问题请看邵志刚先生的实例：<br>
+        　　请在中文Windows98环境下安装98王码,完成后打开IE4.0浏览一个需要填写的主页或用Outlook 
+        Express写一封新邮件,使用98王码,以“陈三”为例,打入ba，此时提示窗中“陈&quot;字正常,敲一下空格,正文中显示的是“陈”字吗? 
+        在Netscape 4.0X或其邮件程序中,请输入“陈三”,看看王码的镜像效果,变成了“三陈”不是。<br>
+        　　我已就此事向王码公司反映过,收到一个安装补丁,但对于Netscape 
+        4.0X及其邮件程序无效,至今未能解决,王码公司让我先在记事本中打好再复制过去,可我需要经常实时操作，所以非常不便。我使用的王码是正版的！<br>
+        　　Bug:正版软件没有注册号。随Microsoft Back Office Server 4.0发布的Microsoft 
+        Outlook 97有一个有趣的安装错误，当安装过程中程序提示要CD Key时，如果你使用写在Back 
+        Office Server CD－ROM盒子背面的数字时会被告知“This is an invalid CD Key 
+        value. Check the identification number from your CD sticker&quot;. Outlook 97需要它自己的CD 
+        Key，可是这个号码并未在包装中提供。<br>
+        　　微软说，如果你使用的是Back Office Server 4.0 Not for Resale(NFR)版本, 
+        使用在你的Direct Access Action Pack中的Microsoft Office 97 NFR版本CD Key就可以了。<br>
+        　　Bug:当你试图用Outlook Express 4.0发送带有一个很大附件的E－mail时，你的电脑有可能会死机。微软建议，如果你使用拨号网络（Dial－Up 
+        Networking）或者NetMeeting传输文件时，最好将附件控制在1MB以内。<br>
+        　　Bug：自动关闭程序的问题。在Office 97套件中，如果你使用Microsoft 
+        Web Browser Control 在两个同类型文件中跳转，你可能会得到错误信息。 
+        然后，该程序自动关闭。微软正在查找该问题的原因，所以还没有补丁下载。<br>
+        　　Bug:RTF格式邮件附件可能破坏FAT分区表。Outlook 和其他Office 97捆绑的应用程序的一个特色是可以发送格式化的电子邮件，比如设定某段文字的色彩、字体等等，这些格式化信息作为一个RTF(Rich 
+        Text Format)格式的附件贴在E－mail中，问题是一些旧的E－mail程序，包括一些16位Windows和DOS程序，无法正确调用该附件来显示信息，只能将这些格式信息作为附件存放到硬盘中，而存盘时使用的文件名一般会是该部分信息的前几个字符，比如“to:Chen3&quot;，这就包含了一些在DOS和16位Windows中的非法文件名字符， 
+        这样保存的后果是很有可能破坏FAT表。 <br>
+        　　Bug:Corel Word perfect安装的麻烦。如果你在使用Word Perfect 8 For Windows时获得如下提示：WPWIN8 
+        caused an Internal Page Fault in Module WTLI80.DLL at 0137:36a540d8。那么很不幸，你可能要重新安装才可以继续使用该软件了。这个错误在安全模式是也可能会在同一内存地址产生，Corel公司给出的解决方法是，使用“COPYVERIFY”选项重新安装Word 
+        Perfect 8，这个选项对所有文件进行逐字节检验，并且将所找到的不同处记录于WPI80.log文件中。<br>
+        　　Bug:Word Perfect可能无法安全运行于Windows NT 4.0。如果要安装Corel 
+        Word Perfect 8，最好选择NT 4.0 Service Pack 3。最先发现这个问题的软件销售商Evan 
+        Zucker 发现安装Word Perfect 8.0使他的NT 4.0 Service Pack 1系统完全崩溃，而在安装过程中他只看到了几条无关紧要的错误信息。在运行Word 
+        Perfect 8时，提示：<br>
+        　　An application error has occurred and an application error log is being prepared. 
+        WPWIN8.exe Exception: access violation 0xc0000005, Address: 0x3455bc40.<br>
+        　　重新启动后他发现所有Microsoft Office的快捷方式全部走样了，点按后启动了其他程序。解决方法很简单，卸载Word 
+        Perfect 8,恢复Windows NT，安装Service Pack 3，然后再次安装Word Perfect 8。<br>
+        　　Bug:在Windows 95中运行Word Perfect 6.0、 6.0a或者6.1版本的教程可能会导致系统挂起，而且当你按下“Show 
+        Me”按钮时，菜单条开始不停闪烁。这个问题在鼠标自动移到某个可以点击的菜单条上时出现。虽然你可以使用Ctrl 
+        ＋ Alt ＋ Delete关闭Word Perfect，但是当你重新运行Word Perfect时会看到以下错误信息：ERROR: 
+        Cannot Initialize. 要重新执行Word Perfect唯一的方法是重新启动机器，同时不要使用该教程。<br>
+        　　Bug:使用Lotus 1－2－3 97中的Slash File Import命令导入一个有数百行数据的文件，其中行162、332、483、644、793的数据很有可能被破坏。 
+        Lotus说这个Bug将会在下个版本中被修复。同时，Lotus提供了两个临时解决方案：“使用打开文件菜单导入文本文件是正常的，所以可以将数据转换成文本格式然后打开……”。然而使用这个方法对于大量使用该菜单的宏不起作用，根据Lotus的说法，对于这种情况唯一的解决方案是修改这些宏，比如改成{FILE－IMPORT 
+        “numbers&quot;;“C:\test.txt&quot;}，这将会正确导入数据，因为他所做的操作和前面提到的手动操作是一回事。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

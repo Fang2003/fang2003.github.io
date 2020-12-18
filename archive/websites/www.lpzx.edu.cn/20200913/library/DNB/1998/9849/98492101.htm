@@ -1,0 +1,136 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>快速安装中文Windows 
+        NT 4.0下的DOS工作站<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　目前，许多单位有大量的486微机仍在使用中，且有不少的DOS应用程序在使用，较难快速将工作站操作系统转换为Win95或Windows 
+        NT Workstation。因此为了一方面要保证网络操作系统能使用主流的Windows 
+        NT，另一方面又要兼顾现实的情况，就必须解决好Windows NT 4.0下DOS工作站的配置问题。<br>
+        　　本文详细介绍Windows NT 4.0下DOS工作站的配置方法及步骤。<br>
+        　　1.配置NT服务器：<br>
+        　　要想使用该网络工作站(当然，任意一个工作站，不论是DOS或是Win95或是Windows 
+        NT Workstation工作站均需完成下述操作)，首先必须在服务器上通过“开始→程序→管理工具→域用户管理器→用户→新用户”将你工作站的计算机名、用户名及所在域或组等有关信息添加到网络中。<br>
+        　　2.制作LAN Manager v2.0安装盘：<br>
+        　　方法1：可以在中文Windows NT Server 4.0服务器上通过“开始→程序→管理工具→网络客户管理器”，选择“制作安装磁盘组”中的“LAN 
+        Manager v2.0 for MS－DOS”进行制作。<br>
+        　　方法2：直接通过“资源管理器”进入“中文Windows NT Server 4.0”安装光盘，将“Client→Lanman→Disks”目录下的“Disk1”、“Disk2”、“Disk3”、“Disk4”子目录下的内容分别拷贝到四张1.44M软盘中即可。<br>
+        　　3.将LAN Manager v2.0安装到DOS工作站：<br>
+        　　步骤1：将“LAN Manager v2.0”安装盘的第一张磁盘插入磁盘驱动器中，并在该驱动器运行SETUP程序。当出现“Microsoft 
+        LAN Manager v2.0 SETUP”画面后按“Enter”键。<br>
+        　　步骤2：出现“Using the keyboard in setup”画面时按“Enter”键。<br>
+        　　步骤3：出现“Install LAN Manager”画面时，若认可安装是从“A：”驱动器进行，并且认可安装目标目录为“C:\LANMAN.DOS”时按“Enter”键。否则，用鼠标或通过“TAB”键将光标移到相应位置进行修改并按“Enter”键确认。<br>
+        　　步骤4：出现“Install LAN Manager”画面时，若认可安装是从“A：”驱动器进行，并且认可安装目标目录为“C:\LANMAN.DOS”时按“Enter”键。否则，用鼠标或通过“TAB”键将光标移到相应位置进行修改并按“Enter”键确认。<br>
+        　　步骤5：出现“Install LAN Manager”之“What do you want to install?”画面时，可直接按“Enter”键选择“LAN 
+        Manager Enhanced”安装方式。亦可选择“LAN Manager Basic”安装方式(该方式可节约内存，但它所提供的功能较少)。<br>
+        　　步骤6：出现“Insert Disk”之“DOS Drivers 1 in drive A”时将安装盘2换入软驱中，并按“Enter”键。<br>
+        　　步骤7：出现“Network Adapter Drivers”之画面时，请从“Select 
+        Available Network Adapter Driver”列表中选择合适网卡驱动程序。当列表中不包括网卡驱动程序时，按“Alt＋D”键使用“Other 
+        Driver”选项配置网卡，同时将包含网卡驱动程序的安装盘换入软驱中，并按“Enter”键。在“Other 
+        Network Adapter Drivers”画面中选定并确认网卡驱动程序。之后，在“Network 
+        Protocol for”画面中以光标加“空格”键选择网络通讯协议(一般采用Netbeui协议)以安装网卡驱动程序及网络通讯协议。<br>
+        　　步骤8：出现“Workstation Settings”之画面时，请在“Computername”选项中输入计算机名，在“Username”选项中输入用户名，在“Domain”中输入计算机所在主域域名，在“Other 
+        Domains to Monitor”中输入计算机所在其他域域名或工作组名称(此项可不输)。按“Enter”确认以上各选项有效。<br>
+        　　步骤9：出现“Support for Windows Environment”之画面时，请在“Run MS－DOS 
+        LAN Manager with the Windows Environment?”选项中用光标选择“Yes”或“No”以确定是否在MS－DOS及Windows中与网络连接。<br>
+        　　步骤10：当选中“Yes”确定是在MS－DOS及Windows中与网络连接时，请在出现“Windows 
+        Directory”画面中的“Windows Directory[]”选项填入Windows的路径。<br>
+        　　步骤11：在出现“Messaging Popups”画面的选项中选定你是否在Windows及MS－DOS环境下都能运行网络程序。同时在“Configuration 
+        Complete”画面保存以上配置。<br>
+        　　步骤12：在出现“Insert Disk DOS DRIVERS 2 in driver A：”画面时，换入“LAN 
+        Manager”的第三张盘继续安装至结束。<br>
+        　　至此，在CONFIG.SYS文件中会包含类似如下几行命令：<br>
+        　　DEVICE=C:\LANMAN.DOS\DRIVERS\DOSUTILS\EMM386.EXE NOEMS<br>
+        　　LASTDRIVE=Z<br>
+        　　DOS=HIGH，UMB<br>
+        　　DEVICE=C：\LANMAN.DOS\DRIVERS\PROTMAN\PROTMAN.DOS/i:<br>
+        　　C：\LANMAN.DOS<br>
+        　　DEVICE=C：\LANMAN.DOS\DRIVERS\ETHERNET\ELNK3\ELNK3.DOS<br>
+        　　(此以3C509网卡为例)<br>
+        　　在AUTOEXEC.BAT文件中会包含类似如下几行命令：<br>
+        　　SET PATH=C:\LANMAN.DOS\NETPROG；％PATH％<br>
+        　　NET START WORKSTATION<br>
+        　　LOAD NETBEUI<br>
+        　　[注]若每次开机均要求登录，在此行之下加：<br>
+        　　NET LOGON &lt;USERNAME&gt;＊<br>
+        　　4.配置LAN Manager v2.0的DOS工作站：<br>
+        　　在完成以上安装后重新启动DOS工作站，并记录下“Activating adapter 
+        at I/O Port=0x???，INT=xx”即网卡的I/O地址及中断号。然后，用“EDIT”或其他编辑器对“C:\LANMAN.DOS\PROTOCOL.INI”进行相应的修改。具体做法如下：<br>
+        　　在PROTOCOL.INI文件中[NETBEUI_XIF]组里的<br>
+        　　DRIVERNAME=ELNK3＄(此仍以3C509网卡为例)<br>
+        　　;2nd driver name=ELNK32＄<br>
+        　　之下加上<br>
+        　　;INTERRUPT=xx(xx为启动时所见到的中断号INT)<br>
+        　　;IOADDRESS=0x???(0x???为启动时所见到的地址I/O Port)<br>
+        　　重新启动即可完成配置安装。<br>
+        　　当工作站是IBM300GL等自带以太网卡的原装PC机时：<br>
+        　　需要将PROTOCOL.INI文件[NETBEUI_XIF]组中<br>
+        　　BINDINGS=“XXXXXX”所指向的那个组中的<br>
+        　　;Sample Protocol.INI<br>
+        　　[MS＄CRYSTAL]<br>
+        　　二行删除，并在<br>
+        　　DRIVERNAME=XXXXXXX<br>
+        　　之下加上<br>
+        　　;INTERRUPT=xx(xx为启动时所见到的中断号INT)<br>
+        　　;IOADDRESS=0x???(0x???为启动时所见到的地址I/O Port)<br>
+        　　重新启动即可完成配置安装。<br>
+        　　5.配置LAN Manager v2.0的网络命令：<br>
+        　　1NET<br>
+        　　运行网络连接程序<br>
+        　　2NET/?<br>
+        　　查看NET命令的用法<br>
+        　　3NET LOGON<br>
+        　　登录网络<br>
+        　　4NET LOGOFF<br>
+        　　注销网络<br>
+        　　5NET VIEW \\NTSERVER<br>
+        　　观察服务器NTSERVER中的共享资源<br>
+        　　6NET USE F： \\NTSERVER\WORK<br>
+        　　将网络驱动器F：连接到服务器NTSERVER中的共享资源，其共享名称为WORK<br>
+        　　7NET USE<br>
+        　　观察网络驱动器及网络打印机连接状况<br>
+        　　8NET USE F： /DELETE<br>
+        　　删除网络驱动器F：<br>
+        　　9NET USE LPTn: \\NTSERVER\HP－4VC<br>
+        　　将服务器NTSERVER上的HP－4VC作为网络共享打印机连接到本机的LPTn端口上<br>
+        　　10NET USE LPTn: \\NTSERVER\HP－4VC/PERSISTENT:NO<br>
+        　　更改网络打印机连接设置<br>
+        　　 11 NET USE LPTn: /DELETE<br>
+        　　中断所连接的网络打印机<br>
+        <br>
+        　　(江苏　贲锋)</p>
+        </font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月21日第49期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

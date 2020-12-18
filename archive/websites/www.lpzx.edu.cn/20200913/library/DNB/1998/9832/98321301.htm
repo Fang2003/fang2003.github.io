@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>一？序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp;&nbsp;　Borland 
+        Delphi 30提供了Quick Report部件，使得报表的制作更加灵活方便，利用QuickRep的Preview方法可以预览报表。但美中不足的是，预览窗体中的提示皆为英文。利用Quick 
+        Report部件已有的功能，开发一个自己的报表预览窗体并不困难。下面介绍制作的步骤：<br>
+        　　1．新建一个窗体，起名为“MyPrevForm”，设置Visible属性为“False”，以“Preview”为单元名保存该单元。<br>
+        　　2．插入两个TPanel控件到窗体中，分别设置Panel1、Panel2的Align属性为“alTop”、“alBottom”，设置Panel1的ShowHint属性为“True”。<br>
+        　　3．向窗体中插入一个TQRPreview对象，取名为“QRPreview”，其Align属性设置为“alClient”。<br>
+        　　4．插入一个TOpenDialog对象和一个TSaveDialog对象到窗体中。<br>
+        　　5．设计工具条：在Panel1上添加11个TspeedButton控件，分别完成以下功能：整页显示、100％比例显示、按页宽显示、第一页、上一页、下一页、最后一页、打开报表文件、保存报表文件、打印设置、打印。设置“整页显示”、“100％比例显示”、“按页宽显示”三个按钮的GroupIndex属性为1，“按页宽显示”按钮的Down属性设置为True。<br>
+        　　6．在Panel2上添加两个Label，分别命名为lbPageNo、lbPageCount。<br>
+        　　7．添加代码：<br>
+        　　1）给QRPreview的OnPageAvailable事件添加语句：<br>
+        　　lbPageCountCaption:=′共′＋IntToStr(QRPreviewQRPrinterPageCount)＋′<br>
+        页′;<br>
+        　　2）向各按钮的OnClick事件中添加语句：<br>
+        　　A整页显示按钮：<br>
+        　　QRPreviewZoomToFit;<br>
+        　　B100％比例显示按钮：<br>
+        　　QRPreviewZoom:=100;<br>
+        　　C按页宽显示按钮：<br>
+        　　QRPreviewZoomToWidth;<br>
+        　　D至第一页按钮：<br>
+        　　QRPreviewPageNumber:=1;<br>
+        　　lbPageNoCaption:=′第1页′;<br>
+        　　E向前翻页按钮：<br>
+        　　if QRPreviewPageNumber&gt;1 then<br>
+        　　begin<br>
+        　　QRPreviewPageNumber:=QRPreviewPageNumber－1;<br>
+        　　lbPageNoCaption:=′第′＋IntToStr(QRPreviewPageNumber)＋′页′;<br>
+        　　end;<br>
+        　　F向后翻页按钮：<br>
+        　　if QRPreviewPageNumber&lt;QRPreviewQRPrinterPageCount then<br>
+        　　begin<br>
+        　　QRPreviewPageNumber:=QRPreviewPageNumber＋1;<br>
+        　　lbPageNoCaption:=′第′＋IntToStr(QRPreviewPageNumber)＋′页′;<br>
+        　　end;<br>
+        　　G至最后一页按钮：<br>
+        　　QRPreviewPageNumber:=QRPreviewQRPrinterPageCount;<br>
+        　　lbPageNoCaption:=′第′＋IntToStr(QRPreviewQRPrinterPageCount)＋′页′;<br>
+        　　H打开文件按钮：<br>
+        　　if OpenDialog1Execute then<br>
+        　　QRPreviewQRPrinterLoad(OpenDialog1FileName);<br>
+        　　I保存报表按钮：<br>
+        　　if SaveDialog1Execute then<br>
+        　　QRPreviewQRPrinterSave(SaveDialog1FileName);<br>
+        　　J打印设置按钮：<br>
+        　　QRPreviewQRPrinterPrintSetup;<br>
+        　　K打印报表按钮：<br>
+        　　QRPreviewQRPrinterPrint;<br>
+        　　8．保存该单元。<br>
+        　　为在程序运行时用刚设计的预览窗体替代Quick Report提供的预览窗体，请在已建立的报表单元的implementation部分加上：uses 
+        Preview;并给TQuickRep控件的OnPreview事件添加代码：<br>
+        　　MyPrevFormQRPreviewQRPrinter:=QuickRep1QRPrinter;<br>
+        　　MyPrevFormShow;<br>
+        　　到此，在运行期间调用TquickRep的Preview方法来预览报表，看到的就是刚创建的预览窗体了。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年32月32日第32期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

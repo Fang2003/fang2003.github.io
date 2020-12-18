@@ -1,0 +1,138 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>高一第二十二课</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<p align="center"><font size="6" face="隶书" color="#FF0000">高一第二十二课</font></p>
+<hr>
+<div align="center">
+  <center>
+  <table border="0" width="750">
+    <tr>
+      <td width="100%"><b>总体任务：在上节课的成绩表的基础上，计算所有学生在班级中的排名次，把所有不及格的成绩用红色标识出来。</b>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+<div align="center">
+  <center>
+  <table border="0" width="750">
+    <tr>
+      <td width="100%">
+  </center>
+      <b>相关知识</b>：<b>条件格式、数据的绝对引用</b>
+      <p><b><a name="1"></a>1、条件格式</b></p>
+      <p>&nbsp;&nbsp;&nbsp; 在EXCEL软件中，允许根据数据的不同，而设置不同的格式。例如，在一列成绩数据中，数据小于60认为是不及格，可以选择使用红色显示。</p> 
+      <p>&nbsp;&nbsp;&nbsp; <font color="#FF0000">举例操作：成绩表中的政治成绩小于60分的用红色标识出来</font></p>
+      <p>&nbsp;&nbsp;&nbsp; ①政治成绩数据在E列，<font color="#FF0000">选择所有E列的成绩数据</font></p>
+      <p align="center"><img border="0" src="image/2201.gif" width="319" height="349"></p>
+      <p>&nbsp;&nbsp;&nbsp; ②菜单“<font color="#FF0000">格式/条件格式</font>”</p> 
+      <p>&nbsp;&nbsp;&nbsp;  
+      ③在条件格式对话框中，按如图设置条件<font color="#FF0000">“单元格数值”、“小于”、“60”</font>，然后再单击“格式”按钮</p>
+      <p align="center"><img border="0" src="image/2202.gif" width="543" height="157"></p>
+      <p>&nbsp;&nbsp;&nbsp;  
+      ④在弹出的单元格格式对话框中，设置颜色为<font color="#FF0000">红色</font>，再单击“确定”按钮</p>
+      <p align="center"><img border="0" src="image/2203.gif" width="399" height="357"></p>
+      <p>&nbsp;&nbsp;&nbsp;  
+      ⑤再单击条件格式的“确定”按钮，不及格政治成绩红色显示就完成了。</p>
+      <p>&nbsp;&nbsp;&nbsp; <font color="#0000FF"><b>探索：在条件格式对话框中的“添加”按钮，还可以多设条件，如把优秀的成绩（80分以上）用蓝色标识出来。具体的操作方法和上述步骤的③、④一样。</b></font></p> 
+      <p><a name="2"></a>2、数据的绝对引用</p>
+      <p>&nbsp;&nbsp;&nbsp;  
+      回顾上节课做的公式复制，在总分一列的M2单元格，应该使用函数“=SUM(E2:L2)”，当把这个公式复制到M3单元格时，发现编辑栏的公式变成了“=SUM(E3:L3)”，当然也就是在M3单元格计算了第二位同学的总分了，这正是我们需要的。<font color="#FF0000">数据引用在经过复制后，会根据单元格所在的不同位置，相对地修改引用的单元格名称，这种现象我们称为相对引用</font>。如刚才所说的在单元格M2引用的数据是E2:L2，而复制到M3后，引用的数据变成了E3:L3。</p>
+      <p>&nbsp;&nbsp;&nbsp;  
+      当然，有时数据的引用也不是总是应该相对引用，有时我们也期望被引用的数据一直不变。如，有一个函数RANK，是求数据的排位的（在成绩的处理上可用于排名）。该函数的用法是：</p>
+      <p>&nbsp;&nbsp;&nbsp; =RANK(<font color="#0000FF">参数1</font>,<font color="#0000FF">参数2</font>,<font color="#0000FF">参数3</font>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+      求排名函数</p>
+      <p>&nbsp;&nbsp;&nbsp; 解释：按<font color="#0000FF">参数3</font>指定的顺序，求<font color="#0000FF">参数1</font>在集合<font color="#0000FF">参数2</font>中的排位。举例：A1到D1单元格的数据分别为6，5，4，3，要在A2到D2单元格分别求A1，B1，C1，D1的数据在A1:D1中的大小排名，期望应该能显示1，2，3，4，在A2单元格输入“=RANK(A1,A1:D1,0)”</p> 
+      <p align="center"><img border="0" src="image/2204.gif" width="431" height="103"></p>
+      <p>&nbsp;&nbsp;&nbsp; 对应参数分别是<font color="#0000FF"><br> 
+      &nbsp;&nbsp;&nbsp; 参数1</font>是A1，&nbsp;&nbsp; 即数据6；<br> 
+      &nbsp;&nbsp;&nbsp; <font color="#0000FF">参数2</font>是A1:D1，即集合{6，5，4，3}；<font color="#0000FF"><br> 
+      &nbsp;&nbsp;&nbsp; 参数3</font>是0，&nbsp;&nbsp;&nbsp;  
+      指明按数据从大到小排序，如果参数3的值不为0，则指明从小到大排序。</p>
+      <p>&nbsp;&nbsp;&nbsp; =RANK(A1,A1:D1,0)求出了6在集合{6，5，4，3}中，从大到小排序，是最大的数，所以A2单元格显示1。如果<font color="#0000FF">参数3</font>的值不为0，如=RANK(A1,A1:D1,1)的值就是4了，A1单元格代表的值是{6，5，4，3}中第4小的。如果<font color="#0000FF">参数3</font>的值为0，可以省略不写，则刚才A2的公式可为“=RANK(A1,A1:D1)”</p> 
+      <p>&nbsp;&nbsp;&nbsp; 复制A2单元格的数据到B2，C2，D2，相应地求B1，C1和D1的名次，发现它们的值都为1，而不是期望的2，3，4，是不是5，4和3的值也是最大的值呢？（计算机出错？）</p>
+      <p align="center"><img border="0" src="image/2205.gif" width="402" height="118"></p>
+      <p>&nbsp;&nbsp;&nbsp; 观察C2单元格的编辑栏，原来数据的引用出现了问题，<font color="#0000FF">参数2</font>变成了C1:F1，这个C1:F1并不是我们想要的，我们需要它一直是A1:D1。<font color="#FF0000">如果需要被引用的单元格名称在复制中不改变，可以在被引用的单元格的行或列名称前加一个$符号。</font><font color="#0000FF">如果在列名称前加入</font><font color="#0000FF">$</font><font color="#0000FF">，则复制时列名称不变，</font><font color="#0000FF">在行名称前加入</font><font color="#0000FF">$</font><font color="#0000FF">，则复制时行名称不变，行列名称前都加</font><font color="#0000FF">$，则复制时行列名称都不变。</font><font color="#FF0000">数据引用在经过复制后，被引用的单元格名称不随复制到的单元格所在的位置改变而改变，这种现象我们称为绝对引用</font>。</p>
+      <p>&nbsp;&nbsp;&nbsp; 如：依题意，A2单元格的函数就应该写成“=RANK(A1,$A1:$D1,0)”，再复制，如下图所示了。所求的B1，C1和D1的名次就对了。</p>
+      <p align="center"><img border="0" src="image/2206.gif" width="404" height="103"></p>
+      <p>　</p>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div align="center">
+  <table border="0" width="750">
+    <tr>
+      <td width="100%">
+      <b>实习：</b><br>
+      <b>
+      1、打开上节课文档</b>
+      <p><b>
+      2、把所有成绩不及格的数据用红色标识出来</b></p>
+      <p>各科成绩的参考满分和及格成绩如下表</p>
+      <div align="center">
+        <center>
+        <table border="1" width="500">
+          <tr>
+            <td width="11%">　</td>
+            <td width="11%">政治</td>
+            <td width="11%">语文</td>
+            <td width="11%">数学</td>
+            <td width="11%">外语</td>
+            <td width="11%">物理</td>
+            <td width="11%">化学</td>
+            <td width="11%">历史</td>
+            <td width="12%">地理</td>
+          </tr>
+          <tr>
+            <td width="11%">满分</td>
+            <td width="11%">100</td>
+            <td width="11%">150</td>
+            <td width="11%">150</td>
+            <td width="11%">150</td>
+            <td width="11%">100</td>
+            <td width="11%">100</td>
+            <td width="11%">100</td>
+            <td width="12%">100</td>
+          </tr>
+          <tr>
+            <td width="11%">及格</td>
+            <td width="11%">60</td>
+            <td width="11%">90</td>
+            <td width="11%">90</td>
+            <td width="11%">90</td>
+            <td width="11%">60</td>
+            <td width="11%">60</td>
+            <td width="11%">60</td>
+            <td width="12%">60</td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>参考步骤：<a href="no22.htm#1">请参阅相关知识的条件格式</a></p>
+      <p><b> 
+      3、计算出所有学生的总分名次</b></p>
+      <p>使用函数RANK，参考步骤：<a href="no22.htm#2">请参阅相关知识的绝对引用和RANK函数的使用</a></p>
+      <p><b>
+      4、保存文件（第二十三课在第二十二课完成的基础上做）</b></p>
+      </td> 
+    </tr>
+  </table>
+</div>
+<hr>
+<div align="center"><a href="../weiji.html">返回目录</a>
+</div>
+</body>
+
+</html>

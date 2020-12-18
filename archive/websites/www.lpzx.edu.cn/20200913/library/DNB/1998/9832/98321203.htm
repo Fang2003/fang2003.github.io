@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>一个实用的VB屏幕程序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp;&nbsp;在VB5.0具有面向对象的程序设计思想及可视化的编程方式，可开发出各种多媒体应用程序，颇得软件设计者青睐。笔者最近应用VB5.0编制了一程序，成功实现了“图文并茂”的屏幕效果，即：屏幕出现用户选定的一幅赏心悦目的图像，在图像下方有一行字幕缓缓地从屏幕右边向左边移动，全部文字移至左边消失后，从右边又平滑拖出字幕，字幕移动过程中既不影响图像的整体效果又能对图像进行提示、说明，使应用程序界面充满“活性”。<br>
+        现将设计的整个过程介绍如下：<br>
+        (1)创建一个新目标文件(Project1)，并建立一个窗体Form1。<br>
+        (2)在Form1上配置一个计时器控件Timer1、标签控件Label1、图像控件Picture1。<br>
+        (3)各控件属性设置：<br>
+        Timer1的Enabled设置为“True”。<br>
+        用Label1的Font设置屏幕下方循环移动的提示信息字体及大小，ForeColor设置字体颜色，AutoSize设置为True，BackStyle设置为“0－transparent”。<br>
+        Picture1的AutoSize设置为False，Height设为5435，Width设为8235，Scalemode设置为“3－pixel”。<br>
+        (4)程序代码清单：<br>
+        PrivateSubForm_Load()<br>
+        ′设置图像控件Picture1属性，在屏幕显示图像Picture1Picture=LoadPicture(″C:\Pwin95\Setup.bmp″)Picture1ForeColor=RGB(255，10，110)Picture1FontItalic=TruePicture1FontBold=TruePicture1Top=155Picture1Left=635′将标签控件Label1的Caption属性设置为屏幕下方循环移动的提示信息Label1Caption=″江西省黎川县职业中专电脑室设计″Label1Left=WidthLabel1Top=5653Timer1Interval=375Form1Windowstate=2EndSubPrivateSubTimer1_Timer()IfLabel1Left&amp;lt;0－Label1WidthThenLabel1Left=WidthEndIfLabel1Left=Label1Left－255EndSub程序中的图像及移动字幕可依自己喜好灵活设计，以达到最佳效果。若屏幕显示多幅图像，需设置好几个图像控件Picture的屏幕显示位置，分别调用函数LoadPicture(″.bmp文件名″)即可。该程序设计也适用VB3.0、VB4.0。(江西 
+        范明之)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年32月32日第32期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用InstallShield制作数据库应用系统的安装程序</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/banner.jpg' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>35 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用InstallShield制作数据库应用系统的安装程序</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用InstallShield制作数据库应用系统的安装程序 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　Delphi具有强大的数据库应用程序开发功能，其Client／Sever版本可以开发一般的单机数据库应用系统、普通Client／Sever应用系统直至基于Web的多层应用，其中自然离不开Borland数据库引擎（BDE）的功劳。不过在没有安装过Delphi程序的计算机上运行数据库程序时，必须同时分发庞大的BDE文件，Borland建议用户用Delphi附带的InstallShield制作安装程序来解决这些问题。但怎样选择BDE文件才能使自己的安装程序更加精炼呢？我首先介绍一下其中几个必须的文件：<br>
+　　Idapi32.dll：BDE基本函数库<br>
+　　Blw32.dll：语言驱动函数库<br>
+　　Idr20009.dll：错误信息库<br>
+　　Fareast.bll：远东语言驱动程序<br>
+　　Usa.bll：美国语言驱动程序<br>
+　　以下文件为根据需要可选：<br>
+　　如用Paradox，则应选择：Idpdx32.dll<br>
+　　如用Dbase，则应选择：Iddbas32.dll<br>
+　　如用Access，则应选择：Iddao32.dll<br>
+　　如用Ascii，则应选择：Idasci32.dll<br>
+　　如用TBatchMove，则应选择：Idbat32.dll<br>
+　　如用Data Repostitory，则应选择：Iddr32.dll<br>
+　　如用ODBC，则应选择：Idodbc32.dll<br>
+　　如用BDE DataSet Provider DLL，则应选择：Idprov32.dll<br>
+　　如用SQL查询，则应选择：Idsql32.dll<br>
+　　下面我们就以用InstallShield来制作一个Paradox数据库应用系统的安装程序为例：<br>
+　　1.启动程序设置有关文件目录路径，进入Setup Checklist；<br>
+　　2.在Set the Visual Design中设置程序名、程序目录、安装程序主窗口等；<br>
+　　3.在Specify Components and Files中设置Groups and Files项，在Program Files中加入用户的所有程序文件和数据库表文件，以及下列文件：Idbat32.dll、Usa.btl、Idapi.cfg、Charset.cvb、Bantam.dll、BLW32.dll、Idapi32.dll、Fareast.btl、Idpdx32.dll、Idr20009.dll、Idsql32.dll（以上文件必须含目录路径）；<br>
+　　4.在Dialog Boxes中设置所需安装对话框；<br>
+　　5.在Make Registry Changes中设置Keys项，在HKEY_LOCAL_MACHINE中加入software\borland\blw32和software\borland\database engine两项，并且在blw32值中加入<br>
+　　“Blapipath ‘以上文件目录’”、“LOCALE_LIB0 ‘以上文件目录’\Fareast.bll”和“LOCALE_LIB1 ‘以上文件目录’\Usa.bll”，在database engine值中加入“Dllpath ‘以上文件目录’”、“Configfile01 ‘以上文件目录’\Idapi.cfg”；<br>
+　　6.在Specify Folder and Icons中根据实际要求设置有关项目；<br>
+　　7.在Run Disk Builder中设置安装盘的有关信息；<br>
+　　8.最后进行Test the Installation和Create Distribution Media即可完成安装程序的制作。<br><b>(新疆　宗宏斌)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/35/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99351302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

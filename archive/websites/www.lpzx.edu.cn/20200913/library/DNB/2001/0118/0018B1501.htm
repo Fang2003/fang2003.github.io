@@ -1,0 +1,135 @@
+<html><!-- #BeginTemplate "/Templates/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>音频压缩，谁与争锋——两个音频压缩编码方案</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->音频压缩，谁与争锋——两个音频压缩编码方案<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->对于音乐爱好者说，如何获得质量良好的音频文件是至关重要的，除了目前流行的MP3，作为音频文件的新贵WMA文件也不甘落后，那么，如何实现两种音频文件的压缩呢？<br>
+              实战Lame编码器<br>
+              MP3已经是我们非常熟悉的东西，大部分玩家只留意过不同软件压缩速度、压缩比例上的差别，很少有人会对压缩出来的MP3文件的音质提出疑问，并且留意MP3与CD、WAV文件的音质差别，不过在一些要求播放效果的场合下，MP3的效果就相形见绌了。这是由于音频压缩时信号损失的缘故。而用Lame编码器制作MP3文件，就可以减少这种情况的发生。<br>
+              RazorLame运行界面。点击“Add”(添加)按钮，添加你想要压缩的WAV文件，然后点“Options”(选项)按钮，指定Lame编码器的位置(即Lame压缩包解压缩后文件Lame.exe的位置)，并指定输出路径、Bitrate(比特率)，Mode(模式)共有4种选项：Stereo、Joint 
+              Stereo、Force MS_stereo、Mono。各种模式的差异如下：<br>
+              Stereo：单纯双声道立体声模式，在此种压缩模式中，Lame将不会计算双声道之间的资料相关性，但是会协调分配双声道的资料流量，自动分配较多的数据位给复杂的声道使用。<br>
+              Joint Stereo：在这个压缩模式下，Lame会利用双声道之间的资料相关性进行演算。一般情况下，不当地使用 Joint 
+              Stereo 模式可能造成可辨别的压缩失真，Lame使用了比 ISO 文件复杂许多的演算法进行判别，因此可以放心使用Lame的Joint 
+              Stereo模式。<br>
+              Force：强迫所有的Frame(帧)都使用M/S Joint Stereo编码，速度可以加快很多，但是可能影响音质，不建议使用。<br>
+              Mono：单声道编码模式。<br>
+              下面的VBR选项就很关键了：VBR就是可变比特率模式，在这种模式下，你无法指定固定的比特率，只能够指定一个VBR的Quality(品质)级别(0为最高品质，9为最低品质)，然后给出一个浮动的上限和下限(比如从16K到160K，默认值是从32K到320K)。你还可以选中图3的Use 
+              ABR instead of VBR(使用平均比特率模式代替可变比特率模式)来指定一个平均的比特率值，让Lame根据不同的Frame自动分配适当的比特率。<br>
+              在Option中还有一些更高级的设置选项，比如专家选项(Expert)、滤波器选项。我们通常不需要调节这里面的设置，前面的基本设置已经可以让我们获得满意的MP3文件了。<br>
+              设置完毕之后，点主界面中的“Encode”(编码)按钮，另外，请注意旁边还有一个“Decode”(解码)按钮，这个软件不但可以编码，还可以解码，这样就可以得到所需的MP3文件了。<br>
+              主观评价部分我们就交给各位读者自行感受了，虽然有些编码器可以智能地加入一些变化或补偿使得播放效果更出色，但原汁原味的感觉却是很多人梦寐以求的。Lame编码器在减少压缩损失方面做得比较好，然而高品质下文件的压缩比不够高，常常要占用更多的储存空间。<br>
+              微软的盒子—Windows Media Encoding Utility V8.0<br>
+              MS AUDIO 4.0是微软公司针对REAL AUDIO开发的网上流式数字音频压缩技术，文件扩展名为WMA。现在，用以播放WMA文件的Windows 
+              Media Encoding Utility 8.0使WMA文件成为可以真正和MP3较量的一种编码方案了。<br>
+              首先我们要安装Windows Media Encoding Utility V8.0(以下简称WM8)，安装完毕，它会提示如何使用。WM8是一个命令行程序，与LameRazor一样繁琐，不过同样可以用一个外壳程序来搞定它，这个外壳程序就是EncodeIT 
+              V0.1。<br>
+              EncodeIT V0.1的安装和使用也很简单，所示在“Source file selection”(选择源文件)选择你要压缩的WAV文件并按添加文件的按钮，然后进入设置(Configuration)窗口，设置当前激活的编码器(Active 
+              encoder)为WMA encoder，并在下面的WMA encoder编码器位置栏中输入WM8 EUTIL的位置和参数，再返回“Source 
+              file selection”窗口，点下“Start”就可以开始编码了。<br>
+              WM8的压缩速度恐怕出乎你的意料：2分15秒的WAV文件，压缩成WMA文件只需要13秒。<br>
+              从损失的角度看，128Kbps的WMA与Lame编码最高品质的MP3旗鼓相当，但是WMA文件体积小了将近16%，压缩速度却是Lame的4倍多，这无疑对MP3构成了严重威胁。除此之外，WMA在极低比特率下的表现更是远胜MP3，在这个领域它的对手是Real 
+              Audio。WMA目前唯一的缺点可能是播放器尚不丰富，不像MP3那样有成千上万种功能相当出色的播放软件。幸好Windows98 
+              SE自带的Windows Media Player就可以播放WMA，不然真的有点让人为难了。<br>
+              到底我们应该选择哪种音频压缩编码方案呢？这个疑问只能留待大家共同来解决(本文提到的相关软件均可在2001年第5期《新硬件》的“DIY教室”中找到)。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

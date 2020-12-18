@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='Wang Ji'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- AutoCAD使用经验几则</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'>&nbsp;</A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>25 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; AutoCAD使用经验几则</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 AutoCAD使用经验几则 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<p align="center"><b>1.汉化菜单</b></p>
+　　将support目录下的acad.mnu文件复制为chinese.mnu。用写字板打开chinese.mnu。仔细观察会发现其中有许多类似“＊＊＊POP”的条目，每一条目定义了一列下拉菜单。将引号中的英文命令名称改为中文，存盘退出。再在R14中输入“menu“命令，将chinese.mnu菜单文件装入，下拉菜单就变成了中文。还可以再装入acad.mnu 文件将菜单还原。
+　　<p align="center"><b>2.巧用R12的“命令取消”键</b></p>
+　　R14默认的“命令取消”键是“ESC”键，如果你已经习惯了R12的“Ctrl＋C”怎么办呢？点击菜单Tools\preferences\compatibility\priority  for accelerator keys\autoCAD classic，然后就可以用“Ctrl＋C"取消命令了，同时“ESC“键仍然有效。
+　　<p align="center"><b>3.怎样一次剪除多条线段</b></p>
+　　trim命令中提示选取要剪切的图形时，不支持常用的window和crossing选取方式。当要剪切多条线段时，要选取多次才能完成。这时可以使用fence选取方式。当trim命令提示选择要剪除的图形时，输入“f",然后在屏幕上画出一条虚线，回车，这时被该虚线接触到的图形全部被剪切掉。
+　　<p align="center"><b>4.快速变换图层</b></p>
+　　单击“Object Propertys”工具条上的“Make objects' layer current”按钮，然后在作图区选择要去的图层上的任一图形，当前层立刻变换到选取的图形所在层。
+　　<p align="center"><b>5.解决R12文件汉字乱码</b></p>
+　　用R14打开R12的文件时，即使正确地选择了汉字字形文件，还是会出现汉字乱码，原因是R14与R12采用的代码页不同。可到AutoDesk公司主页下载代码页转换工具wnewcp。运行wnewcp 后，首先选中“R11／R12”复选框，再单击“Browse”按钮，选择要转换的文件或目录，然后选择新的代码页，ANSI936或GB2312均可，单击“Start Conversion”即开始转换。转换后，在R14中就能正确地显示汉字。<br>
+　　<b>(重庆　何庆)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/25/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99251203.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

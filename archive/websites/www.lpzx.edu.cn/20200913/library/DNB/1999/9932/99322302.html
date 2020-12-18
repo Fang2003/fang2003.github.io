@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 一则Windows蓝屏故障的解决</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/banner.bmp"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><a href="index.html"><FONT color="#CC0000">目录</font></a></FONT></a></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'>软件世界</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 32 期 &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 一则Windows蓝屏故障的解决</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 一则Windows蓝屏故障的解决 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　朋友在使用一种Windows集成软件系统时，经常被一种莫名其妙的蓝屏故障所困扰。故障现象是每次运行该软件约一个小时后，就会突然出现蓝屏故障，屏幕提示：“A fatal exception OE has occurred at ＊＊＊:＊＊＊＊＊＊＊＊in VCOND(＊＊)＋＊＊＊＊＊＊＊＊The current application will be terminated”，非常有规律。每当此时，他总是热启动重新开机，但是要不了多久，故障现象依然，使他非常烦恼。为此，找笔者去帮助解决。<br>
+　　他的机器配置是：Pentium Ⅱ CPU、64M内存、5.4G硬盘。从现象看是系统资源不足造成的问题，但对这样的机器来说，运行目前的程序应该不会发生此类问题。经仔细检查，系统及软件启动时也并未加载过多的程序到内存中，为什么会在使用一定时间后才出现此类故障呢?<br>
+　　在排除了病毒和程序本身设计上的错误外，百思不得其解，最后把目光集中在系统进程上。在程序启动后，按下“Ctrl＋Alt＋Del”组合键查看“任务列表窗口”，记下当前已经加载的程序数。然后让程序继续执行，在间即将可能出现蓝屏现象前，再次按“Ctrl＋Alt＋Del”查看“任务列表窗口”，记下此时总共加载的程序数，并与原有的比较，问题已经一目了然。<br>
+　　经比较发现，系统此时在内存中共加载了上百个“Winoldap”进程，这是一个与DOS应用程序兼容性有关的问题。<br>
+　　原来，该软件系统在运行过程中，不断地从接口上读取外部信息，然而该信息却是以压缩包的形式传送的，系统每读进一个压缩包，就会自动调用附带的PKUNZIP程序去解压缩，而PKUNZIP是DOS环境下的应用程序，完成任务后不会自动退出，于是此程序不断地驻留于内存中，一定时间后就会导致内存资源严重耗尽，最终出现蓝屏现象。<br>
+　　找出了问题的根本，就比较容易解决了。具体方法是：双击“我的电脑”或“资源管理器”，找到PKUNZIP.EXE程序，右击选中“属性”，单击“程序”标签，选中“退出时关闭”前的复选框，然后单击“高级……”按钮，选中“禁止MS－DOS程序检测Windows”前的复选框，最后逐级确认退出即可。<br>
+　　该系统经如此处理后，运行几个月来再也没有出现此故障。<br><b>(河南　阎超凡)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/32/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99322302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

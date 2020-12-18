@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Novell网络故障排除三例&nbsp; 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　例1：新建一细缆、双绞线网。它采用Netware 
+        3.12服务器，为无盘工作站。工作站配置I430VX主板，Cyrix 6x86 PR150＋ CPU，AE2000网卡。安装后，部分工作站开机入网速度奇慢，热机器入网稍快。<br>
+        　　开始怀疑是网线、网卡故障，后均被排除。又怀疑是服务器文件安装不好，重新安装，故障依旧。最后焦点集中到工作站硬件性能上。用捷波主板更换一工作站，故障依旧；换用Pentium 
+        100 CPU，故障消失。至此确定是CPU的问题。<br>
+        　　例2：上例网络中，部分工作站不能入网。卸下应用程序卷和用户卷，用Vrepair修复，提示用户卷文件错误，写入修复后，故障排除。运行两小时后，故障再次发生，所有工作站均不能入网，检查BNC头及T形头时，发现网线、机壳上带电，检查电源，发现零线上串电(未安装地线)，排除电源故障后，故障仍在。因所有站均不能入网，考虑是网线故障，故按下列步骤检查网线(网络结构如图)。<br>
+        　　从服务器上取下T形头，取消S2段，取下HUB2上的终端匹配器，接在S1终端，检查该段电阻值为25欧姆，正常。然后取消S1段，将匹配器接入S2两端，检查网线阻值，为无穷大值，说明网线开路。重新接好BNC头，故障排除。<br>
+        　　例3：有一教学网，亦采用细缆、双绞线构成总线形结构，连接30台无盘工作站。<br>
+        　　NOS为Netware 312版，因学生不正常退网导致网络故障。表现为：服务器能正常安装系统卷(该网仅建一系统卷)，工作站启动时显示Error 
+        reading boot image file，无法登录。试着从系统管理员硬盘工作站登录，查看硬盘NET子目录下的文件，NETBAT内容为：<br>
+        　　ipxcom<br>
+        　　netxexe<br>
+        　　f:<br>
+        　　login supervisor<br>
+        　　执行NETBAT，结果提示F：无效，无法登录，按常规，首先在服务器上卸下SYS卷，用Vrepair修复，显示目录和文件均有大量错误，写入修复，反复多次，均无法解决错误。至此似乎只有重新安装此网。<br>
+        　　从其它网(版本均为312版)的LOGIN子目录拷入LOGINEXE文件到硬盘NET子目录下，单步执行IPXCOM、NETXEXE、LOGIN 
+        SUPERVISOR，登录成功，检查目录和文件，发现LOGIN子目录和PUBLIC子目录不翼而飞，至此明白F：为何无效。庆幸的是SYSTEM目录及所有应用程序目录完好无损，装订库文件也完好无损。<br>
+        　　重建LOGIN和PUBLIC目录，将上例网中两目录下的内容导入，LOGIN目录下的IPXCOM和NETXEXE两文件用硬盘NET目录下的两同名文件取代(因两个网所使用的网卡略有不同)，然后检查系统注册正本，发现系统注册正本是另一网的注册正本，重写注册正本，保存后退网以超级用户身份登录，一切正常，退出。以普通用户身份登录，则映射驱动器均无效，无法正常退网，反复查看系统注册正本(用户注册正本均未建立)正确无误，至此迷惑不解，猛然间想起新建LOGIN和PUBLIC子目录后，未对用户赋权，遂将R、F权赋给EVERYONE，再以用户身份入网，问题解决。<br>
+        　　解决了有盘站登录问题，下一步是要生成DOS映像文件，解决无盘站的登录。于是在管理员机器上带参数/S格式化一张软盘，然后写入CONFIGSYS和AUTOEXECBAT文件，拷入IPXCOM和NETXEXE。准备好启动盘后，以超级用户身份入网，然后做如下操作：<br>
+        　　F:\SYSTEM&gt;MAP G:=SYS:SYSTEM<br>
+        　　F:\SYSTEM&gt;MAP H:=SYS:LOGIN<br>
+        　　F:\SYSTEM&gt;H:<br>
+        　　H:\LOGIN&gt;FLAG NET＄DOSSYS RW<br>
+        　　H:\LOGIN&gt;G:DOSGEN NET＄DOSSYS<br>
+        　　H:\LOGIN&gt;FLAG NET＄DOSSYS ROS<br>
+        　　至此，映像文件生成完毕，将CONFIGSYS、AUTOEXECBAT拷入LOGIN、PUBLIC目录，覆盖目录下同名文件。从无盘工作站上登录成功，以为大功告成，谁知运行一应用程序或是LOGOUT时，提示Invalid 
+        command com insert disk with commandcom in drive A。检查注册正本COMSPEC赫然醒目，所指之处，COMMANDCOM明确无误，颇让人费解，查看当前DOS版本，发现DOS 
+        622后面多了chinese version。原来管理员硬盘上的DOS重装为中文版，用该版本生成的DOS映像文件自然对DOS 
+        6.22的COMMANDCOM不予理睬。用DOS 6.22格式化软盘，重做启动盘，再次生成映像文件，一切OK!<br>
+        　　在解决该故障时，深深体会到备份的重要性。如有备份的话，哪会有这些麻烦。 
+        (请作者尽快与本报联系)<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月11日第18期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

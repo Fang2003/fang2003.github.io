@@ -1,0 +1,205 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Delphi的动画制作技巧</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0123/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0123/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第23期 <!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Delphi的动画制作技巧<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->Delphi中所有对象都提供了Top、Left、Height、Width四个属性用以控制对象的位置和大小另外在Delphi中还提供了一个Time的构件利用它们可以方便地实现一些动画。<br>
+              一、拉幕<br>
+              拉幕式即从中间往两边慢慢显示画面。在此把dbimage1的center属性设成true把stretch属性设成false。把Width属性设成0适当设置Left的值使其显示在屏幕中间。实现动画主要方法是修改Left属性值逐渐变小和Width属性值逐渐变大要注意的是为了让幕布从中间均匀地向两边拉开Width的改变值必须是Left改变值的2倍。在Dimeer1的OnTime事件中输入如下语句<br>
+              if dbimage1．left＞0 then<br>
+              begin<br>
+              dbimage1．left=dbimage1．left-1<br>
+              dbimage1．width=dbimage1．width+2<br>
+              //dbimage1．width的改变值必须是dbimage1．left改变值的2倍<br>
+              end<br>
+              else<br>
+              timer1．enabled=false//拉幕结束。<br>
+              把上面程序中的Left改为TopWidth改为Height就可以实现竖直方向的拉幕。如果把拉幕这种效果运用于文本类型的对象就可以实现一行一行地显示文本的效果。<br>
+              二、手风琴<br>
+              在拉幕式的动画中当画面整个显示后再把画面从两边往中间慢慢遮住如此不断循环像拉手风琴一样。实现时需加入一个变量State用以表明此时的状态。具体程序如下<br>
+              procedure TForm1．Timer1TimerSender TObject<br>
+              begin<br>
+              if state=1 then<br>
+              if dbimage1．left＞0 then<br>
+              begin<br>
+              dbimage1．left=dbimage1．left-1<br>
+              dbimage1．width=dbimage1．width+2<br>
+              end<br>
+              else<br>
+              //当幕完全拉开后改变状态变量<br>
+              state=2<br>
+              else //从两边往中间拉<br>
+              if dbimage1．left＜form1．width div 2 then<br>
+              begin<br>
+              dbimage1．left=dbimage1．left+1<br>
+              dbimage1．width=dbimage1．width-2<br>
+              end<br>
+              else<br>
+              //当幕合上后改变状态变量<br>
+              state=1<br>
+              end<br>
+              三、栅栏式<br>
+              画面初始被竖直栅栏遮住然后各条栅栏逐渐变窄被栅栏分割的画面逐渐完整起来。在这种动画中栅栏的角色由STATICTEXT类型的对象来充当画面呈现几条栅栏就需要几个STATICTEXT对象。只需改变STATICTEXT类型对象的Left 
+              和 Width属性即可Left逐渐变大Width逐渐变小在Timer1的OnClick事件上每一个STATICTEXT对象作如下处理<br>
+              if st1．width＞0 then //ST1是STACTICTEXT类型的一个对象<br>
+              begin<br>
+              st1．width=st1．width-2<br>
+              st1．left=st1．left+1 <br>
+              end<br>
+              else<br>
+              //再一次循环<br>
+              begin<br>
+              st1．width=40 //Width和Left由实际情况决定<br>
+              st1．left=40<br>
+              end<br>
+              如果把上面的栅栏水平排列把Left改成Top把Width改成Height则成为百页窗的效果大家有兴趣的话可以试试。<br>
+              四、翻页<br>
+              这是一种旋转的效果实际上是把Top的值固定改变Height的值并把Stretch的值设为True。在Timer1的OnTime事件中键入以下程序可以实现向上翻页<br>
+              if dbimage1．height＞0 then<br>
+              dbimage1．height=dbimage1．height-4<br>
+              若把上面程序中的Height的属性值从小变到大则实现向下翻页的效果。若把Top改成Left把Height改成Width则实现左右翻页的效果。如果把Left和Width一起同时改变则可以使图片以某一条通过图片的竖直线为轴进行旋转在Timer1的OnTimeR事件中程序如下<br>
+              procedure TForm1．Timer1TimerSender TObject<br>
+              begin<br>
+              if state=1<br>
+              then<br>
+              if dbimage1．width＞0 then<br>
+              begin<br>
+              //画面逐渐变小<br>
+              dbimage1．left=dbimage1．left+1<br>
+              dbimage1．width=dbimage1．width-2<br>
+              //width的改变值必须是left改变值的两倍<br>
+              end<br>
+              else<br>
+              state=2<br>
+              else<br>
+              if dbimage1．width＜250 then<br>
+              begin<br>
+              dbimage1．left=dbimage1．left-1<br>
+              dbimage1．width=dbimage1．width+2<br>
+              end<br>
+              else<br>
+              state=1<br>
+              end<br>
+              从以上程序可以看出这是把画面变小后再慢慢变大变小是一个状态State=1变窄是另一个状态State=2这两种状态交替出现即可出现动画。<br>
+              五、从画面外逐渐移飞过<br>
+              在设计封面的时候经常需要让标题从画面上飞过的效果。 要实现这种类型的动画实际上只需改变标题的Top垂直方向飞过或Left属性水平方向飞过。<br>
+              例如实现一个标题在一幅画上从左往右飞过。先在Form1里建立一个图形对象Dbimage1和文字对象Statictext1注意TEXT类型的对象无法显示在图片上把位置和大小尺寸设好然后在Form1里建立一个Time对象Time1把其Enabled属性设为TrueInterval属性设为10并在事件OnTime里键入如下语句<br>
+              procedure TForm1．Timer1TimerSender TObjectbegin<br>
+              if statictext1．left＜dbimage1．width+dbimage1．left then<br>
+              statictext1．．left=statictext1．left+3<br>
+              else<br>
+              statictext1．left=dbimage1．left<br>
+              //当标题飞出图片后使标题重新位于图片的左边再一次从左向右入屏幕<br>
+              end<br>
+              说明<br>
+              1．如果只想使标题从左向右移动一次Else语句改为Timer1．enabled=false<br>
+              2． 数值3是标题移动的速度值可以随意更改<br>
+              3． 若标题只移到图片的某一位置则把“statictext1．left＜dbimage1．width+dbimage1．left”改为“statictext1．left＜位置值”并把Else语句改为Timer1．enabled=false；<br>
+              4． 只需把Left的值从大变到小则实现从右往左飞过<br>
+              5． 把上面的Left改为Top把Width改为Height即可实现垂直方向的动画。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

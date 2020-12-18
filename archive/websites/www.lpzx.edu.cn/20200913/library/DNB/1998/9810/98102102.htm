@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">无盘工作站上共享Windows及其应用软件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在使用无盘工作站时，常遇到一个问题：不能以386增强模式运行Windows，运行Word6.0和Excel5.0时会出现“内存不足”的提示。经过系统地分析并结合实际使用情况，我们采用下述的方法解决了这个问题，实现了无盘工作站上共享Windows和Word、Excel等软件。<br>
+        　　<strong>网络环境</strong><br>
+        　　Netware3.11网络操作系统，六十台486－66/8M/1.2＋1.44工作站，两台Compaq 
+        Prosignia 4/66服务器，多网段(内桥连接)总线型结构。<br>
+        　　<strong>安装与设置</strong><br>
+        　　1.在工作站上以Supervisor用户名登录入网，把Windows3.2、Word6.0、Excel50等安装(运行Setup)到服务器的F：盘上。<br>
+        　　2.设定普通用户组(如STUDENT组)对Windows、Word、Excel等目录的权限为F(File 
+        scan)、R(Read)。<br>
+        　　3.在Windows目录下建立swap子目录。设定STUDENT用户组对该目录的访问权限为S(Supervisor)。<br>
+        　　4.在Windows\swap目录下建立swap1、swap2、swap3……swapN共N个子目录。每个swap后的数字对应一个工作站的编号，N为工作站的个数。<br>
+        　　5.将Windows\win.com文件改名为wins.com。<br>
+        　　6.修改系统登录文本(System login script)，加入以下一行:<br>
+        　　MAP ROOT N:=SYS:WINDOWS\swap<br>
+        　　建立N盘与假想根目录Windows\swap的连接。<br>
+        　　7.在Windows目录下建立win.bat文件，内容为：<br>
+        　　set temp=N:\swap％1(％1是每个工作站的编号)<br>
+        　　wins<br>
+        　　为每个工作站分配独立的磁盘空间存放临时交换文件。<br>
+        　　8.运行Windows(执行\Windows\winscom)，在“控制面板/386增强模式/虚拟内存设置”项中，将N：盘设置为临时的磁盘交换空间，大小为默认值。在“程序管理器/选项”中，取消“退出时保存设定值”的设置，以免普通用户退出Windows时出现“＊＊＊组信息不能保存”的提示。<br>
+        　　<strong>运行方法</strong><br>
+        　　以STUDENT组内的用户登录后，进入Windows目录，输入“win 
+        工作站编号”即可运行Windows及Word、Excel等。例如：在10号工作站使用时，输入win 
+        10。<br>
+        　　<strong>性能评价</strong><br>
+        　　1.每台工作站的软件环境一致，支持所有工作站以同一用户名登录，适合公共电脑教学。<br>
+        　　2.防止有意或无意破坏服务器上的文件，防止病毒的感染。<br>
+        　　3.维护方便。只需定期清理swap目录下的因非正常退出而留下的临时文件。<br>
+        　　4.不影响软盘的操作，仍然可以使软盘存取用户的文件或程序。<br>
+        　　5.网络的通信量大，Windows的性能有一定影响。另外，由于使用远程启动，导致“文件管理器/磁盘/格式化”项不能正常格式化软盘。<br>
+        　　6.对于有本地硬盘的工作站，在本地硬盘上建立临时或永久的交换文件效果会更好。<br>
+        　　该网络在一年多的实际应用中，运行情况良好，可见，这是一个可行的解决方法。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　（广东　陈航）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

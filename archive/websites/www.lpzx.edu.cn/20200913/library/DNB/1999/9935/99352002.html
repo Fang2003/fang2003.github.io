@@ -1,0 +1,77 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 不同型号主板BIOS芯片的替换与重写</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/banner.jpg' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>35 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 不同型号主板BIOS芯片的替换与重写</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 不同型号主板BIOS芯片的替换与重写 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　PC用户在自行采用BIOS重写工具升级或修改BIOS芯片内容的过程中，由于各种软、硬件错误或操作不当，会出现重写失败的情况，致使机器不能启动。用户一般在重写BIOS之前都保存了原BIOS的映像文件，只要能把保存的BIOS映像文件写回到BIOS芯片中，就可以使机器恢复正常。<br>
+　　恢复BIOS映像经常采用的方法是热插拔法。最理想的情况是找到一块相同型号的主板，启动后拔下BIOS芯片，换上需重写的BIOS芯片，用BIOS重写工具将保存的BIOS映像文件写入。实际上，要找一块相同型号的主板经常是比较困难的，尤其是一些较早型号的主板。大多数情况下，只好用不同型号的主板进行尝试。<br>
+      　　笔者在BIOS重写实践中发现，只要主板的主芯片组相同，BIOS芯片替换使用，一般是可以启动的。但如果主板采用了不同的I/O芯片，可能导致外围设备的故障，如不识别键盘、鼠标、软驱、串并口等等。对于常见的采用Award 
+      BIOS的主板，可以通过启动时BIOS的显示内容获得主芯片组的信息，也有可能得到I/O芯片的信息。以下举出两例。<br>
+      　　例一：<br>
+　　一台方正卓越9850型家用电脑，采用微星MS－5149主板，BIOS显示内容为“06/12/97－i430VX－2A59GM49C－00”，主芯片组为Intel 82430VX芯片组，I/O芯片为Winbond 83877F，因CIH病毒破坏导致机器不能启动，用户自行拆卸BIOS芯片的过程中造成BIOS芯片硬件损坏。笔者用联讯(DataExpert) EXP－8661主板上的BIOS芯片代替原BIOS芯片，发现工作正常。经研究，联讯EXP－8661主板BIOS显示内容为10/24/96－i430VX－2A59GD0BC－00，采用的主芯片组（430VX）和I/O芯片（Winbond）与MS－5149主板完全相同。后来验证，将微星MS－5149主板的BIOS芯片装在联讯EXP－8661主板上，后者也完全正常工作。<br>
+　　例二：<br>
+      　　一块VTECH 82440LX主板，因用户自行进行BIOS升级失败，机器不能启动而送修。该主板采用的是Intel 82440LX主芯片组，ITE 
+      I/O芯片，BIOS显示内容为“ITE8671－2A69JV3SC－0 12/23/1998”。该板采用的BIOS芯片是2M的可擦写芯片Winbond 
+      29C020/5V（与ATMEL/SST 2MB可擦写芯片兼容），而笔者手上只有1M的Winbond 29C010/5V，一时又无法找到其他采用2M 
+      BIOS芯片的主板。查VTECH 82440LX主板说明书，得知BIOS 可擦写芯片类型跳线设置如下：<br>
+<p><img src="http://www.lpzx.edu.cn/library/DNB/1999/9935/images/3517b2.gif" width="468" height="220"></p>
+　　从热插拔法重写损坏的BIOS芯片的经验看，机器顺利启动后，将BIOS芯片拔掉，不会对机器运行造成影响。由此设想，先用一个1M的BIOS芯片启动，拔下来，换上损坏的2M可擦写芯片，再将跳线设为2M，重写这个2M的BIOS芯片是否可行呢？实际操作过程如下：<br>
+　　在上述的MS－5149主板上，用原BIOS顺利启动，换上1M的BIOS芯片Winbond 29C010，将福扬FYI－440LX主板（BIOS显示内容为09/10－1998－i440LX－2A69JF3BC－00，Intel 82440LX主芯片组，SMC I/O芯片，1M BIOS芯片）的BIOS映像文件LXV－5.BIN用Award BIOS重写工具awdflash V5.35写入该芯片。写入完成后取下芯片，装在VTECH 440LX主板上，按ATMEL/ST 1M芯片类型跳线，启机，发现不能识别软驱，但键盘好用。在Win98的启动菜单中选择进入Safe Mode Command Prompt Only模式，在硬盘上已经拷入awdflash和原BIOS映像备份文件VT440LX.BIN(262,144字节)。取下1M的Winbond 29C010，BIOS芯片类型跳线设为ATMEL/SST 2MB，插上2M的Winbond 29C020，用awdflash V5.35将VT440LX.BIN文件向芯片执行写入操作，顺利识别为Winbond 29C020/5V，写入成功。写入完成后重启，顺利进入SETUP。至此，该VTECH 82440LX主板完全修复。<br>
+　　欢迎来信至reeyoung@mail.hr.hl.cn。<br>
+<b>(黑龙江　杨锐)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/35/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99352002.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

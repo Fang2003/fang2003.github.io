@@ -1,0 +1,153 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Linux常用操作疑难解答</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0123/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0123/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第23期 <!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Linux常用操作疑难解答<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->问：如何编辑登录后显示的信息呢？<br>
+              答：管理员若有什么话想对使用者说，只要写在/etc/motd里，使用者登录后就会看到！<br>
+              注：motd是message of the day的首字符缩写。<br>
+              问：如何查看Linux启动时快速闪过的信息？<br>
+              答：Linux启动时，屏幕上显示的信息来不及看清就一闪而过，如果对这些信息感兴趣的话，你可以在启动完成后，用dmesg命令查看。<br>
+              问：怎样即时变更X-window的显示分辨率？<br>
+              答：最简单的方式就是按“Ctrl+Alt++”组合键。即按住Ctrl与Alt键，然后按下键盘右边数字区的“+”键，重复按会循环显示各种显示分辨率。<br>
+              问：安装X-window后发现屏幕歪在一边时应如何处理？<br>
+              答：可在shell下执行xvidtune调整即可。<br>
+              问：startx执行后系统没有反应，怎么办？<br>
+              答：在安装X-window后，常常必须检测显示卡的驱动是否正确。在用XF86Setup设定好后，执行startx，若系统像死机一般，先不要急着重新开机，你可以同时按下“Ctrl+Alt+Backspace”来中断startx命令的进行，重新返回shell中。<br>
+              另外，按下“Ctrl+Alt+BackSpace”还可快速退出X-window。<br>
+              问：如何开启两个以上的X-window？<br>
+              答：用startx启动第一个X-window，之后用下面命令启动第二个X-window<br>
+              startx -- 1<br>
+              启动第三个X-Windows用startx -- 2依此类推。<br>
+              问：重装Win9x后LILO失效无法启动Linux时该怎么办？<br>
+              答：只需先用软盘启动Linux，然后运行一次LILO即可。<br>
+              对于RedHat可用命令mkbootdisk来制作启动盘，例如：<br>
+              mkbootdisk --devices /dev/fd0 2．0．34-1<br>
+              其中，2．0．34-1是/lib/modules下的一个目录。该名称是Linux内核的版本号。<br>
+              问：为什么光盘无法取出？<br>
+              答：在Linux中为了系统的安全，所有的外部存取都有使用权限，因此当你用mount命令挂上光盘之后，必须用另一个命令umount将光盘卸下，命令使用如下：<br>
+              umount /mnt/cdrom<br>
+              其中/mnt/cdrom为光碟挂载点。<br>
+              问：我该怎样格式化软盘以及在软盘上建立文件系统？<br>
+              答：请按如下方式来格式化一个高密度的3．5英寸软盘：<br>
+              $ fdformat /dev/fd0H1440<br>
+              $ mkfs -t ext2 -m 0 /dev/fd0H1440 1440<br>
+              若是B驱动器则应用fd1替换fd0。H表示高密度3．5寸磁盘。<br>
+              参数-m 0的作用是告诉mkfs．ext2软件不要在盘上为超级用户保留任何空间，因为通常它总是保留最后10%的空间。<br>
+              第一条命令是一个低级格式化命令。第二条命令则是用来创建一个空的文件系统。<br>
+              问：我应怎么做才能处理在DOS分区或软盘上的文件？<br>
+              答：要使用DOS文件系统，请按如下方式键入：<br>
+              $ mkdir /dos<br>
+              $ mount -t msdos -o conv=textumask=022uid=100gid=100 /dev/hda3 
+              /dos<br>
+              如果你用的是软盘。则不要忘了在拿出软盘前要先卸载(umount)它！<br>
+              你可以通过修改conv=text/binary/auto，umask=nnn，uid=nnn，和gid=nnn选项来控制在Linux下显示DOS文件系统中的文件的行结束符的自动转换方式、许可权限和所有者。<br>
+              你也可通过/etc/fstab来设置装载你DOS文件系统。<br>
+              编后：至此，关于Linux常用操作的疑难问题，我们就暂时解答完了。<br>
+              以后，大家如果还有什么问题或有一些技巧、应用方面的稿件，可以发信到：jycheng@cpcw．com。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

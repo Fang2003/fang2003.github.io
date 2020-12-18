@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用Partition Magic制作双C盘</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>用Partition 
+        Magic制作双C盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　Partition 
+        Magic是硬盘分区工具(以下简称PM)，利用它来制作双C盘，非常简便。在分区时，可指定任何方式。使用PM制作双C盘的方法如下：<br>
+        　　1.因为要对硬盘进行分区操作，所以要在光盘上运行PM。在PM所在目录下运行pm.bat，启动PM，主画面是一个仿Windows95的窗口，分别显示当前硬盘的容量，采用何种分区方式，现在的分区情况及一些功能按钮。<br>
+        　　2.在名为Partition的框内，用蓝色横条指示现有分区，用“Option”菜单中的“delete”逐个删除，使硬盘变成未分区的状态。<br>
+        　　3.选择“Boot Manager”菜单中的“Install boot manager”命令安装启动管理器，它将占用约7MB的硬盘空间，并用“Advanced”菜单中的“set 
+        active”把其设置为Active。<br>
+        　　4.将蓝色横条置于标有free space的栏目上，点击“creat”按钮，在出现的对话框中的Partition 
+        Type后选择FAT，PM会根据分区大小确定每簇大小，如大于1GB则使用FAT32，即每簇4K。在New 
+        Label后填入卷标名。在Size后填入你想分出的C盘大小。PM就会建立第一个C盘。选择“Boot 
+        Manager”菜单中的“Add to boot manager menu”命令，将C盘添加至启动菜单，你可以定义菜单上的名称。<br>
+        　　5.重复第四步创建第二个C盘，并将其也添加到启动菜单中。<br>
+        　　6.再将蓝色横条置于标有free space的栏目上，在Partition Type后选择Extended，将剩余的空间建立为extended分区，并建立逻辑盘。<br>
+        　　两个C盘，一个被设为bootable，另一个被设为boothide，这表明一个C盘启动时，另一个隐藏。分区完毕后，退出PM，重新启动系统，将会出现一个蓝色的启动菜单，可选择进入任何一个C盘，这时你就可以安装操作系统，如中文Windows95；在另一个C盘上安装英文Windows95。这两个系统互不干扰。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月23日第11期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

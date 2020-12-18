@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>轻松调用帮助文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 提及VB中的控件CommonDialog(内置对话框控件)，想必大多数VB开发人员都有所应用。利用它实现对文件的打开和存盘、字体的调用、颜色的设定和打印任务的完成等，可极大地减轻编程工作量。实际上除此以外，该控件还可实现应用系统中帮助文件的调用。<br>
+        &nbsp;&nbsp;&nbsp; 在利用内置对话框控件实现帮助文件的调用前，主要须设置属性值HelpFile和HelpCommand。其中，HelpFile为欲调用的帮助文件，HelpCommand为帮助类型，依据其设定值的不同，可分别显示帮助文件中的帮助主题、帮助关键词等等不同页面的帮助信息。<br>
+        &nbsp;&nbsp;&nbsp; 下面附一简单程序，以说明其实现过程。该程序仅由一个窗体组成，窗体中包含有一个Command控件和一个CommonDialog控件。在添加好以上控件后，编制程序如下：<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubCommand1_Click()DimFnameasstringFname=″C:\Windows\System\Odbcjet.hlp″′指定帮助<br>
+        &nbsp;&nbsp;&nbsp; CommonDialog1.HelpFile=Fname′显示帮助文件中的主题页<br>
+        &nbsp;&nbsp;&nbsp; CommonDialog1.HelpCommand=cdHelpContents′显示调用<br>
+        &nbsp;&nbsp;&nbsp; CommonDialog1.ShowHelpEndSub<br>
+        &nbsp;&nbsp;&nbsp; 运行该程序，点击Command控件即可实现在屏幕上显示出帮助文件Odbcjet.hlp中的帮助信息了，很轻松吧。<br>
+        &nbsp;&nbsp;&nbsp; 该程序在VB5.0、P/166上调试通过。(北京 黎育文)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

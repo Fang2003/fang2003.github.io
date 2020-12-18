@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>误删除Windows95的SYSTEM.INI之后<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　笔者在一次使用计算机时，不慎删除了Windows95目录下的一个文件，当时没有在意是哪个文件，想着反正有回收站，要用时再还原就是了，工作完之后便关了机。没想到，下次开机启动后却无法进入Windows95的图形界面了，屏幕上出现如下内容“Cannot 
+        find SYSTEM.INI.You need to run Windows Setup again to install the file.Press any key to 
+        continue...”按任意键后，它干脆退出系统，显示“现在您可以安全地关闭计算机了”。原来我把重要的SYSTEM.INI删掉了。当时我手头又没有安装盘，便想，既然只是丢失了SYSTEMINI文件，DOS70应该没有问题，也许在DOS环境下可以恢复这个文件。于是重新启动计算机，在出现Starting 
+        Windows 95...时按下F8，还好，顺利出现了Windows95的多重引导菜单，选第5项COMMAND 
+        PROMPT ONLY进入了DOS7.0，接着，在根目录下找到了RECYCLED(回收站)目录(注意此目录是隐藏的，你需用dir/a才能查看到)，进入该目录后，却没有发现被删除的SYSTEM.INI文件，原来，在Windows95中被删除的文件到回收站之后，在DOS状态下都被改名换姓，一律以DC开头，后面缀以1、2、3…等数字序号，只保留原扩展名不变，通过仔细查找，总算找到一个名为DC8.INI的文件，用EDIT打开一看，哟!我的SYSTEM.INI竟大摇大摆地躺在这儿呢。赶紧将它COPY到Windows95目录下，并改名为SYSTEM.INI，心里忐忑不安地热启动，终于又见到了我熟悉的“蓝天白云”!作为一次误操作的经历，我把它写出来，希望能给有类似遭遇的朋友一点帮助。<strong>（山东 
+        王曙光）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月25日第20期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<html><!-- #BeginTemplate "/模板/hardware.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>也谈i810主板的超频</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{也谈i810主板的超频}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{　　去年在《电脑报》上刊登了几篇关于i810主板超频的文章，为我们这些拥有i810主板的朋友又提供一个少花银子多办事的机会，但略有些遗憾的是这些文章谈到的i810主板大多采用了Slot1架构，并配合转接卡达到超频的目的。而对采用Socket370架构的i810主板显然并不适用。下面以本人的经历谈谈Socket370架构的i810主板的超频。<br>
+              或许用哲学上的内因和外因来类比硬件和超频的方法并不恰当，但却足以说明超频的成功是内、外因共同作用的结果。我们先从“内因”说起吧，我的主板是CP-i810M，当然是Socket370架构的，板载4M 
+              HY -7ns的缓存，集成Creative ES-1373声卡。由于HY-7J、7K并不是标准的PC-100规格内存，且该主板上还提供了100MHz以上的非标准外频，所以我选择了HY-T75的内存条。超频性能优异的昆腾硬盘加上一个标准版的世纪之星电源，再请出超频明星赛扬366，设置好跳线，加电吧﹖且慢千万别忽视散热这个关键环节，赛扬366超至550MHz，发了“高烧”，务必要准备一个高转速的风扇为她降温。加之i810主板高集成度的特点，所以主板上的南、北桥芯片的温度都不低可以加装一个机箱风扇，双风齐吹。<br>
+              加电开机。显示“CELERON MMX 550”，顺利进入Win98运行主板附带的温控软件，CPU温度在38℃左右。我迫不及待地拿出搁置已久的NFS5，以前慢悠悠的宝时捷变得风驰电掣飙了三个多小时，稳定如初，温度也保持在55℃左右。<br>
+              总结这次成功的原因：1.硬件质量过硬 大多数i810DC100主板上的缓存都采用了LG 10K的缓存颗粒，并不能达到PC-100的要求，不利于将外频超至100MHz。还有些朋友在对整合主板进行超频时，由于主板质量不过硬需要屏蔽掉板载的声卡、网卡等，虽提高了CPU的频率却因听不到声音，上不了网，要另配声卡、网卡，整合主板的优势得不到充分发挥，也与超频的宗旨相违背，不如不超。所以广大DIY朋友在选购主板时，一定要注意主板的做工是否精良，用料是否十足，布线是否合理。尤其是在选择整合主板的时候，应注意整合部分的性能，如缓存规格，声卡型号等。另外，内存条一定要选择名牌产品，谨防J商给你杂牌条子，也不要买几十块钱的电源，那样会得不偿失。<br>
+              2.方法得当 良好的散热对计算机的长时间稳定运行起着关键作用。有的Socket370主板不提供电压调节的功能，只要抓住关键例如易超的CPU赛扬300A、赛扬366，千万别打赛扬466、赛扬500的主意，名厂的内存颗粒，优秀的电源等。我并不太提倡用加电压的方法对整合主板进行超频，这不仅会导致CPU发热量增大，也会提高主板上各集成芯片的运行温度，增加了不稳定因素长期这样，会影响电子元件的寿命。以上几点看法，希望对拥有Socket370架构i810主板的朋友有所启示。也请各位高手不吝赐教。我的E-mail地址是ccwill＠163.com}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

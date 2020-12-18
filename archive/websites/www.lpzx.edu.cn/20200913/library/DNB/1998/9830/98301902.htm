@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>消除用Netscape编制的网页中的乱码</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">消除用Netscape编制的网页中的乱码<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　平时当我们用 
+        IE 浏览通过 Netscape Navigator内置的网页编辑器编辑的中文网页时，可能会看到一大堆乱码。现在有很多朋友都使用Netscape 
+        Navigator内置的网页编辑器来制作网页，如果他们知道自己精彩的网页在别人的电脑里显示出来的却是乱码，可以想象他们将如何痛心疾首。<br>
+        　　其实这些所谓的乱码是一种流行于Internet上的汉字(HZ)内码。对于Netscape 
+        Navigator，所默认的网页内码为HZ码。如下面是一段文字的HZ码：“＆middot;＆snp2 
+        ＆Ecirc;＆Ccedil,＆Vacnte;＆maer;”当一页html文件由Netscape Navigator编制完成时，若不加上特殊的注解命令，那么该html文件内的所有汉字字符就被Netscape 
+        Navigator转换成HZ码。在使用其他浏览器调阅时，这些HZ码便会照原样显示在屏幕上，形成了所谓的汉字乱码。解决的方法很简单，只须在&lt;HEAD&gt;栏内加入下面这行命令：<br>
+        　　&lt;META HTTP－EQUIV=“Content－Type” CONTENT=“text/html; charset=gb2312”&gt;其中“charset”的参数是起关键作用的地方。对于用BIG5码制作的中文网页，则应改为“charset=big5”。<br>
+        　　这个小小的技巧，作用实在不小，用Netscape Navigator制作网页的朋友再也不用为汉字乱码发愁了。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(湖北　小曾)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期19版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

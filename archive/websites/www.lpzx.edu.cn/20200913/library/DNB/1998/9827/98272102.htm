@@ -1,0 +1,101 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>自己动手创建“全能”个人网站<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　<strong>编者按：</strong>本报第20期发表《个人Internet网站创建过程详解》后，读者反应强烈，希望能进一步了解有关网站邮件服务、新闻讨论组服务、在线讨论服务软件的安装、设置等知识。为此，我们特约请该文作者撰写此文，使广大读者可以建立一个全能的个人网站。 
+        <br>
+        <br>
+        　　<strong>一、Internet服务功能的扩展</strong><br>
+        　　在基本实现Internet功能的基础上，你可以再安装E－Mail服务器端软件以实现电子邮件收发功能；安装News服务器端软件以实现Newsgroups新闻讨论组功能……这些软件都可以在Internet上下载，在众多的此类服务器端软件中，笔者推荐Microsoft的BackOffice系列综合网络服务软件包Exchange。该服务包括的支持软件包如下：<br>
+        　　&middot;Exchange Server 5.5评估版（三个月）：文件名exch55i.exe；文件大小23MB。<br>
+        　　&middot;Windows NT Server Pack 3运行Exchange所必需的WinNT升级服务包：文件名Nt4sp3_ 
+        i.exe；文件大小18MB。<br>
+        　　&middot;Active Server Pages Release在Exchange下实现WWW网页方式E－Mail、News功能所必需的服务包：文件名Asp_ 
+        i386.exe；文件大小29MB。<br>
+        　　以上文件均可在Internet上自由下载，也可登录到我网站的FTP服务器上下载。然后再进行以下的安装、设置等工作。<br>
+        　　<strong>二、Windows NT Server Pack 3（SP3）的安装</strong><br>
+        　　Windows NT Server Pack 3是Windows NT 4.0的升级服务包，除修正了原有错误外，它还包括Windows 
+        NT Server 4.0发布之后的新技术支持。<br>
+        　　以管理员身份登录后，在Win NT资源管理器中双击SP3的安装文件Nt4sp3_ 
+        i.exe，即开始SP3的安装。首先提取文件到临时目录D:\TEMP中，然后进入安装向导界面。按照提示，每一步都取默认值，然后开始复制SP3升级文件到D:\WINNT目录，最后显示Win 
+        NT已经被更新。选择“确定”来重新启动计算机，会看到操作系统管理器OS 
+        Loader的版本已经由4.0变为4.01，原来的WinNT版本号“Build 1381 Server Pack 1”变为“Build 
+        1381 Server Pack 3”。至此该部分安装结束。<br>
+        　　<strong>三、Active Server Pages（ASP）的安装</strong><br>
+        　　如果要应用Exchange Server 5.5的基于WWW网页方式的E－Mail、News等功能，必须安装ASP服务包，否则可不必安装此部分。<br>
+        　　以管理员身份登录后，在Win NT资源管理器中双击ASP的安装文件Asp_ 
+        i386.exe，即开始ASP的安装。首先提取文件到临时目录D:\TEMP中，然后进入安装向导界面。在许可协议窗口点击“I 
+        Agree”按钮表示接受许可协议，然后按照提示，每一步都取默认值，直至ASP安装结束。<br>
+        　　<strong>四、Exchange Server 5.5的安装</strong><br>
+        　　以管理员身份登录后，在WinNT资源管理器中双击Exchange的安装文件Exch55i.exe，即开始此部分的安装。首先进行解包提取文件到临时目录，提取完毕后，在WinNT资源管理器中双击D:\TEMP\Microsoft 
+        Exchange Server 5.5\Server\I386目录中的安装文件SETUP.EXE进入实际安装过程。单击中间的完全安装按钮，勾选所有选项，并根据提示进行一系列选择后，完成Exchange 
+        Server 5.5的安装。<br>
+        　　<strong>五、Exchange Server 5.5的设置</strong><br>
+        　　在Exchange Server 5.5安装完毕后，在WinNT桌面顺序单击“开始”－“程序”－“Microsoft 
+        Exchange”－“Microsoft Exchange Administrator”，即进入Exchange Server的设置。<br>
+        　　在首次运行时，出现连接到服务器的对话框，输入服务器的名字“DAMUGE”单击“OK”，然后在提示版本过期窗口单击“确定”，即出现Microsoft 
+        Exchange Administrator主菜单画面。<br>
+        　　1.Internet Mail服务的添加和设置<br>
+        　　在主菜单中，顺序选择“File”－“New Other”,运行Internet Mail 
+        Service添加向导，除了在E－Mail地址生成格式处输入“@mail.webfree.com”之外，所有对话框全部取默认值。<br>
+        　　2.Internet Newsgroups新闻讨论组的设置<br>
+        　　在主菜单下，展开“Folders”－“Public Folders”，点选“Internet 
+        Newsgroups”，然后按“Alt＋ENTER”键，弹出“Internet Newsgroups Properties”属性窗口，单击“Client 
+        Permissions”按钮，出现客户许可窗口。默认的（Default）许可和匿名访问者（Anonymous）的许可（Permissions）是相同的。<br>
+        　　为了实现对新闻组的消息进行编辑、仲裁，必须建立另外的许可给管理员或某个新闻组的组长。在客户许可窗口单击“Add”按钮，弹出账号选择窗口。点选管理员或新闻组组长的账号（如DAMUGE），单击“Add－&gt;”按钮，将此账号加入右面的列表中，再单击“OK”，赋予管理员至高的权限，然后单击“OK”，退出至属性窗口。<br>
+        　　再在此窗口单击“Limits”选项卡，根据需要改变消息的生存期（Age 
+        limit for replicas）。<br>
+        　　3.增加用户邮箱<br>
+        　　在主菜单窗口下点选收件人“Recipients”项，顺序点选“File”－“New 
+        Mailbox”,出现邮箱属性输入窗口。在“Name”域的“First”输入栏输入用户账号名字如“DAMUGE”，然后单击“Primary 
+        Windows NT Account”按钮，在弹出的“Primary Windows NT Account”窗口点选“Select 
+        an existing Windows NT Account”（选择一个已经存在的账号）或“Create a new 
+        Windows NT Account”（建立一个新的账号），然后单击“OK”，在添加账号窗口选择用户“DAMUGE”，单击“Add”、“OK”，返回到邮箱属性输入窗口，单击“OK”完成本用户邮箱的建立。重复此步骤，建立其他用户的邮箱。<br>
+        　　4.Newsgroups（新闻组）的管理及在线讨论<br>
+        　　Exchange Server的新闻组管理，最直接的工具就是Exchange Server的HTML方式的管理。另外一个比较强大的工具就是Office 
+        97中的OutLook97。下面只对HTML方式的管理加以说明。<br>
+        　　在网页浏览器地址栏输入网址http:∥www.webfree.com/exchange，在Exchange登录网页的用户账号输入栏输入管理员账号回车，如“DAMUGE”，在弹出的输入网络密码窗口输入管理员账号、口令后单击“OK”，即进入WWW网页方式的Exchange管理网页。在左页面单击“Public 
+        Folders”，中间页面显示“Internet Newsgroups”链接项，单击此项，然后在上页面单击“Create 
+        a new folder”图标（将光标移动到图标上，即出现此图标说明），在弹出的窗口输入新闻组的名字，如“Webfree”，单击“OK”，即建立了Webfree新闻组。重复此步骤，可以建立其它的新闻组。如果要删除现有的新闻组，可在中页面单击此新闻组，然后在上页面单击“Delete 
+        the current folder”图标，即可删除此新闻组。每次以管理员身份操作完毕时，一定不要忘了在左页面单击“Log 
+        Off”图标按钮注销，否则将会留下安全漏洞。至于新闻组的消息的编辑、仲裁等，大致与新闻组的管理相似，有些功能只有在OutLook97中才能够容易实现，可自己进行进一步的探索。<br>
+        　　一般用户可以在登录网页的用户账号输入栏输入自己的账号回车，并在弹出的输入网络密码窗口输入自己的账号、口令后单击“确定”，即进入WWW网页方式的邮件收发、新闻讨论等所谓的“在线讨论”界面。在线讨论功能不需要专门的邮件、新闻阅读软件的支持，操作界面全部是友好的WWW网页形式，易于使用。<br>
+        　　<a
+        href="mailto:至此，你已经拥有了一个功能领先的Internet服务器。如果有什么问题，可以发E－Mail给我或登录到本人网站进行探讨。我的E－Mail为：damuge@usanet，个人主页为：http:∥sgbyeahnet">至此，你已经拥有了一个功能领先的Internet服务器。如果有什么问题，可以发E－Mail给我或登录到本人网站进行探讨。我的E－Mail为：damuge@usa.net，个人主页为：http:∥sgb.yeah.net</a>。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(辽宁　沈国斌)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

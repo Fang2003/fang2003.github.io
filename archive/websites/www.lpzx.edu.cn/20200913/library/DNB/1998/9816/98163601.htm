@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>苹果电脑的使用与维护技巧三例</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp; 
+        　对苹果电脑的优异性能及其优秀的图形图像处理功能早有所闻，可就是无缘见识。前不久公司因扩大业务范围购买了几台苹果电脑，其大致配置是：PowerPC9600/233 
+        604e CPU、128M RAM、4GB 硬盘、12倍速光驱，4MB VRAM显卡，512K Cache,MAC OS8中文操作系统。经过一段时间的使用和了解，笔者在苹果电脑的系统维护及故障处理方面也积累了点经验，现略举几例与朋友们分享。<br>
+        　　一、苹果电脑系统崩溃的处理<br>
+        　　故障现象：系统不能正常启动，提示要求插入系统启动软盘。<br>
+        　　故障分析及处理：据查，此故障缘于用户在使用Freehand 5.0CS软件时死机，并按“control＋＋”键强行关机所致。一般情况下，在电脑死机的时候，硬盘仍在高速转动，若这时切断主机电源，易造成硬盘损坏，只有确认硬盘停止转动后方可关机重新启动。用MAC 
+        OS 8系统光盘启动电脑时不能读取硬盘，并提示需要初始化。这说明硬盘引导扇区和引导文件确已损坏。但由于硬盘上有用户的工作项目文件，不能简单地初始化硬盘重新安装系统了事。于是，好不容易才找到Macintosh的磁盘工具：DiskFix 
+        for Macintosh,Norton DiskDoctor for Macintosh。先用DiskFix工具处理硬盘，发现该软件有不能修复的错误；用Norton 
+        DiskDoctor工具处理，发现有许多坏块以及许多损坏的文件和文件夹，并修复之。取出光盘重新引导，故障依旧。再用系统光盘启动，可以读取硬盘。这时，赶忙接上MO移动磁光盘，备份好工作项目文件。这时，悬着的心终于放下来了。将原“系统文件夹”删除，拷入以前备份的“系统文件夹”，重新启动。系统虽然启动了，但运行起来像蜗牛一般，连关闭一个窗口也要等上一阵子。用上述工具软件处理后仍没多大改观。无奈只好初始化硬盘，重新安装系统软件，进行有关网络及打印机设置，再安装应用软件，系统便安全恢复正常。<br>
+        　　二、“Fatal Memory Error”故障的处理<br>
+        　　故障现象：在系统启动到显示桌面图标的时候，显示出一条错误信息：“Fatal 
+        Memory Error”。点取“确定”后电脑能正常工作，基本上没有异常现象。<br>
+        　　故障分析及处理：上述故障虽然不影响用户正常使用和工作，但是这一信息非常令人讨厌，能消除最好。根据上述现象，可以肯定不是电脑硬件故障，可能是某些设置不正确或某个系统文件损坏。苹果机的系统设置有两种方式：一是在“苹果”菜单下的“控制面板”下进行设置；二是在“系统文件夹”中的“功能管理程序”和“预置”里设置。反复调整各种设置均不能解决问题。根据苹果公司的建议，这种情况多是字体问题造成的，或许是字体装得太多(一般最多只能安装128种字体)，或许是字体不兼容或损坏。前者好办，一查便知，后者就难了，几十上百种字体，谁知是哪一种字体作怪。一次偶然机会，我将几种Bitmap字体拖出“字体”文件夹，重新启动后没有这种讨厌的错误信息，但却不能正常显示汉字了。这几种字体分别是：Beijing 
+        Bitmap，Fang Song Bitmap，Hei Bitmap，Kai Bitmap，Song Bitmap。将第一种拖入“字体”文件夹，重新启动没有上述错误信息，而且汉字显示也正常了，再拖入一种字体，依然没问题……，如此试验下去，终于发现是Song 
+        Bitmap字体有问题，删除它，故障消除。<br>
+        　　三、“内存不足”的处理<br>
+        　　故障现象：用户在打开一个文件或应用程序时，系统提示：“内存不足，请关闭多余应用程序”，关闭所有应用程序和窗口后，再打开该应用程序，故障依旧。只有重新启动后方可继续工作。<br>
+        　　故障分析及处理：根据苹果机的配置，应该不是物理内存不足。多方咨询查阅资料，了解到如下情况：Mac机的内存管理与PC机的内存管理完全不同，Mac操作系统首先占用了一定的内存块，剩下的部分才是应用软件区，Mac要求每一个应用软件必须占用一块连续的内存块，并遵从先来先服务的原则，即使你退出了应用程序，所释放的内存也不一定能马上用于其它应用软件。同时还发现有的应用程序使用的内存分配得过大，如Photoshop4.0分配了92M的内存区，也就是说，Photoshop4.0需要92M连续的空闲内存块才能运行。所以，按以下步骤进行处理：1.单击“Memory(存储器)”控制板，将“Virtual 
+        Memory(虚拟内存)”设为“On(打开)”并重新启动计算机。2.单击“功能管理程序”控制板，将没用的系统扩展功能关闭。3.重新设置所有应用软件的可用内存区，方法如下：关闭所有应用程序，然后在桌面上点击应用程序图标，并且按下＋I键或从Finder的File菜单里选择Get 
+        Info(简介)。在Get Info(简介)框的右下角有一被称为Memory Requirements的框，改变其优先值(Preferred 
+        Size:)，建议将该值设为最小值(Minimum Size)的125％，关闭该窗口。4.条件允许的情况下可以考虑增加物理内存，如将128M增加至192M。按以上方法处理之后，一般不会再有内存不足的情况发生了。(广东 
+        阳胜利)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月27日第16期36版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

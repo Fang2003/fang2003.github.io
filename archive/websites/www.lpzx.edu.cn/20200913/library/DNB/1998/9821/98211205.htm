@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Delphi使用技巧两则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　<strong>　一、如何动态更改屏幕分辨率</strong><br>
+        　　有许多小工具可以在不重新启动Windows的条件下，动态更改屏幕分辨率。你是不是也想自己动手做一个呢？请在interface段中加入下面一句<br>
+        　　function Resolution(X,Y:word):boolean；<br>
+        　　然后在implementation段中写入如下代码：<br>
+        　　function Resolution(X,Y:word):boolean；<br>
+        　　var<br>
+        　　DevMode:TDeviceMode;<br>
+        　　begin<br>
+        　　Result:=EnumDisplaySettings(nil,0,DevMode);<br>
+        　　if Result then<br>
+        　　begin<br>
+        　　DevMode.dmFields:=DM_PELSWIDTH Or DM_PELSHEIGHT;<br>
+        　　DevMode.dmPelsWidth:=X;<br>
+        　　DevMode.dmPelsHeight:=Y;<br>
+        　　Result:=ChangeDisplaySettings(DevMode,0)=DISP_CHANGE_SUCCESSFUL;<br>
+        　　end;<br>
+        　　end;<br>
+        　　接着，在form中放个button，caption为“800×600”，然后在其OnClick事件中写下<br>
+        　　if Resolution(800,600) then ShowMessage('800×600模式!')；<br>
+        　　好了，试一下吧！<br>
+        　<strong>　二、如何把文件放入回收站</strong><br>
+        　　为了保险起见，我们通常把要删除的文件先放入回收站中，但是在delphi中似乎没有这样现成的语句。如果你查询help，它只会告诉你用deletefile函数会“不可挽回地”删除文件（真要恢复当然也可以办到，只是很麻烦）。那怎么办呢？别急，假设要安全地删除c:\temp.tmp文件，可用以下代码实现。<br>
+        　　Var T:TSHFileOpStruct;<br>
+        　　filename:String;<br>
+        　　begin<br>
+        　　filename:='c:\temp.tmp';<br>
+        　　with T do<br>
+        　　begin<br>
+        　　Wnd:=0;<br>
+        　　wFunc:=FO_DELETE;<br>
+        　　pFrom:=Pchar(filename);<br>
+        　　fFlags:=FOF_ALLOWUNDO<br>
+        　　end;<br>
+        　　try<br>
+        　　SHFileOperation(T);<br>
+        　　except<br>
+        　　on eaccessviolation do showmessage('删除命令已被取消!');<br>
+        　　end;<br>
+        　　注意，如果指定文件不存在，或者在确认删除时按了“取消”，都会执行except后的语句。最后再提醒一句，别忘了在uses语句中加上shellapi。<br>
+        　　以上程序在Delphi3中调试通过。<strong>（上海 汪箴）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月1日第21期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

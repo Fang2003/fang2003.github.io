@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>光盘文件好管家---Advanced Disk Catalog1.2</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>光盘文件好管家---Advanced 
+        Disk Catalog1.2<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　 
+        现在有电脑的朋友都有很多光盘、CD唱盘。要在其中查找一个软件或文件，需要翻阅各种大大小小的随盘目录。俄罗斯Elcom公司的软件AdvancedDiskCatalog(简称ADC）能把光盘、磁盘中的文件目录进行详细的扫描并记录成数据库文件。当要寻找某个文件或文件夹时，用它可以快速地报告该文件夹或文件在哪个光盘中。<br>
+        这个用C＋＋编写的软件不需要任何数据库引擎，它能快速地生成一个光盘文件，生成的目录简洁紧凑。这实在是电脑发烧友的福音。<br>
+        &nbsp;&nbsp;&nbsp; <strong>ADC实现的功能</strong><br>
+        &nbsp;&nbsp;&nbsp; 1.可将各种光盘、软盘、硬盘中的文件夹和文件按名称、修改日期、文件大孝文件类别等项编成目录。在生成的目录中可以输入盘的名称，也可对每个文件夹或文件输入注解说明。<br>
+        &nbsp;&nbsp;&nbsp; 2.可以分析出ZIP、ARJ、RAR和CAB文档中的文件目录。<br>
+        &nbsp;&nbsp;&nbsp; 3.能用文件名或自己输入的注解来查找文件夹或文件所在目录。可用统配符查找，也可用“日期”、“文件大斜和“种类”等参数来进行选样性查找。<br>
+        &nbsp;&nbsp;&nbsp; 4.可以对已存储盘的名称、卷标进行改写。<br>
+        &nbsp;&nbsp;&nbsp; 5.可以将生成的各种盘的目录输出或用EXCEL引用。<br>
+        &nbsp;&nbsp;&nbsp; 6.可以自动对file_id.diz、files.bbs、descript.ion之类的文件加以注解说明。<br>
+        &nbsp;&nbsp;&nbsp; 7.能从可执行文件中摘录出描述注解。<br>
+        &nbsp;&nbsp;&nbsp; 8.可以把已有的目录与实际盘中的“新文件、修改过的文件”进行比较。<br>
+        &nbsp;&nbsp;&nbsp; <strong>安装</strong><br>
+        &nbsp;&nbsp;&nbsp; ADC安装简单，运行setup.exe按提示安装即可。但如系统较旧的话，ADC是不能安装的，因为它对WIN95的Comctl32.dll的版本要求高于4.70版。但在下载的软件中附有“40comupd.exe”文件，可以运行该文件来升级系统，再重新启动即可顺利安装。注意在第一次运行时在“Options”菜单的“Setup”项的“Language”选项中选择“Chinesegb.ini”，重新运行程序即可显示中文界面（图一）。<br>
+        &nbsp;&nbsp;&nbsp; <strong>设置</strong><br>
+        &nbsp;&nbsp;&nbsp; 单击“选项”菜单，选择“设置”。设置只需注意在“双击文件时”一栏中选择“打开文件”选项，这样在以后查找到某光盘文件时，若该盘在光驱中则能直接打开或运行。<br>
+        &nbsp;&nbsp; <strong> 扫描目录</strong><br>
+        &nbsp;&nbsp;&nbsp; 单击“编辑”寻新增磁盘目录”项，屏幕提示选择驱动器名称（图二），把要扫描的光盘放入光驱（最好取消WIN95系统属性之CDROM设置中的“自动插入通告”的选项，或插入时按住Shift键）。放好后屏幕显示“正在扫描磁盘”的状态窗口。扫描完成后，屏幕出现“磁盘属性”窗口（图三），显示了被扫描的光盘的序号、空间、文件夹和文件数量。在名称栏输入名称，在备注栏可输入注解说明。单击“确定”钮就完成了对该盘的扫描并在内存中形成了数据库。然后可继续扫描，也可将扫描数据库结果存盘。存盘文件是已扫描光盘、磁盘的一个大的文件目录数据库（。cat文件）。<br>
+        &nbsp;&nbsp;&nbsp; 注意当光盘中含有已损坏的文件时，ADC可能会无限制地读光盘。这时应在硬盘划出一个大约700MB的空分区，把光盘的所有能读的文件拷入该硬盘区，然后用ADC扫描该硬盘区。<br>
+        &nbsp;&nbsp;&nbsp; <strong>搜索与查看</strong><br>
+        &nbsp;&nbsp;&nbsp; ADC支持精确查找和模糊查找两种模式。可以设定文件修改时间或文件大小的限制。<br>
+        如要查找与“Netscape”有关的文件都在哪些光盘上，单击菜单“工具”中“查找”项或单击工具条上右数第二个图标，弹出查找窗口后（图四），在“关键字”栏中输入“Netscape”并在其它项中进行适当的选择。单击“查找”钮，一个放大镜就在不断的晃动，晃动完毕后，所有查到的文件夹、文件全部列出。用鼠标双击选中的文件夹或文件，ADC的主窗口立即显示它所找到的文件。在右边窗口双击选中的文件，可显示其属性或“打开/运行”该文件。<br>
+        &nbsp;&nbsp;&nbsp; 对该软件感兴趣的朋友，可以从网址http://www.elcomsoft.com/adc.html处下载。最新版为1.2版，文件大小为1.38MB。注册费＄20。未注册的ADC每个数据库不能超过5个盘的内容，但可多建几个数据库文件——查找时多搜索几次罢了。<br>
+        <strong>（吉林&nbsp;&nbsp;&nbsp; 侯家驹）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月16日第44期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

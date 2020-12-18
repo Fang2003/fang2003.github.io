@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VFP中实现背景音乐的几种方法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">VFP中实现背景音乐的几种方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　一、利用set 
+        bell to <br>
+        　　VFP5.0的set bell to命令的使用格式不同于FoxPro2.X的格式。在VFP5.0中，它的格式为Set 
+        Bell To [cWAVFileName, nDuration]。其中cWAVFileName为一个.WAV文件；nDuration为持续时间（注意该项不可省略，否则会产生语法错误）。这样当在个人程序的初始模块中用set 
+        bell to 定向到一.WAV文件后，便可在后面的模块中用？chr（7）来播放该.WAV文件。<br>
+        　　示例1：<br>
+        　　set bell on ＆＆使bell有效<br>
+        　　set bell to′ .WAV文件′,0 ＆＆使bell定向到一个.WAV 
+        文件。注意有单引号<br>
+        　　?chr(7)<br>
+        　　＆＆播放该.WAV文件<br>
+        　　二、利用OLE容器控件<br>
+        　　创建一表单，单击表单控件工具栏中的“OLE容器控件”按钮，然后在表单上适当位置点击或拖动。在出现的“Insert 
+        Object”窗口中选“Creat New”或“Creat From File”，用“Browse”按钮选取自己的.WAV文件，确定即可。<br>
+        　　在当前表单中会出现一“喇叭”图标，设置该图标的属性“ 
+        AutoActivate”为1，可使每当表单运行时自动播放该.WAV文件，实现背景音乐；设置Height、Width均为0时，可隐藏“喇叭”图标。<br>
+        　　三、利用VFP库Foxtools.fll<br>
+        　　用=Regfn（）和=Callfn（）可访问Foxtools.fll中的音频模块，进行播放声音文件。<br>
+        　　示例2：<br>
+        　　创建一表单，在其Activate事件中输入下列代码：<br>
+        　　public ss ＆＆定义一全局变量ss<br>
+        　　set library to foxtools.fll ＆＆打开库Foxtools.fll<br>
+        　　ss=Regfn(″SndPlaySound″,″CI″,″I″,″mmsystem″) 
+        ＆＆取得音频信息<br>
+        　　=Callfn(ss,″一.wav文件″,n) ＆＆n=0（1,2,3也可）时只播放一遍，n=9时循环播放<br>
+        　　在其Destroy事件中输入下列代码：<br>
+        　　=Callfn(ss,″″,10) ＆＆停止播放<br>
+        　　set library to ＆＆从内存中释放库foxtools.fll<br>
+        　　四、利用Windows的动态链接库<br>
+        　　在VFP5.0的安装目录samples\classes下，有一类库samples\classes。其中提供有两种控件：视频和音频，音频可以控制播放.WAV和.MID文件，利用它可轻松地实现背景音乐。下面给出它的实例。<br>
+        　　示例3：<br>
+        　　创建一表单，在表单控件工具栏中选择类按钮，添加VFP5.0中的samples\classes\samples.vbx类库。此时表单控件工具栏中会出现SoundPlayer和VideoFrame两个多媒体控件。选择SoundPlayer，在表单上单击后，设置它的属性如下：<br>
+        　　AutoOpen=.t.<br>
+        　　AutoPlay=.t.<br>
+        　　AutoRepeat=.t.<br>
+        　　Class=SoundPlayer<br>
+        　　Soundfile=指定一.WAV或.MID文件 ＆＆注意没有引号<br>
+        　　Visible=.f. ＆＆不可见<br>
+        　　以上几种方式各有优缺点，应用时要注重满足自己的编程需要。若你有更好的方法，欢迎来信共同探讨。我的E－mail：<a
+        href="mailto:excuse99@163.net">excuse99@163.net</a>。<strong>(河南　申绍勇)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

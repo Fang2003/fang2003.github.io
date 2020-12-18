@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>多个浏览器共享同一缓存的方法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>多个浏览器共享同一缓存的方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　对于一名网虫来说，为了应付不同网页的HTML格式以及获得不同的效果，在电脑中安装多个浏览器是很普遍的现象。与此同时，为了加快网页的读取速度，一名聪明的网虫又往往会在电脑中开辟一块硬盘作为网页缓存。然而，这两者之间又发生了冲突，每个浏览器都有自己的缓存区域，相互之间老死不相往来，明明一个浏览器的缓存中有相同的内容，可另一个浏览器却愚笨地再次下载它，浪费了宝贵的时间，这实在是一大遗憾。有没有办法让多个浏览器共享同一缓存呢？有，那就是利用浏览加速器。<br>
+        　　浏览加速器将自己设置成本地代理服务器（PROXY）来同浏览器通讯，每当浏览器需要下载某一个网页并发出信号时，浏览加速器首先截获并接管这个信号，首先在浏览加速器自己的缓存中查找是否有需要的网页，并且与网络上的网页比较，如果有更改，则从网络上下载新的网页传给浏览器，如果没有更改就直接将硬盘上的网页直接传给浏览器，避免了从网络上重复下载。与浏览器的缓存不同，浏览加速器是以代理服务器的身份出现的，并不与任何一个浏览器直接发生关系，这样我们就可以利用浏览加速器作为不同浏览器的公共缓存。具体的方法如下：<br>
+        　　首先，关闭所有浏览器的硬盘缓存功能，并且清空已有的缓存，释放出空间。这一步的具体方法因不同的浏览器而有所不同，请读者根据自己浏览器的情况参阅有关资料完成。<br>
+        　　然后，安装一个浏览加速器。浏览加速器有很多，根据《电脑报》前几期的报道，读者可以选用Go 
+        ahead Got it！或者NetSonic中的一种，对于网络高手而言前者是浏览加速器中的佼佼者，而后者是初级用户的最佳选择。请读者根据自己的情况选择。在这里，笔者以NetSonic为例进行介绍。NetSonic可以从http：//www.web3000.com中下载，安装完NetSonic之后，单击“Option”进行窗口设置。设置的选项很多，但其中大多数是与加速有关的，而与我们建立公共缓存无关，笔者在这里就不作详细介绍，只就有关的选项进行介绍。所有需要的选项都在“Advanced”按钮之中，按下之后会弹出一个窗口让你设置缓存的大小。它给你三项选择，分别是“Small－10MB”、“Large－30MB”以及自定义。根据笔者使用的经验，读者如果有足够的硬盘空间的话，建议选择自定义，并开辟50MB以上的缓存。这样设置以后，任何浏览器所浏览的网页都将被保存进NetSonic的缓存，以备以后使用。与普通浏览器的缓存相比，普通浏览器将所有文件都直接保存在硬盘上，由于这些文件往往都比较小，文件一多还会造成大量的簇浪费。而NetSonic则不同，从同一个IP地址中下载的所有网页和其他文件都打包成一个文件保存，大大避免了簇浪费。<br>
+        　　好了，现在你便可以进行你的网上之旅了。试一试，你从这个浏览器上浏览的网页是不是即使在脱机的状态下也可以在另一个浏览器上直接浏览。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　(上海　张佳)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年7月20日第28期19版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

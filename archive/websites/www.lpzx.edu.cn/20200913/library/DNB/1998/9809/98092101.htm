@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Windows 
+        95工作站如何登录到Windows NT网络<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　目前，以Windows 
+        95为操作系统的PC机十分普遍。Windows 95作为一个非常成功的操作系统软件，其功能十分强大。利用Windows 
+        95的网络通信功能不仅可以建立Windows 95对等网络，而且可以很方便地实现与Windows 
+        NT网络(简称NT网)连接。本文就Windows 95工作站如何登录到NT网络作简要介绍。<br>
+        　　<strong>一、硬件安装</strong><br>
+        　　首先给要登录到NT网的Windows 95工作站安装上网卡，然后用电缆线将它与NT局域网连接起来。<br>
+        　　<strong>二、设置NT服务器</strong><br>
+        　　网络管理员要在NT服务器上为Windows 95工作站设置登录到NT服务器的域和账户，并为Windows 
+        95用户设置文件访问权限及打印限制。网络管理员还要提供以下资料：<br>
+        　　1.NT服务器及Windows 95登录域的名字<br>
+        　　2.访问网络所用协议、网关、子网掩码<br>
+        　　3.Windows 95工作站的IP地址、账户和口令<br>
+        　　<strong>三、配置Windows 95工作站</strong><br>
+        　　1.安装Windows 95网络软件<br>
+        　　如果要连网的PC机中已经安装了Windows 95网络软件，则可以跳过这一步，否则执行下面操作。<br>
+        　　单击“开始”按钮，指向“设置”，然后单击“控制面板”，进入控制面板后，双击“添加/删除程序”，选择“安装Windows 
+        95”。在组件栏中选择安装“The Microsoft Network”后选择“确定”。完成网络软件的安装。<br>
+        　　2.安装网卡驱动程序<br>
+        　　选择“开始|控制面板|网络|配置”，进入“配置”窗口。选“添加”，进入“选定网络组件类型”对话框；选择“适配器”，单击“添加”，进入“选定网络适配器”对话框，在列表中选择所用网卡的驱动程序，若列表中没有要选的驱动程序，则单击“从磁盘安装”并插入含有所需驱动程序的磁盘，选择所需驱动程序，单击“确定”完成安装。<br>
+        　　3.安装协议<br>
+        　　在“网络”的“配置”窗口选择“添加”，进入“选定网络组件类型”对话框；选择“协议”，单击“添加”，在列表中选择所用协议(必须保证该协议与NT网中使用的协议一致)，若列表中没有要选的驱动程序，则单击“从磁盘安装”并插入含有所需协议的磁盘，选择所需协议，单击“确定”完成安装。<br>
+        　　4.配置网卡<br>
+        　　在“网络”的“配置”窗口选择适配器，单击“属性”对网卡属性进行设置。驱动程序类型选取“增强模式的NDIS驱动程序”，对使用协议进行“绑定”，资源选择“基本设置0”。<br>
+        　　5.配置协议<br>
+        　　在“网络”的“配置”窗口选择协议，单击“属性”对协议属性进行设置。在“IP”地址项依次输入本机的IP地址及子网掩码，在“网关”项输入网关号码，在“DNS配置”中选“启用DNS(E)”并再分别输入NT服务器的名字及Windows 
+        95工作站登录到域的域名和DNS服务器的搜索顺序，在“绑定”项选中选“微软网络客户”及“微软网络的文件和打印机共享”。<br>
+        　　6.设置登录方式<br>
+        　　在“网络”的“配置”窗口的基本网络登录方式中选“Microsoft网络客户”。设置完毕，重新启动计算机使设置有效。<br>
+        　　<strong>四、访问网络</strong><br>
+        　　正确完成以上各步工作后，启动Windows 95工作站，即可对网络进行联接访问。<br>
+        　　启动Windows 95机器，在“输入网络口令”对话框输入网络用户名称及口令，进入Windows 
+        95系统，此时桌面上应出现“网上邻居”图标。双击该图标后选择“整个网络”，即可看到网上的计算机、文件夹、打印机等。利用“Windows资源管理器|工具”中的“映射网络驱动器”，就能够像使用本地资源一样方便地访问网上的共享资源。本地的资源也可以通过其属性菜单将其设置成“共享”，供网上其他用户使用。</font></p>
+        <p class="ourfont"><font color="#369681">　　(山东　赵峰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

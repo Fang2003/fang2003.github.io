@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>路由器的配置方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　作为连接广域网WAN的端口设备，路由器已得到广泛的应用，其主要功能是连接多个独立的网络或子网，实现互联网间的最佳寻径及数据报传送。本文以Cisco 
+        2511路由器为例，介绍路由器的四种配置方法。<br>
+        　　1.用Cisco路由器主控口OSOLE接VT100及兼容终端进行配置<br>
+        　　这是一种较为简便的配置方法，把终端与路由器可靠连接后，打开终端与路由器的电源，路由器的启动过程就会在终端上显示出来，当出现符号“&gt;”时就可以在终端上对路由器进行配置了。如果终端上未显示路由器启动过程，可能是终端通讯端口参数配置不对，需重新配置。<br>
+        　　2.通过Win 3.X或Win 95的终端仿真程序进行配置<br>
+        　　启动Win 3.X 
+        后，用鼠标双击“附件”，再双击“终端仿真程序”，单击“设置”，在下拉菜单中的“终端仿真”选DEC 
+        VT－100[ANSI]，“通讯”中选择参数：<br>
+        　　波特率：9600；数据位：8；停止位：1；奇偶校验：无；流量控制：Xon/Xoff；连接口：COM1或 
+        COM2(根据实际连接而定)。<br>
+        　　以上参数配置好后，单击“文件”，在下拉菜单中单击“保存”，给配置文件起名并选择路径，单击“确定”。下次使用时只需打开配置文件，按回车就可以进入到路由器的配置。<br>
+        　　Win 95的配置方法与Win 3.X类似。<br>
+        　　3.在TCP/IP网上通过终端仿真Telnet进行配置<br>
+        　　在UNIX、OS/2、Win 95等操作系统上都有Telnet终端仿真程序，通过网络上的主机运行telnet 
+        145.1.1.5(路由器的IP地址)，输入正确的口令就可以登录到网络上的路由器进行配置了。如出现了“password 
+        required,but none set”，则表明路由器的vty 04中未定义口令，需加入口令。<br>
+        　　4.用TFTP Server下载的配置文件进行配置<br>
+        　　UNIX、OS/2操作系统提供了TFTP服务器的功能，以OS/2为例，在OS/2的DOS窗口下运行ftfpd显示：<br>
+        　　IBM TCP/IP OS/2版本－TFTP Server版本19：50：56 ON dEC 7 1995已准备好<br>
+        　　通过前三种方法的某种方式登录到路由器，当出现“&gt;”后，就可以进行配置了，下面是一个配置实例。<br>
+        　　Router&gt;en<br>
+        　　password:abcdefg(特权用户口令)<br>
+        　　roture ＃copy ftfp runnig－config(拷贝TFTP服务器上的配置文件到路由器的运行配置中)<br>
+        　　Host or network configuration file[host]?host<br>
+        　　Address of remote host[255.255.255.255]?145.1.1.1(主机的IP地址)<br>
+        　　145.1.1.1为运行TFTP的服务器，也是路由器配置文件所在的主机。<br>
+        　　如出现提示：“There are no usable interface configured for ip”表明路由器的Ethernet 
+        0(以太网口)未配置好。<br>
+        　　配置Ethernet 0：<br>
+        　　router＃conf t<br>
+        　　router(config)＃int e0<br>
+        　　router(config－if)ip address 145.1.1.5<br>
+        　　router(config－if)＃no shutdown<br>
+        　　router(config－if)＃exit<br>
+        　　router(config)＃exit<br>
+        　　router＃wr(保存到启动配置中)<br>
+        　　Name of configuration file[router－config]?2511(配置文件名)<br>
+        　　configure using 2511 from 145.1.1.1?[confirm]<br>
+        　　显示：<br>
+        　　Loading 2511 from 145.1.1.1(via Ethernet0)<br>
+        　　[ok－1553/32723 bytes]<br>
+        　　拷贝运行配置到启动配置文件NVRAM中：<br>
+        　　Router＃copy runnig－config startup－config<br>
+        　　输入Router＃i或重新开启路由器电源以重新启动路由器。<br>
+        　　备份运行配置到服务器中：<br>
+        　　router＃copy runnig－config ftfp<br>
+        　　Remote host[]145.1.1.1<br>
+        　　Name of configuration file to write<br>
+        　　[router－config]?2511bf<br>
+        　　write file 2511bf on host 145.1.1.1?[confirm]<br>
+        　　显示:<br>
+        　　Writing 2511bf!![ok]<br>
+        　　至此，路由器配置完成。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　(青海　邓永宁)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月8日第22期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

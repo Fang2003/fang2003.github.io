@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- OLITI彩显行供电电路的维修</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>28 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; OLITI彩显行供电电路的维修</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 OLITI彩显行供电电路的维修 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<b>故障现象：</b>一台OLITI 15英寸彩色显示器，开机黑屏。<br>
+　　<b>故障分析与排除：</b>大致检查后发现，行输出管已被烧毁，拆下后发现其表面字迹模糊难辨。将万用表的红表笔接地，测量电源输出各端的电阻，未发现明显短路现象，各整流二极管亦未被击穿或断开，因此可以对电源进行通电检查。<br>
+　　断开行电路，接一只25W的灯泡，开机，灯泡微亮，测得电压为73V，很稳定；测尾板上标有“85V”的视放电源电压，为85V，说明电源基本正常。<br>
+　　用PHILIPS／D1431替换损坏的行输出管，显示器恢复正常显示，调整行幅等电位器，也很正常。测量行电路供电电压仍为73V，约5分钟后，关机，手摸各功率元件，发现行输出管很烫。怀疑行输出管发烫可能是它的工作电压低的原因。<br>
+　　检查行电路供电端，发现在该供电端有两只三极管Q503、Q504，如图。将其拆下测量， Q503(TIP127)已损坏，Q504及其它元件正常。Q503用BD244C代换后，开机测量行供电电压仍为73V(Q503的集电极)。测Q503的e、b极电压分别为94V和86V，说明Q503截止；测Q504基极电压为0.3V，说明Q504亦处于截止状态。<br>
+　　检查前级电路Q803饱和导通。LM317输入端电压为12V，输出端电压为10.5V。查Q803基极控制电路，有三个二极管D807、D808和D810均接至IC801(WT8043)，查遍手边的手册、图集均未找到，上网查询，发现在http://member.zz.ha.cn/grw/jchding/defai 处介绍了WT8043芯片的名称为“多频同步信号处理电路”。该站点介绍的芯片为16引脚，而本机芯片为20引脚。虽然如此，从中认识到了Q803的工作状态是受显示器工作模式控制的，行频改变，其基极电压随之改变，从而控制前级Q504及Q503的导通状态，达到改变行供电电压的目的。当主机工作在非Win 9.x时，显示模式为标准VGA(场频60Hz，行频为31.5kHz)，D807、D808和D810均截止，此时行电路仅由D507整流输出供电，电压较低（实测为73V），当主机工作在Win 9.x，并且设置为高于标准VGA的分辨率时，行频随之提高，D807、D808和D810受IC801控制，其中的某一只由于阴极电位下降而导通，A点电压降低，改变了Q803的饱和导通状态，其集电极电压上升，抬高了Q504的基极电位，由于B点电压高于C点电压，因此Q503的c、e之间有电流通过，Q503开始导通。当Q503导通后，D507因反偏而截止，C点电压上升，此时，行电路由D506整流供电。因此，行电路供电电压受控于A点电压，A点电压降低，则行电路供电电压升高，这样便可以弥补行幅因行频增加而变窄的不足。<br>
+　　至此，搞清了该显示器行供电电路的工作原理，解除了电源电压低造成行管发烫的怀疑，回过头来重新查找行管发烫的原因。行管用C4237替换后，开机，温升缓慢，经长期通电观察，一切正常。<br><b>(安徽　陈忠民)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/28/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99282302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

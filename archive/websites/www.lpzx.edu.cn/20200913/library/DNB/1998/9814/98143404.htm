@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>攻势</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　湖北读者王彬问：我的电脑配置为：5X86－133 
+        CPU、ALD主板、16MB内存、630MB硬盘，BIOS是1994年AMI BIOS。安装有Agiler内插式语音／传真调制解调器（14400bps）、电影卡、声音卡等。在电影卡、声音卡、调制解调器三卡都插入主板时，出现下列现像：在DOS下可以拨号，但在Windows下不能拨号。在安装调制解调器自带的软件时，总是报告找不到COM2口。Windows 
+        95自动检测安装也不行。改变三卡安装顺序，也不能解决问题。可是拔掉电影卡或声音卡之后，调制解调器能正常使用。由于我的电脑不能离开电影卡和声音卡，如何解决三卡“打架”的难题?<br>
+        　　答：你的这种故障现像比较普遍。造成该问题的原因主要是三卡的IRQ发生冲突所致。在解决这个问题之前，还是让我们来了解一下微机中的资源使用分配表，以某台微机为例，其资源使用情况如表所示。<br>
+        　　由上表可知，该台微机中电影卡的IRQ为11、声音卡的IRQ为7、调制解调器的IRQ为5（使用COM3）或IRQ为3（COM1）。由于LPT1占用了中断5，则调制解调器只能使用中断3。对于内置式的调制解调器来说，你可以使用跳线法将其设置成使用COM2，同时在BIOS 
+        Setup程序中将COM2屏蔽掉即可。使用此法，类似地可以解决你的微机出现的三卡“打架”的现像。<br>
+        </font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月13日第14期34版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

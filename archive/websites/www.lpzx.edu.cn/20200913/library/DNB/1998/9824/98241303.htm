@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用VB设计VCD播放器<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　当你在用老牌的XingPlay或是华丽的《超级解霸5.0》的时候,你有没有想过拥有一个你自己编写的软解压播放器呢?其实你只要掌握一点VB的技巧,那么要实现这个愿望就变得很简单了。<br>
+        　　笔者在初步研究了Windows的SYSTEM.INI后发现，通过VB的多媒体控件MCI.VBX可以打开MPEG压缩文件(如VCD2.0版的.DAT文件)。<br>
+        　　首先你的Windows系统中SYSTEM.INI文件关于[MCI]中需有MPEGVideo项(一般Windows95和Windows98中都已有此项,通过安装XingPlay或CCDVP95等软件也可增加此项)。<br>
+        　　其次在VB中建立一个新窗口,将MCI.VBX加入ToolBox中,将MCI控件拖放至窗体Form上,调整其大小,将九个按钮(从左至右为:Prev、Next、Play、Pause、Back、Step、Stop、Record和Eject)中Record按钮Visible属性设为False,其余按钮的Visible属性和Enabled属性设置为True,以上按钮的设置可通过MMControl的属性栏内“自定义”项来设置。<br>
+        　　假设光驱为E:,VCD碟片文件为E:\MPEGAV\MUSIC01.DAT。<br>
+        　　源代码如下：<br>
+        　　Private Sub Form_ Load()<br>
+        　　MMControl.DeviceType=″MPEGVideo″<br>
+        　　MMControl.FileName=″E:\MPEGAV\MUSIC01.DAT″<br>
+        　　MMControl.Command=″OPEN″<br>
+        　　MMControl.Command=″PLAY″<br>
+        　　End Sub<br>
+        　　Sub Form_Unload(Cancel As Integer)<br>
+        　　MMControl.Command=″close″<br>
+        　　End Sub<br>
+        　　笔者通过实践发现Step和Back按钮功能不明显,所以对以上两个按钮进行了一些改进。<br>
+        　　Sub MMControl_ StepClick(Cancel As Integer)<br>
+        　　j=MMControl.Position＋100　′数值100为前进量,可适当调整<br>
+        　　If j&gt;MMControl.Length Then<br>
+        　　MMControl.From=MMControl.Length<br>
+        　　Else<br>
+        　　MMControl.From=j<br>
+        　　End If<br>
+        　　MMControl.Command=″Play″<br>
+        　　End Sub<br>
+        　　Sub MMControl_ BackClick(Cancel As Integer)<br>
+        　　i=MMControl.Position－100　′数值100为后退量,可适当调整<br>
+        　　If i&lt;0 Then<br>
+        　　MMControl.From=0<br>
+        　　Else<br>
+        　　MMControl.From=i<br>
+        　　End If<br>
+        　　MMControl.Command=″Play″<br>
+        　　End Sub<br>
+        　　MCI控件还有很多属性,如画面播放位置hWndDisplay属性等,读者可参阅相关资料自行摸索,这里不再介绍。读者还可以通过建立通用对话框来打开文件,以解决VCD文件名不统一或多文件的问题。<br>
+        　　调整好窗体Form的标题、图标、颜色等,然后编译成EXE文件,你就可以在Windows下拥有自己的VCD播放器了。<br>
+        　　另外,因电脑性能差异及VCD解码质量的不同,播放画面质量和音质将有所差异。　　<strong>(江苏　任　毅)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

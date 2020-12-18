@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>问题征解<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　王海连读者问：一台微机，配置为：Intel 
+        486DX2－80 CPU、海洋主板、540MB硬盘、Acer 8速光驱。现购回一声卡，品名为“声皇卡KCE－815”。用该声卡附带的驱动程序软盘，在DOS下可顺利进行安装。但在Windows 
+        3.2下安装时，能够安装进去，可一运行即死机，最后只能卸除。后改用在Windows 
+        3.2下与之兼容的声卡驱动程序“Creative Sound Blaster 2.0”进行安装，该声卡工作正常，但附带的播放软件无法工作。将Windows 
+        3.2升级为Windows 95后，该声卡再次无法工作，只能重新安装。安装时Windows 
+        95能检测到该卡，并为该卡配置了“Creative Sound Blaster Pro”驱动程序，但声卡仍无法正常工作。在控制面板中，查看“系统”，发现在“声音、视频和游戏控制器”下，“MPU－410 
+        Compatible”和“游戏操作杆”均正常。用“附件”的“媒体播放器”可正常播放CD。如果强行用该卡在Windows 
+        95下的驱动程序进行安装，当提示安装“软件波表”并换上波表驱动盘时，Windows 
+        95立即重新启动并死机。反复设置I／O地址、IRQ和DMA通道，都无济于事。还望各位大侠能指点迷津!<br>
+        　　答：对王海连朋友的问题，笔者去年在安装带KCE－815声卡的兼容机时，曾碰到过类似问题，无论怎样修改设备配置参数均无济于事，即使把Windows3.2或Windows95删除再重新安装，故障仍然依旧。我的做法是将硬盘重新格式化，在安装完Windows3.2后，先装KCE－815的驱动程序(Disk1 
+        of 2)和媒体播放界面程序(Disk 2 of 2)，然后再安装其它如显示卡的驱动程序，即可成功。<br>
+        　　然而在Windows95下安装时并不像该卡说明书上介绍的那样能正确驱动，查看“系统——设备管理——声音、视频和游戏控制器”中的驱动程序，只有“MUP－401 
+        Compatible”和“Gameport Joystick”两项，没有声卡的驱动程序“SoundKING 
+        KCE－815 Sound Controller”，打开“系统——设备管理——其它设备”，发现声卡的驱动程序“SoundKING 
+        KCE－815 Sound Controller”无故跑到这里来了。<br>
+        　　打开媒体播放界面(Media Rack)，它上面的控制中心、闹钟、MIDI播放、Wave播放、CD播放等均很正常，能使用。而它的混音界面显示的是一块光板，上面仅有Power(关闭混音系统开关)和Help(显示音量控制界面帮助信息)两个按钮，用鼠标点按它们没有任何反应。<br>
+        　　解决方法一：在软驱中插入硬件厂商提供的声卡驱动程序盘，在Windows资源管理器中找到文件remove.exe并运行之，出现一个提示对话框：“The 
+        1815/1816 driver will be removed from the system!!!”(1815/1816声卡的驱动程序将从系统中移出!!!)，单击确定，最后出现一个终止对话框：“Please 
+        exit Windows for the changes to take effect”(请退出Windows以使改变生效)，重新启动Windows95，系统引导后正确地找到了该声卡，按照声卡说明书上的方法安装完“SoundKING 
+        KCE－1815 Sound Controller”、“MUP－401 Compatible”和“Gameport Joystick”，重新启动计算机，一切正常。在“系统——设备管理——声音、视频和游戏控制器”中有了上述三项驱动程序，声卡正常工作，且混音界面上的各种按钮和滑杆均出现并起作用。<br>
+        　　解决方法二：打开“系统——设备管理——其它设备”，只要在“系统——设备管理——其它设备”里选中“SoundKING 
+        KCE－1815 Sound Controller”，单击“属性”按钮，在“SoundKING KCE－1815 
+        Sound Controller属性”对话框中选“驱动程序”项，单击“更新驱动程序”按钮，按照提示插入声卡的驱动程序盘，系统便会自动找到驱动程序“SoundKING 
+        KCE－1815 Sound Controller”，最后选择把该驱动程序安装到“系统——设备管理——声音、视频和游戏控制器”中，完成后重新启动计算机即可。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

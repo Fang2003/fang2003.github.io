@@ -1,0 +1,129 @@
+<html><!-- #BeginTemplate "/模板/internet.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>FoxMail的一个BUG及其解决方法</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第10期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{FoxMail的一个BUG及其解决方法}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 由张小龙先生编写的邮件软件FoxMail是我每天离不开的“宝贝”。<br>
+              我每天都用FoxMail收发邮件，什么稿件寄发、电子杂志收取、朋友联络都靠它。信件多了，也就不便于管理，于是在“唐奂知”账户上(我还有其他多个账户)新建邮箱“网易杂志”、“无法投递的退信”、“好友信函”等，并且将收件箱中的信件分门别类地进行分捡，根据信件的性质放入不同的信箱。<br>
+              正得意自己管理信件如此轻松之时，怪事发生了，当我打开“网易杂志”查看信件，怎么竟有好友的信件呢？逐一查看其他几个新建的邮箱，内容皆完全相同，既然所有的新建邮箱内容一样，要这么多新邮箱何用？删掉它留一个新建邮箱就够啦！先删除“好友信函”吧，软件提示说“确实要删除邮箱‘好友信函’吗？邮件将被永久删除！”选择“是”，新建的“好友信函”邮箱被删除，正准备删除其他新建邮箱时，发现这些邮箱竟空无一物，赶快到回收站里去找刚删除的信件，回收站里没有，于是又用其他可以恢复删除的软件，都无济于事，只有慨叹：“我的几百封信件！张小龙你害得我好惨！”。<br>
+              我对其他几个账户进行操作，发现能够正常建立多个新信箱，不会出现上述现象。我再次对我的“唐奂知”账户进行操作，仍然不能新建多个邮箱。为了弄清问题，我把所有账户进行备份后，重新安装FoxMail3.1，安装后每个账户都可以正常创建多个新邮箱，没有出现刚才所述的问题。于是我想，我的FoxMail是从2.1升级为3.1版的，是不是问题出在升级上呢？虽然现在可以把备份的信件搬回来，问题就解决了，但为了弄清这个问题，于是我又删除新安装的FoxMail3.1，先安装FoxMail2.1，再升级为FoxMail3.1，还是十分正常……	
+              反复安装，多次删除，几经周折最后终于找到FoxMail3.1的Bug所在。原来，在升级为FoxMail3.1后，必定会利用原来FoxMail2.1中的账户，FoxMail3.1的菜单中有“账户A 
+              ”→“从FoxMail2.1中导入(升级)(U ”，大多数用户都会选择这种升级方式，被升级的账户就会出现上述虽然建多个新邮箱，但实质上都是同一个信箱的问题。每个从FoxMail2.1升级的账户下面的账户都指这种情况)只能新建一个新邮箱，虽然在邮箱管理栏中可以建立多个信箱名，但这些所谓的新邮箱(包含二级邮箱)实际都是同一个。如果删除任意一个新建的邮箱，所有新邮箱中的信件都将丢失，所以千万别轻易删除邮箱。<br>
+              如果每个账户只能新建一个邮箱，必定会给使用带来不便。经过对FoxMail的分析，发现通过其他手段，我们仍然可以在一个账户下建立多个独立的信箱。具体办法如下：<br>
+              方法一<br>
+              1. 在软件的安装目录下有每个账户的目录(文件夹)，系统的默认目录为mail，该目录中有.ind、.box、.stg等文件，其中account.stg文件就是记录一个账户中服务器、其他pop3、模板、信箱等信息的，所以在准备新建多个邮箱时，最好先将该文件备份。如果你是一个新手，建议你将整个mail文件夹备份。<br>
+              2. 建立你所需要的新信箱(可以是多个)，并为每个新建的信箱命好名，此时不要向任何一个新邮箱中转移信件，因为现在的所有信件邮箱实际都是同一个，只不过给它起了多个邮箱名而已。<br>
+              3. 新建邮箱后，你会发现mail文件夹中多了aaaaa1.ind和aaaaa1.box两个文件，这两个文件将存放新邮箱的信件及其相关信息，每个邮箱都应该由一个.ind和一个.box文件，如收件箱对应的是in.ind和in.box两个文件，发件箱对应的是out.ind和out.box两个文件。现在根据你新建邮箱的个数将aaaaa1.ind和aaaaa1.box两个文件复制并更名为aaaaa1.ind、aaaaa1.box；aaaaa2.ind、aaaaa2.box；aaaaa3.ind、aaaaa3.box……aaaaan.ind、aaaaan.box对应的文件。当然，也可以是其他文件名，但必须是通过aaaaa1.ind和aaaaa1.box复制过来的，且扩展名不能变。<br>
+              4. 将account.stg文件复制到DOS6.22启动软盘上，再拷贝一个老牌的Pctools5.0工具软件到该软盘上。这是因为安装Windows操作系统的计算机大多数都不能正常运行Pctools，如果你的电脑上能正常运行Pctools5.0，就不需要通过软盘转换了。<br>
+              5. 用拷贝有account.stg和Pctools的软盘启动电脑，运行Pctools，出现欢迎画面后，按F10，选择软盘上的account.stg文件，再按E键进入编辑该文件状态，按F1转换显示方式，用Page 
+              Up或Page Down键可以翻动显示内容。你可以找到和你新建邮箱个数相同的多个“AAAAA1”字符串，按下F3，然后将第二个“AAAAA1”字符串改为：“AAAAA2”，第三个“AAAAA1”字符串改为“AAAAA3”。以此类推，直到将第n个“AAAAA1”字符串改为“AAAAAn”最后按F5存盘退出。<br>
+              6. 将编辑后的account.stg文件拷贝回mail文件夹覆盖掉原来的account.stg即可。现在再启动FoxMail，你新建的多个信箱就是真正独立的信箱了。不用担心，你仍然可以对新信箱更名，不会影响它的正常使用 
+              了。<br>
+              方法二<br>
+              此法较简单，多数用户都可以操作。先将原来的FoxMail文件夹更名，再重新安装FoxMail3.1，安装完成后不要“从FoxMail2.1中导入(升级)”原来的账户，全部都采用新建账户，然后将原来账户所在文件夹中的扩展名为.ind、.box、.stg的所有文件复制回对应的新建账户的相应文件夹中覆盖掉新建账户中的同名文件，该账户就可以正常操作了。如果原来有多个FoxMail2.1账户，如法炮制即可。<br>
+              如果有什么问题，可以与我联系，我的信箱是：fldzyjs@sina.com。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,123 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在VC++6.0开发中实现全屏显示</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+  <TR> 
+    <TD WIDTH='468' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top' colspan="2"><img src="images/dzba.gif" width="468" height="60"></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9938.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9938.html'>38 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 在VC++6.0开发中实现全屏显示</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在VC++6.0开发中实现全屏显示 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　全屏显示是一些应用软件程序必不可少的功能。比如在用VC＋＋编辑工程源文件或编辑对话框等资源时，选择菜单“View\Full Screen”，即可进入全屏显示状态，按“Esc”键后会退出全屏显示状态。<br>
+　　在VC＋＋6.0中我们用AppWizard按默认方式生成单文档界面的应用程序框架。下面将先讨论点击菜单项“View\Full Screen”实现全屏显示的方法，再讲述按“Esc”键后如何退出全屏显示状态。<br>
+　　1） 在CMainFrame类中，增加如下三个成员变量。<br>
+　　class CMainFrame : public CFrameWnd<br>
+　　{   private:  ／／自己添加的三个成员变量<br>
+　　WINDOWPLACEMENT m_OldWndPlacement; ／／用来保存原窗口位置<br>
+　　BOOL m_bFullScreen; ／／全屏显示标志<br>
+　　CRect m_FullScreenRect; ／／表示全屏显示时的窗口位置<br>
+　　protected: CMainFrame();<br>
+　　DECLARE_DYNCREATE(CMainFrame)}<br>
+　　2）在资源编辑器中编辑菜单IDR_MAINFRAME。在“View”菜单栏下添加菜单项“Full Screen”。在其属性框中，ID设置为ID_FULL_SCREEN，Caption为“Full Screen”。还可以在工具栏中添加新的工具图标，并使之与菜单项“Full Screen”相关联，即将其ID值也设置为ID_FULL_SCREEN。<br>
+　　3）设计全屏显示处理函数，在CMainFrame类增加上述菜单项ID_FULL_SCREEN消息的响应函数。响应函数如下：<br>
+　　void CMainFrame::OnFullScreen() <br>
+　　{GetWindowPlacement(＆m_OldWndPlacement);<br>
+　　CRect WindowRect;<br>
+　　GetWindowRect(＆WindowRect);<br>
+　　CRect ClientRect;<br>
+　　RepositionBars(0, 0xffff, AFX_IDW_PANE_FIRST, reposQuery, ＆ClientRect);<br>
+　　ClientToScreen(＆ClientRect);<br>
+　　／／ 获取屏幕的分辨率<br>
+　　int nFullWidth=GetSystemMetrics(SM_CXSCREEN);<br>
+　　int nFullHeight=GetSystemMetrics(SM_CYSCREEN);<br>
+　　／／ 将除控制条外的客户区全屏显示到从(0,0)到(nFullWidth, nFullHeight)区域, 将(0,0)和(nFullWidth, nFullHeight)两个点外扩充原窗口和除控制条之外的 客户区位置间的差值, 就得到全屏显示的窗口位置<br>
+　　m_FullScreenRect.left=WindowRect.left－ClientRect.left;<br>
+　　m_FullScreenRect.top=WindowRect.top－ClientRect.top;<br>
+　　m_FullScreenRect.right=WindowRect.right－ClientRect.right＋nFullWidth;<br>
+　　m_FullScreenRect.bottom=WindowRect.bottom－ClientRect.bottom＋nFullHeight;<br>
+　　m_bFullScreen=TRUE;  ／／ 设置全屏显示标志为 TRUE<br>
+　　／／ 进入全屏显示状态<br>
+　　WINDOWPLACEMENT wndpl;<br>
+　　wndpl.length=sizeof(WINDOWPLACEMENT);<br>
+　　wndpl.flags=0;<br>
+　　wndpl.showCmd=SW_SHOWNORMAL;<br>
+　　wndpl.rcNormalPosition=m_FullScreenRect;<br>
+　　SetWindowPlacement(＆wndpl);}<br>
+　　4）重载CMainFrame类的OnGetMinMaxInfo函数，在全屏显示时提供全屏显示的位置信息。<br>
+　　void CMainFrame::OnGetMinMaxInfo(MINMAXINFO FAR＊ lpMMI) <br>
+　　{if(m_bFullScreen)<br>
+　　{lpMMI－>ptMaxSize.x=m_FullScreenRect.Width();<br>
+　　lpMMI－>ptMaxSize.y=m_FullScreenRect.Height();<br>
+　　lpMMI－>ptMaxPosition.x=m_FullScreenRect.Width();<br>
+　　lpMMI－>ptMaxPosition.y=m_FullScreenRect.Height();<br>
+　　／／ 最大的Track尺寸也要改变<br>
+　　lpMMI－>ptMaxTrackSize.x=m_FullScreenRect.Width();<br>
+　　lpMMI－>ptMaxTrackSize.y=m_FullScreenRect.Height();<br>
+　　}CFrameWnd::OnGetMinMaxInfo(lpMMI) ;<br>
+　　}完成上面的编程后，可以联编执行FullScreen.exe，选择菜单“View\Full Screen”或点击与之关联的工具栏按钮即可进入全屏显示状态。但现在还需要增加用户退出全屏显示状态的操作接口,下面讲述如何编程实现按“Esc”键退出全屏显示状态。<br>
+　　1）在ClassView中选中CMainFrame并单击鼠标右键，选择“Add Member Function...”，添加public类型的成员函数EndFullScreen，该函数将完成退出全屏显示的操作。<br>
+　　void CMainFrame::EndFullScreen()<br>
+　　{if(m_bFullScreen)<br>
+　　{／／ 退出全屏显示, 恢复原窗口显示<br>
+　　ShowWindow(SW_HIDE);<br>
+　　SetWindowPlacement(＆m_OldWndPlace<br>
+ment);}}<br>
+　　2）函数EndFullScreen可以退出全屏显示状态，问题是如何在“Esc”键被按下之后调用执行此函数。由于视图类可以处理键盘输入的有关消息（如WM_KEYDOWN表示用户按下了某一个键），我们将在视图类CFullScreenView中添加处理按键消息WM_KEYDOWN的响应函数OnKeyDown。判断如果按的键为“Esc”键，则调用CMainFrame类的函数EndFullScreen，便可退出全屏显示状态。<br>
+　　void CFullScreenView::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags) <br>
+　　{if(nChar==VK_ESCAPE)  ／／ 如果按的键为Esc键<br>
+　　{／／ 获取主框架窗口的指针<br>
+　　CMainFrame ＊pFrame=(CMainFrame＊)AfxGetApp()－>m_pMainWnd;<br>
+　　／／ 调用主窗口类的自定义函数 EndFullScreen ，便可退出全屏显示状态<br>
+　　pFrame－>EndFullScreen();}<br>
+　　CView::OnKeyDown(nChar, nRepCnt, nFlags);}<br>
+　　这样我们就实现了比较专业的全屏显示的功能，相信肯定会令你设计的软件程序增色不少。 <br> 
+<b>(广东　粟利民　孙强)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/38/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99381301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,159 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>msdos.sys参数详解</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第10期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{msdos.sys参数详解}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 众所周知，msdos.sys为Windows 
+              9x的系统启动配置文件，但你是否知道其中一些参数的含义呢？让我来告诉你吧(以下内容以Windows 98为例)。<br>
+              PATH部分<br>
+              HostWinBootDrv=C<br>
+              Windows 9x的主驱动器，默认值为C。<br>
+              WinBootDir=C:\WINDOWS<br>
+              Windows 9x的启动文件所在目录，默认为C:\Windows。<br>
+              WinDir=C:\WINDOWS<br>
+              Windows 9x的系统目录在安装时由用户设定，一般为“C:\Windows”。<br>
+              注意：如果是在DOS或Windows 3.1安装Windows 9x并执行了备份系统文件，会有一项“UninstallDir=c”，它代表卸载Windows 
+              9x所需的信息文件win95undo.dat和win95undo.ini所在的驱动器，默认值为C。<br>
+              OPTIONS部分<br>
+              AutoScan=1<br>
+              当Windows 9x非正常关机后，下次启动时会自动运行磁盘扫描程序scandisk.exe。通过设置AutoScan的值可以控制scandisk.exe的运行方式。0表示禁用，1表示运行前询问，2表示自动运行。<br>
+              BootKeys=1<br>
+              表示开始引导系统时按“F5”或“F8”键是否允许出现菜单选择进入不同的模式。值为0表示允许，值为1表示禁用。<br>
+              BootDelay=2<br>
+              在Windows 9x启动时，当出现Starting Windows 98画面时可以按“F8”键来选择进入不同的模式。BootDelay定义了此画面持续的时间，默认为2秒。<br>
+              BootGUI=1<br>
+              表示进入Windows 9x图形用户介面(GUI，即Graphic User Interface)还是进入DOS，值为0表示进入DOS，值为1表示进入Windows 
+              9x图形用户界面。如果想在DOS下进入Windows 9x图形用户界面，可以在DOS提示符下键入“win”命令来启动。<br>
+              BootMulti=1<br>
+              如果是从DOS或Windows 3.1升级Windows 9x，则可以在Winodsws 9x启动时按“F4”键选择进入旧版本的DOS或Windows 
+              3.1。值为0表示禁用，值为1表示允许。<br>
+              BootMenu=0<br>
+              表示是否在启动Windows 9x时出现要按“F8”键才出现的那个选择菜单。值为1表示总是出现，值为0表示按“F8”键才出现。<br>
+              BootMenuDelay=30<br>
+              表示出现选择菜单的时间，默认为30秒。<br>
+              BootSafe=0<br>
+              修改BootSafe的值可以强迫Windows 9x每次是否进入安全模式。当值为0时表示让Windows 9x自动选择，当发生错误时自动进入安全模式，值为1是表示不管是否发生错误都进入安全模式。<br>
+              BootWarm=0<br>
+              表示是否显示进入安全模式时的警告。当值为0时表示不显示警告，当值为1时表示显示警告。<br>
+              DblSpace=1<br>
+              表示是否装载磁盘压缩驱动程序(Double Space)。值为0表示不装载，值为1表示装载，默认值为0。<br>
+              DisableLog=0<br>
+              控制是否记录引导过程的信息。值为0表示记录，值为1时表示不记录。<br>
+              DoubleBuffer=0<br>
+              0表示Windows 98不使用双缓冲，1表示Windows98自动决定是否使用双缓冲，2表示Windows 98使用双缓冲。<br>
+              DrvSpace=1<br>
+              表示是否装载磁盘压缩驱动程序(Drive Space)。值为0表示不装载，值为1表示装载。默认值为0。<br>
+              LoadTop=1<br>
+              LoadTop参数控制是否将CONNAND.COMDRVSPACE.BIN或BDLSPACE.BIN装入常规内存(640K)的高端。值为0表示装入高端，值为1表示装入低端。<br>
+              LOGO=1<br>
+              表示是否开启Windows 9x的蓝天白云欢迎画面。值为1时表示开启，值为0时表示关闭。<br>
+              Network=1<br>
+              控制Windows 9x启动后是否装载网络项。值为0表示不装载值为1表示装载。<br>
+              WinVer=4.10.2222<br>
+              表示所用的系统的版本号。<br>
+              (广东 张习文)}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

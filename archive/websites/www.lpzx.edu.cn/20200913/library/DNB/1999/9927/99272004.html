@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 再谈Soft-FSB软件跳线</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>27 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 再谈Soft-FSB软件跳线</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 再谈Soft-FSB软件跳线 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　相信对Soft－FSB这个软件大家一定有所了解，这里笔者再谈一下有关这个软件的一些情况。Soft－FSB是一个通过软件对主板时钟发生器的控制来产生不同外频的工具，是一个相当不错的软件，目前的版本为1.6，比起以前几个版本来更完善，主要表现在它支持了更多的时钟发生器，有以下几种：IC－WORKS 系列的W123X，W124X，W126X，W127X，W131X，W144X，W145X，W148X，W149X，W150X，W153X，W160X，W164X，W48S68－01X， W48S68－03X，W48S87－04X，W48S87－27X，W48S88－01X，W48S88－03X，W48S101－04X，W48S111－14X，W48S112－24X；ICS系列的ICS9148XX－04，ICS9148XX－17，ICS9148XX－26，ICS9148XX－36，ICS9148XX－37，ICS9148XX－46，ICS9148XX－47，ICS9148XX－53，ICS9148XX－58，ICS9148XX－60，ICS9150XX－04，ICS9150XX－08，ICS9248XX－39，ICS9250XX－08；WINBOND系列的W83194R－17，W83194R－37，W83194R－39A，W83196S－14；PHASELINK系列的PLL52C66－23，PLL52C66－28，PLL52C66－29，PLL52C66－31，PLL52C66－38，PLL52C66－39，PLL52C68－02，PLL52C68－0；还有THINKPAD535X。 <br>
+　　如果不知道自己的主板上是何种时钟发生器，可以打开机箱看一下IC，一般都能找到，找到以后记下并运行soft－FSB，选择Target Clock generator一项，在其中选择你主板上时钟发生器的型号再点击Get FSB就行了，这时你会看到一个刻度表，上面就是可选的几种主板外频（因时钟发生器不同而各异），选一个合适的外频再点击Set FSB来对你的CPU超频。如果读者不知道自己的主板的时钟发生器是什么型号也没关系，只要选Target Mainboard这一项然后选择你自己主板的型号就行了，接下去跟上面一样！<br>
+　　Soft－FSB还有一项功能就是能使你每次开机进入WINDOWS后直接用你选定的外频，只要运行Soft－FSB后点TaskTray后看到一菜单，选中AUTO START中的Enable setting一项然后在边上选择你想使用的外频点ok就行了！<br>
+　　Soft－FSB对于BIOS有软跳线的主板也是个不错的选择，比如笔者用的微星6163主板就是用软跳线的赛扬300A超450MHz，由于夏天来到了，超频后CPU温度很高，当运行一些如文字处理等软件时，用Soft－FSB在WINDOWS下直接降频而不用重启计算机，用到大型程序如3D游戏时再超回来，方便极了，对爱超频又疼爱“芯”的朋友是一个福音。<br>
+　　Soft－FSB下载网址是www.h－oda.com，国内很多网站也有，有兴趣的读者可去下载一个！<br>
+<b>(童振兴)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/27/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99272004.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD></TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Bus 
+        Master与光驱的兼容<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　本人近期组装了一台兼容机，配置为：华硕TX97－LE主板、Pentium 
+        MMX 200MHz CPU、32M SDRAM内存、Acer 24×光驱、三星21G硬盘，光驱与硬盘分别接在两个IDE接口上。调试完毕后，安装主板附带光盘的Patch(补丁)程序及Bus 
+        Master驱动程序，系统运行正常。后因该硬盘不支持Ultra DMA33接口，遂换一富士通21G硬盘，重新安装所有驱动程序后，运行一会儿突然出现“注册表错误，是否用备份注册表覆盖”的提示，选“是”后重新启动，进入Win95后，仍出现同样提示，重试多次仍如此。重装Win95也不行，只好将硬盘格式化，重装系统，经多次试验发现，只要不安装Bus 
+        Master驱动程序，就不会出现问题，无奈之下只好放弃。<br>
+        　　后用Win98中文预览版安装，安装后发现“设备管理”中“硬盘控制器”已自动设为Bus 
+        Master，系统运行多时，未再出现以前故障，不禁大喜，以为Win98中新驱动程序已修改原驱动程序中的错误，后放一光碟到光驱中，等待多时未听到旋转声，此时指示灯已亮，列光驱目录，提示设备不存在，换多张光碟仍如此。有了前次教训，因此估计问题多半又出现在Bus 
+        Master上，查看“设备管理\硬盘控制器\Secondary Bus Master IDE Controller\驱动程序\详细资料”，发现其驱动程序为C：\Windows\System\IOSUBSYS\ESDI_506.pdr，考虑到该光驱在Win95下运行正常，遂拷一份Win95中的ESDI_506.pdr，并改名为ESDI_95.pdr，存入Win98同一子目录下，打开注册表，找到“HEKY_LOCAL_MACHINE\SYSTEM\CurrentControlset\Services\Class\hdc”，在其下几个子目录中，找到DriverDisc项为“Secondary 
+        Bus Master IDE Controller”的子目录，将该子目录下的PortDriver内容改为ESDI_95.pdr，退出后查看“设备管理”中驱动程序已作相应改变，重新启动后，光驱恢复正常，而此时硬盘仍使用Bus 
+        Master驱动程序，至此问题总算彻底解决。<br>
+        　　后来查看光盘附带的Win98指南，其中特别指出“在Intel和Microsoft联合测试过程中，发现原来设计支持这种DMA功能的硬盘驱动器包含固件错误，这些错误会引起数据被破坏，只应由OEM启用DMA特征，如果原PC厂家未启用DMA特征的话，用户不应该自己这样做”。对兼容机，笔者认为如果硬盘中没有重要数据的话，尽可放心一试，否则一定要谨慎从事，不然的话，仅仅为提高一点性能而使硬盘上的心血付之东流，可就得不偿失，后悔都来不及。(山东　栾俊豪)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期33版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

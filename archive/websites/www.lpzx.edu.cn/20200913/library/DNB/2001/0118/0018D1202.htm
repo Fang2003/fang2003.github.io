@@ -1,0 +1,144 @@
+<html><!-- #BeginTemplate "/Templates/internet.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Wingate与Sygate共做代理服务器</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0118/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0118/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+        <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Wingate与Sygate共做代理服务器<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->以前很多朋友都介绍过怎样做代理服务器，一般大家用的都是一个代理服务器，无非是Wingate或Sygate，两个各有各的好处，一个安装比较方便，一个上网速度比较快。Sygate只是一个网关型代理服务器软件，局域网的计算机只是用代理服务器作为一个网关，当访问量比较大时速度就比较慢。而Wingate是一个比较优秀的代理服务器软件，各个方面都比较优秀，Wingate里有上网的缓存，如果有人访问过的网站再有人访问，Wingate就只读缓存里的数据，速度当然就比较快了。但Wingate的服务器和用户端的设置都比较麻烦。于是我就想，怎样让上网的速度又快，而大家上网的时候又比较方便呢？于是我希望把Wingate和Sygate都安装在我的服务器上。但这两个软件的安装顺序非常重要，如果装反了两个都不能工作或只有一个工作，就不能达到又快又方便的目的了。经过一段时间的探索，终于做成功了。下面我就把我怎样做的代理服务器告诉大家：<br>
+              我的服务器有两块网卡，下面把连接Internet的叫外网卡(本局域网是大局域网的一个子网)，把连接局域网的叫内网卡。服务器最好用NT或2000，因为它们工作比较稳定。接下来我们就来安装两个代理服务器软件。<br>
+              我们先安装Wingate。在服务器端：<br>
+              (1)先安装好外网卡：地址为192.168.100.100，子网掩码为：255.255.255.0，网关不填，DNS不填，其他不填。<br>
+              (2)这时连通Internet看看是否与互联网接通。<br>
+              (3)安装内网卡：地址为192.168.0.1，子网掩码为：255.255.255.0，网关、DNS等都不配。记住两块网卡的网关、DNS都不能设定，这点很重要。<br>
+              (4)主机的标识为“XX网吧-Server”，工作组随便就可以了。<br>
+              (5)安装Wingate，用一路回车就可以了。安装选择Server模式。<br>
+              (6)重新启动计算机。<br>
+              在客户计算机端：<br>
+              (1)装好网卡：IP地址为192.168.0.2-254，子网掩码为：255.255.255.0，DNS为：192.168.0.1，网关是192.168.0.1，其他不配。注意客户计算机一定要加IP地址。要与服务器在同一个地址段内，也就是说前三位都应该一样。这样有两个好处，一是可以加快计算机的启动速度，二是有利于网吧计算机的管理。<br>
+              (2)客户机标识：XX网吧-001到XX网吧-255名字不能重复工作组与服务器相同就可以了。客户端就不用安装Wingate了。因为我们只用它来浏览网页。<br>
+              (3)配置IE。 在IE属性中选择使用代理服务器，点击“高级”，在“代理服务器地址”中全部填入主机IP地址192.168.0.1。端口除“Socks”填“1080”和“Ftp”填“21”外，其他都填“80”。确定退出。这时我们的客户端就配置好了，打开IE看看是不是可以上网了。<br>
+              开机调试：<br>
+              (1)服务器先上网，确定网络正常。<br>
+              (2)看看Wingate的图标里面有一个小灯是否为绿色，如果为绿色就表示Wingate在工作。<br>
+              (3)然后看看客户计算机能不能上网。如果可以上网就表示代理服务器安装成功。如果不可以，就双击右下角Wingate图标，打开Wingate软件。点击“File”选中“Sutdown 
+              wingate engine” 将Wingate关闭工作。马上打开“Go Online”再启动Wingate，这样就能让Wingate找到拨号适配器。一定记住：每次启动服务器后或服务器重新拨号后，客户机的IE浏览器都要重新打开。<br>
+              好了我们的第一个代理服务器就安装好了，其实我们这时就可以上网了，但在我这里上网的朋友都说在玩Oicq和联众游戏时加防火墙很麻烦。而且当网络流量大时Oicq和联众游戏老爱断线。Sygate就没有这些麻烦但上网的速度太慢了，特别是人多的时候，打开一个网页要等很久。我用的可是ADSL1.5M的带宽呀。这时我们就来安装第二个代理服务器Sygate。<br>
+              在前面安装好了Wingate的前提下确定网络是通的，然后在上网的状态下，安装Sygate软件，服务器端用Server模式。安装好后在Sygate的高级选项中把外网卡设定为接入Internet的网卡，把内网卡设定为接入局域网的网卡，然后重新启动计算机。<br>
+              在客户端只要把网关和DNS都设定为192.168.0.1就可以了。这时我们玩Oicq和联众游戏还有玩星际争霸的朋友就可以很容易地接入服务器了，而且流量大的时候也不会断线，也不用输入代理服务器的IP地址，这样我们的超级代理服务器就做完了。怎么样？上网和用联众游戏的朋友，速度是不是又快又稳定了？<br>
+              要注意的几点是：<br>
+              1.在Wingate的选项里有一个Caching的选项，打开它，把它的大小设定为100M，时间设定为2∽10天。强烈推荐把Wingate单独安装在一个空间大而且没有其他文件的分区里，因为这样可以减少Wingate的Caching所带来的文件碎片使计算机启动速度减慢甚至系统崩溃，千万不要把Wingate安装在C盘里。<br>
+              2.在客户计算机端，网卡的网关和DNS都要与服务器的内网卡的IP地址相同，其地址一般是192.168.0.1。<br>
+              3.服务器的两块网卡的网关和DNS都不能设定，这点很重要，要不Sygate是不会工作的，千万记住！<br>
+              4.安装的顺序一定先装Wingate再安装Sygate。如果反了Sygate也不会工作的。<br>
+              5.在安装两个代理服务器时一定要确定服务器与互联网接通。否则Sygate安装会出现很多问题，以至于安装不上。<br>
+              6.服务器的硬盘越大越好，有条件的可以加上RAID，用IDE的RAID0就可以了，这样可以加快客户计算机访问服务器Caching的速度，使用户感觉上网的速度很快，服务器也不会轻易的死机。<br>
+              7.服务器的内网卡最好用100M的网卡，因为用Wingate客户计算机访问的50%都是Caching，流量比较大，服务器的网卡快就可以保证客户访问不会延迟。<br>
+              8.如果客户计算机不能浏览网页，说明Wingate没有工作，只要就双击右下角Wingate图标，打开Wingate软件；点击“File”选中“Sutdown 
+              wingate engine” 将Wingate关闭工作；马上打开“Go Online”再启动Wingate，这样就能让客户计算机浏览网页了。<br>
+              9.如果客户计算机不能用Oicq或联众游戏，则说明Sygate没有工作，只要把Sygate重新启动一次就可以了。<br>
+              10.一般一个月要清理一次Wingate的Caching，有一个简单的办法，就是把Wingate安装目录的Cache目录下以wgc为扩展名结尾的文件全部删除，最好在安全模式下进行，这样速度就会快些。要有心理准备，一般都有上万个文件。<br>
+              11.服务器最好用Windwos 2000或Windwos NT操作系统，不要用Windwos 98。Windwos NT系列操作系统稳定不容易死机，特别是当客户计算机访问Wingate的Caching流量大时Windwos 
+              98很容易死机。<br>
+              12.当每次对Wingate进行修改设定后应当保存你的修改选项，就是按一下Wingate软件中的那个小磁盘，否则Wingate是不会按照你的设定工作的。<br>
+              13.如果比较熟悉Windwos NT操作系统，可以在Wingate下为每一个客户计算机设定一些假定的用户名字，使Wingate工作更稳定。<br>
+              如果还有什么问题请发E-mail和我联系：dickhaw@sina.com，一定为你解答。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">4DOS6.00使用实例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> 
+        &nbsp; 微机上的操作系统都带有命令解释器(Command Interpreter)，即外壳(Shell)，用来执行一些基本操作。在DOS和Windows95上有command.com，在OS/2和Windows 
+        NT上是cmd.exe。它们的用法通常是在屏幕上显示提示符(如C：\&gt;或[C：\])，准备接受命令，然后解释并执行用户所键入的命令，这些原装外壳的功能有限，而且界面不够友善，大概厂商都把重点放到Windows上去了，共享软件4DOS是一种改良的外壳，功能强大，深受用户喜爱，可以替换各种DOS中的command.com；其中对一些旧的命令加了许多新选项和开关，熟悉Unix命令的用户对此一定倍感亲切。4DOS安装容易，主要文件4dos.com约219K，占用4K基本内存；如果先编辑好文件4dos.ini，利用上位内存块UMB，再用LH4dos.com安装，则占用3600字节UMB和272字节基本内存。新用户安装4DOS后，不必急着删除旧的command.com，它们可以共存，旧的命令可以继续使用。<br>
+        　　《电脑报配套光盘第二辑》中收录有4DOS 5.95版，第三辑中有6.00版，下面举例说明4DOS的一些有趣的功能。<br>
+        　　<strong>例1</strong>　C：\&gt;beep 262 18 294 36 330 54　可以用beep编写简单的曲调，本例将唱出do一秒、re二秒、mi三秒。<br>
+        　　<strong>例2</strong>　C：\&gt;color bright blink red on green border yellow　屏幕变成闪烁红色前景，绿色背景，黄色周边。<br>
+        　　<strong>例3</strong>　C：\&gt;set colordir= com exe:red;doc txt:gre;zip:yel　本例执行后，命令dir就带上彩色了。扩展名是com和exe的文件名成了红色，是doc和txt的成了绿色，是zip的成了黄色。<br>
+        　　<strong>例4</strong>　C：\&gt;copy/[d－2,＋0]/[s2000,10000]d:\data\＊.＊ a:\　把D驱目录data中的两天前建立的、长度介于2000至10000字节的全部文件一起拷入A驱的根目录中，命令copy有十八个选项，功能比MSDOS 
+        622的copy.xcopy.diskcopy三个命令加起来还强。<br>
+        　　<strong>例5</strong>　A：\&gt;del[!＊.txt ＊.doc]＊.＊　除了扩展名是txt和doc的文件外，删除A驱中其它的文件，这里用上了文件排除范围(file 
+        exclusion ranges)功能，大部分能接受通配符(＊)的内部命令(如dir和copy)也都可以使用文件排除范围。<br>
+        　　<strong>例6 </strong>C：\&gt;list file.txt　文件file.txt被打开供阅读，可以上下滚行翻页，非常方便。阅读完毕后，按Esc键关闭文件回到命令行。<br>
+        　　<strong>例7</strong> C：\&gt;ren/s dos dos6.22 目录dos被改名成了dos6.22。<br>
+        　　<strong>例8</strong> C：\&gt;history　显示最近执行过的命令的名单表，即命令历史。另外，随时按PgUp或PgDn键弹出命令历史窗口，可以再用上下方向键选定想执行的命令。<br>
+        　　<strong>例9</strong> C：\&gt;dirhistory　显示最近切换过的工作目录的名单表，即目录历史。另外，随时按组合键Ctrl－PgUp或Ctrl－PgDn弹出目录历史，再用上下方向键可以选定想切换的目录。<br>
+        　　<strong>例10</strong>　C：\&gt;ffind/t &quot;abcd&quot; ＊.txt　在当前目录下扩展名是txt的全部文件中，以文本方式查找字符串abcd。若执行ffind/x 
+        &quot;61 62 63 64&quot; ＊.txt，有相同效果，在此/x表示使用十六进制方式。<br>
+        　　<strong>例11</strong> C：\&gt;memory 列出系统内存的一些信息。<br>
+        　　<strong>例12</strong> C：\&gt;reboot　重新热启动机器，相当于按组织键Ctrl－Alt－Del。若想冷启动就用reboot/c。如用选项/v，是要用户键入Y或N证实。<br>
+        　　<strong>例13</strong> C：\&gt;vscrput 5 15 red on gre Hello! 在第5行第15列开始垂直显示红字绿底的文本Hello!<br>
+        　　<strong>例14</strong> C：\&gt;exit　退出4DOS，回到DOS的界面上。<br>
+        　　上面只展示了4DOS的一点点功能，安装后按F1键可以弹出在线帮助文件，此文件内容精彩，长约723K，对所有命令和有关问题都有详细的说明。 
+        <strong>(湖南 杨必中)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月19日第3期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用uimport批量建立、更新、删除用户</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0115/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0115/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用uimport批量建立、更新、删除用户<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 看了2001年3月26日《电脑报》H13版面的《在Novell中如何批量建立用户》的文章，我们想补充一下更简便的方法。现在， 
+              Novell操作系统一般都升级到了4.x或5.x版了，在Novell Netware 4.x/5.x下，用系统提供的实用程序uimport.exe，能方便地批量建立、修改、删除用户。下面就把我们使用uimport的一些方法和经验介绍给大家。 
+              ##1 Uimport的语法说明 Uimport，是一个利用ASCII文件信息创建用户对象的实用程序，它的语法为： UIMPORT 
+              controlFileName dataFileName ｜/VER｜/﹖ALL｜ATTR/C 更详细的使用说明，在进入Novell系统后可以通过用uimport 
+              /﹖或者uimport/﹖ all获得。要批量处理用户对象可以用如下方法实现 UIMPORT user.ctl user.dat 
+              其中user.ctl是导入用户的控制文件，user.dat是导入用户的数据文件。下面我们给出控制文件和数据文件的一些说明： 1.这两个文件都遵循一定格式，可用纯文本编辑软件创立和修改。user.ctl包括两大部分： 
+              ①导入控制 import control，包括一些控制选项，如果使用缺省设置，可以不需要这一部分。常见的一些选项如下：(^15041101a^) 
+              ②用户属性字段 fields，如NAME(用户名)、LAST NAME(全名)、LOGIN SCRIPT(登录底稿)、PASSWORD(口令)、MAXIMUM 
+              CONNECTIONS(最大连接数)、ACCOUNT BALANCE(结算余额)、VOLUME RESTRICTIONS(卷空间限制)等等，可依照实际情况选择合法的fields字段。 
+              2.user.dat中的用户数据信息是根据user.ctl中的fields的字段来决定的，每一行对应一个用户，每行的每一项对应user.ctl中fields中的子段。 
+              ##1 在根下批量建立用户对象 1.首先在用户卷下建立一个目录，比如在nwserver＿student卷下建立 user目录，下面批量生成的用户的目录就是建立在这个目录下。 
+              2.编写控制文件user.ctl，可以使用edit或记事本编写。控制文件的作用是告诉Uimport实用程序如何翻译数据文件的内容。控制文件的格式是：标题部分(IMPORT 
+              CONTROL和FIELDS)不缩进，标题下面的选项采用缩进方式，至少须缩进一个空格或一个制表符。 3.编写数据文件user.dat。数据文件是ASCII文件，每一行代表一个用户对象的属性数据，各个属性数据之间用逗号分隔开。需要注意的是：①如果某个用户对象的某个属性值中有空格，则须用引号括起这个属性值。②如果某个用户对象的某个属性值没有空格，则在数据文件中不用写，但是一定要用逗号分隔一下。③卷空间限制属性项中是在卷名后面加冒号，然后是具体需要限制的空间上限，单位是KB。下面是一个与控制文件user.ctl对应的数据文件例子，我们只给出了三行，其余省略： 
+              USER01USER01LOGIN.log1160NWSERVER＿STUDENT5000 USER02USER02LOGIN.log1160NWSERVER＿STUDENT5000 
+              ... ... ... ... USER10USER10LOGIN.log10160NWSERVER＿STUDENT5000 
+              编写数据文件的一点技巧：使用编辑器的替换功能，可以方便地编写不同用户组的数据文件。 4.编写登录底稿LOGIN.log。使用合法的语句为用户编写登录底稿。当然，各个用户的登录底稿可以不一样，你只在数据文件中指明登录底稿的文件名就可以了。下面是一个登录底稿的例子： 
+              map display off break off map error off map b=student map a=soft 
+              map s16=syslogin map s16=syspublic map s16=syspublic\dos map 
+              s16=softpwin32 map s16=softucdos map s16=softlanuage\fox25 
+              map s16=softcai\tplx comspec=s3command.com no＿default map r 1=studentUSER\ 
+              %login＿name fire phasers 2 times 5.批量建立用户 uimport user.ctl user.dat 
+              几点经验：①当运行出现错误时，你得中断，修改控制文件或数据文件对应的错误，否则继续进行。②完成批量建立用户后，最好抽样测试你的用户，如发现有问题，你得重新批量修正。 
+              批量更新用户对象 要更新用户的信息，只要控制文件中的输出模式选项选U 或B，然后修改控制文件中相应的控制选项和数据文件中的属性值。比如为增大用户卷空间大小、增加结算余额、批量锁定用户账号等。下面的控制文件和数据文件能实现批量锁定用户的功能： 
+              控制文件 update.ctl IMPORT CONTROL IMPORT MODE=U NAME CONTEXT=".O=ROOT" 
+              FIELDS NAME LAST NAME ACCOUNT DISABLED 数据文件 Update.dat USER01USER01Y 
+              USER02USER02Y … … … … USER10USER10Y 批量删除用户对象 删除用户，控制文件中的输出模式选项应该为R，例如要删除根下的USER01～USER10，控制文件和数据文件分别设计如下： 
+              控制文件deluser.ctl IMPORT CONTROL IMPORT MODE=R NAME CONTEXT=".O=ROOT" 
+              FIELDS NAME LAST NAME 数据文件 deluser.dat USER01，USER01 USER02，USER02 
+              … … … … USER10，USER10 在系统下运行uimport deluser.ctl deluser.dat系统会问是否真的要删除(remove)，回车即可。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

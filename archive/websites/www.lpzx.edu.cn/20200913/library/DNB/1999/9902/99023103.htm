@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>NT网电子邮件系统的建立</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NT网电子邮件系统的建立<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        本人在《电脑报》1998年第40期看到《NT网上电子邮件系统的建立》，但许多单位没有安装Exchang 
+        5.5 Server，能不能在不安装Exchang的情况下建立小型邮件系统呢，笔者经过实验，提供一种可行的方法。<br>
+        　　<strong>1网络配置</strong><br>
+        　　（1）硬件<br>
+        　　服务器：PⅡ300、64M SDRAM、4.3G硬盘、100M PCI网卡<br>
+        　　工作站：MMX 200、32M SDRAM、3.2G硬盘、10/100PCI网卡<br>
+        　　（2）软件<br>
+        　　服务器：中文Windows NT 4.0<br>
+        　　工作站：DOS 6.22、Windows95<br>
+        　　<strong>2安装电子邮件系统</strong><br>
+        　　（1）邮件服务器安装<br>
+        　　Windows NT 4.0、Windows95的安装这里就不再重复。主要介绍邮件服务器的安装过程。<br>
+        　　服务器上Windows NT 4.0安装好后，顺序选取“设置”→“控制面板”→“Microsoft 
+        Mail邮局”→“创建新的工作组邮局”，然后在NT服务器上选取邮局的路径，按照提示建立管理员账号详细资料（特别注意：最好在建立后不要改变管理员信箱，本人就是因为建立后变更此信箱，不得不重新建立工作组邮局）。<br>
+        　　此时邮局建立完成。但有邮局没有用户，怎么办，重新顺序选取“设置”→“控制面板”→“Microsoft 
+        Mail邮局”→“管理现有的工作组邮局”，选取邮局所在的路径，在按提示输入管理员信箱和密码后进入邮局管理程序。选取添加使用者，根据提示添加用户。此时NT邮件服务器安装完毕。<br>
+        　　(2)工作站的安装<br>
+        　　安装好Windows95后，确保已经连上了NT网（特别注意：安装Windows95时，选取自定义安装，在安装组件时点取“Microsoft 
+        Exchange”）。双击“收件箱” 
+        图标，出现收件箱安装向导，按提示输入邮局的路径，将你在服务器上新建立的邮局位置输入，按确定后出现用户名称列表。选出此信箱的用户名后按提示输入密码，最后按提示建立个人通讯簿、个人文件夹，并将收件箱添加到启动菜单上即可（主要是为了开机就启动收件箱，只要有邮件到来，就会在屏幕的右下角显示新邮件标志，方便接收邮件）。此时完成了收件箱的安装。<br>
+        　　再双击“收件箱”的图标 
+        就可以收发电子邮件了。这种安装方法省去了TCP/IP烦琐的设置。<br>
+        　　此时NT网络上的邮件系统已安装完毕，是不是很简单，发一封邮件看看。如有什么问题可同我一起讨论、解决。我的E－mail:<a
+        href="mailto:wendaolxiang@163net">wendaolxiang@163.net</a>。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年1月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

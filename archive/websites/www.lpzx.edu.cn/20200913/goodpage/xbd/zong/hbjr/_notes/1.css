@@ -1,0 +1,4 @@
+.red {  color: #FF0000; text-decoration: none; cursor: hand}
+a {  color: #FF0000; text-decoration: none; cursor: hand}
+a:hover {  color: #0000FF; text-decoration: underline; cursor: hand}
+a {  }

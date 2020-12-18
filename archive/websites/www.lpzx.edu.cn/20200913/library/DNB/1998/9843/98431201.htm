@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>查找Win95不能正常关闭的原因<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 如果你的Win95突然不能正常关闭了，你可以试试从下面几方面来寻找解决的方法，相信对你会有帮助的。<br>
+        &nbsp;&nbsp;&nbsp; (<strong>一)判定故障是否由于“程序”子菜单(在“开始”菜单中)的“启动”菜单项中安装的自动启动程序所引起的。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)重新启动计算机，并按住Shift键，直到中文Win95被完全启动。<br>
+        &nbsp;&nbsp;&nbsp; (2)单击“关闭系统”退出，等待几分钟。<br>
+        &nbsp;&nbsp;&nbsp; 如果能正常退出，则说明原因是由自动启动程序所引起的，应逐个卸下分析，方法是： 
+        <br>
+        &nbsp;&nbsp;&nbsp; 1在“开始”菜单选择“设置”；<br>
+        &nbsp;&nbsp;&nbsp; 2在“任务栏”找到“启动”菜单文件夹下的所有快捷键文件；<br>
+        &nbsp;&nbsp;&nbsp; 3将每个快捷键文件暂时下卸到桌面上；<br>
+        &nbsp;&nbsp;&nbsp; 4关闭计算机后退出，看是否恢复正常，判断出坏文件。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(二)查看WININI文件中的自动执行或自动调入命令行。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)用“书写器”或SYSEDIT等编辑工具打开WININI文件；<br>
+        &nbsp;&nbsp;&nbsp; (2)检查“Load=”或“Run=”行，将其行首全部加上“；”，使其变成注释行；<br>
+        &nbsp;&nbsp;&nbsp; (3)重新启动计算机，单击“关闭系统”，看是否能正常关闭。如果能，则说明问题出在这里，可逐个将“Load=”或“Run=”行恢复，并改正其中的错误。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(三)检查AUTOEXECBAT和CONFIGSYS文件。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)启动中文Win95，当出现“StartingWindows95”时按下F8键；<br>
+        &nbsp;&nbsp;&nbsp; (2)选择“Step－by－Step”命令；<br>
+        &nbsp;&nbsp;&nbsp; (3)在出现下述提示信息时按Y键，其它项则按N键；<br>
+        &nbsp;&nbsp;&nbsp; －LoadDoubleSpaceDriver<br>
+        &nbsp;&nbsp;&nbsp; －Processthesystemregistry<br>
+        &nbsp;&nbsp;&nbsp; －DEVICE=C:\WINDOWS\HIMEMSYS<br>
+        &nbsp;&nbsp;&nbsp; －DEVICE=C:\WINDOWS\IFSHLPSYS<br>
+        &nbsp;&nbsp;&nbsp; －LoadtheWindowsgraphicaluserInterface<br>
+        &nbsp;&nbsp;&nbsp; －LoadallWindowsDrivers<br>
+        &nbsp;&nbsp;&nbsp; (4)重新启动中文Win95后，看是否能正常退出。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; 如果一切正常，说明问题出现在上述两个文件。可以重复上述操作，只是做(3)操作时，每次选择一个其它项按Y键，然后看是否能正常退出。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(四)检查是否由于内存管理矛盾所引起的。</strong><br>
+        &nbsp;&nbsp;&nbsp; ( 1)用编辑工具打开CONFIGSYS文件；<br>
+        &nbsp;&nbsp;&nbsp; (2)确认是否有关内存的设置是以下述顺序出现：<br>
+        &nbsp;&nbsp;&nbsp; DEVICE=C:\WINDOWS\HIMEMSYS<br>
+        &nbsp;&nbsp;&nbsp; DEVICE=C:\WINDOWS\EMM386EXEnoemsx=a000－f7ff<br>
+        &nbsp;&nbsp;&nbsp; (3)如果不是，则请按上述顺序排列后重新启动系统来检测。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(五)检查故障是否是由虚拟设备驱动程序所引起的。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)用编辑工具打开SYSTEMINI文件；<br>
+        &nbsp;&nbsp;&nbsp; (2)找到[386Enh]段；<br>
+        &nbsp;&nbsp;&nbsp; (3)在该段中，把所有以“DEVICE=”开头或以“386”结尾的行全部卸下(即在行首加“；”使其成为注释行)；<br>
+        &nbsp;&nbsp;&nbsp; (4)重新启动计算机，看是否能正常关闭。如果能正常关闭，则问题就出在这里，可以重复(1)～(4)的操作，在(3)中逐步恢复卸下的驱动程序(即删除行首的“；”)，找到产生问题的命令行并修改之。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(六)检查是否由于退出时的声音文件被破坏。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)打开“控制面板”中的“声音”；<br>
+        &nbsp;&nbsp;&nbsp; (2)在事件表里，单击“ExitWindows”；(3)在名称栏选择“无”；(4)保存设置后，关闭系统看是否能正常退出。如果能正常退出，则应更换声音文件。<br>
+        &nbsp;&nbsp; <strong> (七)检查是否由于高级电源管理功能引起的故障。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)在“控制面板”中双击“系统”；<br>
+        &nbsp;&nbsp;&nbsp; (2)单击“设备管理表”；<br>
+        &nbsp;&nbsp;&nbsp; (3)双击“系统设备”，展开它；<br>
+        &nbsp;&nbsp;&nbsp; (4)双击“高级电源管理”(AdvancedPowerManagement)，卸下APM功能；(5)重新启动中文Win95后，看是否能正常关闭。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(八)检查是否由中文Win95的文件系统设置所引起的。</strong><br>
+        &nbsp;&nbsp;&nbsp; (1)在“控制面板”中双击“系统”；<br>
+        &nbsp;&nbsp;&nbsp; (2)在性能表中选择“文件系统”；<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; (3)将所有排错表(Troubleshooting)中的项目置为可用；(4)保存后重新启动中文Win95，看是否能正常关闭。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(九)检查是否由于Win95的设备驱动程序或者硬件设备的设定不良等原因引起的。</strong><br>
+        &nbsp;&nbsp;&nbsp; (2)选择硬件列表；<br>
+        &nbsp;&nbsp;&nbsp; (3)在硬件列表中，选择目前正在使用的硬件设备，然后单击“拷贝”；<br>
+        &nbsp;&nbsp;&nbsp; (4)在“拷贝目的”框里，输入“TestConfiguration”；<br>
+        &nbsp;&nbsp;&nbsp; (5)打开“设备管理表”；<br>
+        &nbsp;&nbsp;&nbsp; (6)双击任一设备，在使用设备框里，会看到“TestConfiguration”也被选择了，在上面单击使其不可用。对所有设备重复本操作；<br>
+        &nbsp;&nbsp;&nbsp; (7)在操作中，系统会提示用户是否重新启动Win95，此时要选择“NO”(注：当用户卸下PCI硬盘控制器时，要选择“YES”，因为PCI硬盘控制器不会被动态卸除)；<br>
+        &nbsp;&nbsp;&nbsp; (8)重新启动中文Win95，会提示无法确定所处的环境，此时从设备列表中选择“TestConfiguration”。<br>
+        中文Win95在启动时，将提示“你的显示适配器不能使用，请按[确定]打开设备管理器改正它的字样”，此时单击“取消”按钮退出；<br>
+        &nbsp;&nbsp;&nbsp; (9)关闭中文Win95，看是否能正常关闭。<br>
+        &nbsp;&nbsp;&nbsp; 如果正常退出，则说明问题是由设备管理驱动程序或者硬件设备的不正确安装引起的。用下述步骤可确定具体问题所在：<br>
+        &nbsp;&nbsp;&nbsp; 1在“控制面板”中双击“系统”；<br>
+        &nbsp;&nbsp;&nbsp; 2在设备管理表中选择一个设备打开；<br>
+        &nbsp;&nbsp;&nbsp; 3将该设备的“TestConfiguration”置为可用；<br>
+        &nbsp;&nbsp;&nbsp; 4当提示重新启动Win95时，选择“确定”；<br>
+        &nbsp;&nbsp;&nbsp; 5关闭中文Win95，看是否能正常关闭。<br>
+        &nbsp;&nbsp;&nbsp; 若有问题重复(1)～(5)的操作，直到找到问题所在。<strong>(甘肃 
+        侯丰胜)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月9日第43期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

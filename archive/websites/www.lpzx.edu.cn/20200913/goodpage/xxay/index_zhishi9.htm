@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="2.jpg">
+<table width="554" border="0" cellspacing="0" cellpadding="0" height="510" bordercolor="#FF0033">
+  <tr> 
+    <td width="498" height="56" bgcolor="#FFFFFF"><img src="xian.gif" width="498" height="24"></td>
+    <td width="56" height="56"><img src="angle.gif" width="70" height="60"></td>
+  </tr>
+  <tr> 
+    <td width="498" align="left" valign="top" height="45"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:116px; height:111px; z-index:1; left: -100px; top: 33px; overflow: hidden"><font color="#0000FF"><b><img src="book.gif" width="84" height="75" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><font color="#FF3333"><b class="mdd6">奥运会的设项及入围途径</b> </font></p>
+          </div>
+      </div>
+    </td>
+    <td width="56" align="center" valign="middle" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="498" align="left" valign="top" height="338"> 
+      <p>　　<span class="mdd7">随着世界体育运动的不断发展，奥运会的规模越来越大，比赛项目也越来越多。１８９６年的第一届奥运会仅有９个项目。到了 
+        １９９２年的第２５届奥运会，比赛项目也增加到２５个大项、２５７个小项。１９９６年美国亚特兰大第２６届奥运会共设２６个大项，２７１个小项。<br>
+        　　项目设置如下（括号内为所含小项数目）： 田径（４４）、足球（２）、游泳（含跳水、花样游泳、水球，３８）、篮球（２）排球（含沙滩排球，４）、曲棍球（２）、体操（含艺术体操，１６）、举重（１０）、自行车（１４）、摔跤（２０）、柔道（１４）、射击（１５）、射箭（４）、击剑（１０）、皮划艇（１６）、划船（１４）、帆船（１０）、马术（６）、拳击（１２）手球（２）、现代五项（１）、乒乓球（４）、羽毛球（５）、网球（４）、垒球（１）棒球（１）。<br>
+        　　为了使比赛更加激烈精彩，同时也考虑到参赛国家和地区的广泛性，国际奥委会和各个单项体育组织要控制参赛运动员的规模，规定了奥运会的各个竞赛项目的入围方法。因此，要想得到亚特兰大奥运会入场券，必须通过以下几条途径：<br>
+        　　一、参加预赛，取得优胜。预赛包括世界锦标赛、世界杯赛、各大洲的锦标赛，以及专门设立的奥运会预选赛。本届奥运会的大部分项目都采取这种方法。<br>
+        　　二、积分排名，列前入围。通过上一年度的各种世界大赛，累积计算参赛选手的得分，名列前茅者进军奥运会，如乒乓球、羽毛球、网球三个项目。<br>
+        　　三、设定标准，达标参赛。有些大项目包含小项较多，不可能搞预选赛，也无法采取排积分的方法，只能设定报名标准，达标者可参加比赛。但为了照顾更多的国家和地区，每个小项目只允许每个国家或地区的两至三名选手参加，如田径和游泳。</span> 
+      </p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

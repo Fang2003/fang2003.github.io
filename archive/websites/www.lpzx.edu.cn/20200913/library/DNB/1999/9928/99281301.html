@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 9906请你编程</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>28 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 9906请你编程</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 9906请你编程 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好！现在又到“请你编程’栏目与你见面的时间了。“请你编程”一直受到广大朋友的关心和支持，我在这里表示衷心的感谢！为了对读者朋友负责，我们对来稿进行了仔细地测试，尽量选出优秀的作品奉献给大家。“请你编程”是一个读者朋友直接参与的栏目，是一个体现自我的园地，希望有编程愿望的初学者朋友也参与进来，因为这是一个大家的栏目，“重在参与”是我们的宗旨，无论是对编程高手，还是初学的朋友，我们都会认真对待每一份作品。<br>
+　　另外，我对大家有一个要求：无论是用电子邮件还是邮寄磁盘稿的读者，请随时检查你们的电脑是否带有病毒，因为我已经收到几个读者朋友的稿件中带有CIH病毒。现在请看本期天津读者李勇的程序。<br>
+　　9906请你编程思路<br>
+　　对于一组数据的处理：<br>
+　　1．max=1；<br>
+　　2．读取第一个数据存于number[1]中；<br>
+　　3．判断是否读完数据，如果是，就转到5执行打印；如果没有读完，读入下一个数据存于x中；<br>
+　　4．确定x在数组number中的位置：<br>
+　　如果x&gt;number[max]，把x的值赋给number[＋＋max]，然后转到3进行判断；否则，x依次同数组number中的元素比较（1≤i≤max），如果x≤number[i]，把x的值赋给number[i]，再转到3去执行判断；<br>
+　　5．打印结果，max即为所要求的旗子数。<br>
+　　源程序<br>
+　　＃include ″stdio.h″<br>
+　　main ()<br>
+　　{<br>
+　　FILE ＊fp;<br>
+　　unsigned i,k,j,m,n,x,max,number[30001];<br>
+　　if ((fp=fopen(″skate.txt″,″r″))==NULL) /＊判断文件skate.txt是否存在，如存在打开该文件＊/<br>
+　　{<br>
+　　printf (″Can not open the skate.txt!″);<br>
+　　exit();<br>
+　　}<br>
+　　fscanf (fp,″％u″,＆n);<br>
+　　for (i=1;i&lt;=n;i＋＋)/＊控制读取数据组数＊/<br>
+　　{<br>
+　　max=1;<br>
+　　fscanf (fp,″％u ％u″,＆m,＆number[1]);<br>
+　　for (j=2;j&lt;=m;j＋＋)/＊控制数据读取个数    ＊／<br>
+　　{fscanf (fp,″％u″,＆x);   ／＊读取数据＊／<br>
+　　if (x&gt;number[max])   ／＊确定数据位置＊／<br>
+　　number[＋＋max]=x;<br>
+　　else<br>
+　　for (k=1;k&lt;=max;k＋＋)<br>
+　　if (x&lt;=number[k])<br>
+　　{number[k]=x;<br>
+　　break;}<br>
+　　}<br>
+　　printf (″％u\n″,max);}<br>
+　　fclose (fp);<br>
+　　}<br>
+　　<b>9908请你编程题目</b><br>
+　　前一段时间各个电视台都在播放金庸先生的《天龙八部》，大家都被阿紫对萧峰的真情所感动，可惜最后的结局不如人意。但大家却不知道，在他们逃亡过程中，曾经发生这样一件事情：<br>
+　　萧峰为阿紫真情所感，给了她一个机会：包括萧峰在内的N个人围成一个圆圈，按顺时针方向，每个人都有一个编号，即从1到N。现在由阿紫报出一个整数C，由萧峰开始按顺时针方向从1开始进行报数，报到C的人退出，下一个人再从1开始报数。如果最后留下的是萧峰的话，阿紫就可以和他在一起。例如：共有3个人，萧峰的编号为2，阿紫只要报出的是3，就可以使3号和1号先后退出，最后剩下萧峰。现在就请你编一个程序，替阿紫算一下，如何报出这个整数C，使得最后剩下的人是萧峰。<br>
+　　程序要求如下：<br>
+　　1、输入数据从文本文件中love.txt中读取。love.txt的格式为：每行为两个由空格分开的整数N和M，表示共有N个人，其中萧峰的编号为M。N在2到1500之间，M在1到N之间。当M和N都为0时，表示输入数据结束。<br>
+　　2、输出到屏幕上，输出格式为每行一个整数C，C为当有N个人，萧峰编号为M时，为了保证萧峰最后留下，阿紫应该报出的整数。这个整数C应该尽量小。<br>
+　　输入范例：<br>
+　　3 2<br>
+　　3 3<br>
+　　0 0<br>
+　　输出范例：<br>
+　　3<br>
+　　1<br>
+　　本期题目由上海的oldbug提供。<br>
+　　来稿请寄磁盘稿或用E－mail投稿，请写明解题思路和源程序（包含详细的注解），将来稿寄到电脑报编辑部的收信地址或E－mail邮箱，同时欢迎提供“请你编程”的题目。来稿截止日期：1999年8月15日。<br>
+　　本期获奖者名单<br>
+　　李栋宾（河北）   李志超（重庆）    沈   默（江苏）<br>
+　　许齐平（安徽）   王洪志（新疆）    曾劲松（湖北）<br>
+　　张继连（广西）   卢   品（贵州）    张晓东（黑龙江）<br>
+　　付永安（浙江）<br>
+　　每一位获奖者将获得苦丁香公司提供的光盘一张。<br>
+</TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/28/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99281301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

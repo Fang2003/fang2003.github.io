@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用子网掩码实现多网共用网址<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　如果一个单位有多个分布在各地的网络，且每个网络的主机数量并不很多，那么申请多个网址(NETWORK 
+        ID)，不仅会造成IP地址的浪费，而且会使单位付出较大的经济代价。在这种情况下，可以使多个子网共用一个网址，以节省IP地址和资金，下面把我们单位使用子网掩码实现这个目的的过程介绍给大家。<br>
+        　　一、情况介绍<br>
+        　　我单位有三个位于不同地点的子网(以下称为甲、乙、丙网)，各网络的主机数分别为20、25和50。且我单位已申请了一个网址为202.119.115。<br>
+        　　二、解决过程<br>
+        　　1.将甲网和乙网的子网掩码改为255.255.255.224，其最高位224的二进制形式为11100000。<br>
+        　　2.我们用子网掩码的高三位来分割子网，它共有000、001、010、011、100、101、110、111八种组合。除000(代表本身)和111(代表广播)外，还有六种组合，共可提供六个子网，它们分别为：(IP地址前三个字节还是202.119.115)<br>
+        　　第一子网：00100001－00111110即33－62<br>
+        　　第二子网：01000001－01011110即65－94<br>
+        　　第三子网：01100001－01111110即97－126<br>
+        　　第四子网：10000001－10011110即129－158<br>
+        　　第五子网：10100001－10111110即161－190<br>
+        　　第六子网：11000001－11011110即193－222<br>
+        　　最后我们选第五子网给甲网，第六子网给乙网，因为各个子网都支持30台主机，所以选择的子网足以满足甲网和乙网20台和25台的需要。<br>
+        　　3.丙网有50台主机，按上述分割方法无法满足它对IP地址的需要。这时，我们将它的子网掩码设成255.255.255.192，由于192的二进制值为11000000，按上述方法，它可以划分为两个子网，分别为：<br>
+        　　第一子网：01000001－01111110即65－126<br>
+        　　第二子网：10000001－10111110即129－190<br>
+        　　每个子网有62个IP地址可用，我们将第二子网分配给了丙网。<br>
+        　　至此，实现了多个子网共用一个网址。</font></p>
+        <p class="ourfont"><font color="#369681">　　(安徽　许欢平)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

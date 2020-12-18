@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 注册表的常用操作</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>综合报道</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>46 期</A> &gt;  <A HREF='wrapup.html'>综合报道</A> &gt; 注册表的常用操作</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 注册表的常用操作 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　微软公司自推出视窗95起，便引入了注册表(Registry)对操作系统进行管理，注册表可以看成是一个庞大的数据库，包含了系统所有软硬件的配置与状态信息以及与用户相关的各种设置信息，对系统的正常运行起着至关重要的作用。
+<p><b>　　一、注册表的检测与修复</b></p>
+　　1.系统在启动过程中会自动对注册表进行扫描，若有错误便自动修复。<br>
+　　2.在系统运行时也可以检查注册表：运行Scanregw，程序很快扫描注册表，并显示扫描结果，有错误便提示是否进行自动修复，如没对注册表做专门备份可让它自动修复。<br>
+　　3.当注册表有错，不能自动修复且不能进入系统时，可在纯DOS下运行Scanreg.exe ／Fix 进行修复。这样，可排除由于系统启动时通过初始化程序system.ini和win.ini加载了错误的模块或应用程序以及病毒侵入造成注册表修复失败的可能。
+<p><b>　　二、注册表的备份</b></p>
+　　注册表由两个文件组成：system.dat和user.dat，存放在Windows目录下。通过导出、导入的注册表文件格式为.reg。而自动备份的注册表文件以.cab压缩格式存放于目录windows\sysbckup中，它还包括了另外两个重要文件：system.ini和win.ini。<br>
+　　1.系统在每日的第一次开机启动时会自动对注册表做一次备份，也可手动备份。运行Scanregw.exe，提示“今天已经备份系统注册表，要重新备份吗？”，选择“是”，便立即对当前的系统信息进行备份。这时备份的数据将覆盖当日系统首次开机时备份的数据。<br>
+　　2.通过注册表编辑器进行备份。运行Regedit.exe，选择“注册表”菜单下的“导出注册表文件”，输入文件名，在“导出范围”下选“全部”，即可对整个注册表备份，也可备份局部注册表：先选中需要备份的主键分支，然后再“导出注册表文件”，这时在“导出范围”下自动选择成“选择的分支”并已输入了相应的主键值，输入文件名，点“确定”，便生成了扩展名为.reg的注册表文件。<br>
+　　3.在纯DOS下运行Scanreg.exe ／Backup，可备份整个注册表，但首先应确定注册表没有任何错误才可进行，因为这时备份的数据也将覆盖当日系统首次开机时备份的数据。
+<p><b>　　三、注册表的恢复</b></p>
+　　1.有时，系统在启动时扫描注册表无错，而在运行过程中某些软硬件工作不正常，这时可将以前导出的注册表文件再导入注册表中：运行regedit，选“注册表”菜单下的“导入注册表文件”，找到备份的.reg文件，点“确定”，便重新向注册表写入正确信息。也可以直接双击reg文件将其信息添加到注册表。<br>
+　　2.当注册表损坏或错误更改了软硬件设置，导致系统启动失败，并且自动修复无效，用“Scanreg.exe ／Fix”也无法恢复时，可在纯DOS下运行“scanreg.exe ／restory” 进行恢复，有五个数据供选择，先选日期最近的恢复，若仍不行，再依次选择，直到系统正常运行为止。
+<p><b>　　四、注册表的编辑</b></p>
+　　通过注册表编辑器regedit.exe对注册表进行高级操作，可定制所有系统信息，当然这得有相应的操作技巧才行。
+<p><b>　　五、一点启示</b></p>
+　　对于系统有时出错，我们不能一味“归罪”于注册表，注册表只是起组织数据的作用，而当系统核心文件一旦损坏，系统将立即崩溃并且可能无法修复，这就好比一幢新建的大厦由于施工材料质量低劣而倒塌，不能怪设计图纸一样，道理就这样简单。<br><b>　　（四川　潘江）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99460701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

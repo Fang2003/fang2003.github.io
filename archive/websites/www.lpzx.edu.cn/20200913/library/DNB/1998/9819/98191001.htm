@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>NeoBooK制作电子杂志快速上手心得<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　NeoBook对初学多媒体制作的人来说非常适合，可以降低难度，让人感觉到：原来多媒体的制作是如此简单。只可惜它是一个试用版，一些非常好的功能受到限制，但试用版也足以体现出它的优点。<br>
+        　　现在就将NeoBook制作一份简单的电子杂志的详细过程介绍给大家。<br>
+        　　大多数多媒体制作软件都是基于页面－对象模式，NeoBook也不例外。我们假定要制作一份由三页组成的电子杂志。<br>
+        　　首先，选择“File\New”选项，在弹出菜单中选择文件的颜色分辨率，此处选择256色，640×480显示模式，单击OK，可以看到一个新页面。然后，选择这一页面的属性：选择“Page\Attributes...”，会弹出一个菜单，在Page 
+        Title中填入本页面的名字，例如取名为“第一页”。在“Page background”中选择背景图案，其中“SolidColor”为纯色，单击向下的箭头，弹出调色板，可以从中选择你喜欢的一种颜色(也可选择制作好的图片做为背景图案，NeoBook支持BMP、GIF、PCX、TNG、TIF、ICO等多种格式的图片文件)。在“Special 
+        Effects”中选择这一页的出现方式，在“Display Effect”中的下箭头有15种图标可供选择，选择好后，单击OK。<br>
+        　　选择“Pase\Add...”按上述方法建立“第二页”和“第三页”。另外，系统还会建立一个名为“Master 
+        Page”的页面。<br>
+        　　现在三个页面都建立完毕，下面开始对其进行编辑。<br>
+        　　选择“Page\Goto\Master Page”到“Master Page”页，在工具条中单击一个有按钮图案的键，在“Master 
+        Page”页的左下角划一个方框，弹出一个对话框。在“Button Text”中填入字母“r”，选择“Button 
+        Style”，在“Style Attributes”中选择按钮的图案。如在“Icon/Imag to 
+        Display when Button is up”中选择“NeoBook”目录下的“3D_BTN.BMP”，在“Icon/Imag 
+        to Display when Button is Down”中选择“NeoBook”目录下的“3D_BTN_D.BMP”，这样就制作出一个圆按钮。<br>
+        　　单击“Button Action”，在光标处填入“Exit”，再单击“General 
+        settings”，使“on top of Image”被选中，单击OK。这样，一个退出按钮就制成了。同理，在页面右下角建立两个翻页按钮，一个实现前翻页，另一个实现后翻页。不同的是，在前翻页的General 
+        setting中填入数字“5”，“Button Action”中填入“Goto Prevpage”，在后翻页的“General 
+        settings”中填入数字“6”，“Button Action”中填入“Goto Nextpage”，这样“Master 
+        page”页就编辑完成了。下面到“第一页”，我们用这一页来做电子杂志的封面。<br>
+        　　单击工具条中带有字母“A”的键，选择输入杂志名字的位置单击，出现对话框，输入杂志名字后按OK。可以通过工具条“Fontoolor”选择字的颜色，用“Font”选项选择字的大小和字体，还可以用此法来添加一些文字说明。<br>
+        　　也许，你刚才在“Master page”页中制做的一些按钮在这一页出现了，这是因为Page菜单下的“show 
+        master page”被选中了。这个选项的功能是使“master page”页的功能在本页有效。<br>
+        　　只有图像和文字，未免太单调了，我们来加点音乐。在工具条中单击有按钮图案的键，划一个小框，出现对话框。在“Button 
+        Text”中填入背景音乐的名称，单击“Button Style”，选中“Check Box”，在“Name 
+        of Variable to store the status/contents of this Button”中填入“sound”，单击“Button 
+        Action”，在光标处填入以下语句：<br>
+        　　　If “[Sound]”“=”“Checked”<br>
+        　　　FileWrite“Tour.dat”“3”“On”<br>
+        　　　PlaySoundFile“声音文件的完整路径”“LOOP”<br>
+        　　Else<br>
+        　　　StopMedia“声音文件的完整路径”(MID、WAV均可)<br>
+        　　　FileWrite“Tour.dat”“3”“Off”<br>
+        　　EndIf<br>
+        　　背景音乐在第一页制作，可以在整个杂志中播放，其它页无需再建立。<br>
+        　　所有的设计都完成后，选择Book菜单下的“BookSetup”，弹出对话框，我们对几个主要的功能进行设置，其它默认即可。单击“Access 
+        Control”，在“Windows Behavior”中选中“Run Publication”以全屏显示，如果你想改变颜色分辨率，单击“Size/Colors”页，就可以重新选择。<br>
+        　　以上是我通过对NeoBook软件的使用所总结出来的一些经验，肯定还存在着许多缺点和不足， 
+        恳请广大《电脑报》的读者多批评指导。<strong>(辽宁 于伟业 张永川)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">系统设备号冲突引起的故障一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台兼容机，配置为：Pentium166 
+        MMX CPU、联讯8J61主板、16M内存、SONY CDU 311八倍速光驱，使用简体中文Windows95操作系统。此机为多人公用，为方便使用，启用了Windows95自带的口令功能，使各个用户可以通过输入自己的用户名及密码来进入各自不同的桌面。一日，某用户以“CD”为用户名进行登录，但登录失败，系统给出“非法的长文件名或路径”的错误信息，并且导致通用用户(即未建立用户名的用户)同样无法登录。但其他用户仍可以正常登录。<br>
+        　　故障分析及处理：在Windows95所在目录下，有一名为“PROFILES”的目录，该目录下又有数个子目录，分别以该机上现有用户名作为子目录名。进入“PROFILES”目录，发现有“CD”子目录，但其中没有任何文件，而其他用户目录中都有有关桌面和开始菜单的设置。于是键入“RD 
+        CD”，却无法删除“CD”目录，改用“DELTREE”仍然不行。在Windows95的资源管理器中同样无法删除该文件夹。于是退到DOS6.22下，用NU8.0中的DISKEDIT强行将该目录改名为“CDD”。再进入Windows95，以“CDD”为用户名进行登录，登录成功。数日后，故障重新出现，“CDD”目录自行变回“CD”，再次用DISKEDIT解决。如此反复数次后，怀疑有病毒，用KV300及AV95均未发现病毒。此后Windows95频繁出错甚至死机。于是将硬盘格式化，安装了Windows98 
+        Beta2英文版。某日安装一游戏软件，该软件是用WINZIP制成的自解压包，在浏览器中双击该图标即可解压。解压至一半时，系统报告无法在“D:\GAMES\TOSH2\DATA\”下建立“CD”子目录，安装失败。在DOS下用PKUNZIP手工解压，同样报告无法建立“CD”目录。于是在硬盘任意目录下键入“MD 
+        CD”，试图建立“CD”子目录，均告失败。怀疑由于CD是DOS内部命令，系统予以保留。但系统却可建立“DIR”和“COPY”目录，百思不得其解之时，偶然查阅“CONFIG.SYS”中的内容，发现如下一句：<br>
+        　　D:\DOS\SONYIDE.SYS /D:CD<br>
+        　　于是恍然大悟。回想起DOS使用手册中指出，不能以系统保留号作为名称建立文件名目录，如LPT、COM、CON、PRN等。而该机上“CD”被保留为光驱的设备名，怪不得一旦与“CD”重名就出错。原来在编写CONFIG.SYS文件时，把光驱的设备号由常用的“MSCD000”简化成了“CD”，没想到一时省事造成大麻烦。编辑CONFIG.SYS和AUTOEXEC.BAT文件，将SONYIDE.SYS以及MSCDEX后的设备号改为MSCD000后，一切故障排除。<br>
+        　　小结：如今微软的操作系统已经发展到了Windows98，但其核心仍脱离不了DOS，系统仍保留数个设备号，同时对外接设备的设备号也予以保留。因此在使用中就必须注意不要与这些设备号冲突，或者说不要给设备取太常用的名字。(吉林 
+        苏锋) </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：<a
+        href="index.htm">《电脑报》1998年1月12日第2期36版</a></font></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

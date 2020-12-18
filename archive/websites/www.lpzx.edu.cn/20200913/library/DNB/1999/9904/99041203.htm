@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>解决Win98保护错误故障一例</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">解决Win98保护错误故障一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　使用Win98有时会出现莫名其妙的故障。开机或安装新软件后重新启动计算机时，硬盘指示灯闪了许久，屏幕上却只跳出几行怪字，告诉你“Windows 
+        protection error.You need restart your computer.”(Windows保护错误，需重新启动计算机)。<br>
+        　　按照提示进行热启动，则自动进入Saft Mode(安全模式)启动Win98。启动成功后在控制面板中查看系统，未见异常。从开始菜单中关闭系统重新启动计算机，那几行怪字又出现，陷入死循环。<br>
+        　　笔者先排除了感染病毒的可能，又查阅了Windows“帮助”中的“疑难解答”及一些相关资料，全无对症良方。如果重装系统，且不说我硬盘上的大量数据资料一不小心会损失殆尽，单是重装系统及相关软硬件就令我望而生畏。故障的原因没弄清就重装，每出现一次就重装一次系统，岂堪忍受!<br>
+        　　几经周折，我发现该故障的原因是注册表包含了引用不存在或已损坏的文件(如.vxd文件)的注册表项。“注册表检查程序”不会修复该注册表项，从而使启动失败。新安装的软件不完善或与Windows兼容性不好，或对Windows误操作等，都可能破坏一些注册表包含的文件，造成Windows保护错误故障。<br>
+        　　我们知道，Win98在添加或删除软件时会重写注册表项及一些相关文件。既如此，不必彻底重装Win98，只需添加或删除Win98中某个无关紧要的组件，即可达到修复损坏文件、恢复系统的目的。具体步骤如下：<br>
+        　　1.启机时按Ctrl键进入“Startup Menu”(启动菜单)。<br>
+        　　2.选“step－by－step confirmation”启动计算机。<br>
+        　　3.按ESC键忽略config.sys和autoexec.bat，加载其它程序项。<br>
+        　　4.启动成功后放入Win98系统盘，若带自运行程序，则进入“添加／删除程序”，选“Windows安装程序”选项卡；否则从“控制面板”中选“添加／删除程序”，再进行以上操作。<br>
+        　　5.复选任意项组件，确定从磁盘安装。<br>
+        　　安装完毕后重新启动计算机，系统即恢复正常。<br>
+        　　此方法简单易行，从此再也不怕这“Windows protection error”了。<strong>(甘肃　张旭辉)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 处理“vxd文件无效”错误</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='software.html'>软件世界</A> &gt; 处理“vxd文件无效”错误</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 处理“vxd文件无效”错误 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　 我们在Windows 98中启动和运行程序时，系统有时会报告“＊.vxd文件出错”或“＊.386文件出错”，我经过一段时间的摸索，现将基本处理方法总结如下：<br>
+　　1．确定错误消息涉及哪类文件？若错误消息所涉及的文件扩展名为 .vxd，请看第2条；若错误消息所涉及的文件扩展名仅为 .386，试看第5条。  <br>
+　　2．首先检查Vnetsup.vxd 文件是否丢失？ <br>
+　　如果 Vnetsup.vxd 文件丢失，先安装然后再删除网络组件就可避免发生这一问题。 <br>
+　　安装和删除网络组件的方法是：<br>
+　　1）单击“开始”，指向“设置”，单击“控制面板”，然后双击“网络”。 <br>
+　　2）单击“添加”，单击“适配器”，然后单击“添加”。 <br>
+　　3）在“厂商”框中，单击“(已检测到的网络驱动程序)"。在“网络适配器”中，单击“现有的 Ndis2 驱动程序”，然后单击“确定”。 <br>
+　　4）系统提示输入工作组名和计算机名时，请填写“标识”选项卡上的对应框。 <br>
+　　5）连续单击“确定”或“关闭”，直到返回“控制面板”。 <br>
+　　6）系统提示重新启动计算机时，请单击“确定”。 <br>
+　　7）重新启动计算机后，请单击“开始”，指向“设置”，单击“控制面板”，然后双击“网络”。 <br>
+　　8）单击“现有的 Ndis2 驱动程序”，单击“删除”，然后单击“确定”。 <br>
+　　9）系统提示重新启动计算机时，请单击“确定”。 <br>
+　　若问题未能解决，试下一条。<br>
+　　3．注册表中的 StaticVxD 值是否正确？ <br>
+　　如果错误消息并未指定设备驱动程序，则注册表中的某个 StaticVxD 值可能为空或者只包含空格。StaticVxD 值位于注册表的下列项内： <br>
+　　HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD <br>
+　　（使用“注册表编辑器”不当可能会引发严重的问题，甚至需重新安装 Windows 98。）<br>
+　　更正注册表中的 StaticVxD 值 <br>
+　　1）备份注册表文件。 <br>
+　　（a）单击“开始”，然后单击“运行”。 <br>
+　　（b）在“打开”框中，键入“scanregw"，然后单击“确定”。 <br>
+　　（c）提示备份系统注册表时，请单击“是”，然后单击“确定”。 <br>
+　　2）使用“注册表编辑器”查找和删除注册表中仅含有无效数据、空数据或仅含空格的 StaticVxD 值。<br>
+　　4．最近是否从计算机上删除过程序？如果最近从计算机上删除过程序或组件，请重新安装它，然后运行相应的卸载工具。<br>
+　　5．禁用 System.ini 文件中涉及设备驱动程序的行。 <br>
+　　如果错误信息涉及 .386 文件，请禁用 System.ini 文件中涉及设备驱动程序的行。 <br>
+　　禁用涉及设备驱动程序的行： <br>
+　　1）单击“开始”，然后单击“运行”。 <br>
+　　2）在“打开”框中，键入“Msconfig"，然后单击“确定”。 <br>
+　　3）在“System.ini" 选项卡中，双击“[386Enh]"。 <br>
+　　4）定位涉及设备驱动程序的行，单击以清除此行旁的复选框，然后单击“确定”。 <br>
+　　5）系统提示重新启动计算机时，请单击“确定”。 <br>
+　　如果错误消息涉及不带扩展名的文件，则该文件可能未在此节中列出。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99481202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

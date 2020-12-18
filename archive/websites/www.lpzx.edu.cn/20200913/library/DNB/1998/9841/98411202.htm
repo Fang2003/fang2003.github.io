@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用VRV实现病毒监测</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用VRV实现病毒监测<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        VRV杀毒套件中的“VRV病毒防火墙光盘”安装于Win95环境下，会自动产生NETVRVforWin95，VRVforWin95等，这两个程序都能实现对网络上病毒的监测，具体使用方法如下：<br>
+        &nbsp;&nbsp;&nbsp; 1.<strong>用NETVRVforWin95防止Win95单机上的病毒侵染服务器。</strong><br>
+        &nbsp;&nbsp;&nbsp; NETVRVforWin95主要功能是动态监视外界数据对Win95上的拷贝，一旦从外界进来的数据内有病毒，立即自动清除。同时，NETVRVforWin95还能够在Win95单机向外界拷贝数据时，一旦遇到数据有病毒，立即清除该病毒，并保证流向外界的数据“干净”，用户需要把NETVRVforWin95的“清除网络病毒”选项打开，注意：如果Win95用户对网络盘符无“写”权限，则对网络上的病毒能够发现但不能清除。<br>
+        &nbsp;&nbsp;&nbsp; 2.利用VRVforWin95实现对网络内各机器的病毒监测。<br>
+        &nbsp;&nbsp;&nbsp; ①将Win95网络上所有需要进行病毒监视的机器设立共享资源，并设立“写”权限。<br>
+        &nbsp;&nbsp;&nbsp; ②在Win95单机上将网络内所有机器上的资源映射为本地盘符，如将甲机器的C盘映射为F盘符，将NOVELL服务器上的SYS卷映射为G盘符。<br>
+        &nbsp;&nbsp;&nbsp; ③在Win95上运行VRVforWin95。<br>
+        &nbsp;&nbsp;&nbsp; ④在VRVforWin95界面上选择“目录”。<br>
+        &nbsp;&nbsp;&nbsp; 
+        ⑤在“目录”选择界面上，选定所有网络盘符，这样，“F”、“G”盘符就被增加到病毒监视队列中，按“确定”返回。<br>
+        &nbsp;&nbsp;&nbsp; 
+        ⑥在主界面上寻时钟”，设定病毒监视的方式，可设定为定时、周期两种方式。<br>
+        &nbsp;&nbsp;&nbsp; ⑦VRVforWin95会自动按照你所设定的方式定时或周期地对上述网络盘符进行病毒查杀。<br>
+        &nbsp;&nbsp;&nbsp; VRVforWin95是32位编程，支持多任务，你可以同时运行若干个VRVforWin95实现对网络内病毒的同时监视，而且这些监视任务在后台运行，不会影响你继续在Win95下进行其它操作。<strong>(江苏 
+        唐惠燕)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月26日第41期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

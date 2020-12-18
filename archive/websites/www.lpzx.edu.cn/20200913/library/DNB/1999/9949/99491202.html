@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='stylesheet' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用Ultraedit－32做自己的汉化软件</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>49 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用Ultraedit－32做自己的汉化软件</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用Ultraedit－32做自己的汉化软件 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一个同样的软件，你会用中文的还是英文的呢？答案肯定是中文的，毕竟是中国人嘛！其实做个汉化软件并不像想象中的那么复杂，想做吗，跟我来吧！<br>
+　　你要准备汉化软件用的工具Ultraedit－32(Dos下可以用Pctools)和想汉化的软件，这里以汉化Turboc2.0为例，汉化过程大致分四步。<br>
+　　第一步：在要汉化的软件中找出核心文件。所谓的核心文件是指存储了所需汉化的英文信息的文件。怎么找呢?先进入Turboc2.0，并记住一个英文单词。我们就以启动封面的“Turbo”为例，然后用Ultraedit－32打开一个文件，按Alt＋F3弹出查找画面，在对话框中输入“Turbo”(大小写要区分好)，并将“搜寻ASCII”复选框打上勾，点“找下一个”按钮开始查找，如果找到，光标会自动移到“Turbo”上。如果没有，就重复这个过程，直到找到为止，在Turboc2.0中，核心文件就是主执行文件Tc2.exe。<br>
+　　第二步：确定要汉化的信息的中文意思是什么。我们例子中的“Turbo”的中文意思是“加速，加强”。显然我们不能这么翻译，否则意思就变了，但你可以将自己的名字写上去(要不然谁知道这个软件是由你汉化的呢)。别的信息可不能随便翻译。就拿最简单的出错信息“Unable to open include file”来说，它的准确意思是“无法打开包含文件”。<br>
+　　第三步：开始汉化。用Ultraedit－32打开Tc2.exe后，按Ctrl＋R弹出替换画面。按第一步的做法。查找“Unable to open include file”或是“Turbo”，找到后，光标就自动移到查找的对象上。然后我们在“替换成”对话框中输入对象的中文意思或是我们要替换成的文字，再点“替换”按钮就行了。这里要特别注意字节数的问题，就比如“Unable to open include file”有27个字节(空格和标点也算一个字节)。而它的译文“无法打开包含文件”只有16个字节，那么剩下的11个字节就要用空格来补足(或你想怎么美化都行，只要字节数相等就可以)。若前后字节数不符，运行时会出现“一般保护错”。<br>
+　　第四步：调试你的汉化软件。由于汉化的工作是很枯燥的，所以很容易出错(最经常出的错就是字节数不相等)。最好汉化一条就测试一次，千万别嫌烦，我在汉化这个Turboc2.0时，可是调试了不下300次的。(用这个方法你也可以把一些游戏个性化，比如“仙剑”)。<br>
+　　到这里你已经会了如何做个汉化软件，最后我再提醒您两点，一：汉化前做好原软件备份。二：做好的汉化软件可不能乱分发，同学间互相Copy倒是无妨，万万不可用做商业用途。<br><b>
+    （福建　王侃）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99491202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

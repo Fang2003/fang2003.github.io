@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>不同类型的内存条能否混用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp; 　浙江温州读者陈继克问：我有一台兼容机，华硕TX97－E主板、16M 
+        EDO内存、Intel Pentium MMX 166 CPU、火球21G硬盘(分成：C盘11G，D盘和E盘各500M)、美上美6倍速光驱，操作系统为中文WIN97和MS－DOS 
+        6.22。<br>
+        　　1最近新购买了32M SDRAM，想问一下，在华硕TX97－E主板上可否将两种内存混用。如能用，能告诉我如何用吗?<br>
+        　　2最近机器上装了简体WIN98正式版，因贪便宜，把C盘转换成FAT32格式。发现在Windows状态下，光盘放入光驱后，只要一读光盘就死机(据我推测，可能是光驱进行死循环了)，只能重新启动。而在DOS状态下光驱却运行得很正常。我重装了光驱驱动程序和WIN98后，仍无法解决，请问怎样解决该问题?<br>
+        　　答：1无论72线(SIMM)还是168线(DIMM)的EDO内存，均采用5V电源，而SDRAM(168线)只采用3V电源。虽然主板上SIMM插槽和DIMM插槽 
+        的电源是分离的，但是它们的数据线却是相连的。由于大规模IC的闸间氧化层很薄，5V 
+        I/O信号将损伤3V的DIMM，所以在你的华硕TX97－E主板上不能混用这两种内存条。有的主板(如微星等)的DIMM插槽也支持5V的内存条，因此你可以同时使用SIMM和DIMM，但你也只能使用168线的EDO内存条而不能使用SDRAM。<br>
+        　　2估计你是把硬盘和光驱按照主、从方式连接在同一个IDE接口上。由于光驱只能在16位方式下工作，而你的系统又设置为32位模式，当然读光盘时就会出现问题。而在DOS环境下，由于都工作在16位方式下，则不会出现问题。在这种情况下，如果禁止使用IDE接口的32位模式，虽然可以解决问题，但是系统性能大大降低。请你把硬盘和光驱分别连接到两个IDE口(IDE1和IDE2)上，重新设置CMOS参数，这样就可以解决问题了。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月2日第42期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

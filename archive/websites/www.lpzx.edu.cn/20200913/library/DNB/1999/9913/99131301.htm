@@ -1,0 +1,135 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>9903请你编程</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+
+<table BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+  <tr>
+    <td WIDTH="221" HEIGHT="69"><a HREF="../../../../www_lpzx_edu_default.html"><img SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></a></td>
+    <td WIDTH="484" HEIGHT="69"><p ALIGN="center"><A
+    href="netschool/index.htm" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/netschool/wlxy.jpg" BORDER="0"
+    WIDTH="468" HEIGHT="60"></A><br>
+    中文十大网站之一，广告效果极佳，欢迎在此<a href="bill/index.htm">刊登广告</a>。 
+    </td>
+  </tr>
+</table>
+</center></div>
+  <center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>9903请你编程</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/%B5%D7%CE%C6.gif"><p align="left">　　大家好！《请你编程》又与你们见面了。本期《请你编程》的题目虽然存在一定难度，但如果仔细阅读题目内容，理解给出的程序要求，再结合范例，就能找到本题的解题思想。希望爱好编程的朋友们本着“重在参与”的精神投入进来，关心和支持《请你编程》。现在，请看本期福建读者叶毓睿的答案。<br>
+        　　<strong>9903请你编程解题思路：</strong><br>
+        　　将柱子的位置视为点，距离走廊左端、上端的长度即该点的横、纵坐标。各点连接可以构成许多不同的路径，我们只观察那些从上端能到达下端，且无回头方向的完整路径。每一条路径都有一条最长的线段，将所有路径的最长线段选取出来，其中最短的那条，就是能通过走廊最胖的胖子的直径。<br>
+        　　本程序采用递归算法：先把各点按纵坐标从小到大排序，以最上端的点为基准点。从基准点出发，寻找纵坐标比它大的点作为当前基准点。调用递归函数顺序连接比当前基准点纵坐标大的点，直至最下端。记录这条路径的最长线段，返回递归调用，再连接其他比当前基准点纵坐标大的点，一直到最下端的点成为基准点为止。将每次记录的最长线段与前次相比，取其短者参与下一次比较。最后得到的最短者即为所求。<br>
+        　　<strong>源程序：</strong><br>
+        　　＃include ″math.h″<br>
+        　　＃include ″stdio.h″<br>
+        　　＃define Points 200 /＊定义可能输入的最大点数＊/<br>
+        　　int A[Points][2] , X=0 , Y=1 , n , i ;<br>
+        　　double Min_MaxDis ;<br>
+        　　void Sort() /＊将所有点按纵坐标从小到大排序＊/<br>
+        　　{ int i , j , TempX , TempY ;<br>
+        　　for(i=0 ; i&lt;n ; i＋＋)<br>
+        　　for(j=i＋1 ; j&lt;n ; j＋＋)<br>
+        　　if(A[j][Y]&lt;A[i][Y])<br>
+        　　{ TempX=A[i][X] ; TempY=A[i][Y] ;<br>
+        　　A[i][X]=A[j][X] ; A[i][Y]=A[j][Y] ;<br>
+        　　A[j][X]=TempX ; A[j][Y]=TempY ;<br>
+        　　}}<br>
+        　　double Dis(int m , int n) /＊计算两个点的距离＊/<br>
+        　　{ unsigned Sum ;<br>
+        　　Sum=(A[m][X]－A[n][X])＊(A[m][X]－A[n][X])＋(A[m][Y]－A[n][Y])＊(A[m][Y]－A[n][Y]);<br>
+        　　return sqrt(Sum) ;}<br>
+        　　void NextDatumPoint(int i , double MaxDis1)<br>
+        　　/＊递归函数：其中i为当前基准点对应的数组下标，MaxDis1为从上端到下端的某条固定路径中的最长线段，而前面的全局变量Min_MaxDis则为所有最长线段中最短的一条。＊/<br>
+        　　{int ii ;<br>
+        　　double dis ;<br>
+        　　ii=i ;<br>
+        　　for(i=ii＋1 ; i&lt;n ; i＋＋)<br>
+        　　if(dis=Dis(i,ii),(A[i][Y]&gt;A[ii][Y])&amp;&amp;(dis&lt;100－A[ii][Y])&amp;&amp;(dis&lt;A[i][Y]))<br>
+        　　/＊基准点只连接纵坐标比它大的点，且这两点的距离比它们到上下端的距离还小＊/<br>
+        　　NextDatumPoint( i , (MaxDis1&gt;dis)?MaxDis1:dis ) ;<br>
+        　　/＊选取MaxDis1与dis中的较大者作为递归调用的实参变量＊/<br>
+        　　if(100－A[ii][Y]&gt;MaxDis1)<br>
+        　　MaxDis1=100－A[ii][Y] ;/＊若纵坐标最大的点到下端的距离更大,则赋给MaxDis1＊/<br>
+        　　if(MaxDis1&lt;Min_MaxDis)<br>
+        　　Min_MaxDis=MaxDis1 ;/＊依次比较所有的MaxDia1，将最小值赋给Min_MaxDis＊/<br>
+        　　}<br>
+        　　main ()<br>
+        　　{ void NextDatumPoint(int i , double MaxDis1) ;<br>
+        　　FILE ＊fp ;<br>
+        　　double MaxDis ;<br>
+        　　printf(″\n″) ;<br>
+        　　if( (fp=fopen(″Fatman.txt″,″rt″))==NULL )<br>
+        　　{ printf(″\nCan not open file fatman.txt ! ″) ; getch() ; exit(1); }<br>
+        　　fscanf(fp,″%d″,&amp;n) ;<br>
+        　　while(n!=0) /＊若n值不为0，则输入一组各点的横纵坐标，并显示判断结果＊/<br>
+        　　{for(i=0 ; i&lt;n ; i＋＋) fscanf(fp,″%d%d″,&amp;A[i][X],&amp;A[i][Y]) ;<br>
+        　　Sort() ;<br>
+        　　Min_MaxDis=100 ;<br>
+        　　for(i=0 ; i&lt;n ; i＋＋)<br>
+        　　{ MaxDis=A[i][Y] ;<br>
+        　　NextDatumPoint(i , MaxDis);}<br>
+                      　　printf(″\n\t能通过走廊最胖的胖子的直径是: %8.5f ″,Min_MaxDis) ;<br>
+                      　　fscanf(fp,″%d″,&amp;n) ;}<br>
+        　　fclose(fp) ;}<br>
+        　　<strong>9905请你编程题目：</strong><br>
+        　　有一家核电厂要存储一批核物质。存储的形式是在地上挖若干个坑，把核物质埋在坑里，而且这些坑正好排成一条直线。但是由于核物质放得太密集的话会发生核爆炸，经过计算，核电厂发现如果连续3个坑中放的都是核物质就会发生核爆炸。所以必须在某些坑中放入一些非核物质来把核物质隔离开。很明显，如果放置不当的话，有很多种组合会发生核爆炸。例如：把核物质记为1，非核物质记为0，在有4个坑的情况下，有3种组合1110，0111，1111会发生核爆炸。核电厂知道坑的数目，但不知道在这种情况下会有多少种组合会发生核爆炸。现在就请你编一个程序，帮他们计算一下。<br>
+        　　程序要求如下：<br>
+        　　1、输入数据从文本文件howmany.txt中读取。文件格式为：第一行为一个整数n，表示有n组输入数据。以下n行，每行包括一个整数i，表示有i个坑，i&lt;32。<br>
+        　　2、输出到屏幕上，输出为n行，每行包括两个整数i、k，表示如果有i个坑的话，就有k种组合会发生核爆炸。<br>
+        　　输入范例：<br>
+        　　2<br>
+        　　3<br>
+        　　4<br>
+        输出范例：<br>
+        　　3　 1<br>
+        　　4　 3<br>
+        　　来稿请寄磁盘稿或用E－mail投稿，请写明解题思路和源程序(包含详细的注解)，将来稿寄到电脑报编辑部的收信地址或E－mail邮箱，同时欢迎提供请你编程的题目。来稿截止日期：1999年5月15日<br>
+        　　<strong>本期获奖者名单：</strong><br>
+        林　岳(天津)孙铁钢(四川)张玉源(重庆)吴德涛(广西)石　麟(新疆)方　镜(安徽)向　军(浙江)冉晓容(天津)张　利(甘肃)张　静(重庆)<br>
+        　　每位获奖者将获得苦丁香公司提供的光盘一张。</p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月5日第13期</a></font> 
+        </td>
+      </tr></table>
+</center></div><script>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</script>
+<NOSCRIPT>
+
+<dd align="center"><a
+  href="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><img
+  src="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></a></dd>
+</noscript>
+
+
+</TABLE></CENTER></DIV></body></html>

@@ -1,0 +1,172 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 7</title>
+<style type="text/css">
+  .spanstyle { position:absolute; visibility:visible; top:-50px; font-size:12; color:#FF0000; font-weight:bold;}
+</style>
+<bgsound src="../../images/als.mid" loop="-1">
+</head>
+
+<body onLoad="makesnake()" background="../../images/bj.jpg" bgproperties="fixed">
+<script>
+var X, Y
+var step = 20
+var flag = 0
+var message = "欢迎来到老排工作室！"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    xpos[i]=-50}
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+    ypos[i]=-50}
+function handlerMM(e){
+    x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+    y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+    flag=1}
+function makesnake() {
+    if (flag==1 && document.all) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+        for (i=0; i<message.length-1; i++) {
+            var thisspan = eval("span"+(i)+".style")
+            thisspan.posLeft=xpos[i]
+            thisspan.posTop=ypos[i]     }   }
+    else if (flag==1 && document.layers) {
+        for (i=message.length-1; i>=1; i--) {
+            xpos[i]=xpos[i-1]+step
+            ypos[i]=ypos[i-1]       }
+        xpos[0]=x+step
+        ypos[0]=y
+            for (i=0; i<message.length-1; i++) {
+        var thisspan = eval("document.span"+i)
+        thisspan.left=xpos[i]
+  thisspan.top=ypos[i]}   }
+var timer=setTimeout("makesnake()",30)}
+</script>
+<script>
+for (i=0;i<=message.length-1;i++) {
+document.write("<span id='span"+i+"'class='spanstyle'>")
+    document.write(message[i])
+    document.write("</span>")}
+if (document.layers){
+    document.captureEvents(Event.MOUSEMOVE);}
+document.onmousemove = handlerMM;
+</script>
+
+<script language="JavaScript">
+var speed=100;
+function infoscroll(seed, looped)
+{  var msg="欢迎你来到老排工作室!        让我们一起推动中国网络进步！";
+  var putout = " ";
+  var c = 1;
+  if (seed > 100)
+  {  seed--;
+     var cmd="infoscroll(" + seed + "," + looped + ")";
+     timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 100 && seed > 0)
+  { for (c=0 ; c < seed ; c++)
+    {  putout+=" ";  }
+    putout+=msg.substring(0,100-seed);
+    seed--;
+    var cmd="infoscroll(" + seed + "," + looped + ")";
+    window.status=putout;
+    timerTwo=window.setTimeout(cmd,speed);}
+  else if (seed <= 0){
+    if (-seed < msg.length)
+    { putout+=msg.substring(-seed,msg.length);
+      seed--;
+      var cmd="infoscroll(" + seed + "," + looped + ")";
+      window.status=putout;
+      timerTwo=window.setTimeout(cmd,speed);}
+    else
+    { window.status=" ";
+      looped += 1;
+      var cmd = "infoscroll(100," + looped + ")";
+      timerTwo=window.setTimeout(cmd,speed);}}}
+infoscroll(100,1)
+</SCRIPT>
+
+<p><a href="4.htm"><img border="0" src="../a/images/a11.gif" width="96" height="36"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<img border="0" src="images/b23.jpg" width="130" height="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font size="5"><b><a href="../../index.htm"><img border="0" src="../a/images/a16.gif" width="100" height="45"></a>&nbsp;&nbsp;&nbsp; 
+</b></font><a href="6.htm"><img border="0" src="../a/images/a01`.gif" width="90" height="36"></a></p>
+<table border="0" width="683" height="37">  
+  <tr>  
+    <td width="228" height="37"><applet code="fphover.class" codebase="./" width="224" height="24">  
+          <param name="textcolor" value="#FFFFFF">  
+          <param name="effect" value="glow">  
+          <param name="color" value="#000080">
+          <param name="hovercolor" value="#0000FF">
+          <param name="text" value="扎染">  
+          <param name="url" valuetype="ref" value="4.htm">  
+        </applet>  
+    </td>  
+    <td width="228" height="37"><applet code="fphover.class" codebase="./" width="225" height="24">  
+          <param name="color" value="#000080">  
+          <param name="hovercolor" value="#0000FF">  
+          <param name="textcolor" value="#FFFFFF">  
+          <param name="effect" value="fill"> 
+          <param name="text" value="蝴蝶泉"> 
+          <param name="url" valuetype="ref" value="5.htm"> 
+        </applet> 
+    </td> 
+    <td width="227" height="37"><applet code="fphover.class" codebase="./" width="209" height="24"> 
+          <param name="color" value="#000080"> 
+          <param name="hovercolor" value="#0000FF"> 
+          <param name="textcolor" value="#FFFFFF"> 
+          <param name="effect" value="glow"> 
+          <param name="text" value="游后记"> 
+          <param name="url" valuetype="ref" value="6.htm"> 
+        </applet> 
+    </td> 
+  </tr> 
+</table> 
+
+<p>&nbsp;&nbsp; <font color="#0000FF"><i>“大理三月好风光，蝴蝶泉边好梳妆……”告别了白族老阿爹，我们直奔蝴蝶泉，一群群艳丽的彩蝶载着白族少女美妙的歌声，如丝般拨动着我的鼓膜。</i></font></p>         
+         
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="497">        
+  <tr>        
+    <td width="33%" height="253"><a href="../c/dl12.htm"><img border="0" src="images/b24.jpg" width="300" height="251"></a></td>       
+    <td width="33%" height="253"></td>       
+    <td width="34%" height="253"><a href="../c/dl13.htm"><img border="0" src="images/b25.jpg" width="300" height="200"></a></td>       
+  </tr>       
+  <tr>       
+    <td width="100%" colspan="3" height="34">&nbsp;&nbsp;&nbsp;         
+      蝴蝶泉边山石密布，有一眼清泉漱石而出，汇集成潭，四周碧翠交加，花繁草茂，空气湿润，花草芬芳。泉边一棵巨大的合欢树，开花似蝶，喷吐异香。</td>        
+  </tr>        
+  <tr>        
+    <td width="33%" height="210"><a href="../c/dl14.htm"><img border="0" src="images/b26.jpg" width="300" height="200">       
+      </a>       
+      <p>&nbsp;&nbsp;&nbsp; <font color="#0000FF"><i>这里是蝴蝶馆前三潭边，相信在明年的这个时候，在北京大学        
+      未名湖 畔你会看见我们的身影。</i></font></td>       
+    <td width="67%" colspan="2" height="210"><font face="楷体_GB2312" size="4" color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;    
+      蝴蝶泉边蝴蝶树，蝴蝶飞来千万数。</font>      
+      <p><font face="楷体_GB2312" size="4" color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;    
+      首尾相衔如串珠，四月十五年一度。</font></p>      
+      <p><font face="楷体_GB2312" size="4" color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;    
+      我来时已届中秋，蝴蝶不来空盼顾。</font></p>      
+      <p><font face="楷体_GB2312" size="4" color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;    
+      清茶酹祝蝴蝶魄，阿雯阿霞春永驻。</font></p>      
+      <p><font face="楷体_GB2312" size="4" color="#FF00FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+      &nbsp;        
+      ————郭沫若</font></td>       
+  </tr>       
+</table>       
+       
+<p><img border="0" src="../../images/124.gif" width="645" height="16"></p>  
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+老排工作室倾力制作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+<a href="mailto:lr9528@21cn.com"><img border="0" src="../../images/mail.gif">&nbsp;&nbsp;   
+联系我们</a></p>  
+</body>      
+      
+</html>      

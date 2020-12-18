@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VB读取和控制Windows的中文输入法</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>40 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VB读取和控制Windows的中文输入法</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VB读取和控制Windows的中文输入法 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在Windows中我们可以用“Ctrl＋Shift”键来调入或切换中文输入法，但是这样做每次都是使位于输入法列表顶端的那个输入法首先被调用。通常我们都要连续按好几次“Ctrl＋Shift”才能将习惯的输入法调出。我编制了一段小程序，通过它可以把任意一个输入法放在输入法列表的顶端。<br>
+　　它的原理是：使用LoadKeyboardLayout函数可以改变输入法的顺序，只要在第一个参数中传递目标输入法的KeyboardlayoutName，第二个参数用KLF_REORDER就可以了。<br>
+　　例如，aa = LoadKeyboardLayout(″00000409″, KLF_REORDER) 使英文变成第一。那怎样获得KeyboardlayoutName呢？因为使用GetKeyboardLayoutname可以返回当前输入法的KeyboardlayoutName，所以我们可以先用GetKeyboardLayoutList 函数来取得所有输入法，再用activateKeyboardlayout()函数设置当前输入法，最后就可以得到它的KeyboardlayoutName了。具体步骤如下：<br>
+　　打开VB后选择标准的EXE文档，在Form1上添加一个Combobox和一个command控件，输入以下程序。<br>
+　　′以下的API函数用于输入法操作 <br>
+　　Private Declare Function GetKeyboardLayoutList Lib ″user32″ _<br>
+　　(ByVal nBuff As Long, lpList As Long) As Long<br>
+　　Private Declare Function ImmGetDescription Lib ″imm32.dll″ _<br>
+　　Alias ″ImmGetDescriptionA″ (ByVal hkl As Long, _<br>
+　　ByVal lpsz As String, ByVal uBufLen As Long) As Long<br>
+　　Private Declare Function ImmIsIME Lib ″imm32.dll″ (ByVal hkl As Long) As Long<br>
+　　Private Declare Function ActivateKeyboardLayout Lib ″user32″ _<br>
+　　(ByVal hkl As Long, ByVal flags As Long) As Long<br>
+　　Private Declare Function GetKeyboardLayout Lib ″user32″ (ByVal dwLayout As Long)As Long<br>
+　　Private Declare Function GetKeyboardLayoutName Lib ″user32″ Alias _<br>
+　　″GetKeyboardLayoutNameA″ (ByVal pwszKLID As String) As Long<br>
+　　Private Declare Function LoadKeyboardLayout Lib ″user32″ Alias ″LoadKeyboardLayoutA″ _<br>
+　　(ByVal pwszKLID As String, ByVal flags As Long) As Long<br>
+　　Const KLF_REORDER = ＆H8<br>
+　　Private NoOfKBDLayout As Long, i As Long, j As Long<br>
+　　Private hKB(24) As Long, BuffLen As Long<br>
+　　Private Buff As String<br>
+　　Private RetStr As String<br>
+　　Private RetCount As Long<br>
+　　Private kln As String<br>
+　　Private Sub Command1_Click()<br>
+　　If Combo1.ListIndex = －1 Then′如果用户尚未选择输入法，显示出错信息<br>
+　　MsgBox ″请先选择一个输入法″<br>
+　　Exit Sub<br>
+　　End If<br>
+　　′改变输入法顺序<br>
+　　kln = String(8, 0)<br>
+　　ActivateKeyboardLayout hKB(Combo1.ListIndex), 0<br>
+　　res = GetKeyboardLayoutName(kln)<br>
+　　res = LoadKeyboardLayout(kln, KLF_REORDER)<br>
+　　ActivateKeyboardLayout hCurKBDLayout, 0<br>
+　　End Sub<br>
+　　Private Sub Form_Load()<br>
+　　Buff = String(255, 0)<br>
+　　hCurKBDLayout = GetKeyboardLayout(0) ′取得目前的输入法<br>
+　　NoOfKBDLayout = GetKeyboardLayoutList(25, hKB(0)) ′取得所有输入法<br>
+　　′ReDim layoutlist(NoOfKBDLayout) As String<br>
+　　For i = 1 To NoOfKBDLayout<br>
+　　If ImmIsIME(hKB(i － 1)) = 1 Then ′中文输入法<br>
+　　BuffLen = 255<br>
+　　RetCount = ImmGetDescription(hKB(i － 1), Buff, BuffLen)<br>
+　　RetStr = Left(Buff, RetCount)<br>
+　　Combo1.AddItem RetStr<br>
+　　Else<br>
+　　RetStr = ″English (American)″ ′英文输入法<br>
+　　Combo1.AddItem RetStr<br>
+　　End If<br>
+　　Next<br>
+　　ActivateKeyboardLayout hCurKBDLayout, 0 ′恢复原来的输入法<br>
+　　End Sub<br>
+　　运行后，在combobox中选择目标输入法，按下command即可。<br>
+<b>(福建　潘晓臻)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/40/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99401302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

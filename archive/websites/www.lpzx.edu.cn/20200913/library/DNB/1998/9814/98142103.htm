@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">TE-2008网卡安装心得<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　我所使用的网卡(也称网络适配器)为TE－2008 
+        PnP ADAPTER。它可通过软件设置为PnP、自动检测主板是否支持PnP和跳线三种方式，在非PnP模式下可软件设置I/O和IRQ地址。两台微机分别为奔腾MMX 
+        166(32M内存)和486DX－100(8M内存)。<br>
+        　　在奔腾微机上使用PnP模式安装网卡一切正常。由于486微机的主板不支持PnP，于是就将网卡设置成跳线模式进行安装。在Windows95的“控制面板”中选“添加新硬件”，从列表中选“网络适配器”，再选择“从磁盘安装”，从列出的网卡种类表中选“UMC 
+        UM9008 Jumpless Adapter”。安装正常结束并自动设置IRQ为10，I/O地址为2C0－2DF。<br>
+        　　安装完成后，设置好网络属性重新启动Windows95，这时出现一对话框，报告网络适配器无法正常工作。查看网络适配器属性，并没有发现和其它设备冲突；查看驱动程序选项，却报告该硬件不存在或没有安装该设备驱动程序。删除网络适配器后重新安装，故障依旧。阅读驱动盘上的README文件后发现问题所在，原来是没有在驱动程序选项中将该网卡的IRQ和I/O地址从缺省值改为Windows95所设置的10和2C0－2DF。用随盘设置软件DIAG9008EXE修改后，再次启动系统没有再报错。<br>
+        　　此时，进入“网络邻居”，却无法发现奔腾机，而另一台计算机也无法发现486微机，都只能看到自己的计算机。检查各项网络设置和网络的各个连接处，均没有发现问题；再次查看网卡驱动盘上的内容，又发现一个HELPEXE文件，其中说到如果各项设置没有发现错误仍无法联网，请用PG9008EXE程序检查网卡的结点地址(Node 
+        Address)是否相同，两个结点地址相同的网卡不能共处在同一个网络中。于是检查结点地址，结果并不相同。<br>
+        　　此时似已走投无路，无奈中只好再次进入驱动盘上的设置程序，发现其中网卡的接口类型设置一项为“UTP”，而我使用的是“BNC”接口的同轴电缆，正确设置后再次进入Windows95，双击“网上邻居”终于可以发现对方的计算机了。<br>
+        　　这次安装过程虽然成功了，但也一波三折。希望广大的电脑爱好者们在安装任何硬件时，都要认真阅读说明书和随盘的说明文件，并仔细检查各项设置是否正确，这样可以少走弯路。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(湖北　梁昊)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月13日第14期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

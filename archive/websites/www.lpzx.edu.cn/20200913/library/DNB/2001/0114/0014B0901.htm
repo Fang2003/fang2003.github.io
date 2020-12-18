@@ -1,0 +1,179 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>从一个C++程序谈起——引用、堆栈参数传递及其它</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | 
+      <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="457" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="139" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第14期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{从一个C++程序谈起——引用、堆栈参数传递及其它}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ C++的参数传递、引用的使用及内存的分配是初学者比较头疼的，下面我们就通过一个实例来讲解它们的使用方法，通过该实例相信读者会对这些概念有一个清晰的认识。程序代码如下：<br>
+              #include &quot;stdafx.h&quot;<br>
+              #include &quot;iostream.h&quot;<br>
+              #include &quot;string.h&quot;<br>
+              class Person<br>
+              private<br>
+              char m＿pName<br>
+              public<br>
+              Personchar <br>
+              Person<br>
+              char getNamePerson<br>
+              <br>
+              PersonPersonchars<br>
+              int l=strlens+1<br>
+              m＿pName= new charl<br>
+              strcpym＿pNames<br>
+              <br>
+              PersonPerson<br>
+              Person p<br>
+              p=this<br>
+              delete  m＿pName<br>
+              <br>
+              char PersongetNamePerson person<br>
+              return person.m＿pName<br>
+              <br>
+              int mainint argc char argv<br>
+              Person me&quot;John&quot;<br>
+              Person p1=&amp;me<br>
+              Person you&quot;Tom&quot;<br>
+              Person p2=&amp;you<br>
+              cout&lt;&lt;me.getNameyou&lt;&lt;&quot;\n&quot;<br>
+              return 0<br>
+              以上程序看上去很简单，也没什么问题。但是，实际上运行该程序，系统会报如下错误：Debug Assertion Failed ＿ASSERTE＿BLOCK＿TYPE＿IS＿VALIDpHead-&gt;nBlockUse。原来是程序在调用dbgHeap.c时出了问题。为了弄清问题的根源我们给程序加入一些调试行，修改如下：<br>
+              PersonPerson<br>
+              Person p<br>
+              p=this；<br>
+              delete  m＿pName<br>
+              <br>
+              char PersongetNamePerson person<br>
+              Person p<br>
+              char ch<br>
+              ch=person.m＿pName<br>
+              p=&amp;person<br>
+              return person.m＿pName<br>
+              <br>
+              int mainint argc char argv<br>
+              <br>
+              Person me&quot;John&quot;<br>
+              Person p1=&amp;me<br>
+              Person you&quot;Tom&quot;<br>
+              Person p2=&amp;you<br>
+              cout&lt;&lt;me.getNameyou&lt;&lt;&quot;\n&quot;<br>
+              return 0<br>
+              <br>
+              在调试状态下单步运行该程序，观察各指针的值，在我的机器上的运行结果如下<br>
+              me 对象地址： 0x0012ff70 m＿pName地址：0x009b0050<br>
+              you 对象地址： 0x0012ff68 m＿pName地址： 0x009b1ff0<br>
+              参数person 对象地址： 0x0012ff0c m＿pName地址： 0x009b1ff0<br>
+              由于在C++中参数传递是“值传递”的，在调用GetNamePerson person 函数时，系统给形参分配存储单元。问题在于，这种分配内存的方法是在堆栈上分配的，而堆栈是后进先出的。所以当程序退出该函数时，系统会收回为形参分配的内存，于是调用Person的析构函数，释放为对象you的名字“Tom”分配的内存，而此时you并未使用完，所以当程序运行到最后，调用对象you调用其析构函数真正要释放为you分配的内存时，由于内存已被错误地释放，于是就会出现“Debug 
+              Assertion Failed”的错误。<br>
+              改正的方法其实也很简单，用引用作形参即可。此时方法的声明改为：<br>
+              char getNamename&amp;<br>
+              在实现中相应地改为：<br>
+              char PersongetNamePerson&amp; person<br>
+              其他都不用改变就一切OK了。这就是使用引用的好处。此时的内存分配情况如下图(^14020502a^)所示：<br>
+              引用相当于为变量起了一个别名，其作用和指针相同，但不像指针那样繁琐和难于理解。通过使用引用来传递参数，形参和实参都指向一块内存，由于没有在堆栈上分配新的内存，程序从getNamename&amp;返回时不会调用析构函数。对象me和you是分配在堆栈上的，在程序运行出其作用域后自行删除。此处即是主程序结束时。而存放Person的名字的内存是在构造函数中调用new分配在堆上的，分配在堆上的内存不会自动地释放，要调用delete 
+              显式释放。此处是在析构函数中释放的。所以修改后的程序在程序运行到最后调用类的析构函数时会正确地释放内存。<br>
+              你可以在调试状态下单步运行以上程序，认真观察内存地址的值和程序的流向，相信你会对内存分配，参数传递，引用等概念有一个更清晰的认识。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

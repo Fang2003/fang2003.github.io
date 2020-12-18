@@ -1,0 +1,57 @@
+<html>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">逻辑D盘“丢失”的恢复<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　故障现象：一台大众586微机，硬盘为1.2G，分为C、D两逻辑盘，C盘400MB、D盘800MB。开机后硬盘无法引导，出现死机现象。用干净的软盘启动微机，转到C盘列目录文件都正常。转到D盘时，系统提示：“Invalid 
+        Drive Specification”。<br>
+        　　故障分析与处理：从A盘启动成功，转C盘列目录正常。说明硬件和CMOS系统都没有问题，很可能是病毒造成死机和D盘“丢失”。在A驱插入KV300杀毒盘，进入KV300主界面，按F6键，查看0面0柱1扇区上第1代码为：E80000BF 
+        40008EDF 836DD306 8B45B3B1……等，第2、3代码正常。当查杀C盘显示：“Found 
+        NATAS／4744／GHOST－2(幽灵)Virus!in Boot Sector.Killed!OK!”说明第1代码已被NATAS／4744／GHOST－2(幽灵)病毒代码取代。病毒消除后，再按F6键，查看0面0柱1扇区第1代码已恢复正常。按ESC键退出，从硬盘启动正常，列C盘目录，原文件都存在。清除病毒使C盘恢复正常启动，解决了死机问题，但D盘还是没找到，转D盘时系统仍提示：“Invalid 
+        Drive Specification”。<br>
+        　　可能是该“幽灵”病毒发作已把D盘信息破坏了，清除了病毒也无法恢复D盘数据。<br>
+        　　用干净的DOS盘启动微机，用FDISK／STATUS查看硬盘分区状态，没显示逻辑驱动器信息。<br>
+        　　由于显示的分区信息充分说明逻辑D盘已经“丢失”，但扩展DOS分区还在。这时进入KV300，按F6键，按翻页键PaDn从第56扇区找到好的分区信息，按F9键将其恢复到0面0柱1扇区上。从C盘启动正常，当杀D盘都没有病毒，而且能显示D盘的文件了。按ESC键，退回DOS转C、D盘都正常，D盘目录也是原来的目录文件，说明D盘已经恢复正常了。<br>
+        　　除此方法能恢复被病毒破坏的逻辑D盘以外，以下几种方法在不破坏C盘的原有系统文件和数据的情况下，也能恢复被病毒破坏和人为误操作“丢失”的逻辑D盘。<br>
+        　　1.用DOS的FDISK命令，先删除原有扩展DOS分区，再重建扩展DOS分区，重建D盘，格式化后就可以恢复D盘。但这种方法虽然恢复了D盘，却无法恢复原有数据和文件。最好用以下方法，既能恢复D盘，又能保留D盘原有数据和文件。<br>
+        　　2.用KV300／K盘份硬盘分区信息在A盘，清除病毒，再进入KV300，按F10功能键，重建硬盘分区表，同样能恢复D盘以及盘上的文件和数据。<br>
+        　　3.用KV300／B和KV300／HDPT.DAT从相同的微机上拷贝好的分区信息恢复。但D盘上的文件和数据要有所改变。最好是把原微机上备份的分区信息恢复上去，才能真正恢复D盘原有的数据和文件。<br>
+        　　还有一种情况，就是人为误操作删除了逻辑D盘。在这种情况下最好是用上述第1种方法处理。<br>
+        (河北　马占寅)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月18日第03期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

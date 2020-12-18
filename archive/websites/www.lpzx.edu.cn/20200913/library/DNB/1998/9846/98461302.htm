@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VB编程问与答<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp;&nbsp;1．如何让文本框只接受数字？<br>
+        &nbsp;&nbsp;&nbsp; 答：使用如下代码，在文本框的按键事件中加入：<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubText1_KeyPress(KeyAsciiAsInteger)<br>
+        &nbsp;&nbsp;&nbsp; ′KeyAscii32以下是一些控制键。<br>
+        &nbsp;&nbsp;&nbsp; If KeyAscii&amp;gt;=33Then<br>
+        &nbsp;&nbsp;&nbsp; If KeyAscii&amp;lt;=vbKey9AndKeyAscii&amp;gt;=vbKey0Then<br>
+        &nbsp;&nbsp;&nbsp; Else<br>
+        &nbsp;&nbsp;&nbsp; ′把KeyAscii设为0就是取消输入。<br>
+        &nbsp;&nbsp;&nbsp; KeyAscii=0<br>
+        &nbsp;&nbsp;&nbsp; MsgBox″不要输入数字ｅ<br>
+        &nbsp;&nbsp;&nbsp; EndIf<br>
+        &nbsp;&nbsp;&nbsp; EndIf<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; 注意：KeyAscii键值与KeyCode相同，我们可以查看KeyCode值，不过有些Keycode键值必须在KeyDown和KeyUp中才有效，在KeyPress的KeyAscii中没用。利用KeyAscii=0的方式在KeyPress中有用，但在KeyDown中让KeyCode=0就不行了。<br>
+        &nbsp;&nbsp;&nbsp; <strong>2．VB中的进制转换是怎样的？</strong><br>
+        答：用函数Oct()将十进制位数转换为八进制，用Hex()将十进制位数转换为十六进制，不过值得注意的是转换后数字型变为字符型。如果是一个变量我们可以用如下代码完成十进制向其他进制转换的目的。<br>
+        &nbsp;&nbsp;&nbsp; dim ANumaslong<br>
+        &nbsp;&nbsp;&nbsp; ANum=＆O10′＆O是八进制的表示符号ANum自行转换为8。<br>
+        &nbsp;&nbsp;&nbsp; ANum=＆HA′＆H是十六进制的表示符号ANum自行转换为10。<br>
+        &nbsp;&nbsp;&nbsp; 如果我们有一个字符变量Astring为八进制的或十六进制的，用ANum=″＆O″＋Astring和ANum=″＆H″＋Astring能将它转换为十进制。<br>
+        &nbsp;&nbsp;&nbsp; VB中我没有找到二进制的转换函数，用如下代码可以实现十进制到二进制的转换。<br>
+        &nbsp;&nbsp;&nbsp; OptionExplicit<br>
+        &nbsp;&nbsp;&nbsp; Private Function TenturnTwo(ByValvarNumAsLong)&nbsp;&nbsp; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Dim returnStringAsString,ModNumAsInteger<br>
+        &nbsp;&nbsp;&nbsp; Do WhilevarNum&amp;gt;0<br>
+        &nbsp;&nbsp;&nbsp; ModNum=varNumMod2<br>
+        &nbsp;&nbsp;&nbsp; varNum=varNum\2<br>
+        &nbsp;&nbsp;&nbsp; returnString=Trim(Str(ModNum))＋returnString<br>
+        &nbsp;&nbsp;&nbsp; Loop<br>
+        &nbsp;&nbsp;&nbsp; TenturnTwo=returnString<br>
+        &nbsp;&nbsp;&nbsp; End Function<br>
+        &nbsp;&nbsp;&nbsp; Private Function TwoturnTen(ByValvarStringAsString)<br>
+        &nbsp;&nbsp;&nbsp; DimSLenAsLong,I As Long,returnNumAsLong<br>
+        &nbsp;&nbsp;&nbsp; SLen=Len(varString)<br>
+        &nbsp;&nbsp;&nbsp; ForI=0ToSLen－1<br>
+        &nbsp;&nbsp;&nbsp; returnNum=returnNum＋Val(Mid(varString,I＋1,1))＊(2^(SLen－I－1))<br>
+        &nbsp;&nbsp;&nbsp; Next<br>
+        &nbsp;&nbsp;&nbsp; TwoturnTen=returnNum<br>
+        &nbsp;&nbsp;&nbsp; End Function<br>
+        &nbsp; <strong>&nbsp; 3．在VB50下，如何用程序改变中文与英文的输入方式?</strong><br>
+        &nbsp;&nbsp;&nbsp; 答：VB50在可以输入文字的地方(如TextBox,ListBox,ComBox等)有一个输入法切换属性IMEMode。我们可以先用ImeStatus函数来检测当前的输入状态，并用IMEMode来控制其输入状态。<br>
+        &nbsp;&nbsp;&nbsp; 下面是IMEMode的属性值。<br>
+        &nbsp;&nbsp;&nbsp; Text1IMEMode=0(预定值)<br>
+        &nbsp;&nbsp;&nbsp; Text1IMEMode=1(切换为中文输入)<br>
+        &nbsp;&nbsp;&nbsp; Text1IMEMode=2(切换为英文输入)<br>
+        &nbsp;&nbsp;&nbsp; Text1IMEMode=3(关闭中文输入的功能，也就是只能做英文输入。)<strong>(陕西 
+        &nbsp; 李惠萍)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

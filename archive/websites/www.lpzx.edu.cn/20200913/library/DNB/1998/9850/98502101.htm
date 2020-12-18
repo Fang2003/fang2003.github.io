@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用网桥为Novell网提速<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　笔者曾为一所学校建立了一个教学网络系统，具体配置为：1服务器采用台湾宏的Acer 
+        Altos 300、32MB内存、4.3GB硬盘、Pentium 200MHz CPU；2工作站共有90台，其中一台为有盘站，带一个1.44MB软驱和一个24速光驱，其余均为无盘工作站；36个16口Hub；4软件采用Novell 
+        Netware 3.12网络操作系统。整个系统采用星型总线拓扑结构，即主干线用细缆，局部用双绞线，如图1所示。<br>
+        　　该系统运行几天后发现，若90台微机同时上网工作的话，速度较慢，尤其是运行需反复读盘、存盘的软件时速度更慢。根据机房管理人员的要求，我们将网络做了改进，让文件服务器充当内部网桥，将90台工作站分成两个网段，分别连在服务器的两个网卡上，网络最终布局如图2所示。通过近一个星期的运行，发现工作站上网速度及复杂软件的运行速度都有所提高。笔者用自编的一个程序测试该系统，发现改进后的速度比改进前提高了近47％，完全能满足该学校网络教学的需要。具体改进步骤如下：<br>
+        　　1.在服务器中插入一块网卡，运行随卡附带的诊断配置程序。该学校服务器网卡均为AE2000 
+        PnP，诊断程序为DIAG9008.EXE，在DOS状态下运行该程序，将此网卡的I/O 
+        Port设为320H，Int设置为4H，根据程序提示，保存配置退回到DOS状态并关机。<br>
+        　　2.将另外一块同型号的网卡(也可用不同型号的网卡，但其I/O Port和Int的默认值不能为320H和4H，否则，这块网卡也得用相应的诊断配置程序重新进行配置，避免与第一块网卡冲突)，也插在服务器的扩充槽中，启动服务器并进入控制台状态。<br>
+        　　3.执行Load install命令，编辑Autoexec.ncf文件。该文件应包含如下内容：<br>
+        　　File Server name STDN<br>
+        　　IPX Internal number 19980914<br>
+        　　Load ne2000 I/O Port=300 Int=3<br>
+        　　frame=ETHERNET_802.3 name=First<br>
+        　　Load ne2000 I/O Port=320 Int=4<br>
+        　　frame=ETHERNET_802.3 name=Second<br>
+        　　bind IPX First net=123<br>
+        　　bind IPX Second net=456<br>
+        　　Load monitor<br>
+        　　4.在原来网络的基础上，去掉一根细缆线，添加两个端接器，将90台工作站分为两个网段。以服务器的两个网卡引出两根双绞线，分别连入上述两个网段中。<br>
+        　　5.重新启动服务器后，整个网络就按改进后的新模式来运行。<br>
+        　　注：①修改网卡配置时，网卡所在微机不能上网，亦即只能在未调网卡驱动程序的情况下才能修改配置。<br>
+        　　②如果走线方便的话，服务器可以通过带BNC口的网卡直接连在细缆上，效果会更好。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　（河南　郭少友）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月28日第50期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NEO&amp;middot；GEO机皇模拟器大解惑<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　常去街机游戏室玩的朋友一定都听说过《拳皇》（KOF）、《侍魂》、《战国传承》、《四国战机》、《合金弹头》等SNK公司的一系列经典街机游戏。想当年正是这些“该死”的游戏，掏空我口袋中的零用钱，去换那些“一块钱四个”的代币，记得当初曾萌发“把街机搬回家”的念头。但现在我可以高兴地告诉大家：不花一分钱，不用去游戏室，只要有一台电脑，你就可以把整个街机游戏室搬回家，这一切都归功于新一代“革命性”的NEO&amp;middot;GEO街皇模拟器。<br>
+        　　1998年以前用模拟器跨平台模拟其它机种的游戏着实没什么意思，效果差，无声音，模拟的尽是一些无聊的简单小游戏。现在随着硬件水平的发展以及一些专业人士孜孜不倦地努力，模拟器业界发生了日新月异的变化，模拟越来越多的经典的其它机种的游戏成为了可能。由于本人对街机游戏比较感兴趣，故想详细谈一谈以模拟SNK公司的游戏为主的NEO&amp;middot;GEO机皇模拟器，至于模拟以《三国志II》，《街霸》为代表的CAPCOM公司的Callus0.42介绍的媒体较多，故不再多说。<br>
+        　　NEO&amp;middot;GEO街皇模拟器是由Neorage小组编写，目前最高版为0.002，主要组成是Neorage.exe的主文件和NEOGEO最新金手指BIOSKs－ng005。目前可以支持不下60种Rom（它们主要由Romlist小组提供），模拟效果绝对原汁原味的街机味道，甚至超过专门移植于PC机上的游戏(如《侍魂》)，速度极流畅，可以支持双打和游戏手柄，特别是可以支持Winzip压缩过的Rom，唯一美中不足的是目前仍不支持声音。这一切已足够了，毕竟这是唯一完美模拟SNK街机游戏的街机模拟器啊！不久Neorage小组也将推出支持声音的最新版，让我们拭目以待吧。这里我们应该感谢Neorage小组和Romlist小组，正是他们圆了我们大家“把街机搬回家”的梦。<br>
+        　　NEO&amp;middot;GEO街皇模拟器运行环境：<br>
+        　　最少配置奔腾100，16M内存<br>
+        　　最佳配置奔腾166，32M内存……<br>
+        　　但是有时候仍不够，因有些游戏大作需要很多内存，如《KOF95》要64M,《Pulstar》要72M内存。如果你有128M内存当然无问题，当内存少于GAME所需的内存，就会出OutOfMemory!怎么，吓着你了吧？没关系，我将告诉你两个用虚拟内存来满足内存要求的办法：1.在Windows95下的DOS窗口：A.右击Windows95桌面，新建一个快捷方式，在“命令行&amp;quot;中填入“Command&amp;quot;,建成“MS－DOS方式&amp;quot;B.右击“MS－DOS方式&amp;quot;选择“属性&amp;quot;,再寻内存&amp;quot;一项，在“MS－DOS保护模式(DPMI)内存&amp;quot;中填入“65535&amp;quot;。WIN95的“MS－DOS方式&amp;quot;只能虚拟64M，故有时仍不够。<br>
+        2.在“纯DOS&amp;quot;下：<br>
+        　　在执行Neorage之前先执行“Cwsdmpi.exe&amp;quot;,然后再运行Neorage,每次都要先执行“Cwsdpmi.exe&amp;quot;如果所在分区没有空间，请用“Cwsdpmi－S文件名&amp;quot;。<br>
+        　　关于显示卡的问题：由于NEO&amp;middot;GEO街皇模拟器需要VESA3.0以上的非标准显示模式，许多显示卡（尤其S3的显示卡）并不提供此显示模式，故需安装SDD6.X（目前最高版6.53）提供此显示模式。<br>
+        　　因此我建议最好在“纯DOS&amp;quot;下运行模拟器，运行方法：CwsdpmiNeorage〖目录名〗〖项参数〗例如：neoragecyberlipNeorageKof97－v－s（你也可以方便地建立一个批处理文件，那并不难吧？）3.重要参数：－s－Scanlines(Vesa)隔行扫描模式640X480,需要VESA的支持，请先安装SDD6.X－modex－Modex320X240如果你的显示卡(S3765)用了SDD,用－S或不加参数还是显示不正常，请用此模式，速度较慢－vga－VGAresoloution如果用－MODEX还是不行，请用这个300X200,但画面……还是换显示卡吧!－j－Joystick使用4键Gamepad,无需校正回车，你等着Loading吧，不久熟悉的SNK开机画面就会出现，剩下的你就大展拳脚吧！<br>
+        4.游戏热键：<br>
+        ‘1'－开始1号游戏者<br>
+        ‘3'－开始2号游戏者<br>
+        ‘2'－选择1号游戏者（当GAMEOVER时，再按一下1号游戏者可继续玩）‘4'－选择2号游戏者（当GAMEOVER时，再按一下2号游戏者可继续玩）‘TAB'－进入设置键盘按键菜单，可以设置自己满意的操纵键。<br>
+        ‘PGD'－滚动屏幕画面<br>
+        ‘PGUP'－滚动屏幕画面<br>
+        ‘F10'－满屏功能选择<br>
+        ‘F8'－保存游戏画面<br>
+        ‘SPACE'－Torearrangethewholepalette.‘ESC'－退出模拟器‘＋'－Increaseframeskip‘－'－Decreaseframeskip<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期32版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　贵州读者熊旭升问：我单位有一台COMPAQ 
+        Deskpro 2000原装机，安装了随机自带的Windows 95系统，后又安装了DOS 6.22操作系统。由于在DOS 
+        6.22系统下使用了ScanDisk磁盘扫描程序，致使Windows 95系统遭到破坏，不能启动。重新安装后，仍然不能正常启动Windows 
+        95（需多次启动后才有可能成功启动一次）。后检查硬盘，发现有819200KB的坏扇区，于是用Format命令格式化硬盘，重新安装DOS 
+        6.22和Windows3.2系统，再次用ScanDisk扫描磁盘，屏幕显示：“不能完成磁盘扫描”，坏扇区不能修复。有人向我建议使用低级格式化程序格式化此硬盘，但是我认为低级格式化对硬盘不利，而且对于像我这些非专业人员来说，也不知道如何操作。我想请问的是，有没有不用低级格式化程序就能修复坏扇区的方法，怎样修复?<br>
+        　　答：此问题缘于在DOS 6.22下执行了ScanDisk程序而使Windows 95系统遭到破坏，同时产生了许多的坏扇区。你可这样解决这个问题：<br>
+        　　1.首先使用《Norton磁盘医生》软件中的NDD检查你的硬盘，NDD可以很好地修复这些坏扇区。<br>
+        　　2.如果此方法还是不行的话，可考虑使用低级格式化程序。笔者认为，DM 
+        5.01是目前最好的低级格式化程序，不需要太多的知识与操作就可完成。其方法是：<br>
+        　　&middot;先制作一张DOS 6.22系统盘，其中包括系统文件、Sys.com、Fdisk.exe、Format.exe以及DM 
+        5.01所有文件。<br>
+        　　&middot;再使用DOS 6.22系统盘启动，然后执行DM命令。<br>
+        　　&middot;在所出现的菜单上选择相应的盘符即可。<br>
+        　　&middot;在低级格式化完成后，DM会要求你在软驱中插入一张系统盘，然后进行分区、高级格式化等操作。<br>
+        　　另外，你所提到的问题也应该引起其他读者的重视，在Windows 95下最好不要运行一些老的磁盘管理软件，建议使用新版本的磁盘管理程序，如Norton 
+        95等，否则可能会引起整个系统的崩溃。<br>
+        &nbsp;&nbsp;&nbsp; 山东读者张优玮问：我处有一台IBM 5X86电脑，8MB内存。在安装Windows 
+        95过程中，屡次重新安装，屡次失败，在不同的进度（有时到了“复制文件11％”）时都会退回到DOS环境下，并显示如下信息：<br>
+        　　Standard Mode：Bad Fault in MS－DOS Extender<br>
+        　　Fault:000D Stack Dump 0000 0000 0000<br>
+        　　Raw fault frame:EC=0000<br>
+        　　IP=1930 CS=0053 FL=3002 SP－0001 SS=02DF<br>
+        　　每次退出后，再运行光盘上的安装程序Setup.exe，按Enter键后，屏幕信息全无，只有光标闪动，热启动后再重装，又同样退出。<br>
+        　　答：你给我的信比较长，笔者分析了你信中的种种现象，估计你的微机中硬件有点问题。可以通过下面的方法解决：<br>
+        　　1.从Windows 3.2上升级安装Windows 95<br>
+        　　首先在DOS下安装最小化的Windows 3.2系统，然后再从它上面升级安装Windows 
+        95系统。这种方法有可能跳过你所说的错误，你可试试。<br>
+        　　2.在安装程序Setup.exe后面加上参数<br>
+        　　在DOS提示符下执行“Setup ／is／iq”，这样，可以跳过对硬件的检测，而直接进行安装，有时会起到意想不到的效果。<br>
+        　　另外，在每次安装失败返回到DOS环境后，微机的内存会被安装程序“吃光”（这可从MEM命令中得到验证），执行一些程序会出现莫名其妙的错误，因此，安装失败后，不要再重新执行安装程序。<br>
+        &nbsp;&nbsp;&nbsp; 安徽读者姚爱国问：我是一所学校的微机教员。我校微机室配有Novell局域网一套，有20台普通工作站和一台超级工作站。现有问题待解决：<br>
+        　　1.超级工作站基本内存丢失6KB。一日开机后用MEM／C／P检查内存使用情况时，突然发现基本内存只有634KB，怀疑是配置出了问题，将Autoexec.bat和Config.sys改名后重新启动，故障依旧。<br>
+        　　2.超级工作站不能上网。一日上网时，突然出现提示：“EMM386 
+        unrecoverable priviliged operation error ＃1－Press Enter to reboot”。在Config.sys文件中把装载EMM386.EXE程序一行删除，又可以上网，但以前装载EMM386.EXE也能上网，而且现在超级工作站单独使用时，仍可以装载EMM386.EXE。用KV300检测并未发现病毒。这种情况与《电脑报》第307期第19版上一位读者的问题一样，但不同的是我的微机在单独使用时未出现异常情况，只是在上网时才出现这种情况。<br>
+        　　3.一台普通工作站在上网时出现“Primary HDC failure”的提示，更换了网卡，依然如故，后又反复比较这台工作站与其他正常工作站的CMOS，设置是一样的。<br>
+        　　答：1.在通常情况下，基本内存（640KB）减少的原因有如下五个方面：<br>
+        　　&middot;在CMOS中设置了将用户自定义的硬盘数据区放在DOS中（即“DOS 
+        1KB&quot;），此时，DOS的基本内存会减少1KB。<br>
+        　　&middot;在微机中使用防病毒卡时，也会使基本内存减少几KB，该部分内存存储有防病毒卡调入的驻留程序，以便随时可以监视病毒的发生等。<br>
+        　　&middot;COMPAQ微机通常在配置了Himem.sys驱动程序后，基本内存也会减少1KB。<br>
+        　　&middot;当在Config.sys或者Autoexec.bat中加载了某些设备驱动程序或者内存驻留程序时，基本内存也会减少几KB。<br>
+        　　&middot;系统被病毒感染，基本内存也会减少几KB。<br>
+        　　你不妨从以上几个方面检查你的微机。在使用KV300、AV95 2.0等查毒软件时，必须使用最新版本，不然会漏查病毒的。<br>
+        　　2.根据故障现像可以知道，你的上网程序与EMM386.EXE有冲突。由于该微机以前装载EMM386EXE时使用正常，现在出现问题可能有如下两个原因：<br>
+        　　&middot;你的上网程序受到破坏，建议重新安装。<br>
+        　　&middot;系统受到病毒感染。<br>
+        　　另外，你可将EMM386.EXE装载在内存低端或者加上RAM参数试试看。<br>
+        　　3.根据该台工作站所出现的故障提示信息，可知该故障与CMOS没有关系，可能有如下三个原因：<br>
+        　　&middot;硬盘控制器接触不良，可打开机箱，重新拔插试试。<br>
+        　　&middot;硬盘电缆线有问题，换一条电缆线试试。<br>
+        　　&middot;硬盘本已损坏了，更换硬盘，看能否解决问题。<br>
+        　&nbsp; 湖北读者王彬问：我的电脑配置为：5X86－133 CPU、ALD主板、16MB内存、630MB硬盘，BIOS是1994年AMI 
+        BIOS。安装有Agiler内插式语音／传真调制解调器（14400bps）、电影卡、声音卡等。在电影卡、声音卡、调制解调器三卡都插入主板时，出现下列现像：在DOS下可以拨号，但在Windows下不能拨号。在安装调制解调器自带的软件时，总是报告找不到COM2口。Windows 
+        95自动检测安装也不行。改变三卡安装顺序，也不能解决问题。可是拔掉电影卡或声音卡之后，调制解调器能正常使用。由于我的电脑不能离开电影卡和声音卡，如何解决三卡“打架”的难题?<br>
+        　　答：你的这种故障现像比较普遍。造成该问题的原因主要是三卡的IRQ发生冲突所致。在解决这个问题之前，还是让我们来了解一下微机中的资源使用分配表，以某台微机为例，其资源使用情况如表所示。<br>
+        　　由上表可知，该台微机中电影卡的IRQ为11、声音卡的IRQ为7、调制解调器的IRQ为5（使用COM3）或IRQ为3（COM1）。由于LPT1占用了中断5，则调制解调器只能使用中断3。对于内置式的调制解调器来说，你可以使用跳线法将其设置成使用COM2，同时在BIOS 
+        Setup程序中将COM2屏蔽掉即可。使用此法，类似地可以解决你的微机出现的三卡“打架”的现像。<br>
+        &nbsp;&nbsp;&nbsp; 辽宁读者栾葆春问：一台Pentium 120电脑，以前在Windows 
+        3.1系统下运行状态良好，前不久装了中文Windows95之后(正常安装)，每当运行光盘就显示以下信息：“程序错误：程序执行了DLL文件的非法链接调用”。运行以前正常的光盘，一放进光驱里，不但不能自动运行，而且还要出现以上的错误提示信息，并且光标一直处于运行状态，选“关闭”退出(有时还会出现花屏现像)，屏幕呈暗红色或暗黄色。重新安装光驱驱动程序后，还是不行。<br>
+        　　答：从你信中提供的现像来看，你是从Windows 3.1上升级为Windows 95的。虽然这种方式可以避免重新安装许多应用软件(注：这也是微软推荐的方式)，但是也会带来许多问题，即造成应用软件与Windows95之间的文件冲突(如DLL和386文件之间的冲突)，特别在Windows95下安装的应用软件更易发生这种情况。因此，建议你从DOS上重新安装Windows95，将Windows95安装在一个新目录下，然后重新安装应用软件，在通常情况下，你所提出的问题能够解决，当然，如果你的微机感染了病毒，也有可能发生类似的现像。<br>
+        </font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月13日第14期34版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

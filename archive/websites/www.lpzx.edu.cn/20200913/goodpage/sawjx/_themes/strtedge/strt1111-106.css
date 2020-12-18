@@ -1,0 +1,163 @@
+.mstheme     { nav-banner-image: url(astrbane.gif); separator-image: url(strrulee.gif); 
+               list-image-1: url(astrbul1e.gif); list-image-2: 
+               url(strbul2e.gif); list-image-3: url(strbul3e.gif); 
+               navbutton-horiz-normal: url(strhorzbtnne.gif); 
+               navbutton-horiz-hovered: url(strhorzbtnhe.gif); 
+               navbutton-horiz-pushed: url(strhorzbtnse.gif); 
+               navbutton-vert-normal: url(strvertbtnne.gif); 
+               navbutton-vert-pushed: url(strvertbtnse.gif); 
+               navbutton-vert-hovered: url(strvertbtnhe.gif); 
+               navbutton-home-normal: url(strhomebtnne.gif); 
+               navbutton-home-hovered: url(strhomebtnhe.gif); 
+               navbutton-home-pushed: url(strhomebtnse.gif); 
+               navbutton-next-normal: url(strnextbtnne.gif); 
+               navbutton-next-hovered: url(strnextbtnhe.gif); 
+               navbutton-next-pushed: url(strnextbtnse.gif); 
+               navbutton-prev-normal: url(strprevbtnne.gif); 
+               navbutton-prev-hovered: url(strprevbtnhe.gif); 
+               navbutton-prev-pushed: url(strprevbtnse.gif); 
+               navbutton-up-normal: url(strupbtnne.gif); 
+               navbutton-up-hovered: url(strupbtnhe.gif); 
+               navbutton-up-pushed: url(strupbtnse.gif) }
+.mstheme-bannertxt { color: rgb(0,51,102); font-weight: bold; text-align: center; vertical-align: 
+               middle; font-family: 宋体 }
+.mstheme-horiz-navtxt { font-weight: bold; color: rgb(0,51,102); text-align: center; vertical-align: 
+               middle; font-family: 宋体 }
+.mstheme-vert-navtxt { font-weight: bold; color: rgb(0,51,102); text-align: center; vertical-align: 
+               middle; font-family: 宋体 }
+.mstheme-navtxthome { color: rgb(0,51,102); text-align: center; vertical-align: middle; 
+               font-family: 宋体 }
+.mstheme-navtxtnext { color: rgb(0,51,102); text-align: center; vertical-align: middle; 
+               font-family: 宋体 }
+.mstheme-navtxtprev { color: rgb(0,51,102); text-align: center; vertical-align: middle; 
+               font-family: 宋体 }
+.mstheme-navtxtup { color: rgb(0,51,102); text-align: center; vertical-align: middle; 
+               font-family: 宋体 }
+ul           { list-style-image: url('astrbul1e.gif') }
+ul ul        { list-style-image: url('strbul2e.gif') }
+ul ul ul     { list-style-image: url('strbul3e.gif') }
+a:link       { color: rgb(0,51,153) }
+a:visited    { color: rgb(102,0,0) }
+a:active     { color: rgb(102,102,102) }
+body         { color: rgb(0,0,0); background-color: rgb(153,153,102) }
+h1           { color: rgb(0,51,102) }
+h2, marquee  { color: rgb(0,51,102) }
+h3           { color: rgb(0,51,102) }
+h4           { color: rgb(0,51,102) }
+h5           { color: rgb(0,51,102) }
+h6           { color: rgb(0,51,102) }
+hr           { color: rgb(0,51,102) }
+button       { background-color: rgb(0,51,102); color: white; border-color: rgb(204,204,153) }
+label, .MSTHEME-LABEL { color: rgb(0,0,0) }
+textarea     { color: black; border-color: rgb(0,51,102) }
+fieldset     { color: black; border-color: rgb(0,51,102) }
+legend       { color: rgb(0,51,102) }
+select       { color: black; border-color: rgb(0,51,102) }
+table        { table-border-color-light: rgb(204,204,153); table-border-color-dark: 
+               rgb(0,51,102); color: rgb(0,0,0); border-color: rgb(0,51,102) }
+caption      { color: rgb(0,51,102) }
+th           { color: rgb(0,0,0); border-color: rgb(0,51,102) }
+td           { border-color: rgb(0,51,102) }
+.mstheme-bannertxt a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt a:visited { color: rgb(0,0,0) }
+.mstheme-bannertxt-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strbanc.gif'); font-family: 宋体 }
+.mstheme-bannertxt-g a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt-g a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-bannertxt-s { color: rgb(0,0,0); text-align: center; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-bannertxt-s a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt-s a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt-s a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:active { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:link { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strhorzbtnnc.gif'); font-family: 宋体 }
+.mstheme-horiz-navtxt-g a:active { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-g a:link { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-gs { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strhorzbtnsc.gif'); font-family: 宋体 }
+.mstheme-horiz-navtxt-gs a:active { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-gs a:link { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-gs a:visited { color: rgb(0,0,0) }
+.mstheme-navtxthome a:active { color: rgb(0,0,0) }
+.mstheme-navtxthome a:link { color: rgb(0,0,0) }
+.mstheme-navtxthome a:visited { color: rgb(0,0,0) }
+.mstheme-navtxthome-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strhomebtnc.gif'); font-family: 宋体 }
+.mstheme-navtxthome-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxthome-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxthome-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:active { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:link { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strnextbtnc.gif'); font-family: 宋体 }
+.mstheme-navtxtnext-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:active { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:link { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strprevbtnc.gif'); font-family: 宋体 }
+.mstheme-navtxtprev-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtup a:active { color: rgb(0,0,0) }
+.mstheme-navtxtup a:link { color: rgb(0,0,0) }
+.mstheme-navtxtup a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtup-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strupbtnc.gif'); font-family: 宋体 }
+.mstheme-navtxtup-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtup-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtup-g a:visited { color: rgb(0,0,0) }
+.mstheme-topbar-font a:active { color: rgb(0,0,0) }
+.mstheme-topbar-font a:link { color: rgb(0,0,0) }
+.mstheme-topbar-font a:visited { color: rgb(0,0,0) }
+.mstheme-topbar-font-g { font-size: 1; color: rgb(0,0,0); background-image: url('strglobalc.gif'); 
+               font-family: 宋体 }
+.mstheme-topbar-font-g a:active { color: rgb(0,0,0) }
+.mstheme-topbar-font-g a:link { color: rgb(0,0,0) }
+.mstheme-topbar-font-g a:visited { color: rgb(0,0,0) }
+.mstheme-vert-navtxt a:active { color: rgb(0,0,0) }
+.mstheme-vert-navtxt a:link { color: rgb(0,0,0) }
+.mstheme-vert-navtxt a:visited { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strvertbtnnc.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-g a:active { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-g a:link { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-gs { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('strvertbtnsc.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-gs a:active { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-gs a:link { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-gs a:visited { color: rgb(0,0,0) }
+.mstheme     { navbutton-background-color: rgb(102,153,255); top-bar-button: 
+               url(strglobalc.gif) }
+.mstheme-topbar-font { font-size: 1; color: rgb(0,0,0); font-family: 宋体 }
+body         { background-image: url('strbkgde.gif'); font-family: 宋体 }
+h1           { font-weight: normal; font-style: normal; font-size: 24pt; font-family: 宋体 }
+h2           { font-weight: normal; font-style: normal; font-size: 18pt; font-family: 宋体 }
+h3           { font-weight: normal; font-style: normal; font-size: 14pt; font-family: 宋体 }
+h4           { font-weight: normal; font-style: normal; font-size: 12pt; font-family: 宋体 }
+h5           { font-weight: normal; font-style: normal; font-size: 10pt; font-family: 宋体 }
+h6           { font-weight: normal; font-style: normal; font-size: 8pt; font-family: 宋体 }
+button       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+label, .MSTHEME-LABEL { font-size: 8pt; font-style: normal; font-family: 宋体 }
+textarea     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+fieldset     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+legend       { font-size: 8pt; font-style: Normal; font-family: 宋体 }
+select       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+table        { font-style: normal; font-family: 宋体 }
+caption      { font-size: 14pt; font-style: Normal; font-family: 宋体 }
+th           { font-style: normal; font-family: 宋体 }
+marquee      { font-size: 14pt; font-family: 宋体 }

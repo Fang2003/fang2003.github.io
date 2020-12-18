@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在Delphi中使用动态图标</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.bmp' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'>目录</A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'>综合报道</A></TD>
+<TD BGCOLOR='#FFCC66'><FONT  COLOR='#CC0000'>软件世界</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'>硬件周刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'>大众网络</A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'>ＯＡ专刊</A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'>游戏广场</A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'>评测与市场</A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>33 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 在Delphi中使用动态图标</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在Delphi中使用动态图标 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在应用程序的编写中，组合框（ComboBox）、列表框（ListBox）、等常见的部件，通常不仅要用于显示文字，而且还要显示其与文字相关的图标。在一般的Windows应用程序中，这些图标的显示都要随列出的显示文本的变化而变化，例如在组合框中列出当前目录下的所有文件时，在组合框左边就显示与文件名相关联的图标，这就是所谓的动态图标。在Delphi中使用动态图标的布骤如下：<br>
+　　<b>一、图标的获取</b><br>
+　　要使用动态图标，首先要解决的是如何获得显示文本和与其相关联的图标句柄。该图标通过文件关联由系统注册表决定，并且在Windows编程中同一文件(或子目录，或文件夹）在桌面上也可能有两种显示结果，这就是DOS文件名与显示名(Display Name)。如果我们的应用程序不需要有像Windows资源浏览器那样的效果，则可以使用FindFirst()和FindNext()二个函数以及FindClose()过程来获得DOS文件名，否则我们就应当使用WindowsAPI来获得显示名。在获得文件名的同时可通过使用ShellAPI.pas中的SHGetFileInfo()函数来获得其图标句柄HICON，说明如下：<br>
+　　function SHGetFileInfo(pszPath: PAnsiChar; dwFileAttributes: DWORD;var psfi: TSHFileInfo; cbFileInfo,uFlags: UINT): DWORDl;<br>
+　　pszPath 参数：指定的文件名。当uFlags的取值中不包含 SHGFI_PIDL时，可直接指定；否则pszPath要通过计算获得，不能直接指定；<br>
+　　  dwFileAttributes参数：文件属性，仅当uFlags的取值中包含SHGFI_USEFILEATTRIBUTES时有效，一般不用此参数；<br>
+　　psfi 参数：返回获得的文件信息，是一个记录类型，有以下字段：<br>
+　　hIcon: HICON;  ／／文件的图标句柄<br>
+　　iIcon: Integer;   ／／图标的系统索引号<br>
+　　dwAttributes: DWORD; ／／文件的属性值<br>
+　　szDisplayName: array [0..MAX_PATH－1] of  AnsiChar; ／／文件的显示名<br>
+　　szTypeName: array [0..79] of AnsiChar;  ／／文件的类型名<br>
+　　cbFileInfo 参数：psfi的比特值；<br>
+　　uFlags 参数：指明需要返回的文件信息标识符，常用的有以下常数：<br>
+　　SHGFI_ICON;   ／／获得图标<br>
+　　SHGFI_DISPLAYNAME;  ／／获得显示名<br>
+　　SHGFI_TYPENAME; ／／获得类型名<br>
+　　SHGFI_ATTRIBUTES;／／获得属性<br>
+　　SHGFI_LARGEICON; ／／获得大图标<br>
+　　SHGFI_SMALLICON; ／／获得小图标<br>
+　　SHGFI_PIDL;／／ pszPath是一个标识符<br>
+　　函数SHGetFileInfo()的返回值也随uFlags的取值变化而有所不同。通过调用SHGetFileInfo()可以由psfi参数得到文件的图标句柄，但要注意在uFlags参数中不使用SHGFI_PIDL时，SHGetFileInfo()不能获得"我的电脑"等虚似文件夹的信息。<br>
+　　<b>二、图标的加载</b><br>
+　　使用Delphi提供的TImageList组件，通过调用CommCtrl .pas中的函数ImageList_AddIcon()来加载得到的图标，并要保证其索引号与显示文本相对应。说明如下：<br>
+　　function ImageList_AddIcon(ImageList: HIMAGELIST; ／／加载图标的ImageList句柄<br>
+　　Icon: Hicon ／／加载的图标句柄 ): Integer;  ／／返回图标在ImageList中的索引号<br>
+　　在需要指明图标索引号时可使用ImageList_AddIcon()的返回值。<br>
+　　<b>三、图标和文本的绘图式输出</b><br>
+　　对于组合框、列表框等不能直接显示图标的组件，由于要求显示图标的同时又要同时显示文本，可通过设置其相应的Style属性达到目的，示例如下：<br>
+　　组合框：ComboBox1.Style:=csOwnerDrawVariable根据实际使用经验最好不要在ObjectInspector窗体中直接设置，而应将代码添加在程序的适当位置,否则可能出现绘图区域高度不规则变化<br>
+　　列表框：ListBox1.Style:=lbOwnerDrawVariable <br>
+　　状态栏：StatusBar1.Panels[i].Style:= psOwnerDraw  不能使用简单状态栏，i是状态栏中要绘制图标的某一窗格索引号,图形输出可使用TImageList的ImageList1.Draw()方法，而文本输出则可使用TCanvas的TextOut()方法，它由组件的Canvas属性继承得到，显然没有Canvas属性的组件不能使用此方法显示图标。<br>
+　　对于可直接显示图标的组件，直接指定其Images、StateImages等需要的图标属性为相应的TimageList组件名，并通过指定图标的索引号则可显示图标。需要注意的是：在使用大图标时，必须先调用TImageList的CreateSize()方法指定可加载图标的尺寸，并且在每次调用TImageList的Clear方法后都要重新调用CreateSize()。<br>
+　　使用TImageList的ImageList1.Clear方法清除已加载的图标，常在需要刷新时使用。<br><b>(四川　李晓方)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/33/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99331302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>NT网上电子邮件系统的建立<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　电子邮件是一种通过计算机网络与其它用户传递信息的现代通信工具。在电子邮件系统中，邮件服务器充当“电子信箱”功能，在网上建有账号的PC机通过“电子邮箱”收发与阅览各种信息。本文以笔者所在单位为例，介绍如何在NT平台上建立小型的电子邮件系统。<br>
+        　　1.网络环境<br>
+        　　本单位网络是由一台Netware服务器、一台NT服务器(电子邮件系统)、一台交换机、7台集线器、一台中继器及50台工作站组成的星型与总线型以太混和网结构。工作站分布在大楼各层办公室内。<br>
+        　　2.网络的软、硬件配置及网络参数<br>
+        　　(1)网络服务器<br>
+        　　硬件：Pentium 586/200、64M RAM、3.2G硬盘、24速CD－ROM、32位100M PCI网卡<br>
+        　　软件：DOS6.22、Windows95、Windows NT4.0 Server、Microsoft Exchange5.0 Server<br>
+        　　IP地址：010.031.004.001<br>
+        　　子网掩码：255.255.255.000<br>
+        　　网关：010.031.004.005<br>
+        　　(2)网络工作站<br>
+        　　硬件：586主机、16M RAM、420M硬盘、16位网卡或32位10M/100M网卡<br>
+        　　软件：Windows95，Microsoft Office97<br>
+        　　IP地址：010.031.004.010～010.031.004.254，由DHCP服务器动态分配<br>
+        　　网关：010.031.004.005<br>
+        　　3.NT服务器的安装与设置<br>
+        　　(1)DOS6.22及Windows95的安装<br>
+        　　先安装DOS6.22系统，把硬盘分成2个区并格式化，其中指定C盘为系统盘，存放DOS6.22、Windows95及NT4.0 
+        Server启动系统，D盘存放NT4.0系统、Exchange5.0 Server系统，然后在C盘依次安装DOS6.22、Windows95系统。<br>
+        　　(2)重新启动机器，进入Windows95桌面，在服务器的CD－ROM上插入NT4.0 
+        Server安装光盘，即自动进入Windows NT4.0安装。<br>
+        　　(3)根据屏幕提示选择定制安装，把D盘设置为NTFS文件系统格式，在Windows 
+        NT支持的许可协议上选择每客户的许可协议方式，在服务器类型上选择主域控制器，在管理员账号中输入密码。<br>
+        　　(4)在网卡的对话框中，双击所安装的网卡，输入网卡的I/O地址、中断号及类型。<br>
+        　　(5)在网络协议的配置中，选择TCP/IP、NWLINK IPX/SPX、NETBEUI协议。<br>
+        　　(6)在要安装的服务对话框中，从列表中选择Microsoft DHCP服务器、Microsoft 
+        TCP/IP打印、Netware网关服务、简单TCP/IP服务、NWLINK IPX/SPX兼容传输。<br>
+        　　(7)在Microsoft TCP/IP协议的属性中，设置服务器的网络参数如下：<br>
+        　　IP地址：010.031.004.001<br>
+        　　子网掩码：255.255.255.000<br>
+        　　默认网关：010.021.004.005<br>
+        　　(8)重新启动机器，完成NT服务器的安装。<br>
+        　　4.DHCP服务器的安装与设置<br>
+        　　(1)用管理员的身份登录NT服务器，单击“开始”，进入程序菜单后选择管理工具。<br>
+        　　(2)用鼠标单击管理工具下的Microsoft DHCP服务器，进入DHCP管理器的设置状态，在对话框中，选创建IP地址，输入下列网络参数：<br>
+        　　开始IP地址：010.031.004.010<br>
+        　　结束IP地址：010.031.004.254<br>
+        　　子网掩码：255.255.255.000<br>
+        　　(3)设置完毕后，回到对话框中，按“确定”钮后，重新启动机器，即完成DHCP服务器的安装。<br>
+        　　5.电子邮件服务器的安装与设置<br>
+        　　(1)用管理员的身份在NT服务器上登录，在CD－ROM上插入电子邮件服务器安装光盘，然后单击“开始”中的“运行”，输入E:\SETUP\I386\SETUP然后单击“OK”。<br>
+        　　(2)安装时选定制安装，在定制安装对话框中，选前3项，然后单击“Continue”。<br>
+        　　(3)在选择许可证方式对话框中选择每客户方式。<br>
+        　　(4)Organization and Site对话框选择创建一个新节点，输入组织及节点的名称，然后加以确认。<br>
+        　　(5)在Site Service Account对话框中，单击“Browse”后，Add User or Group对话框出现，在Names对话框中，单击所需要的Names，然后单击“Add”，再单击“OK”，屏幕就显示要输入使用的账号及口令，输入后单击“OK”。<br>
+        　　(6)当Microsoft Exchange Server Setup对话框出现时，提示Microsoft Exchange 
+        Server安装成功。<br>
+        　　(7)检查Exchange Server的Windows程序组，确保Exchange Server进程被启动和运行，确保Exchange能正常通信，然后为Exchange 
+        Server管理组设置权限。<br>
+        　　到此，电子邮件服务器已基本安装成功。<br>
+        　　6.在电子邮件服务器上创建工作站用户信箱<br>
+        　　(1)用管理员身份登录服务器，单击“开始”中的“程序”，再指向Microsoft 
+        Exchange，然后单击“Microsoft Exchange Administrator”。<br>
+        　　(2)在Connect to Server对话框中，输入你要连接的服务器，然后单击“OK”，设置为默认值。<br>
+        　　(3)在文件栏中，单击“New Mailbox”，Properties的对话框出现，输入要填写的信息，单击“确定”，Primary 
+        Windows NT Account对话框出现，选Erase A New Windows NT Account，单击“OK”，然后单击“确定”即完成新邮箱的建立。<br>
+        　　7.网络工作站登录到电子邮件服务器<br>
+        　　(1)首先给登录到电子邮件服务器的工作站安装Windows95系统、Office97软件。<br>
+        　　(2)网络管理员为登录的工作站设置登录到电子邮件服务器的域、账号、口令、邮箱及权限。<br>
+        　　(3)对网络工作站进行配置：<br>
+        　　①双击已安装的网卡，设置及检查网卡I/O地址和中断号。<br>
+        　　②对网卡的协议进行设置：在控制面板中双击“网络”，点击“添加”，选择“协议”，在列表中选择Microsoft，点击“TCP/IP”、“IPX/SPX兼容协议”、“NETBEUI”，单击“确定”，即完成配置。<br>
+        　　③配置网卡的TCP/IP协议：在上述过程中，选择TCP/IP协议，然后单击“属性”，在IP地址中选择自动获得IP地址。在WINS配置中，选择禁用WINS解析。在网关中，输入010.031.004.005，再单击“添加”。在DNS配置中，选择禁用DNS(i)。在绑定中，选择Microsoft网络客户。<br>
+        　　④设置登录方式：在网络的“配置”对话框中，对基本登录方式选取“Microsoft网络客户”，单击其属性，在登录验证中选择登录到Windows 
+        NT域及输入Windows NT域的名称。在网络登录项中，选取快速登录，再按“确定”。<br>
+        　　⑤在访问控制项中，选择用户级访问控制，并填入用户所在组的名称。在身份验证类型中，选择Windows 
+        NT服务器。<br>
+        　　(4)对工作站配置邮件文件的信息服务：<br>
+        　　①在Windows95的控制面板中，单击“电子邮件”，在出现配置文件安装的信息服务(I)对话框中，单击“添加”，选取Microsoft 
+        Exchange Server、个人通讯录、个人文件夹。在Microsoft Exchange Server和邮箱中填入服务器、邮箱名称，在启动时，选取与网络联接。在配置个人通讯录对话框中，输入个人通讯录及路径。在个人文件夹对话框中，输入文件夹名称、类型及路径。<br>
+        　　②在上述过程中，在Microsoft Outlook属性的对话框单击“传递”，选取新邮件先发至个人文件夹。<br>
+        　　(5)完成上述各项工作后，启动Windows95工作站，正确输入用户名称、口令及登录的域，进入Windows95后双击“Microsoft 
+        Outlook”图标后，即可进入Outlook，从而可浏览、收发各种电子邮件等，这样就成功地建立了电子邮件系统网络。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(广西　林俊爽　胡永革)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月19日第40期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>升 级 BIOS 失 败 后 的 处 理</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>升 级 BIOS 失 败 后 的 处 理</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+                    <p align="left">　　BIOS芯片是主板初始信息的存放处，如今电脑上一般用的都是电可擦写式的BIOS芯片，也就是说，BIOS芯片中的内容是可以更新的。本文主要讲一下升级BIOS失败后的几种处理方法。升级BIOS一旦失败，就会使计算机无法启动，这时，很多人往往到经销商那里更换BIOS芯片。其实大可不必这么做，这里还有别的一些方法供你参考！</p>
+        <p align="center"><strong>方法一：利用BIOS Boot Block引导块</strong></p>
+                    <p align="left">　　现在用Award BIOS的主板都有一个BIOS引导块，当你升级BIOS时，这一小部分引导块可以不被覆盖(Boot 
+                      Block Write 跳线设置为“Disable”，并且在运行Flash程序时，不选择“Update BIOS 
+                      Including Boot Block”方式)。这个BIOS引导块只支持软驱和ISA显示卡，所以很多人在升级BIOS失败后，当主板上仍插PCI显卡时，启动电脑会黑屏，但电脑却能读软驱，这就意味着主板的BIOS仍可以恢复。这个BIOS引导块可以引导正常的DOS启动盘并执行Autoexec.bat，只要把Flash程序和正确的BIOS文件拷贝到DOS启动盘上，然后在Autoexec.bat中添加上执行升级Flash 
+                      BIOS的语句，如Awdflash Biosxxx.bin。可以在一台正常的电脑上做好这张盘，拿到需要恢复的电脑上运行；或找块ISA显卡插到电脑上，启动后执行软盘上的升级程序。如果没有ISA显卡，也可以在启动后黑屏的情况下，自己动手运行升级程序。这时电脑仍可以正常运行，只是屏幕没有显示，只要升级时键入的内容完全正确，一样可以成功。</p>
+        <p align="center"><strong>方法二：利用Flash Recover Boot Block引导块</strong></p>
+                    <p align="left">　　对于另一些主板(例如某些使用Phoenix BIOS的主板)，主板上的BIOS中有一个Flash 
+                      Recover Boot Block引导块,这个引导块不会被升级程序覆盖。主板上有一个Flash Recover 
+                      Jumper跳线，BIOS升级失败或被CIH病毒破坏后可以恢复，方法如下：<br>
+        　　1.把Flash Recover Jumper跳线设置为“Enable”。<br>
+        　　2.把可引导的升级盘插入A驱动器（盘中的BIOS一定要是能正常工作的，文件名要符合主板的要求，因为主板要把软盘中的BIOS备份自动写回Flash 
+        BIOS）。<br>
+        　　3.重新启动电脑。<br>
+        　　4.因为这一小段代码是放在不可写入的引导块区域的，所以不支持显卡，升级过程只能靠声音和软驱指示灯的提示来判断是否完成。如电脑喇叭发声且软驱灯亮着时，表明系统正在恢复BIOS到Flash 
+        BIOS，当电脑喇叭不发声且软驱灯也不亮时，表明恢复完成。<br>
+        　　5.关掉电源。<br>
+        　　6.把Flash Recover Jumper跳线跳回默认位置。<br>
+        　　7.取出软盘，开启电源。 </p>
+        <p align="center"><strong>方法三：换一个新的BIOS芯片</strong></p>
+                    <p align="left">　　与你的主板制造商联系，设法得到一块BIOS芯片。也可以买一块与主板的BIOS 芯片兼容的ROM芯片，如27Cxxx、28Cxxx系列EPROM，用专门的可写EPROM的仪器将正常的BIOS写入，换下升级失败了的BIOS芯片。用这种方法还可以升级那些BIOS不是Flash 
+                      BIOS的主板、显卡甚至MODEM的BIOS。这种EPROM一般也不贵,十块钱左右就可以买到(这种方法的限制是得找到紫外线EPROM的擦写器）。</p>
+        <p align="center"><strong>方法四：热拔插法</strong></p>
+        <p align="left">　　1.还有些主板的BIOS芯片中可能没有集成最初始的信息，或你无法找到ISA显卡，这时你可以找到与你的主板相同的好主板。先把好主板的BIOS芯片拔下，当然，你自己的BIOS芯片也要拔下，然后把好的BIOS芯片插入你自己的主板，启动计算机到DOS系统下，注意，进入DOS时不要外挂别的程序。当然，现在许多朋友的电脑都在用WIN95和WIN98，这时候你可以在计算机刚启动时按F8键，然后选择“Command 
+        Only模式”进入，最好直接用DOS引导盘启动，然后拔下那块好的BIOS芯片，再将你自己的BIOS芯片插入你的主板中，执行写入程序就行了！当然，你也可以把你的BIOS芯片拿到别人的电脑上写！ 
+        <br>
+                      　　 2.当你找不到相同的主板时，还有一种方法可救你主板的BIOS，本人就是通过这种方法来使主板的BIOS起死回生的。本人的主板是海洋R12主板，从网上下载BIOS升级程序为主板BIOS升级，由于电压问题导致升级失败，造成机器无法启动。现在ISA显卡不好找，即使找到了也不知好不好用，后来从《电脑报》上看到一篇用不同主板来重写BIOS的文章，文中只说明了可以在两块不同的奔腾主板之间重写BIOS，没有说明是否可以在奔腾主板和奔腾二代主板之间重写BIOS。因本人的电脑买得早，朋友的电脑都是新买的，全是清一色奔腾二代电脑，所以找不到跟本人差不多的电脑，于是抱着试试看的心理拔下我的BIOS芯片来到同学家。先启动同学的电脑进入DOS系统，然后拔下他的BIOS芯片，插上我的BIOS芯片，试着用自带的写入程序写入BIOS。但电脑提示错误，于是换上他的BIOS写入程序来写入我的BIOS数据（一般来说，BIOS写入程序包括两部分：一部分是写入程序，也就是可运行的程序，另一个是以bin为扩展名的数据程序），写入成功，然后关机拔下本人的BIOS芯片。回到家里一试，又听到了电脑启动时美妙的声音！启动成功！<br>
+        　　注意：使用方法四时，在启动好的电脑以前，先把它的BIOS芯片拔下，然后再稍用力把好的BIOS芯片插回，不要插得太紧，等电脑启动后稍用力就可以把好的BIOS芯片拔下，然后换上自己的BIOS芯片，这样就不容易损坏好的BIOS芯片。还有一点要注意的是，在方法四的第2种方式中，因两块主板不同，所以写入电压有可能不同，这点一定要注意，不然可能造成无可挽回的损失。<br>
+                      　　有关BIOS更详细的内容，可以到www.ping.be/bios去看看，那里有各种BIOS和各种主板BIOS芯片的Flash程序。在 
+                      http://www.award.com.tw/download 也可以查找到上百种的Flash BIOS程序。　　(天津　孙杰章) 
+                    </p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+              <div align="left">相关站点： <a href="http://www.ping.be/bios" target="_blank">http://www.ping.be/bios</a> 
+                <br>
+                　　　　　 <a href="http://www.award.com.tw/download" target="_blank">http://www.award.com.tw/download</a></div>
+            </center>
+          </div>
+        </td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

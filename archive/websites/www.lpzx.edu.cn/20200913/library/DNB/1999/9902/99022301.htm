@@ -1,0 +1,76 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>山重水复疑无路——AGP显卡安装历险记</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">山重水复疑无路——AGP显卡安装历险记<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="center"><strong><font
+        color="#369681">事出有因</p>
+        </font></strong><p class="ourfont"><font color="#369681">　　朋友最近买了一块GVC（致福）的AGP显卡：GBA－300TV。显示芯片为Nvidia的Riva128，在如今的显卡市场，RivaTNT威风八面，Voodoo女妖也正魅力四射，相比而言，Riva128未免显得“廉颇老矣”。但Riva128毕竟是中档显卡的领军人物，《电脑报》曾进行过专文评述（1998年8月17日第31期《Riva128群英会》），对它十分赞赏。<br>
+        　　Riva128芯片的显卡主要特点是快，区区4MB显存，不仅2D速度快，而且3D 
+        WinBench得分可以轻松突破1000分，Direct3D速度超过Voodoo I，“扳倒”i740、MGA－G100更是不在话下。Riva128芯片的显卡第二个特点是图像显示清晰稳定，在3D游戏中画质细腻、画面流畅，不配Voodoo子卡也完全够用、够爽。Riva128芯片的显卡第三个特点是价格比较便宜，朋友这块带TV输出的GBA－300TV不过600元上下，堪称工薪阶层之首选。<br>
+        　　有道是，不经历风雨，怎能见彩虹，朋友兴冲冲买回这块GBA－300TV，但其安装、调试过程却一波三折，可谓教训多多，收获多多，特公之于众，以免大家再走弯路。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">一波未平</font></strong></p>
+        <p class="ourfont"><font color="#369681">　　朋友为安装这块显卡，事先专门到网上转了一圈，掌握了DIY界的一些流行观点，并如数家珍地告诉我，安装AGP显卡大体要经过三个步骤：一是更新操作系统。如果操作系统是PWin 
+        98，那好极了，直接进行第二步。如果是PWin95 OSR 2.0或更早的版本，就需要安装USBsupp.exe，将PWin 
+        95 OSR2.0升级到2.1版，其实质是需要一个叫Vmm32.vxd的文件，以便对内存进行特殊管理，允许AGP显卡调用系统内存而采用直接内存执行(DIME)方式。如果DirectX版本低于5.0，还得将其升级到DirectX 
+        5.0以上版本，因为只有DirectX 5.0以上版本才支持DIME。二是安装显卡驱动程序。三是安装主板的AGP接口程序，实际是需要一个叫Vgartd.vxd的补丁程序，以便主板认识并驱动AGP显卡。<br>
+        　　朋友的主板是梅捷5EMA，该主板采用ETEQ 6638芯片组，实际上就是VIA的MVP3，选用AWARD的BIOS设置程序，操作系统是中文PWin 
+        98。朋友得意地讲，第一步可以省了，第二步当然省不得，至于第三步嘛，在显卡驱动盘里，就有Vgartd.vxd及其安装说明，在操作第二步时附带装上就万事大吉了。于是风风火火行动起来，按要求卸掉原有显卡驱动程序，关机后插好GBA－300TV显卡，再启动微机，系统报告发现新硬件，自动检测为Nvidia 
+        Riva128，安装显卡驱动程序和Vgartd.vxd好像都很顺利，朋友正要与我击掌欢庆，殊不知，乐极生悲……<br>
+        　　首先是显卡始终不工作。什么版本的驱动程序都装了，无论是显卡自带的驱动程序，以及GVC网站下载的最新驱动程序，还是从Nvidia网站下载的最新标准驱动程序，PWin98重新启动后均报告显示管理出错。一咬牙重装了PWin98，启动机器一看，问题照旧。心想GVC制造Modem可以，该不是制造显卡的功夫还嫩点儿，产品兼容性不行，于是一咬牙又重装了PWin95 
+        OSR 2.1，要命的是，折腾一晚上，系统还是那副16色的“丑恶嘴脸”。不禁怒从心头起，朋友开始打电话质问经销商，我突然想到升级PWin95安装USBsupp.exe时，需要将CMOS中的“Assign 
+        IRQ For USB”设为“Enable”，即允许为USB设备分配中断号。心动不如行动，当即进入CMOS，查看“PNP／PCI 
+        Configuration”中的内容，果然还有“Assign IRQ For VSB”的选项，立刻设为“Enable”，忐忑不安地重新启动微机，哈！久违的256色的背景平台跃入眼帘，显示设备上要命的黄色“！”没有了，查看为显卡分配的资源，不再只有内存段，还有中断请求号。初战终于告捷，顾不得疲劳，连续作战，重新安装了PWin98，设置好显示驱动程序，安装了测试软件3D 
+        WinBench 98和时下颇为流行的3D游戏Need for SpeedⅢ(《极品飞车Ⅲ》），开始了另一番艰难的征程。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">一波又起</font></strong></p>
+        <p class="ourfont"><font color="#369681">　　显卡竟然不支持硬件3D加速。任由你更改驱动程序，更改设置，只要涉及硬件加速，运行3D 
+        WinBench 98中的3D品质测试，一测试就死机；运行《极品飞车Ⅲ》，一点击图标就死机。若设置为“软件模拟加速”，《极品飞车Ⅲ》可以正常运行，效果嘛……特效都没出来，画面不够流畅，马赛克痕迹斑斑；而3D品质测试虽可勉强进行，但画面实在是一塌糊涂。要知道，该微机的各项配置都不落后，主板支持100MHz外频，CPU为AMD 
+        K6－2 400！这时我是彻底没“脾气”了，朋友则唉声叹气地说着什么明天就去退货，要我将系统恢复到正常状态。这句话立刻提醒了我。我搜出主板驱动光盘，说明书上明确要求安装三项驱动程序，其中“AGP接口管理程序”赫赫在目。已经安装并注册了Vgartd.vxd，还需要安装其它的主板补丁程序吗？<br>
+        　　安装完主板补丁程序后，所有问题迎刃而解，GBA－300TV终于露出庐山真面目：《极品飞车 
+        Ⅲ》光彩照人，3D WinMark频出高分，区格测试、Final Reality测试均顺利通过，XingMPEG 
+        Player软解压轻松跑出78.5帧／秒。利用PowerStrip将显存工作频率由100MHz超频至125MHz，3D性能急剧提高，运行《极品飞车Ⅲ》两个小时没出问题。与电脑报《Riva128群英会》测试数据相比(本人的测试数据见左表)，GBA－300TV不愧为一款精品。</font></p>
+        <p class="ourfont" align="center"><strong><font color="#369681">真相大白</font></strong></p>
+        <p class="ourfont"><font color="#369681">　　为什么会出现以上这种情况呢?我们仔细对比了安装主板补丁程序前后系统的变化（所使用的软件是 
+        QuarterDeck的CleanSweep 4.2，它能完整记录软件安装的全过程），发现Windows\System目录下多了一个叫VIAgart.vxd的文件，系统注册表也作了相应的改变。如果删除VIAgart.vxd或注册表中的相应信息，GBA－300TV立即具有“遇3D测试就死机”的功能。如果重装主板补丁程序，GBA－300TV又变得健硕无比。那么一开始就装上的Vgartd.vxd起什么作用呢？实验证明，该文件可有可无。我们疑惑不解地阅读了关于Vgartd.vxd和VIAgart.vxd说明文件，不禁连连摇头，原来Vgartd.vxd只适用于Intel芯片组，如430TX、440LX、440EX、440BX等，而非Intel芯片组的主板怎么办？事实证明，该用啥就用啥，比如朋友的这块ETEQ6638，装上VIAgart.vxd就搞定了。<br>
+        　　另外，说明文件还指出，直接使用系统内存是AGP的关键技术，但最多可为AGP显卡分配多少内存呢，文件中虽没明确规定，但通过“控制面板／系统／设备管理／系统设备／…to 
+        PCI Bridge／资源&quot;给出的内存范围，可以计算出以64MB为宜（即在CMOS中，将AGP 
+        Aperture Size设为64MB）。注意这都是虚拟内存的概念，为AGP分配64M内存，不等于就让AGP使用64M物理内存。实际最多可为AGP显卡提供多少物理内存呢，说明文件给出一个计算机公式：AGP占用内存=系统物理内存－12MB，即16MB内存的系统，最多只有4MB物理内存可与AGP共享，32MB内存的系统则可达到20MB。<br>
+        　　总结经验，一是不要一条巷子走到底。安装AGP显卡虽有三部曲，但不是全攻略，因为这三部曲都属于软件设置，当无路可走、万念俱灰的时候，别忘了硬件设置，包括跳线设置、CMOS参数设置等，这些设置往往能起到四两拨千斤的作用。特别不要翻来覆去装Windows 
+        9X。我的E－Mail为apollp@163.net，欢迎各位指教。　　(江苏　岱宗) </font></p>
+        <p class="ourfont" align="center"><a href="library/special/1999/02/index.htm"><span
+        class="ourfont">进入专题：“3D显卡世界”</span></a></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用Director 4.0制作动画</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用Director 
+        4.0制作动画</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　电脑玩家玩多了各种多媒体应用软件和游戏软件，常常会思忖：这些内容丰富、形象生动的画面是怎样设计出来的?这里，笔者要向大家推荐一个开发工具——Director 
+        4.0(或6.0)，有了它，你也能设计制作出自己喜欢的动画了。<br>
+        　　一、Director 4.0的界面与主要窗口简介<br>
+        　　Director的初始界面有标题栏和菜单栏，其余作为舞台空间。菜单栏内有7个菜单。它们是：File、Edit、Windows、Cast、Score、Text和Help(如图所示)。<br>
+        　　Director有制作角色的窗口，如画板窗口(Paint)、文本窗口(Text)、工具窗口(Tools)，有储存角色的窗口(Cast)，有记录角色上舞台的时间、次序和位置的分镜表窗口(Score)等。Score窗口中横向代表舞台层次，共有48层，还有设置播放节奏、调色板、转场、声音和脚本的通道共6个；纵向代表电影的一帧，纵横交界处可安置一个表演角色(Sprite)，电影一帧接一帧地放映，表演角色就层出不穷，形成舞台上丰富多采的视觉、听觉效果。<br>
+        　　如果用Paint、Tools或Text窗口制作一个角色，那么一旦完成，角色自动进入Cast窗口储存；也就是说前三个窗口和Cast窗口是动态链接的。如果把一个角色送入Score窗口的某一帧，那么当电影播放到这一帧时，该角色就出现在舞台上；如果在舞台上改变表演角色的位置、大小或颜色，Score窗口会记录这些变化信息。Director有一整套修饰角色的手段，如使角色透明、与其它角色颜色相溶合、从一帧过渡到另一帧时具有52种转场方式等。<br>
+        　　最能体现Director导演风采的是Lingo语言。它像一个导演一样组织角色，让它们按指定的时间、位置登上舞台，尽情表演，形成一部“电影”。<br>
+        　　Director能开发功能强大且结构紧凑的交互式软件产品，如多媒体演示软件、游戏软件和电子书籍等等。<br>
+        　　当你用Director开发完成一件满意的作品之后，可以将作品创建成完全独立的执行文件，以供用户播放。<br>
+        　　二、简易制作指导<br>
+        　　1.实时动画录制<br>
+        　　节目要求：一个气泡从舞台的左上角飘飘悠悠落到舞台的右下角。<br>
+        　　第一步：用Window/paint打开画板，选择一种颜色，用画空心圆工具，画一个圆。关闭画板。<br>
+        　　第二步：用Window/cast打开角色库，可以看到一个圆的角色，单击该角色(反显)。把角色窗口缩小并移到屏幕左上角，空出屏幕的大部分。<br>
+        　　第三步：按住&lt;Ctrl&gt;＋&lt;空格&gt;键不放，同时用鼠标点住屏幕左上角不放并不停地拖动，直到屏幕右下角，放开&lt;Ctrl&gt;、&lt;空格&gt;键和鼠标键，系统就会开始播放这段动画。<br>
+        　　可以用Window/Control panel打开控制面板，播放头倒回画面1，再播放这段动画。气泡的移动路径和速度均由用户拖动鼠标来决定。<br>
+        　　2.一个弹簧振动的动画<br>
+        　　第一步：用File/new开始制作新节目。用Window/paint打开画板。选择一种颜色，选择最粗的线型，画一个弹簧(似几个英文字母Z叠起来的形状)。<br>
+        　　第二步：用Window/score打开分镜表，与画板并列。用鼠标点住画板里的弹簧不放，拖到分镜表一号通道的frame1单元内。再重复一次，拖到一号通道的frame 
+        20单元内。<br>
+        　　第三步：单击frame 20内的弹簧，点住顶边往下拉，把弹簧压扁。<br>
+        　　第四步：用鼠标点击frame 1，按住&lt;Shift&gt;不放，拖动鼠标到frame 
+        20，使frame 1至frame 20之间成反显，表示选中20帧，其中18帧是空的。<br>
+        　　第五步：按&lt;Ctrl&gt;＋B键来填满18帧，也就是弹簧压扁用20帧来演示。再次选中这20帧，按&lt;Ctrl&gt;＋C复制到剪贴板，单击frame 
+        21，按&lt;Ctrl&gt;＋V键粘贴到frame 21至frame 39，用score/reverse sequence使选中的19帧在原地倒个次序，与前20帧相连。<br>
+        　　第七步：撤去画板和分镜表，用Window/control panel打开控制面板，按下循环播放钮，播放动画。出现一个不停振动的弹簧。<br>
+        　　3.制作一个简单的交互式多媒体节目<br>
+        　　节目要求：主画面中有三个按钮，按左边一个，出现一个气泡飘落，并伴有音乐声；按中间一个，出现一个弹簧振动，并伴有另一音乐声；按右边一个，结束节目。<br>
+        　　第一步：准备演员<br>
+        　　1.选取一个.bmp文件作为主画面背景。假设为main.bmp。<br>
+        　　2.选两个.wav声音文件备用。假设为Musicl.wav和music2.wav。<br>
+        　　3.用file/import将以上三个文件分别引入Director中。通过Window/cast打开角色库，即可看到这些角色。<br>
+        　　第二步：执导演员出场次序和位置<br>
+        　　用window/score打开分镜表，使它和角色窗口并存，且空出舞台的中央部分。<br>
+        　　(1)主画面安排<br>
+        　　用鼠标点住cast窗口中的背景角色(main.bmp)，拖到score窗口中通道一的frame 
+        1单元中。用Window/tools打开工具窗口，单击画按钮的按键，在舞台中央画三个长方形按钮。按钮面上分别输入bottom1、bottom2和bottom3的字样。这时在score窗口中，通道二、三、四的frame 
+        1中分别自动填入了三个按钮角色的号码。<br>
+        　　(2)第一段动画制作<br>
+        　　用鼠标单击通道一的frame 11单元。然后用前面1.介绍的实时制作方法制作一个气泡飘落的动画。假定用去通道一的frame 
+        11～40。<br>
+        　　(3)第二段动画制作<br>
+        　　用鼠标单击通道一的frame 51单元。然后用前面介绍的方法制作一个弹簧振动的动画。假定用去通道一的frame 
+        51～89。<br>
+        　　(4)从cast窗口中把music 1.wav角色拖到score窗口的声音通道一的frame 
+        11(即气泡动画开始处)。按住&lt;Shift&gt;键点击该通道的frame 40，形成长黑。再按&lt;Ctrl&gt;＋B键，则声道一的frame 
+        11～40充满了声音角色。用同样的方法将music2.wav角色充满声道一的frame 
+        51～89。<br>
+        　　第三步：使节目具有交互性<br>
+        　　用Director自带的lingo语言编写简单脚本十分容易。<br>
+        　　(1)用鼠标在脚本通道的frame 1处双击，立即出现脚本书写窗口。窗口中已有两行文字：on 
+        exitframe和end。只要在它们之间填入：go the frame，关闭窗口即可。语句的含意是在这一帧停留。<br>
+        　　(2)在脚本通道的frame 40和frame 89处，用同样的方法填入go frame 1。语句的含意是一段动画播完立即返回第一帧。<br>
+        　　(3)在cast窗口中单击bottom1角色，再点击cast窗口中的脚本按钮，弹出另一种脚本书写窗口，已有两行文字：on 
+        mouseup和end。在两行之间填入go frame 11后关闭。参照上述方法，为bottom2角色写上脚本go 
+        frame 51。为bottom3角色写上脚本quit。<br>
+        　　撤走舞台上的窗口，留下control panel窗口置于舞台一角。点击播放按钮，出现主画面，有三个按键。单击前两个分别播出一段动画并配有音乐。动画播完返回主画面。单击bottom3结束节目。<br>
+        　　第四步：生成.exe文件<br>
+        　　如果用file/save保存动画，形成.dir文件，文件短小，但只能在Director系统中播放，不过今后可修改。<br>
+        　　用file/create projector可生成.exe文件，文件很长，能提供给没有Director系统的用户播放，但文件无法修改。<br>
+        　　通过以上三个简单的例子，我们初步掌握了一些Director 4.0 for 
+        windows制作交互式动画的方法。Director还有许多实用的工具和强大的功能，足以使你成为专业级的多媒体动画设计大师。</font></p>
+        <p class="ourfont" align="left"><font color="#369681">(上海　金浦华)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月20日第15期38版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

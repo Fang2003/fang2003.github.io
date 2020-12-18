@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 修改你的Windows98外观</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/loga.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>39 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 修改你的Windows98外观</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 修改你的Windows98外观 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　自从Windows 98问世以来,它那可爱的界面深受大家欢迎,不过,当你在使用它时,难免有一些愿望,比如修改开机时的Logo画面,拥有自己特色的Logo画面,这就需要我们动手DIY啦,现在我就介绍一个修改Windows 98外观的方法。<br>
+　　首先,我们需要一个资源编辑软件,如Exescope、Symantec公司的ResourceStudio等。我个人认为Exescope较易上手，文件虽小但功能并不弱 (Exescope在《电脑报》1999年配套光盘第二期有收录,在http:／／member.netease.com／～topage／上也可下载)，它是一个资源编辑软件,能编辑Windows 98标准的资源，包括图标、光标、位图、对话框、菜单、快捷键、串、信息表和其他资源如Delphi表单、WAV、MIDI、AVI、JPEG。<br>
+　　Windows 98的“开始”菜单,虽说是整个桌面的重点,但你可以把那些名字改成你喜欢的文字,如：将“程序”改成“我的小东东”。下面就以修改Windows 98的“开始”菜单举例如下：<br>
+　　1． 先将Windows 98文件夹里的C:\Windows\Explorer.exe拷贝成另外一个文件,如C:\me.exe,然后运行Exescope(注意：在编辑资源之前，你必须备份原始文件，如果编辑后的可执行文件工作不正常则可利用备份恢复)。<br>
+      　　<img src="images/151.gif" width="200" height="119" align="left">2． 点击“File”,选择“Open”,打C:\me.exe,这时你会看到如Windows 
+      98的注册表编辑器一样的界面,有Header、Import,还有一个Resource,不管头两个,第三个才是我们的目标,点击Resource左边的“＋”号,下面的分支就是Explorer.exe的资源信息,包含有图标、位图、对话框、菜单和版本信息等（如图）。我们要修改的便是Menu,Dialog和String三项,分别点击它们,你会看到一些数字,用鼠标右键点一下右边框内的文字,选Edit就可以实现我们的目的了,由于我们要改“程序”为“我的小东东”,用鼠标右键点一下“程序”,选“Edit”,将它该为“我的小东东”,不过,在改的时候要小心,不要改到左边的数字,如：“504,程序(＆P)”,你只需改“程序”二字就行了,不要改那“504”,下面还有许多东西可以任你修改，就看你的了。<br>
+      　　3． 改完之后保存,再用C:\me.exe 覆盖C:\Windows 98\explorer.exe,重启后再进入Windows 98时,你会发现你的“开始”菜单已是自己的风格了。<br>
+　　假如你还对Windows 98 的其它信息感兴趣,如：Windows 98的标准菜单,“排列图标”等,你也可试着用Exescope修改C:\Windows\system\shell32.dll或Shell.dll等文件(记得要先备份,否则可能会造成无法启动你的计算机),你也可以打开Regedit.exe或Notepad.exe等,将“注册表编辑器”和“记事本”等界面改成你自己喜欢的样式,还可以打开Windows 98目录内扩展名为cpl的文件,它们是在控制面板里面的各个项目,你也可换换口味.总之,你可以将Windows 98里面大多数你能看到的文字换成你自己的风格。这样,当你重启你的计算机后,你就已经把你的Windows 98彻底DIY啦。<br><b>              (SoftDIYER)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/39/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99391502.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

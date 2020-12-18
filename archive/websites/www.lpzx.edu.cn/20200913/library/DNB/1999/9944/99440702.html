@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 硬盘分区及盘符分配</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>综合报道</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>44 期</A> &gt;  <A HREF='wrapup.html'>综合报道</A> &gt; 硬盘分区及盘符分配</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 硬盘分区及盘符分配 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　硬盘的分区可以理解成把硬盘划分成几个区域，其中所存贮的数据互不干扰。一个硬盘上可以有多个分区，即可有多个不同的操作系统存在于不同的分区中。无论何时，只能有一个操作系统在运行。<br>
+　　基本分区：包含操作系统启动所必须的文件和数据的硬盘分区叫基本分区。系统将从这个分区查找和调用启动操作系统所必须的文件和数据。一个操作系统必须有一个基本分区，也只能有一个基本分区。在一个硬盘上可以有不超过四个的基本分区。<br>
+　　扩展分区：硬盘中扩展分区是可选的，即用户可以根据需要及操作系统的磁盘管理能力而设置扩展分区。在FAT16系统中，一个分区最大为2GB。如果是一个4.3GB的硬盘，那么建立扩展分区就是必要的了。<br>
+　　逻辑分区：扩展分区不能直接使用，要将其分成一个或多个逻辑驱动的区域，也叫逻辑驱动器，才能为操作系统识别和使用。<br>
+　　活动分区：当从硬盘启动系统时，有一个分区并且只有一个分区中的操作系统进入运行，这个运行的分区叫活动分区。在用Fdisk做硬盘分区时，有一步骤是将基本分区激活，含义就是将DOS基本分区定义为活动分区。<br>
+　　从以上介绍可以看出，磁盘分区有基本分区和扩展分区两种基本类型，基本分区根据用户定义可以成为活动分区，扩展分区要分成逻辑分区后才能使用。<br>
+　　当启动操作系统时，操作系统将给基本分区分配一个驱动器号也叫盘符，每个逻辑驱动器也得到一个驱动器号。操作系统在使用这些逻辑硬盘时与使用多个物理硬盘没有什么区别，逻辑盘最多可达23个，即从D：到Z：。<br>
+　　操作系统分配给驱动器盘符的规定如下：A：、B：固定分配给软盘驱动器使用，而不管机器上是否有软盘驱动器存在，C：分配给活动分区，以后按顺序分配给逻辑分区，再分配给光盘驱动器。<br>
+　　如一个6.4GB的硬盘，如果使用FAT32文件系统，只建立一个基本分区，不建扩展分区，则硬盘的驱动器号就是C：，光驱的驱动器号是D：。也可以建立一个基本分区，一个扩展分区，各为3GB，则基本分区的驱动器号为C：，扩展分区的驱动器号为D：，光驱的驱动器号为E：。<br>
+　　如果使用FAT16文件系统，由于其支持的最大分区是2GB，因此可将硬盘划分为一个基本分区2GB，一个扩展分区4.4GB。扩展分区又划分为三个逻辑分区，分别为2GB、1.2GB、1.2GB，启动操作系统后，基本分区将被分配为C：，三个逻辑驱动器依次为D：、E：、F：，光驱为G：。<br><b>
+     （江苏　李亚敏）</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99440702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>CPCW网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

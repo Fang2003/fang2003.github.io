@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- WORD打印文件的应用</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; WORD打印文件的应用</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 WORD打印文件的应用 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　WORD文件打印时，在打印参数设置窗口中有一个选项，叫打印到文件。如果用鼠标点一下使其选中，再点确定进行打印，将弹出一个文件保存窗口，让用 户选择WORD打印文件的保存位置，再确定，WORD的内容将输出到一个打印文件中，默认的文件扩展名是 .prn。<br>
+　　那么什么情况下需要使用这个功能，又如何使用这个功能呢？
+<p><b>　　一、 为什么要使用WORD打印文件？</b></p>
+　　1.普通WORD文件的打印必须要相应版本的WORD的支持，而打印文件不须要WORD的支持，甚至不须要汉字操作系统的支持，这就为WORD文件的异地打印提供了便利。你只要知道异地打印机的型号，就可以将保存的打印文件传递过去打印，而不必担心是否有相应的操作系统，是否有WORD以及是什么版本。<br>
+　　2.在进行文件传送时，为考虑系统和编辑器的兼容性，常使用文本格式，但文本格式损失了全部的文字格式信息，不能处理图片信息。而打印文件则克服了这个缺点，其中包含了打印控制、文字、图片等全部相关信息。<br>
+　　3.prn 文件具有较小的体积，为文件交换提供便利。
+<p><b>　　二、生成打印文件</b></p>
+　　打印操作与正常打印完全相同，在设置打印参数时要将“打印到文件”复选框选上，在弹出的窗口中填好打印文件保存的位置和文件名，确定即可(如图)。  
+<p><b>　　三、打印文件的使用</b></p>
+　　使用打印文件需要先转换到MSDOS方式下，然后用COPY命令将打印文件发送到打印机，命令格式如下：<br>
+　　copy 文件名 prn ／b<br>
+　　命令共四个部分，其中prn 指将输出设备指定为打印机；<br>
+　　／b 指以二进制方式输出，如无此参数，图片等信息可能无法正确打印。
+<p><b>　　四、需要注意的几个问题</b></p>
+　　1.WORD打印文件生成以后，就不能再用WORD等编辑工具打开和编辑了，只能直接发送到打印机。<br>
+　　2.打印时，打印机必须先打开，并连机。<br>
+　　3.生成WORD打印文件时，必须考虑用什么打印机打印这个文件，打印机的选择可在打印参数设置窗口的打印机名称下拉框中选择。选择不同的打印机，生成的打印文件是不同的，如果选用其它打印机,可能打印不出正确的文字格式及图片。<br>
+　　4.打印文件的打印质量和打印参数的各项设置有关。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99451202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

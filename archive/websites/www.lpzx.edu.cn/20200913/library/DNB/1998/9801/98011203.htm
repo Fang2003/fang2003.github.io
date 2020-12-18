@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">一组Visual 
+        Foxpro 使用技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> 
+        &nbsp; <strong>1.给页框架(Pageframe)的标题加背景颜色</strong><br>
+        　　一般给页框架的各个页面加背景颜色时，总是页框架的标题(头部)加不上去，这时可将页框架Pageframe的Tabs特性改为&middot;F&middot;，然后将各个Page分别加入所需背景颜色，再把Tabs特性改为&middot;T&middot; 
+        即可。<br>
+        　　<strong>2.显示符合条件的记录数</strong><br>
+        　　在进行查询或记录筛选时，要返回符合条件的记录数，可用下面代码：<br>
+        　　Public aa0 &amp;&amp;.定义变量<br>
+        　　Count to aa0 &amp;&amp;.符合条件的记录数赋给变量<br>
+        　　Thisform.Text1.Value=aao &amp;&amp;.在文本框中显示出记录数<br>
+        　　<strong>3.网格(Grid)的使用</strong><br>
+        　　〈1〉在网格中交替显示颜色<br>
+        　　记录号有序排列时，可以在网格的列中交替显示白色和灰色的记录，代码如下：<br>
+        　　thisform.Grid1.SetAll(&quot;DynamicBackColor&quot;,&quot;IIF(MOD(RECNO(),2)=0，RGB(255,255,255),RGB(192,192,192))&quot;,&quot;Column&quot;，&amp;&amp;交替显示白色和绿色的记录<br>
+        　　〈2〉符合条件的记录显示颜色<br>
+        进行查询时，想在网格中动态地显示符合条件的记录的颜色，可以充分利用DynamicBackColor和DynamicForeColor特性。下例将符合条件的记录的字体变为红色Thisform.Grid1.Column1.DynamicForeColor=&quot;IIf(Database.Category_ID='A02',RGB(225,0,0),RGB(0,0,124))&quot;<br>
+        　　<strong>4.将自定义的对象加入到窗体上</strong><br>
+        　　〈1〉先建立所需的类。<br>
+        　　〈2〉登记类库。在Options对话框的Classes单中加入类库或在View 
+        Classes中加入类库。以在Form Designer中登记类库为例，其方法为：在工具栏中，选择Vies 
+        Classes按钮；从子选单中，选Add；在Open对话框中，选一类库加入到Controls工具栏并选Open；重复以上过程，直到加入完所要登记的库。此时类库就可显示到控件工具栏。<br>
+        　　〈3〉将对象从类库中加入到窗体<br>
+        　　一旦加入了类库，就可在Form Designer中访问它们。其方法如下：在Control工具栏中，选择View 
+        Classes按钮；从登记为类库列表中，选择包含希望加入到窗体中的控件的库，工具栏中包括所选库中的控件；点击希望的控件，并将其拖到窗体中。<br>
+        &nbsp;&nbsp;&nbsp; <strong>5.组合框Combobox的使用</strong><br>
+        　　〈1〉组合框内要显示多列，可改变ColumnCount特性，但此时若不设置列宽度，将仅显示第一列。可以通过逗号分隔的清单列来指定列宽。如：用“10，50，100”设置三列宽度。<br>
+        　　〈2〉要想让用户每次查找时输入一个字母，把IncrementalSearch特性设置为True，运行时，当用户输入一个字母时，高亮条将移列表中第一个字母和输入字母相匹配的第一条目上。<br>
+        　　〈3〉要将输入的内容加入到下拉列表中，可在组合框的Valid事件中加入This.Additem(This.Displayvalue)代码。<br>
+        　　以上小技巧在Visual FoxPro 3.0和Visual Foxpro 5.0上均有效。<strong>（辽宁 
+        李宏明）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

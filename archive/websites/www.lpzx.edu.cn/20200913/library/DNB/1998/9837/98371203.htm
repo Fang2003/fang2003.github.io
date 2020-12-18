@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>教你制作启动光盘</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>教你制作启动光盘<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp; 
+        　启动光盘是指可以启动计算机的一种特殊光盘，可分为单引导和多重引导启动光盘两种，由于资料较少，一般电脑爱好者都觉得无从下手。下面就把我的制作方法介绍给大家。<br>
+        　　一、制作准备<br>
+        　　1你应有CD－R刻录软件，如Easy CD Creator 3.01等，要求能支持ISO9006映射文件的制作即可。<br>
+        　　2BootcatX.bin文件。<br>
+        　　3Mkbootcd.exe文件。<br>
+        　　4Getbtimg.exe文件。<br>
+        　　5开机操作系统的启动盘，如DOS 6.2或Win95的启动盘。<br>
+        　　6光盘刻录机。<br>
+        　　7支持光盘启动的主板及光驱。<br>
+        　　二、制作过程（以Easy CD Creator 3.01为例）<br>
+        　　1用Getbtimg.exe生成启动映射文件（MS－DOS环境）<br>
+        　　格式：Getbtimg 盘符 生成文件名<br>
+        　　如：Getbtimg A:win95.img<br>
+        　　Getbtimg A:dos622.img<br>
+        　　如要多重引导，请重复以上操作多次，把所有文件一次生成。<br>
+        　　2制作ISO文件。启动刻录软件，按一般程序制作，把BOOTCATXBIN及所有映射文件＊IMG放在最前面，然后选“File”菜单“Create 
+        Disc image”保存成ISO文件，如BOOTCDISO。注意，一定要先把这几个文件拖到录制窗口最前面，然后才拖其他要放在光盘里的文件，否则有可能此CD不能启动计算机。<br>
+        　　3用Mkbootcd.exe修改生成的IOS文件（MS－DOS环境）。<br>
+        　　格式：Mkbootcd.iso文件名 BootcatX.bin 映射文件1 映射文件2<br>
+        　　如：Mkbootcd bootcd.iso bootcatx.bin win95.img dos622.img<br>
+        　　Mkbootcd bootcd.iso bootcatx.bin win95.img dos622.img win98.img<br>
+        　　(注：＊.img文件的顺序和刻好光盘的启动顺序相匹配）<br>
+        　　4把修改好的ISO文件用刻录软件刻录到空白CD－R盘片上。选“File”菜单“Create 
+        CD form Disc image”后弹出文件选择对话框，选择BOOTCD.ISO，完成后刻录到光盘上。<br>
+        　　5完成，启动计算机，设BIOS为CD－ROM优先启动。即可重新启动计算机试一下了。<br>
+        　　6以上是制作多重引导的启动光盘的过程，如单引导则只制作一个＊.img文件，其它方法一致。另外单引导的启动光盘还有专门软件可制作，如Easy 
+        CD Creator 3.01、Nero 3.0等，制作方法较简单。<br>
+        　　7建议：在制作ISO文件时，一般来说只制作几个启动文件，刻录好以后再录其它文件。这样制作和修改好的ISO文件以后都可以使用。而不必每次都重复以上操作。<br>
+        　　如果大家还有什么问题，欢迎来信交流stdyc@163.net。(广东　杜燕程)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

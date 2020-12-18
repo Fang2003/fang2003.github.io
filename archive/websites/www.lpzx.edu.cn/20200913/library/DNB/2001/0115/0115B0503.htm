@@ -1,0 +1,154 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用Delphi程序控制Excel操作</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0115/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0115/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0115/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用Delphi程序控制Excel操作 
+              <!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 使用VBA可以随心所欲地操作Excel。同样，使用Delphi也能完全控制Excel的所有功能。下面，我们以一个例子来入手吧。 
+              在窗口Form1上面加入组件5个Button和1个Checkbox组件，在Uses中加入Comobj单元，在Private加入下面的私有变量： 
+              private vVariant Sheet Variant  Private declarations  在单击事件中加入如下代码： 
+              procedure TForm1.Button1ClickSender TObject begin//打开EXCEL新建文件 
+              try v= CreateOleObject'Excel.Application' v.Visible = CheckBox1.Checked//是否显示EXCEL 
+              v.Workbooks.Add//新建EXCEL文件 v.Workbooks1.WorkSheets1.Name = '电脑报'//第一页标题 
+              v.Workbooks1.WorkSheets2.Name = '编程乐园' v.Workbooks1.WorkSheets3.Name 
+              = '都来看呀' // Sheet= v.Workbooks1.WorkSheets'DELPHI演示'//等效下面的语句 
+              Sheet= v.Workbooks1.WorkSheets1 Sheet.Cells11='好看'//单元格内容 
+              Sheet.Cells12='确实' Sheet.Cells21='我喜欢' Except//错误处理 Showmessage'初始化Excel失败，可能没装Excel，或者其他错误；请重起再试。' 
+              v.DisplayAlerts = false//是否提示存盘 v.Quit//退出EXCEL exit end Application.Restore 
+              Application.BringToFront end 其中，Comobj中包含了用来检索OLE的对象和向它传发命令的例程，第一行代码启动Excel但Excel这时是不可见的，只是在后台运行，所以第二行代码根据CheckBox1.Checked来确定是否显示EXCEL运行界面。如果要需要打开本身存在的EXCEL文件，则用v.Workbooks.OpenOpenDialog1.FileName代替v.Workbooks.Add就可以了。 
+              Sheet对象是很多页的集合，其他的Workbooks是工作簿的集合，WorkSheets对象是工作表的集合，Charts对象是图表的集合。 
+              //EXCEL文档格式设置 procedure TForm1.Button5ClickSender TObject var 
+              Range Variant begin if OpenDialog1.Execute then begin try v= 
+              CreateOleObject'Excel.Application' v.Visible = CheckBox1.Checked 
+              v.Workbooks.OpenOpenDialog1.FileName Range = v.Workbooks1.WorkSheets1.Range'A2G2'//单元格从A2到M2 
+              Range.Merge //合并单元格 Range.Rows.RowHeight = 50 //设置行高 Range.Borders.LineStyle 
+              = 1 //加边框 Range.Columns2.ColumnWidth = 12 // 设置列宽 Range.FormulaR1C1 
+              = '合并区' Range.HorizontalAlignment = 3//xlCenter水平对齐方式 Range.VerticalAlignment 
+              = 2//xlCenter垂直对齐方式 Range.Characters.Font.Name = '宋体' //字体 
+              Range.Characters.Font.FontStyle = '加粗' Range.Characters.Font.Size 
+              = 15 Range.Characters.Font.OutlineFont = False//是否有下划线 Range.Characters.Font.ColorIndex 
+              = 0//xlAutomatic//颜色 except //出错处理，同Button1 end end end //EXCEL打印页面设置及打印预揽 
+              procedure TForm1.Button4ClickSender TObject begin if OpenDialog1.Execute 
+              then begin try v= CreateOleObject'Excel.Application' v.Visible 
+              = CheckBox1.Checked v.Workbooks.OpenOpenDialog1.FileName Sheet=v.Workbooks1.WorkSheets1 
+              Sheet.PageSetup.PrintTitleRows ='$1$3' //页眉 Sheet.PageSetup.PrintTitleColumns 
+              = '' Sheet.PageSetup.LeftFooter = ' 注：页脚'+' 总共&N页'+'--第&P页' 
+              //页脚 Sheet.PageSetup.LeftMargin = 30 //设置边距 Sheet.PageSetup.RightMargin 
+              = 30 Sheet.PageSetup.TopMargin = 30 Sheet.PageSetup.BottomMargin 
+              = 50 // Sheet.PageSetup.PrintQuality = 400 //分辨率根据打印机确定 Sheet.PageSetup.CenterHorizontally 
+              = True//是否水平居中 Sheet.PageSetup.CenterVertically = True //是否垂直居中 
+              Sheet.PageSetup.Orientation = 2 //横向打印 Sheet.PageSetup.Draft = 
+              False //非草稿模式 // Sheet.PageSetup.FirstPageNumber = xlAutomatic 
+              Sheet.PageSetup.BlackAndWhite = True //黑白稿 Sheet.PageSetup.Zoom 
+              = 100 //缩放 sheet.PrintPreView //打印预览 except //出错处理 end end 
+              end 最后就是要关闭Excel了。在创建了Excel Application对象后，调用它的Quit方法完成关闭事件。 //关闭EXCEL并退出 
+              procedure TForm1.Button3ClickSender TObject begin try If not 
+              varIsEmptyv then begin // 如果需要在关闭前确定是否存盘，加入： // v.DiaplayAlert=true 
+              //确定存盘 // v.DiaplayAlert=false//不存盘，直接退出 v.WorkBooks1.CloseTrue 
+              'C\untitled.xls'//取文件名退出 v.quit end finally Close end end<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,156 @@
+ 
+<HTML>
+<!-- #BeginTemplate "/Templates/software.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='epcw.css' TYPE='text/css'>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>电脑报电子版 -- 用VB编写&amp;quot;投注&amp;quot;程序</TITLE>
+<!-- #EndEditable --> 
+<style type="text/css">
+<!--
+.centertitle {  font-weight: bold; text-align: center; line-height: 35px; font-size: 9pt; color: #000000}
+.lefttitle {  line-height: 35px; font-weight: bold; font-size: 9pt; color: #000000}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR='white'>
+<span class="centertitle"></span> 
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR VALIGN='top'> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+  <TR> 
+    <TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.yesky.com'><IMG SRC='images/logo.gif' WIDTH='140' HEIGHT='60' ALT='天极网' BORDER='0'></A></TD>
+    <TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'> 
+      <a href="http://chat.yesky.com"><img src="images/0823-3.gif" width="468" height="60" border="0"></a>
+    </TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR VALIGN='bottom'> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<table width='615' border='0' cellspacing='0' cellpadding='2' align='Center'>
+  <tr> 
+    <td width='615' colspan='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/index.html'>CPCW电子版</A> 
+      &gt; <A HREF='http://www.cpcw.com/issue/all.html'>2000年</A> &gt; <a href="index.html"><!-- #BeginEditable "%C6%DA" -->25期<!-- #EndEditable --></a> 
+      &gt; <!-- #BeginEditable "%C0%B8%C4%BF" --><a href="software.html">软件世界</a><!-- #EndEditable --> 
+      &gt; <!-- #BeginEditable "%B1%EA%CC%E2" -->用VB编写&quot;投注&quot;程序<!-- #EndEditable --></td>
+  </tr>
+</table>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+  <TR ALIGN='center' VALIGN='bottom'> 
+    <TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+  <TR> 
+    <TD><SPAN CLASS='title'>《 <!-- #BeginEditable "%CE%C4%D5%C2%CD%B7" -->用VB编写&quot;投注&quot;程序<!-- #EndEditable --> 
+      》</SPAN></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR> 
+    <TD><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->
+      <p>　　时下全国各地都在搞“电脑型福利彩票”，相信很多读者朋友都参与过或正准备参与吧，笔者也是一个“彩民”，已为中国福利事业贡献了XXX元了，不过好像运气不怎么好，至今连个末等奖也未中到。在投注时，彩号可以自己在投注单上选，也可以通过投注机随机选取。那么，想不想自己编个程序来模拟“机选”呢？好！那就接着往下看吧！<br>
+        　　首先，新建一个单窗体的工程，在上面画出七个TEXTBOX，最好是一个控件数组，这样编程时容易控制，再建一个COMMOND BUTTON，将CAPTION改为“随机产生”。在程序运行后，每点击一下COMMAND1，将随机产生一组数字并按从小到大的顺序显示在文本框中。下面就是程序部分：<br>
+        　　Dim NumArray(1 To 7) As Integer′通用中定义<br>
+        　　Private Sub Command1_Click()<br>
+        　　Dim i, j, N As Integer<br>
+        　　For i = 1 To 7<br>
+        　　NumArray(i) = 0<br>
+        　　Next i<br>
+        　　Randomize<br>
+        　　NumArray(1) = Fix(1 ＋ 32 ＊ (Rnd()))<br>
+        　　j = 1<br>
+        　　Do<br>
+        　　N = Fix(1 ＋ 32 ＊ (Rnd()))<br>
+        　　For i = 1 To j<br>
+        　　If N = NumArray(i) Then<br>
+        　　Exit For ′重复时<br>
+        　　ElseIf i = j Then ′未重复时<br>
+        　　NumArray(i ＋ 1) = N<br>
+        　　j = j ＋ 1<br>
+        　　Exit For<br>
+        　　End If<br>
+        　　Next i<br>
+        　　Loop While j &lt; 7<br>
+        　　PopSort ′升序排列<br>
+        　　For i = 1 To 7<br>
+        　　Text1(i － 1).Text = NumArray(i)<br>
+        　　Next i<br>
+        　　End Sub<br>
+        　　Private Sub PopSort() ′气泡排序法<br>
+        　　Dim i, j, Temp As Integer<br>
+        　　For i = 7 To 2 Step －1<br>
+        　　For j = 7 － 1 To 1 Step －1<br>
+        　　If i &gt;= 7 － j ＋ 1 Then<br>
+        　　If NumArray(j ＋ 1) &lt; NumArray(j) Then<br>
+        　　Temp = NumArray(j)<br>
+        　　NumArray(j) = NumArray(j ＋ 1)<br>
+        　　NumArray(j ＋ 1) = Temp<br>
+        　　End If<br>
+        　　End If<br>
+        　　Next j<br>
+        　　Next i<br>
+        　　End Sub<br>
+        　　本程序在VB6.0中文企业版、Win98SE中文版下调试通过。为了简捷起见，这个程序还有很多不尽如人意的地方，比如不能保存等，喜欢编程的朋友可以充分发挥自己的聪明才智对其加以扩充，有兴趣的朋友可给我发E－MAIL：dangbochang@263.net。</p>
+      <p align="right"><br>
+        （重庆　党博昌）</p>
+      <!-- #EndEditable --></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR> 
+    <TD>&nbsp;</TD>
+    <TD ALIGN='right'><A HREF='00251812.htm#top'>页 首</A></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+  <TR ALIGN='center' VALIGN='bottom'> 
+    <TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR ALIGN='center'> 
+    <TD>&nbsp;</TD>
+    <TD> <a name='top'></a> <img src='http://cq.cpcw.com/cgi-bin/Count.cgi?ft=2|md=8|df=cpcw.dat|dd=E|cache=F|expires=18000' width='1' height='1' alt='312345678'> 
+      <script language='JavaScript'>
+document.write('<a href=http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw target=_blank><img src=\'http://best.nease.net/cgi-bin/log.cgi?user=cpcw&refer='+escape(document.referrer)+'&cur='+escape(document.URL)+'\' border=0 alt=\'网易中文排行榜\' width=15 height=15></a>');
+</script>
+      <noscript> <a href='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' target='_blank'> 
+      <img src='http://best.nease.net/cgi-bin/log.cgi?user=cpcw&refer=http%3A//www.cpcw.com/&cur=http%3A//www.cpcw.com/issue/1999/50/99500302.html#NoJavaScript' width='1' height='1' border='0' alt='网易中文排行榜'></a> 
+      <!-- Start of NedStat Basic code --> <a href="http://usa.nedstatbasic.net/cgi-bin/viewstat?name=cpcwissue"><img
+src="http://usa.nedstatbasic.net/cgi-bin/nedstat.gif?name=cpcwissue"
+border=0 alt="" nosave width=1 height=1></a> <!-- End of NedStat Basic code --> 
+      <!-- Start of ReferStat --> 
+      <script type="text/javascript" language="JavaScript">
+<!--
+d=document;
+d.write("<img src=\"http://usa.nedstatbasic.net");
+d.write("/cgi-bin/referstat.gif?");
+d.write("name=cpcwissue&refer=");
+d.write(escape(top.document.referrer));
+d.write("\" width=1 height=1 align=\"right\">");
+// -->
+</script>
+      <!-- End of ReferStat --></noscript> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW版权所有</A>，<A HREF='mailto:webmaster@staff.yesky.com'>YESKY天极网编辑部</A>设计制作发布<script language="JavaScript" src="http://www.lpzx.edu.cn/library/DNB/download/yeskye.js">
+</script></TD>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

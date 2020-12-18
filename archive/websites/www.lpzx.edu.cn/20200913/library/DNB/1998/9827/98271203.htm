@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>　通过“我的电脑”直接启云动资源管理器 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　<strong>　</strong>一般情况下，我们双击桌面上“我的电脑”图标就可打开“我的电脑”窗口，并对各种系统资源(如硬盘、软盘、控制面板、打印机等)进行管理，操作比较方便。不过有些用户可能希望在双击“我的电脑”图标后打开其他应用程序，如资源管理器或注册表编辑器等，这并不是什么难事，我们只需通过修改注册表即可达到目的。现以双击桌面上的“我的电脑”图标后直接启动资源管理器为例向大家做一个介绍：<br>
+        　　1单击Windows95的“开始”菜单，执行“运行”命令。<br>
+        　　2在弹出的“运行”对话框中输入“REGEDIT”。<br>
+        　　3单击“确定”按钮，启动Windows95的注册表编辑器。<br>
+        　　4在注册表编辑器的左边依次双击“HKEY_CLASSES_ ROOT”、“CLSID”、“{20D04FE0－3AEA－1069－A2D8－08002B30309D}”、“shell”项，展开“shell”主键。<br>
+        　　5用鼠标右击注册表编辑器右边的空白处，然后执行“新建”菜单中的“主键”命令。<br>
+        　　6此时系统会在shell分支中建立一个新的主键，其缺省的名称为“New 
+        Key ＃1”。<br>
+        　　7用鼠标右击该主键，然后执行快捷菜单中的“重命名”命令。<br>
+        　　8将“New Key ＃1”改名为“open”。<br>
+        　　9展开open主键，然后重复5～8步，在open主键下再新建一个“command”主键。<br>
+        　　10双击“command”主键下的“(默认)”字符串，系统弹出“编辑字符串”对话框。<br>
+        　　11在“编辑字符串”对话框的“键值”栏中输入“explorer /e,c:\”。<br>
+        　　12单击“确定”按钮，关闭“编辑字符串”对话框。<br>
+        　　13执行注册表编辑器“注册表”菜单的“退出”命令，关闭注册表编辑器。<br>
+        　　此后，双击“我的电脑”图标时，打开的就不再是“我的电脑”窗口，而是Windows95的资源管理器了，从而满足了用户的一些特殊要求，非常方便。另外，我们在使用这一功能时还应注意以下几点：<br>
+        　　1进行上述修改之后，双击“我的电脑”图标将直接启动资源管理器(或其它程序)，而不会打开“我的电脑”窗口。广大用户如果希望打开“我的电脑”窗口，则应右击“我的电脑”图标，然后从弹出的快捷菜单上执行“打开”命令(注意，有时在快捷菜单上可能会出现两个“打开”命令，其中前一个“打开”命令将打开“我的电脑”窗口，后一个“打开”命令用于打开资源管理器，用户可根据需要加以选择使用)。<br>
+        　　2我们在第11步输入“explorer /e,c:\”中的“c:\”用于表示资源管理器启动时的缺省打开路径，这里表示直接打开C盘的根目录，用户如果希望打开其他目录，则应直接加以指定。如某用户希望在双击“我的电脑”图标后自动启动资源管理器并打开“D:\Windows”目录，只需在第11步中输入“explorer 
+        /e,D:\Windows”即可。<br>
+        　　3用户如果希望双击“我的电脑”图标后启动的不是资源管理器，而是其他有关应用程序，则可将“explorer 
+        /e,c:\”修改为其他相关应用程序的程序名。我们若将其改为“REGEDIT”命令，则在每次双击桌面上的“我的电脑”图标都会启动Windows95的注册表编辑器，其他应用程序也是如此，非常方便。<br>
+        　　4我们如果需要还原系统的原始设置(即双击“我的电脑”图标直接打开“我的电脑”窗口)，则只需将11步输入的“explorer 
+        /e,c:\”删除即可。 <strong> (湖北　胡锦承) <br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

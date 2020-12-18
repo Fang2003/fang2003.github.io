@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 解决WPS 2000非正常删除后的重安装问题</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 解决WPS 2000非正常删除后的重安装问题</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 解决WPS 2000非正常删除后的重安装问题 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在使用WPS 2000的过程中，如果我们在非常情况下把它删除后重新安装，系统会出现如下提示：“WPS 2000已经安装。请先执行卸载程序将WPS 2000卸载后，再进行安装”，这时安装无法继续进行，这是因为WPS 2000在安装时系统首先检查计算机有没有安装过WPS 2000，如果安装过，系统拒绝重新安装。在非常情况下删除WPS 2000，Windows系统注册表中还有大量的WPS 2000注册信息。如想恢复安装，必须把Windows系统注册表中有关WPS 2000的注册信息全部删除。具体方法可按以下步骤进行。注意，在修改Windows注册表前一定要先备份。<br>
+　　对于熟悉Windows系统注册表的朋友，可将注册表打开。删除以下4个主键值中有关WPS 2000注册信息的主键即可。<br>
+　　1.HKEY－CLASSES－ROOT\WPSFile<br>
+　　2.HKEY－CURRENT－USER\Software\Kingsoft<br>
+　　3.HKEY－LOCAL－MACHINE\Software\CLASSES\WPSFile<br>
+　　HKEY－LOCAL－MACHINE\Software\Microsoft\Shard Tools\TextConverters\Lmport\WPS2000<br>
+　　HKEY－LOCAL－MACHINE\Software\Windows\Current Version\Apppaths\winwps32.Exe<br>
+　　HKEY－LOCAL－MACHINE\Software\Windows\Current Version\Uninstall\WPS 2000专业版<br>
+　　4.HKEY－USER\.DEFAULT\Software\Kingsoft<br>
+　　对于不熟悉Windows注册表的朋友方法如下：<br>
+　　1.单击注册表编辑器中“编辑”菜单，使用“查找”命令，打开“查找”对话框。<br>
+　　2.在“查找目标”文本框中输入“WPS 2000”回车，我们可将搜索到的数据或存有该数据的主键删除，然后再单击“编辑”菜单，使用“查找下一个”命令，将查到的数据或存放该数据的文件夹删除。以上操作反复进行，直到出现“完成对注册表的搜索”提示后，WPS 2000的注册信息已全部删除。<br>
+　　3.关闭注册表编辑器。经过以上操作，WPS 2000注册信息将被全部删掉，这时再安装WPS 2000就可以顺利进行了。解决WPS 2000专业版与家庭版共存的问题。WPS 2000专业版和家庭版各有特色，专业版能使你做出更高质量的文本，而家庭版则更适用于家庭。选择哪个?笔者实在难以取舍，于是又打起了注册表的主意，经过一番测试后，实现了两个版本的同时安装，方法如下：<br>
+　　1.先安装一个版本的WPS 2000。<br>
+　　2.打开注册表，找到主键HKEY－LOCAL－MACHINE\Software\Kingsoft\WPS 2000，将其删除。<br>
+　　3.再安装另一个版本的WPS 2000。<br>
+　　注意：删注册表内的主键时不要多删，安装另一版本的WPS 2000时不要安装在同一目录下。<br><b>(重庆　邹琳)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99501204.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

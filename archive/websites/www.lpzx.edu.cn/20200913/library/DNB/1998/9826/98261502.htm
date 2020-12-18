@@ -1,0 +1,94 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>“草稿纸”MATLAB 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　<strong> </strong>MATLAB是控制系统的一种分析和仿真工具。在国外，尤其是在美国，各著名大学在80年代末就已把MATLAB列入电气工程类专业课程的教学计划。成为大学生和研究生必修课程和实验环境中必须掌握的工具。<br>
+        　　与早期的版本相比，目前的版本MATLAB 4.X，在建立向量、数组和矩阵方面，使用更方便，界面更友好。输出结果可视化，深受用户的欢迎。它的应用也由最初的自动控制领域逐步向信号处理、图像处理以及工程问题求解等领域发展。<br>
+        　　运行MATLAB会在计算机屏幕创建一个或多个窗口。其中，命令窗口是用户与MATLAB进行交互的主要场所(Matlab 
+        Command Window)，如图1所示。<br>
+        　　<strong>一、数学运算</strong><br>
+        　　如同一个计算器，MATLAB 
+        做到与“草稿纸”一样，用户输入式子，便输出结果。<br>
+        　　如：&gt;&gt;4＊25＋6＊22＋2＊99　注：&gt;&gt;代表光标处<br>
+        　　ans=<br>
+        　　430<br>
+        　　有时我们遇到不容易求解问题．如：x＊＊4－12X＊＊3＋0X＊＊2＋116=0的根，注：＊＊为乘方<br>
+        　　&gt;&gt;p=[1 －12 0 25 116]<br>
+        　　&gt;&gt;r=roots(p)<br>
+        　　r=11.7473<br>
+        　　2.7028<br>
+        　　－1.2251＋1.4672 i<br>
+        　　－1.2251－1.4672 i<br>
+        　　是不是很方便! MATLAB能为你求解：数组和矩阵的各类运算、多项式的根、乘法、除法、加法、减法、微分、积分和傅立叶变换等运算。<br>
+        　　<strong>二、数值分析</strong><br>
+        　　面对一堆纷繁数据，你不得不花很多精力用高级语言编程序求解，但如果你拥有了MATLAB，这个过程就简单多了。瞧三个城市某月的最高温度变化分析，只需输入简单的几行，就可得出结果(如图2所示)。<br>
+        　　&gt;&gt;temps1=[<br>
+        　　12 15 12 14 12 11 15 8 19 12 14 11 9 8 15 8 10 129 12 12 10 139 10 14 12 13 15 13 12；<br>
+        　　　 8 9 5 86 9 9 10 77 10 8 7 88 9 7 7 88 8 9 12 10 6 7 5 7 10 11 12 ； 18 22 19 23 
+        22 19 15 20 18 18 19 17 23 19 18 20 17 22 19 21 20 17 18 20 22 21 22 18 23 24 22]<br>
+        　　&gt;&gt;temps=temps1'<br>
+        　　&gt;&gt;d=1:31; <br>
+        　　&gt;&gt;plot(d,temps) <br>
+        　　&gt;&gt;xlabel(‘每天最高温度’），ylabel（‘摄氏度’） <br>
+        　　&gt;&gt;title(‘三个城市每日高温（单位C)’） 同样你可以利用MATLAB函数处理各类数据。<br>
+        　　<strong>三、绘制图形</strong><br>
+        　　MATLAB能轻松绘出二、三维图。<br>
+        　　输入如下命令就可得到如图3所示的漂亮图画。<br>
+        　　&gt;&gt;y,z〗=peaks(30); <br>
+        　　&gt;&gt;surfl(x,y,z) ％有亮度的曲面图<br>
+        　　&gt;&gt;shading interp ％插值加色彩<br>
+        　　&gt;&gt;colormap pink ％单一色彩曲面图<br>
+        　　&gt;&gt;grid,xlabel(‘X－axis’),ylabel(‘Y－axis’),zlabel(‘Z－axis’) <br>
+        　　&gt;&gt;title('surfl of peaks') <br>
+        　<strong>　四、自动控制系统仿真</strong><br>
+        　　在命令窗口（matlab command window)键入simulink，就出现(SIMULINK) 
+        窗口。以往十分困难的系统仿真问题，用SIMULINK只需拖动鼠标即可轻而易举地解决问题。<br>
+        　　(SIMULINK)系统模型库如图4所示：<br>
+        　　Sources(输入源) Sinks(输出方式) Discrete(离散时间模型) Linkear(线性环节) 
+        Nonlinear(非线环节) Connections(连接及接口) Extras(其他环节)。<br>
+        　　若想建立一个控制系统结构框图，则选取File/New菜单项，出现Untiled编辑窗口，双击模型库中子模块（如：Sources），就出现如图5所示的Sources窗口，其中包括阶跃函数(Step 
+        Fcn)、正弦函数（Sin Wave)、白噪声函数、时钟、常数、MATLAB空间变量、信号发生器的图标。<br>
+        　　例：观察正弦函数输出波形。<br>
+        　　建立结构框图， 点取Sources窗口(Sin Wave)拖动复制到Untiled编辑窗口，然后从Sinks(输出方式)的子模块中点取视波器（Scope）拖动复制到Unitled编辑窗口，用鼠标先点一下起点模块的输出端（三角符号），然后拖动鼠标，这时出现一条带箭头的直线，将它的箭头拉到终点模块的输入端再释放鼠标键，两个模块连接起来。选取Unitled 
+        编辑窗口中Simulation/start,即可通过双击结构框图中视波器（Scope）观察(如图6所示)。<br>
+        　<strong>　五、在线Internet</strong><br>
+        　　该软件由Mathworks公司开发，（在 www.mathworks.com/可找该软件的信息，并提供了pdf格式的文档下载）。还可以发E－mail:suport@math 
+        works.com 寻求技术支持。<strong>(福建　张卫海)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年26月26日第26期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

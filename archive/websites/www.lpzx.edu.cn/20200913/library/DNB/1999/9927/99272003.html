@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 巧改硬件防CIH病毒</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>27 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 巧改硬件防CIH病毒</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 巧改硬件防CIH病毒 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　从去年8月CIH病毒发作以来，《电脑报》上经常有关于如何进行BIOS保护以及补救的文章。但我却发现没有一篇提到如果主板不支持BIOS跳线保护时该怎么办。很不幸，我的微星MS－5169主板就属于这种类型。当初买这款主板时，销售商就说怕CIH的攻击。从此我就只能靠实时反病毒程序维护系统了。现在我要从根本上防止CIH病毒侵入，是否一定要更换主板？难道没有别的办法了吗？回答是：有！我终于找到了彻底解决的办法。<br>
+　　用AMIFL815.EXE刷新程序可以测定出我的BIOS为Winbond W29EE011－15的芯片，属29系列。根据某杂志上《阻止CIH病毒对硬件的破坏》一文所述，BIOS芯片的第31脚“WE从高电平变成低电平时，一个字节的数据才能写入到EPROM”，并建议将31脚与＋5V电源相连产生高电平以保护BIOS。而根据《电脑报》1998年第41期上《跳线一定能保护BIOS吗？》一文得知，Winbond的芯片不需要更改电压就可以进行写入，那加不加电压还有什么作用？更令人不解的是，我用万用表测量BIOS第31脚WE与16脚Vss地线之间的电压差始终为5V，量第1脚也是5V，WE脚已经是高电平了，芯片却始终是可写的，那该怎么办，难道文章里写错了？事实上我的主板还找不到可以更改电压的跳线，用万用表检量的结果也是如此。根据资料，Flash BIOS（EPROM）的引脚 1为写入电压Vpp，16脚为地线Vss，31脚为写WE, 32脚为芯片电源Vcc。难道我的机器就真的没法修改？ <br>
+　　山穷水尽疑无路，柳暗花明又一村。在冥思苦想后忽然想到，干脆让第1脚写入电压变为0V会是什么结果呢？急忙取出BIOS，将第1引脚拗平（折到芯片腹内侧，不要弄断，使之不能与插座相连，以后还可以恢复），再插回BIOS插座，执行刷新程序仍可写入。这回我可真的没辙了，一气之下，把31脚也拗平试试看（自己的东西，要是坏了只好自己赔了^_^)。真是奇迹，再运行AMIFL815.EXE，程序报告说芯片的引脚无效，要求确认芯片未进行写保护！其他操作均不能进行。为了防止这是偶然现象，我再改用AMIFL645.EXE与AMIFL523.EXE强行写入BIOS文件，这两个程序更干脆，宣布BIOS写入失败，锁死了系统并要求我关闭电源（重新启动）。现在确认，这种方法成功了！<br>
+　　限于条件，没有在其他机子上进行这样的试验，但据电子元件的一般特点，只要是Flash BIOS, 就应该可以使用上述方法，不过我建议大家针对自己的BIOS芯片类型多查一些资料会更保险一点。最主要的是，这种方法省去了更换主板、更换BIOS或更改主板电路等复杂而不现实的方法，不要任何成本，“无需忍痛，一身轻松”。现在，还想要再对BIOS进行升级刷新怎么办？太简单了，只要拿一枚大头针，用钳子把尖的一头压平，再插入插座第31脚座里，上端与BIOS芯片31脚相触即可，实际上，这比用跳线还方便。<br>
+　　有兴趣的朋友完全可以试一试上面的方法，希望这篇文章能给大家一点帮助。<br>
+<b>(张国华)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/27/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99272003.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD></TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,114 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VB实现客户——服务器（TCP/IP）编程实例</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+  <TR> 
+    <TD WIDTH='468' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top' colspan="2"><img src="images/dzba.gif" width="468" height="60"></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9938.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9938.html'>38 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VB实现客户——服务器（TCP/IP）编程实例</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VB实现客户——服务器（TCP/IP）编程实例 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现在大多数语言都支持客户－服务器模式编程，其中VB给我们提供了很好的客户－服务器编程方式。下面我们用VB来实现TCP／IP网络编程。<br>
+　　TCP／IP协议是Internet最重要的协议。VB提供了WinSock控件,用于在TCP／IP的基础上进行网络通信。当两个应用程序使用Socket进行网络通信时，其中一个必须创建Socket服务器侦听，而另一个必须创建Socket客户去连接服务器。这样两个程序就可以进行通信了。<br>
+　　1．创建服务器，首先创建一个服务端口号。并开始侦听是否有客户请求连接。<br>
+　　建立一窗体，并向其增加一个Winsock控件(可在工程菜单中的部件项来添加此控件)<br>
+　　添加两文本框Text1,Text2,和一按钮Command1  <br>
+　　Private Sub Form_Load()<br>
+　　SockServer.LocalPort = 2000 ′服务器端口号,最好大于1000<br>
+　　SockServer.Listen  ′开始侦听<br>
+　　End Sub<br>
+　　Private Sub Form_Unload(Cancel As Integer)<br>
+　　SockServer.Close<br>
+　　End Sub<br>
+　　Private Sub SockServer_Close()<br>
+　　SockServer.Close<br>
+　　End Sub<br>
+　　Private Sub SockServer_ConnectionRequest(ByVal requestID As Long)<br>
+　　SockServer.Close  <br>         
+　　SockServer.Accept requestID  ′表示客户请求连接的ID号<br>
+　　End Sub<br>
+　　′当客户向服务器发送数据到达后,产生DataArrival事件,在事件中接收数据,GetData方法接收数据。<br>
+　　Private Sub SockServer_Data<br>
+Arrival(ByVal bytesTotal As Long)<br>
+　　Dim s As String<br>
+　　SockServer.GetData s<br>
+　　Text1.Text = s<br>
+　　End Sub<br>
+　　当我需要向客户发送数据时，只需调用SendData方法。<br>
+　　Private Sub Command1_Click()<br>
+　　SockServer .SendData Text2.Text<br>
+　　End Sub<br>
+　　2．创建客户。要创建客户连接服务器，首先设置服务器主机名，如IP地址、域名或计算机名，然后设置服务器端口，最后连接服务器。<br>
+　　建立一窗体，并向其增加一个Winsock控件(可在工程菜单中的部件项来添加此控件)，取名为：SockC1。添加两文本框Text1,Text2,和一按钮Command1<br>
+　　Private Sub Form_Load()<br>
+　　SockCl.RemoteHost =′127.0.0.1″<br>
+　　′表示服务器主机名<br>
+　　SockCl.RemotePort = 2000     <br>
+　   ′表示服务器端口名<br>
+　　SockCl.Connect<br>
+     ′连接到服务器 <br>
+　　End Sub<br>
+　　Private Sub Form_Unload(Cancel As Integer)<br>
+　　SockCl.Close<br>
+　　End Sub<br>
+　　Private Sub SockCl_Close()<br>
+　　SockCl.Close<br>
+　　End Sub<br>
+　　Private Sub SockCl_DataArrival(ByVal bytesTotal As Long)<br>
+　　Dim s As String<br>
+　　SockCl.GetData s   ′接收数据到文本框中<br>
+　　Text1.Text = s<br>
+　　End Sub<br>
+　　Private Sub Command1_Click()<br>
+　　SockCl.SendData Text2.Text   ′向服务器发送数据<br>
+　　End Sub<br>
+　　3．进行通信。把这两个窗体分别编译成两个EXE文件，服务器Server.exe和客户Client.exe程序，并把它们分别安装在服务器端和客户端，这样就可以实现两者通信了。  <br><b>(河北　郝一霜)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/38/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99381303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

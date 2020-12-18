@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 声卡芯片的过去与未来（中）</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><img src="images/cpcw.gif" width="468" height="60" border="0"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>30 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 声卡芯片的过去与未来（中）</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 声卡芯片的过去与未来（中） 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<b>一、声卡的结构体系</b><br>
+　　声卡的结构体系并不复杂，概括地讲可以分为：音效芯片/芯片组、音效CODEC(数字信号编解码器)芯片、功率放大芯片和波表音色库等几部分（如下图所示）。<br>
+　　其中，音效芯片/芯片组是声卡的核心，它的功能是对数字化的声音信号进行各种处理。音效芯片能够使用的数字音源有以下几种：首先是普通音频信号(包括WAV文件、CD唱片)或由CODEC芯片或S/P DIF接口送来的信号，因为未经压缩处理，数据量十分惊人；其次是MIDI，MIDI是一系列生成音乐的指令，由芯片接收后运用FM或波表合成等方式合成音乐，数据量较少，易于存储、传输；其他的数据格式，如Dolby Digital（AC－3）和DTS（数字影院系统）数据流等，也得到部分芯片的支持。音效芯片的处理功能有：一是混音，即将多个不同的音频数据流合二为一，再通过CODEC变为音频放出来；二是特殊音效的处理，如简单的高低音调调节功能或较复杂的3D声像扩展功能，至于3D声源定位和环境音效的处理更是运算密集型工作。所有这些数据处理工作都由芯片上的控制核心配合DSP（数字信号处理）核心来完成。近来的音效芯片还往往集成了S/P DIF数字信号的接口，可以传输较长距离的数字信号。另外，很多芯片还具有ACAPI、APM等高级电源管理功能。<br>
+　　音频CODEC芯片是声卡的另一个重要组成部分，它负责将模拟信号转换为数字信号的A/D转换和数字信号转化为模拟信号的D/A转换。声卡上的CD In、Line In、MIC In等线路电平输入和Line Out等线路电平输出都是通过CODEC来实现的，所以声卡音质的高低很大程度上取决于它的品质，比如声音的幅值和相位的准确度、信噪比、动态范围等。<br>
+　　功率放大芯片则是廉价声卡常常省去的部分。声卡上的功放一般功率都不太大（2W～10W），由于电源功率不足和空间、散热等的限制，音质也不会太出色，但高档声卡上的功放并不输给普通有源音箱内的功放，有条件的朋友不妨试试高效率的优质无源音箱。<br>
+　　MIDI使用的波表音色库是可选部件，因为波表数据既可存在卡上，也可存在系统内存中。<br>
+　　过去的声卡芯片也曾有过把音效芯片、CODEC芯片合二为一的产品，但AC ’97标准规定了现在这种分开的结构，原因也很容易解释：其一，模拟电路易受干扰，而数字电路恰恰是主要的噪声源，自然应将数字处理芯片同数模接口分开、越远越好；其二，生产模拟电路和数字电路的工艺截然不同，要在一片硅片上同时集成这两种电路是困难而且矛盾的，所以当它们被分开后，不但可以各自提高性能，也使音效芯片可以极大地提高集成度。<br>
+　　<b>二、声卡芯片的技术分类</b><br>
+　　音频CODEC的分类十分简单，只有最初的8位单声道、8位立体声，通常的16位立体声以及多通道16位立体声，将来还会有多通道24位立体声（DVD音频标准）。一般而言，当然是位数越高、取样频率越高，精度就越好。同样是16位CODEC，则由信噪比、动态范围以及比较专业的时钟抖动等数据来区分其档次。音效芯片能够处理的数据位数自然也得与之互相配合。<br>
+　　音效芯片的技术指标包括：(1)声道数，最早的单声道芯片早已无处寻觅了，现在双声道立体声芯片也很便宜，冉冉上升的新星是多声道环绕声芯片；(2)采用的总线形式，ISA因其落后的IRQ、DMA设置方式被迅速淘汰，PCI总线的音效芯片正日渐替代ISA产品；(3)MIDI合成方式，分为从简单的用几个单音（正弦波）来模拟乐器声音的FM合成方式、十分耗费CPU处理能力的软件波表合成方式，到由具有复杂频谱的接近真实乐器声音的硬件波表合成方式。(4)3D音效，3D音效红透半边天虽然只是近年来的事，但实际上具有3D功能的声卡由来已久。开始是用廉价的运放把音频信号加加减减以达到立体声加强和展宽的目的，但效果差，而且会让两个声道的声音串来串去、含糊不清；后来出现SRS、QSound和Spatializer等模拟方式处理的3D立体声增强电路，可以输出比较宽大、清晰的音场；而真正的第一代3D音效出现，才使我们可以利用多声道（双声道效果差些）系统进行360°的全方向、有距离的音源定位；现在的第二代3D音效则引入了环境效果，可以有更完整的环绕、包围感觉，甚至会有音源高度的感觉。<br>
+　　声卡系统的硬件实现方法也有很多。首先，CODEC芯片是少不了的，因为目前计算机处理的数字信号无论如何也得变成模拟信号才能从扬声器中放出声音来（即使是USB音箱也还是使用了音箱里的CODEC）；其次，对于音效芯片，最廉价可以用CPU代替，尽管比较耗费CPU的运算能力；用通用型IC制造声卡则比较类似于prototype（试验型号），虽然灵活性高，但由于IC数目多、又要使用性能较高（甚至过高）的DSP芯片，所以成本很高（例如MX 200声卡）；专用芯片是最普遍的，这又分为两种，一种是部分处理程序（如BIOS等）可升级的芯片，其核心是较有灵活性的DSP（例如Emu 10k1），另一种是全部程序基本固化，而核心是具有专门目的、专用连线的DSP（例如Vortex 1/2系列），虽不甚灵活、但速度一流（就像3Dlabs的Gamma硬连线几何加速芯片一样）。从市场上的产品和走势可以看出，以部分程序可升级的专用IC最多见，也较易取得市场优势。<br>
+　　<b>三、3D音效的原理</b><br>
+　　为什么我们能用几个扬声器（5.1声道、4.1声道、5声道、4声道、甚至2声道）回放出接近于真实世界的各种声音和音乐效果？这就要从人类听觉产生的原理讲起。<br>
+　　简单地说，人的耳朵类似于两个拾音器。单个拾音器与眼睛的简化类比——照相机不同，它无法分辨声音的方向和距离，只能判断声音在各种频率下的大小（幅频特性）和声音在各个频率下的时间先后（相频特性）。在有两个拾音器的简化模型中，人只能通过两耳听到的声音的大小差异和时间差异来分辨出声源的远近和方向，而且这个方向仅仅是从左到右的180°内的方向，说180°是因为单凭这个模型理论上无法分辨前后方向的差异。<br>
+　　那为什么我们能分辨出前后上下的声音呢？这就要讲到音响界几十年来最大的研究成果之一——HRTF算法（Head Reference Transmition Function，头部相关传递函数）。简而言之，HRTF就是耳朵对从空间各个方向传来的声音有不同的感受。这主要是因为耳廓的“奇异”形状加上外、中、内耳通道的结构和周围头部组织的各向异性结构对不同方向的声音有着不同的机械滤波作用，从而使外来声音的幅频和相频特性的频谱结构有所改变（就是不同频率的声音的大小比例、先后次序产生了变化），所以乐器或物体的声音（包括人声）在不同的方向上显得有所不同。从婴儿时期起人们就逐渐学会了利用这些不同来分辨声音的方向。<br>
+　　第一代3D音效芯片就是将声音信号进行数字滤波，使该在后面的声音具有后面声音特有的频谱结构，使该在扬声器外面的声音显得如同它就在外面一样，这样就产生了距离的感觉。因为运算能力的问题，第一代3D音效芯片只能做到近似的HRTF算法，因此效果一般，还很可能因为扬声器质量或环境问题而大打折扣。<br>
+　　第二代3D音效芯片，一是使用了更复杂、更精确的HRTF算法，方向和距离感自然更强烈；二是添加了初步的环境因素。<br>
+　　关于用HRTF算法来计算环绕声使用几个声道最合适这个问题，可以这么考虑：在双声道时我们必须凭从前面听到的不同声音把它想象到后面去，人脑的“处理能力”消耗过大，是不是连玩游戏都要分神了？最简单的多声道是4声道，这样每个扬声器只负责90°左右的方向，HRTF更容易使它们的声像展宽到应有的范围，全频带的4声道系统是比较理想的选择。考虑到带有低音炮（subwoofer）的卫星式扬声器系统的性价比更高，4.1声道系统就比较完美了，当然5.1系统再添上了一个中置声道处理人物对白，更适合影视迷们。<br><b>（朱云）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/30/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99301701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+<A HREF='http://www.lpzx.edu.cn/show_stats.htm%20target=sxrl'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

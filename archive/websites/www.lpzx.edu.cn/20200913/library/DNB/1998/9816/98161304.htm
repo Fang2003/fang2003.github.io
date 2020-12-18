@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在VFP中退出Windows的方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　在一些Visual FoxPro for windows(以下简称VFP)的程序中经常要涉及到直接退出Windows窗口的问题，但是由于VFP的函数库中没有提供此函数，所以就必须自己设计一个程序来实现这个功能。<br>
+        　　以下程序就是直接退出Windows的一种简便方法，其原理是利用VFP中提供的动态连接函数库Foxtools.fll中的Regfn()及Callfn()函数去访问Windows的User.exe函数库中的exitwindows()函数。<br>
+        　　程序清单如下：<br>
+        　　＃exit windows<br>
+        　　local lnmesrs<br>
+        　　lnmesrs=messagebox(′do you really want to quit windows?′,4＋16＋256,′exit 
+        windows′)<br>
+        　　if lnmesrs=6　＃按YES按钮执行<br>
+        　　set library to sys(2004)＋″foxtools.fll″ additive　＃将Foxtools.fll装入内存<br>
+        　　exitwin=regfn(′exitwindows′,T,T, ′user.exe′)　＃注册User.exe(Windows95中用User32.exe)库中Exitwindows()函数<br>
+        　　e=callfn(exitwin,0)　＃执行Exitwindows()函数<br>
+        　　endif<br>
+        　　此程序已在Visual Foxpro 30 for windows32/windows95下运行通过。 <strong> 
+        (广东　詹　灵)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

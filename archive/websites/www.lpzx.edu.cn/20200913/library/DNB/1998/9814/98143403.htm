@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>攻势</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　安徽读者姚爱国问：我是一所学校的微机教员。我校微机室配有Novell局域网一套，有20台普通工作站和一台超级工作站。现有问题待解决：<br>
+        　　1.超级工作站基本内存丢失6KB。一日开机后用MEM／C／P检查内存使用情况时，突然发现基本内存只有634KB，怀疑是配置出了问题，将Autoexec.bat和Config.sys改名后重新启动，故障依旧。<br>
+        　　2.超级工作站不能上网。一日上网时，突然出现提示：“EMM386 
+        unrecoverable priviliged operation error ＃1－Press Enter to reboot”。在Config.sys文件中把装载EMM386.EXE程序一行删除，又可以上网，但以前装载EMM386.EXE也能上网，而且现在超级工作站单独使用时，仍可以装载EMM386.EXE。用KV300检测并未发现病毒。这种情况与《电脑报》第307期第19版上一位读者的问题一样，但不同的是我的微机在单独使用时未出现异常情况，只是在上网时才出现这种情况。<br>
+        　　3.一台普通工作站在上网时出现“Primary HDC failure”的提示，更换了网卡，依然如故，后又反复比较这台工作站与其他正常工作站的CMOS，设置是一样的。<br>
+        　　答：1.在通常情况下，基本内存（640KB）减少的原因有如下五个方面：<br>
+        　　&middot;在CMOS中设置了将用户自定义的硬盘数据区放在DOS中（即“DOS 
+        1KB&quot;），此时，DOS的基本内存会减少1KB。<br>
+        　　&middot;在微机中使用防病毒卡时，也会使基本内存减少几KB，该部分内存存储有防病毒卡调入的驻留程序，以便随时可以监视病毒的发生等。<br>
+        　　&middot;COMPAQ微机通常在配置了Himem.sys驱动程序后，基本内存也会减少1KB。<br>
+        　　&middot;当在Config.sys或者Autoexec.bat中加载了某些设备驱动程序或者内存驻留程序时，基本内存也会减少几KB。<br>
+        　　&middot;系统被病毒感染，基本内存也会减少几KB。<br>
+        　　你不妨从以上几个方面检查你的微机。在使用KV300、AV95 2.0等查毒软件时，必须使用最新版本，不然会漏查病毒的。<br>
+        　　2.根据故障现像可以知道，你的上网程序与EMM386.EXE有冲突。由于该微机以前装载EMM386EXE时使用正常，现在出现问题可能有如下两个原因：<br>
+        　　&middot;你的上网程序受到破坏，建议重新安装。<br>
+        　　&middot;系统受到病毒感染。<br>
+        　　另外，你可将EMM386.EXE装载在内存低端或者加上RAM参数试试看。<br>
+        　　3.根据该台工作站所出现的故障提示信息，可知该故障与CMOS没有关系，可能有如下三个原因：<br>
+        　　&middot;硬盘控制器接触不良，可打开机箱，重新拔插试试。<br>
+        　　&middot;硬盘电缆线有问题，换一条电缆线试试。<br>
+        　　&middot;硬盘本已损坏了，更换硬盘，看能否解决问题。</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月13日第14期34版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Virtual CD for Win95 3.0使用技巧与实例</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Virtual 
+        CD for Win95 3.0使用技巧与实例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        &nbsp;Virtual CD for Win95 3.0(以下简称VCD3)是LOGICRAFT公司制作的一个优秀的光驱虚拟程序。它可同时运行于DOS与Windows95双平台。经本人测试运行后，真的是爱不释手。不敢独占，现将它介绍给大家：<br>
+        　　1VCD3的格式与参数<br>
+        　　首先，将vcd3.exe拷贝到c:\dos或者c:\win95\command中。这样，vcd3将可在任何路径下运行。接着，你必须将你光盘内的所有内容拷入硬盘的一个子目录中（例如：xcopy 
+        e:\ c:\temp /s/e，其中e:为你的光驱盘符，c:\temp为你光驱内容所在目录）。下面便可运行vcd3去创建一个虚拟光驱。<br>
+        　　vcd3的语法规则如下：<br>
+        　　vcd3 [[d:] [dir] [/c or /d] [/x]]<br>
+        　　d:　指定你的虚拟光驱盘符（注意：此盘符不能与光驱相同）<br>
+        　　dir　指定将被定义成虚拟光驱的目录（缺省为当前目录）<br>
+        　　/c(default)　创建一个新的虚拟光驱<br>
+        　　/d　删除一个可使用的光驱<br>
+        　　/v　显示所有已创建的虚拟光驱<br>
+        　　/x　创建一个新的虚拟光驱后，解压缩当前目录中的所有文档<br>
+        　　/?　显示帮助信息<br>
+        　　/!　显示“这一版本的更新信息”<br>
+        　　（如果仅仅运行vcd3，将在屏幕上出现主菜单）<br>
+        　　2举例说明<br>
+        　　如果你想将当前目录虚拟为e:驱：vcd3 e:<br>
+        　　如果又想删除这一光驱：vcd3 e: /d<br>
+        　　如果你想虚拟目录d:\temp为e:则为：vcd3 e: d:\temp<br>
+        　　怎么样？在Windows95下没有见到光驱？ 
+        哦，原来如此！请进行以下步骤：<br>
+        　　(1)回到Windows95桌面，依次单击：“开始\设置\任务栏和开始菜单”。<br>
+        　　(2)进入任务属性窗口，再击：“开始菜单程序\高级”。<br>
+        　　(3)双击“program”图标，选择“ms－dos方式”，按右键，再单击：“属性\程序\高级”。<br>
+        　　(4)取消“防止基于ms－dos的程序检测windows(p)”，再确定。<br>
+        　　(5)再重新进入“ms－dos模式”，虚拟光驱，返回Windows95，啊哈！光驱出来了。<br>
+        　　注意：在有些游戏中，如果本来有“硬”光驱，而又虚拟了第二光驱的，别忘了在“硬”光驱中塞一张其它的盘。<br>
+        　　当你玩双碟游戏时，游戏中要换碟怎么办？，这样吧：<br>
+        　　请将两张碟的内容分别拷入两个子目录中，如：c:\temp1、c:\temp2。<br>
+        　　设“硬”光驱盘符为e:，建立如下批处理：<br>
+        　　play1.bat<br>
+        　　@echo off<br>
+        　　vcd3 f: c:\temp1<br>
+        　　play2.bat<br>
+        　　@echo off<br>
+        　　vcd3 f: /d<br>
+        　　vcd3 f: c:\temp2<br>
+        　　然后，再将play1.bat、play2.bat分别设置快捷键“ctrl＋alt＋1”、“ctrl＋alt＋2”，这样你就可尽情使用了。<br>
+        <strong>&nbsp;&nbsp; (湖南　陈毅宏)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月6日第13期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

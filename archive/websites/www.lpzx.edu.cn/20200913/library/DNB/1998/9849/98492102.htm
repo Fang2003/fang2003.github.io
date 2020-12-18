@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>NETWARE 
+        3.12局域网常见问题及解答<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　在管理NETWARE 
+        3.12网络时，管理员常常遇到一些问题，现将经常遇到的问题和解决办法介绍如下：<br>
+        　　1.服务器启动正常而有些工作站不能上网。<br>
+        　　这种情况大多数是网线接头接触不良造成的。<br>
+        　　解决方法：<br>
+        　　如果是T型头可用一根极细的微型小锉插入接头孔内轻轻锉一下或者用一根针尖略弯的医用钢针括一下即可，或者干脆换个新的；如是RJ45头大多数情况是网卡上接头孔中的钢丝弹性不足，可用摄子挟住轻轻向上拉拉。<br>
+        　　2.学生在上机时乱用SEND发信息干扰他人学习，滥用FILER、FLAGT等命令给管理人员的管理带来麻烦。<br>
+        　　解决方法：将原来的PUBLIC目录改名，如改为PUBLIC1，同时关闭所有的权限，再建一个PUBLIC目录将注册正本文件NET＄LIG.DAT和LOGIN.EXE、LOGOUT.EXE拷入即可。<br>
+        　　3.运行大型程序网络速度太慢。<br>
+        　　教学LAN一般是采用总线型的拓扑结构。学生在上机实习Windows或FoxPro等大型程序时，必然有大量的网络通信，造成网络通讯性能下降。<br>
+        　　解决方法：可用增加网段的方式来解决。即在文件服务器中多插几块网卡(最多可插四块)，将局域网上的工作站平均分给这几段网段。再在AUTOEXEC.CFG文件中写进类似命令即可：<br>
+        　　load NE2000 port=300 int=2 FRAME=Ethernet_802.3 NAME=A<br>
+        　　BIND ipx to A net=1<br>
+        　　load NE2000 port=320 int=3 FRAME=Ethernet_802.3 NAME=B<br>
+        　　BIND ipx to B net=2<br>
+        　　这样每段网络的负担只有原来的几分之一，速度自然就快得多了。<br>
+        　　4.在无盘工作站上无法正常安装使用Windows 3.X。<br>
+        　　解决方法：第一步，用DOSGEN重新启动映像文件，即映像文件中的CONFIG.SYS内DEVICEHIGH=EMM386.EXE后加参数/Y=F：\emm386.exe，这点很重要，否则无法用增强模式运行Windows；<br>
+        　　第二步，安装Windows 3.2在一工作站以管理员身份上网，键入SETUP/A，安装到服务器中，然后在注册正本中加入：MAP 
+        ROOTS2：=某卷：\WINDOWS\(S2可以S3等其它搜索盘符)；<br>
+        　　第三步，重新以管理员身份上网，用SETUP/N命令进行用户安装。安装完毕后，如果工作站机型、配置相同，即可用XCOPY等拷贝给其他工作站；如果不是则需要一台一台地安装。<br>
+        　　5.用户用ASCII码建的目录名无法删除。<br>
+        　　解决方法：对于有些用户用Alt＋几个数字＋空格键建的目录，由于无法知到目录名，无法用正常命令删除，可用Norton 
+        Commander 5.0来删除。如果被加上Hidden、Deleteinhibit、Renameinhibit等属性，可用flagdir＊.N消除属性后再删除。<br>
+        　　6.增加工作站常规内存问题。<br>
+        　　解决方法：在AUTOEXEC.BAT中以<br>
+        　　IPX<br>
+        　　NETX<br>
+        　　方式入网和以<br>
+        　　LH IPX<br>
+        　　LH NETX<br>
+        　　方式入网对常规内存的占用是不同的，后者比前者要节约65K左右的常规内存，使可用常规内存达到620K左右。如果把CONFIG.SYS内的DEVICE改成DEVICEHIGH就更好了。<br>
+        　　最后忠告：<br>
+        　　1.在空闲时多用VREPAIR检查服务器上的卷，以便发现小问题，能立刻解决，在每次开服务器时要注意屏幕是否出现错误的执行信息。<br>
+        　　2.时常整理文件与目录。清除无用文件及目录，以减轻服务器的负担。<br>
+        　　(安徽　孙邵海)</p>
+        </font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月21日第49期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

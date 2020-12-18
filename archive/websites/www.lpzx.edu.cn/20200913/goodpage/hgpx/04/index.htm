@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(2);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 155;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0][1] = new String("sprite");
+    document.MM_Time[0][1].slot = 1;
+    if (ns)
+        document.MM_Time[0][1].obj = document["Layer2"];
+    else
+        document.MM_Time[0][1].obj = document.all ? document.all["Layer2"] : null;
+    document.MM_Time[0][1].keyFrames = new Array(1, 29, 58, 87, 116, 145);
+    document.MM_Time[0][1].values = new Array(3);
+    document.MM_Time[0][1].values[0] = new Array(-44,-16,12,40,67,95,123,151,179,207,234,262,290,318,346,373,399,425,450,475,499,523,546,569,591,612,633,654,673,686,698,709,718,725,731,736,738,740,741,741,741,740,738,736,733,730,727,723,719,714,708,702,696,689,681,673,664,655,641,627,611,596,580,563,547,530,512,495,477,459,440,422,403,384,366,348,330,313,295,279,262,246,230,214,198,183,168,166,175,185,194,203,213,222,231,239,248,256,264,272,280,287,295,303,311,319,327,336,344,353,362,370,379,387,395,393,381,367,354,340,326,311,297,282,267,252,237,221,205,189,173,157,141,124,108,92,75,59,43,27,10,-6,-22,-39,-55);
+    document.MM_Time[0][1].values[0].prop = "left";
+    document.MM_Time[0][1].values[1] = new Array(389,389,390,391,392,394,395,396,397,399,400,401,402,403,403,404,404,404,404,404,404,403,402,401,399,397,394,390,384,378,371,363,354,344,333,322,312,301,291,281,271,262,253,244,235,226,217,209,200,191,182,174,165,157,149,142,135,128,121,114,109,104,100,96,93,89,86,83,81,78,76,73,71,69,67,66,64,63,62,61,60,59,59,59,59,60,62,70,77,83,88,92,97,101,105,109,113,117,120,124,128,131,135,138,142,146,150,154,158,163,167,172,178,184,192,201,206,208,210,211,212,213,213,214,214,214,214,214,214,214,214,213,213,213,212,212,212,211,211,210,210,209,209,209,209);
+    document.MM_Time[0][1].values[1].prop = "top";
+    if (!ns) {
+        document.MM_Time[0][1].values[0].prop2 = "style";
+        document.MM_Time[0][1].values[1].prop2 = "style";
+    }
+    document.MM_Time[0][1].values[2] = new Array("9","9","9","9","9","9");
+    document.MM_Time[0][1].values[2].prop = "zIndex";
+    if (!ns)
+        document.MM_Time[0][1].values[2].prop2 = "style";
+    document.MM_Time[0].lastFrame = 155;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#E4F2D5" onLoad="MM_timelinePlay('Timeline1')" background="d1.jpg">
+<div id="Layer2" style="position:absolute; left:-44px; top:389px; width:46px; height:44px; z-index:9"><img src="../pic/h4.gif" width="50" height="50"></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td width="5" height="2" valign="top"></td>
+    <td width="125" height="2" valign="top"></td>
+    <td width="75" height="2" valign="top"></td>
+    <td width="24" height="2" valign="top"></td>
+    <td width="81" height="2" valign="top"></td>
+    <td width="20" height="2" valign="top"></td>
+    <td width="75" height="2" valign="top"></td>
+    <td width="105" height="2" valign="top"></td>
+    <td width="244" height="2" valign="top"></td>
+    <td width="14" height="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="21" valign="top"></td>
+    <td width="200" height="128" colspan="2" rowspan="3" valign="top"><img src="../pic/h1.gif" width="200" height="70"></td>
+    <td width="24" height="21" valign="top"></td>
+    <td width="81" height="21" valign="top"></td>
+    <td width="20" height="21" valign="top"></td>
+    <td width="75" height="21" valign="top"></td>
+    <td width="105" height="21" valign="top"></td>
+    <td width="244" height="21" valign="top"></td>
+    <td width="14" height="21" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="35" valign="top"></td>
+    <td width="24" height="35" valign="top"></td>
+    <td width="525" height="35" colspan="5" valign="top">
+      <h5><font color="#6666FF"><a href="goodpage/hgpx/index.htm">[首页]</a>&nbsp;<a href="../01/index.htm">[稻谷]</a>&nbsp;<a href="../02/index.htm">[豆子]</a>&nbsp;<a href="../03/index.htm">[薯芋类]</a>&nbsp;[蔬菜类]&nbsp;<a href="../05/index.htm">[水果类]</a>&nbsp;<a href="../07/index.html" target="_blank">[家乡名优]</a>&nbsp;<a href="../gd.htm">[更多]</a></font> 
+      </h5>
+    </td>
+    <td width="14" height="35" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="72" valign="top"></td>
+    <td width="563" height="72" colspan="7" valign="top"><img src="../pic/h2.gif" width="563" height="8"></td>
+  </tr>
+  <tr>
+    <td width="5" height="100" valign="top"></td>
+    <td width="125" height="100" valign="top"></td>
+    <td width="75" height="100" valign="top"></td>
+    <td width="24" height="100" valign="top"></td>
+    <td width="81" height="100" valign="top"></td>
+    <td width="200" height="100" colspan="3" valign="top"><a href="401.htm" target="_blank"><img src="d2.gif" width="200" height="50" border="0"></a></td>
+    <td width="244" height="100" valign="top"></td>
+    <td width="14" height="100" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="105" valign="top"></td>
+    <td width="125" height="105" valign="top"></td>
+    <td width="75" height="105" valign="top"></td>
+    <td width="200" height="105" colspan="4" valign="top"><a href="402.htm" target="_blank"><img src="d3.gif" width="200" height="50" border="0"></a></td>
+    <td width="105" height="105" valign="top"></td>
+    <td width="244" height="105" valign="top"></td>
+    <td width="14" height="105" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="50" valign="top"></td>
+    <td width="125" height="50" valign="top"></td>
+    <td width="200" height="50" colspan="4" valign="top"><a href="403.htm" target="_blank"><img src="d4.gif" width="200" height="50" border="0"></a></td>
+    <td width="75" height="50" valign="top"></td>
+    <td width="105" height="50" valign="top"></td>
+    <td width="244" height="50" valign="top"></td>
+    <td width="14" height="50" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="1" valign="top"><img width="5" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="125" height="1" valign="top"><img width="125" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="75" height="1" valign="top"><img width="75" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="24" height="1" valign="top"><img width="24" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="81" height="1" valign="top"><img width="81" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="20" height="1" valign="top"><img width="20" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="75" height="1" valign="top"><img width="75" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="105" height="1" valign="top"><img width="105" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="244" height="1" valign="top"><img width="244" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+    <td width="14" height="1" valign="top"><img width="14" height="1" src="http://www.lpzx.edu.cn/goodpage/hgpx/04/transparent.gif"></td>
+  </tr>
+</table>
+</body>
+</html>

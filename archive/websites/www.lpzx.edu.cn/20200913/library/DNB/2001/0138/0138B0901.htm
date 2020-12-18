@@ -1,0 +1,146 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0138/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0138/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第38期 </a>&gt;&gt;<a href="software.html">软件世界</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">在Linux下使用硬盘的DMA模式</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>##1 一、准备工作<br>
+              首先，在Linux下打开DMA模式之前，最重要的事情就是备份硬盘上的数据。因为在开启DMA模式之后谁也无法预料到硬盘是否还能正常工作，数据是否还完整。把Linux下所有的重要数据备份到其他硬盘或CD-R等存储媒介上是最好的选择，最好不要把数据备份在同一块硬盘上，更不要把数据备份到同一个硬盘分区。<br>
+              ##1 二、修改设备节点参数<br>
+              以超级用户(root)的身份登录Linux系统，修改hdparm目录下的一些设备节点参数。下面就是一个修改硬盘设备节点参数的例子，注意，不同型号，不同容量的硬盘可能列出的参数不太一样，但是修改的过程和方法大体上是一样的。<br>
+              # /sbin/hdparm /dev/hda<br>
+              /dev/hda<br>
+              multcount = 0 (off)<br>
+              I/O support = 0(default 16-bit)<br>
+              unmaskirq = 0 (off)<br>
+              using_dma = 0 (off)<br>
+              keepsettings = 0(off)<br>
+              nowerr = 0 (off)<br>
+              readonly = 0 (off)<br>
+              readahead = 8 (on)<br>
+              geometry=629/240/63,sectors=9514260,start=0<br>
+              #<br>
+              要注意的是，off代表此参数不起作用，on表示打开此功能或模式。上面的参数列表写得非常清楚，Multcount(多扇区读)没有打开；此硬盘格式为16位格式；DMA数据传输模式没有打开。很显然，这样的参数并没有使硬盘达到最佳的优化，没有能完全发挥当今高速IDE硬盘的性能。<br>
+              为了优化硬盘，提高硬盘的数据传输速率，首先还是要了解以下这些参数的含义：<br>
+              c3：就是把硬盘的16位格式转换为32位格式。<br>
+              m16：改变硬盘的多路扇区读功能，-m16可以使得硬盘一次读入16个扇区的数据。但是不是所有的硬盘都支持这个功能。使用hdparm 
+              -i /dev/hda 可以查看硬盘最大能读写的扇区数目。<br>
+              d1X34 在支持DMA-capable的硬盘中，这个参数可以支持双DMA通道的数据传输模式。<br>
+              d1X66 在支持UDMA-capable的硬盘中，这个参数可以支持双DMA通道的数据传输模式。<br>
+              了解以上参数的作用和含义之后，现在请你仔细检查硬盘上的标签，看看它是否支持DMA 或者 UDMA模式，然后才对照这些参数来优化你的硬盘，以防出现不可预见的错误。<br>
+              优化硬盘的参数，也可以参考下面的例子，注意，不是所有的硬盘都适用以下的优化参数，请按照实际情况来设置参数：<br>
+              # hdparm -d1X66 -m16 -c3 /dev/hda<br>
+              # hdparm /dev/hda<br>
+              /dev/hda<br>
+              multcount = 16 (on)<br>
+              I/O support = 3 (32-bit w/sync)<br>
+              unmaskirq = 0(off)<br>
+              using_dma = 1(on)<br>
+              keepsettings = 0(off)<br>
+              nowerr = 0(off)<br>
+              readonly = 0(off)<br>
+              readahead = 8(on)<br>
+              geometry=629/240/63,sectors=9514260,start=0<br>
+              修改完这些参数之后，有时候并不能一次性把硬盘优化成功。如果在硬盘还在正常工作的时候修改这些数据，硬盘会进入“休眠”状态。这就需要等硬盘灯熄灭后，硬盘不处于繁忙状态下优化硬盘参数才会比较容易成功。<br>
+              hdparm的改变是一个临时的状态，再次启动Linux系统的时候hdparm将会消失。所以要想永久保存修改后的信息，就必须把修改后的参数和数据写入/etc/rc.d/rc.local或者/etc/rc.local文件，甚至比启动过程早运行的程序中。<br>
+              最后要提醒大家的是，如果你的主板的芯片组或Linux内核kernel(比如内核kernel版本过于陈旧，2.2版以前不支持UDMA模式，那就没有必要去修改硬盘设备的参数了。升级主板或者kernel是解决这个问题的较好办法。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

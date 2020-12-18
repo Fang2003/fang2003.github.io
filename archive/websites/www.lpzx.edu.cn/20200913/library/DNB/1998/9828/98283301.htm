@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>巫毒的妹妹---妖精</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 6月22日，3Dfx向外发布了他们的新产品——VoodooBanshee（爱尔兰民俗中的女妖精），这是3Dfx公司自行研发的首款2D/3D集成加速芯片。你也许会感到奇怪，3Dfx原先不是推出了一款2D/3D加速卡——VoodooRush吗？为什么又在大张旗鼓宣扬VoodooBanshee呢？原来，VoodooBanshee完全不同于VoodooRush，它带有Voodoo2的3D驱动单元和一个全新的2D核心，这个2D核心是由3Dfx自己研发的，而VoodooRush的2D核心是从Alliance半导体公司得来的，并且VoodooRush的3D部分使用的是原有的Voodoo上的3D单元。另外，VoodooBanshee是一个全功能的VGA、2D、3D、Video，并集成了230/250MHzRAMDAC的图形加速芯片。<br>
+        2D性能<br>
+        　&nbsp; VoodooBanshee的最新设计是它的2D硬件部分。它在2D图形性能方面取得了重大突破，主要原因是它使用了几个关键性的硬件创新设计。首先，它具有一个高速的128位显示内存接口，显示内存带有256位数据通道，可以优化存储器的利用。第二，它具有全部WindowsGDI（GraphicalDriverInterface，图形驱动程序接口）函数硬件加速功能，而传统的2D显示芯片只支持部分GDI函数，其余的GDI函数由软件模拟，因此，系统性能受限于CPU的速度。如果使用GDI函数全硬件加速功能，系统的速度和可靠性就会得到大幅度的提高。例如，VoodooBanshee可以在数十个时钟周期内完成一个多边形，而采用软件模拟的话，花的时间则可能长达几千个时钟周期。不过，笔者觉得奇怪的是，以前为什么没有人把GDI函数全硬件加速功能集成到芯片中呢？<br>
+        VoodooBanshee在2D图形性能方面取得突破的另外一个原因是，它被设计成可以利用SGRAM的块写（Blockwrite）功能，这使它在部分2D/3D性能方面的提高幅度高达四倍，包括多边形填充、图案填充和Z缓冲清除。VoodooBanshee支持4MB、8MB和16MB的SGRAM，也支持16MB的SDRAM。此外，Banshee为使用乱序执行（outoforder）指令的PentiumⅡ处理器作了优化，它和Voodoo2是首次可以直接接收并执行PentiumⅡ乱序指令的图形芯片。这个技术能够提高20％～25％的性能，也减少了对CPU的依赖。<br>
+        从上面的介绍中可以看出，使用VoodooBanshee可能会使你的2D应用程序跑得比其他卡更快。<br>
+        3D性能<br>
+        　&nbsp; 在更吸引人的3D加速方面，VoodooBanshee中使用了一个单独的Voodoo2的贴图引擎，而Voodoo2使用的是双贴图引擎。因此，在某些应用领域，Banshee未见得就能达到Voodoo2的速度，不过3Dfx强调它的3D性能损失已减少到最小，特别是在降低成本的同时。很显然，在3D综合性能测试中，同Voodoo2相比，Banshee只能排在第二位。<br>
+        　&nbsp; 让我们来看看VoodooBanshee的测试结果吧。在一台PentiumⅡ－400电脑上，通过Banshee来运行一些顶尖3D游戏时，绝大多数情况下的测试结果令人振奋。Forsaken的平均速度达到了60帧/秒，同时Incoming和Unreal的平均速度在55帧/秒左右。但Incoming中最慢的帧率是28帧/秒，对此，3Dfx的副总裁安迪&amp;middot;基恩强调，他们的工程师正在致力于使Banshee的最终版本达到40帧/秒的速度。可以看到，虽然它比Voodoo2慢，但它仍在改进中。<br>
+        　&nbsp; 同Voodoo2相比，VoodooBanshee有一个128位的100MHzSGRAM接口，而Vooodoo2则跑在64位90MHzEDORAM的接口上。由于显示内存的速度较快，在使用单个纹理贴图单元的情况下，VoodooBanshee可以维持高速的填充速率，甚至比Voodoo2还快，不过，在使用多重贴图的情况下，如玩Quake2游戏，则不及Vooodoo2快。<br>
+        　&nbsp; 对于VoodooBanshee来说，AGP版本和PCI版本之间的性能差异非常校由于AGP较高的总线速度，同标准的33MHzPCI版本相比，AGP版本的性能有微量提高。不过整体性能不会因总线形式不同而受到影响，这是因为VoodooBanshee的纹理架构是建立在局部帧缓存外的。局部纹理贴图的速度总是比从主内存中传递纹理数据来得要快。VoodooBanshee采用了Voodoo2的核心设计，它专门为从局部内存（显示内存）中使用纹理数据进行了优化。VoodooBanshee支持66MHzPCI和边带传输的AGP总线。相对于AGP的533MB/s的带宽，VoodooBanshee的显示内存接口可提供高达1.6GB/s的传输速度。有了这些与CPU和内存的高效接口，游戏的流畅程度更多地取决于CPU的性能，而不是总线带宽或形式。<br>
+        Banshee的前景<br>
+        　&nbsp; Banshee的上市时间估计在8月或9月，已有几个OEM厂商对她表现出了极大的兴趣。由于在3D附加卡市场上占据了非常有利的地位，3Dfx公司也想趁热打铁，在2D商业市场上占得一席之地。大宗OEM订单的吸引力对图形芯片厂商来说是非常巨大的，不管怎样，打进竞争已经非常激烈的2D/3D图形芯片市场不是一件简单的事情，特别是对后来者而言。你可以看到S3和Matrox花了多长时间才生产出像样的3D加速芯片，另外，还别忘了NvidiaRiva128（NV3）在OEM市场上取得成功前，NV1所受到的许许多多的指责。<br>
+        　&nbsp; 除此以外，3Dfx还面临着对Banshee和Voodoo2的市场定位的挑战，如果保留Voodoo2的价格补贴政策，它的需求量就比Banshee大。但是，随着Nvidia号称比Voodoo2更快的RivaTNT的推出，Banshee也许会需要大造声势，以便超过她的兄弟，在PC市场上同其它对手展开竞争。否则，Banshee便会陷入进退两难的境地。(双木编译)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9828/1998/28/index.htm">《电脑报》1998年7月20日第28期33版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

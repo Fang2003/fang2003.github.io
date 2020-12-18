@@ -1,0 +1,64 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>VFB编程的雕虫小技</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font color="#FFFFFF">VFB编程的雕虫小技</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　1.将窗口最大化<br>
+        　　现在显示器一般都比较大，我们编程序时也喜欢把表单设计得大一点，但VFP程序运行时默认的窗口大小却只有640×480，每次运行都要最大化窗口。其实只要把下面一段API调用程序放在主程序中，运行时窗口就会自动最大化了。<br>
+        　　declare integer FindWindow IN win32api integer,string<br>
+        　　declare integer ShowWindow IN win32api integer,integer<br>
+        　　NullPointer=0<br>
+        　　FoxHWND= FindWindow(NullPointer,″库存管理系统″)<br>
+        　　FoxGone=ShowWindow(FoxHWND,3)<br>
+        　　2.菜单设计<br>
+        　　如果菜单中要加入一条分隔线，可以在菜单中添一条子菜单，菜单名称为“\－”就可以了。<br>
+        　　如果由于权限设置或防止程序冲突需要屏蔽某些菜单项，可以先定义一个逻辑值的全局变量，然后将需屏蔽的菜单项的选项设置成该变量为真时跳过，这样你就可以通过对该变量值的变化控制菜单项是否屏蔽。<br>
+        　　3.设置文件运行目录<br>
+        　　VFP程序一般分执行文件和数据文件，备份时只要把数据文件备份就可以了。为了便于程序更新和数据备份，可将数据文件单独置于子目录中。由于编程及调试时一般都不设置程序运行目录，为了避免编译后程序找不到数据文件，可用下面两句指定数据文件在DBF子目录中。<br>
+        　　set default to sys(5)＋curdir()<br>
+        　　set path to sys(5)＋curdir()＋′dbf′<br>
+        　　4.取得Windows路径 <br>
+        　　如果要对注册表进行操作，你就要先找Windows的路径，用下面的命令可以返回Windows的路径。<br>
+        　　GetEnv(“WinDir”) <br>
+        　　5.用窗口关闭按钮退出程序<br>
+        　　VFP程序运行时点击窗口右上角的关闭按钮会显示一个“不能退出 
+        Visual FoxPro”的警告窗口，很讨厌。如果要解决这个问题可以在主程序中加一句<br>
+        　　on shutdown do q.prg<br>
+        　　然后在项目中新建q.prg程序，程序内容为前面退出时确认那段语句，这样就搞定了。<strong>(江苏　高晓嵩)</strong></span></font></p>
+        <p align="right"><big><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月8日第06期</a></span></font></big></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

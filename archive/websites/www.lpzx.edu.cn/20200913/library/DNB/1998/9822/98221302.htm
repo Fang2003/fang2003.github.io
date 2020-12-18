@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>重新设置Windows 
+        95 OSR2硬件配置文件的方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　中文Windows 
+        95 OSR2在首次安装之后的初次引导过程中，完成了检测计算机的硬件配置情况，以及把这些信息直接记录到硬件配置文件中的工作，在以后的引导过程中，中文Windows 
+        95 OSR2就不再进行类似的检测工作，而是直接从硬件配置文件中得到相应的信息。一旦改变计算机的硬件配置(例如减少了硬盘或者光驱的数目)，由于中文Windows 
+        95 OSR2在启动过程中直接从配置文件中得到的原来硬件配置信息，并不检测此时计算机硬件配置的变化，因此误认为已经减掉的硬盘或者光驱继续存在，并在其后台进程中不断地试图与不存在的硬盘或者光驱进行通信，从而导致整个系统的性能和运行速度都大大降低了。如果采用覆盖方式重新安装中文Windows 
+        95 OSR2的话，由于系统已经存在了硬件配置文件，使得重新安装后的中文Windows 
+        95 OSR2在初次启动时同样不再检测计算机的硬件配置，而是使用原来已经失效的硬件配置文件，使这个问题无法得到根本性解决，虽然完全删除中文Windows 
+        95 OSR2后再重新安装，可以根据此时计算机的实际情况而生成相应的硬件配置文件，但是由于计算机通常安装了很多应用程序而不便进行这样的操作，为了解决这个问题，可以首先在中文Windows 
+        95 OSR2中为计算机中不同的硬件配置建立不同的硬件配置文件，然后使中文Windows 
+        95 OSR2在启动过程中根据计算机硬件配置的实际情况而选择相应的硬件配置文件，从而使中文Windows 
+        95 OSR2在不同的硬件配置情况下都能够达到最佳运行状态。具体操作方法如下：<br>
+        　　1当安装了中文Windows 95 OSR2系统的计算机配置发生改变时，首先在系统完成启动之后，使用鼠标左键双击“我的电脑”中的“控制面板”，然后在“控制面板”窗口中双击“系统”图标，接着在’系统”对话框中选择“硬件配置文件”选项；<br>
+        　　2在“硬件配置文件”选项框中，“Original Configuration”是中文Windows 
+        95 OSR2在首次安装之后根据当时的计算机硬件配置情况而自动建立的配置文件(该文件是中文Windows 
+        95 OSR2的一个默认文件)。使用鼠标左键单击“复制”按钮，将该文件复制为新文件(例如为Old 
+        Configuration)，然后回车而退出“硬件配置文件”选项框。<br>
+        　　3重新启动中文Windows 95 OSR2，由于此时存在多个硬件配置文件，使得中文Windows 
+        95 OSR2在进入主画面以前出现提示信息让你选择，此时应当选择2即Old 
+        Configuration。由于中文Windows 95 OSR2此时没有任何硬件配置信息，因此就在接下来的引导过程中，像首次安装中文Windows 
+        95 OSR2后的初次引导一样而检测硬件配置情况，并且仍然把检测之后的硬件配置信息保存在“Original 
+        Configuration”文件中。<br>
+        　　4在中文Windows 95 OSR2中，按照第1、2步操作方法，删除“硬件配置文件”选项中“Old 
+        Configuration”文件，这样彻底地解决了整个系统在减掉硬盘或者光驱之后性能和速度降低的问题。<br>
+        　　5在上述操作过程中，如果每当发生硬件配置变化时就为中文Windows 
+        95 OSR2设置一个硬件配置文件，你就可以根据不同的硬件配置而设置多个硬件配置文件。当中文Windows 
+        95 OSR2在启动过程中出现选择计算机硬件配置时，只要根据当时的实际情况选择某个选项，即能够根据此时的硬件配置情况正常进行引导和运行。　<strong>　(江苏　罗松林)　　</strong><br>
+        　<strong>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月8日第22期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>NOVELL网中的光驱总管——CDUP5 </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0122/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0122/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0122/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第22期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->NOVELL网中的光驱总管——CDUP5 
+              <!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->在Windows网络中实现CD-ROM的资源共享是一件很容易的事，但如果你使用的是NOVELL网络，要实现CD-ROM的共享和管理却不是件轻松的事了。大多用户采用的方法是在系统的CONFIG．SYS中加入CD-ROM驱动程序，但这种方法资源占用较多，管理不便且极易出现故障。笔者偶得一工具，使用它在NOVELL网中进行CD-ROM的各种操作非常轻松，现与大家共享。<br>
+              一、CD-ROM的硬件安装<br>
+              1．SCSI接口<br>
+              安装SCSI接口的CD-ROM驱动器需要注意的是适当的ID号和正确的终止。CD-ROM相对于硬盘来说是慢速设备，因此，它的ID号宜选用优先级较低的(如5号或6号)。另外，当CD-ROM是SCSI设备链上的末端设备时，必须在CD-ROM上进行终止，相反，则应当去掉CD-ROM上的终止电阻。<br>
+              2．IDE接口<br>
+              安装IDE接口的CD-ROM驱动器关键是正确设置主从设备。若CD-ROM与硬盘共用一条数据线，则应将硬盘置为主设备Master，CD-ROM置为从设备Slave；若主板上有两个IDE插槽，则应使CD-ROM和硬盘各自使用一条数据线，这样一来可以提高读写速度，二来可以避免在使用某些软件时出现问题。<br>
+              二、软件安装<br>
+              该工具名称为CDUP5．EXE，是一款自解压软件，只有287KB，解压后会形成NETWARE．312＼和NETWARE．410＼两个子目录，分别存放适用于3．12和4．x版本的模块。<br>
+              在NOVELL网络中安装CD-ROM卷需要在主控制台上顺序加载三类模块：一是主总线适配器HBA及其它有关设备的驱动程序；二是与NetWare系统版本有关的程序；三是CD-ROM设备管理模块。安装过程如下：<br>
+              1．SCSI接口<br>
+              1将所需文件拷入服务器启动分区目录如C＼SERVER．410及SYS卷SYSTEM目录下。<br>
+              2在系统控制台上依次键入如下命令：<br>
+              load aha1540．dsk<br>
+              load aspitran．dsk<br>
+              load aspicd．dsk<br>
+              load after311．nlm(4．x版本不需要)<br>
+              load npa312．nlm(4．x版本不需要)<br>
+              load cdrom．nlm<br>
+              3重新启动服务器即可。<br>
+              2．IDE接口<br>
+              1将所需文件复制到服务器启动分区目录如C＼SERVER．410及SYS卷SYSTEM目录下，对于NetWare3．12版本来说还需将与其有关的专用文件复制到服务器启动分区目录中。<br>
+              2在系统控制台上依次键入如下命令：<br>
+              load npapatch．nlm (4．x版本不需要)<br>
+              load ideata．ham<br>
+              load idehd．cdm<br>
+              load idecd．cdm<br>
+              load after311．nlm (4．x版本不需要)<br>
+              load nwpa．nlm<br>
+              load nmpaload．nlm<br>
+              load cdrom．nlm<br>
+              由于CDROM．NLM是报文激发，因此它必须从SYS卷加载。对于运行NetWare3．12的服务器来说，需要删除SYS卷上存在的CDROM．MSG文件，并确认设置的第一条搜索路径指向CDROM．NLM文件所存放的目录。<br>
+              3重新启动服务器即可。<br>
+              三、CD-ROM卷的管理<br>
+              当在系统控制台加载CDROM．NLM以后，所有管理和维护CD-ROM卷的工作均可在控制台上通过CD命令来完成。CDROM．NLM的命令列表如下<br>
+              CD HELP<br>
+              该命令显示CDROM．NLM的帮助信息包括CD命令的格式、功能及相应参数说明。<br>
+              CD DEVICE LIST<br>
+              该命令以10个为一组列出SERVER上所有被检测到的CD-ROM设备列表包括它们的编号、工作状态、设备名称、卷名称和装载状态等。<br>
+              CD VOLUME LIST<br>
+              该命令以10个为一组列出自加载CDROM．NLM以来所有CD-ROM设备中曾经加载过的CD-ROM卷名。显示信息中包括设备列表号No．、盘片卷名Volume 
+              Name、盘片装载状态Mounted Y表示已装载以及该卷所在设备名称Device Name。其中设备号及设备名只有在该卷在线时才有所显示。<br>
+              CD MOUNT No． or volume name flags<br>
+              该命令装载CD-ROM为一个NetWare卷。 No．及volume name可用CD VOLUME LIST命令获得．<br>
+              CD DISMOUNT No． or volume name<br>
+              一个CD-ROM盘片从CD-ROM驱动器取出时必须先卸载该卷。该命令卸载一个已被装载为NetWare卷的CD-ROM卷．No．和volume 
+              name可用CD VOLUME LIST命令获得。<br>
+              CD CHANGE No． or volume name flags<br>
+              为了从不同的CD-ROM盘上读取信息，换盘操作必不可少。此命令用来更换一个已被加载为NetWare卷的CD-ROM盘片。当在控制台输入此命令后，指定的卷将被卸载，同时系统提示更换新盘片，并将新的CD-ROM卷装载。<br>
+              由于安装一个CD-ROM卷要花费较长的时间，我们可以用参数/R减少它的安装时间。此时，系统将使用已有的数据文件而不再创建新的，虽然盘片已改变，但其卷名仍是原来的，用户设立的网络映射也不需要修改。<br>
+              CD DIR No． Volume Name<br>
+              此命令用来查看某一个CD-ROM卷根目录下的内容。<br>
+              CD GROUP group name and group number<br>
+              该命令用来显示已分配的组并给它分配一个组号从0至9。 为了授权访问一个CD-ROM卷，需要在服务器上创建一个组对象，并将要授权的用户作为该组的成员，然后通过CD命令使该组有权访问此CD-ROM卷。例如：CD 
+              GROUP TECH 3 授权访问组TECH并分配组号为3。系统缺省的EVERYONE组的组号为0，是系统自动生成的。若使用“del”作为组名将会删除一个已分配的组号。如 
+              CD GROUP DEL 1。<br>
+              CD PURGE<br>
+              清除所有装载CD-ROM卷时在硬盘上建立的隐含索引文件及缓存文件。<br>
+              CD RENAME /D=No． new Volume Name<br>
+              更改一个CD-ROM卷的装载名。<br>
+              四、FLAGS选项<br>
+              /MAC或/NFS 为该卷加载Macintosh或NFS名字空间支持。这将增加必要的数据和资源以便工作站能够存取CD上的信息。<br>
+              /G=group number 指定对该卷具有存取权限的用户组号。 group number是分配给组的组号可使用CD 
+              GROUP命令获得。<br>
+              /R 重建指定卷的索引文件。<br>
+              /rx 用来重建指定卷的索引文件并扩展分配给文件的空间这一选项在装载一个含有异常大的文件或大量目录的CD-ROM时十分有用。<br>
+              /dup 当一个CD-ROM被装载时用来删除目录中重复的文件名。<br>
+              /X=directory name 当CD-ROM卷装载后排除一个目录树使之不能共享CD-ROM卷上的内容。directory 
+              name可由CD DIR命令列出。<br>
+              特殊选项/I 在安装一个CD-ROM时用来忽略发现的有关CDROM的错误。<br>
+              注意用此选项将导致CD-ROM安装后文件不能显现。<br>
+              /W 安装卷时将只读状态改为读写状态保留一部分硬盘空间作为CD-ROM卷的可写区域可用来增加对该卷的受托者指定更新记录文件或加载新的命名空间支持等。<br>
+              五、CD-ROM卷的使用<br>
+              1．将CD-ROM卷映射为逻辑盘<br>
+              CD-ROM卷安装后，就可以像其它卷一样使用了。但CD-ROM卷不能作为一个卷对象直接出现在目录树中，我们可以通过卷名映射分配一个驱动器号给它。例如：CD-ROM卷名为HVTTC，文件服务器名为SER410，则可通过命令：<br>
+              MAP N=SER410/HVTTC<br>
+              将CD-ROM卷映射为本地工作站的驱动器N，之后，所有对N盘的操作即是对服务器上共享CD-ROM卷的操作。<br>
+              2．自动加载CD-ROM卷<br>
+              我们可以修改AUTOEXEC．NCF文件的内容使服务器启动后自动装载CD-ROM卷。例如：在该文件中加入如下几行内容：<br>
+              LOAD CDROM．NLM(加载CD-ROM管理模块)<br>
+              CD GROUP STUD 2(授权访问组STUD，组号为2)<br>
+              CD MOUNT 1/G=2/R(安装卷到CD-ROM设备1)<br>
+              好了，现在大家可以在NOVELL网中轻松自如地使用共享光驱了。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

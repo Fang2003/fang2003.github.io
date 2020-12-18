@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>状态栏滚动文字</title>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td width="100%">
+<table border="0" width="100%">
+<TBODY>
+<tr>
+<td width="100%"><p align="center"><span class="text11" style="COLOR: rgb(252,177,3)">状
+态 栏 滚 动 文 字 </span></p>
+
+
+</TBODY>
+</table>
+<table border="0" width="100%">
+<TBODY>
+<tr>
+<td width="100%"><small><font color="#663366"><span class="text"
+style="COLOR: rgb(125,125,125)"></span></font></small><p><small><font
+color="#cc0000"><span class="text">功能</span><span class="text"
+style="COLOR: rgb(125,125,125)">：</span></font><span class="text"
+style="COLOR: rgb(125,125,125)">使浏览器的状态栏中出现滚动文字，而不影响内部格式。
+m1和m2是两个变量可自行添加和修改其中的内容。
+这个功能不需要添加文件，十分方便而且不影响浏览速度。 </span></small></p>
+<p><small><span class="text" style="COLOR: rgb(125,125,125)">在&lt;/TITLE&gt;后添加以下代码：
+</span></small></p>
+<p><small><span class="text" style="COLOR: rgb(0,128,128)">&lt;SCRIPT
+LANGUAGE=&quot;JavaScript&quot;&gt;<br>
+&lt;!--<br>
+function scroll(seed)<br>
+{<br>
+var m1=&quot;&nbsp;****网页制作大宝库－最大的网页素材库**** &quot;<br>
+var m2=&quot;网页素材，各类教程，相关软件下载，应有尽有&quot;<br>
+var msg=m1+m2;<br>
+var out=&quot;&quot;;<br>
+var c=1;<br>
+if (seed &gt;100) {<br>
+seed--;<br>
+var cmd=&quot;scroll(&quot;+ seed + &quot;)&quot;;<br>
+timerTwo=window.setTimeout(cmd,100);<br>
+}<br>
+else if (seed &lt;=100 &amp;&amp;seed &gt;0) {<br>
+for (c=0;c &lt;seed;c++) {<br>
+out+=&quot;&quot;;<br>
+}<br>
+out+=msg;<br>
+seed--;<br>
+var cmd=&quot;scroll(&quot;+ seed + &quot;)&quot;;<br>
+window.status=out;<br>
+timerTwo=window.setTimeout(cmd,100);<br>
+} else if (seed &lt;=0) {<br>
+if (-seed &lt;msg.length) {<br>
+out+=msg.substring(-seed,msg.length);<br>
+seed--;<br>
+var cmd=&quot;scroll(&quot;+ seed + &quot;)&quot;;<br>
+window.status=out;<br>
+timerTwo=window.setTimeout(cmd,100);<br>
+}<br>
+else {<br>
+window.status=&quot;&quot;;<br>
+timerTwo=window.setTimeout(&quot;scroll(100)&quot;,7);<br>
+}<br>
+}<br>
+}<br>
+timerONE=window.setTimeout('scroll(100)',50);<br>
+//--&gt;<br>
+&lt;/SCRIPT&gt;<br>
+</span></small>
+
+</TBODY>
+</table>
+
+
+</table>
+</center>
+<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></div>
+</body>
+</html>

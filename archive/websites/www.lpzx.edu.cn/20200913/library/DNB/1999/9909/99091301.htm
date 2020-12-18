@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>9902请你编程</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>9902请你编程</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+                    <p align="left">　　大家好！《请你编程》又与你们见面了。虽然上期题目比较难，但来稿却并没有因此而减少，这体现了大家对《请你编程》的支持和对编程的浓厚兴趣！从这次投稿来看，基本上都找到了该算法的规律以及解题的方法，并且能按要求得出正确答案，但有些读者的思路不太清晰，程式冗长，直接影响到可读性。有读者认为以前一些题目过于简单，其实我们的宗旨是尽量让更多的读者参与，重点放在编程的思路、结构以及可读性上。<br>
+                      　　9902请你编程解题思路:<br>
+                      　　显而易见，存在一些数据对，使得第一个船夫“必败”，如以下数列：<br>
+                      　　No.1 1 2 mother 1 <br>
+                      　　No.2 3 5 <br>
+                      　　No.3 4 7 mother 2 <br>
+                      　　No.4 6 10 mother 3<br>
+                      　　No.5 8 13<br>
+                      　　No.6 9 15 mother 4<br>
+                      　　No.7 11 18<br>
+                      　　对于该数列，存在如下特点：<br>
+                      　　1、对第n项数据对i,j,其中i为在前n－1项中未曾出现过的数中最小的一个，j=i＋n,这可以用反证法证明。<br>
+                      　　2、对第n项数据对i,j，有n=j－i。易证。<br>
+                      　　3、任一正整数k，必定在该数列中出现且只出现一次，这也可用反证法证明。<br>
+                      　　4、如果数据对i,j属于该数列，则数据对i＋j,i＋2＊j也属于该数列。<br>
+                      　　5、如果数据对i,j属于该数列，则数据对j－1,i＋j－1也属于该数列。<br>
+                      　　6、对于数据对i,j，用特点4推出的数据对i＋j,i＋2＊j称为其右儿子；用特点5推出的数据对j－1,i＋j－1称为其左儿子。则有：数据对i,j的右儿子为数列的第j项，左儿子为数列的第i项。结合特点4、5、6易证。<br>
+                      　　7、对于属于该数列但不能用特点4推出的数据对i,j称为母数据对，可以用特点4推出的数据对称为子数据对。则有：母数据对数列中第n项可由数列中第n项用特点5推出，子数据对数列中第m项可由数列中第m项用特点4推出。<br>
+                      　　根据以上特点，给出解题的递归算法：<br>
+                      　　若i&lt;=j，则i,j不属于该数列；<br>
+                      　　若j－i,i＋1属于该数列，则i,j属于该数列；<br>
+                      　　若2＊i－j,j－i属于该数列，则i,j属于该数列。<br>
+                      　　解题完毕。<br>
+                      　　该题的难度在于看出该数列的两个递推公式，并且算法是判断i,j是否是在数列中，而不是判断数列中是否有i,j（若如此，数组必定会越界，且运行超时）。<br>
+                      　　源程序：<br>
+                      　　function right(x,y:longint):boolean;<br>
+                      　　begin<br>
+                      　　if (x&lt;=0) or (y&lt;=0) then begin right:=false;exit;<br>
+                      end;<br>
+                      　　if (x=1)and(y=2) then begin right:=true;exit;end;<br>
+                      　　if x&gt;=y then begin right:=false;exit;end;<br>
+                      　　if right(2＊x－y,y－x) then begin right:=true;exit;<br>
+                      　 end;<br>
+                      　　if right(y－x,x＋1) then begin right:=true;exit;end;<br>
+                      　　right:=false;<br>
+                      　　end;<br>
+                      　　const<br>
+                      　　s:array[false..true]of string=(′first′,′second′);<br>
+                      　　var<br>
+                      　　f:text;<br>
+                      　　i,j,t:longint;<br>
+                      　　begin<br>
+                      　　assign(f,′river.txt′);reset(f);writeln;<br>
+                      　　while not eof(f) do<br>
+                      　　begin<br>
+                      　　readln(f,i,j);<br>
+                      　　if (i=0)and(j=0) then break;<br>
+                      　　if i&gt;j then begin t:=i;i:=j;j:=t;end;<br>
+                      　　writeln(s[right(i,j)]);<br>
+                      　　end;<br>
+                      　　close(f);<br>
+                      　　end.<br>
+                      　　9904请你编程题目<br>
+                      　　建一个n×n的矩阵，分别将数字1、2、3…… n2填入矩阵（每个数字只能使用一次），使矩阵的每一行、每一列以及对角线数字的和都相等，但有些矩阵不会满足这些条件（例如：2×2 
+                      矩阵）。请读者编写一个程序：任意输入一个正整数n值，如果该矩阵满足以上条件，就输出这个矩阵，否则，输出一段信息。<br>
+                      　　来稿请寄磁盘稿或用E－mail投稿，请写明编程思路和源程序，将来稿寄到电脑报编辑部的收信地址或E－mail邮箱，同时欢迎提供请你编程的题目。来稿截止日期：1999年4月15日。<br>
+                      　　本期获奖名单：<br>
+                      娄江鸿（湖北省） 王　利（湖北省）<br>
+                      薄新维（辽宁省） 葛　勇（上海市）<br>
+                      刘少迪（湖南省） 顾伟庆（上海市）<br>
+                      张赞波（江苏省） 黄本宇（安徽省）<br>
+                      陆欣蔚（浙江省） 罗海泓（江苏省）<br>
+                      　　每位获奖者将获得苦丁香公司提供的光盘一张。</p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

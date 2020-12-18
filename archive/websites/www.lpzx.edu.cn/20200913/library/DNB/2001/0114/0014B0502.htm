@@ -1,0 +1,139 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>在DirectX </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | 
+      <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="457" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="139" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第14期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{在DirectX 
+              8下安装DirectX 7}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 前几日，偶翻到2000年某期《电脑报》，发现有一个关于在DirectX 
+              8下安装DirectX 7的问题，至今好像还没有人有比较好的方法，都是得下载反安装程序之类的。经过我一番努力，终于找到了手工解决的办法。<br>
+              我的机器上已装了DirectX 8，我试着装了一下DirectX 7，果然不行，提示有新版本了。我用“DirectX”作关键字查找了一下，在C\WINDOWS下找到了一个DirectX的安装log文件——Directx.log。用记事本打开它，找到：<br>
+              &quot;12/21/00 134552 Version in registry = 4.06.03.0518<br>
+              12/21/00 134552 Version in DLL = 4.07.00.0716&quot;<br>
+              ——这是我去年安装DirectX8的记录。还找到了：<br>
+              &quot;02/26/01 193351 Version in registry = 4.07.00.0716<br>
+              02/26/01 193351 Version in DLL= 4.07.00.0700<br>
+              02/26/01 193351 DoPreCopy Exisiting Install is Newer<br>
+              02/26/01 193351 SetupForDirectX Restoring Backups<br>
+              02/26/01 193358 Installation ended with value -14 = Newer version 
+              already installed<br>
+              02/26/01 200135 DXSetup - CommandLine /packageinstall&quot;<br>
+              ——这是我刚刚在DirectX 8下安装DirectX 7失败的记录。<br>
+              我想，既然安装了个高版本就不能安装低版本，那就是说DirectX有一个检查版本信息的方法。会不会在注册表？<br>
+              运行“REGEDIT”打开注册表，查找关键字“4.07.00.0716”(因为“Directx.log”里的版本号“4.07.00.0716”是最高的)，只有“HKEY＿LOCAL＿MACH-<br>
+              INE\Software\Microsoft\DirectPlay\DirectX\Version”的键值是“4.07.00.0716”。把它修改为“4.06.03.0518”，然后再安装DirectX 
+              7。哈哈！一切OK了！！！<br>
+              附：以下是修改注册表及安装DirectX 7成功在“Directx.log”的记录：<br>
+              &quot;02/26/01 200140 Version in registry = 4.06.03.0518<br>
+              02/26/01 200140 Version in DLL = 4.07.00.0700<br>
+              02/26/01 200140 DoCopy&quot;——这是更改注册表的记录；<br>
+              &quot;02/26/01 202703 Installation ended with value 1 = Installation 
+              succeeded need restart<br>
+              02/26/01 202714 DXSetup - User rebooted&quot;——这是安装成功后的记录。<br>
+              怎么样，你也可以试一试？！欢迎各路高手指教，联系信箱wgb0@263.net。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

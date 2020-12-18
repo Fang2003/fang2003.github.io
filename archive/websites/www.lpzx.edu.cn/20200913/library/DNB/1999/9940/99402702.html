@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 被遗忘的HTML元素</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>40 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 被遗忘的HTML元素</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 被遗忘的HTML元素 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　众所周知，制作网页所用到的最基本的语言HTML主要是由著名的W3C组织来制定标准的。但由于IE和NetScape之间都在为击败对手不断地研究新的网页技术而竞争，就产生了不少新的HTML元素。这些新的HTML元素，有的被W3C组织所认证，发展成为所有的浏览器必须支持的HTML标准元素。但有的却仍不被别的浏览器所接受。特别是对于目前最主流的浏览器－IE和NetScape，出于各种方面的原因，总是有一些元素不能得到二者共同的支持。在实际的网页制作过程中，为了能使页面在所有的浏览器中都能正常显示，这样的元素往往得不到应用，而逐渐为人们遗忘。但我们可以相信，一个元素之所以被一种浏览器所支持，它必有它的优点和长处。下面我们就来一起来看一下这些被“遗忘”了的HTML元素。
+<p><b>　　1.BGSOUND</b></p>
+　　BGSOUND元素可在IE3.0以上的浏览器中运行，在NetScape任何版本的浏览器中都是无效的。BGSOUND用来设定页面载入时的背景音乐，它的语法格式如下：<br>
+　　&lt;BGSOUND SRC=″url″ LOOP=″n″&gt;<br>
+　　BGSOUND可以放在页面文件中的任何位置，但一般为了容易读懂页面源代码，都将其放在<BODY>标签后的第一个位置上。它有SRC和LOOP两个属性，其中的SRC是用来指定音乐文件的具体url路径，音乐文件可以是WAV、AU或者MIDI格式等。LOOP用来指定背景音乐循环播放的次数，当LOOP=－1时，背景音乐将会连续播放，直到浏览器开始载入下一个页面为止。例如下例：<br>
+　　&lt;BGSOUND SRC=″music/bgmusic.wav″ loop=－1&gt;<br>
+<p><b>　　2.IFRAME</b></p>
+　　这也是一个只可在IE3.0以上的浏览器中运行的HTML元素，在NetScape浏览器中运行时不会显示出任何效果。IFRAME元素可以在页面中插入一个浮动的窗口，在这个浮动窗口中可以显示另外一个网页页面。它的基本语法格式如下：<br>
+　　&lt;IFRAME SRC=″url″ FRAMEBORDER=″1或0″ WIDTH=″x″ HEIGHT=″y″ SCROLLING=″yes或no″ ALIGN=″alignment″ MARGINWIDTH=″x″ MARGINHEIGHT=″y″&gt;&lt;/IFRAME&gt;<br>
+　　其中SRC是用来指定在页面浮动窗口中显示的网页文件的具体url地址；FRAMEBORDER用来指定页面浮动窗口是否具有边框，它的值只有1和0两个，分别表示有边框和没有边框；WIDTH和HEIGHT用来指定页面浮动窗口的宽度和高度；SCROLLING指定页面浮动窗口是否需要用滚动条，它的值有yes和no两个，当页面浮动窗口内嵌网页页面大于浮动窗口时，在默认的情况下，在浮动窗口的右边和下边会自动提供滚动条，但如果SCROLLING=″yes″，则不管在什么情况下，浮动窗口都会提供滚动条，如果SCROLLING=″no″，则不管在什么情况下，浮动窗口都不提供滚动条；ALIGN属性指定浮动窗口内的页面相对于浮动窗口的位置，它的值有left、right、top、middle、bottom，分别表示浮动窗口内的页面的位置是靠左、靠右、靠上、居中和靠下；MARGINWIDTH和MARGINHEIGHT分别用来指定浮动窗口内的页面与浮动窗口之间在水平方向和竖直方向上的填充距。请看下例：<br>
+　　&lt;BODY bgcolor=″＃33eebb″ text=″＃000000″&gt;<br>
+　　&lt;FONT SIZE=5&gt;利用IFRAME元素制作页面浮动窗口&lt;/FONT&gt;<br>
+　　&lt;IFRAME SRC=″poem.htm″ FRAMEBORDER=″1″ WIDTH=″400″ HEIGHT=″200″ MARGINWIDTH=″10″ MARGINHEIGHT=″10″&lt;&gt;/IFRAME&gt;<br>
+　　&lt;/BODY&gt;<br><b>(北京　蟋蟀)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/40/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99402702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

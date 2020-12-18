@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>婚纱</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　湖北读者施鄂章问：1.一台组装的586计算机，硬盘分C、D两区，安装Windows 
+        95操作系统，在Aautoexec.bat文件中并没有“LH/L：1，40352 
+        c:\&gt;Pwin95\command\mscdex.exe/d:mscd000/m:12”这一句，为何从Windows 95进入DOS 
+        7.0时出现提示：<br>
+        　　c\&gt;LH/L:1,40352 c:\pwin95\command\mscdex.exe/d:mscd000/m:12<br>
+        　　file not found<br>
+        　　而c:\&gt;pwin95\command目录中又有mscdex.exe文件，而且在DOS提示符下可以进入E盘(光驱工作正常)。<br>
+        　　2.从Windows 95进入DOS后，回到Windows 95再进入DOS时，用mem/p/c查看内存，发现两个command文件(同样大小)被加载，重复几次就有几个同样的command被加载，是何原因?<br>
+        　　答：对于第一个问题，实际上是Windows 95加载时的顺序问题，而Windows 
+        95的Autoexec.bat文件在系统的启动过程中就已经执行了。那么从Windows 95进入DOS时执行的是哪个批处理文件呢?实际上执行的是c:\&gt;pwin95目录下的Dosstart.bat文件，而该文件一般包括了c:\pwin95\command目录下的mscdex.exe，至于提示中的“file 
+        not found”则是指Dosstart.bat中的下一句另外要执行的文件没有找到，否则就不可能正常地进入E盘，只要打开Dosstart.bat文件看一下就明白了。第二个问题则是由DOS返回Windows 
+        95时操作不正确产生的，我们知道command实际上是DOS的一个命令解释器，许多大的商用程序在不退出其它程序时，都可利用去除外壳的方式进入DOS，为了能执行DOS命令，这时就需要一个command的新拷贝，而在从DOS返回应用程序时则需要通过使用“Exit”命令来返回用户程序。对于Windows 
+        95也是如此，因此由DOS返回Windows 95时应该使用“Exit”命令，如果用“WIN”命令则会出现多个command拷贝的现象。<br>
+        　　山东读者董辉军问：我买了一台联想微机，Pentium 133 CPU、16MB内存、17GB硬盘。现有一问题请教：装箱单上写的是17GB的硬盘，但是在“我的电脑”中查得只有158GB。是系统占用了空间，还是其它什么原因?联想作为国内电脑行业的“巨头”，这种失误不应该有吧!<br>
+        　　答：硬盘容量的测试值与厂商的标称值不同的问题，主要是计算方法不同产生的。厂商计算的每K字节是按照1000字节得出的，其1GB=1000×1000×1000=1000000000字节。但是测试程序则按每KB为1024字节计算，其1GB=1024×1024×1024=1073741800字节。这两者之间约有7％的误差，1000000000÷1073741800=0.93。你的硬盘标称值为17GB，实际测试值为158GB，两者之间的误差就是由此产生的，联想公司没有失误之处。(何宗琦)<br>
+        　　四川读者王楠问：Compaq原装机原来装的是英文版的Windows 95，后来改装中文版的Windows 
+        95(覆盖安装)，中文输入法增加了王码五笔字型。使用时出现如下问题：中文输入时提示汉字部分变成黑色块。安装中文IE40时提示语言不对，只能退出安装。《硬件大师》光盘在此微机上不能播放。按《电脑报》介绍的关于中文Windows 
+        95显示乱码的解决方法，查看并试着修改注册表和default fonts文件下的关键字，也不能解决问题。请问如何解决Compaq机使用中文Windows 
+        95出现的问题?</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月16日第10期34版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

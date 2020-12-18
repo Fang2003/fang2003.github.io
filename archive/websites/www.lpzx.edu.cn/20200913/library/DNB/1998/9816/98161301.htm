@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>9804 
+        请你编程<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　9804请你编程的正确答案是：在不考虑只有一个儿子的情况下，同时要求财产份数为整数份且最终分完，则国王至少有9个儿子，财产为81份，每个儿子分得的财产数相等，均为9份。这次读者的编程思路分为两种：循环试验法和剩余财产凑整法。下面介绍两个读者程序供大家借鉴：<br>
+        　　<strong>1唐山读者李文的程序：</strong><br>
+        　　思路：设变量S为国王最初将家产分成的份数，T为每个儿子的编号亦即第一次分得的份额，则每个儿子应得的全部份额F=T＋（S－T）/10。由题意可知，能满足第一次分配条件的S的最小值应是11，所以可从11试起。如F为整数，说明可以继续分下去，这时将F存入数组D（T），S重新赋值为S－F，T值增1，继续试下去。如遇F不是整数时，说明已不符合要求条件，这时将最初份额增10，重复上述循环，直至S=0为止。最后从数组中依次输出每个儿子应得的份额并输出最后一个儿子的编号（即国王儿子的总数）。<br>
+        　　10 N=11<br>
+        　　20 S=N<br>
+        　　30 T=1<br>
+        　　40 WHILE S&lt;&gt;0<br>
+        　　50 F=T＋(S－T)/10<br>
+        　　60 IF F=INT(F) THEN D(T)=F:S=S－F:T= T＋1 ELSE N=N＋10:S=N:T=1<br>
+        　　70 WEND<br>
+        　　80 PRINT ″国王至少有″;T－1;″个儿子″<br>
+        　　90 FOR I=1 TO T－1<br>
+        　　100 PRINT ″第″;I;″个儿子得″;D(I);″份″<br>
+        　　110 NEXT<br>
+        　　<strong>2广西读者黄朝礼的程序：</strong><br>
+        　　思路：设第i个儿子分得财产前、后剩余财产分别为k(i),k(i＋1),则第i个财产为:a(i)=i＋(k(i)－i)/10,剩余:k(i＋1)=k(i)－a(i)，则可推出:k(i)=i＋k(i＋1)＊10/9；假定国王已将财产全部分到每个儿子手中,为保证财产刚好全部分完,最后一个儿子m所得财产份额为m份,剩余财产k(m＋1)=0，由此推出k(m)，k(m－1)……直到k(1)，若k(1)为整数，则k(1)为财产总数，若k(1)不为整数，则调整m的值再反推。<br>
+        　　＃include &lt;stdioh&gt;<br>
+        　　＃define MAX 100　/＊最多100个仔＊/<br>
+        　　main()<br>
+        　　{<br>
+        　　int i,m;<br>
+        　　float a[MAX],k;<br>
+        　　for (m=2;m&lt;=MAX;m＋＋)<br>
+        　　{k=a[m]=m;　/＊最后一个所得＊/<br>
+        　　for(i=m－1;i&gt;=1;i－－)<br>
+        　　{k=i＋k＊10/9;　/＊剩余财产＊/<br>
+        　　a[i]=i＋(k－i)/10;　/＊第i个所得＊/<br>
+        　　}<br>
+        　　if((int)k==k)　/＊财产总份数为整数＊/<br>
+        　　{printf(″国王共有％d个儿子,将财产分成％d份,每人得数如下:\n\n″,m,(int)k);<br>
+        　　for(i=1;i&lt;=m;i＋＋){printf(″\t\t第％d个儿子得:％f份\n″,i,a[i]);<br>
+        　　}<br>
+        　　printf(″\n程序设计:黄朝礼　199834\n″);<br>
+        　　return 0;<br>
+        　　}<br>
+        　　}<br>
+        　　printf(″没有满足条件的解!!\n″);<br>
+        　　return 0;<br>
+        　　}<br>
+        　　9806请你编程题目由霍明旭读者提供：<br>
+        　　用若干L型字片和若干田字型字片能否盖满1个8×8的方格棋盘(如图)?若能，请给出所有解。<br>
+        　　来稿请寄磁盘稿，并写清楚思路和算法，截止时间1998年6月15日，并欢迎同时提供请你编程的题目。<br>
+        　　本期获奖名单是：<br>
+        　　黄朝礼(广西)　李文(河北)　王忠海(重庆)　常强林(江苏)　陆欣蔚(浙江)　康艺泓(广东)　甘永兴(江苏)　向群(湖南)　刘国平(河北)　谢君鸿(江苏)<br>
+        　　每位获奖者将获得苦丁香公司提供的光盘一张。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>电路仿真软件PSPICE的应用</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p>'</p>
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>电路仿真软件PSPICE的应用&nbsp; 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　PSPICE是当今世界上著名的电路仿真标准工具之一，MicroSim公司出版的基于Windows平台的PSPICE可以对电路进行以下一些工作：<br>
+        　　1.制作实际电路之前，仿真该电路的电性能，如计算直流工作点（Bias 
+        Point），进行直流扫描（DC Sweep）与交流扫描（AC Sweep），显示检测点的电压电流波形等。<br>
+        　　2.估计元器件变化（Parametric）对电路造成的影响。<br>
+        　　3.分析一些较难测量的电路特性，如进行噪声（Noise）、频谱（Fourier）、器件灵敏度（Sensitivity）、温度（Temperature）分析等。<br>
+        　　4.优化设计。<br>
+        　　PSPICE主要包括Schematics、Pspice、Probe、Stmed（Stimulus Editor）、Parts等5个软件包。其中：<br>
+        　　1.Schematics是一个电路模拟器。它可以直接绘制电路图，自动生成电路描述文件；并可对电路进行直流分析、交流分析、瞬态分析、傅立叶分析、环境温度分析、蒙特卡罗分析和灵敏度分析等多种分析；而且还可以对元件进行修改和编辑。<br>
+        　　2.Pspice是一个数据处理器。它可以对在Schematics中所绘制的电路进行模拟分析，运算出结果并自动生成输出文件和数据文件。<br>
+        　　3.Probe是后处理器，相当于一个示波器。它可以将在Pspice运算的结果在屏幕或打印设备上显示出来。模拟结果还可以接受由基本参量组成的任意表达式。<br>
+        　　4.Stmed是产生信号源的工具。它在设定各种激励信号时非常方便直观，而且容易查对。<br>
+        　　5.Parts是对器件建模的工具。它可以半自动地将来自厂家的器件数据信息或用户自定义的器件数据转换为Pspice中所用的模拟数据，并提供它们之间的关系曲线及相互作用，确定元件的精确度。<br>
+        　　下面我们就以模拟电子线路中的最为简单的二极管整流电路为例，详细介绍其操作过程，希望借此使读者大致了解PSPICE在模拟电子电路仿真中的应用方法，并举一反三，进一步学习该软件并探索其应用技巧。<br>
+        　　1.编辑原理图<br>
+        　　首先在Windows界面下的PSPICE程序组中双击Schematics，进入原理图编辑。<br>
+        　　用鼠标单击绘制(Draw)中的取新元件( Get New Part)项，再单击对话框中元件库(Libraries)的浏览(Browse)。从Analog．slb中取出电阻R，系统自动命名为R1；从Sourse．slb中取出正弦电压源VSIN，系统自动命名为V1；从Eval．slb中取出二极管D1N914，系统自动命名为D1；从Port．slb中取出地线EGND，系统自动设置为0点。<br>
+        　　把元件放在所需位置，在Draw对话框里选择(Wire),用鼠标画线将元件连接起来，这样电路图的初绘就完成了。<br>
+        　　然后进行元件参数设置。用鼠标双击相应元件或在编辑(EDIT)菜单中用鼠标单击性质(Attribute)对话框，对相应的参数进行修改（也可以用鼠标双击相应元件处的参数框进行修改）。其中，正弦电压源(Vsin)：起始电压(Voff)为0；幅值电压(Vamp1)为10；频率(Freq)10K；电阻R1：Value电阻值为100。<br>
+        　　 
+        其中，电压、电阻、频率的单位缺省值分别为伏特、欧姆和赫兹。参数确定后，可用鼠标双击需要标注的节点连线，在LABEL 
+        内输入数字（节点数）即可。至此，原理图编辑就结束了。<br>
+        　　2.仿真计算<br>
+        　　首先进行仿真分析的设置。本例的仿真内容为瞬态分析，在Schematics主菜单下，用鼠标单击分析(Analysis)中的设置(Setup)，选中瞬态分析Transient设置（在选项前的小框内打勾），并将打印步长Print 
+        Setup设为20ns，最终时间Final Time设为1ms，计算步长设为2μs；然后退出，再用鼠标单击Analysis中的Library 
+        and Include Files，将二极管所在的元件库Eval．lib加入Library Files一栏中，这样设置就完毕了。<br>
+        　　接着就可以点中Analysis中的Creat Netlist建立电路网络表，此时，会要求你存盘，并自动进行电路检查（Electrical 
+        Rule Check），如有错误将给出提示。<br>
+        　　最后就可以点中Analysis中的仿真计算Simulate（或按快捷键F11）进行仿真。在仿真过程中，会看到界面。计算结束，可点中该界面的File下的Examine 
+        Output检查仿真结果。<br>
+        　　3.波形显示<br>
+        　　计算结束后，进入Probe（可通过主菜单的选项Opition设置自动进入，也可在Analysis中点中Run 
+        Probe运行），选择增加（Add）曲线（Trace），在给出的菜单中选ID1（电流）、V1和V2（分别为节点1、2的电压），就可以看到它们的波形。这些波形可以拷贝在贴板上，供用户使用。<br>
+        　　从上述例子可见，PSPICE是一个模拟的“实验台”。在它上面，你可以做各种电路实验和测试，以便修改与优化设计。它为我们分析与设计电路提供了强大的计算机仿真工具，利用它对电路、信号与系统进行辅助分析和设计，对电子工程、信息工程和自动控制等领域工作的人员具有很高的实用价值。<br>
+        　　在国内，已有很多高校及科研院所的科技工作者使用该系列的软件，但这方面的资料比较缺乏，而且还有很多人不太了解这一软件的情况，本文作者在此仅作了简介，希望起到抛砖引玉的作用(在http://www.microsim.com/可找到该软件的相关信息，并提供了PDF格式的文档供下载)。(四川　张　华)<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月11日第18期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

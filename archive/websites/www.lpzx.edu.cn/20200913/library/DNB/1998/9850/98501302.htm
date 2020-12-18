@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VB5.0数据库编程经验小集</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　长期用VB50进行数据库应用软件的编程，遇到过不少问题,走了不少弯路，也积累了不少经验。在此，将它们做个小结，希望对同样从事VB50编程的朋友有所帮助。<br>
+        　　1、在Form_Load事件中不能对Data控件进行控制<br>
+        　　如果确实需在窗体被打开时使用Data控件,可在Form_Activate事件中进行控制。由于Activate事件在窗体被激活时发生，就是说在窗体被打开时发生，同时在窗体得到焦点时也会发生。要区分是否为窗体被打开的情况，只要设置一变量，在第一次Activate事件发生时对Data控件进行控制，然后对此变量进行设置，使以后的Activate事件不再执行对Data控件进行控制的语句。<br>
+        　　2、DBGrid控件列宽的控制<br>
+        　　在设计时可通过DefColWidth属性来设置列宽，但这样无法为不同的列设置不同的宽度。那么到底要怎么分别设置每一列的宽呢?这同样可在窗体的Activate事件中实现。<br>
+        　　Form_Activate()<br>
+        　　DBGrid1Columns(0)Width=1000　′为第一列设置宽度<br>
+        　　DBGrid1Columns(1)Width=2500　′为第二列设置宽度<br>
+        　　DBGrid1Columns(2)Width=1000　′为第三列设置宽度<br>
+        　　End Sub<br>
+        　　3、IsNull函数的应用<br>
+        　　判断一值是否为空，要用IsNull函数来实现，而不能用判断语句来实现，例如：<br>
+        　　If Data1RecordsetFields(1)Value=NULL Then<br>
+        　　′要执行的语句<br>
+        　　End If<br>
+        　　这样无论Data1RecordsetFields(1)Value的值是否为NULL,要执行的语句都执行不了,因为(Data1RecordsetFields(1)Value=NULL)永远等于False,所有含有“NULL”的判断式的值都是False。正确的处理方法为：<br>
+        　　If IsNull（Data1RecordsetFields(1)Value)=True Then<br>
+        　　′要执行的语句<br>
+        　　End If<br>
+        　　不明白的地方可查找关于“IsNull”函数的说明和帮助。<br>
+        　　4、使用FoxPro数据库<br>
+        　　大家知道打开Access数据库很简单,比如要打开一个当前目录下名为“bookmdb”的数据库文件,如下所示:<br>
+        　　Dim db1 As Database　′定义变量<br>
+        　　Set db1=OpenDatabase(″bookmdb″)　′打开数据库文件<br>
+        　　如果要打开的是FoxPro数据而不是Access数据怎么办呢?首先要明白FoxPro中所谓的数据库只是Access中的表而已。其打开方法亦很简单，如下：<br>
+        　　Dim db1 As Database<br>
+        　　Set db1=OpenDatabase(″C:\BOOK″,False,False,″FoxPro 25″)<br>
+        　　′BOOK为一包含所要FoxPro数据库文件(＊dbf)的目录<br>
+        　　在这里用FoxPro数据库文件的目录来代替Access中的数据库名。在使用中，“C:\BOOK”目录下的所有dbf文件都是db1的表,表名即为文件名除去“dbf”。其它的使用方法都和用Access数据库时一样。如有不明之处，请查阅关于“OpenDatabase”函数的说明和帮助。(江苏　潘　想) 
+        &nbsp; <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月28日第50期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

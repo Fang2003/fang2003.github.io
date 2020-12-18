@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">给你的Windows 
+        95加把“锁”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp; <font
+        color="#369681"> </font><font color="#004040"> </font></strong><font color="#369681">Windows 
+        95是一套运用非常灵活的系统，它允许用户按照自己的喜好对任务栏、开始菜单等诸多项目进行适当的修改，方便了用户的使用，可这有时也会给我们带来麻烦。因为在公用的微机上，这些设置往往会被其他用户改得面目全非，影响了用户的使用。为此，不少维护人员都不得不借助于一些专门软件来禁止普通用户对Windows 
+        95进行修改，这样做费时费力，效果也不太理想。其实完全不必这么麻烦，利用Windows 
+        95自带的注册表编辑器禁止用户对系统所作的修改存盘即可解决这一问题，具体的步骤为：<br>
+        　　1单击“开始”菜单，执行“运行”命令。<br>
+        　　2在“运行”对话框的“打开”框中输入“regeditexe”后单击“确定”，启动Windows 
+        95的注册表编辑器。<br>
+        　　3在注册表编辑器左边的窗口中依次打开“HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer”项。<br>
+        　　4在注册表编辑器右边窗口的空白处右击鼠标。<br>
+        　　5从弹出的快捷菜单中选择“新建”子菜单中的“DWORD值”命令。<br>
+        　　6系统会将新建的“DWORD”值取名为“New Value ＃1”，用户将其改名为“NoSaveSettings”。<br>
+        　　7双击“NoSaveSettings”项，系统弹出“编辑DWORD值”对话框。<br>
+        　　8将“编辑DWORD值”对话框中的“键值”由0改为1。<br>
+        　　9单击“确定”按钮。<br>
+        　　10关闭注册表编辑器。<br>
+        　　11重新启动Windows 95。<br>
+        　　此后Windows 95对用户所作修改将不进行保存，也就是说用户对Windows 
+        95所作的任何修改都仅对当次运行有效，重新启动Windows 95后就会自动恢复成修改前的状态，这样就锁住了Windows 
+        95，满足了维护人员的要求。被锁住的项目主要包括任务栏的属性(如是否自动隐藏、是否在开始菜单中显示小图标等)，以及资源管理器的属性(如文件的排列方式及显示范围)等项目，但用户在桌面及开始菜单上新建、改名、删除图标不在禁止之列。另外，用户若想取消这一设置只需将第8步中的“DWORD”值再改为0即可，十分方便。<strong>(湖北　胡锦承)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月16日第6期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

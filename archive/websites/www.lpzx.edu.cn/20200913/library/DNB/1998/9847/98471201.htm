@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Excel97对数据的安全管理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp;&nbsp; Excel97不仅是一种功能齐全的电子表格处理软件，也是一种操作简便的数据库管理工具，因此，数据的安全管理也是Excel97的主要功能之一。据笔者的体会，Excel97对数据的安全管理大致可分为三个层次：<br>
+        &nbsp;&nbsp;&nbsp; <strong>一、对单元格进行读写保护</strong><br>
+        &nbsp;&nbsp;&nbsp; 单元格是Excel97执行其强大的计算功能最基本的载体，对单元格的读写保护是Excel97对数据进行安全管理的基矗对单元格的保护基本可分为写保护和读保护两类，所谓写保护就是对单元格中输入信息加以限制，读保护是对单元格中已经存有信息的浏览和查看加以限制。<br>
+        &nbsp;&nbsp;&nbsp; 对单元格的写保护有两种方法：<br>
+        &nbsp;&nbsp;&nbsp; (一)对单元格的输入信息进行有效性检测。首先选定要进行有效性检测的单元格或单元格集合，然后从数据菜单中选择“有效数据”选项，通过设定有效条件、显示信息和错误警告，控制输入单元格的信息要符合给定的条件。<br>
+        &nbsp;&nbsp;&nbsp; (二)设定单元格的锁定属性，以保护存入单元格的内容不能被改写。可分为以下步骤：<br>
+        &nbsp;&nbsp;&nbsp; 1选定需要锁定的单元格或单元格集合；<br>
+        &nbsp;&nbsp;&nbsp; 2从格式菜单中选择“单元格”选项；<br>
+        &nbsp;&nbsp;&nbsp; 3在设置单元格格式的弹出菜单中选择“保护”界面；<br>
+        &nbsp;&nbsp;&nbsp; 4选中“锁定”；<br>
+        &nbsp;&nbsp;&nbsp; 5从工具菜单中选择“保护”选项，设置保护密码。至此即完成了对单元格的锁定设置，当有人企图对被保护的单元格进行修改时，Excel97会立即发出警告。<br>
+        &nbsp;&nbsp;&nbsp; 对单元格的读保护有三种方法：<br>
+        &nbsp;&nbsp;&nbsp; (一)通过对单元格颜色的设置进行读保护。例如：将选定单元格或单元格集合的背景颜色与字体颜色同时设为白色，这样，从表面看起来单元格中好像是没有输入任何内容，用户无法直接读出单元格中所存储的信息。<br>
+        &nbsp;&nbsp;&nbsp; (二)用其他画面覆盖在需要保护的单元格之上，遮住单元格的本来面目，以达到读保护目的。例如：使用绘图工具，画一不透明矩形覆盖在单元格之上，从格式菜单中选定矩形的“锁定”选项，然后保护工作表，以保证矩形不能被随意移动。这样，用户所看到的只是矩形，而看不到单元格中所存储的内容。<br>
+        &nbsp;&nbsp;&nbsp; (三)通过设置单元格的行高和列宽，隐藏选定的单元格，然后保护工作表，使用户不能直接访问被隐藏的单元格，从而起到读保护的作用。<br>
+        &nbsp;&nbsp;&nbsp; <strong>二、对工作表的保护</strong><br>
+        &nbsp;&nbsp;&nbsp; 在Excel97的应用中，对工作表的保护是Excel97对数据进行安全管理的核心。对于工作表的保护大致可从两个方面入手：<br>
+        &nbsp;&nbsp;&nbsp; (一)运用Excel97本身提供的工作表保护功能，通过设置用户自定义密码对工作表予以保护。在这种方法中值得一提的是：如果密码用英文字母设置，要求区分大小写。<br>
+        &nbsp;&nbsp;&nbsp; (二)通过对工作表的Visible属性的设置隐藏工作表，以保护工作表中所有存储数据的安全。<br>
+        &nbsp;&nbsp;&nbsp; 下列代码是一个名为“隐藏工作表”的宏，将工作表sheet1的Visible属性设置为False，当运行该宏之后，工作表sheet1将变为隐藏的工作表，用户不能直接访问，从而对sheet1起到保护作用。<br>
+        &nbsp;&nbsp; Sub隐藏工作表()<br>
+        &nbsp;&nbsp;&nbsp; Worksheets(″sheet1″)Visible=False<br>
+        &nbsp;&nbsp;&nbsp; End Sub<br>
+        &nbsp;&nbsp;&nbsp; 如果用户需要对sheet1进行必要的修改，只需将sheet1的Visible属性设置为True即可。宏代码如下：<br>
+        &nbsp;&nbsp;&nbsp; Sub显示工作表()<br>
+        &nbsp;&nbsp;&nbsp; Worksheets(″sheet1″)Visible=True<br>
+        &nbsp;&nbsp;&nbsp; End Sub<br>
+        &nbsp;&nbsp;&nbsp; <strong>三、对工作簿的保护</strong><br>
+        &nbsp;&nbsp;&nbsp; 在Excel97对象的层次结构中，工作簿对象仅次于最顶层的Application。保护工作簿的方法较多，在这里简要介绍三种较为有效的方法：<br>
+        &nbsp;&nbsp;&nbsp; (一)利用Excel97对工作簿的保护功能，用户通过设置自定义密码对工作簿予以保护。<br>
+        &nbsp;&nbsp;&nbsp; (二)灵活运用Auto_open宏对工作簿予以保护。Auto_open宏是打开Excel97工作簿时自动执行的宏，Auto_open对Excel97数据安全管理可起到两个方面的作用：一是通过对操作环境的设置，取消Excel97的默认菜单，使应用者不能轻易地调用Excel97，以保护Excel97工作簿；二是提示用户输入进入应用程序密码，此处的密码设置同第一种方法具有很大差异，在这里可以同时设置多个密码，根据程序开发者的限制，在用户应用过程中每个密码可代表不同的保护层次。<br>
+        &nbsp;&nbsp;&nbsp; (三)创建和使用自定义用户窗体达到保护工作簿的目的。由于在Excel97中VBA执行Show方法，显示一个用户自定义窗体时，只能执行该窗体类模块中事件过程的代码，所以，用户可以完全通过自定义窗体来应用Excel97，只需将VBAProject保护起来，就能使数据的安全管理达到最佳状态，同时给予应用程序开发者较大的活动空间，能充分运用开发者的经验和智慧。<br>
+        &nbsp;&nbsp;&nbsp; 综上所述，Excel97对数据的安全管理具有独自的特点，加以灵活运用，会使你更加钟爱Excel97。<strong>(北京 
+        佘振清)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月7日第47期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

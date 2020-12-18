@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>让对等网“强壮”起来<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　对等网依靠其简单、易操作和成本低的优势，在中、小型企业中的应用越来越广泛。不过对等网的缺陷(主要是缺少用户级的安全系统和远程管理能力不强)，使用户时常遇到麻烦。有没有办法来弥补对等网的这些缺陷，让对等网强壮起来呢？答案是肯定的，笔者在给企业做对等网的过程中总结出一些经验，供大家参考。<br>
+        　　我们可以从以下两个方面着手。<br>
+        　　<strong>一、增强对等网的安全性</strong><br>
+        　　WIN95中提供了一个叫系统策略编辑器的工具(Poledit)，它可以帮助你提高对等网的安全性，在安装WIN95时，这个工具并不会自动地安装到你的计算机里，你可以从WIN95的安装光盘中找到它，它位于Admin\Apptools\Poledit子目录中。关于具体怎样安装及使用这个工具，《电脑报》已有介绍，笔者在此不再重复。我们可以在系统策略编辑器中设置两类用户，一类是默认用户，另一类是管理用户。对于默认用户，你必须限制其对共享设备的权限，并且隐去“网络邻居”图标，另外你需要禁止其进入“控制面板”中的“网络”一项，以防止其任意修改通讯协议及文件打印共享服务功能。对于管理用户则不必加任何限制。设置好后存盘，WIN95会形成一个以POL为后缀的文件，把这个文件拷到每个工作站中。接着，你需要修改一下每个工作站的WIN95注册表文件，具体做法是运行Poedit，从File菜单项选择Open 
+        Registry，用鼠标双击Local Computer图标，这时会出现注册表窗口，双击Network项，双击Update，点中Remote 
+        update，此时会出现如图1所示窗口，在窗口下方的Update Mode中选取Manual(use 
+        specific path)，在Path for manual update一栏中填入你在此台工作站上拷入的POL文件的目录及文件名。存盘，关闭工作表。<br>
+        　　好了，到此为止，你已经为每个工作站建立了一个简单而实用的网络安全系统，当用户用默认用户名进入时，WIN95先是根据注册表文件中提供的信息去找那个POL文件，然后根据这个POL文件对该用户的设置赋予用户相应的权力。这时用户就只能进入相应的资源目录，不能自行添加共享设备，也不能进入其它的资源目录。<br>
+        　　<strong>二、提高对等网远程管理能力</strong><br>
+        　　远程管理功能在Windows NT或Novell网中是系统管理员的得力助手。在WIN95对等网中是不是也能挖掘出这个功能呢？WIN95 
+        OSR2具有远程系统管理功能，这个功能本来是为NT网络而提供的，但若我们能加以利用，则必使我们的对等网如虎添翼。<br>
+        　　先让我们在每个工作站上做一些工作：<br>
+        　　1.确认每个工作站都安装了文件及打印服务功能，若没有则从“控制面板”的“网络”项中添加。须注意的是，我们的网是对等网，所以在Acess 
+        Control一栏中应选Share－level(共享级)。假如选了User－level，在管理员对它进行远程管理时，该工作站系统可能会崩溃。<br>
+        　　2.进入控制面板，找到Passwords一项，点中其中的Remote Administration，选中Enable 
+        Remote Administration of This Server，系统会要求你设置密码。设置完成后，单击OK关闭窗口。<br>
+        　　在所有工作站上完成以上两项工作后，你就可以坐在你自己的电脑旁控制任何一个工作站了。让我们来试一下：(请注意以下所有工作都是在你自己的电脑上完成的)<br>
+        　　①打开“网络邻居”，点取任意一个工作站名。<br>
+        　　②用鼠标右键单击选中的工作站，这时就出现一个弹出菜单，点取最后一项Properties。<br>
+        　　③在弹出的Properties窗口中有三个按钮，即Net Watcher，System 
+        Monitor,Administer。让我们分别来看一下他们的功能。<br>
+        　　Net Watcher：我想网络管理员们一定用过这个功能，在这里不同的是它能让你看到每个工作站的联接情况，使你“足不出户”就可对每个工作站了如指掌。<br>
+        　　System Monitor：这一项在对等网络中不起作用。<br>
+        　　Administer：这一功能也许是最实用的，下面我们就来详细看一下它的用途。<br>
+        　　单击Administer按钮，另一个窗口就会出现，其中有个文件夹“d”和一个盘符“c＄”，“d”是工作站上的一个共享目录，而“c＄”就是那个工作站的硬盘，双击这个符号对方工作站的硬盘内容就在你面前“一览无遗”了，这时你可以对它进行任意操作了。<br>
+        　　做完以上这些工作，你是不是觉得你的对等网变得更安全、更强大，维护也更方便了呢?<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　（加拿大　沈汛）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月1日第21期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

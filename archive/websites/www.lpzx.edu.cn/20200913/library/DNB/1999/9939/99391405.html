@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Foxmail中误删除邮件的恢复</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/loga.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>39 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; Foxmail中误删除邮件的恢复</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Foxmail中误删除邮件的恢复 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　FoxMail是国人用得比较多的一种电子邮件软件，其方便快捷的操作深得用户的喜爱。其中删除邮件的操作有两种方法，一种是按″DELETE″键将邮件移至废件箱，另一种是按″SHIFT＋DELETE″键直接将邮件清除，用起来十分方便。<br>
+　　但凡事有利又有弊，我因为用惯了SHIFT＋DELETE键删除邮件而经常误删除邮件，这样的邮件是“不可恢复的”，如果要看一下被误删除邮件的内容的话只有通过UltraEdit－32等编辑软件去查看信箱文件的原始信息。有一次我一下不小心按了″SHIFT＋END＋DELETE″键选中了收件箱所有的邮件并且将它们删除，可这里面有许多重要的信件。<br>
+　　我的应急办法是：<br>
+　　1.在不退出FoxMail的状态下立即用资源管理器备份c:\FoxMail\MAIL\下的in.box文件和in.ind文件，（FoxMail中对信箱文件是这样定义的：in.box和in.ind是收件箱文件；out.box是发件箱文件；sent.box是已发送信件信箱文件；trash.box是废件箱文件。如果有自定义信箱，则分别以Aaaaa1.box、Aaaaa2.box…… 等命名，如果你不知道你的哪个信箱对应哪个文件，你可以查看FoxMail\MAIL\目录下＊.ind文件的修改日期和时间，如果哪个＊.ind文件的修改时间和你删除信件的时间一致，那么那个＊.ind文件所对应的＊.box文件就是你要恢复的信箱文件。）如果此时退出FoxMail,FoxMail必定压缩该邮箱，那时被删除的邮件就无法恢复了。<br>
+　　2.用UltraEdit－32打开备份的in.box，里面全是文本，细看之下正是我才删除的那些信件。仔细观察一下，注意到每个邮件均以“……S”分割，里面包括邮件头信息和ASCII字符组成的附件信息。信件是找回来了，但是我以后要查阅这些信件总不能每次都靠UltraEdit－32，最好还是在FoxMail中查阅，那怎样将这些信件从新装入FoxMail呢？<br>
+　　3.利用FoxMail的“导入”和“导出”功能。FOXMAIL能将文本文件和outlook邮件、Exchang邮件等转换成FoxMail邮件（导入），也能进行逆转换（导出），而且可以进行成批转换，因此我们只要将每个邮件复制出来做成单独的文本文件，再在FoxMail中成批导入即成。<br>
+　　4．在UltraEdit－32中，我们先复制一个邮件到剪贴板,将光标定位在第一个“……S”的下一行的开头，点击UltraEdit－32中的“查找”按钮，出现查找对话框，可以发现“查找”按钮已经变为“寻找目标”了，我们可以按住“SHIFT”键再点击它，这样就把一封信件选中，建立一个新文本文件，将这封信复制到新文件中，保存好。再按此方法选中第二封信，复制到另一个新文本文件2中，保存到第一个文本文件同一个目录下，这样依次作业，直到所有需要的信件全部复制成功。<br>
+　　5．回到FoxMail中,选中误删除邮件的邮箱，单击菜单上的“文件\导入”项，在对话框的“文件类型”选项上选择“＊.txt”项，再在“搜索”中找到刚才保存新文本文件的文件夹，选中所有的邮件文本文件，再单击“打开”我们可以看到删除的邮件全都恢复了！<br>
+<b>(江苏　谢渊斌)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/39/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99391405.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

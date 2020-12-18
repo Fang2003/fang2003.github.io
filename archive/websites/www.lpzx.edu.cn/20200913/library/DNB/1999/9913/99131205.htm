@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>不同商业版本Linux的互相引导</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center">
+  <div align="center">
+    <center>
+      <table BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+  <tr>
+    <td WIDTH="221" HEIGHT="69"><a HREF="../../../../www_lpzx_edu_default.html"><img SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></a></td>
+    <td WIDTH="484" HEIGHT="69"><p ALIGN="center"><A
+    href="netschool/index.htm" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/netschool/wlxy.jpg" BORDER="0"
+    WIDTH="468" HEIGHT="60"></A><br>
+    中文十大网站之一，广告效果极佳，欢迎在此<a href="bill/index.htm">刊登广告</a>。 
+    </td>
+  </tr>
+</table>
+</center></div>
+  <center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>不同商业版本Linux的互相引导</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/%B5%D7%CE%C6.gif"><p align="left">　　Linux有许多商业版本，许多Linux爱好者都同时装了两套不同的版本。两套Linux若能够互相引导且互相访问就会带来许多好处。如一套Linux的lilo遭到破坏无法引导，就可以用另一套Linux引导进行恢复lilo;或一套Linux被你搞得无法登录，则可以通过另一套Linux访问来更改设置。<br>
+        　　以RedHat和Slackware为例。我的RedHat装在第一个Primary分区，Slackware装在第二个Primary分区　　<br>
+        　　<strong>一、用RedHat引导Slackware</strong><br>
+        　　1.进入RedHat,执行下面的指令：<br>
+        　　＃ mkdir /Slackware(在根目录下建立slackware目录)<br>
+        　　joe /etc/fstab (编辑fstab文件来使RedHat能够访问Slackware的分区)<br>
+        　 /dev/hda1 /ext2 defaults 1 1<br>
+        　 /dev/hda9 swap swap defaults 0 0<br>
+        　 /dev/hda7 /windows vfat defaults 0 0<br>
+        　 /dev/fd0 /mnt/floppy ext2 noauto 0 0<br>
+        　 (我的fstab文件内容)<br>
+        /dev/cdrom /mnt/cdrom iso9660 noauto,ro 0 0<br>
+        　　none /proc proc defaults 0 0<br>
+        　　然后将以下内容加入到fstab文件中：<br>
+        　　/dev/hda2 /slackware ext2 defaults 0 0<br>
+        　　其中/dev/hda2表示Slackware装在第二个分区。按“Ctrl＋k＋w”存盘，“Ctrl＋k＋q”退出。<br>
+        　　2.执行以下命令：<br>
+        　　＃joe /etc/lilo.conf (编辑lilo.conf文件来使RedHat的lilo能引导Slackware)<br>
+        　　将以下内容加入到lilo.conf文件的最后：<br>
+        　　table=/dev/hda<br>
+        　　image=/slackware/vmlinuz<br>
+        　　label=slackware<br>
+        　　root=/dev/hda2 <br>
+                        　　read-only<br>
+        　　加入完后存盘退出。<br>
+        　　3.执行命令：<br>
+        　　＃ lilo (使lilo.conf的配置生效)。<br>
+        　　重新启动Linux，在出现LILO boot：时，键入 “Slackware”，回车若进入Slackware，就表示成功了。<br>
+        　　当在RedHat系统中时，进入/Slackware目录则应该能访问Slackware的文件。<br>
+        　　<strong>二、用Slackware引导RedHat</strong><br>
+        　　方法和前面基本上一样，进入Slackware。<br>
+        　　1.首先应该建立redhat目录。<br>
+        　　2.将“/dev/hda1 /redhat ext2 defaults 0 0”加入/dev/fstab中。<br>
+        　　3.RedHat的内核文件vmlinuz不在根目录下，所以应将下列指令加入/etc/lilo.conf中去,再执行lilo。<br>
+        　　table=/dev/hda<br>
+        　　image = /redhat/boot/vmlinuz－2.0.34－0.6<br>
+        　　root = /dev/hda1<br>
+        　　label = redhat<br>
+                        　　read-only<br>
+        　　笔者建议最好将两套Linux的lilo都装在各自不同的分区，然后用其他引导工具引导，如BootManager、OS 
+        Loader等。若用OS Loader应注意，更改lilo后，应重新将Linux引导区信息写到Bootsect文件中去，否则将造成OS 
+        Loader无法引导lilo启动。<br>
+        <strong>(广东　马宁)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月5日第13期</a></font> 
+        </td>
+      </tr></table>
+            </center>
+          </div>
+                  <CENTER>
+            <DIV ALIGN="center">
+              <CENTER>
+              </CENTER>
+            </DIV>
+            <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+            <NOSCRIPT> 
+            <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+            </NOSCRIPT> 
+          </CENTER>
+        
+
+</TABLE></CENTER></DIV></body></html>

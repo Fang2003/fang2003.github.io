@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>用Excel7.0求解规划问题</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>用Excel7.0求解规划问题</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　用Excel7.0提供的“规划求解”功能可以解决许多规划问题，既可以解方程(组)，又可以解线性规划和非线性规划问题。本文以举例的形式说明如何使用这一功能解规划问题。<br>
+        　　一、线性规划<br>
+        　　以一个运输问题来说明线性规划问题的解法。<br>
+        　　设有甲、乙、丙三个产地，I、II、III、IV、V五个销地，运价表在工作表中D4∶H6区域，产量在工作表中C4∶C6区域，销量表在工作表中D7∶H7区域(如表1)，试求如何安排调运方案，使得总运价最小？<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9911/image/12-1.gif" width="256" height="196" alt="12-1.gif (6461 字节)" align="left"><br>
+        　　步骤如下：<br>
+        　　1.将D12∶H14作为可变单元格，输入预设值，例如全输入1。<br>
+        　　2.构造目标函数单元格C9，在D9中输入公式“=D4＊D12＋D5＊D13＋D6＊D14&quot;,并复制到E9∶H9，在C9中输入“=SUM(D9：H9)”。<br>
+        　　3.构造约束条件，在C12中输入公式“=SUM(D12∶H12)”，并复制到C13∶C14,在D15中输入公式“=SUM(D12∶D14)&quot;,并复制到E15∶H15。<br>
+        　　4.选菜单“工具”中的“规划求解”，出现“规划求解参数”对话框如图1，逐一填充各栏中的空白：<br>
+        　　1在“设置目标单元格”栏后的空白中填入C9，并选中“最小”，<br>
+        　　 2在“可变单元格(B)”栏后的空白中填入D12∶H14,也可直接按“推测”，因为程序会根据目标单元格中引用的单元格自动推测出可变单元格区域，再检查一下正确与否。<br>
+        　　3光标指向“约束”栏，按“添加”，出现“添加约束”对话框，依次填入约束关系，每输完一条，按“添加”，输入所有约束条件后，按“确定”，又退回到图1状态，在图1中可以选“更改”、“删除”、“全部重设”来编辑约束条件及其他设置。<br>
+        　<img src="http://www.lpzx.edu.cn/library/DNB/1999/9911/image/12-2.gif" width="293" height="157" alt="12-2.gif (5805 字节)"
+        align="left">　4按图1中的“选项”按钮，可以调整运算精度等多项选项，读者可参考“帮助”及有关数学书籍。<br>
+        　　5.在图1中按“求解”，即进入求解过程，求解结束，出现“规划求解结果”对话框，选择“保存规划求解结果”后，工作表中可变单元格、目标单元格以及计算约束条件的单元格均发生变化。如不想破坏原始数据，可选择“恢复为原值”，同时选中“报告”框中的“运算结果报告”，或选“保存方案”以存储运算结果。<br>
+        　　运行后得到的最优调运方案如表2。<br>
+        　　二、非线性规划<img src="http://www.lpzx.edu.cn/library/DNB/1999/9911/image/12-3.gif" width="301" height="83"
+        alt="12-3.gif (2841 字节)" align="right"><br>
+        　　假设有一非线性规划问题如下：<br>
+        　　目标函数：<br>
+        　　约束条件：<br>
+        　　解题步骤如下：<br>
+        　<img src="http://www.lpzx.edu.cn/library/DNB/1999/9911/image/12-4.gif" width="119" height="71" alt="12-4.gif (1053 字节)"
+        align="left">　1.在C9和C10单元格中填入2，作为可变单元格。<br>
+        　　2.在C11中填入目标函数“=(C9－3)^2＋(C10－2)^2”。<br>
+        　　3.在D9∶D11中填入约束条件左半部分，分别是：“=C9^2－C10－3&quot;、“=C10－1”、“= 
+        －C9”屏幕显示为表3。<br>
+        　　4. 选择“工具”菜单中的“规划求解”，照前面问题的方法依<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9911/image/12-5.gif" width="117" height="69" alt="12-5.gif (1090 字节)" align="right">次填入空白栏中，按“求解”，参数如下：目标单元格：C11；最小,可变单元格：C9∶C10；约束条件:D10&lt;=0、 
+        D11&lt;=0、D9&lt;=0。<br>
+        　　运行以后表中的数据如表4,即X1=2，X2=1。<br>
+        <strong>(山西　刘宪权)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月22日第11期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

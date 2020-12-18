@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AutoCAD R14读取低版本的汉字图形文件</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>AutoCAD 
+        R14读取低版本的汉字图形文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　Autodesk公司推出的AutoCAD R14以其整洁的界面，出色的性能，被公认为CAD软件中的杰作。特别是它改进的 
+        MTEXT编辑器不仅支持汉字大字体文件(.shx），而且还支持中文TrueType字体、扩展的字符格式（如粗体、斜体和下划线等）和大量的其他字符等，能识别和替换大小写。但当我们把在AutoCAD 
+        R11/R12/R13中生成的DWG文件调入US版的AutoCAD R14中时，图形文件中的汉字出现乱码，即使当我们把原图中需要的汉字大字体文件(.shx)拷贝到AutoCAD 
+        R14的字体目录下，也无济于事。下面我向大家介绍处理这种问题的两种方法。<br>
+        　　<strong>方法一</strong>：首先向大家推荐一种汉字图形文件转换工具：WNEWCP.EXE。它是一个仅有214K的可执行文件，可以将AutoCAD 
+        R11/R12/R13下生成的DWG文件，成批或单个转换成在R14下汉字可被识别的DWG文件，简单易用，下部还有帮助提示。<br>
+        　　首先打开它后，弹出AutoCAD代码页转换工具对话框，在最上面的输入框中输入要转换的DWG或DXF文件所在的目录或文件名,按下右边的“浏览”按钮可直接查找目录或文件名。<br>
+        　　接下来选择要转换的DWG或DXF文件的版本。<br>
+        　　在选择一个新的代码页下，选择ANSI_ 936 Chinese(PRC,Singapore)即可。<br>
+        　　在最下方的输入栏要求指定转换后的文件的目录。<br>
+        　　最后按“开始转换”按钮。完成后再去打开转换后的图形文件就不会出现乱码了。<br>
+        　　上网的朋友可到以下网址下载，网址是http:∥www.nease.net/～funboy/soft.html。没有上网的朋友可以用下面的方法来解决乱码问题。<br>
+        　　<strong>方法二</strong>：用相应版本的AutoCAD软件打开图形文件后，在Command命令提示行后键入dxfout命令，选择Binary（二进制）方式，生成dxf文件。再在AutoCAD 
+        R14下打开.dxf文件就不会出现乱码了。缺点是生成的.dxf文件长度会增加很多，将占用更多的硬盘空间。如果是R12版本的DWG文件，打开后可在Command命令提示行后键入dwgcodepage，输入新值iso8859－2，对文件存盘即可解决乱码问题。<br>
+        　　以上两种方法的前提条件是首先应当把原图中需要的汉字大字体文件(.shx)拷贝到AutoCAD 
+        R14的字体目录下。<br>
+        &nbsp;&nbsp;&nbsp; <strong>(山东　张宝书)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

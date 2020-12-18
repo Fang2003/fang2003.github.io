@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">用VB实现浮动按钮</strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp; </strong><font
+        color="#369681">&nbsp; 在微软的很多软件（如WORD）的工具栏中，都采用一种浮动按钮，即正常情况下按钮的图标呈灰色，当鼠标移动到某一按钮上时，该按钮自动向上凸起且变为彩色，并在按钮的右下方有一标签提示该按钮的功能，鼠标移开后又自动还原，这种按钮用VB实现时，方法如下：<br>
+        　　1．先用绘图工具作出按钮图标后存盘（如1．BMP），再用图像处理软件将该图标转换为灰度图或浮雕图后再存盘（如2．BMP）。<br>
+        　　2．运行VB，建立一新窗体（如FORM1）。<br>
+        　　3．在窗体上需要建立按钮的位置处建立一图片框（如IMAGE1），其大小和图标相同，并将其PICTURE属性设为2．BMP。<br>
+        　　4．在IMAGE1周围建立由四个长度相同的LINE控件（如LINE1～4）组成的方框，方框要比IMAGE1控件稍大，否则达不到预计效果，将上面和左边的颜色设成白色，下面和右边的设成黑色，并将四个LINE控件的VISIBLE属性都设成FALSE。<br>
+        　　5．在程序中加入以下内容即可：<br>
+        　　Private Sub Image1_MouseMove(Button As Integer,Shift As Integer,X As Single,Y As 
+        Single)<br>
+        　　Image1Picture=LoadPicture(″c:\1bmp″)<br>
+        　　Line1Visible=True<br>
+        　　Line2Visible=True<br>
+        　　Line3Visible=True<br>
+        　　Line4Visible=True<br>
+        　　End Sub<br>
+        　　Private Sub Form1_MouseMove(Button As Integer,Shift As Integer,X As Single,Y As 
+        Single)<br>
+        　　Image1Picture=LoadPicture(″c:\2bmp″)<br>
+        　　Line1Visible=False<br>
+        　　Line2Visible=False<br>
+        　　Line3Visible=False<br>
+        　　Line4Visible=False<br>
+        　　End Sub<br>
+        　　6．实现动态提示的方法，《电脑报》已刊登过，此处不再重复。<strong>(安徽　潘海滨)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

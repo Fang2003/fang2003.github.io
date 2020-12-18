@@ -1,0 +1,663 @@
+<html>
+<head>
+<title>919书香天堂</title>
+<meta http-equiv="目录类型" content="文本/html; 字符集=gb2312">
+<STYLE type=text/css>
+a:visited {	COLOR: black; TEXT-DECORATION: none}
+a:hover { COLOR: red; TEXT-DECORATION: underline}
+a:active { color:blue; text-decoration: none}
+a:link { color:black;text-decoration: none}
+
+.lable1 { FONT-SIZE: 9pt; COLOR: #ffffff; LINE-HEIGHT: 12pt}
+.lable2 { FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 12pt}
+.lable3 {	FONT-SIZE: 9pt; COLOR: #ff0000; LINE-HEIGHT: 12pt}
+
+.title1 {  font-family: "隶书"; font-size: 18pt; font-weight: 200}
+.title2 {  font-family: "宋体"; font-size: 9pt;line-height: 136%;}
+.title3 {  font-family: "宋体"; font-size: 12pt}
+
+.button1 {	BORDER-TOP-WIDTH: 1px; FONT-WEIGHT: normal; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 9pt; BORDER-LEFT-COLOR: black; BORDER-BOTTOM-WIDTH: 1px; BORDER-BOTTOM-COLOR: #000000; COLOR: #000000; BORDER-TOP-COLOR: black; LINE-HEIGHT: normal; FONT-STYLE: normal; HEIGHT: 18px; BACKGROUND-COLOR: #ffffff; BORDER-RIGHT-WIDTH: 1px; FONT-VARIANT: normal; BORDER-RIGHT-COLOR: #000000}
+
+td{font-size: 9pt;}
+
+.line-space  { font-size:9pt;line-height: 136%;}
+.line-space0 { font-size:9pt;line-height: 100%;}
+.nounderline { font-size:9pt;text-decoration: none;}
+
+</STYLE>
+<script language="JavaScript">
+<!--
+var gt = unescape('%3e');
+var popup = null;
+var over = "Launch Pop-up Navigator";
+popup = window.open('', 'popupnav', 'width=500,height=200,resizable=1,scrollbars=no');
+if (popup != null) {
+if (popup.opener == null) {
+popup.opener = self; 
+}
+popup.location.href = 'popup.htm';
+}
+// -->
+</script>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div id="Layer1" style="position:absolute; left:8px; top:1px; width:239px; height:61px; z-index:1"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=4,0,2,0" width="239" height="60">
+    <param name=movie value="flash/919.swf">
+    <param name=quality value=high>
+    <embed src="http://www.lpzx.edu.cn/studentorg/xsh/xsh/jiaoyu/flash/919.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="239" height="60">
+    </embed> 
+  </object> </div>
+<div id="Layer7" style="position:absolute; left:21px; top:62px; width:131px; height:19px; z-index:7"> 
+  <p> 
+    <script language=JavaScript>
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray(
+"星期日",
+"星期一",
+"星期二",
+"星期三",
+"星期四",
+"星期五",
+"星期六");
+document.write(
+"<font color=##000000 style='font-size:9pt;font-family: 宋体'> ",
+today.getYear(),"年",
+today.getMonth()+1,"月",
+today.getDate(),"日",
+d[today.getDay()+1],
+"</font>" ); 
+</script>
+  </p>
+  </div>
+<div id="Layer8" style="position:absolute; left:569px; top:5px; width:139px; height:44px; z-index:8"> 
+  <div align="center"><font size="2" face="楷体_GB2312"> <a href="http://w919.go.163.com"><b>919网易站</b></a><b><br>
+    <a href="http://w_919.home.chinaren.com">919Chinaren站</a><br>
+    <a href="http://919.at.china.com">919中华站</a></b> <br>
+    <a href="http://w919.shangdu.net"><b>919商都站</b></a> </font></div>
+</div>
+<script language=JavaScript>
+var MESSAGE="919书香天堂—蓦然回首的感觉"
+var POSITION=100
+var DELAY=5
+var scroll=new statusMessageObject()
+function statusMessageObject(p,d){
+this.msg =MESSAGE
+this.out =" "
+this.pos =POSITION
+this.delay=DELAY
+this.i=0
+this.reset=clearMessage}
+function clearMessage(){
+this.pos=POSITION}
+function scroller(){
+for (scroll.i=0;scroll.i<scroll.pos;scroll.i++){
+scroll.out += " "}
+if (scroll.pos >= 0)
+scroll.out += scroll.msg
+else scroll.out=scroll.msg.substring(-scroll.pos,scroll.msg.length)
+window.status=scroll.out
+scroll.out=" "
+scroll.pos--
+if (scroll.pos < -(scroll.msg.length)) {
+scroll.reset()}
+setTimeout('scroller()',scroll.delay)}
+function snapIn(jumpSpaces,position){
+var msg = scroll.msg
+var out = ""
+for(var i=0; i<position; i++) 
+{out+= msg.charAt(i)}
+for(i=1;i<jumpSpaces;i++) 
+{out += " "}
+out+=msg.charAt(position)
+window.status = out
+if(jumpSpaces <= 1) {
+position++
+if(msg.charAt(position) == ' ') 
+{position++ }
+jumpSpaces = 100-position
+}else if (jumpSpaces >  3)
+{jumpSpaces *= .75}
+else
+{jumpSpaces--}
+if(position != msg.length) {
+var cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+scrollID = window.setTimeout(cmd,scroll.delay);
+}else{window.status=""
+jumpSpaces=0
+position=0
+cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+scrollID = window.setTimeout(cmd,scroll.delay);
+return false }
+return true}
+snapIn(100,0);
+</script>
+<div id="Layer2" style="position:absolute; left:155px; top:65px; width:618px; height:12px; z-index:2; background-color: #FFCC33; layer-background-color: #FFCC33; border: 1px none #000000"> 
+  <font size="2">★| <a href="index.htm">919首页</a> |<a href="studentorg/xsh/xsh/jiaoyu/small.htm" target="_blank"> 
+  微型小说 </a>|<a href="studentorg/xsh/xsh/jiaoyu/zheli.htm" target="_blank"> 哲理小品 </a>|<a href="studentorg/xsh/xsh/jiaoyu/love.htm" target="_blank"> 
+  爱情故事 </a>|<a href="studentorg/xsh/xsh/jiaoyu/qinqing.htm" target="_blank"> 亲情无限 </a>|<a href="studentorg/xsh/xsh/jiaoyu/computer.htm" target="_blank"> 
+  电脑书屋 </a>|<a href="studentorg/xsh/xsh/jiaoyu/jianjie.htm" target="_blank"> 站长小传</a> |<a href="http://202.84.10.66/guestbook/guestbook.jsp?gbname=w919" target="_blank"> 
+  请您留言 </a>|★</font></div>
+<div id="Layer3" style="position:absolute; left:4px; top:81px; width:146px; height:131px; z-index:3; background-color: #FFCC99; layer-background-color: #FFCC99; border: 1px none #000000"> 
+  <p align="center"><font color="#999999" size="2"> </font><font color="#999999" size="2"><font color="#CC00CC"><b> 
+    现在共有336篇作品</b></font> </font></p>
+  <form method="post" action="http://ml.xilu.com/cgi-bin/ml/client">
+    <div align="center">
+      <input type="hidden" name="USERID" value="w919">
+      <font color="#33FF33"><b><font size="2" color="#6600FF">订阅919邮件列表</font><font size="2"> 
+      </font></b></font> 
+      <input type="text" name="EMAILADD" value="你的E-mail">
+      <font size="2"><b><font color="#6600FF">密 码</font></b></font> 
+      <input type="password" name="PASSWD"VALUE="******">
+      <input type="submit" value="订阅" name="SUB">
+      <input type="submit" value="退订" name="UNSUB">
+    </div>
+  </form>
+  <table width="98%" border="2" bgcolor="#FF9999" bordercolor="#FF0000" bordercolorlight="#000000" bordercolordark="#CCCCCC" cellpadding="3">
+    <tr> 
+      <td colspan="2"> 
+        <div align="center"><b><font color="#33FF33">友情链接</font></b></div>
+      </td>
+    </tr>
+    <tr> 
+      <td width="49%" height="23"> 
+        <div align="center"><a href="http://www.itmix.com" target="_blank"><img src="http://www.lpzx.edu.cn/studentorg/xsh/xsh/jiaoyu/image/itmedia.gif" width="50" height="19" border="0" alt="电脑影音城"></a></div>
+      </td>
+      <td width="51%" height="23"> 
+        <div align="center"><a href="http://gzyucai.yeah.net" target="_blank">广州育才</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="17" width="49%"> 
+        <div align="center"><a href="http://wssf.at.china.com" target="_blank">21岁网</a></div>
+      </td>
+      <td height="17" width="51%"> 
+        <div align="center"><a href="http://whsky.at.china.com" target="_blank">写作世界</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="10" width="49%"> 
+        <div align="center"><a href="http://fystar.8u8.com/" target="_blank">风云变幻</a></div>
+      </td>
+      <td height="10" width="51%"> 
+        <div align="center"><a href="http://ehistory.at.china.com" target="_blank">历史在线</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="20" width="49%"> 
+        <div align="center"><a href="http://zxq615.533.net" target="_blank">春风网站</a></div>
+      </td>
+      <td height="20" width="51%"> 
+        <div align="center"><a href="http://qiji815.myetang.com/" target="_blank">中华奇迹</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="10" width="49%"> 
+        <div align="center"><a href="http://boyo.k12.net.cn/" target="_blank">百榕教育</a></div>
+      </td>
+      <td height="10" width="51%"> 
+        <div align="center"><a href="http://www.youngwriters.org.kh/" target="_blank">青年写作</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="11" width="49%"> 
+        <div align="center"><a href="http://draw.3322.net" target="_blank">图像之家</a></div>
+      </td>
+      <td height="11" width="51%"> 
+        <div align="center"><a href="http://yrw.126.com" target="_blank">语文资源</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="17" width="49%"> 
+        <div align="center"><a href="http://chastelove.126.com" target="_blank">纯洁的爱</a></div>
+      </td>
+      <td height="17" width="51%"> 
+        <div align="center"><a href="http://go3.163.com/%7Emudie/" target="_blank">虚谷斋</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="17" width="49%"> 
+        <div align="center"><a href="http://shd333.myetang.com" target="_blank">琼轩文学</a></div>
+      </td>
+      <td height="17" width="51%"> 
+        <div align="center"><a href="http://ebook99.my163.com" target="_blank">ebook下载</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="15" width="49%"> 
+        <div align="center"><a href="http://lotosheaven.yeah.net" target="_blank">忘忧天堂</a></div>
+      </td>
+      <td height="15" width="51%"> 
+        <div align="center"><a href="http://www.yeahsoft.com" target="_blank">光华软件</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="18" width="49%"> 
+        <div align="center"><a href="http://qixinxs.myetang.com" target="_blank">FIFA2001</a></div>
+      </td>
+      <td height="18" width="51%"> 
+        <div align="center"><a href="http://beyond2001.533.net" target="_blank">beyond音乐</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="11" width="49%"> 
+        <div align="center"><a href="http://n0.shangdu.net" target="_blank">游戏零点</a></div>
+      </td>
+      <td height="11" width="51%"> 
+        <div align="center"><a href="http://love31296.363.net" target="_blank">青春无悔</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="15" width="49%"> 
+        <div align="center"><a href="http://hackeryan.go.163.com" target="_blank">e时空</a></div>
+      </td>
+      <td height="15" width="51%"> 
+        <div align="center"><a href="http://www.zxzgkj.com" target="_blank">知新撰稿</a></div>
+      </td>
+    </tr>
+    <tr> 
+      <td height="15" width="49%"> 
+        <div align="center"><a href="mailto:w_jiantao@21cn.com">您的位置</a><a href="mailto:w_jiantao@21cn.com"></a><a href="mailto:w_jiantao@21cn.com"></a></div>
+      </td>
+      <td height="15" width="51%"> 
+        <div align="center"><a href="mailto:w_jiantao@21cn.com">您的位置</a><a href="mailto:w_jiantao@21cn.com"></a><a href="mailto:w_jiantao@21cn.com"></a></div>
+      </td>
+    </tr>
+  </table>
+  <p align="center"><font size="2"> <a href="http://www.china.com" target="_blank"><img src="http://www.lpzx.edu.cn/studentorg/xsh/xsh/jiaoyu/image/china.gif" width="124" height="28" border="0"></a><br>
+    提供中华网主页空间<br>
+    <a href="http://www.163.com" target="_blank"><img src="http://www.lpzx.edu.cn/studentorg/xsh/xsh/jiaoyu/image/163logo.gif" width="135" height="48" border="0" alt="网易"></a> 
+    <br>
+    提供网易站主页空间<br>
+    <a href="http://www.chinaren.com"><img src="http://www.lpzx.edu.cn/studentorg/xsh/xsh/jiaoyu/image/chinaren_logo.gif" width="124" height="59" border="0"></a> 
+    <br>
+    提供Chinaren站空间 <br>
+    <a href="http://member.shangdu.net"><img src="http://www.lpzx.edu.cn/studentorg/xsh/xsh/jiaoyu/image/sdlogo.gif" width="99" height="40" border="0"></a> 
+    <br>
+    提供商都站空间 </font></p>
+  <p align="center"><font size="2"> </font><font size="2"> <font color="#0000FF">本站免费经营，所有作品的版权归作者所有，如果您认为本站侵犯了您的权益，请与我联系，我将尽快将您的作品撤下。</font></font></p>
+  </div>
+<div id="Layer4" style="position:absolute; left:157px; top:80px; width:616px; height:548px; z-index:4; visibility: visible"> 
+  <table width="100%" border="0" height="432">
+    <tr> 
+      <td height="12" bgcolor="#CCCCFF"><font color="#3333FF">◆</font>微型小说</td>
+      <td height="12" bgcolor="#CCCCFF"><font color="#3333FF">◆</font>哲理小品</td>
+    </tr>
+    <tr> 
+      <td height="164" align="left" valign="top" width="300"> 
+        <table width="100%" border="0">
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/lcsyddgn.htm">列车上遇到的姑娘</a></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/zjpo.htm">最佳配偶</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm">柔弱的人</a></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/yjbdmy.htm">意见本的妙用</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/nmdhynj.htm">诺曼底号遇难记</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/rw.htm">人物</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/mqdlx.htm">母亲的来信</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/wypyjhbz.htm">文艺批语家和部长</a></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/dywwtr.htm">第一位委托人</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/bx.htm">保险</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/gyyxj.htm">公羊与小姐</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/xxdncfy.htm">新型的农村副业</a><a href="studentorg/xsh/xsh/jiaoyu/samll/rrdr.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/zmnjh.htm">啄木鸟计划</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/qddkn.htm">强盗的苦恼</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/zgs.htm">走钢丝</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/dj.htm">地窖</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/wsfxdsh.htm">我说发现的生活</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/ypyddjlb.htm">雅普雅岛的金喇叭</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="145"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/wbbzblgz.htm">我爸爸在部里工作</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="148"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/samll/wx.htm">威胁</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+        </table>
+        <div align="right"><br>
+          <a href="studentorg/xsh/xsh/jiaoyu/small.htm">更多的微型小说……</a> </div>
+      </td>
+      <td height="164" width="300" align="left" valign="top"> 
+        <table width="100%" border="0">
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/qcw.htm">倾城文</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/wmjgblgr.htm">五美金改变两个人</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/ylkl.htm">野狼伉俪</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/zqydhk.htm">中秋夜的惶恐</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/mzyg.htm">满掌阳光</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/swdsd.htm">失误的上帝</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/mlyyx.htm">忙碌与悠闲</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/dmzxm.htm">东面在西面</a></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/cjww.htm">尝尽五味</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/szzj.htm">守住自己</a></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/dd.htm">等待</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/jy.htm">脚印</a></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/%7Fjxaq.htm">解析爱情</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/txzw.htm">提醒自我</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/aqas.htm">爱情爱谁</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/mdhh.htm">磨刀霍霍</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/ywfqdzg.htm">人生忠告</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/cgmj.htm">成功秘诀</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/pwsm.htm">品味生命</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/zheli/zxgdllmq.htm">在习惯的力量面前</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+        </table>
+        <p align="right"><a href="studentorg/xsh/xsh/jiaoyu/zheli.htm">更多的哲理小品……</a></p>
+      </td>
+    </tr>
+    <tr> 
+      <td height="12" bgcolor="#CCCCFF" width="300"><font color="#3333FF">◆</font>爱情故事</td>
+      <td height="12" bgcolor="#CCCCFF"><font color="#3333FF">◆</font>亲情无限</td>
+    </tr>
+    <tr> 
+      <td height="179" width="300" align="left" valign="top"> 
+        <table width="99%" border="0">
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/adwmdsmtz.htm">爱到我们生命停止</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/xadsctxl.htm">心爱的手抄通讯录</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/ty.htm">跳舞</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm">情缘</a></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/azdht.htm">爱在电话亭</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/cl.htm">初恋</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/cldgs.htm">初恋的故事</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/fzdjy.htm">风中的记忆</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/fzdndbh.htm">风中的那朵百合</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/hpzdaq.htm">琥珀中的爱情</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/hlbwyran.htm">回来吧我依然爱你</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/nwdykpqlx.htm">那晚的夜空飘起了雪</a><a href="studentorg/xsh/xsh/jiaoyu/love/qy.htm"></a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/nhhnhdgs.htm">男孩和女孩的故事</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/sxeymsdr.htm">熟悉而又陌生的人</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/wqqy.htm">网球情缘</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/wlhrwmsl.htm">未来会如我们所料</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="47%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/zyswjbfs.htm">这一世我绝不放手</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="53%" height="10"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/love/yfyj.htm">缘份已尽</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+        </table>
+        <p align="right"><a href="studentorg/xsh/xsh/jiaoyu/love.htm">更多的爱情故事……</a></p>
+      </td>
+      <td height="179" width="300" align="left" valign="top"> 
+        <table width="100%" border="0">
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/pj.htm">披肩</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/py.htm">朋友</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/jtldgs.htm">教堂里的故事</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/nswzjddkl.htm">你是我最简单…</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/hsxhss.htm">海水咸海水深</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/jys.htm">静夜思</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/bszk.htm">不速之客</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/fqnswygxdyph.htm">父亲，您是我…</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm">青衣</a></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/lwlldyhz.htm">令我流泪的一行字</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/fq.htm">父亲</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/wyda.htm">无言的爱</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/xxwj.htm">孝心无价</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/zhdjs.htm">最后的家书</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/mqls.htm">母亲 
+              粮食</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/wlqqgwll.htm">网络亲情给我力量</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="54%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/mmwxn.htm">妈妈，我想你</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="46%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/qinqing/bflxdyz.htm">背负理想的游子</a><a href="studentorg/xsh/xsh/jiaoyu/qinqing/qy.htm"></a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+        </table>
+        <p align="right"><a href="studentorg/xsh/xsh/jiaoyu/qinqing.htm">更多的亲情故事……</a></p>
+      </td>
+    </tr>
+    <tr> 
+      <td height="11" bgcolor="#CCCCFF" width="300"><font color="#3333FF">◆</font>电脑书屋</td>
+      <td height="11" bgcolor="#CCCCFF"><font color="#3333FF">◆<font color="#333333">强力推荐/站点公告</font></font></td>
+    </tr>
+    <tr> 
+      <td height="153" width="300" align="left" valign="top"> 
+        <table width="100%" border="0">
+          <tr> 
+            <td width="56%"><font color="#FF3333">∮</font><a href="http://tech.china.com/zh_cn/home4u/index.html">中华网主页工厂</a> 
+              <font size="2" color="#FF3333"><i><b> </b></i></font> </td>
+            <td width="44%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/xitongfile1.htm">系统文件检查器</a> 
+              <font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="56%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/zhuanqian.htm">你上网我付钱精彩推荐</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="44%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/lzk.htm">李泽楷传奇</a><font size="2" color="#FF3333"><i></i></font></td>
+          </tr>
+          <tr> 
+            <td width="56%" height="15"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/my.htm">马云传记</a><font size="2" color="#FF3333"><i></i></font></td>
+            <td width="44%" height="15"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/yzyz.htm">杨致远传</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="56%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/szyz.htm">孙正义传</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="44%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/gcz1.htm">盖茨传</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+          </tr>
+          <tr> 
+            <td width="56%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/mkedlz.htm">迈克尔 
+              戴尔传</a><font size="2" color="#FF3333"><i><b>new</b></i></font></td>
+            <td width="44%"><font color="#FF3333">∮</font><a href="studentorg/xsh/xsh/jiaoyu/computer/qbjz1.htm">求伯君传</a> 
+              <font size="2" color="#FF3333"><i><b>new</b></i></font> </td>
+          </tr>
+          <tr> 
+            <td width="56%">&nbsp;</td>
+            <td width="44%">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td width="56%">&nbsp;</td>
+            <td width="44%">&nbsp;</td>
+          </tr>
+          <tr> 
+            <td width="56%">&nbsp;</td>
+            <td width="44%">&nbsp;</td>
+          </tr>
+        </table>
+        <p align="right"><a href="studentorg/xsh/xsh/jiaoyu/computer.htm">更多的电脑技巧……</a></p>
+        </td>
+      <td width="300" height="153" align="left" valign="top"> 
+        <p>网友作品推荐：<br>
+          <font color="#FF3333">∮</font><a href="samll/tgq.htm">讨工钱</a>（韩疯） <font size="2" color="#FF3333"><i><b>new<br>
+          </b></i></font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#CCCCCC"> 
+          </font><font color="#CCCCCC"> </font><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#CCCCCC"> 
+          </font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"></font></font></b></font></b></font></font></b></font></b><br>
+          <font color="#CCCCCC"> </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"></font></b></font></b></font><font color="#CCCCCC"> 
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CC33CC">如果您发现有任何的链接无效，请<a href="mailto:w_jiantao@21cn.com">通知我</a>。</font><font color="#CCCCCC"><br>
+          </font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          </font><font color="#CCCCCC"> </font> <font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>919镜像站点<a href="http://w_919.home.chinaren.com">919Chinaren站</a>开站。<b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#CCCCCC">（2001-2-8）<br>
+          </font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>919镜像站点<a href="http://w919.shangdu.net">919商都站</a>开站。</font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#3333FF"> 
+          <br>
+          </font><font color="#3333FF"> </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#CCCCCC"> 
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#CCCCCC"> 
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">微型小说</font>八篇<font color="#CCCCCC"> 
+          （2001-2-26）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          <br>
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">哲理小品<font color="#FF0000">十</font></font>篇<font color="#CCCCCC"> 
+          （2001-2-28）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          <br>
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">爱情故事</font>八篇<font color="#CCCCCC"> 
+          （2001-3-02）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          <br>
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">亲情故事</font>八篇<font color="#CCCCCC"> 
+          （2001-3-04）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          <br>
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">爱情故事</font>六篇<font color="#CCCCCC"> 
+          （2001-3-06）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          <br>
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">微型小说</font>八篇<font color="#CCCCCC"> 
+          （2001-3-10）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          <br>
+          </font><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF0000"><b><font color="#FF0000"><b><font color="#FF0000"><font color="#FF3333">∮</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font>新增<font color="#FFCC00">哲理小品<font color="#FF0000">六</font></font>篇<font color="#CCCCCC"> 
+          （2001-3-12）</font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          </font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font><font color="#CCCCCC"> 
+          </font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></font></b></font></b></font></p>
+        </td>
+    </tr>
+  </table>
+  
+</div>
+<div id="Layer5" style="position:absolute; left:710px; top:27px; width:61px; height:31px; z-index:5"> 
+  <p> 
+    <script language="JavaScript">
+function bookmarkit(){window.external.addFavorite('http://w919.go.163.com','919书香天堂')}
+if (document.all)document.write('<a href="index.htm#" onClick="bookmarkit()"><font size="2">将本站加入收藏夹</font></a>')
+</script>
+  </p>
+  </div>
+<div id="Layer6" style="position:absolute; left:247px; top:-1px; width:314px; height:60px; z-index:6"> 
+  <p>&nbsp; 
+    <style>
+<!--
+#glowtext{
+filter:glow(color=red,strength=2);
+width:100%;
+}
+-->
+</style>
+    <script language="JavaScript1.2">
+function glowit(which){
+if (document.all.glowtext[which].filters[0].strength==2)
+document.all.glowtext[which].filters[0].strength=1
+else
+document.all.glowtext[which].filters[0].strength=2
+}
+function glowit2(which){
+if (document.all.glowtext.filters[0].strength==2)
+document.all.glowtext.filters[0].strength=1
+else
+document.all.glowtext.filters[0].strength=2
+}
+function startglowing(){
+if (document.all.glowtext&&glowtext.length){
+for (i=0;i<glowtext.length;i++)
+eval('setInterval("glowit('+i+')",150)')
+}
+else if (glowtext)
+setInterval("glowit2(0)",150)
+}
+if (document.all)
+window.onload=startglowing
+</script>
+  </p>
+  <p> <span id="glowtext">一网打尽－－－919微型小说的主打网站</span>&nbsp;</p>
+</div>
+<p>&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div align="center"> 
+  <p>&nbsp;</p>
+</div>
+<div align="center"></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center"><font size="2">本网站的所有权利归<a href="mailto:w_jiantao@21cn.com">919工作室</a>所有</font> 
+  <font size="2"> </font><br>
+  <font size="2"> </font><font size="2"> 您是第 
+  <script language="JavaScript" src="http://202.84.10.71/apps/stat/stat.jsp?uid=919&style=d"></script>
+  位访客 <font size="2"> </font><font size="2"> </font><font size="2"></font><font size="2"> 
+  <script>document.write("<a href=http://www.textclick.com/viewmain.asp?name=919 target=_blank><img src=http://ad.t2t2.com/stat.asp?user=919&refer="+escape(document.referrer)+"&cur="+escape(document.URL)+" alt=太极统计 border=0></a>");</script>
+  </font></font></p>
+<p align="center"><font size="2"><font size="2"><br>
+  <font color="#0000FF"><b>如果您觉得本站还有可取之处，不妨在下列链接中投我一票，谢谢！</b></font></font> </font></p>
+<p align="center"><font size="2"> </font> <font size="2"> 
+  <script src=http://picknet.fan8.com/show.asp?id=1830></script>
+  <script src=http://www.cnpick.com/show.asp?id=11161></script>
+  <script src=http://asp.pickcn.net/sunshow.asp?id=4383></script>
+  <script src="http://www.cncommend.com/commend/art.asp?id=1535"></script>
+  <a href="http://www.50cn.com/top/in.php?id=w919" target="_blank"><br>
+  <img src="http://www.50cn.com/top/images/top-cool.gif" width="88" height="31" border="0" alt="酷站TOP50，请投我一票！"> 
+  <script>
+document.write("<a href=http://www.topcn.com/siteinfo.asp?UserName=w919&SiteType=0 target=_blank><img src=http://www1.topcn.com:8081/statistics.asp?w919&referURL="+escape(top.document.referrer)+"&curURL="+escape(top.document.URL)+"&imgStyle=1"+" border=0 alt='Top中文网站龙虎榜' ></a>");
+</script>
+  </a><a href="http://www.seetop.com/cgi-bin/UltraRank.pl?ACTION=in&ID=919&GO=literature" 
+target="_blank"><img alt="SeeTop顶尖网站排行榜" 
+src="http://www.seetop.com:5000/images/seetop.gif" border="0" width="88" height="31"></a> 
+  </font> </p>
+<p align="center"> 
+  <script language="JavaScript1.1" src=http://ad.t2t2.com/textclick.asp?user=919&style=5&bkcolor=no></script>
+  <br>
+  <script language="JavaScript1.1" src="http://link.fan8.net/textlink.asp?oid=957&bc=no&st=4"></script>
+</p>
+<blockquote> 
+  <blockquote>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p align="center">&nbsp; </p>
+</body>
+</html>

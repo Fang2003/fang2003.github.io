@@ -1,0 +1,144 @@
+ 
+<html>
+<!-- #BeginTemplate "/模板/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用好Windows </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0114/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | 
+      <a href="library/DNB/2001/0114/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0114/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="457" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="139" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第14期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{用好Windows 
+              2000的启动管理器}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ Windows 2000启动管理器的主要任务是引导系统，同时它也是一个优秀的多系统引导管理器。它用菜单选择的方式，支持中文，使用十分方便。<br>
+              一、启动管理器的基本结构<br>
+              启动管理器包括NTLDR.SYS、BOOT.INI、BOOTFONT.BIN、NTDETECT.COM四个文件和与之对应的主引导记录。其中，BOOT.INI为一文本文件，是启动管理器的配置文件。BOOT.INI的典型结构如下系统只安装了Windows 
+              2000：<br>
+              boot loader<br>
+              timeout=30<br>
+              default=multi0disk0rdisk0partition1\WINNT<br>
+              operating systems<br>
+              multi0disk0rdisk0partition1\WINNT=&quot;Microsoft Windows 
+              2000 Professional&quot; /fastdetect<br>
+              boot loader节中的timeout是等待时间，default后的项目为默认的操作系统。 operating systems 
+              节中，列出的是操作系统。下面我们就通过对它的修改，来实现形形色色的功能。<br>
+              二、引导Windows 2000/NT系统<br>
+              如果硬盘中装有不止一个Windows 2000/NT类系统，可以采用类似multi0disk0rdisk0partition1\WINNT=&quot;Microsoft 
+              Windows 2000 Professional&quot; /fastdetect的方式定义不同的系统。其中，multi0disk0partition1表明系统处于第一个IDE硬盘的第一个分区中，\WINNT说明系统目录。引号中为在启动菜单中显示的内容，最后所带的是系统启动参数。<br>
+              三、引导Windows 9x/DOS系统<br>
+              如果Windows 2000是由Windows 9x升级而来，并且又使用了全新安装，安装程序会为我们自动配置与老系统的双引导。这时，可在BOOT.INI的operating 
+              systems小节中找到类似以下一句：C:\=&quot;Microsoft Windows&quot;。乍一看，好像就是指示系统管理器从C\引导老系统。其实不然，C:\后面省略了一个的文件名，也就是缺省文件名BOOTSECT.DOS。这个文件的内容，其实就是老系统的引导扇区。要从启动管理器启动Windows 
+              9x，只须将Windows 9x所在分区的引导扇区存为一个文件。可以采用Windows 2000 Support Tools中的Diskprobe或Norton 
+              Diskedit之类的磁盘编辑工具实现。并将文件复制到Windows 2000启动分区下。在BOOT.INI中加入以下一句C\DOS.DAT=&quot;Microsoft 
+              Windows 98&quot;(假定文件名为DOS.DAT，如为BOOTSECT.DOS可省略)。使用这种方法，不必苛求Windows 
+              2000启动分区的类型，可为FAT，也可为NTFS；为后者时，Windows 9x只能装在一个独立的主DOS分区上。<br>
+              四、从软盘引导<br>
+              为了加快系统的启动速度，我们一般将BIOS中的BOOT SEQUENCE选项设置为“C ONLY”，偶尔须从软盘引导时，又必须修改BIOS。大多数多系统引导软件都提供了从软盘引导的选项，可以解决这个问题。利用Windows 
+              2000启动管理器，也可部分解决这个问题。找一张在Windows 9x或DOS下格式化了的磁盘，将其第一个扇区存为一个文件(如C\FLOPPY.DAT)，在BOOT.INI中加入以下一句：C:\FLOPPY.DAT=&quot;从软盘引导&quot;。出现启动菜单时，若须从软盘引导，将可引导磁盘放入软驱，选择从软盘引导即可。之所以是部分解决问题，是因为不同系统磁盘的引导扇区是不同的，甚至不同版本也无法兼容。DOS 
+              6(6.0/6.22)的引导扇区可以交叉使用，DOS 7(包括Windows 95/97/98/ME)的引导扇区也可交叉使用，但DOS 
+              6与7之间则不可以了。<br>
+              五、引导Linux<br>
+              使用Linux的人一般使用LILO来实现与Windows的多引导。LILO从功能上讲较Windows 2000启动管理器多一些，但其使用方便性却不如后者。其实，利用Windows 
+              2000启动管理器也可引导Linux。在LILO下执行lilo -s lilo.dat，将LILO存为文件lilo.dat，并将它复制至Windows的启动分区下。 
+              最后在BOOT.INI中加入以下一句：C\LILO.DAT=&quot;Linux Loader&quot;。系统选择菜单中选择Linux 
+              Loader就出现LILO了。建议将LILO的等待时间设置为最小值，默认系统为Linux系统，那么出现LILO的同时也就直接引导Linux了。}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

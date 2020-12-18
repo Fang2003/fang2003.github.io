@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　 
+        广东读者李星问：我的电脑配置为：Pentium 166 CPU、富士通26G硬盘、Goldstar 
+        8倍速光驱，硬盘与光驱共用一条数据线，操作系统为PWIN97。我制作了一张DOS 
+        622的系统盘，用它引导计算机后却无法找到硬盘，在DOS系统盘的配置文件中加入光驱驱动程序后，系统则把C盘符设置为光驱。后来，我在配置文件中把光驱强制设定为F盘，但仍无法找到C盘，而我将DOS系统盘在单位的一台AST微机上使用，可以正确无误地识别C盘，其它一切也正常。该机配置与我的微机基本相同，在只是其硬盘与光驱采用不同数据线连接，不知是否是因为我的微机中，硬盘与光驱采用同一条数据线带来的不良后果，还是由于DOS系统盘中的Config.sys和Autoexec.bat配置有问题，怎样才能解决?<br>
+        　　答：这个问题与硬盘的连接方式和系统的配置文件没有什么关系。实际上，这是硬盘与系统文件分配表(FAT)不兼容产生的。从DOS系统开始，FAT文件系统一直是个人计算机所使用的主要磁盘格式，目前系统文件分配表有FAT16和FAT32两种格式，两者是一种向下兼容的关系。在WIN95 
+        OSR2(也就是常说的PWIN97)出现以前，文件分配表采用的都是FAT16格式,这种格式的文件分配表管理的驱动器的最大容量不超过2GB，而FAT32格式的文件分配表不仅能以更小的簇分配驱动器上的空间，而且提高了驱动器的利用率，并且支持的驱动器容量可达8G。因此，如果用户硬盘容量超过了2G，且又采用了低于PWIN97版本的操作系统，则必须对硬盘进行分区，系统才能对硬盘进行正确的管理。读者来信所述操作系统为PWIN97，而且硬盘的容量为26G，但并没有提到对硬盘进行了分区，估计硬盘是用PWIN97系统“Fdisk”和“Format”的，对于PWIN97来讲，如果管理的硬盘容量大于了2G，系统的文件分配表自然采用FAT32格式。因此，在这种情况下如用DOS 
+        622系统盘引导系统后，当然无法识别硬盘，所以，用户要想在大于2G的硬盘上使用DOS 
+        622引导盘，就不得不对硬盘进行分区，以保证各分区为FAT16格式，否则就会出现找不到硬盘的情况。<br>
+        　&nbsp; 江西读者王影问：我购置了一台兼容机，配置为：Pentium Ⅱ 
+        233 CPU、华硕P2L97主板、钻石四代43G硬盘、华硕V3000显卡。我的硬盘分成了三个区，并把D、E两个区用DriveSpace压缩了。现在我想使用FAT32文件系统，但FAT32转换器提示压缩盘不能进行转换，我只好对压缩进行解压缩。苦苦等待了一个半小时后却死机了，开机一看，压缩盘并未解压成功，我想再次解压，但又担心还会死机，想进行格式化，又提示说不能对压缩盘进行格式化，请问有什么方法能够快速解压或者删除掉压缩盘?<br>
+        　　答：对硬盘某个分区进行压缩或解压缩是非常耗时的工作，因为“磁盘空间管理程序”要对硬盘进行完全的检查，以确认硬盘上没有坏扇区或坏道。在压缩(或解压)时，可以把该分区(或压缩盘)上的文件都移动到其它分区中，以便缩短压缩(或解压)所需的时间。对于解压过程来说，笔者曾试验出一个非常快速的方法：因为压缩盘实际上是宿主盘中的一个文件，如果能想办法把这个文件删除掉，那么就等于完成了解压工作。具体步骤是：首先把要解压的压缩盘上的文件都移动到其它分区上，然后在“磁盘空间管理程序”中把该压缩盘卸下，再到资源管理器中选中宿主盘上根目录下的隐藏文件Drivspace.000(或001等)，按下F2键给它改一个名字，最后按住Shift键把它彻底删除即可。之所以要改文件名，是因为Windows 
+        9X系统不允许直接删除压缩卷文件。这项操作具有一定的风险性，而且无法恢复，因此在进行之前应确认重要文件均已备份或已经移至其它分区中。 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 　　&nbsp; 山西读者黄成刚问:我有两台旧电脑,均安装有Windows 
+        3.1系统,我想用串行口电缆或者并行口电缆直接将两台机器连接起来，实现资源共享,如何操作?<br>
+        　　答:购买或制作好串行口或并行口连接电缆(制作方法可参见第44期36版的《联机通讯电缆的制作》)，就可以利用Windows软件实现微机之间的数据传输和资源共享了。<br>
+        　　在Windows 3.X下有两种方法可以实现双机通讯，方法一是采用Intersvr／Interlnk方式，在客户机端运行Windows，会发现多了几个驱动器盘符。方法二是使用Windows自带的Terminal终端仿真程序，在此方式下，不用设定客户机／服务器，通讯双方拥有同等地位。下面详细介绍这种方式：<br>
+        　　1.运行附件组中的Terminal(终端仿真程序)。<br>
+        　　2.选择终端仿真程序菜单上的Settings\Terminal Emulation(设置\终端仿真)选项，选择DEV 
+        VT－100 (ANSI)选项。<br>
+        　　3.选择菜单上的Settings\Terminal Preferencs(设置\终端参数选择)选项，再选择Terminal 
+        Mode(终端模式)中的Line Wrap(自动换行)、Local Echo(本地回应)、Sound(声音)，选择CR－CR／LF中的Inbound(入站)、Outbound(出站)。<br>
+        　　4.选择Setting\Communications(设置\通信菜单)。在Connector(连接器)中选择相应的串行口。建议：<br>
+        　　Baud Rate(波特率) 选 19200<br>
+        　　Flow Control(波控制) 选 Xon／Xoff<br>
+        　　Data bit(数据位) 选 8<br>
+        　　Stop bit(停止位) 选 1<br>
+        　　Parity(奇偶校验) 选 None<br>
+        　　5.选择Setting\Function Key(设置\功能键)菜单。在F1的Key Name(键名)框中输入“BELL”，Command(命令)框中输入^G(“^”是数字6上方的那个键，用Shift＋6输入)；在F2的键名框中输入“HELLO”，命令框中输入你在建立通讯时想发给对方打招呼的问候语句，如：How 
+        are you?；在F3的键名框中输入“OK”，命令框中输入建立通讯时你收到对方问候语后想回答的话，如：I'm 
+        fine,and you?<br>
+        　　6.在文件菜单中选File\Save(存盘)保存当前设置，以后每次通讯只需读入该配置文件，不用再手工设置。<br>
+        　　7.建立连接。在双方微机都作好上述配置且串行口连线已接好的情况下，双方均按F1键叫对方，然后按F2键和F3键检验通讯是否正常。在屏幕上看到正常的响应字符表明联机成功。<br>
+        　　8.传送数据。在传输菜单中选择“收／发本文件”，即可传送指定文件。<br>
+        　　注意事项：<br>
+        　　&middot;通讯双方的通信设置应一样，否则通讯可能不能建立。<br>
+        　　&middot;终端仿真只支持串行口通讯，不支持并行口，但支持MODEM拨号连接。<br>
+        　　&middot;由于终端仿真采取双方交互式通讯(不是客户机／服务器模式)，故双方要作好发送／接收的协调工作，两方不可同时都处于发送或接收状态。<br>
+        　　</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月14日第48期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

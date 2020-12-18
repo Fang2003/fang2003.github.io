@@ -1,0 +1,178 @@
+ 
+<HTML>
+<!-- #BeginTemplate "/Templates/software.dwt" --> 
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='epcw.css' TYPE='text/css'>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>电脑报电子版 -- VFP6.0实用技巧集锦(下)</TITLE>
+<!-- #EndEditable --> 
+<style type="text/css">
+<!--
+.centertitle {  font-weight: bold; text-align: center; line-height: 35px; font-size: 9pt; color: #000000}
+.lefttitle {  line-height: 35px; font-weight: bold; font-size: 9pt; color: #000000}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR='white'>
+<span class="centertitle"></span> 
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR VALIGN='top'> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+  <TR> 
+    <TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.yesky.com'><IMG SRC='images/logo.gif' WIDTH='140' HEIGHT='60' ALT='天极网' BORDER='0'></A></TD>
+    <TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'> 
+      <a href="http://chat.yesky.com"><img src="images/0823-3.gif" width="468" height="60" border="0"></a>
+    </TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+  <TR VALIGN='bottom'> 
+    <TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<table width='615' border='0' cellspacing='0' cellpadding='2' align='Center'>
+  <tr> 
+    <td width='615' colspan='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/index.html'>CPCW电子版</A> 
+      &gt; <A HREF='http://www.cpcw.com/issue/all.html'>2000年</A> &gt; <a href="index.html"><!-- #BeginEditable "%C6%DA" -->27期<!-- #EndEditable --></a> 
+      &gt; <!-- #BeginEditable "%C0%B8%C4%BF" --><a href="software.html">软件世界</a><!-- #EndEditable --> 
+      &gt; <!-- #BeginEditable "%B1%EA%CC%E2" -->VFP6.0实用技巧集锦(下)<!-- #EndEditable --></td>
+  </tr>
+</table>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+  <TR ALIGN='center' VALIGN='bottom'> 
+    <TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+  <TR> 
+    <TD><SPAN CLASS='title'>《 <!-- #BeginEditable "%CE%C4%D5%C2%CD%B7" -->VFP6.0实用技巧集锦(下)<!-- #EndEditable --> 
+      》</SPAN></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR> 
+    <TD><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->
+      <p><b>　　六、在程序中播放动画</b><br>
+        　　我们知道，VFP只支持静止的图片，无法直接播放GIF动画。但网上许多有趣而华丽的GIF动画的确令人心动，如何将这些动画插入到你的VFP程序中，让你的程序更吸引人呢？<br>
+        　　其实很简单，将GIF动画分解成各单独的静止的GIF或BMP图片，然后在VFP使用计时器让这些静止的图片轮流出现，就产生动画效果了。将GIF动画分解为静止图片的软件有很多，在网上很容易找到，如Animagic 
+        GIF 等。分解出来的图片我们分别以a0.bmp、a1.bmp……这样的形式保存。在表单中添加计时器TIMER1，TIMER1的Interval属性设为100，Enabled属性设为.T.，再添加Image1控件，其Backstyle属性设为0(透明)，Stretch也设为0(裁剪)。<br>
+        　　在FORM的LOAD过程中写代码：<br>
+        　　Public I,N <br>
+        　　I=0<br>
+        　　N=5(静止图片的总共数目)<br>
+        　　在TIMER1的TIMER过程中写代码：<br>
+        　　Local j <br>
+        　　i=mod (i＋1,n) <br>
+        　　j=alltrim(str(i)) <br>
+        　　thisform.image1.picture=″a″－j－″.bmp″ <br>
+        　　运行表单，我们就可以看到熟悉的GIF动画了。<br>
+        　<b>　七、粘贴VFP顶层表单</b><br>
+        　　当你将表单设置为顶层表单并独立运行于Windows下时,会发现表单中复制粘贴功能失效，这给实际工作造成极大的不便，从而使编制的软件达不到专业水准。<br>
+        　　笔者认为，造成这一问题的原因是微软设计VFP时，只考虑了位于系统选单下的表单的复制和粘贴情况，即位于系统选单下的表单可使用复制及粘贴热键，而处于Windows下的表单完全脱离了系统选单的控制，因此复制及粘贴热键失效。解决的办法是可在表单的控件(本文举例为文本框)中,为KeyPress 
+        Event编写如下事件处理程序,该事件处理程序首先将选择内容复制到Windows剪贴板上，然后再将剪贴板上的内容添加到控件中。<br>
+        　　KeyPress Event<br>
+        　　LPARAMETERS nKeyCode, nShiftAltCtrl<br>
+        　　if nkeycode=3<br>
+        　　＆＆ CTRL＋C 复制<br>
+        　　－cliptext=this.seltext<br>
+        　　endif<br>
+        　　if nkeycode=22<br>
+        　　＆＆ “CTRL＋V” 粘贴<br>
+        　　do case<br>
+        　　case this.selstart=0<br>
+        　　this.value=－cliptext＋this.value<br>
+        　　case this.selstart〉=1 and this.selstart〈=len(this.value)<br>
+        　　this.value=subs(this.value,1,this.selstart)＋<br>
+        　　－cliptext＋subs(this.value,this.selstart＋1)<br>
+        　　endcase<br>
+        　　endif<br>
+        　　thisform.grid1.column1.setfocus()<br>
+        　　sele recetem<br>
+        　　if not eof()<br>
+        　　skip<br>
+        　　endif<br>
+        　　thisform.refresh<br>
+        　　<b>八、为VFP添加循环微调控件类</b><br>
+        　　在VFP编程中，微调控件是最常用的控件之一。按照微调控件提供的基本功能，通过单击向上或向下箭头，而达到微调控件的最大或最小值时，如继续单击向上或向下箭头，将保持最大或最小值不变。笔者通过对Spinner控件属性和事件的分析，用编程的方法实现了循环微调控件功能。<br>
+        　　循环微调控件(CycleSpinner)所实现的功能是：当单击向上箭头而达到最大值时，再单击向上箭头，能自动跳到最小值；当单击向下箭头而达到最小值时，能自动跳到最大值；其余功能均继承Spinner基类的功能。具体实现方法如下：<br>
+        　　利用表单控件，在表单中设计一个微调按钮，并设置如下属性：<br>
+        　　SpinnerHighValue=Max<br>
+        　　＆＆Max应小于Spinner基类所<br>
+        　　＆＆提供的最大默认值<br>
+        　　SpinnerLowValue=Min<br>
+        　　＆＆Min应大于Spinner基类所<br>
+        　　＆＆提供的最小默认值<br>
+        　　Value=1<br>
+        　　Name=′CycleSpinner′<br>
+        　　在Init事件中写入如下代码：<br>
+        　　This.SpinnerHighValue=This.SpinnerHighValue＋This.Increment<br>
+        　　This.SpinnerLowValue=This.SpinnerLowValue－This.Increment<br>
+        　　在InteractiveChange事件中写入如下代码：<br>
+        　　If This.Value=This.SpinnerHighValue<br>
+        　　This.Value=Int(This.SpinnerLowValue＋This.Increment)<br>
+        　　Endif<br>
+        　　If This.Value=This.SpinnerLowhValue<br>
+        　　This.Value=Int(This.SpinnerHighValue－This.Increment)<br>
+        　　Endif<br>
+        　　Thisform.Refresh<br>
+        　　再将其作为类保存起来，添加到你的类库中。<br>
+        　　若你在编程中，需用此功能，就可直接用此循环微调控件类了。</p>
+      <p align="right"><br>
+        　　（河北　朱运喜）</p>
+      <!-- #EndEditable --></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR> 
+    <TD>&nbsp;</TD>
+    <TD ALIGN='right'><A HREF='00271812.htm#top'>页 首</A></TD>
+  </TR>
+</TABLE>
+<BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+  <TR ALIGN='center' VALIGN='bottom'> 
+    <TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+  </TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+  <TR ALIGN='center'> 
+    <TD>&nbsp;</TD>
+    <TD> <a name='top'></a> <img src='http://cq.cpcw.com/cgi-bin/Count.cgi?ft=2|md=8|df=cpcw.dat|dd=E|cache=F|expires=18000' width='1' height='1' alt='312345678'> 
+      <script language='JavaScript'>
+document.write('<a href=http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw target=_blank><img src=\'http://best.nease.net/cgi-bin/log.cgi?user=cpcw&refer='+escape(document.referrer)+'&cur='+escape(document.URL)+'\' border=0 alt=\'网易中文排行榜\' width=15 height=15></a>');
+</script>
+      <noscript> <a href='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' target='_blank'> 
+      <img src='http://best.nease.net/cgi-bin/log.cgi?user=cpcw&refer=http%3A//www.cpcw.com/&cur=http%3A//www.cpcw.com/issue/1999/50/99500302.html#NoJavaScript' width='1' height='1' border='0' alt='网易中文排行榜'></a> 
+      <!-- Start of NedStat Basic code --> <a href="http://usa.nedstatbasic.net/cgi-bin/viewstat?name=cpcwissue"><img
+src="http://usa.nedstatbasic.net/cgi-bin/nedstat.gif?name=cpcwissue"
+border=0 alt="" nosave width=1 height=1></a> <!-- End of NedStat Basic code --> 
+      <!-- Start of ReferStat --> 
+      <script type="text/javascript" language="JavaScript">
+<!--
+d=document;
+d.write("<img src=\"http://usa.nedstatbasic.net");
+d.write("/cgi-bin/referstat.gif?");
+d.write("name=cpcwissue&refer=");
+d.write(escape(top.document.referrer));
+d.write("\" width=1 height=1 align=\"right\">");
+// -->
+</script>
+      <!-- End of ReferStat --></noscript> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW版权所有</A>，<A HREF='mailto:webmaster@staff.yesky.com'>YESKY天极网编辑部</A>设计制作发布<script language="JavaScript" src="http://www.lpzx.edu.cn/library/DNB/download/yeskye.js">
+</script></TD>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

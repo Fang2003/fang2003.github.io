@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 9908请你编程</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 9908请你编程</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 9908请你编程 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　大家好！《请你编程》又与你们见面了。本栏目得到了广大朋友的关心和支持，我在这里表示衷心的感谢。《请你编程》是一个读者朋友直接参与的栏目，是一个体现自我的园地，希望有编程愿望的朋友，无论是编程高手，还是初学者都能参与进来，我们将会认真对待每一份作品。下面请看本期山东读者刘文臣的程序。
+<p align="center"><b>9908请你编程解题思路</b></p>
+　　本程序采用静态链表来实现。<br>
+　　首先定义一个较大的数组，数组中每个元素(站点)由两部分组成，一部分是每个人的编号，另一部分是“指针”，用整型数据表示下一个人所在数组中的下标。程序采用穷尽搜索法，C从2开始，若M号(萧峰)出列，则C值增大1，再行判断，直到找出C值为止。主要算法如下：<br>
+　　1.循环读取Love.txt中数为M、N赋值；<br>
+　　2.若萧峰为最后一名(M=N)则C值为1，输出来并转向1；否则转入下一步；<br>
+　　3.循环求C值，C从2开始，步步增大。若M能被C整除，M号必出列，故先确定C从2开始且不能被M整除的数；<br>
+　　4.静态链表初始化，即将N个人围成一圈，然后又进入一循环，数数退圈，若中途退出萧峰则退出循环，C值增加，转到3处，若留下萧峰，则打印C值，退出3的循环转至1处。<br>
+　　<b>源程序</b><br>
+	＃include &lt;stdio.h&gt;<br>
+	＃define MAX 1500<br>
+	typedef struct<br>
+	{int num;<br>
+	 int next;<br>
+	}circle;<br>
+	circle A[MAX];/＊定义一个较大的数组＊/<br>
+	int M,N;<br>
+	main()<br>
+	{ int c,i,count;<br>
+	circle ＊p,＊q;<br>
+	FILE ＊fp;<br>
+	if((fp=fopen(″love.txt″,″r″))==NULL)<br>
+{printf(″\nCan't open file love.txt!″);<br>
+	exit(0);}<br>
+	fscanf(fp,″％d％d″,＆N,＆M);<br>
+	for(;M!=0＆＆N!=0;fscanf(fp,″％d％d″,＆N,＆M))<br>
+	if(M==N){c=1;printf(″\n％d″,c);continue;}/＊萧峰在最后,c值为1＊/<br>
+	else<br>
+	for(c=2;;c＋＋)<br>
+	{ while(M％c==0) c＋＋;/＊M值首先不能被c所整除＊/<br>&lt;N;i＋＋)/＊静态链表初始化,使N个人围成一圈＊/&gt;
+	 for(i=1;ibr&gt;
+	{A[i－1].num=i;A[i－1].next=i;}<br>
+	A[i－1].num=i;A[i－1].next=0;/＊最后一个人指向第一个人,第一个人下标为0＊/<br>
+	p=A;count=0;i=1;<br>&lt;N－1)/＊只要还没剩下最后一个人,则循环＊/&gt;
+	while(countbr&gt;
+	{if(i= =c－1)/＊数到c－1时,便删除下一个人＊/<br>
+	{q=A＋p－&gt;next;<br>
+	if(q－&gt;num==M) break;/＊若是萧峰出列,则退出循环,c值增加,重新测试＊/<br>
+	else{p－&gt;next=q－&gt;next;i=0;count＋＋;}<br>
+	}<br>
+ 	p=A＋p－&gt;next;<br>
+ 	i＋＋;<br>
+	}<br>
+	if(count= =N－1){printf(″\n％d″,c);break;}/<br>
+	萧峰没有退出,则打印出c值,读M,N值＊/<br>
+	}<br>
+	fclose(fp);<br>
+	}
+<p align="center"><b>9910请你编程题目</b></p>
+　　在埃及，考古学家又发现了一座金字塔。这座金字塔的结构是这样的：从它的纵截面看，金字塔分成好多小房间：(如图所示)自上往下，自左往右，每个小房间都有一个唯一的编号。而据一个古老的传说：在这个金字塔的几个房间里，存放着一批金银珠宝。但是，这些房间的安排是有规律的：<br>
+　　以这些房间为顶点，可以构成一个正三角形或者平行四边形或正六边形。例如：房间1、2、3可以构成一个正三角形，所以它们可能是藏宝地点。而房间1、2、3、4不能构成任何正三角形或者平行四边形或正六边形，所以它们不可能是藏宝地点。考古学家手上已经有好几组关于藏宝地点的数据。现在就请你编一个程序，帮考古学家算算看，哪些是假的，哪些可能是真的。<br>
+　　输入数据文件为pyramid.txt，具体格式为：第一行为一个整数N，表示有N组输入数据。以下为N行，每行包括最多6个整数，表示一组藏宝地点的数据（这些整数之间用空格分开，而且最大为32767）。输出到屏幕上去的结果为N行，每行为一个单词“TRUE”或“FALSE”，表示这组数据是否可能为正确的藏宝地点。<br>
+	输入范例：<br>
+	3<br>
+	1 2 3<br>
+	1 2 3 4<br>
+	5 4 13 9 12 7<br>
+	输出范例：<br>
+	TRUE<br>
+	FALSE<br>
+	TRUE<br>
+	本期题目由上海的oldbug提供。<br>
+　　<b>本期获奖者名单</b><br>
+　　邢   践（辽宁）    胡立军（黑龙江）  叶立超（北京）<br>
+　　梁远海（福建）    刘晓锋（重庆）     石万元（重庆）<br>
+　　王良春（福建）    龚　超（湖南）     林基峰（福建）<br> 
+　　马拥军（浙江）<br>
+　　每位获奖者将获得苦丁香公司提供的光盘一张。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99361301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

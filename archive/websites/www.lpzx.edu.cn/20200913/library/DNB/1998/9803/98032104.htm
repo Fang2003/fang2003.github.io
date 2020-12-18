@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Netware 
+        3.12安装技巧二则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　<strong>一、快速安装文件服务器</strong><br>
+        　　1在硬盘上建一级目录NET，再建二级目录INSTALL，用工具软件IMGDRIVE将光盘上的Netware 
+        3.12映像文件1.IMG释放在C:\NET\INSTALL下，用类似的方法分别将第2～10个映像文件，释放在二级目录UNICODE、SYSTEM_1、SYSTEM_2、SYSTEM_3...SYSTEM_8下(注意！SYSTEM_1～SYSTEM_8中的“_”是下划线)。为减少击键次数，可使用DOS宏命令，即键入DOSKEY，以后可用上移光标键调出已用过的命令，稍加修改即可。<br>
+        　　2.在INSTALL目录下，键入INSTALL进行安装。当屏幕提示插入UNICODE盘片时，按F2，然后输入C:\NET\UNICODE；同样，当屏幕提示插入SYSTEM_1、SYSTEM_2盘片时，按F2后，分别输入C:\NET\SYSTEM_1、C:\NET\SYSTEM_2。<br>
+        　　3.在“Copy System and Public Files”选项中，按F6后，输入系统和公共文件所在的路径C:\NET(注意：是C:\NET，而不是C:\NET\SYSTEM_1或其它)。<br>
+        　　其它安装操作与软盘安装相同。<br>
+        　　<strong>二、在无盘工作站上安装Windows</strong><br>
+        　　1.用超级用户入网，用SETUP/A命令安装Windows至网络驱动器F:盘的WINDOWS目录下。<br>
+        　　2.在F:盘建立一个WINUSER的工作目录，用SETUP/N安装Windows用户文件。在安装时注意，在模式选择时，用定制安装(Custom 
+        Setup)，而不能选择快速安装(Express Setup)(缺省)；在定制安装时，选择安装路径应将缺省路径C:\WINDOWS改为F:\WINUSER；改变虚拟内存设定，在“虚拟内存”设置项中，选择“更改”，出现“新设定”，将“驱动器”另选择为F:HHSX/SYS:。<br>
+        　　3.对用户托管权限(Trustee)应作如下设置：<br>
+        　　WINDOWS目录——授基本权，即读出(R)、列目录(F)权。<br>
+        　　WINUSER目录——授除管理(S)权外的其它所有权限。<br>
+        　　为了文件的安全起见，可将WINUSER目录下除PROGMAN.INI外的所有文件，用只读(Read 
+        Only)、共享(Shareable)属性进行简单保护。实际操作时，在WINUSER目录下先执行：FLAG 
+        ＊.＊ RO S命令，然后执行FLAG PROGMAN.INI N即可完成。为防止用户无意、有意删除PROGMAN.INI文件，可将该文件拷贝到F:\DOS目录下，万一被删除，普通用户也可将其拷贝到WINUSER目录下。当然也可用SETUP/N重新安装，因为程序不大(还不到300KB)，所需时间不长。<br>
+        　　4.运行Windows有两种操作模式，一是标准模式，另一种是增强模式。很多软件必须在增强模式下才能运行。<br>
+        　　在制作登录软盘时，在系统配置文件中必须有指明支持EMM386.EXE的参数,即：<br>
+        　　DEVICE=EMM386.EXE NOEMS /Y=F:\DOS\EMM386.EXE<br>
+        　　或：DEVICE=EMM386.EXE RAM /Y=F:\DOS\EMM386.EXE<br>
+        　　其中：/Y参数对网络安装Windows很重要，不可缺少，否则不能运行Windows增强模式。该参数在多数DOS手册中没有提供，故鲜为人知。<br>
+        　　这样在Novell网安装的Windows，任何用户均可使用，且多个用户可用同一个用户名启动同一Windows，不会发生冲突，特别适用于学校、培训等教学场合，也可用于游戏网。</font></p>
+        <p class="ourfont"><font color="#369681">　　(湖南　李跃强　谷启福)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月19日第3期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

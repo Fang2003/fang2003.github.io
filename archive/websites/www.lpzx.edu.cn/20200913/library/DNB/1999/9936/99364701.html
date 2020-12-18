@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 游戏修改</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>游戏广场</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='game.html'>游戏广场</A> &gt; 游戏修改</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 游戏修改 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p align="center"><b>“星球大战前传”无敌修改</b></p>
+　　根据同名电影改编的《星球大战前传之幻影威胁》是一款相当不错的电脑游戏，集动作和冒险于一身，颇有一些难度。然而游戏中激光剑的使用过于简单，只能在敌人攻击时毫无规律地乱舞一番（谁让俺是菜鸟！），虽说能挡开大部分子弹，真正能反射到敌人身上的却很少，其它威力更大的武器却可遇不可求，子弹又少，能在危急关头“救命”的医药包则更是难碰到！<br>
+　　怎么办？改呗，用我们的UltraEdit大法：<br>
+　　在存盘文件如zanzi01sav中查找ASCII字符串Play Sta（一般在文件的尾部，从后向前找会非常快），找到后向下一行（16个字节后）的内容如下：<br>
+　　XX 00 00 00 64 00 00 00<br>
+　　其中的XX就是当前的Health值，受伤后将它改成64，即健康值全满（100％），就什么医药包都不需要了！<br>
+　　再往下20个字节后（即第二个64下面一行对应的字节），可以看到如下内容：<br>
+　　01 00 00 00 XX 0X 00 00……<br>
+　　连续24个字节记录的就是6种不同武器相应的弹药数量，每4个字节记录一种，分别是：激光剑、激光枪、快速激光枪、粒子导弹发射器、强力炸弹发射器和晕眩弹。<br>
+　　知道怎么办吗？对了，激光剑不用改，将后面五种全部改成E703（即十进制的999），返回游戏看看，这些强力武器都变成了999，够你“挥霍”好几关的，用完了再存盘“装备”一次！反正我们的“军火库”是取之不尽用之不竭的。再加上前面“练”就的“金钢不坏之身”，小小Naboo还不任你“横行霸道”，机器卫兵自然不在话下，碰上什么机器虫之流，也再不用溜之大吉，粒子炮侍侯……
+<p align="center"><b>《生化危机2》中文版之里昂篇修改大法</b></p>
+　　近来得到梦寐以求的《生化危机2》中文版之里昂篇，一口气将它打穿，觉得仍意尤未尽，于是操起FPE，从头到脚给它来了个大改造，现有些许心得，与大家分享。<br>
+　　首先进入游戏，最好用小窗口。然后启动FPE2000，在“其他”选项中选择“更新”，在列表里找到“生化危机2”，再选“编辑”，在地址输入处输入“00AA308C”就可以找到物品存放的地方，哈哈，这下铁皮僵尸其奈我何！物品代码如下：<br>
+　　01—06各种手枪　07－08霰弹枪　09－11榴弹发射器　15冲锋枪　16火焰发射器　17火箭发射器　18旋转机枪　20－29各种弹药　30色带　31钥匙　35急救喷雾剂　36对病毒炸弹　37－46各种草药　47－87各类过关物品　88－99钥匙和磁卡<br>
+　　但是（皮皮：注意！往往听到这个词的时候，一件好事总会变成坏事  ^－^），用此法修改出的武器不能用于隐藏剧情，不过草药倒是可以的。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99364701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

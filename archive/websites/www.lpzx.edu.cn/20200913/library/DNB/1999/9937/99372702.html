@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<link rel="stylesheet" href="images/epcw.css" TYPE='text/css'>
+<TITLE>电脑报电子版 -- ASP入门（一）——ASP概述</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-internet&realm=internet' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='9937.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'></A></TD>
+<TD BGCOLOR='#FFCC66'>&nbsp;</TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='468' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='../../DNB.html'>电脑报电子版</A> &gt; <A HREF='../1999.html'>1999 年</A> &gt; <A HREF='9937.html'>37 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; ASP入门（一）——ASP概述</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 ASP入门（一）——ASP概述 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<b>一、什么是ASP？</b><br>
+　　ASP是Active Server Pages的简称，它是一种在微软公司的WEB服务器IIS（Internet Infomation Server）上开发交互网页的新技术。微软公司最初在IIS3.0版上使用它以取代CGI。随着Windows NT在WWW上的使用日益增多，ASP已经成为了开发动态网站、构筑Internet和Intranet应用的最佳选择。<br>
+　　<b>二、在哪里可以找到支持ASP的服务器软件？</b><br>
+　　如果你的计算机上装的是Windows NT 4.0,那么你可以通过安装NT的可选包Windows NT Option Pack 4.0来安装IIS4.0，然后你就可以在IIS4.0里使用ASP了。如果你的操作系统是Windows 98, 那么你可以在Win98光盘里找到一个ADD－ONS目录，下面的PWS目录里面有一个小型WWW服务器软件PWS(PersonalWeb Server),它也可以支持ASP。如果你想用一用Windows 2000的测试版，那么你可以选装Server版或者Advanced Server版，它们都已经自带IIS5.0了。<br>
+　　<b>三、如何编写ASP？</b><br>
+　　你或许用过Javascript在网页里弹出一个小窗口，你是这样做的：<br>
+　　〈html&gt;<br>
+　　〈head&gt;<br>
+　　〈title&gt;New Page 1</title><br>
+　　〈/head&gt;<br>
+　　〈body&gt;<br>
+　　〈Script Language=″JavaScript″&gt;<br>
+　　alert(″hello!″);<br>
+　　〈/Script&gt;<br>
+　　〈/body&gt;<br>
+　　〈/html&gt;<br>
+　　编写ASP就跟它差不多，同样是在网页文件里加些东西，不像CGI那样你还得写一个EXE文件。唯一应该注意的是，网页文件应该以.asp作为后缀名，而不能是.htm，这样WWW服务器才能识别它是ASP文件并进行相应的处理。<br>
+　　注意，上面例子中使用了<script>和</script>来把脚本包括起来，以区别普通的Html标记。在ASP中，使用另外两个符号来标记ASP代码，它们是“&lt;％” 和“％&gt;”。WWW服务器在处理ASP文件时，一看到&lt;％就知道ASP的代码开始了，而看到％&gt;就知道代码结束。<br>
+　　通常，我们可以用Notepad来编辑ASP文件，不过因为FrontPage98有强大的网页管理功能，所以最好在Frontpage98里编写ASP文件。当你要往一个网页里插入ASP代码时，只需选择FrontPage Editor下部的“HTML”标签页就行了。<br>
+　　<b>四、一个例子</b><br>
+　　最后让我们来看一个例子，将它以a.asp存盘，它在浏览器里输出三个“Hello ASP”,从这里我们可以体会ASP代码是如何同HTML标记语言结合在一起的。<br>
+　　〈html&gt;<br>
+　　〈head&gt;<br>
+　　〈title&gt;New Page 1</title><br>
+　　〈/head&gt;<br>
+　　〈body&gt;<br>
+　　〈％For i=1 to 3％&gt;<br>
+　　〈font size=″&lt;％=i％&gt;″&gt;Hello ASP</font><br>
+　　〈％Next％&gt;<br>
+　　〈/body&gt;<br>
+　　〈/html&gt;<br>
+　　请注意，文件后缀一定要为.asp。<br>
+　　五、ASP的处理流程<br>
+　　当我们用浏览器查看一个ASP文件时，都发生了些什么呢？<br>
+　　以上面那个a.asp为例，当我们在浏览器里输入 http://localhost/a.asp(localhost为主机名),浏览器向WWW服务器发出请求，要求返回a.asp的内容。WWW服务器在接到请求后，发现它的后缀为.asp,于是就将这个文件交给专门的ASP处理程序，这个程序扫描a.asp,把其中用&lt;％和％&gt;括起来的代码解释并执行，最后把执行结果再传回给WWW服务器，WWW服务器把结果通过HTTP协议传回到浏览器。你可以用浏览器的查看源代码功能查看一下，你并没有发现&lt;％和％&gt;标记，因为它们已经在服务器端被处理掉了，浏览器所获得的仅仅是结果，是一些标准的HTML标记。整个过程如图。<br>
+　　下一讲中，我们将介绍一些Vbscript的基础知识。它是在ASP中用得最多的脚本语言之一。<br>
+<b>(white　http://www.chinaasp.com)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/37/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99372702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

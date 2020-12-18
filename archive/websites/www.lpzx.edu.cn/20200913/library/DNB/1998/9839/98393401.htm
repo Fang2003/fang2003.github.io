@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　江苏读者夏青问：我有一台微机，配置为：Pentium 
+        MMX 166 CPU、16M内存、MS－5149主板、Trident968x PCI显示卡、SONY八倍速光驱，最近出现以下现象：重新将硬盘分为C、D、E三个区，安装DOS622后正常启动，可是怎么也找不到光驱，后根据说明书中的提示，在Config.sys文件中加入“DEVICE=C:\IDE\IDE－8X.SYS/D:MSCD001/V”，在Autoexec.bat中加入“C:\DOS\MSCDEX.EXE/D:MSCD001/L:F/V”，重新启动计算机，可当键入“F：”后，系统提示：“Invalid 
+        drive specification”，怎么也驱动不了光驱，这是不是与BIOS设置有关，如何解决?<br>
+        　　答：这个问题与系统的BIOS设置没有关系，而是由于对硬盘进行了重新分驱后，系统盘符数增加而系统相应的配置没有改变造成的。请仔细检查一下Config.sys中是否有LASTDRIV=(驱动器符号)语句，如没有，请加上该语句，并保证设置的驱动器符号大于F，因为LASTDRIV是DOS系统用来设置最高驱动器盘符的命令，最多可为计算机分配至盘符Z，它从盘符E以后，每增加一个驱动器盘符，大约要占用40个字节的空间，因此对于DOS系统，其缺省设置时允许驱动器盘符从A～E，以节约存储空间，而现在由于硬盘经过重新分区后，再挂接光驱，所需的盘符数已到了F，这时如不增加盘符数，只是利用光驱的驱动程序为光驱设置盘符，虽然设置是正确的，但这时根本没有这么多可用的盘符，因此系统提示“Invalid 
+        drive specification”也就不足为奇了。其实，对于Windows95系统同样如此，虽然其开发者声称Windows95可以不需要Config.sys文件，但遇到这种情况，还是不得不借助于Config.sys进行驱动器的分配。<br>
+        　　浙江读者曹喜问：我的电脑配置是：奔腾133 CPU、64M EDO内存、32G硬盘……，装有Windows98(β测试版)、CorelDRAW6.0(中文版)、Photoshop4.0、Word97等软件，由于工作需要，经常在CorelDRAW6.0和Word97之间进行图文的相互粘贴，最近发现不能在CorelDRAW6.0中编辑条码图形，重装了Windows98、CorelDRAW6.0及其它所有的软件，故障排除，但后来发现在CorelDRAW6.0和Word97之间进行粘贴时，只能由CorelDRAW6.0向Word97进行粘贴，反之则不行，系统提示：“CorelDRAW6在××××处KERNEL32DLL中导致无效页面错误”，要求关闭应用程序。我对硬盘进行查错、整理、杀毒、重新格式化等均不见效，百思不得其解，还望专家指教。<br>
+        　　答：对于Windows95系统(包括Windows98)产生页面错误的问题，原因比较复杂，引起故障的因素也比较多，既有应用软件自身不完善，也有操作使用不当，甚至计算机硬件方面的问题。但是不论是什么原因引起的，就其本质来讲，都是由于系统在为应用程序申请内存的过程中出现了问题。由于Windows95系统是一个支持多任务的系统，因此它在允许多个程序一起运行的同时，还必须跟踪谁在使用内存以及使用哪部分内存，为此它采用了“内存页面调度”的方法，把内存分为页(大小为4K)。同时，通过系统内核，即KERNEL32或KERNEL16对它进行管理，当系统中某一应用程序启动后但在一定时间内用户又没有对它进行操作，这时，系统会把该应用程序占用的物理内存页移至磁盘上的映射文件中，以便可以释放一些物理内存供新的程序使用，而当用户要重新使用该应用程序时，系统会通过相反的顺序为磁盘上的映像文件找到相应的物理内存页，作为程序运行的“空间”，因此，如在这个过程中出了问题，系统就会出现“页面错误”。要保证这个过程正常进行，从硬件上讲，良好而足够的内存、保证一定的硬盘空间(最好是连续的)是必备条件，而从软件和使用方面看，使用品质良好的正版软件， 
+        尽量不要同时启动太多的应用程序也是必要的。从读者来信所述的情况看，一是系统中所使用的软件都是一些内存和磁盘空间需求“大户”，虽然系统配置的64M内存已不算小，但要同时运行这些程序，系统对内存的调度量还是很大的。若读者采取的处理方法是正确的，在这种情况下问题仍未解决，可再检查一下硬盘所剩余的空间是否太少，内存条是否出了问题，用高版本的杀毒软件杀杀毒，换一套CorelDRAW软件重装一下试试。<br>
+        　　广东读者陈俊驹问：一台新购置的电脑，配置为：福扬VP3主板、Pentium 
+        MMX 200 CPU、4.3G火球SE硬盘……，操作系统为Windows98。开始工作一直正常，大约一个月后出现频频死机的现象，必须用RESET键重新启动(用CTRL＋ALT＋DEL不行)，本人以为是主板与MMX 
+        CPU兼容不好的缘故，不知各位专家意见如何?望能提供一些好的解决方法。<br>
+        　　答：计算机频繁“死机”，确实与硬件的关系多一些，至于是否一定是主板与CPU兼容不好的缘故，则不一定。就笔者自己的经验来看，福扬主板的兼容性还是不错的，配MMX 
+        CPU不应有这样的问题。由于是新购的电脑，最好还是请销售商协助解决，建议从下面几个方面检查一下：<br>
+        　　&middot;检查病毒。病毒引起“死机”是屡见不鲜的。<br>
+        　　&middot;检查CPU。一看CPU与插座接触是否良好、供电电压与CPU所需的是否相符，二看其散热是否良好。<br>
+        　　&middot;检查内存条。检查一下内存条安装情况，必要时清洁一下接触面，然后重新安装。<br>
+        　　&middot;检查电源。一是看电源的输出电缆与主板的连接是否可靠，二是检查电源的输出电压是正常(至于其具体的数值，本报以前有过介绍，可参阅)。<br>
+        　　&middot;检查主板。确保各扩展槽或板卡没有短路。<br>
+        　　&middot;检查RESET按钮。看看该按钮身自复位是否良好，有无发热或卡滞现象。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月12日第39期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

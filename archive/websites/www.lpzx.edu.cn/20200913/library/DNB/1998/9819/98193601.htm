@@ -1,0 +1,85 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>软解压播放VCD速度慢的处理&nbsp; 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　编者按：五月的夜晚，冰凉冰凉的，漆黑的天幕中镶嵌着几颗晶亮的“钻石”。推开窗户，让几缕清凉的风吹醒你昏沉沉的头，打开心爱的PC，放入火爆的《泰坦尼克号》，准备静静地回味那宏伟、壮丽的场面，但你怎么也想不到，宏伟的场面变得滞涩，怎么办，请看本文作者的实战摩机经验!<br>
+        　　软解压播放VCD速度慢，是指在安装有CD－ROM和声卡的多媒体电脑中，系统能够正常运行光盘和硬盘中的有声多媒体软件，但在利用解压软件播放VCD时，不能正常发挥系统的性能，出现图像显示停顿、缓慢或大量马赛克似的图形块，以致于播放画面模糊不清。<br>
+        　　使用低档机(如486－66以下机型)时，用软解压播放VCD速度慢的故障，在此不予讨论。<br>
+        　　由于能够播放VCD，说明系统工作基本正常。用软解压播放VCD速度慢的故障，通常由系统设置不当、光驱驱动程序、显示卡驱动程序以及系统兼容性等不良因素造成，可按如下方法进行检查和处理：<br>
+        　　1.首先检查一下是不是播放软件有问题。先杀杀病毒，再重新安装解压软件试试。<br>
+        　　2.如果不是播放软件的问题。检查一下软解压播放VCD时的色彩设置，如果系统显示速度较慢，请使用640×480、256色的低显示模式或黑白模式，可最大限度提高播放速度。播放时为了获得最佳效果，最好关闭其它应用程序。<br>
+        　　实例：一台电脑，Cyrix 6x86/120＋ CPU、16M内存、 S3V64＋显示卡(2M显存)、1.2G硬盘。运行Photoshop软件以后，播放VCD无声。因Photoshop对显示器画面质量要求较高，需要将显示卡色彩模式设为16.7M色，但这样做通常会造成播放VCD无声。进入Windows，将显示卡色彩模式改为256色，故障排除。<br>
+        　　3.如果显示卡色彩设置无问题， 
+        检查一下是不是由于系统设置不当造成的。系统设置不当也会造成软解压播放VCD速度慢。<br>
+        　　实例：一台586兼容机，中凌ATC－2000主板，Intel Pentium120 CPU，16M 
+        EDO内存和S3 64V＋显示卡、昆腾大脚1.2G硬盘。在Windows 95中安装XING V2.1后，用XING播放VCD时，在100％窗口播放状态正常，但只要一缩放窗口，无论是放大到200％还是缩小到50％，均出现出错提示：“MMSYS设备错误”，不能正常播放VCD。在XING中使用测试功能，结果回放速度每秒只有17帧，明显是存在设备冲突而影响了Windows 
+        95性能的正常发挥。在“控制面板”中打开“系统”对话框，选择“系统属性”，再选择“设备管理”，再单击“硬盘控制器”左边的“＋”号，发现“IDE主控制器(单向先入先出队)”一项上有一个黄色的惊叹号。再单击“属性”栏，在“设备状态”栏中显示：“该设备不存在，不能正常运行，或没有安装驱动程序”。将此控制器的“Original 
+        Configuration”(使用当前配置)前的选中标志(一个勾)去掉(用鼠标点一下即可)，再单击“确定”，选择“重新启动计算机”，重新启动后，故障消失。在XING中再次进行测试，回放速度达到每秒43.3帧。<br>
+        　　4.如果不是系统设置不当造成的故障，建议考虑以下因素：<br>
+        　　&middot;播放前先用CHKDSK /F把无用的文件链去掉， 
+        否则这种无用的文件链会干扰播放时临时数据的保存，在内存小的微机上更有必要进行这一步。<br>
+        　　实例：一台电脑，Cyrix 6x86/150＋CPU、16M内存、、S3V64＋显示卡(2M显存)、1.2G硬盘。用XING播放VCD，运行一段时间后，播放VCD时声音断断续续。由于在机器上曾安装运行过AutoCAD、FoxPro等软件，经过多次安装及删除，在硬盘上产生了大量的临时文件和碎片，使得该盘可用磁盘空间降为800KB左右。找到原因后，删除无用的临时文件，用Defrag消除磁盘碎片，使得该盘的可用空间增大到5MB以上，此时再播放VCD，故障排除。<br>
+        　　&middot;建议使用磁盘高速缓存。 比如MS－DOS下的“SMARTDRV”、PCTOOLS的PCCACHE、NORTON中的NCACHE等。如果没有使用磁盘高速缓存，请把它们加入到AUTOEXEC.BAT或CONFIG.SYS之中。另外检查一下SMARTDRV语句是否在MSCDEX之后，若是，则SMARTDRV对光驱起不了缓存作用。<br>
+        　　&middot;在内存紧张或者CPU速度较慢的情况下，SMARTDRV命令需要加上512或1024参数，以限制其占用内存量，有利于提高播放速度。<br>
+        　　&middot;更改一下CONFIG. SYS中的“DEVICE=C: \CEV\AT－API.SYS/D:SMS001/M:10”语句的“M”后的参数（光驱内部缓存区），如果设置得太小，可适当加大这一数字。<br>
+        　　&middot;Windows 3.x用户尽量使用386增强模式。<br>
+        　　5.若经过上述处理还未解决问题，应检查是否是光驱带来的问题：<br>
+        　　光驱驱动程序不匹配，会导致软解压播放VCD速度慢，在播放VCD时，应采用光驱自带的驱动程序。例如在Windows 
+        95的32位文件系统中，由于仅有某些较老光驱的单速驱动程序，所以使用Windows95下的光驱驱动程序，会使光驱降速。如果把Windows 
+        95的32位文件系统关掉，系统就会利用DOS下的文件系统驱动，这样DOS下的光驱驱动程序才会起作用。关闭32位文件系统操作步骤如下：<br>
+        　　&middot;打开Setting\Control Panel(设置\控制面板)；<br>
+        　　&middot;点击System(系统)图标；<br>
+        　　&middot;选择Performance(性能)选项；<br>
+        　　&middot;按下File System(文件系统)按钮；<br>
+        　　&middot;选择Troubleshooting(疑难解答)选项；<br>
+        　　&middot;设置为Disable all 32 bit protect－mode disk drivers (关闭所有32位保护方式驱动程序)；<br>
+        　　&middot;以上步骤完成后,Windows 95会提示重新启动Windows。<br>
+        　　但是屏蔽Windows 95 的32位的磁盘操作会降低系统的性能， 
+        所以最好把光驱接在第二IDE口或声卡的IDE口上，试着把所有32位保护模式驱动程序文件系统打开，这样既可使硬盘高速运转，又可顺畅播放VCD。<br>
+        　　6.如问题仍不能解决，应考虑是否是显示卡造成的故障，某些显示卡的VGA（视频图像阵列）驱动程序不兼容，这时应该换回Windows提供的标准VGA驱动程序。如你的显示卡档次较低，可考虑使用《金山影霸》的黑白播放功能试试。<br>
+        　　几乎所有YUV(色差亮度)显示卡上都没有为Windows 95提供YUV驱动程序，有的甚至连基本DCI(显示控制接口)驱动程序都没提供。但很多显示卡都为Windows 
+        3.x提供了YUV驱动程序，所以YUV的精彩能力只能在Windows 3. x上得到发挥。很多解压软件使用YUV显示卡时,在Windows 
+        3.x下使用的效果远胜于在Windows 95下使用的效果。一般来说，在英文Windows 
+        3.1下使用软解压播放VCD效果是很好的。<br>
+        　　7.如通过上述检查还是不能播放VCD，应当考虑系统的兼容性问题。在常见故障中， 
+        显示卡性能不良及使用不当所造成的问题最多，CD－ROM与VCD影碟的兼容性不好， 
+        CD－ROM与主板、声卡的兼容性不良以及声卡的速度不够等，均有可能导致播放VCD速度慢。（冉 
+        皓）<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

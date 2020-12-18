@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 打入传真机内部——传真机的工作原理</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>29 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 打入传真机内部——传真机的工作原理</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 打入传真机内部——传真机的工作原理 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　传真机作为一种信息传递工具，以方便、快捷、准确和通讯费用低等优势，成为企事业单位必不可少的通信工具。随着邮电部门对传真机初装费、月租费的全面取消，在传真机价格大幅降低的情况下，传真机已开始步入家庭。传真机是机电一体化的通信设备，其机械部分主要是传真件走纸机构，而本文主要讨论传真机电路部分的工作原理。<br>
+　　传真机主要由主控电路、传真图像输入机构、传真图像输出机构、调制解调电路、操作面板及电源组成，如图1所示。以下对传真机组成部分作进一步的介绍。<br>
+　　<b>一、主控电路</b><br>
+　　主控电路像电脑的主机，对传真机的工作方式和状态进行控制。主控电路包括16位（或8位）的CPU、程序只读存储器ROM、数据随机存储器RAM、地址译码器和传输控制电路组成。主控电路控制内容主要是发送传真操作和接收传真操作，发送传真操作包括传真图像扫描输入、图像数据传送、图像数据处理及调制输出；接收传真操作包括传真信号接收、解调、存储及输出。传真机工作时主控电路从ROM中读出程序运行，数据存储在RAM中。<br>
+　　传输控制电路由可编程IO接口和可编程DMA控制器组成，主要功能是配合主控电路完成信号传输。<br>
+　　<b>二、传真图像输入机构</b><br>
+　　传真图像输入机构像一台扫描仪，在主控电路发出的信号控制下完成传真稿的扫描输入和图像数据处理。<br>
+　　传真输入机构由传真稿输入传动机构、光电图像传感器、模拟信号处理器、A/D转换器及灰度校正电路、门阵列、二进制和半色调ROM、存储器组成，如图2所示。<br>
+　　传真稿输入传动机构，由传真稿光电检测器、走纸步进电机构成。发送传真时，传真稿从传动机构进入，光电图像传感器将传真稿上的图像信号，转换为模拟电信号，送模拟信号处理器处理。处理后的模拟电信号，送A/D转换器转换为数字信号，送入门阵列，在主控电路发出的有效行处理信号和读处理信号控制下输出。<br>
+　　由于图像传感器的非线性，由A/D转换器输出的信号，不能直接作为图像信息输出，输出的图像信息是根据A/D转换器输出的数字信号在ROM中读出的信息。此图像信息经压缩编码后送往调制器调制输出。<br>
+　　目前普及型传真机使用的光电图像传感器，大多是接触式CIS（contact image sensor）传感器。有些传真机使用的光电图像传感器是CCD（charged couple device）电荷耦合器。传真机的两个重要参数灰度级和图像分辨率主要取决于光电图像传感器性能。<br>
+　　上述两类传感器常用于复印机、条形码、扫描仪和摄像机中。有关CIS和CCD光电传感器的细节请参见本报有关文章。<br>
+　　<b>三、传真图像输出机构</b><br>
+　　传真图像输出机构像一台打印机，完成已接收传真稿的打印输出，有些传真机设有并行接口，可将传真图像输出至计算机或打印机。<br>
+　　传真图像输出电路常由单片微处理器、扩展输入输出接口、模数转换器和存储器组成，接收来自解调器的传真图像输出。传真图像输出机构按打印原理分，有热敏打印、喷墨打印、激光打印和LED打印等。目前普及型传真机大多使用热敏打印方式，只是需要用较贵的热敏纸；喷墨打印、激光打印与相应打印机工作原理完全相同，传真机的喷墨打印方式较容易实现彩色输出；LED打印方式与激光打印类似，但是省去了由激光器、激光透镜组、多边旋转镜等复杂的光路和电路，用一排发光LED紧紧地贴在感光鼓上成像，降低了成本。<br>
+　　<b>四、调制解调电路</b><br>
+　　调制解调电路像一台MODEM，完成传真信息的调制发送、接收解调和线路切换。<br>
+　　调制解调电路由调制器、解调器和线路接口控制电路组成。<br>
+　　线路接口控制电路，是电话和传真机之间连接和切换控制的专用接口，主要由线路切换电路、振铃信号检测电路和摘机传感器组成。<br>
+　　调制器在传真图像信息上加入一调制信号，将信号转换为可用电话线传输的信息，通过接口电路输出。<br>
+　　为节省传输数据时间，调制图像信息时传真机会按一定规则对传真图像信息进行压缩。解调器滤除接收到传真信息中的调制信号，将其还原为传真图像信息，经解压缩电路解压后，送传真图像输出机构输出。<br>
+　　<b>五、操作面板</b><br>
+　　操作面板像电脑的键盘和显示器，由用户观察并操作控制传真机的工作状态。<br>
+　　操作面板主要由单片微处理器、扩展接口、按键、液晶显示屏LCD组成，其功能主要是按键控制、LCD显示控制和主电源开关控制。<br>
+　　<b>六、电源</b><br>
+　　大多数传真机，使用类似计算机的开关式电源，为整机提供能源。<br>
+　　开关式电源电路，由输入滤波整流电路、控制驱动电路、开关电路、5V输出电路、±12输出电路（或24V输出电路）及保护电路组成。开关式电源能输出平滑而稳定的电压。<br>
+　　综上所述，就结构和工作原理而言，传真机像一台带有打印机、扫描仪、调制解调器的专用电脑。虽然带有打印机、扫描仪、调制解调器并具有网络唤醒功能的电脑能实现传真机的全部功能，但就发送、接收传真而言，还是不如传真机方便。<br><b>(周　新)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/29/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99293801.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

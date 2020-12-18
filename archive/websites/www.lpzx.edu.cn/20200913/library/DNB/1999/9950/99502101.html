@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 自制电视卡</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 自制电视卡</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 自制电视卡 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　如今在电脑上玩游戏（充当游戏机）、看影碟、欣赏音乐（充当家庭影院）是很平常的事情，如果买块电视卡，在电脑上还可以看电视，不过买块电视卡，要不少银子，对于我来说，可是一种奢求。但电视卡对我的诱惑力实在太大，只有另想办法了。本人的显卡（ELSA 4M SGRAM  有3个Video／IN、2个Video／OUT端口，有S—Video输出输入）有Video输入端子，何不自制一块TV TUNER（电视调谐器），接上显卡的Video输入端子即可完成有线电视的接收，而价钱嘛，是完全可以接受的（总共花费不足百元，不附带遥控功能），有兴趣的朋友可自制，省点钱去买一条内存岂不更好。<br>
+　　其实，一块TV TUNER并不十分复杂，其主要部件都是成品，你只要做一些辅助电路即可，当然，前提是你的显卡支持Video/IN。主要电路见图1。这是用高频头和中放盒组成的主电路，三个频段（VL、VH、U）通过一个三波段开关K来进行选择，W1是调谐电位器，用于调台，W2是微调电位器。视频输出可直接连接显卡输入端（输出PAL制信号），用于调节清晰度，音频输出直接连接声卡Line in输入端。该电路本来是用于便携式电视机的，由于只担负接收无线电视信号，原来的电路中就只有＋12V输入。但我们是用来接收有线电视信号，特别是接收增补频道的信号，所以调谐电压要用＋32V，否则一些频道的信号会时有时无，无法得到清晰的画面，为了得到良好的接收效果，调谐电压不能太低。现在还有一种叫做一体化高频头的东东，其实是将高频头和中放盒集成在一块了，这样制作起来就更简单一些。AFC和AGC端子是用来加装红外线遥控器的，但我认为实际用处不大，因为用“电视卡”在电脑上看电视，离电脑也不会太远。<br>
+　　图2、图3和图4是电源部分的几种电路图。如果找不到26V交流电源，我可告诉你一个解决方法，从你的有源音箱中“借”电源。现在的有源音箱内的电源都是采用正负电源的变压器，一般是交流的15V×2，交流15 V接7812，交流30V接LM317或7824，不过要记住，稳压块的最大输入电压不得超过40V，最小压降为3V。如果压降过大，应适当加装散热片。由于输出电流较小，所以不必担心过载。如果想要一线两机（一头接电视，一头接电脑），可别为省事省钱直接将两机并联，否则会造成相互干扰，谁也别想安宁，去买个质量好一点的两分频器（10元足矣），降低相互干扰，信号衰减较小，收视效果会大大提高。<br>
+　　该TV TUNER的制作难度不高，如果你的显卡上有Video/IN功能的话可别浪费，快快动手自己做一块吧。如果你家有录像机的话，也可以通过录相机的TV TUNER功能接收有线电视，何况还有遥控器。现在的一些电视卡价格太高，一些不必要的功能不如去除，将价格降下来。我认为，没有遥控功能和视频捕捉功能的内置卡如果卖800元，那还不如买一台21英寸的二手电视看得过瘾。由于本人才疏学浅，文中有不当之处还请高人指点。<br><b>
+(上海　邵勇)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99502101.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="2.jpg">
+<table width="554" border="0" cellspacing="0" cellpadding="0" height="688" bordercolor="#FF0033">
+  <tr> 
+    <td width="498" height="44" bgcolor="#FFFFFF"><img src="xian.gif" width="498" height="24"></td>
+    <td width="56" height="44"><img src="angle.gif" width="70" height="60"></td>
+  </tr>
+  <tr> 
+    <td width="498" align="left" valign="top" height="26"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:116px; height:111px; z-index:1; left: -100px; top: 33px; overflow: hidden"><font color="#0000FF"><b><img src="book.gif" width="84" height="75" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><font color="#FF3333"><b><span class="mdd6">奥 林 匹 克 精 神</span></b></font></p>
+        </div>
+      </div>
+    </td>
+    <td width="56" align="center" valign="middle" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="498" align="left" valign="top" height="584"> 
+      <p>　　<span class="mdd7">奥林匹克精神是皮埃尔-德-顾拜旦提出的。为了把一种充满活力的新教育体系介绍给祖国，顾拜旦从青少年时期起，就潜心钻研同时代的不同教育体系和古希腊的历史。他希望法国青年能接受一种新的教育体系，即在加强道德修养和增强信心的同时，锻炼身体，培养勇敢精神和坚强的个性。<br>
+        　　通过对古奥运会的考察，顾拜旦认识到，古希腊人组织竞赛活动，不仅仅是为了锻炼体格和显示一种壮观场面，而且是为了教育人。他认为，体育竞赛活动能磨炼人的意志，培养人的个性，同时又能锻炼身体　　顾拜旦一直致力于古代历史和奥运会研究。当他听到希腊的伊文格罗斯-瑞卜斯愿为当地举办奥运会慷慨解囊的消息后，一个复兴古奥运会的想法在他的脑海里出现了--要像古希腊人那样，通过体育竞赛教育青年。从此，他便周游世界，到处宣传自己的主张。<br>
+        　　顾拜旦提出复兴奥运会的主张并不复古。他建议恢复奥运会的组织形式和床典仪式，但又认为有必要注人新的成份、以适应现代社会的要求。运动会的国际性，运动形式的多样性，运动员的业余性，以及人民之间的友好合作，将使世界和平得到巩固和加强，种族歧视也将会被废除，这便是奥林匹克精神。<br>
+        　　1894年，顾拜旦召集了第一次国际体育大会，会上提出了复兴奥运会的建议并得到赞同，于是，成立了国际奥委会。<br>
+        　　1896年，第一届奥运会获得极大成功。奥林匹克精神诞生了。奥林匹克精神的目的在于促进人类的精神发展，以此造就全面发展的人。它的意图是教育人，锻炼人的性格，培养人的道德，发展古希腊人的理想--“美丽、健康”。奥林匹克精神的教育对象不只是那些参加体育运动的人，还包括人民大众。<br>
+        　　奥林匹克精神是现代社会文明的一大奇迹。它期望建立一个没有任何歧视的社会，培养人们之间真诚的理解、合作和友谊、承认在平等的条件下为获得荣誉的公平竞争，为人们在社会的其他领域树立了一个独特而光辉的榜样。<br>
+        　　顾拜旦认为，奥林匹克精神是一个国际体系。它是完全独立的。因此，他从一开始就不允许任何来自政治、经济或社会的因素对其进行于涉。他还为此创建了一个独立的国际奥委员，规定了国际奥委会的主要职责是，用其忠诚和献身精神来保证奥林匹克理想和原则的实现。通过这种方式奥林匹克精神的自主独立在世界范围内得到了保证。<br>
+        　　奥林匹克精神是一个普遍的概念。所有能使人变得更好的原则，都包容它明亮的光环里。<br>
+        　　奥林匹克精神的初级活动形式是奥林匹克运动，它是永恒的。它不分男、女、老、少，不分运动水平高低，面向所有的社会阶层，包括一切运动和竞技项目，旨在参与。<br>
+        　　奥林匹克运动是人们学习奥林匹克宗旨、骑士精神、理想主义及奥林匹克精神的永恒的学校。人们将它视为生活的原则，并进一步发展到社会生活的各个领域.<br>
+        　　所有的体育活动都是奥林匹克运动的组成部分。奥林匹克运动是对大众而言的，它的目标不是让少数人去挑选金牌，而是为所有的人提供机会，让不同年龄和性别的人们都去进行体育锻炼。它的口号是“体育为大众”。<br>
+        　　奥林匹克运动会是奥林匹克精神的另一种活动形式。<br>
+        　　奥林匹克运动和奥运会保证了奥林匹克精神的实现，二者是一个有机的整体，不能分割。</span></p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

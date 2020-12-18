@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">网络<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 关于在中文Windows 95中安装某些软件后，使用DEFRAG程序导致汉字丢失的问题，专家认为是安装应用软件时破坏了注册表中显示汉字的程序所致，我认为这种说法值得商榷。<br>
+        　　从读者来信中讲述的现象分析，其实并不是出现了乱码，而是文件名丢失。因为如果是注册表被破坏的话，就不会仅仅是丢失中文文件名，所有的汉字显示都应该是乱码才对。而方真朋友遇到的显然不是这种情况，信中提到SCANDISKLOG文件提示：“文件夹C：\Windows已被损坏……”，这种现象很可能是在中文Windows 
+        95中安装了某些西文版的Windows 95配套软件(比较典型的如MS－PLUS!)，从而改动了中文Windows 
+        95中的Dskmaint.dll文件，而正是此文件决定Windows 95能否识别双字节的汉字。它被替换为西文单字节版本后，再用DEFRAG程序整理硬盘时系统就会提示“硬盘碎片含有错误”，从而启动SCANDISK程序，这时所有的中文文件名都会被认为是“非法的文件名”，从而被改成如“－－－－0”之类的怪字符而全部丢失。如果是这种情况，就可以把现在的Dskmaint.dll删除或改名，而将被改为Dskmaint.w95的原文件改回，或从其它中文Windows 
+        95中拷贝一份，再手工恢复中文文件名即可。详细情况可以参考1997年11月14日第45期《电脑报》第11版中的《中文Windows 
+        95与英文MS－PLUS!的和平共处》一文。<br>
+        <br>
+        (湖北　张广宇)　&nbsp;&nbsp; </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用CELL组件显示Access数据库的图片对象<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        Access数据库支持OLE对象字段，其中最常用的是BMP对象，即图片对象。图片对象的加入使Access数据库的可用性得到大大提高，它使数据库不仅仅局限于传统意义上的数据(即数值与字符)，提高了信息的质量，并更接近于人们日常生活中的媒体。例如，要作产品介绍，需要保存该产品的图片。图片往往具有比文字更大的说服力。<br>
+        &nbsp;&nbsp;&nbsp; 然而，直接采用VB等开发工具将Access数据库中的图片对象取出来显示到屏幕上并实现打印输出并不容易。这儿介绍一个简单方法，只用几行代码即可将图片对象显示到屏幕上，并支持图片的缩放，高质量的打印输出。这需要借助CELL组件。<br>
+        &nbsp;&nbsp;&nbsp; 下面举一个在VB中使用CELL组件显示Access数据库中的图片对象的例子。创建一个Form之后，将CELLActiveXControlmodule选中，就把CELL组件添加入控件栏中了，将CELL组件加入Form，在Form的Load过程中加入以下代码<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubForm_Load()<br>
+        &nbsp;&nbsp;&nbsp; Cell1DoOpenFileDbase0,″e:\tmp\samplemdb″，tables<br>
+        &nbsp;&nbsp;&nbsp; Cell.1DoDumpDbaseData″Select＊fromemployees″，0,0,0,1,cols,rows<br>
+        &nbsp;&nbsp;&nbsp; EndSub<br>
+        &nbsp;&nbsp;&nbsp; e:\tmp\samplemdb是一个含有图片的Access数据库，运行程序就可将其中的图片显示到表格中并打印出来(如下图)。根据SELECT语句的灵活性，你可以将指定的图片显示到表格的任意位置之上。采用CELL组件还有一个好处就是CELL组件强大的打印功能，CELL组件对图片进行无级缩放，使打印出来的图片不失真。<br>
+        &nbsp;&nbsp;&nbsp; CELL组件试用版可在站点wwwtrustsoftcom免费下载。(编者注：CELL组件3.1＋完全试用版已收录在《PC世界3》上了)<strong>(北京 
+        唐爱平)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月2日第42期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

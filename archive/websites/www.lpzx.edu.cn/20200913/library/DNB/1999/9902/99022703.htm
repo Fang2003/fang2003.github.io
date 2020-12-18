@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文件上传应注意的问题</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">文件上传应注意的问题<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        <strong>1.避免零字节文件的出现</strong><br>
+        　　有一次利用WS_FTP32上传文件，一个较长的HTML文件上传中途多次停止，重复多次均没有成功。无奈中止连接，重新拨号上网。启动WS_FTP继续上传时，系统拒绝执行，显示“文件正被其他程序使用”。用WS_FTP查看远程目录，确实存在这个准备上传的文件，但字节为零，在远程目录上执行改名等操作，均无法正常执行。由于此HTML文件为本人主页的首页面，上传不了将导致整个主页无法浏览，最后只有把本地硬盘的文件改名并上传，才恢复主页的正常浏览。第二天重新用WS_FTP查看远程目录时，才发现这个零字节的文件消失。所以在上传过程中，一般不要中途中止上传操作，尤其不要中途下网，一旦产生这样的文件时，请与管理员联系协助解决。<br>
+        　　<strong>2.避免破坏本地文件</strong><br>
+        　　另外一次上传操作，运行WS_FTP连通服务器后，在两个窗口中分别列出了本地硬盘文件及远程目录文件。在查看远程目录文件时，发现一个零字节的文件，无意中用鼠标点击一下，没想到错误动作引起鼠标双击，而双击远程文件会执行下载操作，只见窗口闪动一下，本地硬盘中的同名文件变成了零字节。该文件存有本人用一星期的时间收集的内容，前次上传没有成功，并且没有备份，所有辛苦所得成果毁于一旦，真是后悔莫及，至今没能恢复原来的所有内容。<br>
+        　　<strong>3.注意大小写字母</strong><br>
+        　　很多主页空间可随意建立自己的下级目录，把不同的文件存到不同的目录中确实是一种很好的管理方法。你上传过程中在远程目录上建立下级目录时，一定要注意大小写字母，要与网页设计中所使用的目录名一致，否则将无法正确调用目录中的内容，因为大多数远程服务器，对于文件或目录名的大小写非常敏感。<br>
+        　　<strong>4.正确设置本地及远程目录</strong><br>
+        　　几乎所有的FTP上传软件均可设置本地及远程目录的路径，这样程序启动之后将自动切换到指定的目录内，可以为你节省很多时间。远程目录的设置尤为重要，因为你连通到远程的根目录之后再用鼠标切换需要很长的时间。这是WS_FTP的配置方法(以在视聆通上连接广东湛江个人天地FTP服务器为例)：运行此程序后，在“Porfile 
+        name”栏内填上一个标识比如“ZJ”，在“host name”栏内填上FTP服务器的名称，具体为“<a
+        href="http://www2.zj.gnet.gd.cn">www2.zj.gnet.gd.cn</a>”，在“USER ID”填上你的账号，在“Passowrd”处填上密码，在“Remote 
+        Host”处填上远程目录名称“/home/jinyt”，其中Jinyt为我的目录名称，在“Local 
+        PC”处输入主页数据存放的本地硬盘目录，之后按下“SAVE”键存储即可，再按下OK按钮开始连接，很快便连通指定目录。 
+        <strong>(辽宁　金凤霞)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年1月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

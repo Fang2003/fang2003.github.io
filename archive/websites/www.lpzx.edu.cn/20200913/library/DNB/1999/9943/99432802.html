@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 手动查除黑客程序</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 手动查除黑客程序</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 手动查除黑客程序 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现在流行广、危害大的黑客程序有BO，Netspy和Netbus。这里简单介绍一下对其查杀的方法。
+<p><b>　　●BO(Back Orifice)</b></p>
+　　运行c:\windows目录下的“Regedit.exe”，然后点击目录至HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion \RunServices看右边是否有某个ab项出现（默认）“.exe”，如  果有立即删除这个ab项，并确认删除后原来“.exe”的地方变为  (未设置键值）。接着点击开始菜单的“关闭系统”，选择“重新  启动计算机并切换到MS－DOS方式”。退出后，输入cd c:\windows\system回车，  输入del exe～1回车，  输入 del windll.dll回车,   返回Windows。
+<p><b>　　●Netspy</b></p>
+　　运行c:\windows目录下的“Regedit.exe”，然后点击目录至 HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion \Run看右边是否有两个ab项分别出现NETSPY或NETSPY和SPYNOTIFY,如果有，立即删除这两个ab项。用同上的方法退出到MS－DOS方式，  输入cd c:\windows\system回车，  输入del netspy.exe回车，  输入del spynot～1.exe回车，返回Windows。
+<p><b>　　●Netbus</b></p>
+　　中了Netbus的人要小心。Netbus感染到你机子里的程序的名字是由你执行带Netbus的某个正常的程序的名字决定的。但中了Netbus后的机子有几个特征:会在c:\windows目录下生成一个文件，一种是图标像c:\windows\system目录下的“查看频道.scf”文件，这只能在Win98里看到。这图标看起来是一个中心淡蓝色的锅状卫星天线；另一种是图标像一个燃着的向右倾斜的火炬，背景是一个小小的深蓝色的圆面。如果你在c:\windows目录下看到这两种图标的文件，在文件上点击鼠标右键，点菜单最底下的“属性”，看看“大小”是否出现“483KB”或“461KB”，如果出现其中一种，那请再运行c:\windows目录下的“Regedit.exe”，同样点击目录至HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion \Run看有没有哪个ab项的名称与你发现的那种图标的文件的名字相同，如果有，看看这ab项右边是不是出现“C:\Windows\图标的名字.EXE /nomsg”，如果出现的话，表示你的机子中了Netbus。同上面一样，删除这个ab项，退出到MS－DOS方式，输入cd c:\windows回车，  输入del 图标的名字.exe回车，输入del keyhook.dll回车，返回Windows。<br><b>
+(福建　badle　badle@yeah.net)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99432802.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

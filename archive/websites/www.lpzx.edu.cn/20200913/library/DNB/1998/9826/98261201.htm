@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>卸载“垃圾”清除一法 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　　由于卸载软件设计不当等原因，我们使用软件自带的Uninstall程序进行卸载后，往往在“添加/删除程序属性”对话框的“添加 
+        /删除程序”选项卡处遗留一些卸载“垃圾”。它们不仅看起来不舒服，而且会减慢系统读取注册表的速度。使用Clean 
+        sweep等反安装软件很难将它们清除，虽然直接编辑注册表能够立竿见影，但需要较高的技巧，一般用户很难掌握。本人通过摸索，找到了一种比较简单的清除卸载“垃圾”的方法。现介绍如下，供大家参考。<br>
+        　　1单击Windows95开始菜单中的“运行”命令，在“运行”对话框中键入注册表编辑器文件名“REGEDIT”，单击“确定”将注册表打开。<br>
+        　　2在注册表编辑器中单击“注册表”，再选择“导出注册表文件”命令。在随后弹出的“导出注册表文件”对话框中执行以下操作：将“导出范围”选项中的“全部”选项选中，以备份整个注册表；在“保存在”下拉列表中选择存盘路径(如C:\Windows)；在“存为类型”下拉列表中选择“注册表文件”；最后在“文件名”对话框中输入一个文件名(如ZCB)，单击“保存”按钮。<br>
+        　　3利用Windows95启动软盘或单击开始菜单，再单击“关闭系统”。选中“关闭系统”对话框中的最后一项“重新启动计算机并切换到MS－DOS方式”。将系统引导至纯DOS环境(不能是Windows95模式下的“MS－DOS方式”窗口)。<br>
+        　　4进入Windows95所在目录，执行以下操作，将注册表删除(注册表的备份文件不用删除)。<br>
+        　　ATTRIB －S －H －R SYSTEM.DAT<br>
+        　　DEL SYSTEMDAT<br>
+        　　ATTRIB －S －H －R USER.DAT<br>
+        　　DEL USER.DAT<br>
+        　　5再执行“REGEDIT /C 路径\导出的注册表文件名”命令(如REGEDIT /C 
+        C:\Windows\ZCB.REG)，利用导出的注册表文件生成一个新的注册表。此过程有完成进度百分比显示，耗时约几十秒至一两分不等(与计算机性能和注册表大小有关)。<br>
+        　　6关闭计算机。然后重新启动进入Windows95，即可看到“添加/删除程序”选项卡处遗留的卸载“垃圾”已被清除。<br>
+        　　需要说明的是：如果你的系统装有“Office快捷工具栏”，则经过上述操作后它会变成“Desktop(桌面)”工具栏，即工具栏中的图标全部变成了桌面上的工具及应用程序图标。解决的方法是利用Office97安装盘将原来的快捷工具栏删除，再将它重新安装一遍即可找回原来的图标。　　<strong>(新疆　张迎新)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年26月26日第26期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

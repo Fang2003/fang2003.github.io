@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>内置MODEN作用疑难解决<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">经过一番折腾，终于将我的33.6K内置MODEM安装成功，本以为就此大功告成，没料到在以后的使用过程中又惹出不少麻烦。估计使用内置MODEM的朋友多少都会碰到一些和我类似的问题，故在此将我摸索出的点滴经验献出来，仅供大家参考。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">我的主板购买较早，只能使用串口鼠标，已经占用了COM1口，所以我把MODEM设置在COM2口，上网使用没有任何问题。但后来发现，Windows95在启动时总是固执地报告发现了新的通讯端口，要求安装。安装后打开“设备管理”一看，安装的端口不是COM3，就是COM5。如果你把这个新端口从系统设备中删掉，下次启动时它还是会被“聪明”的Windows95找出来。不删倒也罢了，可真正麻烦的是，我的MODEM居然出现了使用端口“飘移”的现象，即有时它会莫名其妙地跑到COM5端口上，甚至还会跑到COM1口上抢鼠标的饭碗，致使Windows95检测不到鼠标。经过仔细分析，发现问题出在系统BIOS和Windows95的“即插即用”特性上。由于主板上本身有两个串口，而插在ISA槽上的MODEM卡也要使用串口进行通讯，故使Windows95误认为系统中有三个串口设备，所以就分配了三个COM口。如果使用外置MODEM，由于它是接在原有的空闲串口上，就不会出现上述问题。而内置MODEM没有直接和串口相连，才会产生这种需要三个端口，并且使用端口还会发生“飘移”的现象。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">找到了问题的所在，解决起来自然就不会太困难。首先，要固定MODEM的使用端口，就必须指定MODEM占用的系统资源。用鼠标右键单击“我的电脑”，依次选择“属性/设备管理”，在调制解调器项下选择MODEM型号，点击“属性/资源”(如图1所示)，可以看到“使用自动的设置”处于选中的状态。将该选项取消，则“设置的依据”处于可用状态，点击“基本设置”多选框中的下拉箭头，可以看到Windows95为通讯端口分配了多组资源，这正是MODEM的使用端口会发生飘移的根本原因。选择“基本配置0001”，即IRQ=3、I/O地址为02F8－02FF，由于这是COM2占用的资源，则MODEM就会固定在COM2上。不过问题还没完，由于COM5也是使用IRQ=3，只是它的I/O地址不同，而只要Windows95安装出了COM5，就会和使用COM2的内置MODEM发生冲突。而且这个问题很隐蔽，在“设备管理”中，你看不到提示资源冲突的黄色惊叹号，但如果你拨号上网，就会出现调制解调器没有反应的错误提示。要解决这个问题，先选择COM5，点击“属性”，选中“在此硬件配置文件中禁用”(如图2所示)，则该设备被禁用，从而避免了冲突的发生。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681"><a
+        href="mailto:以上方法如有不当之处，请各位多多指教。同时也欢迎朋友们就内置MODEM的其它问题进行交流和探讨。我的E－mail是：javayeah@yahoo.com">以上方法如有不当之处，请各位多多指教。同时也欢迎朋友们就内置MODEM的其它问题进行交流和探讨。我的E－mail是：javayeah@yahoo.com</a>。</font></p>
+        <p class="ourfont"><font color="#369681">(四川张帆)&nbsp; <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9846/1998/46/index.htm">《电脑报》1998年11月30日第46期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

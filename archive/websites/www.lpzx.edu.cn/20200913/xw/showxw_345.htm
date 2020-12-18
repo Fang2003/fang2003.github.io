@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> V008 - 档案变数（File） </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+DiskBytes <br><br>DiskBytes <br><br>目前磁碟中可以用的空间　 <br><br>适用於有关档案输入输出的程式　设计测试硬碟中的空间　当空间小於某个特定数值时　就会显示警告讯息　 <br><br>FileLocation <br><br>FileLocation <br><br>指出目前欲执行档案的路径位置　 <br><br>引号中的字串特别要注意的地方是反斜线的写法　一定要多加上一个反斜线　因为这个符号在引号中有特殊的意义　 <br><br>FileName <br><br>FileName <br><br>目前所执行档案的名称（请注意　它与 FileTitle 的不同）　适用於侦测工具的设计　当程式执行中需要跳到另一个档案时　便可以使用这变数来做侦测　 <br><br>FileSize <br><br>FileSize <br><br>目前正在执行档案的大小　当您修改过程式　如加入影片或声音後　可以利用这个变数查看档案的大小为何　以便决定是否储存档案　 <br><br>变数中的值也是以 byte 为单位　这个变数可以用来与 DiskByte 做比较　若 DiskByte 的数值比较小时　显然无法将档案存入到磁碟之中　 <br><br>IOMessage　IOStatus <br><br>IOMessage <br><br>IOStatus <br><br>这二个变数都与档案的 I/O 有关　也就是说凡是与输入输出相关的函数都会产生 IOMessage 与 IOStatus　这些函数包含有　WriteExtFile　ReadExtFile　AppendExtFile　Jump　CreateFolder　DeleteFile　RenameFile　IOMessage 产生的是一个字串　IOStatus 产生的是一个数值　如果没有任何错误发生时　它的值为 0　 <br><br>OriginalWorkingDirectory <br><br>OriginalWorkingDirectory <br><br>Authorware 所启动的目录　 <br><br>RecordLocation <br><br>RecordLocation <br><br>系统记录的路径位置　当使用者使用跳跃的功能时　A3W 允许记录原来的状态　这个记录的位置就是 RecordLocation 的位置　这个目录在安装 A3W 时　就会自动产生　 <br><br>在 Windows 下的 a3w_data 就是程式自动产生的目录　上图中所有 *.rec 档案　就是记录档案　当程式再开启时　会寻找这个目录中是否含有它的记录　如果有的话　会将记录档案读入　将状态反应到程式之中　程式就会自动回到上一次离开时的状态下继续执行　 <br><br>应用在教育训练课程的设计时　这个变数应该很好用　因为它所记得的是记录所存放的位置　 <br><br>SearchPath <br><br>SearchPath <br><br>指定外部搜寻档案的路径　在 File Setup 指令的对话方块之中　有一个栏位中含有搜寻路径的位置　如果在栏位中输入如上图中的搜寻路径後　SearchPath 变数中的值应该会与它相同　也等於 d:\apw\movies　就是说变数的值即为栏位中的字串　 <br><br>当设定了 File Setup 中的搜寻路径後　SearchPath 的值也会变化　至於为什麽要搜寻路径呢　因为在多媒体的制作成品上　多半以光碟为媒介　光碟的容量占 500-650 megabyte　档案的路径规划就会变得相当重要　特别是影片　动画　声音等档案的搜寻　所以如果您的档案放置光碟的特定位置上　就可以配合 FileLocation 与 SearchPath 二个变数来达到路径的规划　下图是在计算图示中指定 SearchPath 的值　 <br><br>经过被指定後的变数值　就会变成指定的值　等於 File Setup 对话方块中的栏位设定　二种方式由您决定使用　 <br><br>曾安德　编著<br><br>
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001114161438
+<div align="center"><a href="xwpl_338.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

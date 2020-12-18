@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>解决Win98的汉字乱码问题</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+      <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+        <TR> 
+          <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+          <TD WIDTH="484" HEIGHT="69"> 
+            <P ALIGN="center"><A HREF="http://pcsoft.cpcw.com" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/images/ad/pcsoft.gif" BORDER="0" WIDTH="468" HEIGHT="60"></A><BR>
+              中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+          </TD>
+        </TR>
+      </TABLE>
+    </center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B">
+                      <p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>解决Win98的汉字乱码问题</strong></font>
+                    </td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+                    <td width="672" background="http://www.lpzx.edu.cn/images/bkgrd.gif"> 
+                      <p>　　作为一个狂热的新软件试用者，安装、删除是家常便饭，因此，在我的注册表和硬盘上留下了一大堆垃圾，同时保护性错误、死机时常出现。于是重装操作系统，在安装前先删除了注册表和系统文件夹，免得重新安装后留下“祸根”。重装系统后，问题又来了：打开对话框，以前正常显示的汉字（如我的电脑）都成了乱码，有些软件运行时提示框中的汉字也都成了“外星球文字”。问题出在哪儿呢？一定是在注册表中关于字体部分的设置上。于是将自己的注册表文件导出，与汉字显示正常的系统的注册表文件相比较，终于发现了问题所在。依下面的步骤进行修改，重新启动系统后问题就解决了。<br>
+                        　　1． 在“开始／运行”的对话框中键入“regedit”或在Win98（假如系统安装在Windows98目录）的目录下找到regedit.exe运行，打开“注册表编辑器”；<br>
+                        　　2． 在“我的电脑”下找到“HKEY－LOCAL－MACHINE”，依次点击后打开“System\CorrentControlSet\Control\fontassoc"；<br>
+                        　　3．打开后可在此文件夹下找到两个文件夹“Associated CharSet”和“Associated 
+                        DefaultFonts”。然后点击“Associated CharSet”文件夹，正常情况下在注册表编辑器的右框中显示：<br>
+                        　　（默认）　　（未设置键值） <br>
+                        　　ANSI（00）　　“yes”<br>
+                        　　GB2312（86）　“yes”<br>
+                        　　DEN（FF）　　 “yes” <br>
+                        　　SYMBOL（02）　“no”<br>
+                        　　而在“Associated DefaultFonts”下可找到：<br>
+                        　　（默认）　　　　　　 （未设置键值）<br>
+                        　　AssocSystemFont 　　　“simsun.ttf” <br>
+                        　　FontPackegeDecorative　　 “宋体”<br>
+                        　　FontPackegeDontCare 　　　“宋体” <br>
+                        　　FontPackegeModern 　　　　“宋体”<br>
+                        　　FontPackegeRoman 　　　　 “宋体”<br>
+                        　　FontPackegeScript 　　　　“宋体”<br>
+                        　　FontPackegeSwiss 　　　　 “宋体” <br>
+                        　　4．当出现汉字乱码时，上述内容就可能不完整。像我的系统中“Associated CharSet”下内容残缺，而“Associated 
+                        DefaultFonts”下根本就没有内容。此时可打开“注册表编辑器”中的“编辑”菜单进行修补：⑴如缺少“Associated 
+                        CharSet”和“Associated DefaultFonts”，可在“fontassc”下依次用“编辑／新建／主键”建立一个“新键 
+                        ＃1”字框，再根据给文件命名的方法在框中输入键名；⑵如“Associated CharSet”和“Associated 
+                        DefaultFonts”完整，只是其内容缺失，可在其下用“编辑／新建／字符串”建立一个“新值 ＃1”，然后输入键名，双击键名后即可在“编辑字符串”对话框中输入对应的键值；<br>
+                        　　5．确认后关闭注册表编辑器，重新启动系统后就可消除汉字乱码。 　　注意：在修改注册表文件前请先进行备份。以上内容也适用于Win95中文版。 
+                        (浙江　戎奇吉)</p>
+                      <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年04月12日第14期</a></font> 
+                    </td>
+      </tr>
+    </table>
+                <DIV ALIGN="center">
+                  <CENTER>
+                  </CENTER>
+                </DIV>
+                <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+                <NOSCRIPT> 
+                <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+                </NOSCRIPT> 
+              </center></div></td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

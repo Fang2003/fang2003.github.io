@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Foxpro处理多媒体数据三例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　 
+        &nbsp;Foxpro for Windows为充分利用Windows提供的多媒体功能，增加了General字段类型(即通用类型)。这种类型字段与备注类型字段基本相同，只是可对扫描图像和数字化音响进行处理，可存储Windows环境下的Foxpro 
+        OLE对象。<br>
+        　　例1：如何给General字段(假定字段名为mmfield，下同)输入多媒体数据<br>
+        　　以处理图像文件为例，General字段可识别.BMP和.PCX两种格式的图像文件。<br>
+        　　在建立数据库结构后，用APPEND GENERAL命令给mmfield字段输入图像文件(设图像文件名及路径为:c:\mm\face.bmp)：<br>
+        　　APPEND GENERAL mmfield FROM c:\mm\face.bmp<br>
+        　　图像文件输入后，用鼠标双击某条记录的General字段(mmfield字段)，可显示该条记录中的图像信息。<br>
+        　　例2：如何在屏幕上显示图像<br>
+        　　用下列命令在屏幕的某一位置，将mmfield字段中保存的图像按比例尽量显示于10×10的区域：<br>
+        　　@4,4 SAY mmfield ISOMETRIC SIZE 10×10<br>
+        　　例3：如何播放RECORDER程序产生的声音对象<br>
+        　　如果mmfield字段保存的是RECORDER程序产生的声音对象，可用下列命令播放该声音：<br>
+        　　@0,0 SAY mmfield VERB ′PLAY′<br>
+        　　其中，动词′PLAY′由RECORDER提供，这些动词都存储在Microsoft 
+        Windows的登记数据库REG.DAT中，可以利用REGEDIT.EXE来查看。<strong>(湖南　杨树国)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月6日第13期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

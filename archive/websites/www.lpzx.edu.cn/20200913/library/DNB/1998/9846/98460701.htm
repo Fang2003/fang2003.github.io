@@ -1,0 +1,166 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>话说OpenGL<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; <strong>一、什么是OpenGL</strong><br>
+        &nbsp;&nbsp;&nbsp; OpenGL实际上是一种3D程序接口（即我们常说的3DAPI），它是3D加速卡硬件和3D图形应用程序之间一座非常重要的沟通桥梁。也可以说，OpenGL是一个功能强大，调用方便的底层3D图形库。<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; <strong>二、OpenGL的发展史</strong><br>
+        &nbsp;&nbsp;&nbsp; OpenGL的前身是SGI公司为其图形工作站开发的IRISGL。IRISGL是一个工业标准的3D图形软件接口，功能虽然强大但是移植性不好，于是SGI公司便在IRISGL的基础上开发了OpenGL。顾名思义，OpenGL便是“开放的图形程序接口”。<br>
+        &nbsp;&nbsp;&nbsp; 1992年7月，SGI公司发布了OpenGL的1.0版本，随后又与微软公司共同开发了WindowsNT版本的OpenGL，从而使一些原来必须在高档图形工作站上运行的大型3D图形处理软件，如用于制作电影《侏罗纪公园》、《玩具总动员》、《泰坦尼克号》而大名鼎鼎的Softimage3D也可以在微机上运用。<br>
+        &nbsp;&nbsp;&nbsp; 1995年OpenGL的1.1版本面市，该版本比1.0的性能有许多提高，并加入了一些新的功能。其中包括改进打印机支持，在增强元文件中包含OpenGL的调用，顶点数组的新特性，提高顶点位置、法线、颜色、色彩指数、纹理坐标、多边形边缘标识的传输速度，引入了新的纹理特性等等。<br>
+        &nbsp;&nbsp;&nbsp; 1997年，由于在Windows95下大量3D游戏的涌现，游戏开发公司迫切需要一个功能强大，兼容性好的3D图形接口，而当时微软公司自己的3D图形接口Direct3Dv3.0的3D图形功能实在是糟糕，因而以制作《雷神之锤》等经典3D射击游戏而著名的id公司同其它一些游戏开发公司一道，与软件霸主微软公司对话，强烈要求微软公司在Windows95中加入对OpenGL的支持。同时，id公司还以OpenGL为3D图形接口开发了《雷神之锤2》的游戏引擎。《雷神之锤2》上市后大受欢迎，以无以伦比的3D图形特效、身临其境的音响效果等特色，摘取了1997年由电脑游戏界的权威杂志《PCGAMER》评选的“年度最佳游戏”、“最佳动作游戏”和“最佳网络游戏”三项桂冠。当时由于硬件限制，《雷神之锤2》只应用了OpenGL的一部分功能。但是《雷神之锤2》获得的巨大成功，使人们第一次在电脑游戏中体会到OpenGL的强大功能，也迫使微软公司最终在Windows95的OSR2版（俗称Windows97）和后来的Windows98中加入了对OpenGL的支持。这样，不但许多支持OpenGL的电脑3D游戏得到广泛应用，而且许多在Windows95平台上运行的3D图形设计软件如AutoCADR14、3DSMAXR2等也可以运用支持OpenGL标准的3D加速卡，大大提高其3D图形的处理速度。<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; <strong>三、OpenGL的特点</strong><br>
+        &nbsp;&nbsp;&nbsp; OpenGL具有两个主要的特点：<br>
+        &nbsp;&nbsp;&nbsp; 1.它是与硬件无关的软件接口，可以在不同的平台如Windows95、WindowsNT、Unix、Linux、MacOS、OS／2之间进行移植。因此，支持OpenGL的软件具有很好的移植性，可以获得非常广泛的应用。<br>
+        &nbsp;&nbsp;&nbsp; 2.可以在客户机／服务器系统中工作，即具有网络功能，这一点对于制作大型3D图形、动画非常有用。例如，《玩具总动员》、《泰坦尼克号》等电影的电脑特技画面就是通过应用OpenGL的网络功能，使120多台图形工作站共同工作来完成的。<br>
+        由于OpenGL是与硬件无关的3D图形接口，在Windows、Unix／X－Windows、MacOS、OS／2等不同版本的窗口相关部分（系统相关）略有差异。由于OpenGL是3D图形的底层图形库，没有提供几何实体图元，不能直接用以描述场景。但是，通过一些转换程序，可以很方便地将AutoCAD、3DS等3D图形设计软件制作的DFX和3DS模型文件转换成OpenGL的顶点数组。另外，在OpenGL的基础上还有OpenInventor、Cosmo3D、Optimizer等多种高级图形库，适应不同应用。其中，OpenInventor应用最为广泛。该软件是基于OpenGL面向对象的工具包，提供创建交互式3D图形应用程序的对象和方法，提供了预定义的对象和用于交互的事件处理模块，创建和编辑3D场景的高级应用程序单元，有打印对象和用其它图形格式交换数据的能力。<br>
+        <br>
+        &nbsp;&nbsp;&nbsp; <strong>四、OpenGL的工作步骤</strong><br>
+        &nbsp;&nbsp;&nbsp; OpenGL在屏幕上显示图形的主要步骤如下：<br>
+        &nbsp;&nbsp;&nbsp; 1.构造几何要素（点、线、面、多边形、位图），创建对象的数学描述。<br>
+        &nbsp;&nbsp;&nbsp; 2.在3D空间中放置对象，并选择适当的观察点。<br>
+        &nbsp;&nbsp;&nbsp; 3.直接定义或由光照条件和贴图纹理给出对象的颜色。<br>
+        &nbsp;&nbsp;&nbsp; 4.将对象的数学描述和颜色信息转换为屏幕上的像素。<br>
+        &nbsp;&nbsp; 五、OpenGL命令的语法规则<br>
+        &nbsp;&nbsp;&nbsp; OpenGL的函数虽然多达几百个，但由于有一套非常规范的语法规则，应用起来很方便。这与Direct3D那种比较杂乱的语法规则相比，显然更加清晰明了。<br>
+        &nbsp;&nbsp;&nbsp; 1.前缀代表OpenGL命令的函数类型<br>
+        &nbsp;&nbsp;&nbsp; OpenGL基本库：函数以gl开头，如glColor3f（）。OpenGL中有115个基本函数，可以在任何OpenGL平台上使用。<br>
+        &nbsp;&nbsp;&nbsp; OpenGL实用库：函数以glu开头，如gluBeginSurace()。OpenGL实用库比上面这115个函数高一级，提供高级调用。<br>
+        &nbsp;&nbsp;&nbsp; OpenGL辅助库：函数以aux开头，如auxInitDisplayMode（）。OpenGL辅助库可使编程简单明了，是提供初学者入门的函数，但不保证在任何平台的使用（在Win32系统下没有问题）。<br>
+        &nbsp;&nbsp;&nbsp; Windows专用函数库：函数以wgl开头。wgl函数将OpenGL与Windows95、WindowsNT视窗系统联接起来管理绘图描述表，显示列表，执行函数，和文字位图。<br>
+        &nbsp;&nbsp;&nbsp; X－Windows专用函数库：函数以glx开头。glx函数提供创建OpenGL命令描述表并使之与X－Windows系统连接的能力。<br>
+        &nbsp;&nbsp;&nbsp; 常量：以GL_为开头，均用大写字母，并用下划线与关键词分开，如GL_LINE_LOOP。<br>
+        &nbsp;&nbsp;&nbsp; 2.后缀表明OpenGL命令的数据类型<br>
+        &nbsp;&nbsp;&nbsp; 后缀类型对应C变量<br>
+        b8bitintsignedchar<br>
+        s16bitintshort<br>
+        I32bitintlong<br>
+        f32bitfloatfloat<br>
+        d64bitfloatdouble<br>
+        ub8bitunsignedintunsignedchar<br>
+        us16bitunsignedintunsignedshort<br>
+        ui32bitunsignedintunsignedlong<br>
+        &nbsp;&nbsp;&nbsp; 有时会在函数后缀后加上一个“v”，如glVertex3fv等，这表示该参量是一个矢量或矩阵的指针。<br>
+        &nbsp;&nbsp;&nbsp; 3 .掐头去尾，中间的关键词就是OpenGL函数的功能。<br>
+        &nbsp;&nbsp;&nbsp; 例如：glVertex2i(100,200)表明是OpenGL的基本函数（gl－），是绘点的函数（－Vertex－），是两个整型参数（－2i）。<br>
+        <br>
+        &nbsp;&nbsp; <strong> 六、OpenGL基本库的绘图方法</strong><br>
+        &nbsp;&nbsp;&nbsp; </font><font color="#008040">“话说”了半天的OpenGL，可能有些读者已经手痒了，咱们还是以一个简单的例子来初步“感受”一下OpenGL吧！该例子是一个由三个彩色平面围成的空心三角锥。读者不要担心自己没有OpenGL支持的3D加速卡，程序不能运行。实际上微软公司已经为Windows 
+        95编了一个用软件模拟硬件的动态连接库Opengl32.dll，Vc＋＋ 4.0以上的版本里都有。考虑到许多读者原先可能对OpenGL比较陌生，先简介一下OpenGL中画平面的常用方法：<br>
+        　　glBegin(类型);<br>
+        　　glColor3f(...);<br>
+        　　glVertex(...)<br>
+        　　glColor3f(...);<br>
+        　　glVertex(...);<br>
+        　　……<br>
+        　　glEnd();<br>
+        　　注：由“类型”指定画什么平面：GL_POINTS 单个顶点集；GL_LINES 
+        多组线，2个点一条线；GL_GL_POLYGON 单个简单填充凸多边形；GL_TRAINGLES 
+        多组三角形，3个点一个三角形。<br>
+        　　／／／／／／／／／／／／／／／／／<br>
+        　　／／sample.cpp <br>
+        　　＃include &quot;glos.h&quot;<br>
+        　　＃include &lt;GL／gl.h&gt;<br>
+        　　＃include &lt;GL／glaux.h&gt;<br>
+        　　＃include &quot;windows.h&quot;<br>
+        　　void myinit(void);<br>
+        　　void CALLBACK display(void);<br>
+        　　void CALLBACK reshape(GLsizei w,GLsizei h);<br>
+        　　／／ reshape()只是一个用于窗口改变大小时的处理，这里重点是display()。<br>
+        　　myinit(void)<br>
+        　　{<br>
+        　　／＊初始化：＊／<br>
+        　　／／窗口显示单缓存和RGB（彩色）模式<br>
+        　　 auxInitDisplayMode(AUX_SINGLE|AUX_RGBA);<br>
+        　　／／屏幕大小x=500， y=500 （0，0）是屏幕左上点<br>
+        　　auxInitPosition(0,0,500,500);<br>
+        　　／／初始化窗口，标题为“sample1”<br>
+        　　auxInitWindow(&quot;sample1&quot;);<br>
+        　　／／清屏，即将窗口清为黑色。<br>
+        　　glClearColor(0.0,0.0,0.0,0.0);<br>
+        　　／／将颜色缓存清为glClearColor命令所设置的颜色，即背景色<br>
+        　　glClear(GL_COLOR_BUFFER_BIT);<br>
+        　　}<br>
+        　　void CALLBACK reshape(GLsizei w,GLsizei h)<br>
+        　　{<br>
+        　　glViewport(0,0,w,h);<br>
+        　　glMatrixMode(GL_PROJECTION);<br>
+        　　glLoadIdentity();<br>
+        　　if(w&lt;=h)<br>
+        　　 glOrtho(－20.0,20.0,－20.0＊(GLfloat)h／(GLfloat)w,20.0＊(GLfloat)h／(GLfloat)w,－50.0,50.0);<br>
+        　　else<br>
+        　　 glOrtho(－20.0＊(GLfloat)h／(GLfloat)w,20.0＊(GLfloat)h／(GLfloat)w,－20.0,20.0,－50.0,50.0);<br>
+        　　glMatrixMode(GL_MODELVIEW);<br>
+        　　glLoadIdentity();<br>
+        　　}<br>
+        　　void CALLBACK display(void)<br>
+        　　{<br>
+        　　glBegin(GL_TRIANGLE_STRIP);／／连续填充多个三角形<br>
+        　　／／第一个三角形<br>
+        　　glColor3f(1.0,0.0,0.0);<br>
+        　　glVertex3f(15.0,0.0,0.0);<br>
+        　　glColor3f(0.0,1.0,0.0);<br>
+        　　glVertex3f(－15.0,0.0,0.0);<br>
+        　　glColor3f(0.0,0.0,1.0);<br>
+        　　glVertex3f(0.0,15.0,15.0);<br>
+        　　／／第二个三角形<br>
+        　　glColor3f(0.0,1.0,1.0);<br>
+        　　glVertex3f(10.0,15.0,－15.0);<br>
+        　　／／第三个三角形<br>
+        　　glColor3f(1.0,1.0,0.0);<br>
+        　　glVertex3f(15.0,0.0,0.0);<br>
+        　　glEnd();<br>
+        　　glFlush();<br>
+        　　}<br>
+        　　void main(void)<br>
+        　　{<br>
+        　　myinit();<br>
+        　　auxReshapeFunc(reshape);<br>
+        　　auxMainLoop(display);<br>
+        　　}<br>
+        　　／／程序结束<br>
+        　　<strong>七、结束语<br>
+        </strong>　　由于篇幅所限，只好就此搁笔，有兴趣的朋友可以到书店里去买一些有关OpenGL的书。目前已经出版发行的有：《精通OpenGL》、《OpenGL 
+        3D 从入门到提高》和《OpenGL 三维图形库 
+        编程指南》。另外，有机会上网的朋友可以去《品雪其寒》网站www.netease.com／～pinxue／opengl／以及BBS 
+        水木清华站看看，那里有许多和你一样热爱OpenGL的朋友。让我们一起应用OpenGL去创造一个五彩缤纷，灿烂辉煌的明天吧！<br>
+        <strong>（袁欣）</font><font color="#369681">。</font></strong></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年11月30日第46期07版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

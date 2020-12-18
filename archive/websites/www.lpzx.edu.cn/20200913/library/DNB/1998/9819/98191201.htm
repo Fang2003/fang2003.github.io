@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用Excel97制作“产值对比模板”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　<font
+        face="楷体_GB2312">编者按：从模板大奖赛开始，许多读者就积极参与了此次活动，他们根据自己的工作需要，作成各具特色的模板，我们也曾经选登过其中的几个优秀模板，我们将继续征集优秀的模板，同时如果你对模板制作感兴趣，拨打电话就可得到由微软(中国)有限公司提供的资料(详情请见电脑市场版)，希望广大读者切莫错过展示自己才能的好机会。需提醒读者注意的是在寄回模板的同时一定要附上Office97模板大奖赛参赛信息表。</font><br>
+        　　通过表格数据制作直观的图形曲线，是我们在工作中经常要做的事情。Microsoft公司的Office97办公软件为我们提供了这方面的帮助，通过它们，我们可以非常方便地制作出美观实用的曲线图表。下面我就以Excel97为例，简单地讲讲《产值对比模板》的制作方法：<br>
+        　<strong>　1．画出数据表格</strong><br>
+        　　打开Excel97，制作一产值表格(B5:O8)，在第5行填入“月份名”及“全年累计”字符，在B6、B7、B8单元格中填入“上年值”、“本年值”和“同期增长”字符，再在C6至N6填入上年产值数。选定B5至O8区域，单击“格式”菜单中的“单元格”，选择“边框”标签并设置“外边框”和“内部”线型线，接着在B2中填写图表标题“本年度与上年同期产值对比图表”，并把B2至O2单元格选中，在“单元格格式”对话框的“对齐”中选择“合并单元格”，在O3中填写数据单位（如：单位万元）。<br>
+        　<strong>　2．填写表格中公式</strong><br>
+        　　Excel中的表达式，可以通过在单元格中直接填写，也可以用“宏”来完成，当然第一种方法更简单些。这里我们在表格中直接填写下面的公式：<br>
+        　　<strong>3．制作图形</strong><br>
+        　　选取表格中相应数据(B5:N7)并复制到剪切板，在“插入”菜单中选“图表”，按照“图表向导”一步步制成折线图，嵌入工作表。调整“绘图区”和“图例”的大小和位置，使曲线与表格对齐。为了美观，也可以设置图表背景和绘图区颜色。<br>
+        　<strong>　4．完善版面</strong><br>
+        　　打开“格式”菜单下“工作表”中的“背景”，选择背景图片。打开“工具”菜单下“选项”中的“视图”对话框，将“行号列标”、“工作表标签”、“水平滚动条”和“垂直滚动条”都取消。再在“工具”菜单下“保护”中的“保护工作表”里设置口令（如：“czdb12345”），这样不使用程序就不能修改表格中的数据。把图表所在工作表的名称改为“产值对比图表”，制成的图表如图所示。<br>
+        　　<strong>5．制作输入窗体</strong><br>
+        　　从“工具”菜单的“宏”中打开“Visual Basic编辑器”，在“插入”菜单中插入“用户窗体”，调整窗体大小、颜色，以及Caption等属性，插入MultiPage控件，在窗体中右击它，选择新建页，使其具有三个页面。把Page1的Caption改为“使用说明”，在其中插入TextBox控件，其Text属性插入要说明的文本。注意，文本中要换行的地方要用Ctrl＋M，不能用回车键！Page2和Page3的Caption分别改为“本年产值”和“上年产值”，再在其中分别插入Frame控件，在Frame中分别插入12个Label控件和TextBox控件。Page2和Page3的TextBox“名称”要分别改为txtJan1、txtFeb1、…txtDec1和txtJan2、txtFeb2、…txtDec2接下来调整好它们的颜色。<br>
+        　　在窗体中放置两个CommandButton控件，其“名称”和Caption属性分别为“cmdOK”、“cmdCancel”和“确定”、“取消”。窗体“名称”改为UserForm。这时输入窗体就设置好了。<br>
+        　　<strong>6．编制窗体代码</strong><br>
+        　　窗体代码编程思路是：首先取表格中数据初始化窗体，修改产值数据后，按“确定”按钮，先自动解除口令，再赋值与表格，最后口令保护表格。如按“取消”按钮，则不赋值表格，直接关闭窗体。程序就不再细说了。<br>
+        　　<strong>7．建工作表按钮及代码</strong><br>
+        　　回到工作表中，在“视图”菜单的“工具栏”中打开“窗体”工具栏，把“按钮”添加到工作表。<br>
+        　　<strong>8．设置自动打开窗体代码</strong><br>
+        　　为了能够让新建文件或以后打开文件时自动打开输入窗体，则要在“Visual 
+        Basic编辑器”中“Microsoft Excel对象”的“ThisWorkBook”对象中录入代码，在此就不再介绍了。<br>
+        　　最后，保存好文件，《产值对比模板》就制作完成了。使用本模板，可使你方便地构造“本年度与上年同期产值对比图表”。<strong>(河北 
+        李晓彤)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

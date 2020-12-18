@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>证券交易所组网方案实例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　我所在的国民信托投资有限公司是广州天河区的一个证券交易所，由于单位业务的迅猛发展，原有的小型证券交易系统无法满足目前日趋增长的需要，根据需要准备扩容成一个1000个点以上的新的大型证券交易系统。经过一段时间的努力，我们成功地对系统进行扩容。现把扩容过程提供如下，供大家参考。<br>
+        　　<strong>一、选择网络技术</strong><br>
+        　　经过仔细分析，我们决定采用千兆交换以太网技术这是因为：<br>
+        　　1.如果1000个交易点每个点有0.1M的网络流量，那么在网络主干上将有1000×0.1M即100M的网络流量，100M的以太网刚好满足需要，但是，以太网的实际网络交换无法达到100％的利用，而且，如果以后再进行扩容或增加每个点的通信流量，100M的以太网主干也无法满足需要。在服务器的网卡和主干SWITCH之间、工作站和网络主干HUB之间将出现无法解决的网络瓶颈。<br>
+        　　2.目前基于PⅡ的服务器纷纷上马，300MHz～400MHz的强大数据处理能力无法迅速通过服务器的100M网卡将信息传输到网络主干，浪费了系统资源，加长了交易延迟时间。<br>
+        　　3.千兆以太网完全兼容最初的以太网规范的帧格式定义，支持CSMD/CD协议及全双工、流控制和IEEE 
+        802.3标准。<br>
+        　　4.支持直接通过硬件实现虚拟网络管理。<br>
+        　　此外，采用千兆以太网可获得如下利益：<br>
+        　　1.可以得到10倍于100M快速以太网的带宽。<br>
+        　　2.原有的基于以太网的应用可以无缝地移植到千兆以太网。<br>
+        　　3.对以后的大流量、高速度的证券交易运作有充分的余量。<br>
+        　　4.消除了网络瓶颈，使通信畅通无阻。<br>
+        　　<strong>二、选择合作伙伴</strong><br>
+        　　合作伙伴的选择是基于这样的考虑：<br>
+        　　1.产品线齐全。<br>
+        　　2.技术实力强，用户操心少。<br>
+        　　3.经验丰富，声誉好，值得信赖。<br>
+        　　经过多方比较和考虑，我们选择了广州正道科技有限公司。<br>
+        　　<strong>三、选择产品</strong><br>
+        　　在网络主干中，网络产品均选用Intel的产品，其原因如下：<br>
+        　　1.交易所的大多数计算机主板的芯片都是Intel芯片，在数据处理的兼容性方面，Intel的网络产品和服务器及使用平台具有很好的兼容性。<br>
+        　　2.现在基于PCI 32位和64位的服务器总线都是Intel体系。通过Intel的网络产品可以更好地兼容和处理千兆以太网数据，保证服务器和网络主干的畅通。<br>
+        　　3.作为主干交换机的Intel GIGABIT以太SWITCH可以给全双工的所有端口提供12GPPS的交换速度。通过Intel 
+        Etherexpress Pro/1000网卡和550T SWITCH的千兆上联模块连接，可以提供2GB的交换连接。所有的端口均支持无间断线速度及完全交换功能，并且支持1024 
+        IEEE 802.1 Q虚拟LAN，均内置了第三层网络交换和路由功能。<br>
+        　　4.集成有IP和IPX路由模块的Intel Express 550T SWITCH可以实现硬件级的分割网络，以降低网络的拥挤程度。它采用的容错系统可以最大限度地提高网络容错性。通过Intel 
+        Device View可以智能地实现远程和网络管理。<br>
+        　　5.提供安全可靠的高性能性价比。<br>
+        　　6.由于整个网络主干从1000M到100M都采用Intel的网络产品，在网络兼容性和可靠性方面，可以得到充分的保障。<br>
+        　　<strong>四、具体实现</strong><br>
+        　　1.网络拓扑结构<br>
+        　　整个网络结构采用树型结构。<br>
+        　　(1)通过两个千兆交换机和6个百兆交换机组成千兆网一级交换主干；每3个百兆交换机以星型接法接入千兆交换机。每个服务器也以星型接法接入到千兆交换机中。<br>
+        　　(2)通过6个百兆交换机和42个百兆共享HUB组成网络二级交换。每7个HUB以星型接法接入到一个百兆交换机。<br>
+        　　(3)所有的工作站以星型接法接入到42个HUB中。<br>
+        　　整个网络形成一棵在顶端为千兆交换、中间为百兆交换、底层为百兆共享的树型结构的网络拓扑。<br>
+        　　2.产品选择<br>
+        　　(1)GB交换机采用Intel GIGABIT SWITCH。<br>
+        　　(2)百兆交换机采用Intel 550T SWITCH。<br>
+        　　(3)百兆共享HUB采用Intel Express 10/100 STACKABLE HUB。<br>
+        　　3.网络连接<br>
+        　　(1)三台服务器分别接入两块千兆光纤网卡，通过光纤跳线接入Intel千兆交换机。<br>
+        　　(2)两台千兆交换机之间没有物理连接。<br>
+        　　(3)6个Intel 550T通过本身的上联光纤模块利用光纤跳线接入Intel千兆交换机。<br>
+        　　(4)42个Intel Express 10/100 HUB通过双绞线接入6个Intel 550T交换机。<br>
+        　　(5)工作站通过双绞线分别接入Intel 10/100 HUB。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　(广东　洪军)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月22日第24期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

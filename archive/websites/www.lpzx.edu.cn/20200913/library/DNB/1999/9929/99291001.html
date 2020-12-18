@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Windows中的剪贴板</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>29 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; Windows中的剪贴板</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Windows中的剪贴板 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<b>1.什么是剪贴板</b><br>
+　　从Windows3X开始，窗口操作系统就有了剪贴板工具，这是应用程序间进行静态数据交换极为有用的工具。使用它，只需要简单地按几个键就可以将数据从一个文件拷贝到另一个文件中去。<br>
+　　实际上，剪贴板并不是一个独立的应用程序，而是Windows中的一类API函数(应用程序编程接口函数)，各种应用程序调用这类函数，来管理应用程序间进行的数据交换。Windows剪贴板的实现过程比较复杂，涉及到Windows中固有的OLE（对象链接和嵌入）技术，但我们可以简单地以图示的方法来理解剪贴板。<br>
+　　<b>2.剪贴板的基本操作</b><br>
+　　剪贴板的一般操作方法很简单，就是三个操作，剪切（Cut）、复制(Copy)、粘贴(Paster)，基本过程如下：<br>
+　　●选择剪切对象，如某一段文本。<br>
+　　●按下剪切快捷键（Ctrl＋X），将文本剪下，也可以采用复制的方法。<br>
+　　●这时剪切的文本或者复制的文本就保存在Windows的剪贴板中。<br>
+　　●在其他地方采用粘贴（快捷键Ctrl＋V）的方法将文本复制出来。<br>
+　　注意在剪贴前必须选择好剪贴对象，在Win98中，可以剪贴的对象涉及的范围比较广，如文本、图表、图像、声音、文件等都是可以剪贴的，不过要注意的是剪贴的数据必须粘贴在相容的程序里，例如可以从一个绘图程序中剪贴一个图形到写字板或者WPS中，也可以从Excel中剪贴一个电子表格到Word中去，但都不能剪贴到记事本中去，因为记事本程序不支持图片和表格。<br>
+　　<b>3.剪贴板查看器</b><br>
+　　在Windows中提供了一个剪贴板查看器，这个剪贴板查看器是一个辅助程序，目的是让用户了解剪贴板里的剪贴内容细节。剪贴板查看器并不实现剪贴板的剪贴功能，因此剪贴板查看器是可选安装的Windows附件程序。你可以通过点击“开始/程序/附件/系统工具/剪贴板查看程序”来启动剪贴板查看器。如果你的Windows中没有这个程序，可以启动控制面板中的“添加/删除程序”来添加剪贴板查看器。<br>
+　　在剪贴板查看器中，可以对剪贴板中的内容进行简单的操作，如你可以将剪贴板内容删除（删除后将不能再粘贴该内容了），可以将剪贴的内容另存为剪贴板所用的文件CLP（CLP文件格式可以包含剪贴内容的文件格式，如图像的调色板信息），你也可以将剪贴的内容以不同的方式来显示。<br>
+　　<b>4.剪贴板使用的数据格式</b><br>
+　　实际上，剪贴板可以使用的数据格式非常多，这些数据格式都可以被剪贴板所接受。例如，你可以从写字板复制一些格式文本到剪贴板，这些格式文本可以包括简单文本、格式文本（带字体和字号）、图形，你可以在剪贴板查看器中原样看到这些格式化文本，你也可以将这些格式文本原封不变地粘贴到可以支持的文件中去，如Word文件。<br>
+　　<b>5.用特定格式粘贴数据</b><br>
+　　<b>a.Owner格式</b><br>
+　　剪贴板中的数据内容如果以Owner格式存放，必须要源软件持续运行，如果关闭了源软件，剪贴数据的格式就可能丢失。<br>
+　　<b>b.Text格式</b><br>
+　　字处理软件可以有多种格式将文本发送到剪贴板，最常用的有三种：文本格式，包含不带格式信息的ASCII字符，对于两个不支持其他通用格式的字处理软件间交换数据，就使用文本格式的剪贴，如记事本；超文本格式（RTF），保留格式化特性，比如字样、字形、大小，如果两个应用程序支持RTF（如写字板、Word 97），就可以在其间剪贴而不丢失文本格式；OEM文本格式，由设备自带的字符集组成的文本格式。<br>
+　　<b>c.图形格式</b><br>
+　　许多图形程序可以把图形数据以Owner格式发送到剪贴板，但大多数应用程序还是以位图、图元文件形式来剪贴图形。位图（Bitmap），是以像素来保存图形文件，但位图的缩放容易损失质量，占用的内存也比较多，当在一个内存不多的系统中，剪贴板长期保留一个大型位图文件时，将造成机器速度减慢；图元文件（Metafile）是以线、圆、曲线等组成一幅图形，通过绘图命令再现图形，剪贴板支持图元图形。<br>
+　　<b>d.用特定格式粘贴数据</b><br>
+　　由于剪贴板支持如上的多种数据格式，粘贴数据的应用程序就要决定使用哪种格式。一般而言，每一种软件都有一种自动使用的缺省数据类型，例如记事本只支持普通文本格式剪贴，但在有些应用程序中，可以选择其他格式粘贴文本，例如在写字板中，就可以使用选择性粘贴（菜单“编辑/选择性粘贴”)，使用选择性粘贴，就可以将剪贴的数据按你设定的格式粘贴到目的文件中。<br>
+　　<b>6.剪贴板使用技巧</b><br>
+　　<b>a.使用剪贴板捕捉窗口和屏幕</b><br>
+　　如果要将屏幕画面捕捉到剪贴板，可以按键盘上的“Print Scrn”键，如果捕捉窗口，则可以使用“Alt＋Print Scrn”键。将屏幕或窗口图像捕捉到剪贴板后，就可以使用画笔或其他绘图软件将图像以指定格式储存在磁盘上。<br>
+　　<b>b.剪贴板拷贝文件</b><br>
+　　Windows 9X给剪贴板增加了一项新的功能，就是拷贝文件，你可以选择文件或文件夹，然后按“Ctrl＋C”将文件“拷贝”到剪贴板，然后打开别的文件窗口将文件粘贴到该文件窗口。<br>
+　　<b>7.网络剪贴</b><br>
+　　Windows 9X还提供了一个增强的剪贴簿观察程序（Clipsrvexe），这个程序存放在Win95光盘上的“Other/Clipbook”文件夹中。剪贴簿观察程序像一个多功能的剪贴板，你可以保存多个剪贴内容以供使用。特别的是，这个剪贴簿程序可以作为网络共享剪贴簿，使用上非常方便，你可以自己试用。<br><b>(四川　陈正)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/29/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99291001.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

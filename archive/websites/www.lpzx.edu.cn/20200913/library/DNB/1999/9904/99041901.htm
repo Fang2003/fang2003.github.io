@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HPC中的关键技术</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">HPC中的关键技术<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　手持电脑(HPC)的主要功能应包括：运算处理、数据存储、输入输出、数据通信和系统扩展五方面，软件和硬件的有机结合是充分实现这些功能的必要条件。在操作系统采用Microsoft公司的Windows 
+        CE2.0的前提下，系统设计所选用的硬件有一定的限制，必须支持此操作系统。另外，硬件还必须满足中文信息处理的要求。由于是手持电脑，在整机体积、功耗及符合人机工程要求等方面上也要予以特别的考虑。<br>
+        　　一、HPC中的关键技术<br>
+        　　1.运算处理：运行Windows CE要求特定系列的32位处理器， 
+        除了基本信息处理功能，如个人信息管理（PIM）、计算器、电子字典、地图等数据库检索和图形用户界面的需要外，还要求具有像数字通信、手写识别、人工智能、语言输入等较高信息处理要求的计算能力。例如，V.34的软件 
+        Modem约要花费15MIPS(百万条指令/秒)运算、语音压缩需用20MIPS的计算。为嵌入式应用设计的处理器受芯片体积和功耗的限制，多采用精简指令结构(RISC），不仅简化了芯片结构，同时使芯片的性能得到了很大提高。日立公司新近推出的SH4处理器主频已达200MHz，运算速度为360MIPS。目前，用于HPC的32位RISC处理器绝大多数为日立的SH3或以MIPS公司（现被SGI收购）的R3000为核心的芯片（如Philips的PR31700、NEC的VR4101等），尽管Windows 
+        CE 2.0版本开始支持Intel的x86、Motorola的PowerPC以及DEC的ARM处理器，但市场的占有量还很小，缺乏丰富的商品软件。<br>
+        　　2.数据存储：由于HPC没有硬盘作为外部存储器，所有软件和数据都放在内存里，对RAM及ROM的容量有较大的要求。Windows 
+        CE 2.0的最小配置是2MB RAM和4MB ROM；中文Windows CE出来以后，需要的ROM会更大，如再加上自己开发的中文信息输入输出程序，至少需8Mb容量的ROM。Mask 
+        ROM和Flash Memory(闪存)是两种选择，前者大规模生产时成本会很低，后者可在线更新。Intel采用创新的多比特存储单元技术生产出了单片64兆比特（Mbit）的Flash存储器，美国的AMD和日本的东芝公司也都生产出了适合电池驱动的32Mbit的Flash芯片。<br>
+        　　3.输入输出：HPC的输入形式包括笔（Stylus）、语音、按键和键盘。笔输入是在压敏式触摸屏（Touchscreen）上进行的，为最主要的输入形式。语音输入有两种使用目的，一是作话语录音，另一用途是对语音进行识别，用作文字或命令输入。按键的设置是为了一键获取信息，方便非专业用户的使用。键盘是传统的计算机输入设备，特别适合外文字母型文字的输入，也是台式机专业用户习惯了的录入形式。随着HPC日趋掌上化以及联机字符识别的成熟，这种输入方式已不是必不可缺的了，有可能被笔输入和虚拟（软件）键盘所取代。<br>
+        　　HPC的输出有LCD显示和语音两种，分别对应人的视觉和听觉。屏幕尺寸为1/2 
+        VGA的640×240点阵和1/4 VGA的240×320点阵，显示GUI环境下的文字和图形数据。LCD有单色、灰度和彩色三种，价格由低到高，单色LCD常用2－bit 
+        4级灰度，彩色LCD最多是8－bit 256种颜色。语音输出不仅能重放录入的声音信号，还能输出由文本合成的语音，提供语音校对和语言学习功能。另外，自动音频拨号，闹钟时间提示也是语音输出能完成的基本应用。<br>
+        　　4.数据通信：灵活、强大的通信能力弥补了狭小机盒对HPC的限制，与台式微机的数据同步更新更是HPC区别于以前的PDA的显著特征之一。采用RS232标准串口和IrDA红外接口可以实现HPC跟PC以及HPC之间的本地联络，可完成数据同步与交换和程序装载与升级。与Internet和远端计算机的通信以及E－mail的传输建立在一个33.6kbps的V.34 
+        Modem的基础上，毕竟模拟电话线还是目前最普及的通信基础设施。Modem的信道编解码和纠错计算可以由主处理器通过软件实现，系统只需外加一个V.34的模拟前端接口芯片即可，消除了以前基于PCMCIA的Modem使用时电流过大（约600mA）的问题。除此之外，还可配置自适应红外功能，对多种不同家电实施遥控。<br>
+        　　5.系统扩展与升级：PCMCIA是Windows CE的标准扩充接口，可用它插接Compact 
+        Flash储存卡、以太网和数字摄像头等专用卡设备。由于Windows CE 2.0操作系统和其要求的内存大小均会发生变化，有必要考虑系统的升级可能，可装卸式内存卡可以保护自己和用户的投资。同时，当操作系统和基本软件变化不大时系统还应该能够采用在线升级的办法进行更新。<br>
+        　　6.功耗控制：作为电池驱动的手持设备，HPC上电后处在运行（Operating）、睡眠（Sleep）或待机（Standby）三种状态中的某种状态，由处理器自己或程序对系统进行调整，最大可能地延长电池的使用时间。选用的器件是为低功耗设备专门制做的，在无访问时能自动进入Sleep或Standby状态，否则必须在电路上作专门的节电设计。Windows 
+        CE 2.0建议在2－bit 4灰度320×240 LCD显示下，带有2MB RAM、2MB ROM的HPC用2节普通五号(AA)碱性电池可提供15～20小时的连续正常运行，并有可选用的交流电适配器供数据交换等高耗电程序运行。<br>
+        　　7.中文信息支持：美国Microsoft公司已经开发出中文Windows CE操作系统，我们在硬件上主要应考虑的是为系统配备足够的Mask 
+        ROM或Flash Memory。除了中文操作系统所占的存储空间外，还要为我们的汉字输入法、智能手写输入法、语音命令识别程序及它们所用数据库留出空间。在输入接口上，为满足识别的精度，触摸屏和语音的A/D转换器要有较高的分辨率。<br>
+        　　二、HPC发展前景预测<br>
+        　　去年12月日立推出了200MHz的64位的SH4处理器，它采用超标量技术，性能达到360MIPS，使很多过去需在台式机上完成的工作在掌上电脑中也可做到。加上存储器技术的发展，如大容量Flash 
+        Memory、FerroRAM、Rambus RAM等的出现，我们认为，HPC处理器速度的提高能在实时智能接口方面得到进一步的应用：<br>
+        　　1)语音和文字的识别：精度更高，反应更快，与用户的接口会更自然；<br>
+        　　2)语音和图像压缩：采用对运算量需求很大的多媒体压缩技术，如语音的CELP、图像的H.263和MPEG4可实现Smart 
+        Phone和Video Phone通信以及数字媒体的编码存储。<br>
+        　　此外，HPC与无线寻呼、蜂窝电话等通信产品的结合，HPC与掌上电视等消费产品的结合，甚至与便携式医疗保健设备的融合，都是未来HPC拓展应用的方向。手持电脑本质上是为个人使用的，并且不受场地和时间的限制，这是电脑从机房走入办公室，再走入家庭后的又一进步。<br>
+        　　HPC的处理器目前面积还比较大，电池的使用时间也还较短。Philips在实现小型化和低功耗方面有一定的优势。其新的PR32000处理器为LQFP128封装，只有14mm×14mm的面积，75MHz运行时工作电流仅有75mA。在数字家电上的优势有可能使Philips在HPC的多媒体应用上会显出更强的竞争能力。<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>优化你的Delphi程序</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/%C4%A3%B0%E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      
+    </td>
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/2001/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/2001/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="library/DNB/2001/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/2001/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/2001/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="library/DNB/2001/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="library/DNB/2001/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b2.gif" width="147" height="22"></td>
+  </tr>
+  <tr> 
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a1.gif" width="169" height="38"></td>
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+    <td align="right" width="148" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/b3.gif" width="147" height="38"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a2.gif" width="169" height="11"></td>
+    <td width="460" height="2" bgcolor="#D77201"></td>
+    <td width="141" rowspan="2" valign="top"><img src="http://www.lpzx.edu.cn/library/DNB/2001/%C4%A3%B0%E5/images/a3.gif" width="160" height="9"></td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第10期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{优化你的Delphi程序}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 1.窗口控制<br>
+              文本框Edit对回车键的响应：有时操作人员在输入数据之后(特别是用小键盘输入数值数据时)，通常会习惯地打入回车键以表示确认，但是在Delphi中的Edit控件并没有专门针对回车键响应的事件。例如在一个窗口中同时有多个文本输入框Edit控件，要求逐个输入数据；一般情况下当我们输入完第一个文本框的内容之后，必须按下Tab键或直接用鼠标点击第二个文本框才能将光标跳到第二个文本框，这样不便于快速录入数据。现在我们运用文本框对输入字符的响应事件OnKeyPress，通过SetFocus命令来实现：在第一个文本框中输入数据后，按下回车键光标将自动跳到第二个文本框。<br>
+              在Edit1的OnKeyPress事件中写入：<br>
+              procedure TForm1.Edit1KeyPressSenderTObjectvar Key Char <br>
+              Begin<br>
+              if Key=chr13 then Edit2.SetFocus//ASCII码中的13表示回车键<br>
+              //在Edit1中输入回车键后，激活Edit2.SetFocus，光标自动跳到Edit2<br>
+              End<br>
+              //同例对Edit2、Edit3......等都采用如上方法就可以实现对回车键的响应<br>
+              2.自动显示PageControl中的指定页<br>
+              当我们在一个窗口中定义一个PageControl，并在其下加入多个TabSheet页用于显示不同的信息。此时Delphi在编译程序时会自动记录下编译前所显示的是哪一页，以后当你再运行这个编译过的程序并打开此窗口时，PageContro就会自动跳到那一页上，而我们所要求的是在打开窗口的时候可以显示指定的TabSheet页。<br>
+              在窗口显示事件FormShow中加入：<br>
+              procedure TForm1.FormShowSender TObject <br>
+              begin<br>
+              PageControl1.ActivePage=TabSheet1//激活第一页<br>
+              end<br>
+              3.数据库优化<br>
+              Table记录的快速查找定位：在窗口中定义了一个Table、一个DataSource和一个DBgrid用于显示并查询Table所指向数据库，一个用于编辑输入欲查找记录的关键字。一般情况下我们用do...while语句逐条对记录进行判断直到找到符合条件的记录或指针走到了数据库底部为止，但是如果被查找的数据库很大时(超过一万条记录)，那么在DBGrid中每检索一条记录，DBGrid就会从头到尾不断滚屏显示直到找到后将指针定位在该记录上，这样查找的速度很慢。现在我们可以利用一个Query来对DBGrid中的数据记录指针进行快速定位。首先要对数据库中的被检索关键值进行排序，然后新建一个Query也指向该数据库，用新建的Query检索所有小于该条件的记录，这样Query所检索的结果就是符合该条件记录前的所有记录，而Query数据库的总记录个数就是查找的记录的位置，这样只要用MoveBy到Query的数据记录总数就可以使TABLE快速移到所要查找的记录上。<br>
+              在窗口中定义了Table1、DataSource1、DBGrid1分别用于指向并显示数据库A.DB，数据库A.DB中包含字段“编号”，首先对A.DB中的字段“编号”进行排序，现在我们在Edit1中输入一个编号后，要求记录指针快速地定位在指定编号的记录上。<br>
+              未使用Query用法(执行次数为符合条件记录的位置，若没找到，则是数据库的总长度)：<br>
+              Table1.Open<br>
+              Table1.First<br>
+              //逐条比较直到找到或指针走到数据库底部<br>
+              While not Table1.Eof and Table1'编号'&lt;&gt;Edit1.Text do<br>
+              Table1.Next<br>
+              使用Query用法：(执行次数为8)<br>
+              Query1.Close<br>
+              Query1.SQL.Clear<br>
+              //查找所有条件小于Edit1.text内容的所有记录，记录总数就是所符合条件记录的位置<br>
+              Query1.SQL.Add'select  from trans.db where 编号&lt;'''+edit1.text+'''' 
+              <br>
+              Query1.Open<br>
+              Table1.Open<br>
+              Table1.First<br>
+              Table1.MovebyQuery1.RecordCount <br>
+              4.提取xxxx-xx-xx格式的日期字符串<br>
+              在数据库中有时需要将一个日期类型数据转化为一个字符串类型数据才能对日期进行排序。但是由于将日期类型直接转化为字符型时，程序会自动省略掉日期中的月、日小于10的0，例如将日期“2000-09-04”转化为字符串后会是“200094”而不是“20000904”，如果对字符串进行比较排序所得出的结果是200094&lt;2000131，从而被认为2000-09-04小于2000-01-31而排在前面，导致排序结果错误。我们必须要想办法将2000-09-04转化为字符20000904，方法如下：<br>
+              建立一个DateTimePicker、一个Calendar(在SAMPLE页中的日历)，将DateTimePicker.Date(输入日期)赋值给Calendar.CalendarDate日历日期 
+              ，这样就可以直接从Calendar中读取类型为整型的Year年、Month月、Day日，然后再对月、日的数值进行比较，当数值小于10时则在其前面补上0，最后将数据再转化为字符型，这样就可以把一个日期类型数据转化为标准结构的字符型数据。下例中将所需输入的日期传送给DateTimePicker，再由DateTimePicker传送给CalendarDate，然后从CalendarDate.Yeah、CalendarDate.Month、CalendarDate.Day将年、月、日转化为字符型并赋值给Label1以待使用。此例还可以应用于时间类型的转化。<br>
+              DateTimePicker.Date=now<br>
+              Calendar1.CalendarDate=DateTimePicker1.Date<br>
+              Dabel1.Caption=IntToStrCalendar1.Year <br>
+              if Calendar1.Month&lt;10<br>
+              Then Label1.Caption=Label1.Caption+'0'+IntToStrCalendar1.Month<br>
+              Else Label1.Caption=Label1.Caption+IntToStrCalendar1.Month <br>
+              If Calendar1.Day&lt;10<br>
+              Then Label1.Caption=Label1.Caption+'0'+IntToStrCalendar1.Day<br>
+              Else Label1.Caption=Label1.Caption+IntToStrCalendar1.Day<br>
+              5.用不同颜色的字体显示不同条件记录<br>
+              在一个DBGrid内需要对所显示的记录根据不同的条件采用不同的字体颜色进行区分。例如在数据库中有一个记录字段“分数”，现在需要对于分数小于60的记录用红色表示，分数大于60小于90的记录用绿色表示，分数大于90小于100的记录用蓝色表示。<br>
+              在DBGrid的DBGrid1DrawColumnCell事件中加入如下语句：<br>
+              Procedure TForm1.DBGrid1DrawColumnCellSender TObject const Rect 
+              TRect<br>
+              DataCol Integer Column TColumn State TGridDrawState <br>
+              Begin<br>
+              If Query1'分数'&lt;60 Then<br>
+              DBGrid1.Canvas.Font.Color = clred<br>
+              If Query1'分数'&gt;60 And Query1'数量'&lt;90 Then<br>
+              DBGrid1.Canvas.Font.Color = clgreen<br>
+              If Query1'分数'&gt;90 And Query1'数量'&lt;100 Then<br>
+              DBGrid1.Canvas.Font.Color = clblue<br>
+              DBGrid1.DefaultDrawColumnCellRect DataCol Column State <br>
+              end}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

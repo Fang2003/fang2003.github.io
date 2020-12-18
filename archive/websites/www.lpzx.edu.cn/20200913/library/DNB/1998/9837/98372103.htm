@@ -1,0 +1,71 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>DOS工作站加盟NT网<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　目前，许多单位都是386、486、Pentium并存，DOS、Windows、Windows 
+        NT共用，在这种情况下，如何实现DOS工作站与Windows NT联网就成为期待解决的问题。我们通过实践解决了这个问题，现就把解决过程介绍给大家。<br>
+        　　<strong>一、Windows NT 4.0 DHCP服务器的配置</strong><br>
+        　　1．创建DHCP服务器<br>
+        　　(1)单击“开始”,指向“设置”，然后打开“控制面板”，再打开“网络”，点击“服务”，单击“添加”，选择“MICROSOFT 
+        DHCP服务器”，然后按“确定”(此时要插入Windows NT CD－ROM盘)。<br>
+        　　(2)点击“开始”，指向“程序”，然后指向“管理工具(公用)”，再单击“DHCP管理器”。<br>
+        　　(3)在“服务器”菜单中，单击“添加”命令。<br>
+        　　(4)键入DHCP服务器名或IP地址（如运行Windows NT SERVER的计算机名或TCP/IP协议中的IP地址），然后单击“确定”。<br>
+        　　2．创建DHCP的作用域<br>
+        　　(1)选定要为其创建作用域的服务器,然后在“DHCP管理器”窗口的“DHCP服务器”菜单中，在“作用域”菜单中，单击“创建”。<br>
+        　　(2)在作用域中定义可用IP地址的范围，在“起始地址”和“结束地址”框中，键入IP地址范围的起始值和结束值（如起始地址为：100.100.100.1；结束地址为：100.100.100.10）。<br>
+        　　(3)在“子网掩码”框中，提供相应的子网掩码(如子网掩码为:255.255.255.0)。<br>
+        　　(4)为了排除IP地址范围内已用了的地址或将保留的地址，故使用“排除范围”控制框，方法如下：<br>
+        　　1在“起始地址”框中键入排除范围的IP起始地址，在“结束地址”框中键入排除范围的IP结束地址，然后点击“添加”。用同样方法定义其他排除范围。<br>
+        　　2要排除单个IP地址，在“起始地址”框中键入该IP地址，而“结束地址”框为空,然后点击“添加”即可。用同样方法定义其他排除范围。<br>
+        　　3要从排除范围中删除IP地址或IP地址范围，在“排除地址”框中单击该地址，然后点击“删除”。<br>
+        　　(6)要指定该作用域中IP地址的租用时间，单击“限制为”，然后键入定义IP地址租用时间的“天”数、“小时”数和“秒”数。如果要使该作用域的租用不过期，则单击“无限制”。<br>
+        　　(7)在“名称”框中，键入作用域名，用以描述子网的名称。<br>
+        　　(8)在“说明”框中，键入说明该作用域的字符串，这是可选的。<br>
+        　　(9)激活DHCP作用域。在“作用域”菜单中，点击“激活”。若选定作用域已被激活时，此时菜单命令名更改为“停用”。<br>
+        　　<strong>二、制作DOS网络安装启动盘</strong><br>
+        　　1．制作一张DOS系统盘。<br>
+        　　2．在Windows NT服务器中点击“开始”，指向“程序”，然后指向“管理工具(公用)”，点击“网络客户管理器”。<br>
+        　　3．点击“制作网络安装启动磁盘(N)”，然后单击“继续”，在“路径(P):”框中填入相应的路径:\CLIENTS(此目录可在Windows 
+        NT光盘上找到),然后点击“确定”。<br>
+        　　4．在“网络客户(C):”列表框中选择“NETWORK CLIENTS V3.O FOR MS－DOS 
+        AND WINDOWS”。在“网络适配卡(A):”列表框中选择运行DOS操作系统的计算机上的网卡型号,然后点击“确定”。<br>
+        　　5．在“计算机名(C):”框中填入运行DOS操作系统的计算机名,如MYCOPUTER(任一合法名),在“用户名(U):”框中填入用户名(此用户名为在Windows 
+        NT中建立的合法用户),在“域(D):”框中填入相应的域名。在“网络协议中(N):”列表框中选择TCP协议,在TCP/IP设置中选择“启用自动DHCP配置(A)”,然后单击“确定”。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　（广东　黄忠明）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

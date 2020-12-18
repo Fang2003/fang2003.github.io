@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何提高FTP3.0的系统性能<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 在用户在使用VisualFoxPro(VFP)设计和运行应用程序时，一般都希望能从操作系统、VFP以及应用程序中获得最佳性能，现介绍几种优化VFP系统性能的方法。<br>
+        1高效地利用内存<br>
+        优化VFP性能的最佳方法之一是给它提供尽可能多的内存。在创建窗口、菜单、屏幕、内存变量和其他对象时，都需要占用内存，要想尽可能提高系统性能，应只在必要时创建对象，并在完成对象操作后清除它们。使用SYS(1016)可以返回窗口、菜单、屏幕、内存变量，打开的表所占用的内存数量。<br>
+        2设置最佳状态显示<br>
+        VFP的SET命令设置对系统性能有很大影响，为确保最佳性能，几个对系统性能影响很大的命令可采用以下设置：SETDOHISTORYOFF；SETESCAPEON；SETOPTIMIZEON；SETREFRESHTO0，0；SETSTATUSBAROFF；SETSTATUSOFF；SETSYSMENUTODEFAULT；SETTALKOFF；SETVIEWOFF。<br>
+        3使用名称表达式代替宏替换<br>
+        VFP支持名称表达式。如果用名称表达式取代宏替换，将极大地增强程序性能。例如，给CFile变量指定一个值，则用CFile创建的名称表达式比宏替换更快。<br>
+        CFile=″cust″<br>
+        USE＆CFile<br>
+        USE(CFile)<br>
+        4管理对象属性<br>
+        在程序编写过程中，若在程序循环外使用对象属性，VFP将更加有效地运行。<br>
+        5管理SQL命令的性能<br>
+        在SELECT－SQL查询中，以下情况会导致性能降低并产生意外的结果：(1)没有指定一个完整的联接条件，而将两个表包含到一个查询中。(2)联接含有空字段的表。如果将两个表包含到一个查询中，而不指定完整的联接条件，则一旦符合筛选条件，第一个表的每一个记录将与第二个表的每一记录相联接，这会产生数量巨大的查询结果。因此，确保联接条件尽可能完整，可有效提高系统性能。 
+        (江苏 徐洪云)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月31日第33期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

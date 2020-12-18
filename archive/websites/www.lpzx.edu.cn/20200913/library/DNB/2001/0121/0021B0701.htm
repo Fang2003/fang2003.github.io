@@ -1,0 +1,172 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Ｌｉｎｕｘ常用操作疑难解答</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0121/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0121/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第21期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Ｌｉｎｕｘ常用操作疑难解答<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->编者按：自从“Ｌｉｎｕｘ园地”创办以来，一直受到广大Ｌｉｎｕｘ爱好者的欢迎。其中也有不少朋友提出了一些自己在日常操作中遇到的问题，近期，我们将进行统一解答，希望能为广大的Ｌｉｎｕｘ爱好者提供更好的服务！<br>
+              问：如何快速进入我曾进入过的目录？<br>
+              答：你常会发现在不同的目录间转来转去后，往往会不记得你曾进入的某个目录的路径。要解决这一问题，可采用下面两个命令来实现。<br>
+              ｐｕｓｈｄ 该命令允许你定义你想进入的目录。它的语法与ｃｄ命令相同。比如：<br>
+              ｐｕｓｈｄ ／ａｎｙｄｉｒ／ａｎｙｌｏｃａｔｉｏｎ／<br>
+              ｐｏｐｄ 该命令允许你在任何地方直接跳回到你前面定义的那个目录。它的语法很简单，就是ｐｏｐｄ。<br>
+              问：如何用当前路径作提示符？<br>
+              答：对于ｂａｓｈ来说，在．ｂａｓｈｒｃ文件中加入如下一行内容即可：<br>
+              ＰＳ１＝″＼＄ＰＷＤ＼＼＄″<br>
+              问：如何能得知一个目录所占据的空间大小？<br>
+              答：在命令行键入ｄｕ －ｃ，该命令将告知你某目录所占用的空间。Ｄｕ的意思是Ｄｉｓｋ Ｕｓａｇｅ，－ｃ是ｄｕ命令的一个功能选项。该命令还有一条有用的选项－ｃｈ，该选项将使得ｄｕ以ＫＢ或ＭＢ的空间表示法显示所占用的空间，而不是以字节为单位。<br>
+              问：用什么方法能获知用户的操作情况？<br>
+              答：运行ｌａｓｔ －Ｎ（Ｎ为正整数）即可。它可以列出系统记录的所有用户最近Ｎ个操作行动。你也可以搭配ｇｒｅｐ来找出特定用户的使用情况，比如：<br>
+              ｌａｓｔ －１００ ｜ ｇｒｅｐ ｄａｎｉｅｌ<br>
+              它会列出用户ｄａｎｉｅｌ最近执行的１００个操作行动情况。<br>
+              问：如何把ｍａｎ的内容转换成普通的文本文件？<br>
+              答：假设你要将ｉｎｅｔｄ这个指令的ｍａｎ的内容转成文本文件，你只需要在ｓｈｅｌｌ下键入如下命令即可：<br>
+              ｍａｎ ｉｎｅｔｄ ｜ ｃｏｌ －ｂ ＞ ｉｎｅｔｄ．ｔｘｔ<br>
+              问：如何在Ｌｉｎｕｘ中设定ＰＡＴＨ﹖<br>
+              答：通常，Ｌｉｎｕｘ的默认ｓｈｅｌｌ是ｂａｓｈ ｓｈｅｌｌ，它的系统整体设定可以加在／ｅｔｃ／ｐｒｏｆｉｌｅ文件之中，而个人设定，则加在 
+              ／．ｂａｓｈ＿ｐｒｏｆｉｌｅ文件之中。设定方式为：<br>
+              ｅｘｐｏｒｔ ＰＡＴＨ＝／ｕｓｒ／ｓｂｉｎ／ｕｓｒ／ｂｉｎ／ｕｓｒ／ｌｏｃａｌ／ｂｉｎ<br>
+              ｅｘｐｏｒｔ ＰＡＴＨ＝＄ＰＡＴＨ／ｕｓｒ／ｌｏｃａｌ／ｂｉｎ<br>
+              问：如何隐藏系统信息？<br>
+              答：通常，在你登入Ｌｉｎｕｘ时，会在屏幕上显示Ｌｉｎｕｘ发行版名称、版本、内核版本和服务器名称等信息。若你不想让它们显示出来，而只是给出“Ｌｏｇｉｎ”提示符，则可按如下步骤操作：<br>
+              步骤１：编辑“／ｅｔｃ／ｒｃ．ｄ／ｒｃ．ｌｏｃａｌ”文件，在下面所示的语句前加上“＃”：<br>
+              ＃ Ｔｈｉｓ ｗｉｌｌ ｏｖｅｒｗｒｉｔｅ ／ｅｔｃ／ｉｓｓｕｅ ａｔ ｅｖｅｒｙ ｂｏｏｔ． Ｓｏ ｍａｋｅ ａｎｙ ｃｈａｎｇｅｓ 
+              ｙｏｕ <br>
+              ＃ ｗａｎｔ ｔｏ ｍａｋｅ ｔｏ ／ｅｔｃ／ｉｓｓｕｅ ｈｅｒｅ ｏｒ ｙｏｕ ｗｉｌｌ ｌｏｓｅ ｔｈｅｍ ｗｈｅｎ ｙｏｕ 
+              ｒｅｂｏｏｔ． <br>
+              ＃ｅｃｈｏ ″″ ＞ ／ｅｔｃ／ｉｓｓｕｅ <br>
+              ＃ｅｃｈｏ ″＄Ｒ″ ＞＞ ／ｅｔｃ／ｉｓｓｕｅ <br>
+              ＃ｅｃｈｏ ″Ｋｅｒｎｅｌ ＄ｕｎａｍｅ －ｒ ｏｎ ＄ａ ＄ｕｎａｍｅ －ｍ″ ＞＞ ／ｅｔｃ／ｉｓｓｕｅ <br>
+              ＃ｃｐ －ｆ ／ｅｔｃ／ｉｓｓｕｅ ／ｅｔｃ／ｉｓｓｕｅ．ｎｅｔ <br>
+              ＃ｅｃｈｏ ＞＞ ／ｅｔｃ／ｉｓｓｕｅ <br>
+              步骤２：删除“／ｅｔｃ”目录下的文件“ｉｓｓｕｅ．ｎｅｔ”和文件“ｉｓｓｕｅ”。操作如下：<br>
+              ｒｏｏｔ＠ｋａｐｉｌ ／＃ ｒｍ －ｆ ／ｅｔｃ／ｉｓｓｕｅ<br>
+              ｒｏｏｔ＠ｋａｐｉｌ ／＃ ｒｍ －ｆ ／ｅｔｃ／ｉｓｓｕｅ．ｎｅｔ<br>
+              问：如何取消“Ｃｔｒｌ＋Ａｌｔ＋Ｄｅｌ”组合键的重开机功能？<br>
+              答：有时为了系统安全，我们可以取消经由“Ｃｔｒｌ＋Ａｌｔ＋Ｄｅｌ”键盘重开机的功能，你可以在／ｅｔｃ／ｉｎｉｔｔａｂ中加以设定，将“Ｃｔｒｌ＋Ａｌｔ＋Ｄｅｌ”组合键的重开机功能去除，设定如下：<br>
+              ＃ ｃａｃｔｒｌａｌｔｄｅｌ／ｓｂｉｎ／ｓｈｕｔｄｏｗｎ －ｔ３ －ｒｆ ｎｏｗ<br>
+              将此行用“＃”标示起来即可。最后，应执行如下命令来使变动生效：<br>
+              ／ｓｂｉｎ／ｉｎｉｔ ｑ <br>
+              问：不小心误删了／ｄｅｖ／ｘｘｘ怎么办？<br>
+              答：不用担心，／ｄｅｖ／下的设备文件是可以重建的，请用如下命令来重建即可：<br>
+              ｃｄ ／ｄｅｖ<br>
+              ．／ＭＡＫＥＤＥＶ ｘｘｘ<br>
+              问：Ｌｉｎｕｘ可使用多大的内存容量？<br>
+              答：大多数Ｌｉｎｕｘ的标准内核的缺省内存可用上限是６４ＭＢ。<br>
+              若要指定其它的可用内存容量上限，则你可在ＢＯＯＴ ｌｉｌｏ提示符下键入：<br>
+              ｍｅｍ＝ＸＸＭ<br>
+              或者在你的／ｅｔｃ／ｌｉｌｏ．ｃｏｎｆ文件中添加如下一行内容：<br>
+              ａｐｐｅｎｄ＝″ｍｅｍ＝ＸＸＭ″<br>
+              其中参数“ＸＸＭ”指定内存大小。单位是兆字节（ＭＢ）。比如：“１２８Ｍ”。<br>
+              如果在／ｅｔｃ／ｌｉｌｏ．ｃｏｎｆ中已有一个“ａｐｐｅｎｄ＝”指示配置，则你应将“ｍｅｍ＝”加在已有参数的后面，且要在前面的已有参数之后空一格。<br>
+              比如：ａｐｐｅｎｄ＝″ｐａｒｐｏｒｔ＝０ｘ３ｂｃｎｏｎｅ ｓｅｒｉａｌ＝０ｘ３ｆ８４ ｍｅｍ＝ＸＸＭ″　（此例仅供示范用）<br>
+              另外，你必须运行命令／ｓｂｉｎ／ｌｉｌｏ －ｖ以使新修改的配置生效。<br>
+              问：如何使Ｌｉｎｕｘ的ｓｗａｐ交换空间能超过１２８ＭＢ？<br>
+              答：创建几个ｓｗａｐ分区或ｓｗａｐ文件。Ｌｉｎｕｘ最多能支持１６ｓｗａｐ区，在核心版本２．１．１１７之前的Ｌｉｎｕｘ允许每个区最大１２８ＭＢ。而很老的Ｌｉｎｕｘ核心仅能支持的ｓｗａｐ分区大小为１６ＭＢ。目前的２．２．ＸＸ内核版本所容许的单一ｓｗａｐ空间为２ＧＢ。<br>
+              在Ａｌｐｈａ和Ｓｐａｒｃ６４机器上的Ｌｉｎｕｘ操作系统的页面机制中的页面大小是８ＫＢ，因此它支持的ｓｗａｐ分区最大可为５１２ＭＢ。而１２８ＭＢ的限制是对那些４ＫＢ页面而言的机器，因为ｓｗａｐ分区的最大值应等于页面大小×每个机器字的位数原因是它仅使用单个页面分配表）。（上海 
+              王屹）<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

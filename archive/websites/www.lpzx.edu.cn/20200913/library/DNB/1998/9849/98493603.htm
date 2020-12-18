@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">利用KV300+排除硬盘不能引导的故障<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　对于电脑使用者来说，可能经常会碰到由于突然停电、误操作或者是病毒感染而引起系统不能自举的现象。下面就结合笔者日前遇到的故障与解决办法，与同行商榷，仅供参考。<br>
+        　　故障现象：启动主机，发现硬盘不能引导，提示找不到操作系统，在A软驱中插入KV300＋盘重新引导，引导成功，出现DOS提示符A：\&gt;，转入C盘，提示：“无效驱动器指定”。<br>
+        　　故障分析与处理：由于A驱能够引导，说明硬件没有问题，可能是CMOS参数改动或者是硬盘主引导信息丢失。<br>
+        　　热启动主机并按DEL键，进入BIOS参数设置菜单，发现CMOS参数与原来的一样，这说明CMOS参数没有改动，退出设置。用KV300＋盘引导，进入A：\&gt;，键入KV300后回车，按F6键，查看硬盘0面0柱1扇区主引导信息是否正常。在主引导信息表中，没有发现代表主引导信息正常的第二、第三种关键代码：闪动的红色的“80”和“55AA”，按PgDn键翻页，在以后的扇区中发现了闪动的红色的“80”和“55AA”并响了一声，屏幕此时提示：“F9=Save 
+        To Side 0 Cglinder 0 Sector 1!!!”按一下F9键，就可将找到的硬盘主引导信息恢复到硬盘0面0柱1扇区中，按ESC键退出，重新引导主机，引导成功。<br>
+        　　注意：在做这件事前，必须利用KV300/B格式，将当前硬盘0面0柱1扇区的内容先备份到另一软盘上，防止一旦修复后系统不能自举，这时可用KV300中HDPT.DAT的方式将硬盘原来的状态恢复到硬盘中。<br>
+        　　利用KV300的诸多功能，冷静地进行分析、诊断，根据揭示和软件的说明帮助，一步一步地进行维修，可以解决由于掉电、误操作或病毒感染而引起的硬盘不能引导的现象。<br>
+        <br>
+        (湖南 郑剑)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月21日第49期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

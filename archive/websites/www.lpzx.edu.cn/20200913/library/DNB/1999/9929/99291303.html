@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VB实现窗口的弹出式菜单</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com/' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>29 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VB实现窗口的弹出式菜单</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VB实现窗口的弹出式菜单 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在Windows95、Windows98或NT的风格中，有按动鼠标器右键弹出下拉菜单的操作，在VB执行环境下，有一些控件本身具有弹下拉菜单的功能，如TexTbox控件等，但大多数编辑类控件以及窗体本身却没有此功能，要在窗口中任意位置实现PopUpMenu（弹出式菜单），可借助VB的菜单工具来实现。<br>
+　　首先，打开VB的“工具”菜单条，利用“菜单编辑器”为窗体生成一个菜单：<br>
+　　标题(Caption)     菜单条名(Name)<br>
+　　编辑                   menuEdit<br>
+　　……复制             mnuCopy<br>
+　　……剪切              munCut<br>
+　　其次，将生成的menuEdit菜单设置为不可视。<br>
+　　Private Sub Form_Load()<br>
+　　Me.menuEdit.Visibe=False    <br>
+　　′menuEdit菜单设置为不可视<br>
+　　End Sub<br>
+　　然后，利用MouseDown事件实现任意位置弹出PopUpMenu，如下例：<br>
+　　本例中以RichTexBox控件为例，在其上面实现复制、剪切功能。<br>
+　　1．复制功能的实现。<br>
+　　Private Sub MnuCopy_Click()<br>
+　　Clipboar.Clear′将剪贴板清空<br>
+　　′将RichTexBox控件上选择上的内容复制到剪贴板<br>
+　　Clipboard.SetTextRichTexBox1.SelText<br>
+　　End   Sub<br>
+　　2．剪切功能的实现。<br>
+　　Private Sub MnuCut_Click()<br>
+　　Clipboard.Clear   ′将剪贴板清空<br>
+　　′将RichTextBox控件上选择了的内容复制到剪贴板<br>
+　　Clipboard.SetTextRichBox1.SelText<br>
+　　′将RichTexBox控件上选择了的内容删除<br>
+　　SendKeys″{DELETE}″,True<br>
+　　End Sub<br>
+　　3．在RichTexBox控件的MouseDown事件中实现任意位置弹出PopUPMenu。<br>
+　　OPrivate Sub RichTexBox1_MouseDown(Button As Integer,Shift As Integer,x As Single,Y As Single)<br>
+　　Dim MnuFile AS Menu     ′声明一个菜单类型的变量<br>
+　　Set munFile=Me.MenuEdit ′将MenuEdit赋给菜单变量<br>
+　　if Button=2 Then  ′判断是否按动鼠标器右键<br>
+　　′判断RichTexBox控件上选择了的内容是否存在，决定复制、剪切菜单条是否可操作。<br>
+　　If Len(RichTexBox.Text)=0 Or Len(RichTexBox.SelText)=0 Then<br>
+　　mnuCopy.Enabled=Flase   ′复制菜单条不可操作。<br>
+　　nmuCut.Enabled=False    ′剪切菜单条不可操作。<br>
+　　nmuCopy.Enabled=True    ′复制菜单条可操作。<br>
+　　nmuCut.Enabled=True     ′剪切菜单条可操作。<br>
+　　End IF<br>
+　　PopupMenu mnuFile ′弹出PopUpMenu。<br>
+　　End If<br>
+　　End Sub<br>
+　　这样，在VB执行环境中，操作窗体上的RichTexBox控件，按动鼠标器右键就可弹出下拉菜单，实现复制、剪切功能。<br>
+<b>(宁夏   王晓东)</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/29/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99291303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

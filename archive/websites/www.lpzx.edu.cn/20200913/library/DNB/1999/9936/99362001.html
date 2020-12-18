@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 小影霸Riva128ZX换脑记</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 小影霸Riva128ZX换脑记</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 小影霸Riva128ZX换脑记 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　我的爱“机”是去年暑假攒的：K6－233，磐英EP51MVP3E－M主板，64MB内存，“帝盟 Viper V330”显卡。很多DIYer看了肯定会说，这么落伍的配置有什么好介绍的。别急，你看清楚了，我的“帝盟Viper V330”可是带引号的，如果把这引号给去掉，“帝盟Viper V330”可就变成了小影霸Riva128ZX。这其中的奥妙，且听我慢慢道来。<br>
+　　我的显卡本来是小影霸AGP－300S，用的是Riva128ZX芯片，内建8MB显存，性能一般。前一段时间报纸杂志上经常出现显卡“换脑”的介绍，也就是将低档显卡的BIOS换成使用相同显示芯片的名牌显卡的BIOS，然后就可以使用名牌显卡的驱动程序，因为名牌产品的专用优化驱动程序更能发掘硬件的潜力，比之小厂采用的公版驱动程序有更高的性能。看了多篇有关介绍后，我动心了，原来除了可以把赛扬300A超到450MHz用以外，还有这么好的事情可以DIY。于是四处收集使用Riva128ZX芯片的名牌显卡BIOS，挨个儿往我的小影霸脑子里灌，可每次都得到相同的结果：“Supported Page Mode EEPROM not found”BIOS内容根本无法写入。又查了许多资料才知道，使用Riva128/ZX芯片的显卡BIOS公用刷新程序为Nv3flash.exe,它支持刷新的芯片有：<br>
+　　SST 29EE512               Atmel 29C512<br>
+　　SST 29LE512               Atmel 29LV512<br>
+　　SST 29LE010               Atmel 29LV010A <br>
+　　而小影霸的BIOS芯片主要有Mxic、SST和Atmel三种，我的显卡上的BIOS芯片是Atmel的，编号为AT27C512R，不在支持范围内。刷不了也没辙儿，只好老老实实用着和公板驱动程序没什么两样的小影霸“专用驱动程序”。<br>
+　　不久前一个朋友升级旧机，邀请我去电脑城选购配件。我们来到一家电脑公司，选了几样东西，正和老板砍价，无意中看到一台可编程芯片擦写器，脑子里突发奇想：用这玩意儿能不能刷新我的显卡BIOS呢？于是便向老板询问了这台擦写器的功能，原来老板买这台机器主要是用来修复主板BIOS并做一些芯片编程用的，前一段时间CIH病毒流行，老板可是用它赚了不少人民币的。有了它，给我的显卡“换脑”就又有了一线希望。<br>
+　　有一线希望就不能轻易放弃，跟老板商量好后，我立刻取来了显卡和帝盟Viper V330（8MB）的1.82版BIOS，帝盟的性能大家都知道，选择它的BIOS当然没错。先用芯片起拔器小心翼翼地将BIOS芯片从插座上取下，插在擦写器上。接着先把原来BIOS中的内容进行备份，因为如果“换脑”失败，还要把原来的BIOS写回去。可在写入BIOS内容时麻烦来了，BIOS内容还是无法写入！试了几遍总是“FAILURE”，老板把这块芯片拿起来端详了好半天，得出一个结论：这块芯片是一次性烧录的，没法儿刷新！这个好办，另找一块相同规格的可擦写芯片就行了，因为这芯片只是一个存储器，最主要的是其中的内容，于是便找了一块和它差不多的芯片，插上一试，可以写！立马把帝盟的BIOS刷了进去。将新的BIOS芯片插回到显卡上，找到一台机器，装上了这块“帝盟 Viper V330”。开机启动，几秒钟后，屏幕上显示出了我梦寐以求的几行字符：<br>
+　　Diamond Multimedia Viper V330 8M BIOS－Vision 1.82B<br>
+　　SGRAM Size:8.00MB<br>
+　　OK！自检通过。可这还不算完，必须要能正常使用才行。接着进入Win98，屏幕变成了16色，提示找到新硬件，等驱动安装完毕后，安装帝盟的驱动程序vpr0130.exe，一切顺利，重新启动，屏幕恢复正常，查看“系统”→“显示适配器”变成了“Diamond Viper V330(8MB)”。用右键点击桌面，快捷菜单里多出了好多东西，这是帝盟显卡带的一个应用程序“InControl Tools 98”，帝盟的东西的确不一样，界面做得非常漂亮，可以很方便地调节分辨率、颜色数、开始菜单，定义快捷键等等。接着运行了Photoshop、3D Studio Max、AutoCAD等几个大型软件，也很正常，未出现问题。又连续玩了几个小时的FIFA99，极品飞车III，感觉也不错。“换脑”的梦想终于成为了现实。<br>
+　　以上就是本人给显卡“换脑”的过程，由于条件限制，这种方法的通用性还不敢保证（显卡烧了可别骂我），希望我的经历能给大家一点小小启发。<br>
+<b>(湖北　杨)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99362001.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

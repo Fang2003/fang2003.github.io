@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Excel中自动填充计算表格项<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        利用Excel制作电子表格时，有时需要用到计算填充功能，如图所示表中，F列每种元件的价格合计，就是由E列元件单价乘以D列元件数量得来的。通过分析，发现利用Excel97提供的VBA(VisualBasicforApplication)功能，写几行Basic代码即可方便地达到自动填充F列数据的目的，且计算结果为纯数据值，可以自由进行处理。具体实现步骤如下：<br>
+        &nbsp;&nbsp;&nbsp; 1建立Excel工作表，分别填入其它相应的数据，包括E列元件的单价和D列元件数量。<br>
+        &nbsp;&nbsp;&nbsp; 2点击“视图”→“工具栏”→“VisualBasic”→VB控件工具箱。<br>
+        &nbsp;&nbsp;&nbsp; 3在整个工作表的底部或适当的位置放置控制按钮“CommandButton1”。<br>
+        &nbsp;&nbsp;&nbsp; 4双击控制按钮，加入语句：<br>
+        &nbsp;&nbsp;&nbsp; PrivateSubCommandButton1_Click()<br>
+        &nbsp;&nbsp;&nbsp; DimiAsInteger’自动填充的行号<br>
+        &nbsp;&nbsp;&nbsp; DimrandAsString’工作表D列的范围参数<br>
+        &nbsp;&nbsp;&nbsp; DimraneAsString’工作表E列的范围参数<br>
+        &nbsp;&nbsp;&nbsp; DimranfAsString’工作表F列的范围参数<br>
+        &nbsp;&nbsp;&nbsp; Fori=2To12’12为本例中给出的填充结果行号，可由使用者自己设定’该循环主要完成工作表F列计算表格的自动填充 
+        &nbsp;&nbsp; <br>
+        &nbsp;&nbsp;&nbsp; rand=″D″＋CStr(i)<br>
+        &nbsp;&nbsp;&nbsp; rane=″E″＋CStr(i)<br>
+        &nbsp;&nbsp;&nbsp; ranf=″F″＋CStr(i)<br>
+        &nbsp;&nbsp;&nbsp; Worksheets(″Sheet1″).Range(ranf)=Worksheets(″Sheet1″).Range(rand)＊Worksheets(″Sheet1″).Range(rane)NextiEndSub<br>
+        &nbsp;&nbsp;&nbsp; 5按执行键，就可达到设计要求的计算表格项的自动填充，且填充结果为纯数据。<br>
+        &nbsp;&nbsp;&nbsp; Excel97提供了VBA功能，使我们可以根据需要对其进行适当的二次开发，仔细研究其用法，会使制作电子表格的工作更加轻松。(江苏 
+        王彪 沈冬详)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<html><!-- #BeginTemplate "/Templates/internet.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>TCP/IPF协议配置不当网络故障一例</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0118/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0118/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+        <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->TCP/IPF协议配置不当网络故障一例<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->笔者在近期的一个对等网组网实例中，遇到了因TCP/IP配置不当而引起网络不能正常通信的故障，现将检修网络、排除故障的方法步骤与心得体会叙述如下，供大家参考。<br>
+              该网络为WINDOWS对等网络，一共四台计算机。均采用WINDOWS 98操作系统，装载TCP /IP协议，手动指定IP地址，从 
+              192.168.0.1～192.168.0.4 ，所有计算机都采用默认的子网掩码“25<br>
+              5.255.255.0”，均<br>
+              设在同一个工作组“WOR-<br>
+              KGROUPS”中。四台计算机硬件配置基本相同，均采用REALTEK RTL8029双口网卡(PCI)，并用细缆相连。故障表现为，计算机互连以后，在“网上邻居”中可看到自己，但看不到其它计算机；计算机与计算机彼此之间不能通信。<br>
+              笔者采用了缩小范围，逐步排错的方法。首先在计算机中可看到自己，说明TCP/IP安装无误。为了证实这一点，笔者随意选取一台计算机，其IP地址为192.168.0.3，用Windows 
+              98自带的ping程序，在MS-DOS提示符下，键入ping 192.168.<br>
+              0.3得到：<br>
+              Ping 192.168.0.3 with 32 bytes of data <br>
+              Reply from 192.168.0.3  byte=32 time= 1 ms TTL=127<br>
+              Reply from 192.168.0.3  byte=32 time= 1 ms TTL=127<br>
+              Reply from 192.168.0.3  byte=32 time= 1 ms TTL=127<br>
+              Reply from 192.168.0.3  byte=32 time= 1 ms TTL=127<br>
+              Ping statistics for 192.168.0.3 <br>
+              Packets Sent = 4 Received = 4Lost = 0 (0% loss )，<br>
+              Approximate round trip times in milli - seconds ：<br>
+              Mininmum = 0ms Maximum = 1ms Average = 0ms<br>
+              以上返回了四个数据包(Reply from……)，其中byte=32表示测试中发送的数据包大小为32个字节，time&lt;10ms表示数据包往返一次所用的时间小于10ms，表示当前测试使用的TTL(TIME 
+              TO LIVE)值为127(系统默认值)。<br>
+              其次，检测计算机的网卡配置与传输介质。右键单击 “我的电脑”，选取“属性”，在“设备管理器”中选取“网络适配器”，展开，可以看见所有分支均运行正常，没有黄色惊叹号。在本例中，由于REALTEK 
+              RTL8029双口网卡为Windows 98即插即用的网卡，所以出问题的可能性不大(若为其它品牌，还需用网卡自带的驱动盘中的配置程序来检测网卡的中断口和输入输出请求范围)。<br>
+              对于传输介质细缆的检测，可用万用表测量BNC连接器的电阻值，笔者为了方便起见，采用了简便的办法。将四台计算机装载NETBEUI协议后连网。因NETBEUI协议不需配置，直接安装就可使用。若是传输介质细缆的故障，则计算机与计算机之间必不能通信。结果装载了N<br>
+              ETBE-<br>
+              UI协议后，网络工作正常，在“网上邻居”中可看到自己，也可看到其它的计算机，在任意两台计算机之间可传输文件。<br>
+              排除了以上因素，则可认为是TCP/IP配置不当而引起网络不能正常通信的可能性最大。右键单击“网上邻居”，选取“属性”，在“配置”中逐项检查。在网卡已确定绑定了TCP/IP协议后，笔者注意到了“TCP/IP→拨号适配器”一项，这个“拨号适配器”是什么呢？在“开始”中选取“运行”，键入“WINIPCFG”在“IP配置”中找到“Ethernet适配器”，发现除了“REALTEK 
+              RTL8029 (AS)Ethernet Adapter”之外，还有一项“PPP Adapter”PPP指的是端对端协议，这是远程访问网络时必需的。笔者这才明白“TCP/IP→拨号适配器”指的是平时我们用来拨号上网的Modem绑定了TCP/IP协议，即使计算机没有装Modem，只要安装了“拨号网络”，就会出现“TCP/IP→拨号适配器”，选取其“属性”，看到警告，单击确定后查看其属性，发现它也被手动指定了IP地址，我们知道PPP适配器的IP地址由远程服务器自动分配。在局域网中更无须配置，若强行指定其IP地址必会引起网络故障，于是将“IP地址”改为“自动获取IP地址”，其余选项全为默认值。单击确定后重启计算机，网络故障排除。<br>
+              最后要提醒大家注意的是，在Windows 98中，“TCP/IP→REALTEK RTL8029(AS)Ethernet Adapter”与“TCP/IP→拨号适配器”的“属性”对话框几乎完全一样，区别仅在于“TCP/IP→拨号适配器”有一个警告，设置时不要弄混，记住只须配置“TCP 
+              /IP→REALTEK RTL8029(AS)Ethernet Adapter”即可，而“TCP/IP→拨号适配器”采用系统默认值。<br>
+              由此例我们可看到，即使是一个简单的对等网，TCP/IP的配置也不能不仔细对待。除了要切实弄明白TCP/IP各项参数的含义外，更要对W-<br>
+              INDOWS系统相对应其的选项有所了解。排除故障时除了上述的几步外，若是基于Windows NT组建的 CLIENT/SEVER 
+              型网络，还需对网关，DNS配置，WINS配置作进一步检查。欢迎大家来信讨论，我的E-mail :jhrte@yeah.net<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

@@ -1,0 +1,177 @@
+#VRML V1.0 ascii
+# 笛卡尔坐标系
+Separator{ # Y轴和箭头
+Material{
+diffuseColor 1 0 0
+}
+Sphere{}
+Translation{
+translation 0 40 0
+}
+Cylinder{
+height 80
+radius 1
+}
+Translation{
+translation 0 40 0
+}
+Cone{
+bottomRadius 2
+height 4
+}
+Translation{
+translation 0 2 0
+}
+AsciiText{
+string "y"
+} 
+}
+Separator{ # X轴
+
+DEF Blue Material{
+diffuseColor 0 0 1
+}
+Translation{
+translation 40 0 0
+}
+Rotation{
+rotation 0 0 1 4.71223897
+}
+Cylinder{
+radius 1
+height 80
+}
+}
+Separator{ # X轴的箭头
+USE Blue
+Translation{
+translation 80 0 0
+}
+Rotation{
+rotation 0 0 1 4.71223897
+}
+Cone{
+bottomRadius 2
+height 4
+}
+Rotation {
+rotation 0 0 1 -4.71223897
+}
+AsciiText{
+string "x"
+}
+}
+Separator{ # Z轴
+DEF Green Material{
+diffuseColor 0 1 0
+}
+Translation{
+translation 0 0 40
+}
+Rotation{
+rotation 1 0 0 1.57074637
+}
+Cylinder{
+radius 1
+height 80
+}
+}
+Separator{ # Z轴的箭头
+USE Green
+Translation{
+translation  0 0 80
+}
+Rotation{
+rotation 1 0 0 1.57074637
+}
+Cone{
+bottomRadius 2
+height 4
+}
+Rotation{
+rotation 1 0 0 -1.57074637
+}
+AsciiText{
+string "z"
+}
+}
+# 五个原子
+Separator{
+DEF AtomC Sphere{ # 白色C原子
+radius 40
+}
+DEF Yellow Material{ # H原子颜色
+diffuseColor 1 1 0
+}
+Translation{ # H(1)
+translation 0 40 0
+}
+DEF AtomH Sphere{
+radius 30
+}
+}
+Separator{ # H(2)
+Translation{
+translation 0 -13.35227437 -37.70565964
+}
+USE Yellow
+USE AtomH
+}
+Separator{ # H(3)
+Translation{
+translation -34.65405912 -13.35227437 18.85282982 # X轴+2校正误差
+}
+USE Yellow
+USE AtomH
+}
+Separator{ # H(4)
+Translation{
+translation 34.65405912 -13.35227437 18.85282982 # X轴+2校正误差
+}
+USE Yellow
+USE AtomH
+}
+# 四个化学键
+Separator{ # 键(1)
+DEF Purple Material{
+diffuseColor 1 0 1
+}
+Translation{
+translation 0 20 0
+}
+DEF Bond Cylinder{
+radius 3
+height 40
+}
+}
+Separator{ # 键(2)
+Translation{
+translation 0 -6.67613719 -18.85282982
+}
+Rotation{
+rotation 1 0 0 -1.911135531
+}
+USE Purple
+USE Bond
+}
+Separator{ # 键(3)
+Translation{
+translation -22.32702956 -6.67613719 10.85282982 
+}
+Rotation{
+rotation 8.1635147794 0 18.85282982 1.911135531
+}
+USE Purple
+USE Bond
+}
+Separator{ # 键(4)
+Translation{
+translation 22.32702956 -6.67613719 10.85282982
+}
+Rotation{
+rotation -8.1635147794 0 18.85282982 -1.911135531
+}
+USE Purple
+USE Bond
+}
+#model1.wrl

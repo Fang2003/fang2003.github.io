@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>一个获取颜色分量值的VB程序</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp;&nbsp;&nbsp; 在开发应用软件时，常常需要对一些图形、区域、字符等设置一种恰当的颜色，使用户界面更加美观。有时因系统提供的颜色种类不能满足设计者的需要，就需调用RGB（）函数来完成设计要求，但红、绿、蓝三种颜色分量值各设置多少才能符合需要呢？显然靠估计需要一遍遍的调试程序，很麻烦，为此笔者用VB5编制了一个获取颜色分量值的程序，为软件设计者准确选取颜色值提供了一个方便简捷的途径。下面介绍实现步骤：<br>
+        　　步骤一：启动VB5，新建一窗体，取默认名称Form1，设置属性为“获取颜色分量值”。<br>
+        　　步骤二：在窗体正上方创建一个标签Label1，名称设置为ColorLabel，Caption设置为空，BorderStyle设置为1。<br>
+        　　步骤三：连续创建三个文本框，调整大小和位置，使它们按水平方向均匀排列在标签下方，名称分别为RedText、GreenText和BlueText，Caption属性都设为空。<br>
+        　　步骤四：连续创建三个水平滚动条，调整大小和位置，使它们按水平方向均匀排列在三个文本框相对应的正下方，名称分别为RedHScroll、GreenHScroll和BlueHScroll，Max属性都设为255，Min属性都设为0，SmallChang属性都设为1，LargeChange属性都设为10。<br>
+        　　步骤五：在窗体模块Form1frm中填入下列代码：<br>
+        　　Private Sub Form_ Load()<br>
+        　　RedHScroll.Value=192<br>
+        　　GreenHScroll.Value=192<br>
+        　　BlueHScroll.Value=192<br>
+        　　ColorLabel.BackColor=RGB(192,192,192)<br>
+        　　End Sub<br>
+        　　Private Sub BlueHScroll_ Change()<br>
+        　　ChangeColor<br>
+        　　BlueText.Text=″B=″＋CStr(BlueHScroll.Value)<br>
+        　　End Sub<br>
+        　　Private Sub GreenHScroll_ Change()<br>
+        　　ChangeColor<br>
+        　　GreenText.Text=″G=″＋CStr(GreenHScroll.Value)<br>
+        　　End Sub<br>
+        　　Private Sub RedHScroll_Change()<br>
+        　　ChangeColor<br>
+        　　RedText.Text=″R=″＋CStr(RedHScroll.Value)<br>
+        　　End Sub<br>
+        　　Private Sub ChangeColor()<br>
+        　　ColorLabel.BackColor=RGB(RedHScroll.Value,GreenHScroll.Value,BlueHScroll.Value)<br>
+        　　End Sub<br>
+        　　本程序运行后，调节R、G、B三个滚动条，当标签区域显示的颜色达到所需值时，三个文本框中数值即为红、绿、蓝颜色分量值。　　<strong>(山西　元晋豫)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月29日第25期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

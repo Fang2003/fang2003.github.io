@@ -1,0 +1,171 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>在Delphi编程中使用Excel</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{在Delphi编程中使用Excel}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 在数据库应用软件的开发过程中，经常需要把数据转换成Excel文件，让用户做进一步的数据处理。而Delphi是开发数据库应用系统的常用工具，如何在Delphi中操作Excel呢﹖<br>
+              在Microsoft Office软件中有一种内嵌的编程语言，即VBA，它是VB的子集。利用它你可以编写出功能强大的代码，如打开文件、修改数据、保存数据、设置字体等（关于Excel中的VBA编程方法、Excel对象属性、方法说明可以在Office的安装目录下的VBAXL8.hlp帮助文件中找到）。另一方面，Microsoft 
+              Office软件中的宏能以VBA代码的形式记录下你的操作过程。因此借助宏操作可以很轻松地实现某一功能，并把这些代码稍作修改嵌入到你的软件中。但是VBA的一个缺点是：它必须在Microsoft 
+              Office平台上才能运行。因此，只有把VBA代码嵌入到Delphi中，才能实现用Delphi操作Excel。<br>
+              下面举例说明这种调用方法。<br>
+              Unit excel<br>
+              interface<br>
+              uses<br>
+              Windows MessagesSysUtilsClasses Graphics<br>
+              ControlsFormsDialogsStdCtrlsComObjComObj是操作OLE对象的函数集type TForm1＝<br>
+              classTForm<br>
+              Button1 TButton<br>
+              procedure Button1ClickSenderTObject<br>
+              private<br>
+               Private declarations <br>
+              public<br>
+               Public declarations <br>
+              end<br>
+              var<br>
+              Form1TForm1<br>
+              implementation<br>
+              ＄R .DFM<br>
+              procedure TForm1.Button1ClickSender TObject<br>
+              var<br>
+              eclAppWorkBookVariant声明为OLE Automation 对象 <br>
+              xlsFileNamestringbegin<br>
+              xlsFileName＝＇ex.xls＇<br>
+              try<br>
+              创建OLE对象Excel Application与 WorkBook<br>
+              eclApp＝CreateOleObject＇Excel.Application＇<br>
+              WorkBook＝CreateOleobject＇Excel.Sheet＇<br>
+              except<br>
+              ShowMessage＇您的机器里未安装Microsoft Excel.＇<br>
+              Exit<br>
+              end<br>
+              try<br>
+              ShowMessage＇下面演示新建一个XLS文件，并写入数据，最后关闭它＇<br>
+              workBook＝eclApp.workBooks.Add<br>
+              eclApp.Cells1  1＝＇字符型＇<br>
+              eclApp.Cells2  1＝＇Excel文件＇<br>
+              eclApp.Cells1  2＝＇Money型＇<br>
+              eclApp.Cells2  2＝10.01<br>
+              eclApp.Cells1  3＝＇日期型＇eclApp.Cells2  3＝Date<br>
+              WorkBook.saveasxlsFileName<br>
+              WorkBook.close<br>
+              ShowMessage＇下面演示，打开刚创建的XLS文件并修改其中的内容。然后，由用户决定是否保存。＇<br>
+              WorkBook＝eclApp.workBooks.OpenxlsFileName<br>
+              eclApp.Cells2 1＝＇Excel文件类型＇<br>
+              if MessageDlgxlsFileName+＇文件已被修改,是否保存﹖＇mtConfirmationmbYesmbNo 
+              0＝ mrYes then<br>
+              WorkBook.save<br>
+              else<br>
+              workBook.Saved ＝ True放弃修改<br>
+              WorkBook.Close<br>
+              eclApp.Quit//退出Excel Application<br>
+              释放VARIANT变量<br>
+              eclApp＝Unassigned<br>
+              except<br>
+              ShowMessage＇不能正确操作Excel文件。可能是该文件已被其他程序打开，或系统错误＇<br>
+              WorkBook.close<br>
+              eclApp.Quit<br>
+              释放VARIANT变量<br>
+              eclApp＝Unassigned<br>
+              end<br>
+              end<br>
+              end.<br>
+              了解上述操作过程后，我们可以很容易地将数据库中的数据转换成Excel文件了。 }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

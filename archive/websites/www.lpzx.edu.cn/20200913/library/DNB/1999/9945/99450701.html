@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 病素信箱</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>综合报道</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>45 期</A> &gt;  <A HREF='wrapup.html'>综合报道</A> &gt; 病素信箱</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 病素信箱 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><b>Q:</b>听说宏病毒是很厉害的病毒，可以介绍关于宏病毒的情况吗?<br>
+<b>A:</b>宏病毒与传统的病毒有很大不同。它不感染.EXE、.COM等可执行文件，而是将病毒代码以“宏”的形式潜伏在Microsoft Office文件中，当采用Office软件打开这些染毒文件时，这些代码就会被执行并产生破坏作用。由于“宏”是使用Visual Basic For Application这样的高级语言编写的，因此其编写过程相对比较简单，而功能又十分强大。随着微软Office软件在全世界范围内的不断普及，宏病毒成为了传播最广泛，危害最大的一类病毒。<br>
+　　让我们来看看Word的工作过程。为了使Word更易使用，微软在Word中集成了许多模板，如典雅型传真、报告、通讯录模板等。这些模板不仅包含了相应类型文档的一般格式，而且还允许用户在模块内添加宏，以使用户在制作自己的特定格式文件时，减少重复劳动。在所有这些模板中，最常用的就是Normal.dot模板(通用模板)，它是启动Word时载入的缺省模板。任何一个Word文件，其背后都有相应的模板，我们打开或建立大多数Word文档时，系统都会自动装入Normal.dot模板并执行其中的宏。Word打开文件时，它首先要检查文件内包含的宏是否有自动执行的宏(AutoOpen宏)存在，假如有这样的宏，Word就启动它。当然，如果Auto Close宏存在，则系统在关闭一个文件时会自动执行它。通常，Word宏病毒至少会包含一个以上的自动宏，当Word运行这类自动宏时，实际上就是在运行病毒代码。宏病毒的内部都具有把带病毒的宏移植(复制)到通用宏的代码段，也就是说当病毒代码被执行过后，它就会将自身复制到通用宏集合内。当Word系统退出时，它会自动地把所有通用宏(当然也包括传染进来的病毒宏)保存到模板文件中(通常是Normal.dot模板)。这样，一旦Word系统遭受感染，则以后每当系统进行初始化时，系统都会随着Normal.dot的装入而成为带毒的Word系统，继而在打开和创建任何文档时感染该文档。<br>
+　　感染Normal.dot模板是宏病毒的最常用传染方式。此外，与系统启动相类似，Word在启动过程中会自动执行C盘根目录下名为Autoeec.dot文档中包含的宏和&lt;dir&gt;\office\startup(&lt;dir&gt;是指Word的安装目录)目录内的模板文件所包含的宏，有些病毒通过这两个“突破口”感染Word系统，使每次启动后的Word都成为带毒环境。<br>
+<b>Q:</b>那怎样防御宏病毒呢?<br>
+<b>A:</b>防御宏病毒的根本，在于打开Word文档时禁止所有自动宏(以Auto开头的宏)的执行。由于宏病毒的肆虐，微软公司在Word 97版本中提供了此项功能，用户只需将其激活即可。方法是：单击工具菜单下的“选项”，在随后出现的选项卡中选择“常规”选项卡，用鼠标勾选“宏病毒防护”选项，这样Word就有了防止“自动宏”执行的功能，如果打开的文件带有“自动宏”。Word 97将自动弹出宏警告对话框，来让用户选择是否执行该宏。如果选择了“取消宏”，那个这个Word文档将用只读形式打开，其内含的所有宏都没有执行。这个方法在理论上能防止所有宏病毒的侵袭，但它有两个很大的缺陷：一是它拒绝了所有宏的执行，包括正常宏和病毒宏，这会造成某些文档在打开时出现错误。二是宏病毒防护无法阻止启动Word时Autoexec.dot中的宏和Normal.dot中的宏的自动执行。也就是说，一旦你的Word被宏病毒感染过了，生成了带毒的Autoexec.dot或Normal.dot，那么宏病毒防护也就没有任何作用了。基于以上原因，用户千万不可认为拥有宏病毒防护这一屏障就能高枕无忧了，选择优秀的反病毒软件才是解决问题的根本。</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99450701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

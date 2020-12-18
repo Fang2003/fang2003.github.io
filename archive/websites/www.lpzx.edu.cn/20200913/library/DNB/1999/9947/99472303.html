@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- RESET开关引起的不自检故障</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>47 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; RESET开关引起的不自检故障</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 RESET开关引起的不自检故障 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一台兼容机，配置为：AMD5X86－133、32M内存、430M硬盘、9440 PCI显卡。国庆假期后第一次开机即告失败，表现为屏幕闪亮一下后即黑屏，听不到自检声音。<br>
+　　因无自检声音，且该机主板为1995年出厂的(品牌不详)，故估计是主板有故障，但因有事耽搁，未作详查。这期间，机主将此机交付一公司修理。结论是主板、内存、显卡全部正常，但硬盘损坏，需换硬盘。机器未作进一步修理即抱回。<br>
+　　好好的硬盘不至于那么脆弱说坏就坏，且即使坏掉，也不该没有开机自检过程，屏幕也不该无显示。于是将此机硬盘取下，装于另一台安装有Win98的好机器中，设为从盘，在纯DOS环境下进行了格式化并安装系统。格式化过程中无任何停顿，格式化完后也显示无任何坏区。改作主盘后引导系统也完全正常，这证明硬盘正常。<br>
+　　将硬盘装回原机，开机后，故障现象依旧。经电话询问修理人员后得知，是将主板、内存、显卡从机箱中取出测试的，的确能引导系统，但进不了硬盘，因此就将检查重点放在了硬盘上。修理人员又说，如将主板、内存、显卡装回机箱，系统就不能引导，怀疑主板接触上还有问题。为彻底查出问题，照样将主板等从机箱中取出，保留最小系统，开机，但故障现象依旧。后偶然按动面板上的复位(RESET)开关，发现此开关已被卡死，不能弹出。<br>
+　　这下恍然大悟：在国庆节后开机时，RESET开关被误作电源开关按下，由于机箱质量问题，导致RESET开关卡死。再开电源开关时，由于RESET卡死，就使机器在还没来得及自检时，又重新开机，一下子陷入了“开机——复位——开机——复位”的死循环中。而修理公司在将主板等取出机箱时，拔出了主板上的RESET、硬盘灯等开关的插线块，使RESET开关断开，故能正常引导系统。装回机箱后，由于插上了RESET插线块，而又使机器陷入了死循环中。笔者取出主板等部件时，因图省事，且连线又够长，故未拔掉那些插线块，因RESET处于接通状态，故机器仍陷入死循环中，不能启动。<br>
+　　找到原因后，拔掉主板上的RESET接线块，开机，自检过程终于又出来了。但在应该出现“Starting Windows98”的提示信息时，却出现一些乱字符，之后死机。改用软盘引导，正常，并能识别硬盘。因为此硬盘已证明可正常引导，故考虑可能是CMOS设置出现问题。进入CMOS设置中查看后，并未发现什么问题。后偶然(又是偶然)发现，在硬盘参数中，标示的容量虽是正确的，但其工作模式却是“LBA”模式。小小的430M的硬盘，哪里需要什么“LBA”模式呢!问题肯定出在这里。进入“IDE HDD AUTO DETECTION”项中，检测出的第一主盘参数有两项，排在第一的为“LBA”模式，排第二为“NORMAL”模式。选中“NORMAL”一项，保存设置并退出后，机器重新启动，一切正常。看来，是硬盘参数被改动，而维修公司在使用主板的“IDE HDD AUTO DETECTION”功能时，又未细想即敲回车键，然后随手在检出的两个参数中选择了第一个。由于参数设置不正确，不能正常使用，而使修理人员误认为是硬盘损坏。回想在另一台机器上可正常引导系统，是因为在CMOS设置中，未用“IDE HDD AUTO DETECTION”检测硬盘参数，而是直接在“标准CMOS设置”中的硬盘参数项中设为“AUTO”。<br>
+　　此次检修，证明最小系统法仍是最有效的检修方法，只是这“最小系统”还应“最小”得更彻底，甚至包括去掉主板上的诸如RESET、喇叭等等插线块,此其一，其二，不能迷信主板的自动检测硬盘参数的功能，在测出的几个参数中，还得小心选择，以防出错。<br><b>(重庆　余涛)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99472303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

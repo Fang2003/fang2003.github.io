@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="2.jpg">
+<table width="554" border="0" cellspacing="0" cellpadding="0" height="688" bordercolor="#FF0033">
+  <tr> 
+    <td width="498" height="61" bgcolor="#FFFFFF"><img src="xian.gif" width="498" height="24"></td>
+    <td width="56" height="61"><img src="angle.gif" width="70" height="60"></td>
+  </tr>
+  <tr> 
+    <td width="498" align="left" valign="top" height="29"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:116px; height:111px; z-index:1; left: -100px; top: 33px; overflow: hidden"><font color="#0000FF"><b><img src="book.gif" width="84" height="75" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"> 
+          <p><font color="#FF3333"><b class="mdd6">奥 林 匹 克 格 言</b></font></p>
+        </div>
+      </div>
+    </td>
+    <td width="56" align="center" valign="middle" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="498" align="left" valign="top" height="392"> 
+      <p>　　<span class="mdd7">“更快！更高！更强！”--奥林匹克格言。<br>
+        　　从奥运会复兴到现在，“更快！更高！更强！”成为体育运动爱好者的座右铭。近百年来，人们为此而在运动场上勇敢拼搏。这是顾拜旦的一位密友迪东(Henri 
+        Martin Didon)于1895年提出的，1913年获国际奥委会批准，1920年成为奥林匹克标志的一部分。<br>
+        　　“更快！更高！更强！”不仅只是指运动成绩，它有更深的含义，它希望运动员有更高的境界，有勇往直前、不断进击的精神。此外还有把“体育就是和平”、“重要的不是胜利，是参加！”作为格言的。第六次国际奥林匹克代表大会又通过把“更快！更高！更强！”口号作为国际奥委会会徽的构成部分。</span><br>
+        　　<br>
+        　　　　　　　　　　<b><font color="#FF3333" class="mdd6">奥　林　匹　克　旗　帜</font></b><br>
+        <br>
+        　　<span class="mdd7">国际奥委会有自己的会旗。旗为白底无边中央有五个相互套连的圆环，即我们听说的奥林匹克环，环的颜色从左至右为天蓝、黄、黑、绿、红(也可用单色绘制)，系顾拜旦以它们能概括会员国国旗的颜色而选定，但以后对这五种颜色又有其他解释。1979年国际奥委会出版的《奥林匹克评论》(第四十期)强调，会旗和五环旗的含义是“象征五大洲的团结，全世界的运动员以公正、坦率的比赛和友好的精神，在奥运会上相见。 
+        国际奥委会会旗系1913年根据顾拜旦的构思而设计制作的。　　　1914年庆祝现代奥林匹克运动恢复20周年，在巴黎举行的奥林匹克代表大会上首次升起。1920年安特卫普奥运会时，比利时国家奥委会绣了同样一面锦旗在当届奥运会上升起，会后比利时将它赠给了国际奥委会并成为国际奥委会的正式会旗。历届奥运会开幕式上都有会旗交接仪式。由上届奥运会主办城市的代表将旗交给国际奥委会主席，主席再将旗递交当届主办城市的市长，然后将旗帜保存在市府大楼四年再送交下届主办城市。当届奥运会升在奥林匹克运动会主体场上空的旗帜都是一面代用品。</span> 
+      </p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>在Linux中设置DNS和Mail </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0103/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第03期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{在Linux中设置DNS和Mail 
+              Server}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 随着Linux汉化的进一步深入,许多朋友迫切需要认识Linux、掌握Linux。Linux在各方面都有着强大的功能,特别是在网络方面,如：WWW服务器、FTP服务器、路由、域名服务器DNS、邮件服务器Mail 
+              Server等。本文结合自己的一些实际经验,介绍一下如何在Linux中设置自己的DNS和Mail Server(主要在局域网内)。<br>
+              操作环境为：<br>
+              1.有一台装有Linux(Redhat 6.0)的主机,用它来做DNS和Mail Server。<br>
+              2.Sendmail 8.9.3 。<br>
+              3.Pop3。若没有,请装上imap-4.5软件包。<br>
+              4.Named域名解释软件。(若没有,请装上bind-8.2 和 caching-nameserver-6.0软件包。)<br>
+              5.客户端(如Win95/98)若干台,一台也可以得到预想的结果。<br>
+              一、设置DNS<br>
+              要设置好Mail Server必须首先设置好DNS。设置DNS主要涉及到的文件是：/etc/named.conf(因为我们采用Bind8,若是bind4 
+              则应是/etc/named.boot,请作相应的修改)。<br>
+              假设你的域名是xyz.com ,你的局域网的IP地址范围是：192.168.0.,装Linux的主机名是dns＿mail,dns＿mail主机的IP地址是：192.168.0.1<br>
+              1.则/etc/named.conf应具有如下的形式：<br>
+              options <br>
+              directory ″/var/named″<br>
+              <br>
+              zone ″.″ <br>
+              type hint<br>
+              file ″named.ca″<br>
+              <br>
+              zone ″xyz.com″<br>
+              type master<br>
+              file ″named.xyz.com″<br>
+              <br>
+              zone ″0.0.127.in-addr.arpa″<br>
+              type master<br>
+              file ″named.local″<br>
+              <br>
+              zone ″0.168.192.in-addr.arpa″<br>
+              type master<br>
+              file ″named.192.168.0″<br>
+              <br>
+              2.修改/var/named/named.xyz.com(这是DNS正向解析文件,若没有,请建立一个。<br>
+              ＠ IN SOA dns＿mail.xyz.com. root.dns＿mail.xyz.com. <br>
+              2000070701  serial<br>
+              28800  refresh<br>
+              14400  retry<br>
+              3600000  expire<br>
+              86400  default＿ttl<br>
+              <br>
+              IN NS dns＿mail<br>
+              IN MX 10 dns＿mail<br>
+              xyz.com. IN A 192.168.0.1 <br>
+              dns＿mail IN A 192.168.0.1<br>
+              other＿host IN A 192.168.0.2<br>
+              www IN CNAME dns＿mail<br>
+              ftp IN CNAME dns＿mail<br>
+              mail IN CNAME dns＿mail<br>
+              其中：<br>
+              2000070701：取你修改该文件的日期加上当天的修改次数。其他成员见字面注释,可以不改。<br>
+              IN NS dns＿mail指出xyz.com这个域的DNS服务器是dns＿mail 。<br>
+              IN MX 10 dns＿mail 指出xyz.com这个域的邮件服务器是dns＿mail ,10表示优先级数,可以在这里多定义几台邮件服务器。www、ftp、mail是别名,它们均指向dns＿mail。other＿host是xyz.com域中的另外主机,它在这里被解析,若要解析其他的主机请在这里添加相应的记录,同时,也要在下面的named.192.168.0中添加应有的记录。<br>
+              3.修改/var/named/named.192.168.0(这是DNS反向解析文件,若没有,请建立一个。<br>
+              ＠ IN SOA dns＿mail.xyz.com. root.dns＿mail.xyz.com. <br>
+              2000070701  serial <br>
+              28800  refresh<br>
+              14400  retry<br>
+              3600000  expire<br>
+              86400  default＿ttl<br>
+              <br>
+              IN NS dns＿mail.xyz.com.<br>
+              1 IN PTR dns＿mail.xyz.com.<br>
+              2 IN PTR other＿host.xyz.com.<br>
+              其中： <br>
+              2000070701是你修改该文件的日期加上当天的修改次数。其他成员见字面注释,可以不改。<br>
+              IN NS dns＿mail的意义同上。记录“2 IN PTR other＿host.xyz.com”中的“2”是指192.168.0.2中的“2”,添加新的主机可以按相同的原理。<br>
+              到这里,DNS已经设置好了。以root身份运行/etc/rc.d/init.d/named restart ,你可以尝试ping 
+              www看有没有反应,运行nslookup后,在“&gt;”状态下依次输入www+回车,ftp+回车,192.168.0.1+回车进行验证,应该能得到正确的结果,否则,重新启动机器后重试,并检查上述文件中是否有错,如点号、分号有误否。<br>
+              二、设置Mail Server<br>
+              1.检查是否安装了sendmail-cf-8.9.3,若没有请装上！找到装上sendmail-cf-8.9.3后得到的redhat.mc 
+              在/usr/lib/sendmail-cf/cf/,将它修改如下：<br>
+              divert-1<br>
+              dnl This is the macro config file used to generate the /etc/sendmail.cf<br>
+              dnl file. If you modify thei file you will have to regenerate the<br>
+              dnl /etc/sendmail.cf by running this macro config through the m4<br>
+              dnl preprocessor<br>
+              dnl<br>
+              dnl m4 /etc/sendmail.mc &gt; /etc/sendmail.cf<br>
+              dnl<br>
+              dnl You will need to have the sendmail-cf package installed for 
+              this to<br>
+              dnl work.<br>
+              include＇/usr/lib/sendmail-cf/m4/cf.m4＇<br>
+              define＇confDEF＿USER＿ID＇″812″<br>
+              OSTYPE＇linux＇<br>
+              undefine＇UUCP＿RELAY＇<br>
+              undefine＇BITNET＿RELAY＇<br>
+              define＇confAUTO＿REBUILD＇<br>
+              define＇confTO＿CONNECT＇ ＇1m＇<br>
+              define＇confTRY＿NULL＿MX＿LIST＇true<br>
+              define＇confDONT＿PROBE＿INTERFACES＇true<br>
+              define＇PROCMAIL＿MAILER＿PATH＇＇/usr/bin/procmail＇<br>
+              define＇ALIAS＿FILE＇＇/etc/mail/aliases＇<br>
+              FEATURE＇smrsh＇＇/usr/sbin/smrsh＇<br>
+              FEATURE＇mailertable＇＇hash -o /etc/mail/mailertable＇<br>
+              FEATURE＇virtusertable＇＇hash -o /etc/mail/virtusertable＇<br>
+              FEATURE＇domaintable＇＇hash -o /etc/mail/domaintable＇<br>
+              FEATUREredirect<br>
+              FEATUREalways＿add＿domain<br>
+              FEATUREuse＿cw＿file<br>
+              FEATURElocal＿procmail<br>
+              MAILERprocmail<br>
+              MAILERsmtp<br>
+              FEATURE＇access＿db＇<br>
+              FEATURE＇blacklist＿recipients＇<br>
+              dnl We strongly recommend to comment this one out if you want to 
+              protect<br>
+              dnl yourself from spam. However the laptop and users on computers 
+              that do<br>
+              dnl not hav 24x7 DNS do need this.<br>
+              dnl FEATURE＇accept＿unresolvable＿domains＇<br>
+              dnl FEATURE＇relay＿based＿on＿MX＇<br>
+              使用命令 ：m4 redhat.mc &gt; /etc/sendmail.cf (为安全起见,最好对sendmail.cf先做备份)<br>
+              2.把/etc/sendmail.cf中的Fw/etc/sendmail.cw 改为 Fw/etc/mail/sendmail.cw<br>
+              把/etc/sendmail.cf中的DS打头的那一行改为DSdns＿mail.xyz.com<br>
+              把/etc/sendmail.cf中的DM打头的那一行改为DMxyz.com<br>
+              在/etc/mail/access追加一行xyz.com RELAY,执行makemap hash /etc/mail/access.db 
+              &lt; /etc/mail/access 以形成散列。<br>
+              在/etc/mail/mailertable追加一行xyz.com relay192.168.0.1,并执行makemap 
+              hash /etc/mail/mailertable.db &lt; /etc/mail/mailertable 以形成散列。<br>
+              在/etc/mail/relay-domains 若没有,请建立一个追加一行192.168.0。<br>
+              在/etc/mail/sendmail.cw(若没有,请建立一个)追加一行xyz.com<br>
+              3.这一步可选,主要处理别名问题,在/etc/mail/aliases中实现,形式如下：<br>
+              eg nickname  username＠xyz.com <br>
+              alias-name real-user-account<br>
+              如有mail nickname 或 mail nickname＠xyx.com 都将邮寄给username＠xyz.com<br>
+              4.重新启动机器一次。在客户端收发E-mail,当然客户端的DNS和网关要设置为：192.168.0.1,简单设置发送/接收邮件服务器为xyz.com(因为DNS能解析为到dns＿mail那台主机),用户的E-mail 
+              形式为 username＠xyz.com。<br>
+              注意事项：<br>
+              a. DNS 和 Sendmail 的服务进程要打开！即可以用ntsysv 来启动named 和 sendmail服务。<br>
+              b. 本文要使用到Sendmail和 POP3,所以也要检查pop3 服务是否提供,若没有要先装上前文已经提到,并且找到/etc/inetd.conf中pop这一行,去掉前面的注释,即成为：<br>
+              pop-3 stream tcp nowait /usr/sbin/tcpd ipop3d<br>
+              在命令行状态执行 telnet 127.0.0.1 110应该能看到如下提示：<br>
+              Trying 127.0.0.1 ...<br>
+              Connected to 127.0.0.1.<br>
+              Escape character is ＇＾＇.<br>
+              +OK POP3 localhost v7.59 server ready.<br>
+              c.每次修改/etc/named.conf、/var/named.xyz.com、/var/named.192.168.0后都要执行/etc/rc.d/init.d/named 
+              restart。在测试阶段,重新启动是最好的(包括重启Sendmail)。<br>
+              d.dns＿mail的/etc/resolv.conf最好为：<br>
+              search xyz.com<br>
+              nameserver 192.168.0.1即指向自己}<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

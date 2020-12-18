@@ -1,0 +1,122 @@
+<html><!-- #BeginTemplate "/Templates/hardware.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>把BIOS芯片从主板上“吹”下来——用“硬”手段重写BIOS芯片</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0118/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0118/maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0118/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第15期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->把BIOS芯片从主板上“吹”下来——用“硬”手段重写BIOS芯片<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->这几天笔者在改造一块RAID卡，需要把它的BIOS代码加入到主板BIOS中去，用的工具是CBROM，它可以添加或删除BIOS数据文件中的内容。试了几个不同版本的代码，都不能正常使用这块卡，分析BIOS代码的内容，看到其中的VRS这项不顺眼，一定是它在搞鬼，于是运行CBROM删掉了主板BIOS中的VRS这一项，然后用AWDFLASH把新代码写回到BIOS芯片中去后，重新启动机器，按开关后有“嘀”的一声，显卡加载有显示，别的就没有反应，键盘死锁。<br>
+              经分析，对付这种BIOS损坏情况，有下列几种办法：<br>
+              1.最常用的是热插拔。<br>
+              2.使用编程器写入BIOS代码，写好后，插回去，也能恢复正常。<br>
+              3.在主板BIOS内容损坏不多时，还可以“盲刷”，在软驱插入启动软盘从软盘启动，带有刷新程序和BIOS代码，执行AWDFLASH 
+              XXXX.BIN /SN /PY，等上30～60秒，重新启动机器。<br>
+              4.如果有ISA的显示卡，就不用“盲刷”了，插上ISA显卡，刷新过程和3一样，就能看着刷新过程了，前提是机器还要能读软盘。<br>
+              打开机箱，看我的主板，一块BX主板，最倒霉的是BIOS是PLCC封装的(小方块形状的，32根脚，和普通的那种BIOS芯片兼容，见附图)，而且是焊死在主板上的，这下怎么办？驱猫上网找了很多硬件网站，理出了几个方案：<br>
+              1.买个双BIOS装上，但要100两银子，这个要等一周，时间也太长，还要切断BIOS一条控制线，芯片座反扣在芯片上也不一定可靠接触，实在不行就只好用这个。<br>
+              2.把BIOS焊下来，用编程器或到别人主板上刷入代码，然后焊回来。<br>
+              3.在3的基础上焊上一个PLCC芯片座，一劳永逸，但是PLCC表面封装的芯片座较难找。<br>
+              经过分析决定采用方案2，如果找到PLCC表面封装的芯片座就用方案3。这样一劳永逸，以后不会再有担心的了，而且省银子。<br>
+              难度最大的是焊下BIOS芯片，普通电烙铁焊下来是不可能的，得用热风枪。抽空去了趟哈尔滨，购买所需工具，热风枪倒是有卖的，可是太贵了，最便宜的也要300至400两银子，还有一种吹塑料的热风枪，只要60元，当即买下。然后找表面封装的PLCC芯片座，找遍了科技市场，也没见到它的影子，不过在一家卖单片机的公司找到了一个PLCC到DIP的转换板，一阵讨价还价后15两银子成交，心里一阵窃喜(有人说这个东东要好几百，虽然这个简单了点，但和编程器配合起来就可以刷BIOS了，太超值了！)。<br>
+              我的英特尔82558网卡上面有个空的表面封装的PLCC芯片座，是留给启动芯片的，正好兼容我的BIOS，真是好运气，先把它取来。固定好网卡，把热风枪打开，调到第“8”挡，大概400℃左右，左手用镊子夹好芯片座，右手用热风枪对着它的焊脚部分转动吹(保证加热均匀)，也就三四秒钟吧，芯片座应声而下，仔细一看，塑料的芯片座有点软化的迹象，不过主框架还是好的，没有问题，可以用。在取主板上BIOS芯片之前我用马口铁剪了个“帽子”把我的BIOS芯片挡住(这样它就不会被吹坏了)，剪了一圈马口铁围墙，把BIOS这区域围起来(免得热风烫坏了周围的塑料部件)，然后开始动手，三四秒就拿下来了。<br>
+              最后用电烙铁把BIOS芯片、主板上BIOS的管脚部分和网卡上管脚部分剩余的焊锡清理干净(注意拔下电烙铁电源，以免静电损坏元件)，为了不让热风枪再损坏芯片座，我决定用手工焊接芯片座到主板上，而不用热风枪把它焊上去，这个过程仔细一些就可以了，焊之前把主板上BIOS的管脚部分与主板的ISA接口的连接线路用万用表测量记录下来(几乎BIOS的每个管脚都接到ISA接口上，除了22脚和第1脚，这两脚一个是片选脚，一个是空脚，单独测量22脚的连接关系就行了)。焊完之后，用万用表对着刚才的连接线路仔细测量一遍，没有问题，主板BIOS芯片终于有“家”了！<br>
+              把BIOS芯片放入转换板，一起夹在编程器的管脚座上，启动刷新程序，1分钟后，BIOS带着新的内容回到了主板上的“家”中，开机，久违的蓝天白云又出来了！<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

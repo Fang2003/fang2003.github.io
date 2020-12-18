@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>串行口故障排除一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; </font></p>
+        <p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">目前，586以上的电脑再没有专门的多功能卡了，所有串行口以及软驱和硬盘驱动器的接口全部集成在主板上，这是技术上的一种进步。可是，当这种主板上的串行口出现故障时，很多人可能无从入手。如果仅仅是为一个串行口故障就更换一块主板，那实在是不可龋下面就结合具体实例来介绍简易的维修办法。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">故障现象：鼠标接在COM1口上，调制解调器接在COM2口上；鼠标正常，在使用Windows95中的拨号网络拨号入网时，没有拨号音，无法入网。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">故障分析与处理：首先检查MODEM的电源是否打开，再检查各种连线是否插紧，特别不要忘了检查主板上的COM2输出口与机箱后面的连线，全部检查一遍之后，故障依然存在。此时，用Windows95控制面板上“调制解调器”中的“诊断”来检查MODEM，发现它确实存在故障，但故障是在接口还是在连线或调制解调器上呢?从调制解调器的指示灯情况可初步判断它无故障，于是怀疑连线有问题，但连线又有两段，一是主板上的COM2输出口到主机箱后面的连线，二是调制解调器与机箱后面的连线，要判断哪一段有故障，简单有效的办法就是：打开机箱，把主板上的COM1和COM2输出接口连线互换位置；这样，鼠标就接到COM2上，在DOS下安装并运行一个鼠标驱动程序和鼠标测试程序，发现鼠标根本不动；由此可以判断：主板上的COM2输出口有故障，COM2输出口与机箱后面的连线无故障，因为这条连线接在COM1上是正常上。至于调制解调器以及它与机箱后面的连线是否有故障，那还要进一步检测。由于此时调制解调器接到COM1上，鼠标接到COM2上，因此，无论是用WIN95还是用Windows3.x来检测，都要注意端口的设置。<br>
+        </font>&nbsp;&nbsp;&nbsp; <font color="#369681">下面介绍用PWIN32来检测端口的方法：启动PWIN32后，运行附件中的“终端仿真程序”，调出“设置”菜单中的“通信”，把接口设为“COM1”，然后设好“设置”菜单中的“电话号码”(建议设一个自己熟悉的就近的电话号码)，再调出“电话”菜单中的“拨号”。如果能听到正常的拨号音，说明调制解调器以及它与机箱后面的连接线正常。这样就肯定了故障出在主板的COM2输出口上，要从高集成度的主板上去检测COM2输出口的故障，这对于专业人员也是一件非常难的事情，对于非专业人员更是不可能的事情，难道就别无选择吗?非也。其实，制造商早就想到了这个问题，他们把解决办法放在BIOS设置中。启动电脑，进入BIOS设置，找到“CHIPESTFEATURESSETUP”(有些主板是“PCI＆ONBOARDI/OSETUP”或“INTEGRATEDPERIPHERALS”)中的“OnboardSerialPort2”。这是主板上的第二个串行口的地址和中断的设置，一共有五项选择，其中有一项就是“Disable”(或“None”)，其意思就是关闭主板上的第二个串行口。只要关闭这个串行口，再在主板的其它空槽上插一块带COM2接口的多功能卡或串行通信适配卡，于是电脑又有了正常的COM2。所以，对于这种故障，你只要买一块多功能卡(至少有一个COM2接口)或串行通信适配卡，然后把它接到主板的一个空槽上，把调制解调器接到多功能卡的COM2上(或串行通信卡上)，之后按上述方法改动BIOS的相应设置，再保存设置，重新启动电脑，故障即可消除。不过，由于新插卡的I/O地址或中断号可能与以前的不一样，在一些机器上，可能要重装一次调制解调器的驱动程序，方可正常使用。<br>
+        <br>
+        (广东蒋铁海)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9844/1998/44/index.htm">《电脑报》1998年11月16日第44期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

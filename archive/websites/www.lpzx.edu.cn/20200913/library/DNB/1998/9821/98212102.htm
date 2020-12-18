@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>从DOS直接入网NT<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　作为NT网的用户，你可能遇到过这种情况：网络硬件已连好，服务器也已安装Windows 
+        NT Server，并进行了各项必要的配置，但由于准备入网的计算机没有光驱，所以无法安装Windows 
+        95，自然也无法利用Windows 95实现入网。这时你该怎么办呢？能不能从DOS直接入网呢？答案是肯定的。回到服务器，你将发现Windows 
+        NT为DOS环境下的联网提供了解决办法，一经实践，OK!整个过程可分为以下三步：<br>
+        　　<strong>一、制作网络安装盘</strong><br>
+        　　1．启动服务器的NT Server,单击“开始”，选择“程序”项，打开“管理工具”栏，单击“网络客户管理器”栏。<br>
+        　　2．在弹出的“网络客户管理器”对话框中，选择第二项：制作安装磁盘组（I）。然后单击“继续”按钮。<br>
+        　　3．在“共享网络客户安装文件”对话框中，选择第一项：使用已有的路径（E）。然后单击路径编辑框右边的按钮，弹出“网络客户分布目录”对话框。在下拉框中选择“msclient”项，单击“确定”按钮，返回“共享网络客户安装文件”对话框。这时在“路径”编辑框中可看到“\\服务器名\Clients\”，单击“确定”。也可以直接在“路径”编辑框中键入客户软件所在的路径。<br>
+        　　4．在“制作安装磁盘组”对话框中选择“Network Client V30 for MS－DOS 
+        and Windows”。单击“确定”。<br>
+        　　5．插入软盘，单击“确定”，这时计算机开始制作网络安装盘，总共需要两张35英寸144M软盘。但安装时，一般只需第一张安装盘。<br>
+        　　<strong>二、安装网络客户软件</strong><br>
+        　　1．启动工作站的DOS操作系统。<br>
+        　　2．在工作站的软驱中插入第一张安装盘，键入命令行：A:\Setupexe。<br>
+        　　3．屏幕显示“Setup for Microsoft Network Client for MS－DOS”安装程序提示信息，按回车即可。然后键入一目录以便安装程序拷贝网络客户软件，例如：C:\Net。<br>
+        　　4．安装程序开始检查系统文件，在随后列出的一系列网络适配器中选择正确的选项。回车后输入用户名。例如：WangPing。最多不超过20个字符。<br>
+        　　5接下来屏幕上列出四个选项：<br>
+        　　（1）Names；<br>
+        　　(2)Setup Option；<br>
+        　　(3)Network Configuration；<br>
+        　　(4)The list options are correct。<br>
+        　　选中前三项中的一项后按回车可以看到该项的详细信息，并可以对某项设置加以修改。例如要改变网络配置，选中第三项并回车，选择“Remove”删除网络适配器，再选择“Add 
+        Adapter”添加新的适配器（在随后出现的列表中选择恰当的适配器）。选择“Add 
+        Protocol”可以添加网络协议。选择“Network configuration is correct”返回。<br>
+        　　6．如果对上面的三项设置均无异议，则选择“The list options are 
+        correct”项，回车后开始安装。<br>
+        　　安装程序将修改系统设置，注意configsys文件应包含下列语句：<br>
+        　　Files=20<br>
+        　　Device=C:\NET\ifshlpsys<br>
+        　　Last Drive=Z<br>
+        　　在autoexecbat文件中应加入下列语句：<br>
+        　　C:\Net\Net initialize<br>
+        　　C:\Net\Nwlink<br>
+        　　C:\Net\Net Start<br>
+        　　当然你也可以在计算机启动后再执行这几个命令。<br>
+        　　安装完毕后，重新启动计算机，如果网络初始化成功，你就可以与服务器连接了。<br>
+        　　<strong>三、与NT服务器连接</strong><br>
+        　　1．C:&gt;Net，屏幕左上方出现连接（Connection）对话窗口。<br>
+        　　2．按Alt＋P，输入你将访问的网络上其他计算机的共享目录，假如你想访问服务器的光驱，则可输入：“\\My_Server\Cdrom 
+        ”。（这里假定服务器“My_Server”的光驱已经设为“共享”，且其共享名为“Cdrom”。）<br>
+        　　3．按Alt＋V，给你要访问的路径赋予一驱动器号，例如“F”，注意不要与已经使用的驱动器号重叠。<br>
+        　　4．按Alt＋C，开始连接，如果连接成功，则在当前连接（Current 
+        Connection）列表中看到新增的一项：“F：Is \\ My_Server\Cdrom”。<br>
+        　　5．按Alt＋X退出。<br>
+        　　6．C:&gt;F:，这时F:成为当前盘符。<br>
+        　　7．F:&gt;dir，如果在服务器的光驱中已经放入光盘，那么你就可以浏览光盘内容了。<br>
+        　　现在你就可以通过服务器上的光驱拷贝和安装文件了。当然你首先要做的是：安装Windows 
+        95操作系统。然后在Windows 95中完成网络配置。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　（四川　李海川）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月1日第21期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

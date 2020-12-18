@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>利用注册表编辑器清理注册表文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp;&nbsp; 有经验的用户通常使用Win95提供的注册表编辑器REGEDIT来编辑注册表文件，提高系统工作的性能。但建议编辑注册表文件时首先手工备份好注册表文件，以便在出现问题时可以恢复原系统信息。下面介绍使用注册表编辑器经常做的几点清理工作：一、清理软件遗留注册字句信息即使是卸载软件时，注册表文件仍然会保留软件安装时注册的许多初始信息语句（如软件的供应商、ID号、用户及组织名、某些设置参数等），如果不及时作清理工作，长时间会使得注册表文件越来越庞大，影响到系统的工作性能。依次打开HEKY_CURRENT_USER、software主键，显示的下级主键项一般是软件的供应商名，如：所有由微软提供的软件均含在Microsoft主键项中。对HEKY_CURRENT_MACHINE和HEKY_USERS中的Software主键项操作一样。通常根据已删软件的名字点击各项主键寻找，找到并确认后即可删除其配置项。<br>
+        二、清理“运行”命令列表信息<br>
+        多次使用Win95的“运行”命令后，命令列表会积累一大堆不需要的命令，使用Win95的桌面操作无法将其删除掉，而利用注册表编辑器可以把不需要的清理掉。打开注册表编辑器后，按以下顺序依次打开各级主键：HEKY_CURRENT_USER、Software、Microsoft、Windows、CurrentVersion、Explorer、RunMU，此时编辑器右窗口顺序显示对应命令列表的键值，选择不需要的键值删去即可。<br>
+        三、清理访问“网络邻居”后留下的字句信息使用局域网的用户在访问网络邻居时，注册表会在HEKY_CURRENT_USER/Network/Recent主键项中记录下一系列命令操作的信息，包含被访问机器的名字、访问过的应用程序及文件名等，如：主键Recent包含一名为\\ierl_server\software的子主键项，表示你曾访问过名为ierl_server的服务器中的software文件夹，点击此项后编辑器右窗显示此项的名称及键值。这些内容基本没有用途，可以适当的清理一下。打开注册表编辑器后，按以下顺序依次打开各级主键：HEKY_CURRENT_USER、Network、Recent,然后把主键Recent的子项删除即可。<br>
+        总之，注册表中包含的是关于如何运行计算机的重要信息，利用注册表编辑器来管理注册表文件，可以收到许多意想不到的效果。(湖南张林)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月12日第39期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 方正2000笔记本电脑故障排除手记</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 方正2000笔记本电脑故障排除手记</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 方正2000笔记本电脑故障排除手记 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现有方正2000系列笔记本电脑一台，基本配置如下： AMD  K6－2／ 300 CPU、32MB SDRAM、3.1GB硬盘、12.1英寸显示屏、56K V.90内置MODEM、24倍速光驱。<br>
+　　<b>故障现象：</b>该机运行Win98后正常关机，重开机时提示系统注册表损坏，系统自动调取备份数据进行恢复，屏幕显示Windows正调入“system.dat”及 “user.dat”，在显示生成系统注册表至48％时出错，系统死机。在另一台机子上制作一张Win98 启动盘，引导机子正常启动。运行scandisk，scandisk报告硬盘局部文本文件没有发现或被破坏，scandisk不能运行，自动退出。此时该机可正常进行其他DOS操作。摸摸机子底座及键盘，发现温度较高，遂关机。待机子冷却后，重新开机，运行scandisk，发现C盘的FAT (文件分配表)表损坏，文件链簇丢失，自动进行修复。修复后重装Win98，但Win98安装程序所带的scandisk报告同样的问题，安装程序进行至系统注册时又死机。在以后多次的系统安装偿试中，各种问题如硬盘的FAT表损坏、安装时提示cab文件遭到损坏、不能运行scandisk等故障呈不规则出现。<br>
+　　<b>故障分析及处理：</b>从计算机出现故障的不规则性看，一开始怀疑计算机被病毒破坏，用瑞星9.11版本及kill 98防病毒软件进行查杀，未发现病毒。因以上两个软件是最新的防病毒软件，基本可以排除病毒的可能。在BIOS 中关闭硬盘保护功能，对硬盘进行重新分区并格式化，用scandisk对硬盘表面进行扫描，未发现错误。重装Win98，故障依旧。分析机子在DOS下能正常使用，安装Win98时才出现故障，考虑可能是在运行Win98时系统资源占用比较大，而且，电脑故障是不规则出现的，也可能是内存不稳定或损坏造成的，是否内存有问题？在系统自举时对内存进行常规的三次检测，亦未发现问题。至此，一切常规手段均不适用。但该笔记本电脑系国内名牌产品，而且购买时间比较短（大约一个多月），估计出现硬件毛病的可能性不太大，但不排除这种可能性。<br>
+　　 因当时泉州已是酷暑，气温比较高，机子发热量比较大，估计对计算机的性能会产生一定的影响，并导致一些莫名其妙的故障。遂进入主板CMOS，准备降低CPU的频率，但发现该机子关于CPU频率方面没有可供调节的选项，只得作罢。在浏览主板CMOS的“cache system”时，发现可以手动打开或关闭一级及二级缓存。一级缓存集成于CPU上，出现问题的可能性不大，而且如果关掉一级缓存，则对整机性能影响较大，故不关闭。二级缓存集成于主板上，这也是比较有可能出现问题的地方。即使二级cache没有问题，关闭它也可以有效地降低CPU工作的速度及减少机子的发热量。笔者突然联想到以前修理过一台CPU为K5的兼容机，当时机子出现故障也是呈不规律状，拔除该兼容机的外扩二级缓存(上面标明为：make in china，我不得不遗憾地告诉这个情况)，故障排除。遂关闭本机的二级缓存，重新开机，顺利进入DOS状态，重新对硬盘进行分区并格式化，安装Win98系统，一切顺利。配置好笔记本电脑的有关硬件，又安装office 97，运行四个小时左右，未发现故障。数次正常、非正常关机，亦未发现问题。至此，该机故障已解决。<br>
+　　关闭笔记本电脑的二级缓存对机子有什么影响呢?笔者特地用《超级解霸》对该笔记本电脑的基本性能进行测试，发现机子性能在解码时比P166MMX系统性能低5％～10％左右。<br>
+　　综上所述，我们不难发现该笔记本电脑的故障产生原因已经明确：硬件问题。有如下几种可能：1.二级cache损坏，导致CPU在接收该缓存数据时出错，故障呈不规则状出现；2.二级cahce在高温环境状态下工作不稳定，也可能导致这种情况；3.计算机在有二级cache工作的情况下，发热量增加，导致内存、硬盘等部件工作不稳定，也可能出现上述情况。因笔者没有专门工具，不能对CPU、一二级缓存、内存及硬盘进行测试，在此不能作确切的答复。写此文章，供同行以后在维修计算机时参考，也提请同行在维修碰到此类问题时,多多注意二级缓存是否存在问题。也欢迎与笔者联系:suma@ynmail.com。  <br>
+<b>　　(福建　苏文能) </b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99412302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

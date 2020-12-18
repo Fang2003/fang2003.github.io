@@ -1,0 +1,125 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/hardware.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>安装WindowsNT </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0122/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0122/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0122/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第22期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->安装WindowsNT 
+              4．0无法识别大硬盘故障三例<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->一段时间来，由于工作的需要接触并安装了许多WindowsNT 
+              4．0系统以下简称NT4．0，积累了一些经验，现将安装NT4．0的一些经验提供给大家参考。<br>
+              第一例是586兼容机， MVP4主板、K6-233CPU、32M内存、9750显卡、迈拓20G硬盘。以前安装的系统是Win98，现在要改装成WinNT。用Win98启动盘引导，安装NT4．0，重新启动后，计算机死机。计算机硬件的问题基本上可以排除，由于早就听说NT 
+              4．0不支持大硬盘，但主板对大硬盘却支持得较好，所以判定该现象是由于NT 4．0系统无法识别大硬盘而引起的。NT 4．0用以识别硬盘的两个文件是atapi．sys与atdisk．sys。这两个文件可以在NT4．0补丁SP 
+              6．0里找到。将它们在NT4．0第一次启动时，复制到“$win＿nt$．∽bt”与“$win＿nt$．∽ls”文件夹中，重新启动后，再将这二个文件复制到C＼winnt＼system32＼driver下即可解决此问题。<br>
+              第二例是一台686兼容机，配置是技嘉主板、PⅢ550 CPU、TNT2显卡、128M内存与昆腾20G硬盘。安装NT 4．0时，在第一次启动时死机。计算机硬件基本上没有问题，问题应该也是因为NT 
+              4．0不支持大硬盘造成的。参照第一种情况，将atapi．sys与atdisk．sys拷入“$win＿nt$．∽bt”与“$win＿nt$．∽ls”文件夹中，重新启动计算机后，仍然死机。<br>
+              原因分析：NT4．0无法支持大硬盘，但是在安装了补丁程序后仍然无法正常工作，可能是NT4．0对硬盘的分区比较敏感。试着将大硬盘只分一个2G的主分区，余下的空间暂时不处理，重新安装NT4．0，一切正常。但是在NT4．0安装好并将剩下的空间再用Fdisk分区后，当NT4．0再启动时，计算机又重新死机了。<br>
+              原因分析：NT4．0的死机可能与硬盘的分区大小有关，重新调整硬盘各个分区的大小后，发现在硬盘的分区上，只要前3个分区小于8．4G，NT4．0的启动便一切正常，如果大于8．4G，NT4．0启动时便会死机。至此，问题得以解决。<br>
+              最后一例是一台品牌机，原来的配置是华硕主板、PⅡ400 CPU、i740显卡、64M内存与4．3G硬盘。因为一次意外，硬盘被损坏了，更换成一块10G的硬盘，于是重新安装NT 
+              4．0系统。在安装后的第一次启动时死机，试着用上述两种方法解决，均不见效。无奈之下，先安装Win98，再安装NT 4．0，做成双操作系统，问题便轻松地解决了。<br>
+              上述在安装NT 4．0时出现的问题都与大硬盘有关，由于NT 4．0发行得较早，不能很好地支持大硬盘，所以在大硬盘上安装NT 
+              4．0时，比较容易出现问题，希望这些经验能给安装NT 4．0的朋友一点提示。(安徽 芮斌)<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

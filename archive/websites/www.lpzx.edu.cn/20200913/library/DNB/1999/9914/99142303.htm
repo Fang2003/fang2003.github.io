@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>电容失效引起显示器特殊故障的处理</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><div align="center"><center>
+      <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+        <TR> 
+          <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+    HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+          <TD WIDTH="484" HEIGHT="69"> 
+            <P ALIGN="center"><A HREF="http://vote.cpcw.com" TARGET="_top"><IMG
+    SRC="http://www.lpzx.edu.cn/images/ad/vote.gif" BORDER="0" WIDTH="468" HEIGHT="60"></A><BR>
+              中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+          </TD>
+        </TR>
+      </TABLE>
+    </center></div><div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><div align="center"><center><table
+    border="0" width="680" cellspacing="0" cellpadding="4" BGCOLOR="#E8e8e8">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>电容失效引起显示器特殊故障的处理</strong></font> </td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/images/bkgrd.gif">　　<strong>故障现象：</strong>一台AOK彩色显示器，使用一段时期后出现故障。计算机开启后，显示器无显示，约5分钟后，显示器才逐渐亮起来，但屏幕右部较暗，且有水平黑线，之后缓慢转入正常状态。<br>
+        　　<strong>故障分析与处理：</strong>由于荧光屏一半较暗，怀疑行扫描电路阻尼二极管性能不良。此显示器行扫描管与阻尼管为一体，产生故障的可能性很小。用万用表测量行输出级电源电压为75V，当显示器转为正常后测量没有变化。由于显示器刚开机时无显示，除了与行扫描电路有关以外，还与视放及显像管电路有关。检查末级视放、显像管三个阴极电压。G为60V，R、B为70V，基本正常，再检查显像管栅极G1和加速极G2，电压分别为-150V和110V，G1的-150V电压随着时间增加逐渐减小，最后降到-60V时，屏幕显示也正常了，说明此故障与负压异常有关。且G1为-150V时，亮度旋钮失控。<br>
+        　　是什么原因造成G1电压异常呢?与栅极有关的电路如图所示，G1的负压是行逆程脉冲，经二极管D301整流后，从亮度电位器VR301中心点分压，再经二极管D311加到显像管栅极上的。刚开机时调亮度旋钮B点电位不变，但A点电位随着调整而变化，说明电位器良好，仔细测量，发现A点电位高于B点(-300V)，使二极管D301截止，故而如此。那么B点电位是如何降低的?B点除与D301正端相接外，还与R338、三极管Q307相连，并通过ZD302串接到C325负端(C点)，如果C点电位下降，则Q307将导通，B点电位必然下降。在显示器通电的瞬间，C325被充电，两端有近380V的电压，C点的电位是C325上的电压减去主电源电压，所以C点电位降低有两种可能：C325上电压增加或主电源电压降低。在对主电源检查时，发现滤波电容C221容量基本消失。换上一只新电容，显示器恢复正常。<br>
+        　　小结：由于C221失效，使主电源输出电压脉动大，使C325充电电压升高，同时主电源电压略有减小，造成B点电位低于A点，二极管D301截止，栅负压升高，当C325经过很长时间放电，B点电位升高，等到高于A点电位，亮度旋钮起作用，显示器也正常了。<br>
+        <strong>(吉林　常向东 牟永阁)</strong><p align="right"><font COLOR="#000000">本文出自：<a
+        href="index.htm">《电脑报》1999年04月12日第14期</a></font> </td>
+      </tr>
+    </table>
+    </center></div><div ALIGN="center"></div><script>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</script>
+<NOSCRIPT>
+
+    <dd ALIGN="center"><a
+      HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><img
+      SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+      WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></a></dd>
+</NOSCRIPT>
+    </div>
+			<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+			<A HREF="http://www.sitemeter.com/stats.asp?site=pcwno" TARGET=_blank>
+			<NOSCRIPT>
+				<IMG SRC="http://www.sitemeter.com/meter.asp?site=pcwno" ALT="Site Meter" NoSave BORDER=0 WIDTH=20 HEIGHT=20>
+			</NOSCRIPT>
+			<SCRIPT LANGUAGE="JavaScript">
+				document.write("<img src="http://www.lpzx.edu.cn/library/DNB/1999/9914/%5C%22http:/www.sitemeter.com/meter.asp?site=pcwno&amp;refer=%22+escape(document.referrer)+%22&amp;hours=%22+(new" Date()).getHours()+"&minutes="+(new Date()).getMinutes()+"\" BORDER=0 ALT=\"Site Meter\" WIDTH=20 HEIGHT=20>");
+			</SCRIPT>
+			</A>
+			<!--WEBBOT bot="HTMLMarkup" Endspan -->
+</td>
+  </tr>
+</table>
+</center></div></div>
+</body>
+</html>

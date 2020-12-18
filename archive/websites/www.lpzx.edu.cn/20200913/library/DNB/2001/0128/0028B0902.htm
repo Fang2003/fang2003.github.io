@@ -1,0 +1,130 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>《电脑报》电子版CPCW.COM</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0128/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0128/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第28期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->在Bash环境中设置热键<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 　　经常使用Linux的朋友肯定会对Linux虚拟控制台中的命令操作感到厌烦。即使使用了两字符unix命令或命令补足功能，也仅仅是在一定程度上减轻了击键的负担，并没从根本上解决问题。那么是否可以只要按某个键（比如F1功能键）就能为你自动打入一串字符呢？答案是肯定的。<br>
+              你可以把任何命令或命令的一部分内容指定给键盘上的任何一个键或者是与Alt和Ctrl的组合键，而不一定仅是那些功能键。因此，可供选择的键很多。<br>
+              要实现上面所提及的功能，则应按照如下所述的方法把有关内容放到用户主目录中的Readline配置文件.inputrc中。<br>
+              为了说明问题，这里先举一个简单的例子，需要说明的是该例子本身是毫无意义的和荒谬的，此处用该例的目的仅是为了能方便说明问题。该例是把字符串cd 
+              ＄HOME赋给字符z。要实现该例，你只要在/.inputrc文件（如果尚未有该文件，则创建一个新文件）中加入下面一个句子即可:<br>
+              ″z″″cd ＄HOME″<br>
+              要使你的设置生效，你应先退出log out，然后再重新登录log in。此时你敲击z键，则在你的命令行中将显示字符串cd 
+              ＄HOME，而不是字符z。接下去若敲回车键Enter，则将执行cd ＄HOME命令。实际上，你还可发现，你在命令行的任何位置处敲入z都将显示cd 
+              ＄HOME这一字符串。<br>
+              此时，你可能会问，最好在敲击z键后马上就能执行cd ＄HOME，而不用再敲一次回车键，行吗？当然可以，你只要在上面设置中在字串后面加上回车键的特别表示法“\C-M”即可。即在/.inputrc文件中放入如下一个句子就行:<br>
+              ″z″″cd ＄HOME\C-M″<br>
+              接下来让我们来说明一下把该cd命令指定到F1功能键上的方法。在Linux虚拟控制台中，并在使用默认的Linux控制台配置文件的情况下，F1将由四个字符序列Escape、、、和A组成。其中Escape在.inputrc配置文件中用“\e”来表示。因此，你可以在/.inputrc文件中放入如下一个句子即可:<br>
+              ″\eA″″cd ＄HOME\C-M″<br>
+              实际上，你要使Readline配置文件生效，不一定要先退出，再重新登录，你只要按组合键Ctrl+X 、Ctrl+R即可。重载该配置文件后，你就可以按F1键，然后你会看到实际上它执行了cd 
+              ＄HOME命令（该命令的作用是返回用户主目录）。<br>
+              现在，让我们来总结一下它的定义格式。格式样子如下所示:<br>
+              ″指定键″″内容定义″<br>
+              你可以为任何键（Ctrl+S、Ctrl+Q、Ctrl+C、Ctrl+Z四个组合键除外）指定任何命令内容。需要说明的是“Alt组合键”和“Ctrl组合键”在.inputrc配置文件中分别要用“\M-x”和“\C-x”形式来表示。<br>
+              最后，要说明一下如何能方便地获知键盘上的任何键在.inputrc配置文件中的表达方法。你只要在Bash提示符下，先按“Ctrl+V”组合键，再键入你要了解的键，此时屏幕的当前输入行上就会显示该键的表示方法。要注意的是对于数字小键盘的表示有两种表示序列，因为它有两种模式。另外还须注意:若显示“＾”字样，则该字样就是指Escape字符。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

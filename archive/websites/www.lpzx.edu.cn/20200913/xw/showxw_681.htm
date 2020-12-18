@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> Authorware 多媒体开发软件</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+（作者：秦海林　2000年07月06日 11:32）<br><br>　　Authorware是一个优秀的基于流程图标的交互式多媒体制作软件，它允许开发者使用文字、图片、动画、声音、数字电影等信息来创作交互式应用程序，是一种面向对象的、以图形流程线逻辑编辑为主导、以函数变量为辅助、以动态连接库(DLL)为扩展机制的“无需编程”的多媒体工具软件。笔者在开发过程中，涉及许多技术问题，总结了以下几点： <br><br>1 片头的设计与制作 <br><br>&nbsp; &nbsp; 片头一般选用AVI文件。AVI动画有比较直观的三维效果，但是运行的要求比较高。AVI文件做的片头在某些机器上的播放非常差，几乎是逐帧显示。近来比较流行用Flash的.SWF文件作片头。Flash4.0做的文件小，操作较简单，在大多数机器上播放较为流畅；相比之下，3DMAX做的片头动画，不仅在设计的过程中对开发人员的机器配置要求高，而且做成的AVI动画在播放时占用大量内存，速度慢，想做成全屏显示更加不可能。 <br><br>2 分支和框架的选择 <br><br>&nbsp; &nbsp; Authorware中，分支和框架都是一种复合结构，它们经常能实现相同的设计目标，有时能够互相通用，但它们之间是有区别的。分支结构在执行路径选择和自动循环控制上比较有优势，而框架在页面结构和超链接的实现上来得更加地道和名正言顺。 <br><br>&nbsp; &nbsp; 框架是一个比较独立的模块，自我封装性很好。退出框架就相当于退出一个函数模块，该模块中的按钮、显示都会自动擦除，省去了不少麻烦；而分支结构则在循环执行某些程序的控制上相对简单。在主体设计中，可以以框架为主，进行框架嵌套；同时兼用分支结构进行循环。 <br><br>3 素材与程序相分离 <br><br>&nbsp; &nbsp; 素材包括图片、文字、声音、动画等。为了较好控制媒体素材，在制作中可以把这些素材全部放在一块，以便于编辑素材和编制程序相分离。方法是：在主流程上，可以放置一个映射图标，命名为Presets，然后在Presets中，放置决策图标，素材便可以放在决策图标的右侧，在决策图标的属性对话框中，分别设定： <br><br>&nbsp; &nbsp; Repeat：Don't Repeat <br><br>&nbsp; &nbsp; Branch：To calculate Path，其中Path文本输入中不输入任何变量。 <br><br>&nbsp; &nbsp; 调用图片可以用函数：DisplayIcon(IconID@&quot;bb1&quot;)--bb1为决策图标右侧的一个显示图标名。 <br><br>4 素材连接方式 <br><br>&nbsp; &nbsp; 无论图片还是声音或者视频，都有外部链接、嵌入到Authorware两种方式。就图片而言，单击File/Import，将会出现对话框询问导入哪一张图片。如果复选“Link to File”，则会以外部链接方式调用该图。 <br><br>&nbsp; &nbsp; 采用将图片内置到Authorware中，如果图片不是很大，其显示是比较快的；如果有大量的图片都用这种办法的话，最好在程序完成之后将图片入库。反之，采用外部链接便于素材修改，并且能够减少应用程序文件的数据量，提高运行效率。 <br><br>&nbsp; &nbsp; 库文件是为了完成程序和数据的分离，库中的一个对象源可以在应用程序中被多次引用，这样就大大减少了整个程序的数据量，提高程序的运行效率。通常情况下，库文件和Authorware主文件加起来的数据量，比起把库文件中所有的图标到Authorware文件中而没有库文件，其数据量更大，但Windows操作系统的工作时支持什么时候需要什么文件什么时候再调入的工作方式，所以，在不用库文件而把所有内容做到一个应用程序的情况下，需要把这个文件一次性调入，这样对机器的性能要求会很高；而如果处理得好的话，把内容分成主文件加几个库文件的形式，系统执行时将会分别调入，从而大大提高运行效率。使用库文件的另一个好处是可以保存护媒体资料。 <br><br>5 媒体素材的处理 <br><br>（1） 图片和文字 <br><br>&nbsp; &nbsp; 优秀的多媒体应该具有丰富的内容，吸引人的界面，良好的交互方式等。其中，界面是否美观，是否有新意很大程度上决定了软件的使用效果。通过扫描和其他方法，可以获得一些图片。在本软件中，图片基本上采用JPG格式，一部份动画用的是gif图。在处理图片时，考虑到目前的多媒体计算机都具备16位颜色显示，显示器的分辨率一般也在800&#215;600，所以也没有考虑调色版问题，直接处理成真彩色。 <br><br>&nbsp; &nbsp; 长期以来，调色板的问题一直困扰着多媒体开发人员。由于受到用户计算机主频和显示设备的限制，多媒体的回放往往在于256色甚至更低的模式下进行，因此，某个多媒体光盘是否能在较低的显示模式下播放一直是人们衡量多媒体产品质量的重要标准之一（只有在256色模式下才提调色板问题）。如果多媒体的回放平台是定位在真彩色、奔腾166以上的计算机，可以根本不考虑调色板问题。在工业企业多媒体教学软件的制作中，涉及很多文字资料，大量的文本输入非常令人头痛。我们利用HP智能扫描仪，可以一次性将原稿扫描成文本，大大提高了工作进度。 <br><br>（2） 录音制作 <br><br>&nbsp; &nbsp; 多媒体电脑产生声音的方式主要有三种：由外部声音源进行录制与重放、MIDI声音和CD-Audio。分别称为波形音频、MIDI音频和CD音频。波形音频是多媒体计算机获得声音最直接、最简便的方式。声卡以一定的采样频率和量化级对输入的声音进行数字采样，将其从模拟声音转化为数字信息(模/数转换)，声音播放时，声卡将文件中的数字信号还原成模拟信号(模/数转换)。根据采样理论，为了保证声音不失真，采样频率应在40kHz左右，采样频率越高，声音失真越小。量化数据位数是每个采样点能够表示的数据范围，量化位数越高音质越好，但数据量也越大。一般来讲，采用22kHz采样频率，8位量化位数得到的音质也不错了。 <br><br>&nbsp; &nbsp; Windows所使用的标准数字音频称为波形文件(WAV)，记录了对实际声音进行采样的数据。解说词就是使用WIndows98附件中的录音机录制的波形文件。MIDI音频是多媒体计算机产生的另一种方式。在对WAV文件与MIDI文件进行比较，发现WAV文件的声音在不同计算机声卡上的发音是相同的，MIDI则取决于声卡的设置且缺乏重现真实自然声音的能力。这是因为WAV是声音的采样，而MIDI文件并不对音乐进行采样，而是将每个音符记录为一个数字。在该软件中，我们采用WAV作解说词，MIDI作背景音乐。 <br><br>&nbsp; &nbsp; 录音时，我们采用了22kHz采样频率，16bit量化位数，所用的软件为Acoustic 2.02。Acoustic是一个可视化的录音及音频处理软件，录音完成后，可以进行去噪等操作。此外，Sound Forge也是一款不错的录音及声音处理软件。 <br><br>（3） 演示制作 <br><br>&nbsp; &nbsp; 演示可以采用avi动画或直接插入演示软件所存成的特定格式的文件。可以使用Hyper Cam或者Lotus的ScreenCam 97录制屏幕。Lotus ScreenCam97录成的文件的缺省格式是.scm，这种格式可以通过ScreenCam另存为.exe格式。如果另存为avi格式的话，实在是太大，而且控制也不太方便。因此，我们在Authorware中，用一个函数直接调用Lotus ScreenCam的.exe文件。调用.exe文件的方法如下： <br><br>&nbsp; &nbsp; JumpOutReturn (FileLocation^&quot;*.exe&quot;,&quot;/sc&quot;) <br><br>&nbsp; &nbsp; FileLocation表示当前目录。参数s表示不显示Lotus ScreenCam的Logo画面，c表示播放完后自动退出。为去掉Lotus ScreenCam播放面板中的标题“Lotus ScreenCam 97”编写了一个动态链接库ChgTitle.dll来动态改变窗口标题。 <br><br>6 注意运用函数和插件 <br><br>&nbsp; &nbsp; 在Authorware中，能否熟练运用函数极大影响程序的执行效果。一般在Authorware中经常使用的内部函数有：Eval()、EvalAssign()、DisplayIcon()、EraseIcon()、GoTo()等等。 <br><br>&nbsp; &nbsp; 此外，Authorware不可能将Windows的功能全部包括在它的系统中，为了使高级用户更深层次、更广泛地对计算机进行控制，Authorware提供了外部函数。 <br><br>&nbsp; &nbsp; UCD(User Code File)是公司随产品带有的专用Authorware外部函数文件；遵循它的语法规范，用户也可以用VC/VC等开发出专用的UCD。UCD和U32是相对的，UCD用在Windows3.x这样的16位操作系统环境下，U32用在Windows95(包括Windows NT)这样的32位操作系统下。外部函数可通过菜单命令Window/Functions来调用。外部函数一般是成对使用，因为外部函数是对系统直接的控制，它的执行结果会影响系统的设置，因此不要忘了使用卸载函数。最后要注意程序中用到的外部函数在打包和发行时，一定要放到Authorware主控文件能找到的地方。 <br><br>&nbsp; &nbsp; 通过适当的扩展，Authorware几乎可以完成任何工作。扩展的方法很多，除了 DLL或UCD，目前各种各样的Xtra逐渐成为主角，ActiveX Xtras正是Authorware家族中的新贵。Authoware中的Xtras的(xtras这个词比较古怪,可能是Macromedia造出来的，可以认为它就是“扩展”的意思)是一些软件模块，它们可以在许多方面扩展Authorware中的功能。例如，运用WebXtra这个Xtra插件，可以在Authorware中浏览网页。 <br><br>7 程序打包 <br><br>&nbsp; &nbsp; 打包的文件格式有三种。选择File&gt;Package菜单命令，在package File的下拉列表中有三种包装方式：Without Runtime打包的文件所占的空间小，用户也无须装入Authorware环境，但必须通过Runa5w32.exe文件才能执行；For Win 3.1是在Windows3/1环境下的可执行文件，而For Windows 95 and NT则是能够在Windows9X或Windows NT环境下运行的可执行文件。选中Resolve Broken Links At Runtime可以解决程序的映像图标与库图标断链的误问题。选中Pack All Libraries Internally则会在可执行文件中包含用到的库，可防止程序在执行的时候找不到库文件而发生错误。 <br><br>&nbsp; &nbsp; 打包的时候，要包括所有用到的动态链接库、应用扩展文件等，并在文件设置时指出外部链接文件的查找路径。方法是：打开文件属性对话框的Interaction页，在Search Path项的编辑区中输入：“.\pic;sound”。 <br><br>&nbsp; &nbsp; 小结： <br><br> 　 本文讨论了用Authorware开发多媒体软件所要注意的一些主要问题，由于水平所限，难免有错漏之处，敬请指正。 <br><br>
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001121102021
+<div align="center"><a href="xwpl_671.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

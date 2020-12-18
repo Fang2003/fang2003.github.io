@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>VFP中EXCEL格式的输入方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　尽管VFP提供的表单设计器可以很容易完成数据输入界面的设计与修改，但在通用的一些程序中，如果每用到一个表就设计或修改一次，工作量未免太大，对非专业人员也有一定的困难。能不能只选定所需的表，其输入界面保持不变?<br>
+        　　笔者发现用VFP提供的表格控件GRID可以很容易地实现，并且能实现与EXCEL表格相同的输入形式，输入的内容全部显示在屏幕上，下面将具体实现方法介绍给大家：<br>
+        　　(1)从GRID控件拖放到表单上(假设名为grid1)，设置其属性：<br>
+        　　Recordsourcetype为0---表<br>
+        　　(2)为表单的active过程编程<br>
+        　　pp=getfile(″dbf″,″″,″″,2)<br>
+        　　if empty(pp)<br>
+        　　thisform.release<br>
+        　　return<br>
+        　　endif<br>
+        　　use ＆pp<br>
+        　　＊选定所需的表<br>
+        　　n=fcount()<br>
+        　　thisform.grid1.columncount=n<br>
+        　　thisform.grid1.recordsource=pp<br>
+        　　for i=1 to n<br>
+        　　thisform.grid1.columns(i).header1.caption=field(i)<br>
+        　　endfor<br>
+        　　use<br>
+        　　(3)再在表单加上插入、删除、添加、完成等几个按钮，就可构成较完善的输入界面，实现数据的整体输入。<br>
+        　　此程序在586组装微机、VFP3.0中运行通过。<strong>(四川　牟善铸)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 让COMPAQ DP2000重新启动</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>47 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 让COMPAQ DP2000重新启动</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 让COMPAQ DP2000重新启动 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　笔者单位有一台COMPAQ DP2000商用机，Pentium 133 CPU 、16MB内存、1.2G硬盘。有一天突然不能从C盘启动了，但可以从A盘引导系统。由于该机为公用机，使用的人多,没有什么要紧数据，于是把硬盘重新格式化（高级格式化），重新安装系统,仍无法启动。进一步用FDISK重新分区，用过COMPAQ的朋友应该知道，COMPAQ在CMOS设置上有些与众不同，SETUP设置程序没有固化在主板上，而是放在硬盘上COMPAQ自己的专用分区里（容量小于10MB）。<br>
+　　如果要改变CMOS设置,则必须在硬盘上用SETUP程序或用随机附带的DIAG和SETUP两张软盘来设置。根据以往的经验，首先用FDISK命令把所有的分区删除，再用随机附带的两张软盘添加COMPAQ分区，用FDISK添加DOS分区，再装入DOS系统。然后重新启动，这时奇怪的事情发生了，加电后并没有进入DOS系统，而是进入了SETUP程序。这说明系统从COMPAQ分区引导了，退出SETUP重新启动，启动后还是进入SETUP程序。如果从A盘引导，可以看到C盘上有DOS系统，但它就是不能自举。估计可能是引导设置上有问题，先把COMPAQ分区删除，CMOS设置中有一项禁止软盘启动项，于是选中它，也不从A盘引导，但结果还是不能从C盘启动，更恶劣的后果是连A盘也进不去了。由于现在硬盘上已经没有COMPAQ分区了，也不能用它把CMOS信息改回来了。真是把“聋子”又治成了“哑巴”了。还好手头还保留着该机器的用户手册，从中查出使用主板上的E8跳线可以恢复CMOS缺省设置。真是万幸！把CMOS放电之后，又可以从A盘启动了，转了半天又回到了起点！<br>
+　　最后只有做硬盘低级格式化这一招了，做低级格式化我还真是心慌，不得不小心翼翼，第三方的格式化软件还真有点信不过，庆幸的是COMPAQ的SETUP程序里包含着低级格式化程序，原装的的程序应该不会有错。于是开始低级格式化硬盘，在提心吊胆中度过了一个半小时，总算完了。再添加COMPAQ分区和DOS分区，装入DOS系统。这一次COMPAQ DP2000终于从C盘启动了。事后分析,该机曾感染过CIH病毒，可能是它作的怪！<br><b>　　(河北　王桂香)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99472301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

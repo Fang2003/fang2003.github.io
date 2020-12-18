@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- SCSI设备之间冲突排除一例</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='http://www.lpzx.edu.cn/library/DNB/1999/9935/images/banner.jpg' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>35 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; SCSI设备之间冲突排除一例</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 SCSI设备之间冲突排除一例 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　笔者原来购置的一台奔腾90电脑已远远不能满足目前的需要，因此决定新买一台，但旧电脑原配置的1GB的SCSI硬盘和一台SCSI接口的扫描仪则继续留用。新电脑的基本配置如下：梅捷6BA＋主板、赛扬300A CPU、128M内存、昆腾IDE接口6.4GB硬盘和昆腾SCSI接口1GB硬盘、华硕TNT显卡、帝盟S90声卡、HP6100C扫描仪(SCSI接口)以及一些其它外设。硬件安装就绪后，接着进行硬盘分区，6.4G硬盘用作启动盘并分为C盘和D盘。1G的SCSI硬盘设为E盘，然后安装DOS和WIN98，一切顺利，接着把各分区转换为FAT32模式，随后安装显卡和声卡驱动程序也都一切正常，但最后安装HP扫描仪时却发生了“意外”，故障并不是出在扫描仪本身，而是再次启动计算机时，发现E盘丢失(即那个SCSI硬盘)，打开“控制面板／系统／设备管理器”进行查看，在“SCSI控制卡”条目下可见到已安装了两块SCSI适配卡，但对应于硬盘的那块SCSI卡图标前出现了一个黄色的感叹号，并在“属性”项中有提示指出该设备运行不正常，但在“资源”项中却又看不出有什么冲突。就在这时,我还发现“磁盘驱动器”设备条目下有一个硬盘图标被打上一个红色的叉，正是那个SCSI硬盘，这表明该设备已被禁用。<br>
+　　从前后安装经过可看出，当系统只存在一个SCSI设备时不会发生异常，而同时安装两个SCSI设备时，则其中的SCSI硬盘就会失效。我首先试着通过跳线来改变SCSI设备的ID号，但丝毫不起作用，故障依旧。难道是驱动程序运行不正常?我从“设备管理器”中删除硬盘SCSI卡和相应的磁盘驱动器后重启计算机，让系统自动检测硬件重新安装驱动程序，结果情况确实按想象的发展，在“我的电脑”中出现了盼望已久的E盘，在“设备管理器”中也可见到各设备是在正常运行。事情到此本应该结束，但事实上并没有我想象的那么简单。当我第二天开机时，老毛病又出现了，昙花一现的E盘再次失踪，其故障表象仍和昨日一模一样。<br>
+　　无奈之下，突然想起了硬盘SCSI卡的说明书，虽说是苦涩难看的英文字，这时也得当畅销小说来读，终于在一段文字中找到了问题的关键，其意思是说：一个系统中最多可同时安装四块这样的SCSI适配卡，由于任何PCI卡都需要使用系统的一个中断号并占用苦干地址空间，因此该卡通过跳线可设置成四种不同的中断类型，它们分别是INT A\INT B\INT C\INT D，而产品出厂时的默认设置是INT A类型，另外，当多个SCSI设备链接在一起时，必须将处于两末端的SCSI设备上的“终端器”设为有效。症结找到后，动手就有了目的，由于本机并不存在多个SCSI设备链接的情况，而只是同时存在两块SCSI卡，因此“终端器”的跳线不必更改，只需将分配“中断号”的跳线器逐个换试，当跳成INT C时，久违的E盘终于出现了。经过几次重新启动，一切正常。<br>
+<b>(广东　高扬)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/35/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99352304.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

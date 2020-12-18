@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>利用注册表找回“丢失”的内存<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　<br>
+        　　本人在使用Windows95过程中，偶尔查看“我的电脑/属性”时，在常规项中显示“30MB 
+        RAM”。本人使用计算机的内存为32MB RAM，不知为何丢失了2MB RAM。<br>
+        　　由于平时注意到Windows95在显示硬盘可用空间等项时，有时不准确。于是进入MS－DOS方式，用MEM命令查看，显示各项均正常。重新启动计算机，查看“我的电脑/属性”，显示依然为“30MB 
+        RAM”。<br>
+        　　利用KV300、Kill、瑞星等杀毒软件查杀病毒，没有发现病毒。<br>
+        　　由此想到每次开机时，总有“Vnetsup.vxd”未找到的提示信息。怀疑丢失的2MB 
+        RAM与这个提示有关。在同事的帮助下，终于利用注表编辑器在“HKEY/LOCAL/MACHINE/System/CurrentControlSet/Sevices/Vxd”下，找到“Vnetsup.vxd”字符串，删除此主键后，退出Regedit.exe，重新启动计算机，不再出现出错提示，查看“我的电脑/属性”，常规项显示“32MB 
+        RAM”。<br>
+        　　“Vnetsup.vxd”字符串是存储有关网络设置中的电脑标识及用户名等信息。由此想到故障的原因，在这之前，本人出于好奇，试图给计算机系统增加拨号网络及TCP/IP协议，由于当时手头没有Windows95系统安装盘，中途退出安装，又逐项删除所选定的网络组件。但是，Windows95已将电脑标识及用户等信息载入注册表，由于未能及时在注册中删除这些内容，因此网络的驱动程序需要占用一部分系统RAM。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">(山东　崔元福)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9850/index.htm.txt">《电脑报》1998年12月28日第50期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

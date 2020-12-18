@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">BIOS设置不当引起死机故障一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：<br>
+        一台Pentium MMX 166兼容机，松下八倍速光驱，丽台WinFast 3D S600DX显卡，Maxtor钻石二代 
+        1.7GB硬盘，SB16 SE PnP声卡，16MB EDORAM内存，微星MS－5158主板。开机自检通过，提示发现光驱，但是在执行CONFIG.SYS文件中的光驱驱动程序(松下5.17V)时，屏幕上显示“Supporting 
+        the following units:”后死机，按Ctrl＋Alt＋Del键热启动无效，只能按Reset复位键热启动，复位后故障现象同上。<br>
+        #3　　故障分析与排除：<br>
+        因为松下5.17V光驱驱动程序运行速度太慢而换用其它品牌光驱的驱动程序，但换回以后就发生了上述故障，首先可以排除驱动程序兼容性的问题，然后怀疑硬盘和内存中有病毒，用KV300 
+        O＋＋、AV95 2.0、KILL 77、病毒克星VRV等杀毒软件检查，没有发现病毒。又怀疑在CONFIG.SYS和AUTOEXEC.BAT文件中加载了与松下光驱驱动程序相冲突的其它程序，重新启动后，当屏幕上出现“Starting 
+        MS－DOS……”时按下F8键，将CONFIG.SYS中的各行命令分步执行。前面的各命令行均正常执行，但当执行到松下光驱驱动程序时，即DEVICEHIGH=C:\CD－ROM\CDMKE.SYS/D:MSCDOO/P:300/N:1,又发生死机。又因为光驱驱动程序和MSCDEX.EXE均设置正确且自检时也能发现光驱设备，最后不得不重新启动进入CMOS 
+        SETUP程序(AWARD 4.51PG)，光驱设置为“IDE SLAVE”，一切正常。无可奈何下只能选择“LOAD 
+        SETUP DEFAULTS”(加载设置缺省设置值)，存盘后退出重新启动，意外地发现松下光驱驱动程序顺利运行，且光驱能够正常使用，故障排除。<br>
+        　　后来经过逐项检查发现Award BIOS中的CHIPSET FEATURES SETUP(芯片组设置)中的SYSTEM 
+        BIOS CACHEABLE(系统BIOS缓存)项设置为ENABLED后出现故障，而设置为DISABLED后一切恢复正常。<br>
+        #3　　小结：<br>
+        当BIOS的SYSTEM BIOS CACHEABLE设置为ENABLED后，会与运行速度较慢的光驱驱动程序发生速度不匹配而引起死机故障，兼容机尤其突出。由此可见，CMOS参数的合理设置对电脑正常工作和性能至关重要。(上海 
+        &nbsp; 陈震宁)<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

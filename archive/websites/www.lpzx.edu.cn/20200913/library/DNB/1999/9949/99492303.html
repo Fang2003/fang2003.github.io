@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='stylesheet' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 硬盘无法自举解决方法一例</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>49 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 硬盘无法自举解决方法一例</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 硬盘无法自举解决方法一例 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　故障现象:前几天一位同学告急，说他的一台计算机有问题，无法从C盘启动了。在CMOS中将启动顺序改为“A，C”，情况一样，改用从CD－ROM启动也一样，整个系统在自检完成后就进入死机状态，整个屏幕除了最上面的光标在那里闪烁外，没有任何启动的迹象，同时硬盘灯长亮。跑去看了一下，情况的确比较奇怪，由于当时已经是晚上10点左右了，凭我多年攒机的经验，初步判断是硬盘的问题，就将他的硬盘拆下来，准备带回来仔细研究一下。<br>
+　　解决方法：回来后，我将同学的硬盘接在IDE 1口上，进入CMOS自动检测该硬盘的参数，BIOS可以侦测到正确的硬盘参数，看来硬盘物理损坏的可能性比较小。在CMOS中将硬盘参数设置正确，重新启动（分别测试了三遍，启动顺序分别设置为：C、A、CD－ROM；A、C、CD－ROM；CD－ROM、A、C），则系统在自检完成后出现上面描述的黑屏情况，连那张熟悉的硬件配置表都看不到，更别提“Starting MS－DOS...”的字样了。重新进入CMOS中将硬盘参数设置为“None”，启动顺序设置为“A，C”后，计算机可以正常从A驱启动，进入DOS状态。屏蔽硬盘就可以顺利启动系统，加上硬盘则无法正常启动，看来硬盘就是导致计算机无法启动的原因所在。我在心中慢慢回想以前所遇到的各种硬盘无法自举问题，好像这种现象以前我也碰到过。仔细想来，似乎前些年闹得沸沸扬扬的“XX炸弹”所引起的硬盘问题也是这样的症状。是否是这样呢，于是我又详细地询问了我的同学出现此问题前所发生的一切。他告诉我，此症状是在用PQMAGIC将硬盘由FAT32转化为FAT16重启计算机后发生的，看来还不是“XX炸弹”的问题。根据我多年的经验，初步判断是在用PQMAGIC进行FAT32到FAT16的转换过程中，硬盘的Boot扇区主引导记录或分区表遭到破坏，而系统在启动时（无论启动顺序如何）都将要获得有关硬盘的一些信息（只要系统中存在硬盘），读不出来就一直循环读，这很有可能就是导致硬盘灯长亮的原因所在。解决此问题最简单的两条途径是：一是低级格式化硬盘，让它跳过启动时循环读硬盘信息的步骤，当年我中了“XX炸弹”时采用的就是低级格式化硬盘的办法来恢复硬盘正常工作的；二是改写DOS系统内核程序，但分析DOS系统的内核程序，也不是一时半会能够搞定的。办法是想到了，如果采用低级格式化硬盘的话，虽然仅仅需要低格几秒钟处理一下硬盘的初始几个磁道就可以了，但这样一来硬盘上的数据就将丢失，因此这只能在迫不得已的情况下使用。既然可以肯定硬盘问题不是由于“XX炸弹”引起的（被“XX炸弹”破坏的硬盘和其他硬盘相连启动时会自动连带破坏其他正常工作的硬盘），我就可以放手开始我的修复工作了。<br>
+　　首先我将我同学的硬盘接在我的Second IDE接口上，作为我的第二主硬盘，在CMOS中正确设置它的参数后由我的硬盘启动系统，不进入Windows，直接进入DOS状态。这时我同学的硬盘就是DOS状态下的D盘，进入D盘看了一下，东西都还在，可以用DIR看目录和文件，没有问题，这个硬盘的其他分区的东西也都在。看来硬盘不存在物理问题，至于无法启动的问题几乎可以肯定是硬盘的Boot扇区主引导记录或分区表遭到破坏所致。运行Debug调用D盘（也就是我同学的C盘）的分区表仔细看了一下，没有问题。那么，极有可能是该硬盘的Boot扇区主引导记录遭到了破坏，恢复Boot扇区主引导记录就比较容易了，在A盘或C盘传输一下系统即执行“SYS D：”就可以搞定。拆下我的硬盘，将我同学的硬盘接在第一 IDE接口上作为第一硬盘启动，一切OK，顺利进入熟悉的视窗画面。至此，此硬盘无法自举的问题算是完全解决。<br><b>
+(浙江　张京京)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99492303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

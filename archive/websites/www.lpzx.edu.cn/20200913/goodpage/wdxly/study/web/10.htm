@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>垂直滚动看板</title>
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+</head>
+
+<body>
+<div align="center"><center>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td width="100%">
+<table border="0" width="100%">
+<TBODY>
+<tr>
+<td width="100%"><p align="center"><span class="text11" style="COLOR: rgb(252,177,3)">垂
+直 滚 动 看 板 </span></p>
+
+
+</TBODY>
+</table>
+<table border="0" width="100%">
+<TBODY>
+<tr>
+<td width="100%"><span style="font-size: 9pt">　</span><p align="left"><span
+style="font-size: 9pt"><font color="#cc0000">第一步</font>：请将下列原代码放入html文件的&lt;head&gt;和&lt;/head&gt;之间
+&lt;script&gt;<br>
+&lt;!--<br>
+lstart=150<br>
+loop=true<br>
+speed=250<br>
+pr_step=5<br>
+function makeObj(obj,nest){<br>
+nest=(!nest) ? '':'document.'+nest+'.'<br>
+this.css=(document.layers) ?<br>
+eval(nest+'document.'+obj):eval(obj+'.style')<br>
+this.scrollHeight=document.layers?this.css.document.height:eval(obj+'.offsetHeight')<br>
+this.up=goUp<br>
+this.obj=obj + &quot;Object&quot;<br>
+eval(this.obj + &quot;=this&quot;)<br>
+return this<br>
+}<br>
+function goUp(speed){<br>
+if(parseInt(this.css.top)&gt;-this.scrollHeight){<br>
+this.css.top=parseInt(this.css.top)-pr_step<br>
+setTimeout(this.obj+&quot;.up(&quot;+speed+&quot;)&quot;,speed)<br>
+}else if(loop) {<br>
+this.css.top=lstart<br>
+eval(this.obj+&quot;.up(&quot;+speed+&quot;)&quot;)<br>
+}<br>
+}<br>
+function slideInit(){<br>
+oSlide=makeObj('divNews','divCont')<br>
+oSlide.css.top=lstart<br>
+oSlide.up(speed)<br>
+}<br>
+onload=slideInit<br>
+//--&gt;<br>
+&lt;/script&gt;<br>
+</span></p>
+<p><span style="font-size: 9pt">其中lstart设置滚动开始的时间，loop设置是否循环，speed是滚动速度，pr_step设置间距。<br>
+</span></p>
+<p><span style="font-size: 9pt"><font color="#cc0000">第二步</font>：请将下列代码放入html文件的任何地方，建议放在最后，就是&lt;/html&gt;之后。
+</span></p>
+<p><span style="font-size: 9pt">&lt;div id=&quot;divCont&quot;
+style=&quot;position:absolute;width:500;height:50;top:270;<br>
+left:250;clip:rect(0,300,100,0)&quot;&gt;<br>
+&lt;div id=&quot;divNews&quot;style=&quot;position:absolute;top:0;left:0&quot;&gt;<br>
+&lt;table border=0 width=300&gt;&lt;tr&gt;&lt;td&gt;&lt;font
+style=&quot;font-size:9pt;color:#0080c0;&quot;&gt;<br>
+这是一个垂直滚动看板，但它并不是用复杂的Java所实现的，而是采用Javacript语言和<br>
+DHTML的层直接生成的。你只要将几段代码放在HTML页面中就可以看到希望的效果了。&lt;br&gt;<br>
+&lt;br&gt;<br>
+这个特效很实用，可以用作网页广告、告示板、更新通知等地方。&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;<br>
+&lt;/DIV&gt;&lt;/DIV&gt;<br>
+其中的width,height,top,left可以按自己要求更改层的位置，clip:rect后的四个数字则定义了文字的顶端缩进、高度、宽度、左边界缩进。
+</span>
+
+</TBODY>
+</table>
+
+
+</table>
+<SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></center>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center">
+<p><br>
+<font size="+2">第十课&nbsp;巧用Alpha和Layer（一）</font></p>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="66%">&nbsp;&nbsp;&nbsp;&nbsp;在上一课学了Alpha特效后，你是否想更进一步，利用我们的Alpha特效和层(layer)的应用来制作出效果更炫的Flash动画呢？
+哈，我想，我说的一定是废话吧。那好，看右面的例子，这节课，我们就要来做这样的一个被称为“幻影特效”的动画。
+<td width="34%"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/al01.swf">
+<embed src="swf/al01.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT>
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width=65%>
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="61%">
+<div align="center"><img src="images/l10_01.gif" width="245" height="48"></div>
+
+<td width="39%">把Colors的Background项设为黑色
+
+<tr>
+<td width="61%"><img src="images/l10_02.gif" width="308" height="108">
+<td width="39%">选OK钮后的工作区
+
+</table>
+
+<td width="35%">&nbsp;&nbsp;&nbsp;&nbsp;首先，还是打开Flash后按Ctrl+M设定工作区大小为300*100。不过这次略有不同，我们要把Colors的Background项设为黑色。选OK钮后，工作区应该是这样。（如左图）
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="55%">&nbsp;&nbsp;&nbsp;&nbsp;这时，在菜单栏里选择Insert -&gt;Layer或点击层区下方的左起第一个按钮，新建两个层(Layer)，分别是Layer2、Layer3。选中Layer3层的第一帧，在工作区中心用白色写上大大的“FLASH”，并把它定义成符号(Symbol)。这时，工作区应如右图所示。然后把这一帧复制到Layer2和Layer1的第一帧。
+
+<td width="45%">
+<div align="center"><img src="images/l10_03.gif" width="310" height="109"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;复制完后，在每一层的第二十帧的小方格内都点右键，弹出菜单后选择Insert keyframe插入一个关键帧。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;接下来便是最关键的一步了。先在层区把Layer3和Layer1层加上小锁，以免对Layer2层进行操作时影响到这两个层。然后，选中Layer2层的第一帧，在符号(Symbol)“FLASH”的框里点右键，弹出菜单后，选择Properties...修改符号的属性。按照上一课学过的方法，点选Color
+Effect标签，把这个符号的Alpha值设为80。
+<td>
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="48%"><img src="images/l10_05.gif" width="175" height="83">
+<td width="52%"><img src="images/l10_04.gif" width="210" height="100">
+
+<tr>
+<td width="48%">
+<div align="center">把Layer3和Layer1层加上小锁</div>
+
+<td width="52%">
+<div align="center">把这个符号的Alpha值设为80</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="55%">&nbsp;&nbsp;&nbsp;&nbsp;选中Layer2层的第二十帧，把这一帧里符号(Symbol)“FLASH”的Alpha值设为0，然后把这个符号(Symbol)移到工作区的右上方（这时符号只显示一个框）（如右图）。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;对Layer1层也进行与对Layer2层进行的相类似的操作。只是在开始不是把Layer3和Layer1层加上小锁，而是把Layer3和Layer2层加上小锁；在最后把Layer1层的符号(Symbol)不是移到工作区的右上方，而是移到左下方。其余都进行相同的操作。
+
+<td width="45%">
+<div align="center"><img src="images/l10_06.gif" width="311" height="109"></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;为什么我们要保留Layer3不动，而对Layer3层下的Layer2和Layer1层进行Alpha值的改动呢？注意本课开始时的动画，发现了没有，中间的那个白色的“FLASH”字样是不动的，而动画开始播放后，两层“幻影”效果却被它遮住了一部分，原因就是这个。记住，上面的层能遮盖掉下面的层。不动的白色“FLASH”字样就在Layer3层，而“幻影”效果分别在Layer1和Layer2层。不信的话，试着调动Layer3层到Layer1层下面试一下，你一定能理解的。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;好了，进行最后一步。在Layer1和Layer2层的第一帧的小方格里点右键，弹出菜单后，选择Properties...
+-&gt;Tweening -&gt;Motion后，按确定键，搞定！这时的层区和Timeline区应如下图所示：
+
+</table>
+<br>
+<img src="images/l10_07.gif" width="357" height="83"> <br>
+<br>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;好了，按下Ctrl+Enter看一下最终效果，满意吧。是不是觉得很简单，不错，一幅好的FLASH作品最重要的在于它的创意，而不在于它的复杂度，所以，运用你的头脑，利用我们学过的知识，创造出更炫，更酷的FLASH作品吧！那么，下面我们就一起进入<a href="lesson11.htm">下一课</a>的学习，为了我们的目标，打下坚实的基础。
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson11.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

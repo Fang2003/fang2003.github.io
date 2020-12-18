@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>为什么关闭内部Cache游戏才能正常运</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　&nbsp; 
+        &nbsp;&nbsp; 陕西读者薛晓武问：我的电脑是方正FP＋5／166微机，16MB内存。问题如下：<br>
+        　　1.在DOS6.22下运行《将族》游戏时死机，而在Windows95下运行该游戏时，屏幕显示“一般性保护错”。但是此软件在其它奔腾166微机上运行正常。按照《电脑报》有关介绍，多次修改“Config.sys”和“Autoexec.bat”文件，故障依旧。一个偶然的机会，将AMI 
+        BIOS中的“内部Cache”设置为“Disable”，微机竟然运行良好，只是速度大为降低，请问是什么问题？<br>
+        　　2.当把“Internal Cache”设为“Disable”时，“External Cache”也自动从“Enable”变为“Disable”。这是否正常？能否分别设置内部Cache和外部Cache？<br>
+        　　3.该机配有同创16倍速光驱，在Windows95下播放VCD及列光盘目录均正常，但是在DOS6.22和DOS7.0下却显示“D盘为非法盘”，这是何故？<br>
+        　　答：来信所说的第一个问题有两种可能的故障原因。第一种可能是外部Cache本身有问题。你可以打开内部Cache而关闭外部Cache，看看系统能否正常工作。如果能够正常工作，则可以基本断定是外部Cache芯片有故障。第二种可能是Cache或者内存的CMOS参数设置不当。来信没有说明运行其它程序时是否也出现死机或者GP错误。如果运行其它程序时也出现所说的故障，可以怀疑是内存参数或者Cache参数设置不当。请你试设置内存的读写时间（适当减小），或者试设置外部Cache的读写时间（适当增加），看看能否解决问题。如果仅仅是在玩《将族》游戏时才出现上述问题，这可能与该游戏频繁地在内存和Cache中交换数据（其它程序的数据交换没有这样频繁）有关，由于两种器件速度上的巨大差异会造成数据混乱而引起所说的故障。可修改内存或者Cache的读写时间一试。<br>
+        　　来信所说的第二个问题，笔者没有同类微机，无法实验。但是试过几种其它微机的AMI 
+        BIOS，都能够分别设置内部或者外部Cache。你可以在同类型的机器上试一试，如果其它微机可以分别设置，则进一步说明你的外部Cache有问题。<br>
+        　　对于第三个问题，估计是在DOS环境下的Autoexec.bat文件中没有写入MSCDEX.EXE命令行，或者在Config.sys文件中没有写入光驱驱动程序的命令行。Windows95在运行时不需要这两个文件，只要注册表中有光驱的有关登录项就可以正常工作。请你在DOS6.22和DOS7.0下检查两个文件，加入有关的命令行就可以正常工作了。<br>
+        　 
+        &nbsp; 山东读者邱远明问：我是贵报的忠实读者，也是一个电脑发烧友，经常摆弄自己的计算机。不久前，我从《新潮电子》1998年第二期中的一篇文章中掌握了在内存中建立虚拟磁盘的方法。为了让我的计算机“奔腾”起来，便修改了Config.sys文件，在Config.sys文件后面加入以下命令行：<br>
+        　　Devicehigh=C：\Windows\Ramdrive.sys 4096 512 112／E<br>
+        　　但是，我发现效果并不是很明显。于是便恢复了以前的配置。删去了该行。但是此时问题发生了，Windows95启动出奇地慢，就像死机一样，过了好几分钟，才勉强启动成功，并且桌面上的图标，如“我的电脑”就像是冬眠一样，过了很久才能打开，并且别的应用程序启动时也一样出奇地慢！开始怀疑是病毒，用 
+        KV300＋R＋＋版查杀，没有发现病毒。用磁盘扫描程序及碎片整理程序对硬盘进行修整也不行，故障依旧。我大伤脑筋，后来发现“我的电脑”图标中，多了一个光驱图标，我想一定是Windows95认为虚拟驱动器还存在。我不是已经把虚拟驱动器删除了吗？那么这个驱动器从哪里来的呢？不得不重新在Config.sys加上先前的命令行，故障才算排除，可是我并不想让它存在，但又不敢删除，不知如何是好，请专家指教！<br>
+        　　答：根据来信所说的现象，我作了下面的模拟实验：在Windows95下打开Sysedit编辑器，按照来信所说，在Config文件中加入“Devicehigh=C：\Windows\Ramdrive.sys 
+        4096 512 112／E”命令行。重新启动机器后，虚拟磁盘就建立起来了。打开“我的电脑”，可以看到一个集成电路的图标，图标下面的文字是“MS－Ramdrive”。然后再打开Sysedit编辑器，删除加入的命令行（或在命令行之前加REM）。重新启动机器后再看“我的电脑”,其中已经没有虚拟磁盘驱动器了。也没有出现你所说的Windows95工作速度变得十分缓慢的问题。下面提两点处理意见供你参考：<br>
+        　　1.应该在Windows95下面，进入Config.sys文件中删除加入的命令行；因为DOS6.22环境下的Config.sys文件与Windows95环境下的Config.sys文件并不是同一个文件。<br>
+        　　2.虚拟磁盘是建立在内存中的，一般来说，只要在Config文件中删除建立虚拟磁盘的命令行，系统就不会在启动时建立虚拟磁盘了。来信说在“我的电脑”窗口中出现了光驱的图标（你是否建立了虚拟光驱），对于虚拟光驱来说就不同了，它是建立在硬盘中的，一旦建立就会作为一个硬件出现在系统配置中，并且会在注册表中加入有关的登录项。Windows95启动时将按照注册表的登录项给出虚拟光驱来。此后，如果要删除该虚拟光驱，则必须在系统配置中删除它，并且必须在注册表中删除该登录项。现在无法得知你的系统中发生了什么问题，但是建议你首先进入“控制面板\系统\设备管理\磁盘驱动器”，看看有无虚拟盘（无论是虚拟磁盘还是虚拟光驱）的存在。如果存在，则删除它，问题也就解决了（也可以再进入注册表浏览一下，操作方法是在Windows95文件夹中运行Regedit程序，在HKEY_LOCAL_MACHINE\ENUM\ESDI，HKEY_LOCAL_MACHINE\ENUM\FLOP和HKEY_LOCAL_MACHINE\ENUM\SCSI这几个关键字中去查找，然后删除它）。<br>
+        　&nbsp; 安徽省读者张晓沣问：我单位有一台联想计算机，配置为：PII－233CPU，LX－PENTIUM 
+        Ⅱ－JY主板，32M内存，LX－S3 Virage显示卡，2M显存，ACER16速光驱，创新16位声卡。微机内装有正版Windows 
+        95 OSR2简体中文版、Microsoft Office97简体中文版和Richw95等软件。<br>
+        　　近日购得一台ARTEC AT3平台式扫描仪，安装随机附带的驱动程序后可以正常使用，可是只要关闭计算机电源，下次再开机后就不能使用扫描仪了，屏幕显示：“Unable 
+        to open driver failure or no scanner”，在“系统 
+        ／设备”管理菜单下也找不到ARTEC Scanner这一项，但是只要在开机时先打开扫描仪电源，启动后就可以使用扫描仪，我用KV300，AV95，KILL对机器连查了好几遍都没有发现有病毒。<br>
+        　　请问这是何原因？如何解决？特此求教，望速答为盼！<br>
+        　　答：其实，你已经找到答案了。那就是应该先打开扫描仪电源，然后再接通主机电源，这样扫描仪就可以正常工作了。微机系统的开机顺序是：先外部设备后主机；关机顺序是先主机后外部设备。不论是扫描仪、打印机还是其它外部设备，都应该先接通电源，再打开主机。因为操作系统在启动时，要检查外部设备的存在情况，并且要进行外部设备的初始化工作。如果外部设备的电源没有接通，Windows95就检测不到外部设备的存在，就不可能完成这些工作，也就不能使用外部设备（而且在完成系统启动之后，再接通外部设备电源也无济于事）。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9822/1998/22/index.htm">《电脑报》1998年6月8日第22期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

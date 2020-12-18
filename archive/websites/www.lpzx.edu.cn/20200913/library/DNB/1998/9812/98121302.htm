@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>计算机素描：他是谁？<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　曾经在一本杂志上看到一幅美国总统的低精度画像，这里我用BASIC语言把这幅画像献给大家，看看你能不能猜出他是谁?刚开始你可能还看不出是谁，那就离显示器远一点，再远一点，是不是有点像……<br>
+        　　CLS:SCREEN 0,nonzero:DIM m(5)<br>
+        　　PRINT TAB(27):″Who is he?″<br>
+        　　m(0)=32:m(1)=176:m(2)=177:m(3)=178:m(4)=219:m(5)=219<br>
+        　　FOR i=1 TO 18:READ st,ch＄：LOCATE 5＋i,20＋st<br>
+        　　　　　FOR j=1 TO LEN(ch＄):a=VAL(MID＄(ch＄,j,1))<br>
+        　　　　　　　　　IF a=5 THEN COLOR 15<br>
+        　　　　　　　　　PRINT CHR＄(m(a))；CHR＄(m(a));:COLOR 7<br>
+        　　　　　NEXT j:PRINT<br>
+        　　NEXT i:END<br>
+        　　DATA 7,″425″,5,″255555″,4,″45325555″,3,″355000055″,3,″5530100435″<br>
+        　　DATA 2，″5541001105″,2，″45551453355″，2，″50552351553″，3，″305111013″<br>
+        　　DATA 3,″505511225″，3，″155522055″，4，″35512355″，2，″1145555355″<br>
+        　　DATA 2,″1151555552″，2，″1555045522″，1，″15555555545″<br>
+        　　DATA 1,″4555555555555″，1，″45555555555555″<br>
+        　　答案：亚伯拉罕&middot;林肯<strong>&nbsp;&nbsp;&nbsp;&nbsp; (山东　刘井坤)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月30日第12期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

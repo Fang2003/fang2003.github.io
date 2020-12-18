@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>骑者识马性--3DS的建模技巧</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>骑者识马性--3DS的建模技巧</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp; 　Win 32下的3DS之所以青山不老，魅力长存，还因为它的建模能力不凡，确实是一匹做动画的宝马良驹，虽然它有时也使点性儿。那么，怎么才能把它调教得更听话些呢?骑者识马性，得先摸摸它的脾气。<br>
+        　　先看看3DS会耍些什么花招。一是在你制作酒瓶、玻璃杯之类时，妆罢出来见夫婿，美则美矣，可中央却有一根芯，大煞风景。二是布尔运算没准头，尤其是誉为神雕的“差”运算，按部就班，一钮按下，表示计算的红线在两图形公共边界，像地火燃了一截后就停止了，并宣告此路不通，“建议调整法线”。好了，你耐着性子把两物体的可能法线组合通通调整一遍，布尔运算产儿仍然左呼右唤不出来。三是用三视图曲线拟合(Fit)建模时，未必是种豆得豆，很可能种豆得瓜，弄出一怪胎来。<br>
+        　　3DS调皮捣蛋的怪招还有一些，仔细琢磨起来，不能怪马使性，还得怪骑手不谙马性。首先，酒瓶芯的问题，一是你作图太粗放，旋转轴没画直；二是虽画直了，可能轴心与形心有偏差。直不直的问题容易纠正，两心合一却要费点心思。将旋转半径设成比零大一点点，比如0.000001，这么小的半径，轴几乎无处可偏。即使有偏差，小到这种程度已超出显示器的显示能力，芯儿也就影消踪灭了。其次说布尔运算，要怪你技术差也有点冤枉，因3DS作者也可能遇到过麻烦，要不，他怎么会在布尔运算的对话框内专设一个hold按钮，让你在执行此项操作前，先暂存一下，还不是为了在不成功后可以重作吗?笔者猜想，3DS在用布尔运算对物体雕刻时，少不了要对边界上的点进行识别，查查身份，是搭接点呢?还是焊接点?搭接点貌似一点，实际是两点，是活点；而焊接点的关系很明确：其点是合二为一的死点。正因为搭接点貌合神离的原因，3DS就无从辨认了，或者张冠李戴乱点鸳鸯谱，点一错，线自然也错，面会跟着错，法线的错误就在所难免了。布尔运算的失败，恐怕就是在点的死活上。若将他们事先通通焊死，我发现布尔运算的成功率大大提高。办法如下：在3D 
+        Loftor中按Make按钮后，在接着弹出的对话框中点击Weld钮，这样在3D 
+        Editor中出现的物体的点都被焊死。若图形已经在3D Editor作成三维，就不必再退到3D 
+        Loftor，在编辑模块中同样有焊接功能。过程是击活某视窗，再选Select/Face(或Fence)框住物体，选Modify/Vertex钮，点击selected(或击空格键)，再击同一视窗使图形变红(点变黑)，至此焊接大功告成，然后再作布尔运算就十拿九稳了。<br>
+        　　最后是Fit拟合，实践证明拟合的成败与三视图曲线从2D Shaper调到3D 
+        Lofter的次序有关。有时碰巧就立竿见影，有时却要折腾多达6次，很烦人。其实关键是我们要对三条曲线作些简单分析，在2D 
+        Shaper分出主视图曲线与控形侧视图曲线。控形曲线控制了物体的“身段”，它首先在3D 
+        Loftor登场亮相，即在2D Shaper将控形曲线击黄后，输到3D Lofter再选Shaper/get/shaper，然后再从2D 
+        Shaper输入主视图曲线，执行：Deform/fit/symmetry off(on用在对称时)，激活Fit 
+        X/Get/Shapes，最后将第三曲线取入，执行：Deform/fit/get/Shaper/Gen path/make，在对话框中输入物体名字，并点击Tween、Contour两钮，击OK/F3就能见到渴望的主体了。当然在绘三视图曲线时，3DS也爱跟你开个玩笑，从2D 
+        shaper送往3D Loftor的图形一切都好，但就是Fit不成图形，这毛病就出在“不遵医嘱”上。那三视图曲线是有特定要求的，即在封闭图形的上下两曲线“至少要有一点，最多只能两点”。若显示仅一点时，要当心，该点一定得为峰点或谷点(合称尖点)，所以不妨放大观察一下，最好用鼠标将其拉成尖点，点在上时拉成峰点，反之拉成谷点；若两点时，要用Segment－Refine在中间插进一点，然后拉成尖点，这样处理后，再注意到送曲线的次序，就可保Fit拟合万无一失了。</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年4月27日第16期38版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">工作站安装Windows 
+        95后故障排除<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　一台P5/133工作站(16M内存、2G硬盘、S3显卡、NE2000兼容网卡)原装有中文DOS 
+        6.22，上Novell网(Netware 3.1)工作正常(服务器为HP E45 PⅡ/233/32M/4.3G)。升级前对硬盘做了高级格式化(Format 
+        C:/u)，安装了Windows 95(OSR2)并添置一块ALS007声卡。安装成功后，开机按F8进入DOS 
+        7.0，运行网卡NE2000安装盘上的上网软件(LSL.COM、NE2000.COM、IPXODI.EXE、VLM.COM)，加载VLM.COM时死机，更换网卡、网络线后故障依旧，于是怀疑网卡的中断号或I/O地址与其他硬件产生冲突。打开网卡配置文件NET.CFG，内容如下：<br>
+        　　……<br>
+        　　Link Driver NE2000<br>
+        　　PORT 300<br>
+        　　IRQ 5<br>
+        　　……<br>
+        　　而声卡的缺省配置恰恰是IRQ5。重新启动Windows 95，选择“开始|设置|控制面板|系统|设备管理”，将声卡的IRQ改为9。在“网络”中添加Netware客户和IPX/SPX兼容协议后重新启动计算机，在“网上邻居”中找到了服务器的SYS卷。<br>
+        　　由于笔者所用的软件只能在DOS环境下运行，因此重新进入DOS 7.0，顺利地连上了服务器，但在运行Login命令时提示Access 
+        denied的出错信息，通过试验发现，输入任何命令（包括不可识别的命令）都有同样的现象。在Windows 
+        95的DOS BOX中，故障依旧。鉴于Windows 95中能正常访问服务器，于是怀疑DOS 
+        7.0与Netware 3.1不兼容。从DOS 6.22一号安装盘上拷贝IO.SYS、MSDOS.SYS、COMMAND.COM到C:\并更名为IO.DOS、MSDOS.DOS、COMMAND.DOS，在MSDOS.SYS中加上Bootmulti=1。开机按F4进入以前的DOS版本，一切恢复正常。<br>
+        　　事后笔者对Windows 95与Netware的兼容性做了一次测试，结果如下：（×表示不兼容）</font></p>
+        <div align="center"><center><table border="1" width="90%">
+          <tr>
+            <td width="16%" rowspan="2"><font color="#369681"><span class="ourfont">Netware<br>
+            版本</span></font></td>
+            <td width="16%" rowspan="2"><font color="#369681"><span class="ourfont">DOS 6.22</span></font></td>
+            <td width="34%" colspan="2" align="center"><font color="#369681"><span class="ourfont">Windows 
+            95</span></font></td>
+            <td width="34%" colspan="2" align="center"><font color="#369681"><span class="ourfont">DOS 
+            7.0</span></font></td>
+          </tr>
+          <tr>
+            <td width="17%"><font color="#369681"><span class="ourfont">非OSR2</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">OSR2</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">非OSR2</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">OSR2</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%"><font color="#369681"><span class="ourfont">3.1</span></font></td>
+            <td width="16%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">×</span></font></td>
+          </tr>
+          <tr>
+            <td width="16%"><font color="#369681"><span class="ourfont">4.0</span></font></td>
+            <td width="16%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">√</span></font></td>
+            <td width="17%"><font color="#369681"><span class="ourfont">×</span></font></td>
+          </tr>
+        </table>
+        </center></div><p class="ourfont"><font color="#369681"><br>
+        　　希望读者们在使用Netware时，注意与Windows 95的兼容性问题，应保留以前的DOS版本，有条件的最好在服务器上安装Windows 
+        NT 4.0。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

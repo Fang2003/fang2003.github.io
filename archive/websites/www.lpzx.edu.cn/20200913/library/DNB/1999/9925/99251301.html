@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='Wang Ji'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VFP编程技巧六则</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'>&nbsp;</A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>25 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VFP编程技巧六则</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VFP编程技巧六则 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　<p align="center"><b>一、在VFP 5.0中表格打印时没有响应以及不能对齐的原因</b></P>
+　　在VFP5.0中处理表格打印时，在最后都需加一句set printer to，该语句的功能就是将打印缓冲器内容送到打印机。至于表格不能对齐是因为字体原因，主要是数字、字母等，Windows中许多字体的不同字符的宽度是不同的（如I和W），因此您要选字符宽度相同的字体，如宋体等中文字体就行，?和@...say都可以跟font子句，如所有输出到打印机的语句都可以用如下语句：<br>
+　　? ′name′ font ′宋体′ 或 @2,5 say ′name′ font ′宋体′<br>
+　　<p align="center"><b>二、运行表单时出现name属性错误的处理</b></p>
+　　一位朋友在前不久用do form frmcx.scx运行一个表单后，并将该表单的name属性设为frmcx，执行_SCREEN.frmcx.caption=“kkkkkk”,会出现“不能识别成员frmcx”的错误。其实，产生这种情况的原因很简单，作为创建的最外层容器对象（一般是表单）不能直接用其名称调用，而应将其赋给一个变量，然后用这个变量名来调用，比如用如下语句：<br>
+　　do form frmcx name frmcx<br>
+　　这样就可以用frmcx来调用这个表单了，在这里frmcx是一个变量，随着程序的运行结束，该变量也会释放，这时再用该变量来调用此表单就不行了，为了使它不释放，可在上面的语句后面加linked子句，即：<br>
+　　do form frmcx name frmcx linked<br>
+　　<p align="center"><b>三、用LostFocus事件处理组合框失去焦点</b></p>
+　　有些朋友在处理这一动作时往往使用click事件，而不加以对lostfocus事件的使用，即当光标离开该文本框时对其它文本框作相应设置，而没离开之前，说明您的输入还没有最后确定，这时一般也不需要对其它文本框设置，如更进一步想在没离开之前就将结果反映到其它文本框中，那要使用keypree事件，即每键入一个字符，就对其它文本做出设置。您的方法之所以会不稳定，就是因为使用了click事件，即用鼠标点了就起作用，而没点（如按回车键）就不起作用。
+　　<p align="center"><b>四、使用鼠标右键获得以前曾输入过的数据</b></p>
+　　按鼠标右键得出以前输入过的数据，比如在人事档案中，都是先输入每个人的基本资料，在业务处理中又要输入他的名称及有关信息，通常是按鼠标右键显出他的个人资料。再双击鼠标或按确定按钮，即将有关信息输入。用表单或控件的rightclick事件接收鼠标右键，在其事件代码中编入相应程序，如根据当前显示的人名查询其相关资料，并打开另一表单将资料显示出来，表单上可设一确定按钮，按了该按钮后，将相应数据存入相应的控件或变量中即可。
+　　<p align="center"><b>五、以ASCII方式对数据库进行加密的方法</b></p>
+　　在一般情况下，我们往往用低级函数直接改写数据库内容，以达到加密数据库的目的。现在，我以一个比较简单易行的方法来加以实现，即将数据全部以字符的ASCⅡ码方式存入数据库（数值和日期等先转换为字符），在存之前先用一加密子程序（最好用函数的方式调用）把ASCⅡ码用一个或几个固定数值与其加、减、乘、除以后再存入数据库，提取数据时用一解密子程序做逆运算即可。
+　　<p align="center"><b>六、实现将VFP5.0交叉数据表以及VFP 5.0交叉数据表向导生成的“Qpr”文件编译成EXE后正确运行</b></p>
+　　1）将VFP目录下的vfpxtab.prg文件添加到项目管理器中；<br>
+　　2）将vfpxtab.prg第189行的语句中的第3个和第4个“＋”前各加一个单引号，否则编译会出错，这是VFP的一个BUG；<br>
+　　3）将qpr文件中的(_GENXTAB)改为vfpxtab。<br><b>(风帆）</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/25/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99251301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

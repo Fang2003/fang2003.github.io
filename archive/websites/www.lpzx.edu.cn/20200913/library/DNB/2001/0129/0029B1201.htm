@@ -1,0 +1,162 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>《电脑报》电子版CPCW.COM</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0129/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0129/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第29期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->VB中用ODE实现工业控制<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->编者按：DDE(Dynamic 
+              Data Exchange)动态数据交换是OLE方式的前身，当前主流的开发工具(VB、VC、PB等)大都支持此功能，我们使用它可以很方便地实现工业控制。下面，我们就以北京首都国际机场污水处理厂的语音报警系统为例，介绍它的实现方法。<br>
+              北京首都国际机场污水处理厂设备运行控制采用基于AB公司SLC500(AB公司的可编程控制器型号)的计算机控制系统。全厂设备采用远程控制，由工作人员在中央控制室发布命令控制设备运转(如：根据集水井液位控制水泵启停等)，大大减轻了工作人员的劳动强度。但是同时由于设备出现故障时只显示故障信息而没有声音报警，给工作人员及时发现问题带来很大不便。我对系统进行分析后，利用VB编程通过DDE与工控系统通讯，实现了语音报警功能。下面就向大家做个介绍。<br>
+              1.通讯系统分析<br>
+              该系统为工业DH+网，系统硬件环境由两台安装1784-KTx通讯卡的工控PC机和五台SLC500(AB公司的可编程控制器型号)组成，其结构如图(^29020504a^)1所示：<br>
+              PC机上的通讯软件和工业组态软件分别为RSLINX和RSVIEW。它们之间的通讯采用DDE技术。所以我只要知道提供DDE服务的Application、Topic、Item就可以在VB开发环境下利用的相关控件与RSLINX及RSVIEW进行通讯了。<br>
+              2.语音提示报警功能的实现<br>
+              语音播放可以支持WAV或MP3格式的声音文件，由于MP3文件体积小所以我选用这种格式。从网站下载一个Activex控件用于播放语音，此控件为MP3Play.OCX，很容易找到。下一步是录制语音，先用Windows中的录音机将所需的提示语音录成WAV格式，再用MP3转换器将其转成MP3格式。<br>
+              3.程序总体结构图(图(^29020504b^)2)<br>
+              A部分主要说明：DDE的建立以及出现报警后将报警信息插入到报警队列最后。报警队列是等候报警的信息的排队。因为计算机在广播报警信息时一次只能广播一条，建立报警队列后同时发生的报警将等候上一条播完后再广播。<br>
+              B部分主要说明：定时在报警队列中检查及有报警信息后的播放过程。<br>
+              4.程序设计<br>
+              下面举一个实例说明程序的实现。无论何种原因，当进水泵房故障停机时，PC机报警“进水泵故障！”。<br>
+              首先建立好“进水泵故障！”的语音文件存为alarm.mp3，随后建立一个标准VB程序，在Form1上添加一个Timer控件用于控制程序循环，一个Mp3Play控件用于播放报警文件，一个Label控件用于建立DDE通讯，一个Listbox控件用于建立报警队列。Name属性均为默认，listbox 
+              的visible属性设为False。<br>
+              在Form1＿load事件中加入如下代码：<br>
+              Private Sub Form1＿load <br>
+              Label1.LinkTopic=&quot;rtdata｜airportauto&quot; '设立DDE连接通道<br>
+              Label1.LinkItem=&quot;plc1\f101&quot;<br>
+              '设定连接项目为进水泵故障，此项根据连接项目的不同而不同，如果你使用的是RSVIEW则在TAG EDITER中可以找到与PLC数据点相对应的LinkItem<br>
+              Label1.LinkMode=1 '自动连接<br>
+              Timer1.interval=1000 '设定循环周期为1秒<br>
+              Timer1.enable=true '打开定时器<br>
+              End sub<br>
+              在Label1的Label1＿Change中加入如下代码：<br>
+              Label1＿Change<br>
+              dim i as integer<br>
+              if label.caption=1 then '如果变为报警状态则<br>
+              For i=0 to listbox1.listcount-1 '检查队列，有此信息则不插入信息<br>
+              If &quot;alarm&quot;=listbox1.listi then Exit sub<br>
+              Next i<br>
+              Listbox.AddItem&quot;alarm&quot;'插入新报警信息到队列最后<br>
+              End sub<br>
+              在Timer1的On＿Timer事件中加入如下代码：<br>
+              Private Sub Timer1＿Timer<br>
+              Dim retcode As Integer<br>
+              Dim temstring As String<br>
+              If LISTBOX1.ListCount = 0 Then Exit Sub '检查队列是否为空<br>
+              remstring = LISTBOX1.List0 '取出第一条报警信息<br>
+              LISTBOX1.RemoveItem 0 '将该条移出报警信息队列<br>
+              On Error GoTo error＿handle<br>
+              retcode = Mp3Play.OpenApp.Path + remstring + &quot;.mp3&quot; 
+              &quot;&quot;<br>
+              retcode = Mp3Play.Play '播放语音报警<br>
+              Exit Sub<br>
+              error＿handle '错误处理<br>
+              retcode = Error<br>
+              soundable = True<br>
+              Resume Next<br>
+              End Sub<br>
+              好了！软件完成，在RSLINX和RSVIEW运行之后启动该程序，就可以实现进水泵故障的语音报警了。上面只是个例子，在功能上及用户界面上都很不完善，但是利用同一方法可以实现在线设备的监视及信号采集等工作，如果你有兴趣可以深入了解一下。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

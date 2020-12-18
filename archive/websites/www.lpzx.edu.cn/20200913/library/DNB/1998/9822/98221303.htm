@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>数据库文件的转换</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>数据库文件的转换<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在人们的应用中，有时由于一些特殊的原因，需要在数据库 
+        (.DBF)文件与纯文本(.TXT)文件及Excel(.XLS)文件之间进行转换。在此，笔者将自己工作中进行转换的方法简介如下，希望能起到抛砖引玉的作用。<br>
+        　　<strong>1. 数据库(.DBF)文件转为纯文本 (.TXT)文件</strong><br>
+        　　在Fox、FoxPro环境中，可在打开数据库文件的情况下，执行Copy命令：“Copy 
+        to filename.txt SDF”即可得到当前数据库数据的标准格式的纯文本文件，其中，每一条记录定长，记录从文件头部开始存放，每个记录用回车换行符结束，各记录的同一字段的长度都相同，不足的用空格补充；或执行“Copy 
+        to filename.txt DELIMITED”得到紧凑格式的文本文件，其每个记录用回车换行符结束，所有数据都删去开头和尾部空格，字符型数据用双引号定界，数据之间用逗号分隔。笔者在使用中认为SDF参数在纯文本方式的转换中使用较为方便。<br>
+        　　<strong>2由纯文本文件转为数据库(.DBF)文件</strong><br>
+        　　在一定情况下可大大加快录入速度。首先进入Fox或FoxPro环境中，建立数据库文件，然后以此文件结构建立纯文本录入的框架文件：Copy 
+        structure to filename.txt，然后退出数据库管理系统，在文本编辑器按框架文件结构录入数据，此时，即可在一些优秀的文本编辑器中进行全屏幕、大块复制地录入，极大地提高录入速度；录入完毕后，可在数据库管理系统中打开刚建立的数据库文件，执行命令“ 
+        Append from filename.txt SDF”即可将在文本编辑器中录制完毕的文本文件变为数据库文件filename.dbf。这种方法要受到一定的限制，即录入纯文本文件时，只能在一行内录入一条记录，当数据库字段太多或某些字段字数太多时，一些文本编辑器的一行装不下一条数据库记录，因此处理起来稍嫌麻烦。<br>
+        　 <strong>3Excel文件转为数据库(.DBF)文件</strong><br>
+        　　这种转换，可以在享受Excel 97方便快捷的录入后，充分利用以前的数据库管理系统，方便使用习惯，保护单位的投资。在 
+        Excel 97中，笔者将用电子表格录入的.XLS文件转存为.DBF文件，使用了以下方法：在Excel 
+        97中，将录入好的电子表格文件打开，再依次单击“文件\另存为”，在“保存类型”栏中选择为“DBF 
+        3(dBASE III)”，再选择“保存”，即可得到与电子表格所载数据格式一致的数据库文件，现在就可利用单位以前使用的数据库信息管理系统进行各项处理。<br>
+        　　<strong>4数据库(.DBF)文件转为Excel文件</strong><br>
+        　　这种转换，可以运用Excel强大的功能来对以前的数据进行分析。其转换非常简单快捷：在Excel环境中，依次打开“文件\打开”，在文件类型中选择dBase文件再单击“确定”即可得到原数据的.XLS文件。<br>
+        　　上述各项在UCDOS 6.0、Fox 2.1、FoxPro 2.5 for DOS、FoxPro 2.6 for Windows环境中运行通过；涉及Excel 
+        97的在PWin 95中运行通过。<strong>(四川　章利峰)</strong><br>
+        　<strong>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月8日第22期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 让华硕主板支持软跳线</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/databandbanner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>34 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 让华硕主板支持软跳线</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 让华硕主板支持软跳线 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　嗨，悄悄告诉你一个秘密：华硕P3B－F以前各型号的BX主板也可以支持软跳线，即SOFT MENU功能，在BIOS中就可以将CPU超频搞定，不用再将你的宝贝机箱拆来拆去了！首先请检查一下你的主板BIOS的日期及版本。开机，在系统检测内存时按“PAUSE”键，若版本在1006以上，那么恭喜你，请继续阅读本文；若版本低于1006，很不幸，本文的方法在你的主板上不适用。本文所述的方法在P2B－F和P2B的主板上实验成功，现以华硕P2B—1006主板为例加以介绍。<br>
+　　<p><b>第一步：准备工作</b></p>
+　　“巧妇难为无米之炊”，你需要有MODBIN.EXE、AWDFLASH.EXE和P2B_SOFT.EXE这三个文件。其中，MODBIN.EXE和AWDFLASH.EXE是修改BIOS文件和写入FLASH ROM必不可少的，P2B_SOFT.EXE是华硕主板BIOS的PATCH（补丁）文件。AWDFLASH.EXE文件必须到华硕主页去下载，因为华硕主板采用自己的专用写入程序，一般的写入程序不能用于华硕的主板。由于AWARD ROM有1M和2M之分，写入的电压也不同，故在下载时要弄清楚哪一个AWDFLASH.EXE适合于你的主板。BIOS文件修改程序MODBIN.EXE可以到AWARD的主页去下载。这里要说的是华硕主板BIOS的PATCH文件，可以到ftp:∥soft.hn.cninfo.net/download/DRV/BIOS/p2b_soft.zip 下载（压缩包大小为67K，其中包含有MODBIN.EXE）。<br>
+　　对于初次尝试者，请务必做一张启动盘，方法如下：格式化时用“FORMAT /S”命令或在DOS下使用“SYS A：”，然后将AWDFLASH.EXE拷入软盘，注意不要拷入AUTOEXEC.BAT和CONFIG.SYS这两个文件。<br>
+　　在使用AWDFLASH.EXE之前，要先进入BIOS设置界面，将CPU的L1、L2 Cache禁用（DISABLED），将“BIOS UPDATES”设为“允许（ENABLED）”，因为该主板BIOS具有防止病毒写入破坏的功能，不设为“允许(ENABLED)”下面无法进行程序写入。
+　　<p><b>第二步：获得BIOS文件</b></p>
+　　将软盘插入软驱，启动机器，在DOS提示符下运行AWDFLASH.EXE文件，选择第二项,对现有BIOS文件进行备份,取名为OLD.BIN，得到BIOS文件。如果你的BIOS不是最新的，建议你去华硕主页下载一个最新的。这里采用的是P2B主板BIOS的最新版本文件1008.BIN，免去了导出BIOS文件之麻烦，同时还对主板BIOS进行了升级，一举两得，何乐而不为呢？
+　　<p><b>第三步：升级BIOS文件</b></p>
+　　进入Win9X，继续以下步骤：<br>
+　　1．将备份或下载得到的BIN文件拷贝到MODBIN.EXE和P2B_SOFT.EXE所在的目录，运行MODBIN.EXE，选择“Load File”，然后按“ESC”键退出，会在MODBIN.EXE所在的目录中得到一个叫做ORIGINAL.TMP的文件；<br>
+　　2．运行P2B_SOFT.EXE，如果一切顺利的话，会显示PATCH成功的信息，在P2B_SOFT.EXE所在的目录，你会见到一个名叫NEW_ORIG.TMP的文件；<br>
+　　3．再次运行MODBIN.EXE，选择“Load File”文件，切换至另一个窗口中将ORIGINAL.TMP删除，然后把NEW_ORIG.TMP改名成ORIGINAL.TMP，切换回MODBIN.EXE任务，选择“Update File ”，回车，然后就可以存成一个文件，即对BIOS文件进行了升级，如本例就可以得到一个新的1008.BIN。
+　　<p><b>第四步：升级主板BIOS</b></p>
+　　重新启动机器，用启动盘引导，运行AWDFLASH.EXE 程序，选择第一项,输入BIOS文件名,如1008.BIN，AWDFLASH.EXE将把这个文件写入主板的FLASH ROM。注意，此时千万不要终止机器或停电，否则“你就放声地哭吧，没有人会知道”！写入时间较长，要耐心等待！写入完成后，重新启动机器，进入BIOS设置界面，要先选择“LOAD BIOS DEFAULT”，按F10保存退出，再次启动机器进入BIOS设置界面，将L1、L2  Cache 打开，并将“BIOS UPDATES”设为“禁止（DISABLED）”。
+　　<p><b>第五步：轻松超频</b></p>
+　　进入BIOS设置界面，选择“BIOS FEATURES SETUP”，仔细看看，有没有令你心跳的内容？第一项就是设置CPU频率，有233/240/260/270/300 MHz的自动设定和手工设置等选项。CPU倍频从2.0一直到8.0，外频支持50/66/75/83/100/103/112/124 MHz，这可是P3B－F主板中才有的选项。<br>
+　　不超频老是不甘心，超频可天气又如此炎热，还得时不时找跳线降下来……这下就方便了，我的赛扬300A小超一下，轻松跑在100×4.5=450MHz，凉爽得很！不行，还得再安全点，跑75×4.5=337 MHz吧！不动“刀枪”免拆机箱，超频信手拈来，方便之极。还犹豫什么，赶快动手吧！<br>
+　　错误之处，欢迎来信指正。我的E－Mail：wufuyuan@ynmail.com<br>
+<b>(江苏　吴付愿)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/34/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99342001.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+
+
+</NOSCRIPT>
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

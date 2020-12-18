@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Novell网多用户远程自启动的实现<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　Novell网络的应用已深入各个方面，使用最多的莫过于教育部门。本文对我部(微机部)教学网络的建设、管理实践加以整理，与各位同行进行交流。本文着重对多用户自启动及用户管理进行介绍，对提高网络与用户的安全性和保密性，实现用户文件的科学管理，具有实用价值。<br>
+        　　1.软硬件环境及目录结构<br>
+        　　我部教学网拥有服务器1台，无盘工作站20台。工作站均使用含有BOOTROM的AN2000网卡。网络采用总线型的拓扑结构，使用Netware 
+        3.12、MS－DOS 6.22操作系统。<br>
+        　　为方便管理，将服务器硬盘Netware分区分为SYS卷与USER卷(1G Netware分区，SYS卷为800M、USER卷为200M)。<br>
+        　　SYS卷下的目录结构：<br>
+        　　—LOGIN<br>
+        　　—SYSTEM<br>
+        　　—MAIL<br>
+        　　—ETC<br>
+        　　—UCDOS<br>
+        　　—FOXPRO<br>
+        　　—WINDOWS<br>
+        　　—EXCEL<br>
+        　　—WINWORD<br>
+        　　USER卷下的目录结构：<br>
+        　　—TEMP<br>
+        　　—U1<br>
+        　　—U2<br>
+        　　—U3<br>
+        　　—U4<br>
+        　　…<br>
+        　　—U19<br>
+        　　—U20<br>
+        　　2.多用户远程自启动的实现和用户的管理<br>
+        　　过去一段时间内，我部学生上机都使用USER用户名进行登录，每个学生都使用USER子目录，并以S权限授给USER用户，造成管理上的混乱。<br>
+        　　2.1　解决方案<br>
+        　　新建立21个用户及U、U1至U20，U1至U20用户目录建在USER卷。将U、U1至U20用户放在EVERYONE组中，将目录权限设置给EVERYONE组以R、F权限，分别给予U1至U20用户目录除S权外的所有权限，工作站通过中间用户U根据网卡地址分别远程登录U1至U20用户，USER卷映射为G盘，分别对应用户U1至U20进行操作。<br>
+        　　2.2　具体操作步骤<br>
+        　　(1)以网络系统管理员身份登录<br>
+        　　F：\LOGIN&gt;LOGIN SUPERVISOR<br>
+        　　(2)建立用户及用户主目录<br>
+        　　①进入SYSCON选择User information，按回车键；②按Insert键输入U1；③按回车键出现“Path 
+        to creat user's home directory”句，将WS\SYS:Ux改为WS\USER\Ux；④按回车键会自动建立属于Ux的用户目录；5按ESC退出；6重复2～5步建立U1～U20用户及用户目录；7建立U用户，但不建立U用户目录。(其中x为1～20)<br>
+        　　(3)建立LOGIN.DOC<br>
+        　　在LOGIN子目录下用编辑软件，制作LOGIN.DOC，格式为：<br>
+        　　IF P_STATION=″XXXX25D10D5B″ THEN EXIT ″LOGIN U1″<br>
+        　　IF P_STATION=″XXXX25005C5B″ THEN EXIT ″LOGIN U2″<br>
+        　　……<br>
+        　　IF P_STATION=″XXXXXXXXXXXX″ THEN EXIT ″LOGIN U20″<br>
+        　　其中XXXX25D10D5B、XXXX25050C5B为网卡地址可用USERLIST/A来获得。<br>
+        　　(4)建立U用户登录正本<br>
+        　　①进入SYSCON；②选择User information；③选择U后再选Login script；④写入如下语句：INCLUDE 
+        SYS：\LOGIN\LOGIN.DOC；⑤按ESC键退出。<br>
+        　　(5)建立NET＄DOS.SYS<br>
+        　　①用一系统盘启动机器，盘上至少包括IO.SYS、MSDOS.SYS、COMMAND.COM、IPX.EXE、NETX.EXE、HIMEM.SYS、AUTOEXEC.BAT、CONFIG.SYS。<br>
+        　　AUTOEXEC.BAT的内容如下：<br>
+        　　@ECHO OFF<br>
+        　　IPX<br>
+        　　NETX<br>
+        　　F:<br>
+        　　LOGIN U<br>
+        　　SET TEMP=G：TEMP<br>
+        　　CONFIG.SYS文件内容如下：<br>
+        　　DEVICE=HIMEM.SYS<br>
+        　　DOS=HIGH<br>
+        　　FILES=30<br>
+        　　BUFFERS=20<br>
+        　　②建立NET＄DOS.SYS步骤<br>
+        　　a.以SUPERVISOR身份登录<br>
+        　　b.MAP F:=SYS:SYSTEM<br>
+        　　c.MAP G:=SYS:LOGIN<br>
+        　　d.G：<br>
+        　　e.F:DOSGEN A:<br>
+        　　f.用FLAG给NET＄DOS.SYS以只读、共享属性。<br>
+        　　(6)建立用户站点限制<br>
+        　　①进入SYSCON；②出现User information分别选择U1回车，选择Station 
+        restrictions按Insert。分别输入网络与网卡地址，然后按ESC键退出。重复以上操作建立U2～U20用户站点限制。<br>
+        　　(7)设置目录权限给用户和用户组。<br>
+        　　将F盘下SYS卷的目录按操作要求将目录权限设置给EVERYONE组。而且至少有R、F权。<br>
+        　　(8)分别建立U1～U20用户登录正本。<br>
+        　　为考虑某些软件必须使用C盘，登录正本可有如下内容：<br>
+        　　MAP G:=USER:Ux<br>
+        　　DRIVE C：<br>
+        　　(9)修改系统登录正本。<br>
+        　　系统登录正本内容如下：<br>
+        　　IF LOGIN_NAME=″SUPERVISOR″ THEN<br>
+        　　MAP F:=SYS:SYSTEM<br>
+        　　END IF<br>
+        　　MAP G:=USER:<br>
+        　　MAP S1:=SYS:PUBLIC<br>
+        　　MAP S2:=SYS:DOS<br>
+        　　MAP S3:=SYS:JX\TT<br>
+        　　MAP S4:=SYS:JX\WB<br>
+        　　MAP S5:=SYS:FOXPRO<br>
+        　　MAP S6:=SYS:UCDOS<br>
+        　　COMSPER=S2:COMMAND.COM<br>
+        　　3.为解决Novell网使用DOS命令SYS、FORMAT要A盘的问题，可在系统登录正本中加入MAP 
+        ROOT D:=F:\DOS语句，将D盘设F盘的伪根目录。使用上述命令时必须在D盘。(F盘上必须包括IO.SYS、MSDOS.SYS)<br>
+        　　通过以上操作，确保每个工作站以不同用户名远程自启动，并分别对应于USER卷下的U1～U20子目录。确保用户文件的安全性和可靠性。有利于系统管理员对用户进行科学管理。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(甘肃　张学军)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月28日第50期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

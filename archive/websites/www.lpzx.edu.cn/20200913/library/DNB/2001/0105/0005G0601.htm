@@ -1,0 +1,122 @@
+<html><!-- #BeginTemplate "/模板/game.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>游戏修改经验谈——提高篇</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/2001/Templates/game.html">游戏广场</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{游戏修改经验谈——提高篇}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 高阶和低阶扫描都会了，应该没有什么难的了吧？如果游戏中有10个地址，你就一个一个去找吗？我们在这里要学的就是利用已经找到的地址来改相关的其他数据。<br>
+              同样，在修改之前我们得弄清原理。在制作游戏时，制作人员总是把相关的数据放在一起，就像我们知道张三和李四很要好，经常在一起，找到张三就能找到李四一样，我们找到其中的一个数值，就能顺藤摸瓜，来个一网打尽。<br>
+              在上一篇中我们已经找到了陈靖仇生命值的地址，现在我们就要利用找到的这个地址来修改灵力、攻击力、防御力、经验值等等的值。切换到游戏，记下当前所有的数值，力量8，耐力 
+              6，经验值23 ……我们把这些数值换成16进制，力量是08耐力是06，经验值是17。然后我们右击一下生命值的地址，选择“Edit 
+              Memory”，发现生命值周围的那些数字是那么的熟悉——17 00 00 00 58 00 23 00 14 00 64 00 
+              23 00 14 00 08 00 06……没错了，就是它们！这些家伙都藏在这里，还真不少呢，当前生命值，最大生命值，力量，耐力……直接把它们改为你想要的值就行了，瞧，呵呵，这下可天下无敌了？（在这个游戏里，攻击和防御力要除去装备附加的值）不过当剧情需要你失败的时候，还是得把这些数值改回来。<br>
+              像物品这些东西，应该是RPG里面最好修改的东东之一，买一个扫描一次，要么吃一个扫描一次，两三次便轻松搞定。但是RPG物品繁多也是一大难题，这样一个一个扫描下去也不是办法，所以我们：<br>
+              买两样相邻的物品，然后分开扫描，分别找到它们在内存中的地址，比较一下，减法总会吧？实在算不清楚的话右击地址表，在弹出的菜单中选择Distance 
+              between two position再同样右击另一个地址表，GM就会告诉你这两个地址的差值。再根据这个差值，试探性地隔着这个差值改一下，切回游戏观察物品数目有没有改变，如果改变了，恭喜恭喜，你找到规律了，就这样改下去吧；没有，再接再厉，继续分析。以现在的中文RPG游戏来说，百分之七八十都是隔4个bytes放一个物品，假如游戏修改多了，一看就知道了，这个差值都省得去找了。<br>
+              不过这样还是有点麻烦，像《新绝代双骄贰》，武功招式有好几十样，物品也很多，一个一个改下去都会烦死，在这里告诉大家一个小技巧：先锁定五六个物品数目，然后在Pos 
+              Table中选择第6个小图标，在下拉菜单中选择Other Function，再输入你想要改变地址表的数值，比如说每4个bytes放一个物品，现在锁定了7个物品，那么你可以输入“+28”“+”号可省略，这样地址表中每格的位置都会往后移28bytes，刚好把后7个物品给改掉了。此方法适用于修改大量有一定规律的数值。<br>
+              直接修改内存适用于很多情况，基本上你能想到就能做到。如修改物品数量，修改物品的ID（在上面说到的每4个bytes放一个物品的游戏中，有一半是按照物品ID2 
+              bytes、物品数目2 bytes来分布的），修改武功招式（很多情况是以01表示有，00表示无；要么是01，02，03这样一个表示一个招式）……这种方法要靠多改多练，只要修改的游戏多了，基本上都是用这种方法修改的。<br>
+              GM的地址表能够保存为.gm格式或.gmx格式，我们可单击Save .Gm按钮，将当前的地址表保存，下次再玩这个游戏时，可以Load这个地址表，省去了下次再查找的烦恼。而且网络上也有不少GM的金手指档案，不少修改高手已经将这些游戏解剖得非常彻底了，可以去下载下来，省却了自己修改的辛苦。<br>
+              在修改游戏时也会出现无法切换出去的情况，如《风云》，《天地劫》（未打补丁的版本）等等，这时GM附带的Game Master PlusⅡ就派上了用场。在运行游戏之前先把GM和Game 
+              Master Plus都打开，在游戏中键入this（就是打入“this+回车”）即告诉GM要修改这个游戏；键入int即强行暂停游戏，再键入一次恢复运行，这对于修改数值不断变化的游戏很重要，要不然GM还在搜索的时候游戏中的数值就变掉了，自然找不到了；键入scan？？？（？？？表示要搜索的数值，注意一定要从小键盘上键入，因为大键盘上键入的是数字上面的那些符号）；键入STP＃ 
+              ？？？（＃表示将第几个地址格中的数据送到位置表格中修改并锁定，？？？表示要锁定成的数值，＃和？之间要有一个空格）……这是比较重要的几个命令，其它的命令可以在Game 
+              Master Plus中双击该命令名，可看见其相关介绍。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

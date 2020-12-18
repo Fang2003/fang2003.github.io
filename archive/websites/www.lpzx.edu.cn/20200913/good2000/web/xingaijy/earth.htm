@@ -1,0 +1,187 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>美丽的自然风光</title>
+<script language="JavaScript" fptype="dynamicanimation">
+<!--
+function dynAnimation() {}
+function clickSwapImg() {}
+//-->
+</script>
+<script language="JavaScript1.2" fptype="dynamicanimation" src="animate.js">
+</script>
+
+<bgsound src="wav/bird1.wav" loop="1">
+
+</head>
+
+<BODY onload="dynAnimation()">
+<SCRIPT LANGUAGE="JavaScript1.2">
+var no = 25; // snow number
+var speed = 10; // smaller number moves the snow faster
+var snowflake = "images/snow.gif";
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var dx, xp, yp;    // coordinate and position variables
+var am, stx, sty;  // amplitude and step variables
+var i, doc_width = 800, doc_height = 600;
+if (ns4up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+} else if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+for (i = 0; i < no; ++ i) {  
+dx[i] = 0;                        // set coordinate variables
+xp[i] = Math.random()*(doc_width-50);  // set position variables
+yp[i] = Math.random()*doc_height;
+am[i] = Math.random()*20;         // set amplitude variables
+stx[i] = 0.02 + Math.random()/10; // set step variables
+sty[i] = 0.7 + Math.random();     // set step variables
+if (ns4up) {                      // set layers
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" ");
+document.write("top=\"15\" visibility=\"show\"><img src="http://www.lpzx.edu.cn/good2000/web/xingaijy/%5C%22%22);"
+document.write(snowflake + "\" border=\"0\"></layer>");
+} else {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" ");
+document.write("top=\"15\" visibility=\"show\"><img src="http://www.lpzx.edu.cn/good2000/web/xingaijy/%5C%22%22);"
+document.write(snowflake + "\" border=\"0\"></layer>");
+   }
+} else if (ie4up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><img src="http://www.lpzx.edu.cn/good2000/web/xingaijy/%5C%22%22);"
+document.write(snowflake + "\" border=\"0\"></div>");
+} else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><img src="http://www.lpzx.edu.cn/good2000/web/xingaijy/%5C%22%22);"
+document.write(snowflake + "\" border=\"0\"></div>");
+      }
+   }
+}
+function snowNS() {  // Netscape main animation function
+for (i = 0; i < no; ++ i) {  // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+dx[i] += stx[i];
+document.layers["dot"+i].top = yp[i];
+document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowNS()", speed);
+}
+function snowIE() {  // IE main animation function
+for (i = 0; i < no; ++ i) {  // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx[i] += stx[i];
+document.all["dot"+i].style.pixelTop = yp[i];
+document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowIE()", speed);
+}
+if (ns4up) {
+snowNS();
+} else if (ie4up) {
+snowIE();
+}
+// End -->
+</script>
+<div id="Layer7" style="position:absolute; left:15px; top:94px; width:53px; height:16px; z-index:8"><a href="index.htm">&lt;&lt;首页</a></div> 
+<div id="Layer8" style="position:absolute; left:75px; top:50px; width:500px; height:78px; z-index:9"> 
+  <table width="500" border="0" cellspacing="0" cellpadding="1">
+    <tr>
+      <td>
+        <div align="center"><a href="earth.htm">自然风光</a></div>
+      </td>
+      <td>
+        <div align="center"><a href="encyc.htm">自然奥秘</a></div>
+      </td>
+      <td>
+        <div align="center"><a href="aniplant.htm">动物植物</a></div>
+      </td>
+      <td>
+        <div align="center"><a href="human.htm">人类起源</a></div>
+      </td>
+      <td>
+        <div align="center"><a href="protect.htm">环境污染</a></div>
+      </td>
+      <td>
+        <div align="center"><a href="huanbao.htm">绿色行动</a></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div align="center"><a href="earth.htm"><img border="0" src="avis/fengg1.gif" width="50" height="39"></a></div>
+      </td>
+      <td>
+        <div align="center"><a href="encyc.htm"><img src="images/button4.gif" border="0" width="45" height="45"></a></div>
+      </td>
+      <td>
+        <div align="center"><a href="aniplant.htm"><img src="images/button2.gif" width="51" height="42" border="0"></a></div>
+      </td>
+      <td>
+        <div align="center"><a href="human.htm"><img src="images/navb1.gif" border="0" width="45" height="45"></a></div>
+      </td>
+      <td>
+        <div align="center"><a href="protect.htm"><img border="0" src="images/navb2.gif" width="45" height="47"></a></div>
+      </td>
+      <td>
+        <div align="center"><a href="huanbao.htm"><img src="images/navb3.gif" border="0" width="45" height="45"></a></div>
+      </td>
+    </tr>
+  </table>
+</div>
+<p>       
+<img border="0" src="images/roof.gif" width="600" height="100">
+<table width=600>       
+  <tr>       
+    <td width="260" valign="middle" align="center"><a onmouseover="document['fpAnimswapImgFP1'].imgRolln=document['fpAnimswapImgFP1'].src;document['fpAnimswapImgFP1'].src=document['fpAnimswapImgFP1'].lowsrc;" onmouseout="document['fpAnimswapImgFP1'].src=document['fpAnimswapImgFP1'].imgRolln" href="ri.htm"><img border="0" src="images/earthb1a.gif" id="fpAnimswapImgFP1" name="fpAnimswapImgFP1" dynamicanimation="fpAnimswapImgFP1" lowsrc="images/earthb1b.gif" width="214" height="171"></a></td>       
+    <td width="260" valign="middle" align="center"><a onmouseover="document['fpAnimswapImgFP2'].imgRolln=document['fpAnimswapImgFP2'].src;document['fpAnimswapImgFP2'].src=document['fpAnimswapImgFP2'].lowsrc;" onmouseout="document['fpAnimswapImgFP2'].src=document['fpAnimswapImgFP2'].imgRolln" href="yun.htm"><img border="0" src="images/earthb2a.gif" id="fpAnimswapImgFP2" name="fpAnimswapImgFP2" dynamicanimation="fpAnimswapImgFP2" lowsrc="images/earthb2b.gif" width="197" height="151"></a></td>       
+  </tr>       
+  <tr>       
+    <td width="260" valign="middle" align="center"><a onmouseover="document['fpAnimswapImgFP3'].imgRolln=document['fpAnimswapImgFP3'].src;document['fpAnimswapImgFP3'].src=document['fpAnimswapImgFP3'].lowsrc;" onmouseout="document['fpAnimswapImgFP3'].src=document['fpAnimswapImgFP3'].imgRolln" href="shan.htm"><img border="0" src="images/earthb3a.gif" id="fpAnimswapImgFP3" name="fpAnimswapImgFP3" dynamicanimation="fpAnimswapImgFP3" lowsrc="images/earthb3b.gif" width="232" height="189"></a></td>       
+    <td width="260" valign="middle" align="center"><a onmouseover="document['fpAnimswapImgFP4'].imgRolln=document['fpAnimswapImgFP4'].src;document['fpAnimswapImgFP4'].src=document['fpAnimswapImgFP4'].lowsrc;" onmouseout="document['fpAnimswapImgFP4'].src=document['fpAnimswapImgFP4'].imgRolln" href="shui.htm"><img border="0" src="images/earthb4a.gif" id="fpAnimswapImgFP4" name="fpAnimswapImgFP4" dynamicanimation="fpAnimswapImgFP4" lowsrc="images/earthb4b.gif" width="218" height="168"></a></td>       
+  </tr>       
+</table>       
+       
+<table border="0" width="600">
+  <tr>
+    <td width="100%" valign="top" align="center"><a href="index.htm"><img border="0" src="images/home.gif" width="23" height="32"></a>      
+      
+    </td>
+  </tr>
+</table>
+      
+       
+       
+</body>       
+       
+</html>       

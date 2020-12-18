@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- BIOS热拔插的灾难</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0' href="images/yjds.gif"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><FONT CLASS='title'>目录</FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; 48 期 &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; BIOS热拔插的灾难</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 BIOS热拔插的灾难 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　10月24号，是朋友一生中最“黑暗”的一天。朋友经营的一间“网吧”，有5台联网机器，主板为采用SIS5571芯片的精英P5SC－B主板，在这个追求高性能的时代，人人都喊升级，朋友也不例外。提升系统性能，可采用的方法有升级机器硬件和软件两种方式，衡量利弊，当然也出于经济能力，理所当然要选择软升级了。找来相关的文章迅速充一下电，上网到精英的主页上下载来高版本的BIOS程序，打开机箱开始升级。<br>
+　　把下载的文件解压，生成4个文件，BIOS升级文件说明Sca14a.txt， BIOS升级执行文件说明FLASHTXT，升级程序AMIFL814.EXE，还有一个就是BIOS的Firmware升级文件Sca14a.rom。仔细看BIOS升级文件说明。按升级的步骤做了一张DOS6.22启动盘，拷贝上升级所需的文件，用软盘启动机器。与AWORD升级程序不同，AMI的升级程序竟然没有备份的一项，没有就没有吧，选“Go head”项，按升级思路操作，屏幕显示升级过程完成，好，大功告成（朋友一阵惊喜）。重开机，机器“亮”了（心中落下一块石头），内存自检，然而当机器检测到其它硬件时，不动了；再重新启动，故障依旧，很显然，升级文件有问题，升级失败了。焦急中找来《电脑报》，把上面有关BIOS升级的文章全部读了一遍，由于还有相同主板的机器，最后决定用热插拔修复受损的芯片。按照介绍的经验，先把一台好机器上的BIOS拔下，然后轻轻地插到原插座上，正常开机后，取下芯片，把坏片轻轻插上，运行升级程序，屏幕显示“BIOS Type Unknow”，芯片类型不能识别，显然芯片已经坏了，这怎么可能，升级怎么会把芯片升坏，百思不得其解，关机后，把拆下的芯片插回去，再开机，机器仍没有显示，怎么回事，整个操作过程中并没有什么失误呀！<br>
+　　接下来的过程更具有戏剧性，升级不成，热插拔反倒又搭上一块好的芯片，真是偷鸡不着反蚀一把米。垂头丧气的朋友又打开一台机器，又重复了上面的热插拔过程，很不幸，该过程并没有使事情有任何变化，狂热的朋友又打开一台机器……<br>
+　　等朋友真正清醒过来，手中完好的机器只剩一台了。接到朋友的电话赶到后，我仔细观察损坏的BIOS芯片，其上的商标为AMI BIOS，说明该BIOS是AMI公司的程序。揭下不干胶的商标，芯片上的型号为：HT M11784 J9729，无法识别是什么类型的芯片，显然芯片是打磨过的，上面标的型号为厂家自行命名的，目的嘛！自然是保密啦！<br>
+　　怀疑是升级过程中操作不当导致芯片受损。把受损的芯片插到编程器上，由于不知芯片的型号和容量，只好用试探的方法来操作，观看用来升级的文件Sca14a.bin，文件大小为128KB，由此可确定芯片容量为1M，即（128K×8）。芯片的容量确定了，再确定其类型，但分析研究上面的型号，得不到任何有用的信息，只能用试探的方法来进行了。FLASH ROM为单电压读写型芯片，即芯片在平时的读和升级时的写操作时的电压是一致的，都是＋5V；EEPROM为双电压读写型芯片，在读芯片内容时，工作电压为5V，在编程（写）芯片时，要加上12V的编程电压；EPROM也是双电压读写型ROM，在正常读芯片过程中，只需要加＋5V工作电压即可，但在编程时，随芯片型号与类型的不同，要加12.5～24V的编程电压。EPROM的特征很明显，在芯片的陶瓷封装上有一个玻璃窗口，平时用不干胶贴住，以免受日光中的紫外线照射而使其内容丢失。该芯片上没有窗口，显然不是EPROM；是EEPROM还是FLASH ROM，则没有任何依据来判断，但由于FLASH ROM的读写电压都是＋5V电压，而且是三种芯片中电压最低的一种，为保险起见，先假设该芯片为FLASH ROM。在编程器上设定好芯片类型和容量后，用编程器读芯片的内容。顺利读出，说明芯片类型选择正确，但在读到地址为“0002c8”时，编程器显示“0002c8地址读失败”，说明芯片内有部分单元已损坏。读另外几块芯片都是显示有内容损坏，但损坏的具体地址不同，说明以上芯片都因“热插拔”而光荣“牺牲”。 损坏的原因很显然是热插拔过程中，芯片受电流冲击导致芯片内电路受损所致。<br>
+　　修复原主板的方法也很简单，原芯片已受损不能用了，只能寻求代用的芯片。因主板BIOS芯片平时处于读的状态，查各类芯片的管脚数据，除了写芯片时，不同芯片的“写”管脚状态有所不同外，在读芯片的状态时，各管脚功能都是相同的。决定用价格最便宜的EPROM 27C010来代替。买来的EPROM芯片首先用紫外线擦除器擦除芯片内数据，然后用剩余那台机器的BIOS芯片内数据为样本，复制出四片EPROM芯片，把各芯片插回到主板上，再开机，所有的机器都恢复了正常。<br>
+　　分析第一台机器升级损坏的原因，怀疑为升级文件版本不正确，为了验证这一点，把升级文件Sca14a..rom 文件写到一片EPROM中，插回到主板上，机器工作正常，显然不是升级文件的问题。<br>
+　　探究升级失败的原因，分析是该芯片结构比较特殊，升级时不能完整重写芯片内部分地址的内容，升级后，其它部分的内容和该部分地址内容前后衔接不当，导致程序混乱，使升级失败。从这次升级过程中得到如下的教训：<br>
+　　1升级失败时不要慌张，保持十分冷静的头脑，一旦失败，应仔细查寻分析失败的原因，在查不出原因的情况下，一定不要轻举妄动，以免导致更大的损失。<br>
+　　2升级时采用热插拔是危险的，任何元件都有一定的功率限额，不能超过元器件的最大功率限额，在带电热插拔元器件时，由于各管脚的工作电压不同，同时热插拔时各管脚不可能同时插上或拔下，因此不可避免电路中会出现浪涌电压和电流，过高的浪涌电压会对芯片内的晶体管造成击穿，而过大的浪涌电流会使芯片内的铝膜引线被熔断，从而导致芯片毁坏性失效。<br>
+　　3升级最可靠的方法是用编程器升级。二者操作的机理是不一样的，平时我们的升级过程是在BIOS程序的控制下，对BIOS本身进行操作，一旦失误，则过程不可逆转，必受损失无疑；用编程器升级就不同了，如果升级不成功，大不了把原备份的文件调回来重新写入即可。<br><b>
+(山东　李宏)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99482003.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> CPCW网站版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

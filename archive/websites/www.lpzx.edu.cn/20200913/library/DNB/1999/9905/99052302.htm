@@ -1,0 +1,80 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>零磁道损坏软盘的再生</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">零磁道损坏软盘的再生<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在日常工作中，软盘的零磁道损坏常常给人带来尴尬的情形，辛辛苦苦编辑好的文件，却由于软盘零磁道损坏而无法从软盘中调用。因为一张软盘的零磁道损坏之后，就不能对其进行各种操作，包括读、写和对软盘进行格式化。而实际上，一张软盘的零磁道损坏之后，并不等于整张盘就报废了，大多数情况下，软盘还是可以修复的。<br>
+        　　<strong>判断零磁道损坏的方法</strong><br>
+        　　在DOS工作方式下，将软盘插入软驱，进行读写操作，若出现以下提示：<br>
+        　　“General failure error reading drive A”，这种情况可能是由以下原因造成的：<br>
+        　　1.插入的软盘是买到后还没有进行格式化处理的；<br>
+        　　2.软盘经过多次使用可能出现坏的扇区；<br>
+        　　3.在坏扇区中可能出现了零磁道损坏的情形；<br>
+        　　4.软盘类型与驱动器不匹配等。<br>
+        　　对于第4个原因造成的问题，只要重新设置CMOS即可解决，对于第1、2个原因造成的问题，格式化软盘也可解决，如果在重新格式化过程中出现了含有下面内容的提示：<br>
+        　　“Invalid media or Track 0 bad—disk unuseable”意思是：“无效软盘或0磁道坏，磁盘不能用了”。零磁道损坏的原因有两种：一是物理性损坏，如软盘被划伤、霉变等，用目测法即可看出。另一个原因是非物理性损伤，即没有明显的划痕和零点。对于后者，一般都可以恢复其存储功能，使其再生。<br>
+        　　<strong>处置零磁道损坏的方法</strong><br>
+        　　软盘零磁道损坏了之后，贮存在磁盘中的文件或数据有可能丢失，如果是重要的文件或数据，而在此之前又没有采取必要的备份措施，那就会造成无法估量的损失，因此，此时的处理原则是：尽量保存软盘上的文件，减少损失。按照这个原则，处理方法就可分为以下两类：<br>
+        　　一、优先处理方法<br>
+        　　所谓优先处理方法，就是首先考虑在不破坏磁盘上的文件或数据的情况下，修复磁盘的零磁道，从而能够调用磁盘上的文件或数据。根据笔者经验，以下两种方法比较有效：<br>
+        　　1.利用PCTOOLS或DISKCOPY将坏磁盘整张拷贝到一张新磁盘上，然后再在备份盘上恢复文件或数据。在拷贝时，可以看到坏磁盘零磁道错误的信息，拷贝到备份盘引导区的信息也是乱七八糟的无用的ASCⅡ码，拷贝备份后就可用DEBUG来恢复文件或数据了。方法是：<br>
+        　　①进入DEBUG；<br>
+        　　②取一张带有正确引导区的磁盘插入A驱；<br>
+        　　③将正确的引导区读入内存；<br>
+        　　L　100　0　0　1；<br>
+        　　④将备份盘插入A驱；<br>
+        　　⑤将正确的引导区写入内存；<br>
+        　　W　100　0　0　1；<br>
+        &nbsp;&nbsp;&nbsp; ⑥退出DEBGU。<br>
+        　　经过以上几个步骤就能通过备份盘使用原坏盘中的文件或数据了。但是在操作过程中必须注意：插入A驱中的好盘与坏盘容量必须相同。<br>
+        　　2.如果用方法1不能修复，可借助工具软件Norton Disk Doctor(又称磁盘医生)进行修复。具体操作方法是：<br>
+        　　①进入Norton Disk Doctor主菜单；<br>
+        　　②选择第一个主菜单项“Diagnose Disk”，然后回车执行它；<br>
+        　　③选择需要恢复零磁道的软盘类型；<br>
+        　　④按照屏幕回答，逐项纠正出错的引导区内容；<br>
+        　　⑤生成一个报告表，根据报告表，你就可知道磁盘是否有坏扇区，引导区内容是否已修复等。<br>
+        &nbsp;&nbsp;&nbsp; 一般经过以上几个步骤处理后，就可以使用零磁道损坏的软盘上的文件了。<br>
+        　　二、一般处理方法<br>
+        　　如果经过优先处理方法处理后，文件仍然不能使用，就只有采用格式化方法来恢复磁盘的零磁道了，但文件就要丢失了。步骤如下：<br>
+        　　1.如机器有两个软驱，可把故障盘插入B驱动器中格式化，有时会有意想不到的结果——格式化成功，这是因为A驱和B驱的使用频度不一样，可能使软盘的零磁道产生某些偏差。<br>
+        　　2.如果在B驱动器内同样不能进行格式化，再用PCTOOLS进行格式化处理，有时会通过。<br>
+        　　3.如果用PCTOOLS还不能进行格式化处理，找一片事先格式化好的相同型号的软盘(一定要同密度，如都是360KB或12MB)，放在A驱动器内，把坏盘放在B驱动器内，用DOS命令“DISKCOPY 
+        A∶　B∶”进行全盘拷贝，一般可以恢复。<br>
+        　　4.磁化处理，用较强的磁铁在靠近坏磁盘表面处反复移动若干次(注意两者不能接触以免磁铁划伤软盘)，使盘面磁性介质充分受到磁场力的磁化作用，然后再进行格式化处理。<br>
+        　　5.软盘换面，对于3英寸软盘，用薄片轻轻插入塑盒边的中缝，撬开后取出圆形塑片，将塑片与金属蕊片揭开，翻面后重新粘贴好，再用溶剂清除塑片上原揭开处的不干胶，然后装入塑盒中即可。注意在换面时，动作要轻，且不要损坏盘面，将换过面的软盘重新格式化处理即可。<strong>(广东　周云静)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

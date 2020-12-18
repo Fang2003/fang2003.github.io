@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 微星6199主板故障诊断灯误报处理一例</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>42 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 微星6199主板故障诊断灯误报处理一例</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 微星6199主板故障诊断灯误报处理一例 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　故障现象：近日帮朋友组装计算机一台，配置如下：MS－6199主板、散片赛扬400、AGP 128ZX显卡、LGS64M内存、希捷大灰熊硬盘、Acer 54e彩显。安装完毕后，进行拷机，在内存自检前，屏幕出现硬件异常的红色报警信息，自检暂停，按任一键后，继续自检，然后可正常引导操作系统。<br>
+　　故障分析与解决：由于6199主板采用了新技术D－LED系统故障诊断灯，可以根据主板上提供的四个发光二极管的显示状态表明故障所在，故笔者查看D－LED灯的状态，显示为“红绿红绿”，对照主板说明书，应该是VGA BIOS即显卡出了问题，重新换一块能正常工作的AGP显卡，故障依旧。会不会是主板的AGP插槽有问题？再换一块能正常工作的PCI接口的显卡试试，笔者将其从第一个PCI插槽试到最后一个PCI插槽，红色报警信息依然存在，真让人头痛，究竟是哪儿出现的故障，难道微星的D－LED诊断灯不太准？笔者不禁起了疑心，当再次开机时，就紧紧盯住D－LED灯，根据D－LED灯的显示次序判别出在故障处的检测顺序是：CPU→显示系统信息→VGA BIOS。显示系统信息和VGA BIOS都属于显卡的功能，而CPU和显卡绝对是正常的。因为操作系统尚能正常引导，所以笔者判断，出问题的多数是CPU或显卡上的小部件，是个无伤大雅的东西。显卡孤零零的一块，而且也更换过，没发现问题。难道是CPU的问题？笔者使用的CPU是散装Socket 370接口的赛扬，通过转接卡插到主板上。转接卡上也没什么东西可以调整，这时我的目光停留在CPU的风扇上，风扇是我后来添上的，它的电源线直接插到机箱电源输出接口上，大家都知道，盒装CPU的风扇电源线都是接在主板提供的接口上的。会不会是CPU风扇电源线的问题？笔者找了一块盒装PⅡ400，插到主板上，接好风扇电源线，开机，不出所料，一切正常。找到了故障的症结，该如何排除呢？总不至于将赛扬400换成PⅡ400，这样可要多花1000多元，犯不着为一条不影响使用功能的红色报警信息做这么大牺牲，不行不行。还是换个方法吧，改造CPU风扇电源接口又太麻烦了。笔者想CMOS中也许会有禁止检测主板风扇电源接口的选项，动手找看看，发现在“CPU PLUS ＆ PLAY Ⅲ”中“CPU Fan Detected”的默认值是“Enabled”，将其改为“Disabled”，存盘，重启，OK！果然是检测CPU风扇电源接口没有通过，讨厌的提示信息终于消失了。<br>
+　　总结：微星6199主板的D－LED系统故障诊断灯的确为判断故障带来了不少方便，但这只能起辅助作用，大家切不可全信。在发生故障时，还是需要仔细分析，结合硬件更换法进行处理，这样才能查明问题。CPU风扇电源线没有接上却报显卡错，经笔者分析，可能是因为自检程序在检测CPU进程结束后，继续检测显卡，由于CPU主体是好的，检测能正常通过，当检测到CPU风扇电源线时，D－LED诊断灯已经急不可待地跳到了下一个进程即显卡的检测，所以当自检出错暂停时，D－LED灯会指在VGA BIOS状态上。(请本文作者与本报编部联系)</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99422301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

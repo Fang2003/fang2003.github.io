@@ -1,0 +1,151 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>ASP基础讲座（下）<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 当我们需要同浏览器交互的时候，有时少不了数据库。因为只有用数据库才可能大量、快速地处理信息。使用ASP不仅意味着你可以读取Access和SQL 
+        Server的数据库，同时也意味着你可以读取其它ODBC（Open Database Connect,开放式数据库互联）兼容的数据库。为了在ASP中访问数据库，我们将接触一个新名词——ADO(Active 
+        DataObject，活动数据对象)。<br>
+        　　ADO是一种操作Microsoft所支持的数据库的方法，有些类似于以前在VB中听说过的DAO(Data 
+        Access Object，数据访问对象)和RDO(Remote Data Object，远程数据对象)。在ASP中，ADO可以看作是一个服务器组件(Server 
+        Component)，更简单点说，是一系列的对象，应用这些功能强大的对象，即可轻松完成对数据库复杂的操作。在这里我们所要学的是使用这些对象的方法，具体的操作步骤可以归纳为以下几步：<br>
+        　　(一)创建数据库源名(DSN)<br>
+        　　(二)创建数据库链接(Connection)<br>
+        　　(三)创建数据对象<br>
+        　　(四)操作数据库<br>
+        　　(五)关闭数据对象和链接<br>
+        　　下面具体叙述每一步的作法：<br>
+        　　<strong>一、创建数据源名</strong><br>
+        　　用ODBC时，经常见到DSN这个名词，它究竟是什么，有什么重要作用呢？DSN(Date 
+        Source Name)即数据源名称。我们知道，ODBC是一种访问数据库的方法，只要系统中有相应的ODBC驱动程序，任何程序就可以通过ODBC操纵驱动程序的数据库。比如我们系统中有Access的ODBC驱动程序，那么即使我们没有Access软件，也可以在我们的程序（如VB编的）中间对一个Access的MDB数据库加、删、改记录。而且我们根本不用知道这个数据库是放在哪里的。我们只要写出SQL语句，ODBC驱动程<br>
+        序就会帮我们做一切事情。我们在给ODBC驱动程序传SQL指令时，即是用DSN来告诉它到底操作的是哪一个数据库。如果数据库的平台变了，比如我们改用了SQL 
+        Server的数据库，只要其中表的结构没变，我们就不用改写我们的程序，只要重新在系统中配置DSN就行了。由此可见，DSN是应用程序和数据库之间的桥梁，要通过ODBC访问数据库，前提就是我们必须配置好DSN（即架好桥梁)。一个DSN必须包含一些信息：<br>
+        　　DSN的名字：就是给这座桥取个名字，当程序访问数据库时，给系统传的就是这个名字，而不是数据库的实际名称。 
+        <br>
+        　　ODBC驱动程序类型：只有指出驱动程序类型，在我们操作数据库时，系统才会知道调哪个ODBC驱动程序来服务。 
+        <br>
+        　　数据库：你必须指定这座桥到底连接的是哪个数据库，但不同的数据库系统，指定数据库名字的方法有些不同。<br>
+        　　这座桥是架在系统之中的，所以WIN95（NT）提供了一个工具来完成这件事，即是控制面板中的32 
+        BIT ODBC，共有三类，即用户DSN、系统DSN、文件DSN。我们一般就用系统DSN，因为这样可以让所有在该系统上操作的人都能使用这个DSN。<br>
+        　　打开Windows的“控制面板”，找到图标“32位ODBC)”(有一些系统上叫“ODBC”、“32bit 
+        ODBC”)，双击，出现（如图一）对话框，选中标签“系统DSN”，点击“新建”，选驱动程序为MicrosoftAccess 
+        MDB，单击“完成”，弹出对话框（如图二），输出“DataSource Name”为“dsn1”，单击“OK”，再单击“选择数据库”，选中你要使用的数据库，例如“C:\b1.mdb”，这样就OK了。以后我们就用“dsn1”来访问数据库“c:\b1.mdb”，而不直接用文件名“C:\b1.mdb”，这样做的好处是，一旦我们改变了文件名或存放地，就不用再一个一个地修改程序中所有该数据库的名称，而只需修改DSN中的配置就可以了。<br>
+        　<strong>　二、创数据库链接(Connection)</strong><br>
+        　　用过VB的人都知道，DAO中有链接(Connection)，RDO中有odoConnection。链接用以保持一些关于正在访问的数据的一些状态信息，以及链接者信息。ASP文件中如果要访问数据，必须首先创建与数据库的链接，其语法如下：<br>
+        　　set Mconn=Server createObject(“ADOBDCONNECTION”)<br>
+        　　这条语句创建了链接对象mConn，接下来：<br>
+        　　mConn.Open “dsn1”，“vsername”，“password”<br>
+        　　这条语句打开链接，用到了DSN，本例为“dsn1”。其后的两个参数分别是访问数据库的用户名和口令，为可选参数。<br>
+        　　注意：必须有以上两个小步骤，因为链接对象的创建与打开是两回<br>
+        事，只有打开了才真正可以用。<br>
+        　　<strong>三、创建数据对象(Record Set)</strong><br>
+        　　ADO中的数据对象通常保存的是查询结果。Record Set是ADO中最复杂的对象，有许多属性和方法，灵活运用，可以达到许多好的效果。与DAO中的一样，Record 
+        Set保存的是一行行的记录，并标有一个当前记录。以下是创建方法：<br>
+        　　Set Record Set=mConn.Execute(sqtStr)<br>
+        　　这条语句创建并打开了对象Record Set，其中mCon是先前创建的链接对象，sqtStr是一个串，代表一条标准的SQL语句，例如：<br>
+        　　sqlStr=“SELECT ＊ FROM tab1”<br>
+        &nbsp;&nbsp;&nbsp; Set Record Set=mConn.Exe cute(sqlStr)<br>
+        　　这条语句执行后，对象Record Set中就保存了表tab1中的所有记录。在ASP文件中如何引用返回结果，本文将在文末给出一个实例说明。<br>
+        　　<strong>四、操作数据库</strong><br>
+        　　刚才我们通过调用链接对象的Execute方法来将查询结果返回给一个数据对象。我们说Execute方法的参数是一个标准的SQL语句串，所以我们可以利用它方便地执行数据插入、修改、删除等操作，例如：<br>
+        　　sqlStr=“INSERT INTO tab1 VALUES(1,2)”<br>
+        　　mConn.Execute(sqlStr)<br>
+        　　/执行插入操作<br>
+        　　sqlStr=“UPDATE tab1 SET field1=3”<br>
+        　　mConn.Execute(sqlStr)<br>
+        　　/执行修改操作<br>
+        　　<strong>五、关闭数据对象和链接对象</strong><br>
+        　　在使用了ADO对象之后，一定要记住关闭它，因为它使用了一定的服务器资源。通过调用方法close实现关闭，然后再释放它。<br>
+        　　Record Set.close<br>
+        　　Set Record Set=Nothing<br>
+        　　/关闭创建的数据对象<br>
+        　　mConn.close<br>
+        　　Set mConn=Nothing<br>
+        　　/关闭创建的链接对象<br>
+        　　至此，我们已给出了用ASP访问数据库的全过程，包括创建数据源－创建链接－创建数据对象－操作数据对象－关闭并释放。这其间由于应用面向对象思想，应该说所有操作都比较简单，用户需要注意的仅是对数据结构的了解，亦要清楚当前所操作的对象是什么，有什么属性，等等。只要对这些有了清醒的认识，再加上ASP的强大功能，在网络上应用你自己的数据库，就再也不是什么难事了！<br>
+        　　本文最后给出一个例子，这是基于数据库的ASP留言簿程序，数据库结构如下：<br>
+        　　guestbook.mdb<br>
+        　　表lyb:<br>
+        　　xm char(100), ly char(255) , sj datetime<br>
+        　　文件guestbook.asp:<br>
+        　　&lt;html&gt;<br>
+        　　&lt;head&gt;<br>
+        　　&lt;title&gt;lyb&lt;/title&gt;<br>
+        　　&lt;/head&gt;<br>
+        　　&lt;body bgcolor=“＃ccccf0”&gt;<br>
+        　　&lt;p&gt;留言簿&lt;/p&gt;<br>
+        　　&lt;form METHOD=“POST” action=“guestbook.asp”&gt;<br>
+        　　&lt;input type=“hidden” name=“task” value=“insert”&gt;<br>
+        　　&lt;p&gt;姓名:&lt;input TYPE=“text” SIZE=“20” NAME=“xm”&gt;&lt;/p&gt;<br>
+        　　&lt;p&gt;留言:&lt;/p&gt;<br>
+        　　&lt;p&gt;&lt;textarea ROWS=“5” COLS=“80” NAME=“ly”&gt;&lt;/textarea&gt;&lt;/p&gt;<br>
+        　　&lt;p&gt;&lt;input TYPE=“submit” VALUE=“记入留言簿” NAME=“B1”&gt;&lt;input 
+        TYPE=“reset”<br>
+        　　VALUE=“复原” NAME=“B2”&gt;&lt;/p&gt;<br>
+        　　&lt;/form&gt;<br>
+        　　&lt;％<br>
+        　　Set conn = Server.CreateObject(“ADODB.Connection”)<br>
+        　　conn.Open “lybdsn”,“”,“” <br>
+        　　If Request(“task”)=“insert” then<br>
+        　　xm=Request(“xm”)<br>
+        　　sj = Date()<br>
+        　　sj = sj ＆ “ ” ＆ Hour(Time()) ＆ “:” ＆Minute(Time())<br>
+        　　If Request(“ly”)=“” then <br>
+        　　Response.write(“留言不能不输吧”)<br>
+        　　Response.end<br>
+        　　else<br>
+        　　ly=Request(“ly”)<br>
+        　　end if <br>
+        　　sql=“INSERT INTO lyb (xm,sj,ly) VALUES ('” ＆ xm ＆ “','” ＆ sj ＆ “','” 
+        ＆ ly ＆ “') ”<br>
+        　　conn.execute sql<br>
+        　　End If<br>
+        　　sql = “SELECT ＊ FROM lyb ORDER BY sj DESC”<br>
+        　　Set rs = conn.Execute(sql) ％&gt;<br>
+        　　&lt;％ On Error Resume Next<br>
+        　　rs.MoveFirst<br>
+        　　do while Not rs.eof ％&gt;<br>
+        　　&lt;hr&gt;<br>
+        　　姓名:&lt;％=Server.HTMLEncode(rs.Fields(“xm”).Value)％&gt;&lt;br&gt;<br>
+        　　留于:&lt;％=Server.HTMLEncode(rs.Fields(“sj”).Value)％&gt;&lt;br&gt;<br>
+        　　留言:&lt;％=Server.HTMLEncode(rs.Fields(“ly”).Value)％&gt;<br>
+        　　&lt;％ rs.MoveNext<br>
+        　　loop ％&gt;<br>
+        　　&lt;/body&gt;<br>
+        　　&lt;/html&gt;&nbsp;&nbsp; <strong>(重庆　李文武))</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月7日第47期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">POWERBUILDER与EXCELR的巧妙结合</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; POWERBUILDER是面向对象的数据库开发工具之一，它可以操纵众多大型数据库和桌面数据库，支持多种硬件平台。但它有一个致命的弱点，就是打印报表非常不方便，打印函数太少，特别是对中国式报表。而EXCEL制表却非常容易，若把两者结合起来使用则会取长补短。本人通过实践，顺利地把两者结合起来。<br>
+        &nbsp;&nbsp;&nbsp; 首先用POWERBUILDER制作一窗口w_excel，然后在窗口中建立一个数据窗口dw_excel和三个按钮cb_saveas、cb_start、cb_print。同时编写脚本为：<br>
+        &nbsp;&nbsp;&nbsp; 1cb_saveas的脚本为：<br>
+        &nbsp;&nbsp;&nbsp; saveas(w_exceldw_excel,″c:\jycf\xmkxls″，excel!,true)<br>
+        &nbsp;&nbsp;&nbsp; 2cb_start的脚本为：<br>
+        &nbsp;&nbsp;&nbsp; run(″c:\programfiles\microsoftoffice\office\excelexexmkxls″，maximized!)<br>
+        &nbsp;&nbsp;&nbsp; 3cb_print的脚本为：<br>
+        &nbsp;&nbsp;&nbsp; longhandle_1<br>
+        &nbsp;&nbsp;&nbsp; handle_1=openchannel(″excel″，″xmkxls″)′建立与EXCEL的通道<br>
+        &nbsp;&nbsp;&nbsp; setremote(″r2c1″，″序号″，″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; setremote(″r2c2″，″摘要″，″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; setremote(″r2c3″，″收入″，″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; setremote(″r2c4″，″支出″，″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; setremote(″r2c5″，″余额″，″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; setremote(″r2c6″，″日期″，″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; ′更改某一行或某一列的值，同时关闭通道<br>
+        &nbsp;&nbsp;&nbsp; closechannel(handle_1,handle(w_excel))<br>
+        &nbsp;&nbsp;&nbsp; stringstr_print<br>
+        &nbsp;&nbsp;&nbsp; str_print=″[print()]″<br>
+        &nbsp;&nbsp;&nbsp; execremote(str_print,″excel″，″xmkxls″)<br>
+        &nbsp;&nbsp;&nbsp; 这样一来，就把两者有机地结合起来。<strong>(辽宁 
+        石宝臣)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月12日第2期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

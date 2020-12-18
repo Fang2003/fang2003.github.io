@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">VISUAL 
+        FOXPRO开发技巧四则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"><strong>1.组合框ComboBox的多栏使用</strong><br>
+        &nbsp;&nbsp;&nbsp; 熟悉VFP的用户都知道ComboBox对象若显示多栏式时，正常选择结果会以第一栏的内容显示在选择项目上。但实际系统设计中要显示多个栏位如图书编号、名称、作者和出版商，而选定的结果及要传递的值则可能是其中的任意一项，此时实现方法如下：<br>
+        &nbsp;&nbsp;&nbsp; (1)设定ComboBox对象的属性ColumnCount为4；属性ColumnCountWidth为12，40，12，40；属性RowSourceType为Field；属性RowSource为bookcode，title，writer，publisher。<br>
+        &nbsp;&nbsp;&nbsp; (2)设定ComboBox对象的属性BoundColumn为2，表示图书名称为要显示的内容。<br>
+        &nbsp;&nbsp;&nbsp; (3)设定ComboBox对象的事件Interactive Change Event的内容如下：<br>
+        &nbsp;&nbsp;&nbsp; ThisDisplayValue=ThisValue<br>
+        &nbsp;&nbsp;&nbsp; 如欲将显示的内容贮存于其他变量，可添加如下内容：<br>
+        &nbsp;&nbsp;&nbsp; PublicUnknow_str<br>
+        &nbsp;&nbsp;&nbsp; Unknow_str=Thisvalue<br>
+        &nbsp;&nbsp;&nbsp; <strong>2.PageFrame的刷新记录内容</strong><br>
+        &nbsp;&nbsp;&nbsp; 在设计对数据库进行查询修改的操作界面时，将其设为PageFrame方式，在ToolsBar条的记录移动按钮触发时，除当前活动页内容更新外，其他页内容并未刷新，极易产生错误操作。解决问题方法如下：<br>
+        &nbsp;&nbsp;&nbsp; 在ToolsBar中，把涉及到移动记录的Command按钮对象的Click事件作如下添加：<br>
+        &nbsp;&nbsp;&nbsp; …<br>
+        &nbsp;&nbsp;&nbsp; thisparentparentactivepage=2<br>
+        &nbsp;&nbsp;&nbsp; thisparentparentpage2refresh()<br>
+        &nbsp;&nbsp;&nbsp; thisparentparentactivepage=3<br>
+        &nbsp;&nbsp;&nbsp; thisparentparentpage2refresh()<br>
+        &nbsp;&nbsp;&nbsp; …<br>
+        &nbsp;&nbsp;&nbsp; thisparentparentactivepage=n<br>
+        &nbsp;&nbsp;&nbsp; thisparentparentpage2refresh()<br>
+        &nbsp;&nbsp;&nbsp; n——为PageFrame的页数。<br>
+        &nbsp;&nbsp;&nbsp; 3.任务进度栏的实现<br>
+        &nbsp;&nbsp;&nbsp; (1)选择系统菜单“工具”中“选项”条，单击“控件”栏，添加任务进度栏控件MicrosoftProgressBarControl,Version50至ActiveX工具箱中。<br>
+        &nbsp;&nbsp;&nbsp; (2)创建表单Form1及Command对象Receive；选定表单控件工具栏中“查看类”，添加控件MicrosoftProgressBarControl,Version50至表单Form1中，设置其属性Max值为1000。<br>
+        &nbsp;&nbsp;&nbsp; (3)设置表单Form1中命令按钮Receive事件，Click内容如下：<br>
+        &nbsp;&nbsp;&nbsp; fori=1to1000<br>
+        &nbsp;&nbsp;&nbsp; forj=1to2000<br>
+        &nbsp;&nbsp;&nbsp; j=j＋1<br>
+        &nbsp;&nbsp;&nbsp; endfor<br>
+        &nbsp;&nbsp;&nbsp; thisformolecontrol1value=i<br>
+        &nbsp;&nbsp;&nbsp; i=i＋1<br>
+        &nbsp;&nbsp;&nbsp; endfor<br>
+        &nbsp;&nbsp;&nbsp; =messagebox('数据传送与展开完毕，OK!',0＋64,'信息窗口')<br>
+        &nbsp;&nbsp;&nbsp; thisformrelease<br>
+        &nbsp;&nbsp;&nbsp; clear events<br>
+        &nbsp;&nbsp;&nbsp; 4.Grid模拟Browse窗口<br>
+        &nbsp;&nbsp;&nbsp; (1)创建表单Form1及Grid1对象；设定Form1属性BorderStyle为3，可自由调整大小；在事件ResizeEvent中输入如下内容：<br>
+        &nbsp;&nbsp;&nbsp; ThisFormGrid1Width=ThisWidth<br>
+        &nbsp;&nbsp;&nbsp; ThisFormGrid1Height=ThisHeight<br>
+        &nbsp;&nbsp;&nbsp; (2)设定Grid1对象属性RecordSource为当前Form1所设定的工作区，属性Top与Left值均为0；属性Width=ThisformWidth；属性Height=ThisformHeight。<strong>(湖北 
+        顾伟义)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

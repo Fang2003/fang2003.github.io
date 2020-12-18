@@ -1,0 +1,280 @@
+<html><!-- #BeginTemplate "/Templates/soft.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>在VB中实现拖放功能</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+      
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第02期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;</font>软件世界</td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->在VB中实现拖放功能<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　Windows资源管理器中使用文件的拖放可以很方便地对文件进行复制、移动，其实要实现拖放功能只要在VB中设置一下，写入几行代码就可以搞定！好了，下面我们就开始自己手动来实现这个功能吧。 
+
+              首先，新建一个工程。再加入一个Command1控件，将Caption属性设置为“我的拖放程序”，再将OLEDropMode设置为1(即Manual)即可实现拖放动能，当然要真正实现拖放的过程还得写入几行代码才行。 
+
+              下面就是实现拖放功能的代码： 双击Command1控件，选择OLEDragDrop事件，代码如下： Private Sub Command1＿OLEDragDropData 
+
+              As DataObject Effect As Long Button As Integer Shift As Integer 
+
+              X As Single Y As Single If Data．GetFormatvbCFText ＝ True Then 
+
+              Me．Caption ＝ Data．GetDatavbCFText End If End Sub 以上代码作用是将用户拖过来的文字显示在窗体中的标题栏(即Caption)中。单击“F5键”运行该程序，然后用写字板输入一句话，将文字全部选中，再将选中的文字拖动到Command1控件中，此时你将发现窗体中的标题栏中显示的就是拖动来的文字。 
+
+              <br>
+
+              　　以下代码是显示用户拖动过来的图片文件： 首先，引入Picture1控件，其设置与Command1相同，将其OLEDropMode设置为1。然后双击Picture1控件，选择OLEDragDrop事件，输入以下代码： 
+
+              Private Sub Picture1＿OLEDragDropData As DataObject Effect As Long 
+
+              Button As Integer Shift As Integer X As Single Y As Single If 
+
+              Data．GetFormatvbCFFiles ＝ True Then Picture1．Picture ＝ LoadPictureData．Files．Item1 
+
+              End If End Sub 单击“F5”键运行该程序，将图片文件拖动到Picture1控件中即可在Picture1中显示出该图片来。要注意的是：Picture1控件只能显示BMP、JPG、WMF、ICON文件，而GIF动画及PSD等文件格式无法显示。 
+
+              <br>
+
+              　　上面介绍如何接收拖动过来的文字及图片，下面介绍如何打开拖动过来的文件，且用与之关联的程序来打开。其代码如下： 首先，引入Text1控件，将OLEDropMode设置为1。再新建一个模块，在Module1中输入以下代码： 
+
+              Public Declare Function ShellExecute Lib ″shell32．dll″ Alias ″ShellExecuteA″ 
+
+              ByVal hwnd As Long ByVal lpOperation As String ByVal lpFile As 
+
+              String ByVal lpParameters As String ByVal lpDirectory As String 
+
+              ByVal nShowCmd As Long As Long 再双击Text1控件，选择OLEDragDrop事件，输入以下代码： 
+
+              Private Sub Text1＿OLEDragDropData As DataObject Effect As Long 
+
+              Button As Integer Shift As Integer X As Single Y As Single If 
+
+              Data．GetFormatvbCFFiles ＝ True Then Dim GetFilePathStr As String 
+
+              Dim W Dim i As Integer If Data．Files．Count > 1 Then ′如果是拖放的多个文件则依次打开 
+
+              For i ＝ 1 To Data．Files．Count GetFilePathStr ＝ Data．Files．Itemi 
+
+              W ＝ ShellExecute0& vbNullString GetFilePathStr vbNullString 
+
+              vbNullString vbNormalFocus Next Else ′如果只有一个文件 GetFilePathStr 
+
+              ＝ Data．Files．Item1 W ＝ ShellExecute0& vbNullString GetFilePathStr 
+
+              vbNullString vbNullString vbNormalFocus End If End If End Sub 
+
+              单击“F5”键运行该程序，将任意一个文件拖放到Text1控件中，程序将启动相应的程序来打开它。如拖动MyFile．Doc文件到Text1控件中，程序将自动启动Word并打开该文件；如果我选择了多个文件并拖动到Text1控件中，程序将依次打开所选定的文件。 
+
+              <br>
+
+              　　如果你还有什么问题，欢迎来信与我交流。我的E－mail地址是：vber99＠yeah．net。 (重庆 杜伟) <!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

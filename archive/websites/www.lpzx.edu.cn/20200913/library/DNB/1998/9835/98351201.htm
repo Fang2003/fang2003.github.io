@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>为WIN98增加传真功能<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        安装Win98后，你会发现，原来在Win95桌面上非常熟悉的“收件箱”不见了。当然，Exchange提供的传真服务功能也随之去掉了。能否将Win95中的Exchange的传真功能装入Win98呢?笔者实验了以下三种方法，均获成功。<br>
+        &nbsp; 一、升级法<br>
+        &nbsp; 先在Win95中安装Exchange和Microsoft传真，再用升级安装的方法安装Win98，传真功能就可保留下来。但这种方式必须从Win95升级。对已经装上了Win98的用户又要以重装Win95开始显然太麻烦。<br>
+        &nbsp;&nbsp; 二、复制安装法<br>
+        &nbsp;&nbsp; 在Win98环境下，解开原来Win95安装光盘上相关的打包文件＊cab，然后将Win95的传真部分装入Win98中。具体方法如下： 
+        &nbsp;&nbsp;&nbsp;&nbsp; <br>
+        &nbsp;&nbsp; (1)建立一个临时文件夹，如D:\temp；<br>
+        &nbsp;&nbsp; (2)将Win95安装盘插入光盘驱动器，启动“资源管理器”，进入光盘的Win95目录；<br>
+        &nbsp;&nbsp; (3)双击文件precopy2.cab，打开该文件包的浏览窗口，在“编辑”菜单中寻全驯，在“文件”菜单中寻展开”，再在“浏览文件夹”中指定临时文件夹，如D:\temp，单击“确定”按钮后，precopy2.cab文件包中的文件全部展开到了D:\temp文件夹中。关闭precopy2.cab浏览窗口；<br>
+        &nbsp;&nbsp; (4)从桌面开始，依次打开“我的电脑”→“控制面板”→“添加/删除程序”，单击“Windows安装程序”标签→单击“从磁盘安装”按钮→输入工作文件夹名“D:\temp”，确定；<br>
+        &nbsp;&nbsp; (5)在“从磁盘安装”窗口的复选框中选择如下几项：MicrosoftExchange、Microsoft传真服务、“附件”中的“写字板”和“映像”，选好后单击“安装”按钮，出现“请插入磁盘”窗口，单击“确定”按钮；<br>
+        &nbsp;&nbsp; (6)出现“正在复制文件窗口”后指定Win95所在的驱动器和路径，例如：F:\WIN95，单击“确定”按钮；<br>
+        &nbsp;&nbsp; (7)在安装过程中，凡遇到提示“复制的文件比当前文件还旧，是否要保留此文件?”时，一律单击“是”按钮；<br>
+        &nbsp;&nbsp; (8)关闭“添加/删除程序”属性窗口，然后关闭“控制面板”；<br>
+        &nbsp;&nbsp; (9)重新启动Win98后，上述的临时文件夹D:\temp可以删去了。<br>
+        &nbsp;&nbsp; 至此，原Win95中的Exchange中的传真功能已安装到Win98中。<br>
+        &nbsp;&nbsp; 三、直接安装法<br>
+        &nbsp;&nbsp; Win98最新版本的安装光盘上提供了能在Win98中独立安装的Exchange和Microsoft传真。在Win98安装成功以后可以把它们作为应用软件安装。要注意的是，Microsoft传真的使用必须有MicrosoftExchangeClient或Outlook97一类的程序。下面是具体安装方法：(如果已装有Outlook97，可以不必安装MicrosoftExchangeClient，即下面的第1步可以省去)<br>
+        &nbsp;&nbsp; (1)安装Exchange：启动资源管理器，在Win98安装光盘的\Tools\OldWin95\Message\目录下找到WMSEXE文件，双击该文件后按安装程序的提示进行安装，安装结束后重新启动Win98。可暂时不建立Exchange的配置文件。<br>
+        &nbsp;&nbsp; (2)安装Microsoft传真：在Win98安装光盘里的\Tools\OldWin95\Message目录找到文件AWFAXEXE，双击该文件后，按安装程序的提示进行安装，安装完毕后重新启动系统。<br>
+        &nbsp;&nbsp; (3)建立配置文件：在桌面上双击“收件箱”图标启动Exchange，打开“工具”菜单，选劝服务”，按以下步骤添加Exchange的三个服务项目：1在“服务”窗口中单击“添加”按钮，在出现的服务项目中选定“MicrosoftFax”，根据提示分别设置好“消息”、“拨号”、“调制解调器”、“用户”各项，最后单击“确定”按钮；2在“服务”窗口中单击“添加”按钮，在出现的服务项目中选定“个人文件夹”，并指定它的名字(如“传真PST”——扩展名只能是PST)和它所在的目录(如C:\FAX——该目录要事先建立)；3为了使用方便，还可添加服务项目中的“个人通讯簿”，步骤与2类似。<br>
+        &nbsp;&nbsp;&nbsp; 以上三种方法的实质都是将Win95的收件箱Exchange和Microsoft传真安装到Win98中来使用，因此，收发传真的操作方法与在Win95中相同，你又可以使用传真功能了。(四川 
+        傅叔平)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

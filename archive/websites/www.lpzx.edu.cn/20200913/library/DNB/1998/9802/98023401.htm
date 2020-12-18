@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　江西林勇立问：在UCDOS 
+        50的WPS状态下，根据菜单提示，按F10键应该可以切换到DOS命令状态，但我按F10键后，屏幕闪了一下就立即返回WPS编辑状态。后来将UCDOS 
+        50升级到UCDOS 60，仍然存在这个问题，为什么?应该如何解决?<br>
+        　　答：在UCDOS 50或UCDOS 60下，按F10键应该都可以切换到DOS命令状态，但有三个前提条件：1有足够的常规内存；2排除病毒的干扰；3环境变量“COMSPEC”(在DOS平台下，它用来指出COMMANDCOM命令的磁盘所在位置)之前没有以字母“CO”为首的其他环境变量(在DOS下用“SET”命令可以查看所有的环境变量)。用户一旦使用了DOS提供的多重配置功能，就会产生一个“CONFIG”环境变量，而且它的位置在“COMSPEC”之前，因此在UCDOS的WPS中自然无法实现F10键的切换功能。为使F10键的切换功能有效，可在运行WPS前，执行“SET 
+        CONFIG=”命令，以删除“CONFIG”环境变量。<br>
+        　　请你参照上述内容试一试，看看能否解决你的问题。<br>
+        　　湖北官新宜问：参考书上说，3DS 40可以在Windows下运行，而且在3DS 
+        40的子目录中也提供了有关的PIF文件，但为什么我在Windows下无法运行3DS?另外我想把一个3DS制作流程中的部分画面截取下来，选取什么截图软件较好?<br>
+        　　答：3DS 40可以在Windows 3X和Windows 95下运行，但有三个前提条件：1如果使用Windows 
+        3X操作系统，则须工作在386增强模式之下；2有足够大的磁盘空间让Windows系统建立内存交换文件；3在Windows 
+        3X或Windows 95的SYSTEMINI文件 的[386Enh]段中必须有如下一行：“device=c:\3ds4\pharlap.386”。其中c:\3ds4是指3DS软件的安装目录。<br>
+        　　至于选用什么截图软件，前一段时间我也被这个问题所困扰，无论在DOS下使用专门的截图软件，还是在Windows下按“Print 
+        Screen”键截图，效果均不理想。后来偶然发现一个游戏工具软件“整人专家50”(也就是大家熟知的FPE 
+        50，《电脑报》98年第一期第32版上有《FPE 50使用详解》连载，请参阅)中提供的截图功能较为实用，只不过它截下来的图是采用FPE的专门格式存放，常规的图像处理软件无法识别，但可以用FPE 
+        50同时提供的一个图形格式转换工具，将其转换为GIF文件格式，该格式就较为通用了。<br>
+        　　重庆市读者周霞问：据说“超级解霸”是一个很不错的VCD播放软件，但我在自己的计算机上安装以后，播放VCD时，画面效果比较差，图像比较粗糙，播放速度较慢。重新安装Windows 
+        95后，显示卡在增强16位色和256色模式下都试过，效果还是不行，请问是何原因?如何解决?<br>
+        　　答：“超级解霸”的确是一个很好的MPEG解压缩播放软件。用它来播放VCD影碟有很多优点。与一般的MPEG解压播放软件相比，它的最大优点是容错能力较强，遇到盘片上的坏区时，可以比较快地跳过去，不容易出现播放中的停顿、死机和较长时间无声音现象。由于“超级解霸”是所谓的纯32位软件，因此只能在Windows 
+        95或其改进版下运行，而且该软件必须要有Direct X软件的支持才能发挥出真正的效果。如果机内没有安装Direct 
+        X软件，就会出现画面效果较差的情况，有时计算机甚至不能正常播放，一读光盘就死机。所以用户必须在机内安装Direct 
+        3.0或Direct 5.0软件。微软的Direct X软件比较好找，可在《电脑报配套光盘》第一辑中找到。<br>
+        　　重庆市凤鸣山中学郭建宇问：我购买的计算机套件中，主板是华硕的Super 
+        TX一体化主板，声卡用的是AD1815芯片的声皇卡。该声卡在Windows 32下可正常工作，但在Windows 
+        95下却发不出声音来。在Windows 95下安装时一切正常，但重新启动计算机后，在“控制面板”的“系统”项中，“声卡”这一项总有设备冲突。按冲突解决方法进行调整，可以解决故障，但以后不久还是发不出声音，请问如何解决?<br>
+        　　答：采用AD1815芯片的声皇卡是一种物美价廉的产品，功能也比较强，具有软波表功能和全双工功能。由于该声卡占用资源比较多，所以在少数计算机中偶尔有设备冲突的现象。解决的办法：一是调整BIOS设置，确保ISA总线能使用该声卡所需的IRQ和DMA等资源，主要有IRQ5、IRQ9、DMA0、DMA1。另外，也可以先在Windows 
+        3X下安装好该声卡的驱动程序，然后再将操作系统升级为Windows 95。如果这些方法试过都不行的话，可以考虑换一种声卡驱动程序。采用AD1815芯片的声皇卡有两种驱动程序，一种是带软波表和附加应用程序的版本，有三张磁盘；另一种是最简化版本，仅有一张盘。最好是使用前者。 
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：<a
+        href="index.htm">《电脑报》1998年1月12日第2期34版</a></font></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>win98下电脑无声的处理 
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　故障现象：我的声卡是ISA总线的TM863声卡。开始我用的操作系统是Windows95，有时电脑无声，但经过多次验证发现，只要先在DOS下安装声卡，然后再安装Windows95，系统就能找到声卡并提示安装驱动程序。当安装完声卡驱动程序后，电脑就能发声了(不过有时得安装两次Windows95)。最近我得到了WIN98beta2版，仍使用以前的老方法，但电脑怎么也不发声了。<br>
+        　　故障分析与处理： 
+        首先打开“控制面板”里的“设备管理员”，却没有发现“声音、视频和游戏控制器”这个设备，是不是因为WIN98检测不到声卡呢?我从“控制面板”里的“添加新硬件”中添加“声音、视频和游戏控制器”，并从声卡驱动程序盘上安装其驱动程序，顺利完成后重新启动机器，在“设备管理员”中依然找不到这个设备。我曾在《电脑报1997年合订本(下)》上看到过，在Windows95下对老式非即插即用的ISA总线声卡的处理办法，于是赶紧找出合订本，照着做了几遍，却仍然没有效果。万般无奈之下，只好又翻出声卡说明书来“细啃”，却意外地发现上面写着“本声卡支持即插即用”，并写着“兼容Adlib 
+        Sound Blaster Pro”等。我想起在多次安装声卡驱动程序时，系统都告诉我所安装的设备为即插即用的设备，会不会是WIN98能检测到有声卡这个设备，但却不知道它是声卡。带着这个疑问，我打开“设备管理员”下的“计算机”，查看系统资源使用情况，发现计算机的许多资源被CMI8330 
+        Audio Adapter和一些未知设备占据着，而CMI8330 Audio Adapter就是我的声卡上的芯片，看来我的想法没有错。但怎样才能让系统认识声卡呢，由于CMI8330 
+        Audio Adapter不在设备管理员列表中，无法直接修改设备名称，只能采取间接方法。根据以前添加新硬件和升级驱动程序的经验，我先将CMI8330 
+        Audio Adapter和所有未知设备的资源都保留给系统(保留关键的一部分也行，但必须包括声卡下的所有控制器)，方法是在刚才查看系统资源的地方点击“保留资源”，对照查看资源，将要保留的资源添加进去就行了。重新启动计算机后，选择“控制面板”中的“添加新硬件”，系统就会列出有问题的设备，正好就是CMI8330 
+        Audio Adapter这个设备(由于声卡有多个控制器，因此系统将会列出一串CMI8330 
+        Audio Adapter)，为它们分别安装兼容驱动程序，再重新启动计算机后，打开“设备管理员”一看，哈!“声音、视频和游戏控制器”出现了，其下面的各个控制器一一在目。然后在刚才保留系统资源的地方，将保留的资源统统释放，最后重新启动，一般就会听到Windows熟悉的启动声音了。不过，有时会有资源冲突的情况，使电脑无声或发声不正常，但你只要调整一下“控制面板”中的“资源”就行了。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9820/1998/20/index.htm">《电脑报》1998年5月25日第20期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

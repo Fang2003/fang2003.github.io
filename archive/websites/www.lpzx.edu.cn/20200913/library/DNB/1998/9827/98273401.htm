@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　山东读者林岗问：一台联想万全P5服务器，说明书上称配有1G硬盘，内置SCSI专用卡，可是在DOS 
+        6.22下显示硬盘容量仅为200M，在Windows95 OSR2下显示硬盘容量也为200M，磁盘扫描无坏道。BIOS中硬盘类型为SCSI，改为User状态，自定义后仍无变化。开箱检查，硬盘型号为Seagate 
+        ST51080N，后用Buslogic检测硬盘，显示硬盘容量为1080M。请问是何原因使得硬盘空间与标称值不符？<br>
+        　　答：有两种原因可能引起你所说的现象，一是硬盘在分区时只分了200M空间供DOS或Windows系统使用，其余空间要么没有分配，要么分给了Unix或其它操作系统，这样无论是DOS或Windows95均不能使用这部分空间。你可运行FDISK，如果FDISK显示硬盘总容量为1080M左右，则再检测分区信息是否如上所述。如果FDISK显示硬盘总容量也只有200M左右，那么极有可能是BIOS中与硬盘相关的参数设置不对，这就是第二种原因，请检查柱面数、磁头数和每道扇区数是否正确，确认硬盘的工作模式是否设置正确，如果你不太清楚如何设置这些参数，请与联想公司的维修服务部门联系。<br>
+        　　广州读者陈同江问：一台兼容机，配置为：Pentium 100 CPU、32M内存、SL－586B 
+        FX主板、 S364V＋显卡、2GB硬盘，BIOS为Award 4.50。BIOS自检时显示内存为32768K，但进入了DOS后，在出现系统状况提示时，内存却变成了14336K扩展内存加640K常规内存，另外16M内存不知到什么地方去了。开始怀疑是内存条有问题，换到别的机器上一切正常。后用2×16M条，无论插到内存槽的哪个组上，DOS都只能检测到14336K扩展内存，用2×16M、4×8M的组合均同，14336K＋640K=14976K，比16M少了1M，请问是什么原因？如何解决？<br>
+        　　答：14976K加上384K保留地址空间正好为15M，出现这种现象可从以下几个方面来检查：1.Award 
+        BIOS的部分版本中的“CHIPSET FEATURES SETUP”项中有一项设置“Memory Hole 
+        At Address”，其可选项有15M～16M和14M～16M等，该项设置的作用是保留所选地址空间供ISA扩展卡在需要时使用。不过常见的ISA扩展卡并不使用这段地址，在某些主板中，如果把该项设置成15M～16M或14M～16M，DOS系统的Himem.sys就不能检测到15M或14M以上的内存，从而造成内存容量“丢失”。请检查BIOS中是否有该项设置，有则将其设为“None”。另外，Windows95所带的Himem.sys的内存检测能力比旧版本DOS所带的Himem.sys更强，在某些主板上可以不受该项设置的影响，不妨将其加入到Config.sys中试一试。2.内存质量问题，可用硬件测试软件对内存条进行全面检查。考虑到你把内存条换到其它机器上一切正常，故属于这种情况的可能性不大。3.主板的质量或兼容性问题，如果排除了前面两种原因，就要怀疑是主板本身的问题了，建议考虑更换一块新主板。<br>
+        　　吉林读者彭大龙问：我有6台微机，用Netware 4.1联网，属无盘工作站，服务器是Pentium 
+        133 CPU、16M内存，工作站是Cyrix 6x86－166 CPU、16M内存，不知道能否在无盘工作站上安装Windows95？如果可以，如何安装？不知能否用Windows 
+        95直接连接无盘工作站，而不用Netware？应如何设置，是否还要用远程引导芯片？是否还需要装入Windows 
+        NT？<br>
+        　　答：Windows95虽然是一种支持网络连接的操作系统，但它并不能够直接连接无盘工作站，因为它不提供远程启动服务功能。Netware和Windows 
+        NT都支持远程启动，所以它们都能直接连接无盘工作站，当然，无盘工作站的网卡必须装有远程引导芯片。如果服务器安装的是Windows 
+        NT Server版，那么可以在无盘工作站上安装Windows 95，具体步骤是：先为NT安装DLC协议、NetBEUI协议和远程启动服务，然后为工作站建立DOS7.0的启动映像文件和远程启动数据库记录，把Windows 
+        95的安装版拷贝至NT服务器的一个共享目录下，最后在工作站上从共享目录安装Windows 
+        95。无盘工作站是通过网络协议使用服务器上的硬盘空间（即网络驱动器），而Windows 
+        95这样的操作系统及其应用程序需要占用大量的硬盘，它在运行时又要使用交换文件来提供虚拟内存，具有对硬盘访问频繁的特点，因此，如果在多台无盘工作站上安装了Windows 
+        95并且同时运行的话，大量的读写硬盘操作会使网络流量剧增，容易出现冲突和阻塞，致使工作站上的Windows 
+        95运行速度大大降低，甚至可能出现崩溃，另外，这样的网络规划对服务器本身要求较高，如服务器硬盘的容量要足够大。所以，笔者建议不要在多台无盘工作站上安装Windows 
+        95，建议关注一下Microsoft将要推出的Windows NT Hydra系统，即Windows终端系统。<br>
+        　　江西读者何俊问：我的Philips 14A显示器在开机后，字符显示总是左边小、右边大，大约半分钟后，屏幕显示逐渐自动调整到正常情况，热启动后又出现不正常的显示，这究竟是什么原因，是硬件故障还是病毒作怪，如何处理?另外，如果用华硕T2P4主板将普通CPU升级到MMX 
+        CPU，性能如何?<br>
+        　　答：显示不正常的现象不是由病毒引起的，通常为显示器本身工作状况不稳定或显示卡出现故障造成。使用替换法可以很容易确定故障所在，把你的显示器接在其它机器上，如果仍然显示不正常，就可以确定是显示器的问题，应与购买机器的公司或Philips指定的服务器联系维修事宜。如果显示器工作正常，可考虑更换一块显示卡。<br>
+        　　除CPU主频和类型外，机器性能还与主板、内存、硬盘等配置及应用软件有关。MMX技术为X86系列CPU增加了57条指令，适合于计算量比较密集的多媒体软件，能否充分发挥MMX技术的优点在于软件本身，在相同主频和配置情况下，根据应用软件不同，机器性能会有不同程序的提升，专门为MMX技术优化过的软件，其运行速度会有30％到100％左右的提高，而普通通用程序的速度提高较小，约为20％到30％左右。<br>
+        　　浙江读者项宇问：我的主板为华硕TX97，硬盘为Maxtor的钻石二代25G，安装了Windows95操作系统。我不知道怎样安装Ultra 
+        DMA 33驱动程序，所以只安装了普通IDE口驱动程序，在控制面板的“系统设备管理/其它”选项前有一问号，里面分别是“PCI 
+        Bridge”和“PCI Universal Serial Bus”，不知是什么意思?该如何安装Ultra 
+        DMA 33接口?<br>
+        　　答：Ultra DMA 33接口是去年上半年才开始流行起来的高速硬盘传输方式，它将IDE接口的硬盘传输速率提升到33MB/s，版本较老的Windows95没有自带支持Ultra 
+        DMA 33接口的驱动程序。不过你所购买的华硕TX97主板所附的驱动盘上有“Intel 
+        Bus Master PⅡX4 IDE Controller”驱动程序。在安装之前请进入CMOS设置，确认“Chipset 
+        Features Setup”菜单中的“IDE Ultra DMA Mode”以及下面四个选项都设为“AUTO”，把驱动盘的BUSMASTER子目录下的BMIDE_95EXE拷贝到硬盘上一个临时目录下运行，解压出安装程序，如果你的操作系统是早期的Windows95，运行SETUPEXE即可。如果安装了Windows95 
+        OSR2，则可以按照驱动盘中WIN95_BM.TXT文件介绍的步骤来安装Ultra DMA 33接口驱动程序，以便能够在控制面板的“系统设备管理”中设置硬盘的工作模式(DMA或PIO)，对于带Ultra 
+        DMA 33接口的硬盘，应设为DMA方式。安装完毕后可以将原来的普通IDE口驱动程序删除。另外，出现“PCI 
+        Bridge”和“PCI Universal Serial Bus(USB串行总线接口)”，是因为你使用的Windows95虽然检测到了这两种系统设备但却不认识，请把你的操作系统更新为Windows95 
+        OSR2以上版本或Windows98测试版。<br>
+        <br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

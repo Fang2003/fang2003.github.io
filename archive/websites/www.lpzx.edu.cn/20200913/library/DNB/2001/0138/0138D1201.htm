@@ -1,0 +1,132 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0138/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0138/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第38期 </a>&gt;&gt;<a href="internet.html">网络与通信</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td height="11"> 
+            <div align="center">3COM路由器故障排除</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>笔者所在单位与下级行连网使用帧中继线路，使用的路由器是3COM NETBuilder Remote Office224，此路由器具有固定的配置端口，它包括一个控制台CONSOLE端口主要用于路由器的配置，一个Ethernet端口用于连接局域网即1口，3个WAN同步端口，即2、3、4口，接口标准分别为V.35、RS-449及RS-232，目前使用的是1口和2口。1口连接本地局域网，2口连接的是128KB的帧中继。<br>
+              故障现象：最近此路由器出现了故障，故障现象是打开路由器电源开关后，不能正常启动，前面板的Test灯一直闪烁，反复开机都是此现象。<br>
+              故障分析：由于前面板的Test灯一直闪烁，说明路由器一直在检测系统硬件，在检测过程中发现有问题的硬件设备，检测不过去后一直停在测试状态。因为路由器不能启动，所以使用TELNET 
+              命令无法登录到路由器，于是使用控制台端口进入路由器查看检测信息，此办法是以终端的方式连接路由器的CONSOLE口进行配置。<br>
+              首先找一根CONSOLE通信线，此通信线用以连接微机的串行通信口(COM1)和路由器的控制台口(CONSOLE)，微机上的COM1口一般为9针公口，路由器的CONSOLE口也是一个9针公口，通信线的内部连接线是第2根、第3根进行交叉，第5根直连，一般随设备附有一条符合要求的通信线。<br>
+              找到CONSOLE通信线，一端连接到微机上的COM1口，另一端连接到路由器的CONSOLE口，注意将两端都固定好，进入Windows98操作系统下，单击“开始”按钮，选择“程序→附件→通讯→超级终端”(如果没有超级终端选项，则可以在“控制面板”中的“添加/删除程序”内进行添加)，双击“Hypertrm”图标可进入超级终端，新建立一个连接，连接使用通讯串口1，通信参数设置为：速率9600bps；数据位8；奇偶校验 
+              无；停止位1；软件流控Xon/Xoff，注意速率一定为9600bps，否则会出现乱字符或连接不通。这时打开路由器电源，在超级终端窗口中出现下面的检测信息：<br>
+              3Com Corporation SuperStack II NETBuilder - SPMON Version 1.0.13<br>
+              8192 Kilobytes of RAM installed.<br>
+              2048 Kilobytes of Flash installed.<br>
+              Flash file system tests passed.<br>
+              EEPROM checksum test passed.<br>
+              HSS self tests passed.<br>
+              Ethernet Controller test passed - Station Address - 08000225DA10<br>
+              SCC Internal loopback tests passed.<br>
+              Memory tests<br>
+              Ram March test Failure Expected 0x55555555 received 0x75555555<br>
+              at address 0xBE5954<br>
+              Access length = long word 32 bit .<br>
+              Access type = write.<br>
+              Entering Write/Read Scope...<br>
+              To exit scope loop Cycle power or press the NMI switch...<br>
+              从检测信息可以看出路由器中有8MB内存，加黑内容“Ram March test Failure”说明是内存检测时失败，反复启动路由器时都显示此内容，可以肯定内存有问题。<br>
+              故障排除：关闭路由器电源，使用螺丝刀取下路由器的固定螺丝，然后打开路由器上面的盖板，可以看到在路由器的主板，在主板右侧有一个插槽，插有一条72线的4MB内存条，因为出厂时路由器所装的软件存在计算机Y2K问题，为了解决计算机Y2K问题，必须升级路由器软件，升级软件需要8MB内存，原来主板上只有4MB内存，此内存条是为了升级路由器的软件而加上去的。于是小心取下内存条，换上一块好的内存条(注：内存条是专用的，不能使用个人计算机中的内存条)，固定好上面的盖板，重新启动路由器，能顺利通过测试，接着引导系统文件，进入用户登录状态，路由器处于正常运行状态，故障排除。<br>
+              (李志峰)</p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

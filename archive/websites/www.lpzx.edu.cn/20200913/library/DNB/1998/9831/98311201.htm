@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在Visual 
+        FoxPro中实现AutoNumber<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        　用Visual FoxPro设计一对多的关系数据库时，我们需要在主表建立一个主索引，在子表建立一个普通索引。在主表中添加记录时，必须保证被设置为主索引的字段没有重复的值。如果让用户来手工添加记录，有可能在被设置为主索引的字段中出现重复的值，从而导致数据库出错。在Access中，有一个AutoNumber型的字段，由系统自动产生这些不可重复的值，避免了数据库的出错，也为用户带来了方便。<br>
+        　　那么在Visual FoxPro中如何实现这个功能呢？笔者的做法是编一个添加记录的小程序，当用户添加记录时，由自编的程序插入一个新记录，并产生新记录被设置为主索引的字段的值。示例如下：<br>
+        　　有如下二表，people.dbf(主表)结构为id n(3),name c(8),jobdbf(子表)结构为id 
+        n(3),job c(10),我们在二表之间建立一对多关系，将people.dbf的id设置为主索引，将job.dbf的id设置为普通索引。添加people.dbf记录的程序如下：<br>
+        　　′insertpeople.prg：<br>
+        　　calculate max(id) to maxid　′查找现有id的最大值，存入maxid<br>
+        　　insert into people (id) values (maxid＋1)　′插入新的记录，并使新记录的id=maxid＋1<br>
+        　　实际应用时，设计一个添加按钮（CommandButton1），使其Caption=“添加”，在其Click事件中加入代码：<br>
+        　　′CommandButton1.Click<br>
+        　　do insertpeople<br>
+        　　如表中记录不经常删除，这一方法比较适用。当表中的数据常常删除时，此方法有一个缺点，仍以people.dbf为例，假设people.dbf中有3条记录，id分别为1、2、3，当用户删除（Delete 
+        and Pack）id为2的记录后再添加记录，新添加的记录id为4，而这时的愿望是使其id为2,否则的话，为id分配的3位number空间可能不够用。此时可修改insertpeople.prg如下：<br>
+        　　′insertpeople.prg:<br>
+        　　select people<br>
+        　　for i=1 to 999　′让i在1～999之间循环<br>
+        　　locate for (i==people.id)　′在people中查找i值是否重复<br>
+        　　if found()=.f.<br>
+        　　insert into people (id) values (i)<br>
+        　　′不重复的话，用此时的i值作为新记录的id值<br>
+        　　exit　′中断循环<br>
+        　　endif<br>
+        　　endfor<br>
+        　　在一对多关系中的多方（子表）添加记录时，为了实现与主表的关联，也可以用类似的方法实现。<strong>(湖北　dqzzb)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月17日第31期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

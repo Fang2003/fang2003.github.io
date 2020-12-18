@@ -1,0 +1,211 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用VB实现出圈游戏</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0120/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0120/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第20期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用VB实现出圈游戏<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->某些单位由于工作性质决定须排班，工作非常烦琐，最好是用计算机解决，其实这和下面的出圈游戏的方法是类似的。有兴趣的朋友不妨将下面的程序改动一下，说不定对单位的信息化工作有重大的贡献呢！<br>
+              一、原理<br>
+              出圈游戏是这样的：有ｎ个人排成一圈，然后先从任一人开始按顺时针方向依次从１报数，报到数ｓ的人就出圈，下一个再从１开始报，报到ｓ就出圈……一直到最后一人出圈为止。<br>
+              本程序的输入里面包含了圈的组成要素总人数ｎ及ｎ个人的姓名分别通过两文体框实现输入数据。还有做游戏的条件，第一个出圈的人第一次第ｒ个，后面则是第ｓ个），和以后如何出圈（所报的数ｓ）。输出则是ｎ个人的出圈次序。<br>
+              研究该问题的意义：对解决任何形式的轮流，公平的分配，是不可少的。<br>
+              二、处理过程分析<br>
+              １．对输入输出问题的分析<br>
+              输入数据中的人名比较麻烦很难找规律，可以使用数组变量Ｐｅｐｎ，输出时我们可以利用此数组。只有该数组还不能解决所有问题，因为组成出圈游戏的出局是很重要的，一旦出局，将不能再参与圈内的游戏，我们可以使用一记录使用标志数组Ｆｌａｇｎ，它和Ｐｅｐｎ正好一一对应，记录了游戏者的出局情况。<br>
+              ２．查找第一个出圈的人<br>
+              根据条件，第一个出圈者我们可以通过如下步骤找出：先找到第ｒ个人，然后以此人为基准（包括此人在内），向后数ｓ，所以就应该是第ｒ＋ｓ－１个人，如果ｒ＋ｓ－１＞ｎ，则应该是第ｒ＋ｓ－１／ｎ 
+              的余数个数。<br>
+              因为后面在数人数时，此人将不再有用，所以将记录使用标志设为Ｔｒｕｅ，在以后的应用中将不再用他。这是将后面的人选出圈的规则。<br>
+              程序如下：<br>
+              ｋ ＝ ｒ<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              ｋ ＝ ｋ ＋ ｓ － １<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              Ｆｌａｇｋ ＝ Ｔｒｕｅ<br>
+              ＴｘｔＯｒｄｅｒ．Ｔｅｘｔ ＝ Ｓｔｒｋ ＋ ″″ ＋ Ｐｅｐｋ ＋ ＶｂＬｆ＋ＶｂＣｒ ′输出第一个出圈者<br>
+              ３．查找第２到第ｎ个出圈者<br>
+              在找第２个出圈者和前面的稍有不同，因为在找第１个时不用考虑已经出圈者，所以在找之前先应该对比一下此人的记录的使用标志，如果标志标识为Ｆａｌｓｅ（没有使用）才能用它比较，否则向下比较下一人，一直找到第ｓ 
+              个符合情况者，此人便是本次要找的出圈者，并将其记录使用标志设为Ｔｒｕｅ，以利于后来使用。查找程序如下：<br>
+              ｙ ＝ １<br>
+              Ｗｈｉｌｅ ｙ ＜＝ ｓ<br>
+              ｋ ＝ ｋ ＋ １<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              Ｉｆ Ｆｌａｇｋ ＝ Ｆａｌｓｅ Ｔｈｅｎ ｙ ＝ ｙ ＋ １<br>
+              Ｗｅｎｄ<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              Ｆｌａｇｋ ＝ Ｔｒｕｅ<br>
+              ＴｘｔＯｒｄｅｒ．Ｔｅｘｔ ＝ ＴｘｔＯｒｄｅｒ．Ｔｅｘｔ ＋ Ｓｔｒｋ ＋ ″″ ＋ Ｐｅｐｋ ＋ ＶｂＬｆ＋ＶｂＣｒ 
+              ′输出第２－ｎ个出圈者<br>
+              因为其中涉及查找第ｒ 个人出现（ｒ这个序列数比总人数ｎ大的情况），所以在比较前还应该比较 ｒ值的情况，看它是否比ｎ大，如果大，需取其除ｎ的余数。<br>
+              ４．游戏规则<br>
+              做游戏有一些限制条件，如人数的限制，最少是１个人，所以少于１个人是没有意义的，我们可通过最外的一个分支语句来解决。<br>
+              三、ＶＢ程序<br>
+              １．界面<br>
+              本程序用了五个标签Ｌａｂｅｌ五个文本框ＴｅｘｔＢｏｘ和两命令按钮ＣｏｍｍａｎｄＢｕｔｔｏｎ。<br>
+              ２．源程序如下<br>
+              Ｄｉｍ ｎ ｒ ｓ ｋ Ａｓ Ｉｎｔｅｇｅｒ<br>
+              Ｄｉｍ ｈｅ Ａｓ Ｉｎｔｅｇｅｒ ′定义系统变量<br>
+              Ｄｉｍ Ｐｅｐ Ａｓ Ｓｔｒｉｎｇ ′存放人名数组<br>
+              Ｄｉｍ Ｆｌａｇ Ａｓ Ｂｏｏｌｅａｎ ′记录数据使用与否标志<br>
+              Ｐｒｉｖａｔｅ Ｓｕｂ ＣｍｄＥｘｉｔ＿Ｃｌｉｃｋ ′退出按钮<br>
+              Ｅｎｄ<br>
+              Ｅｎｄ Ｓｕｂ<br>
+              Ｐｒｉｖａｔｅ Ｓｕｂ ＣｍｄＪｕｄｇｅ＿Ｃｌｉｃｋ ′判断方按钮<br>
+              ′将文本框中的人名信息输入文件<br>
+              Ｏｐｅｎ ″ｅ＼ｂｉｔｗａｒｅ＼ｖｂ＼２００１０３＼ｉｎｐｕｔ．ｔｘｔ ″ Ｆｏｒ Ｏｕｔｐｕｔ Ａｓ ＃１<br>
+              Ｐｒｉｎｔ ＃１ ＴｘｔＯｒｉ．Ｔｅｘｔ<br>
+              Ｃｌｏｓｅ ＃１<br>
+              ｎ ＝ ＶａｌＴｘｔＴｏｔａｌ．Ｔｅｘｔ<br>
+              ｒ ＝ ＶａｌＴｘｔＦｉｒｓｔ．Ｔｅｘｔ<br>
+              ｓ ＝ ＶａｌＴｘｔＭｏｓｔＮｕｍ．Ｔｅｘｔ<br>
+              Ｉｆ ｎ ＞ ０ Ｔｈｅｎ ′对无人的情况不进行处理<br>
+              ′重置各数组 <br>
+              ＲｅＤｉｍ Ｐｅｐ１ Ｔｏ ｎ<br>
+              ＲｅＤｉｍ Ｆｌａｇ１ Ｔｏ ｎ<br>
+              ′将人名信息存入数组，以方便处理<br>
+              Ｏｐｅｎ ″ｅ＼ｂｉｔｗａｒｅ＼ｖｂ＼２００１０３＼ｉｎｐｕｔ．ｔｘｔ ″ Ｆｏｒ Ｉｎｐｕｔ Ａｓ ＃２ ′打开数据存放文件<br>
+              ｇ ＝ １<br>
+              Ｗｈｉｌｅ Ｎｏｔ ＥＯＦ２<br>
+              Ｉｎｐｕｔ ＃２ ｈｓ＄<br>
+              Ｐｅｐｇ ＝ ｈｓ＄<br>
+              ｇ ＝ ｇ ＋ １<br>
+              Ｗｅｎｄ<br>
+              Ｃｌｏｓｅ ＃２<br>
+              Ｆｏｒ ｉ ＝ １ Ｔｏ ｎ ′初始使用标志<br>
+              Ｆｌａｇｉ ＝ Ｆａｌｓｅ<br>
+              Ｎｅｘｔ ｉ<br>
+              ｈｅ ＝ ０ ′找第一个出圈者<br>
+              ｋ ＝ ｒ<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ ′大于总人数时的处理<br>
+              ｋ ＝ ｋ ＋ ｓ － １<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              Ｆｌａｇｋ ＝ Ｔｒｕｅ<br>
+              ＴｘｔＯｒｄｅｒ．Ｔｅｘｔ ＝ Ｓｔｒｋ ＋ ″″ ＋ Ｐｅｐｋ ＋ ｖｂＣｒ ＋ ｖｂＬｆ ′找第２到第Ｎ个出圈者<br>
+              Ｆｏｒ ｉ ＝ ２ Ｔｏ ｎ<br>
+              ｙ ＝ １<br>
+              Ｗｈｉｌｅ ｙ ＜＝ ｓ<br>
+              ｋ ＝ ｋ ＋ １<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              Ｉｆ Ｆｌａｇｋ ＝ Ｆａｌｓｅ Ｔｈｅｎ<br>
+              ｙ ＝ ｙ ＋ １<br>
+              Ｅｎｄ Ｉｆ<br>
+              Ｗｅｎｄ<br>
+              Ｉｆ ｋ ＞ ｎ Ｔｈｅｎ ｋ ＝ ｋ Ｍｏｄ ｎ<br>
+              Ｆｌａｇｋ ＝ Ｔｒｕｅ<br>
+              ＴｘｔＯｒｄｅｒ．Ｔｅｘｔ ＝ ＴｘｔＯｒｄｅｒ．Ｔｅｘｔ ＋ Ｓｔｒｋ ＋ ″″ ＋ Ｐｅｐｋ ＋ ｖｂＣｒ ＋ ｖｂＬｆ<br>
+              Ｎｅｘｔ ｉ<br>
+              Ｅｎｄ Ｉｆ<br>
+              Ｅｎｄ Ｓｕｂ<br>
+              Ｐｒｉｖａｔｅ Ｓｕｂ Ｆｏｒｍ＿Ｌｏａｄ<br>
+              ｇ ＝ １ ′初始各文本框数据<br>
+              ＴｘｔＴｏｔａｌ．Ｔｅｘｔ ＝ ″″<br>
+              ＴｘｔＦｉｒｓｔ．Ｔｅｘｔ ＝ ″″<br>
+              ＴｘｔＭｏｓｔＮｕｍ．Ｔｅｘｔ ＝ ″″<br>
+              Ｅｎｄ Ｓｕｂ<br>
+              本程序在ＶＢ６．０／ Ｗｉｎｄｏｗｓ９８下调试通过<br>
+              （山东 赵玉勇）<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

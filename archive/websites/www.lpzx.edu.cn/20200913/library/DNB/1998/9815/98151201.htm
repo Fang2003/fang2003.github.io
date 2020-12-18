@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>为Windows95下的应用程序制作联机帮助系统<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　　Windows95操作系统提供了对联机帮助系统良好的支持，它界面友好，便于查看和阅读，并支持声音、图像和动画等多媒体效果。本文简要介绍如何为自己的应用程序制作一个联机帮助系统。<br>
+        　<strong>　一、制作一个HLP帮助文件</strong><br>
+        　　以下介绍每一步骤：<br>
+        　　1编辑RTF主题文件<br>
+        　　(1)首先要选择一个支持RTF文档格式的文字处理软件，如中文WORD等。<br>
+        　　(2)在编辑器中按用户显示信息的内容进行分类，形成多个标题，各标题间要硬性分页。<br>
+        　　(3)根据信息组织的要求，为每一标题添加相应的控制代码，控制代码如下表。<br>
+        　　特别要指出，Windows95提供对多媒体特性的支持，包括图像、图形、声音和视频动画，其实现只需在RTF文档中将要显示多媒体信息的标题中加入相应的控制代码。<br>
+        　　例如：利用mci(媒体控制接口)指令完成视频动画、声音的多媒体嵌入。<br>
+        　　{mci}语法：<br>
+        　　{mci[－left|－right][options]filename}<br>
+        　　如：{mci play,demo.avi}或{mci play,welcome.wav}<br>
+        　　则在相应的标题打开后自动播放demo视频文件或welcome声音文件。<br>
+        　　2编辑HPJ项目文件<br>
+        　　HPJ项目文件用于提供给帮助文件编辑器所必要的信息，使编译程序按控制代码将RTF主题文件生成帮助文件。<br>
+        　　项目文件由规定节构成，有其特定的语法和含义，一般包括如下节：[FILES]，[OPTIONS]，[BUILDTAGS]，[MAP]，[ALIAS]，[BITMAP]，[CONFIG]等。其中：<br>
+        　　[FILES]是必选的，用于指明帮助项目文件所包括的主题文件名。<br>
+        　　[OPTIONS]包括字体、大小、目录、题目等多种控制。<br>
+        　　[BUILDTAGS]建立合法标志。<br>
+        　　[MAP]上下文字符串与上下文号之间的映像。<br>
+        　　[ALIAS]用于上下文字符串的别名。<br>
+        　　[BITMAP]建立位图映像文件。<br>
+        　　[CONFIG]HELP文件的配置。<br>
+        　　3编译项目文件<br>
+        　　调用HC31.EXE(在Borland C＋＋、Visual Basic等软件目录下可找到)对项目文件进行编译：<br>
+        　　C:\HC31 MYFILE.HPJ<br>
+        　　如果编译成功，则生成MYFILE.HLP帮助文件，否则给出出错信息。<br>
+        　　<strong>二、在自己的应用程序中调用帮助文件</strong><br>
+        　　如何在自己的应用程序中加入联机帮助文件呢?有如下两种方法：<br>
+        　　1利用WINHELP.EXE程序<br>
+        　　利用Windows95提供的WINHELP.EXE程序来运行生成的HLP文件，即在自己的应用程序中利用加载可执行文件的方式运行即可。<br>
+        　　如：WinExec(“C:\PWIN95\WINHELP.EXE MyFILE.HLP”)<br>
+        　　此方法适合于各种语言编写的应用程序，只须修改相应的加载函数。<br>
+        　　2利用应用语言工具提供的接口<br>
+        　　Windows95的许多编程语言均提供了这样的接口。如：<br>
+        　　在Visual C＋＋中建立一个基于支持联机帮助的Project，对其自动生成的两个RTF文档加以改造即可；<br>
+        　　在Visual Basic中通过对“Project”菜单中“HELP”属性进行设置以及在程序中对APP.HELPFILE进行赋值即可；<br>
+        　　在DELPHI中，在“Project”菜单的“Options”子菜单的“Application”页中设置帮助文件名，并在窗体的“Help”菜单的“Help 
+        Topic”菜单项的输入事件处理程序中加入如下语句：<br>
+        　　ApplicationHelpCommand(Help---Contents,0)。<strong>(北京　丁长霞　阎慧)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月20日第15期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

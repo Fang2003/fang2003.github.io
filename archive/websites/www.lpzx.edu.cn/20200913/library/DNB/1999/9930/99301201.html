@@ -1,0 +1,93 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Windows 9x MS-DOS窗口中汉字的输入与显示</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=link&user=issue-software&realm=software' TARGET='_blank'><img src="images/cpcw.gif" width="468" height="60" border="0"></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>30 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; Windows 9x MS-DOS窗口中汉字的输入与显示</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Windows 9x MS-DOS窗口中汉字的输入与显示 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在Windows 95或Windows 98的MS－DOS窗口中，汉字的输入与显示是比较困难的，直接用Windows中提供的输入法无法输入汉字，且UCDOS也无法在窗口下使用，那该如何输入汉字呢?<br>
+　　其实，在Windows\Command目录下，有一个Pdos95.bat文件，它提供在MS－DOS窗口中汉字输入与显示的功能，也可不启动Windows而直接在DOS下使用，此文件内容如下(∥后为笔者所加注释)：<br>
+　　pbios.exe ∥中文系统内核<br>
+　　font16.exe∥16＊16字体驱动程序<br>
+　　hzvio95.exe∥MS－DOS7.00显示驱动程序<br>
+　　hzkbd.exe∥通用词典输入法<br>
+　　instdict pinyin∥安装拼音输入法<br>
+　　instdict shanpin∥安装双拼输入法<br>
+　　instdict quwei∥安装区位输入法<br>
+　　instdict guobiao∥安装国标输入法<br>
+　　ctrlpan∥安装控制台程序<br>
+　　<b>一、 启动中文环境</b><br>
+　　只需在DOS的提示符下输入Pdos95，回车即可。<br>
+　　<b>二、 切换输入法</b><br>
+　　启动好中文环境后，屏幕右下角会显示黄色的“Windows 中文DOS方式”，表明已经能够显示汉字了，要切换到中文输入方式，只需同时按下“Ctrl＋Space”键即可，屏幕在左下角会显示绿色的“拼音___________空”字样，此时，就可用拼音输入法输入汉字了。如果要使用其它输入法，可以按下“Ctrl＋Shift”键转换，可依次调出“拼音”、“双拼”、“区位”、“国标”等多种输入法(可惜“五笔输入法”没有)，而且黑底绿字，非常显眼。我们也可把转换输入法定义成UCDOS的形式，只需修改Pdos95.bat批处理文件，修改为以下形式即可：<br>
+　　instdict pinyin a_f1∥Alt＋F1 转换至拼音输入法<br>
+　　instdict shanpin a_f2∥Alt＋F2 转换至双拼输入法<br>
+　　instdict quwei a_f6 ∥Alt＋F6 转换至区位输入法<br>
+　　instdict guobiao a_f4∥Alt＋F4 转换至国标输入法<br>
+　　<b>三、 全角半角转换</b><br>
+　　同时按下“Shift＋Space”键可进入全角状态，主要是针对英文，再按下“Shift＋Space”键可退回半角状态。<br>
+　　<b>四、 配置输入法</b><br>
+　　配置输入法用CSETUP程序，可设置联想，显示模式等参数，改动配置文件后，需退出中文DOS方式(用QUIT程序)，再启动Pdos95.bat后才可使用。<br>
+　　<b>五、汉字打印</b><br>
+　  要进行打印，首先要启动FOUTLINE.EXE程序，这是一个轮廓字符驱动程序，然后启动打印驱动程序，共有CR3240.EXE、HPLJ300.EXE、HPLJ600.EXE、LQ1600K.EXE四个驱动程序，选择与自己打印机相关的驱动程序。此外，与打印机相关的还有一个PRTMON.EXE(打印监控)程序。<br>
+　  <b>六、退出中文DOS方式</b><br>
+　　只需在提示符下输入“QUIT”命令后按回车即可。<br>
+<b>（浙江  王中华 ）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/30/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99301201.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+<A HREF='http://www.lpzx.edu.cn/show_stats.htm%20target=sxrl'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>让时间更精确<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        在应用VB编程的时候，你是否发现VB的时间控制并不十分精确，在VB中我们有时需要一个比VB自带的now()更精确的计时函数，下面的BetterNow()就是这样的一个函数，在Pentium166MMX的机器上，它大概每10微秒执行一次，而VB自带的函数是每180微秒执行一次。ButterNow()更精确，它支持1毫秒的事件触发，而VB的now()只支持1000毫秒的事件触发。同样的它也比Timer()更快更精确，因而它可以在记录时间流逝方面替代Timer()，比Timer()更好的是它不会在每天午夜自动清零。<br>
+        &nbsp;&nbsp;&nbsp; ＃IfWin16Then<br>
+        &nbsp;&nbsp;&nbsp; PrivateDeclareFunctiontimeGetTimeLib_<br>
+        &nbsp;&nbsp;&nbsp; ″MMSYSTEM.DLL″()As Long<br>
+        &nbsp;&nbsp;&nbsp; ＃Else<br>
+        &nbsp;&nbsp;&nbsp; Private Declare Function timeGetTime Lib<br>
+        &nbsp;&nbsp;&nbsp; ″winmmdll″_<br>
+        &nbsp;&nbsp;&nbsp; ()AsLong<br>
+        &nbsp;&nbsp;&nbsp; ＃EndIf<br>
+        &nbsp;&nbsp;&nbsp; Function BetterNow() As Date<br>
+        &nbsp;&nbsp;&nbsp; Static offset As&nbsp; Date<br>
+        &nbsp;&nbsp;&nbsp; Static uptimeMsOld As Long<br>
+        &nbsp;&nbsp;&nbsp; Dim uptimeMsNew As Long′定义一秒<br>
+        &nbsp;&nbsp;&nbsp; ConstoneSecond=1/(24＃＊60＊60)′定义一毫秒<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; ConstoneMs=1/(24＃＊60＊60＊1000)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; uptimeMsNew=timeGetTime()′如果是第一次调用函数或运行时间超过47天，重新计算时间。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; If offset=0 or uptimeMsNew＜uptimeMsOld Then <br>
+        &nbsp;&nbsp;&nbsp; offset=Date－uptimeMsNew＊oneMs＋CDbl(Timer＊_oneSecond 
+        &nbsp;&nbsp;&nbsp; <br>
+        &nbsp;&nbsp;&nbsp; uptimeMsOld=uptimeMsNew<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; EndIf<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; BetterNow=uptimeMsNew＊oneMs＋offset<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; EndFunction (重庆 释月)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

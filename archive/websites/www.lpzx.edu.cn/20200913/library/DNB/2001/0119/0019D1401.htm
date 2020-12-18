@@ -1,0 +1,213 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用rpl-pxe方式安装无盘Win98</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/Templates/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="library/DNB/Templates/wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="library/DNB/Templates/software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="library/DNB/Templates/hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="library/DNB/Templates/internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="library/DNB/Templates/oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="library/DNB/Templates/game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/Templates/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="library/DNB/Templates/zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/Templates/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第19期<!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="library/DNB/Templates/internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->用rpl-pxe方式安装无盘Win98<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->无盘工作站一直是大家关心的一项技术，《电脑报》曾有多篇文章介绍它的安装方法及故障排除。<br>
+              现在的无盘工作站，通常有两种安装方式，一种是微软的Win NT4.0提供的rpl安装方式，2000年《电脑报》有多篇文章介绍；另一种是Intel推出的PXE的安装方式，《电脑报》2001年第8期、第9期、第12期均有详细介绍。前一种方式因为微软主推其Windows终端，被微软弃用，所以Win2000中已经不再提供rpl远程启动服务，也只能安装Win95。但其安装的硬件要求较低，且技术流传广泛，为许多人所掌握。而PXE方式推出不久，技术较新，但其硬件配置要求较高，需专门的启动芯片，且技术资料较少。<br>
+              可见，这两种安装方式各有其优缺点，能不能将这两种方式结合起来，使现有的rpl无盘网不用换启动芯片，也不需特殊的网卡就能用pxe的技术来安装Win98呢，答案是肯定的。<br>
+              首先，必须准备好pxe安装过程中的litenet程序和你要安装的所有应用程序。<br>
+              这种方案的基本步骤是机器启动时用RPL芯片引导，完成引导后通过Autoexec.bat和Win.bat控制权交给PXE并启动Win98。这种启动方法，使得LiteNet成为了一种令rpl能启动Win98的工具。<br>
+              其次，按照正常的程序安装rpl的无盘工作站，如果你还不会，翻翻以前的《电脑报》吧。到安装完第一台无盘工作站，并用win95clt.bat程序将工作站目录下的文件复制到网卡配置文件C\Winnt\Rpl\Rplfiles\Profiles\Win95\Subo-<br>
+              ot(只是举例，根据实际情况远程启动路径会有所不同，这里配置文件名是Win95)路径下。<br>
+              然后把C\Winnt\Rpl\Rplfiles\Binfi-<br>
+              les\Win95目录下的Io.SYS、Command.com这两个文件替换为Win98的Io.SYS和Command.Com。<br>
+              Rpl开始时要在内存虚拟一个D盘来存放Win95和Suboot下的文件。为了使宝贵的内存不用被这个虚拟盘占用更大的空间，我们要尽精简三个目录的文件数。以下是必须用到的文件：<br>
+              在C\Winnt\Rpl\Rplfiles\Binfiles\Win95目录下的文件：<br>
+              BOOTSECT.COM<br>
+              SETMDIR.EXE<br>
+              HIMEM.SYS<br>
+              IFSHLP.SYS<br>
+              RAMDRIVE.SYS<br>
+              FIXMEM.COM<br>
+              NWRPLTRM.COM<br>
+              IO.SYS<br>
+              COMMAND.COM<br>
+              PROTMAN.DOS<br>
+              PROTMAN.EXE<br>
+              ASPI2HLP.SYS<br>
+              NTRPL.SYS<br>
+              NDISHLP.SYS<br>
+              EMM386.EXE<br>
+              SNAPSHOT.EXE<br>
+              在C\Winnt\Rpl\Rpl<br>
+              files\Profiles\Win95\Suboot目录下的文件：<br>
+              WINBOOT&lt;DIR&gt;<br>
+              SUBST.EXE(要用WIN98下自带的)<br>
+              WIN.BAT<br>
+              AUTOEXEC.BAT<br>
+              CONFIG.SYS<br>
+              SYSTEM.DAT<br>
+              PROTOCOL.INI<br>
+              NE2000.DOS<br>
+              MSDOS.SYS<br>
+              IO.SYS (这个文件一定要有，否则运行不下去)<br>
+              完成上面这些工作后，再按照提供的具体内容修改msdos.sys、config.sys、autoexec.bat、win.bat这几个文件的内容。<br>
+              以下是Suboot目录中Msdos.SYS的内容：<br>
+              Paths<br>
+              WinDir=C\WIN98<br>
+              WinBootDir=C\<br>
+              HostWinBootDrv=C<br>
+              Options<br>
+              BootMulti=1<br>
+              BootGUI=1<br>
+              Network=1<br>
+              logo=1<br>
+              LoadTop=0<br>
+              以下是Suboot目录中Config.SYS的内容：<br>
+              Device=Himem.sys<br>
+              device=c\ramdrive.sys 1400/E(如果启动时显示内存不足，可将这里改大些)<br>
+              以下是Suboot目录中Autoexec.bat文件的内容：<br>
+              if not exist D:\winboot\nul mkdir D:\winboot<br>
+              if not exist D:\winboot\winboot\nul mkdir D:\winboot\winboot<br>
+              copy c\ D:\winboot<br>
+              copy c\winboot\. D:\winboot\winboot<br>
+              d<br>
+              cd \winboot<br>
+              以下是Suboot目录中Win.bat文件的内容：<br>
+              set comspec=d:\winboot\command.com<br>
+              nwrpltrm(这里是删掉启动时建立的C盘，为PXE建立C盘创造条件)<br>
+              fixmem<br>
+              snapshot /S /Bd<br>
+              setmdir /m /rd:\winboot<br>
+              subst a d:\winboot<br>
+              set comspec=A\command.com<br>
+              a<br>
+              cd \winboot<br>
+              call setvars.bat<br>
+              call startnet.bat<br>
+              注意，Nwrpltrm一定要放在Win.bat内，放在其它批处理文件在运行它时会中断当前的批处理。<br>
+              接下来，在一台有盘工作站上完成Win98的安装及各种硬件设置，并完成所需软件的安装。再用Litenet软件将此有盘站信息传送至服务器中并产生PXE启动软盘，检验安装是否正确的最简单办法就是用这张软盘能够正确从服务服启动Win98。具体的方法参见《电脑报》2001年第8期、第9期、第12期文章《用PXE技术实现无盘WIN98》。<br>
+              然后，在C\Winnt\Rpl\Rplfiles\Profiles\Win95\<br>
+              Suboot下再新建一个Winboot目录， 将PXE启动盘中Winboot目录下的内容拷入其中，以下就是这个目录中的必需的文件：<br>
+              SETVARS.BAT<br>
+              QUALREG.EXE<br>
+              USERNAME.BAT<br>
+              QUALCNX.EXE<br>
+              SETUSER.COM<br>
+              GET_NODE.BAT<br>
+              QAUTOLOG.EXE<br>
+              NE2000.DOS(网卡驱动程序，可能根据情况会有所不同)<br>
+              PROTMAN.DOS<br>
+              PROTOCOL.INI<br>
+              NDISHLP.SYS<br>
+              PROTMAN.EXE<br>
+              STARTNET.BAT<br>
+              NET.MSG<br>
+              SNAPSHOT.EXE<br>
+              NET.EXE<br>
+              文件后的数字表示该文件的大小<br>
+              现在，将这台有盘站设置成远程启动方式或是取掉硬盘，是不是启动到Win98了？以安装PXE的方法逐台添加工作站，你的无盘rpl-pxe无盘Win98网便大功告成了。<br>
+              用这种方式安装无盘Win98时最容易出现的问题是启动时内存不足，大致有以下的几种方法可以解决。<br>
+              (1)去掉文件C\WINNT\rpl\RPLFILES\PROFILES\W95RPL\SUBOOT\Win.bat中的snapshot 
+              /S /Bd一行，或者将该行修改为snapshot /S /Bd /m124。这样可以使常规内存增加一些；<br>
+              (2)在文件E\WINNT\rpl\RPLFILES\PROFILES\W95RPL\SUBOOT\MSDOS.SYS的Options子段下面加上LoadTop=0一句。这样也可以使常规内存增加；<br>
+              (3)可以用Win98的himem.sys文件覆盖拷贝至C\WINNT\rpl\RPLFILES\BINFILES\WIN95下。这样可以使常规内存增加；<br>
+              (4)考虑修改suboot下的config.sys中的设置虚拟盘的项，把数值改大一些。<br>
+              安装无盘工作站是一项繁杂的工作，但相信只要有技术和耐心，就一定会成功。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- Delphi——面向对象的Pascal</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>40 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; Delphi——面向对象的Pascal</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 Delphi——面向对象的Pascal 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　一般说来，面向对象的编程语言主要基于三个基本概念：类、继承以及多态性。由于Delphi采用了一些特别技术，使得用户甚至可以在对Object Pascal语言一无所知的情况下编写Delphi应用程序。当用户建立窗体、添加新组件以及处理事件时，Delphi会自动产生大部分的相关代码。本文就Delphi与其他OOP语言的一些区别作简要描述，以便学员对Delphi这种面向对象的Pascal语言有更深一步的了解。<br>
+　　类（Class）是一种用户定义的数据类型，它有自己的内部数据和函数或过程形式的方法，用来描述一些相似对象所拥有的共同特性和行为。在大多数OOP语言中，通过声明类的变量来创建类的实例，即实际的类对象，像最著名的C＋＋就是这样。而Object Pascal采用的是另外一种称为对象引用的机制，类的对象并不真正保存类的数据，它只是一个引用，指向类数据在内存中的实际位置。其代码并没有真正创建对象，而只是一个指针的位置。对于用户自己定义的类必须手工建立，而组件的实例则可以由Delphi自动建立。<br>
+　　继承（Inherit）就是把一个新的对象定义为已经存在的类的后代，新类继承了旧类的一切东西，在向新类中添加任何新的内容之前，父类（或基类）中的每一个字段和方法都存在于派生类中。在继承时，只需要在类的声明开始部分说明类和它的父类即可。与C/C＋＋不同，Pascal是一门强类型语言，用户不能使用显示的类型强制转换。两个值兼容的规则是只有当它们是相同的数据类型时才能视它们为兼容。该规则的一个重要例外是在类存在的情况下：当需要父类对象时，可以使用子类的对象；但相反则不行，不能在需要子类对象时使用父类对象。<br>
+　　多态（Polymorphism）的基本思想是用户调用对象方法，但具体调用哪个对象方法则依赖于与变量相关的对象类型，而Delphi在运行前是不能确定与变量相关的对象的实际类型的。这一关键技术使得面向对象的编程语言有利于可重用性，用户可以在不清楚各级实际派生类的情况下编写使用这些类的代码。在Delphi中，一种对象方法使用滞后联编有两种基本方法：用户可以声明它为虚拟（virtual）或声明它为动态（dynamic）。这两种方法语法相同，使用结果也相同，不同在于编译器实现的机制。<br>
+　　有关Delphi面向对象的进一步知识可参见类的封装、类的接口、单元与作用域、动态联编、重载和抽象对象方法等内容的详细解释。<br></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/40/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99403702.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 小试“宏”刀</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 小试“宏”刀</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 小试“宏”刀 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　我是厂报的一名业余通讯员，自从办公室配备了微机后，我写作就不再动笔了。但单位上的微机还未联网，因此每次写完稿，都要重复以下操作步骤：<br>
+　　1.按工具栏“保存”按钮，在保存对话框打开后，指定保存位置“D：\稿件备份”，然后输入稿件文件名，按“保存”(即保存一份底稿)；<br>
+　　2.打开“文件”菜单，按“另存为”，然后指定保存位置“A：\”，再一次输入相同的文件名后，按“保存”(即再保存一份到A盘，A盘送往单位宣传部并拷入微机稿件库，等候择优发表)；<br>
+　　3.关闭此文档。<br>
+　　看了第39期CPCW网站的“掀起Word的宏盖头”后，灵机一动，既然自己有一定的VB语言基础，何不试试用“宏”来自动完成以上步骤。经过一番技术准备，我作出了如下的功能设计：<br>
+　　每次写作时打开一个名为“写作”的文档，在“写作”文档中写完稿件后，单击工具栏上的“写作结束”按钮启动宏，此时弹出一个对话框，只需在文本框中输入一次稿件文件名，再按“确定”键，宏就自动分别在文件夹“D:\稿件备份”和“A：\”中保存该文件，然后自动关闭“写作”文档；完成操作后，“写作”文档其实仍是一个空文档而没有任何内容，每次写作时可重复使用；“写作结束”宏按钮仅出现在打开的“写作”文档中。<br>
+　　设计完功能后，具体实现步骤如下：<br>
+　　1.首先启动Word97，新建一名为“写作”的空文档，并设置好页面；<br>
+　　2.单击“工具”/“宏”/“宏”，在“宏名”文本框处输入“写作结束”，“宏的位置”选当前的“写作”文档，单击“创建”(见图1)；<br>
+　　3.在系统打开的“MVB编辑器”中(如图2)直接输入如下代码：<br>
+　　Dim message As String, title As String, default As String<br>
+　　Dim myvalue As String, co As String<br>
+　　Dim msg1 As String, msg2 As String, msg3 As String<br>
+　　co = Chr(13) ＋ Chr(10)<br>
+　　msg1 = ″请输入文件名″<br>
+　　msg2 =″按“确定”键将文件归档并发送A盘″<br>
+　　msg3 =″按“取消”键返回当前的Word文档″<br>
+　　message = msg1 ＋ co ＋ msg2 ＋ co ＋ msg3<br>
+　　title = ″写作对话框″<br>
+　　default = ″临时文件名″<br>
+　　myvalue = InputBox(message, title, default)<br>
+　　If myvalue = ″″ Then End<br>
+　　ChangeFileOpenDirectory ″D:\稿件备份″<br>
+　　ActiveDocument.SaveAs FileName:=myvalue, FileFormat:=wdFormatDocument, _<br>
+　　      LockComments:=False, Password:=″″, AddToRecentFiles:=True, WritePassword _<br>
+　　      :=″″, ReadOnlyRecommended:=False, EmbedTrueTypeFonts:=False, _<br>
+　　      SaveNativePictureFormat:=False, SaveFormsData:=False, SaveAsAOCEletter:= _<br>
+　　      False<br>
+　　 ChangeFileOpenDirectory ″A:\″<br>
+　　 ActiveDocument.SaveAs FileName:=myvalue, FileFormat:=wdFormatDocument, _<br>
+　　      LockComments:=False, Password:=″″, AddToRecentFiles:=True, WritePassword _<br>
+　　      :=″″, ReadOnlyRecommended:=False, EmbedTrueTypeFonts:=False, _<br>
+　　      SaveNativePictureFormat:=False, SaveFormsData:=False, SaveAsAOCEletter:= _<br>
+　　      False<br>
+　　ActiveDocument.Close<br>
+　　输完后保存，这样就拥有了一个能简化操作的宏了。但为了使用方便，可把此宏指定到工具栏制作一个名为“写作结束”的按钮。如何将宏指定到工具栏请参见CPCW网站刊过的有关文章。顺便说一下，该宏是无法通过录制的方法得到的。<br>
+　　好了，这初尝“宏”果的滋味实在让人兴奋不已，以后我要做的事就是打开“写作”文档专心做文章，机械的扫尾工作就由电脑去做了。<br><b>　　(四川　杨爱因)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99503401.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

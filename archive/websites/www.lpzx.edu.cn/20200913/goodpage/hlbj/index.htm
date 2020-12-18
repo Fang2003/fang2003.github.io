@@ -1,0 +1,240 @@
+<html>
+<head>
+<style type="text/css">
+.spanstyle {
+	COLOR: #ff0000; FONT-FAMILY: 宋体; FONT-SIZE: 10pt; POSITION: absolute; TOP: -50px; VISIBILITY: visible
+}
+</style>
+<script>
+var x,y
+var step=18
+var flag=0
+// Your snappy message. Important: the space at the end of the sentence!!!
+var message="★欢迎光临欢乐班级!"
+message=message.split("")
+var xpos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=message.length-1;i++) {
+	ypos[i]=-200
+}
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	flag=1
+}
+
+function makesnake() {
+	if (flag==1 && document.all) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("span"+(i)+".style")
+    		thisspan.posLeft=xpos[i]
+			thisspan.posTop=ypos[i]
+    	}
+	}
+
+	else if (flag==1 && document.layers) {
+    	for (i=message.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+
+		for (i=0; i<message.length-1; i++) {
+    		var thisspan = eval("document.span"+i)
+    		thisspan.left=xpos[i]
+			thisspan.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("makesnake()",30)
+}
+
+</script>
+
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+
+<title>欢乐班级</title>
+<bgsound src="end.mid" loop="-1"> 
+<style fprolloverstyle>A:hover {color: red; font-weight: bold}
+</style>
+<meta name="Microsoft Theme" content="none">
+
+</head>
+
+<body onload="makesnake()" background="ricebk.jpg">
+<script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=message.length-1;i++) {
+    document.write("<span id='span"+i+"' class='spanstyle'>")
+	document.write(message[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = handlerMM;
+
+// - End of JavaScript - -->
+</script>
+  <table border="0" width="100%" height="1"> 
+    <tr> 
+     <td width="27%" height="1" align="left" valign="top"><img border="0" src="image/Boom.gif" align="top" width="42" height="53" vspace="0"><img border="0" src="image/欢乐班级.jpg" width="226" height="89"></td>
+    <td width="34%" height="1" valign="top"><span style="position: absolute; left: 353; top: 24; z-index: -1"><img border="0" src="image/tiningmanager2.gif" width="360" height="80"></span><span style="position: absolute; left: 457; top: 3; z-index: 1"><a href="寄语.htm"><img border="0" src="image/ricebk1.jpg" width="170" height="114"></a></span></td> 
+    </tr> 
+  </table> 
+<hr color="#FF6600">
+<table border="0" width="100%" height="1">
+    <tr>
+      <td width="11%" height="1">               
+              
+  <p align="left">               
+              
+  <b><font face="方正舒体" color="#FF0000">                                                                  
+<a href="申奥.htm"><img border="0" src="image/申奥.jpg" width="70" height="90"></a></font>
+                                                                        
+</b>  
+  
+  </p>
+  
+     </td> 
+      <td width="48%" height="1">               
+              
+  <b><font color="#FF0000" face="隶书" size="5">                                                                  
+<marquee width="354" height="25">全班同学行动起来，关心奥运、支持奥运！</marquee></font>
+                                                                        
+</b>  
+  
+     </td> 
+      <td width="41%" align="right" height="1">
+    <script language="JavaScript">      
+   
+<!-- 
+tmpDate = new Date(); 
+date = tmpDate.getDate(); 
+month= tmpDate.getMonth() + 1 ; 
+year= tmpDate.getYear(); 
+document.write("今天是"); 
+document.write(year); 
+document.write("年"); 
+document.write(month); 
+document.write("月"); 
+document.write(date); 
+document.write("日"); 
+// --> 
+</script> <script language="JavaScript">                                                                    
+<!--                                                                    
+myArray=new Array(6);                                                                    
+myArray[0]="星期日"                                                                    
+myArray[1]="星期一"                                                                    
+myArray[2]="星期二"                                                                    
+myArray[3]="星期三"                                                                    
+myArray[4]="星期四"                                                                    
+myArray[5]="星期五"                                                                    
+myArray[6]="星期六"                                                                    
+weekday=tmpDate.getDay();                                                                    
+if (weekday==0 | weekday==6)                                                                    
+{                                                                    
+document.write("<font color='red'>" + myArray[weekday] + "</font>")                                                                    
+}                                                                    
+else                                                                    
+{document.write("<font color='black'>" + myArray[weekday] + "</font>")                                                                    
+};                                                                    
+//-->                                                                    
+</script>   </td>
+    </tr>
+  </table>
+ 
+<div align="center">
+              
+  <b><font face="方正舒体" color="#660033">                                                                  
+<img border="0" src="image/Welc19.gif" align="left" width="80" height="60"></font></b><img border="0" src="image/girl.gif" width="32" height="57"><b><a href="班级介绍.htm" target="_blank"><font face="华文彩云" size="5" color="#CC9900">班级介绍</font></a></b>
+<img border="0" src="image/Boy6.gif" width="28" height="54"><b><a href="班级近照.htm" target="_blank"><font face="华文彩云" size="5" color="#CC9900">欢乐时光</font></a></b>        
+<img border="0" src="image/girl.gif" width="32" height="57"><b><a href="班级园地.htm" target="_blank"><font face="华文彩云" size="5" color="#CC9900">班级园地</font></a></b>        
+<img border="0" src="image/Boy6.gif" width="28" height="54"><b><a href="个人介绍.htm" target="_blank"><font face="华文彩云" size="5" color="#CC9900">作者自述</font></a></b>        
+          
+  </div>        
+<table height="314" c1 align="center" cellpadding="2" cellspacing="8" width="761">        
+  <tr>                                                           
+              
+    <td width="624" height="314" bordercolor="#FFFF00" rowspan="2"> <img border="2" src="1-2.jpg" width="500" height="330" style="border-style: ridge; border-color: #996600" hspace="0">        
+    </td>                                                    
+             
+    <td width="101" bordercolor="#FFFFFF" height="186" align="left" >        
+      <p align="left"><script language="JavaScript1.2">                                                   
+                                                   
+//设置marquee的宽度(in pixels)                                                   
+var marqueewidth=220                                                   
+//设置marquee的高度                                                   
+var marqueeheight=240                                                  
+//设置marquee的速度                                                   
+var speed=2                                                   
+//设置marquee的显示内容                                                   
+var marqueecontents='<font face="隶书" color="#0000cc" size="2"><stronger><big> 这是一个充满快乐的班级<p>   一个奋发学习的班级 <p>              一个团结向上的班级<p>    一个健康活泼的班级<p>    一个助人为乐的班级<p>   如果你有兴趣的话<p>    那么，就请走进欢乐班级.......</big></strong></font>'                                                   
+                                                   
+if (document.all)                                                   
+document.write('<marquee direction="up" scrollAmount='+speed+' style="width:'+marqueewidth+';height:'+marqueeheight+'">'+marqueecontents+'</marquee>')                                                   
+                                                   
+function regenerate(){                                                   
+window.location.reload()                                                   
+}                                                   
+function regenerate2(){                                                   
+if (document.layers){                                                   
+setTimeout("window.onresize=regenerate",450)                                                   
+intializemarquee()                                                   
+}                                                   
+}                                                   
+                                                   
+function intializemarquee(){                                                   
+document.cmarquee01.document.cmarquee02.document.write(marqueecontents)                                                   
+document.cmarquee01.document.cmarquee02.document.close()                                                   
+thelength=document.cmarquee01.document.cmarquee02.document.height                                                   
+scrollit()                                                   
+}                                                   
+                                                   
+function scrollit(){                                                   
+if (document.cmarquee01.document.cmarquee02.top>=thelength*(-1)){                                                   
+document.cmarquee01.document.cmarquee02.top-=speed                                                   
+setTimeout("scrollit()",100)                                                   
+}                                                   
+else{                                                   
+document.cmarquee01.document.cmarquee02.top=marqueeheight                                                   
+scrollit()                                                   
+}                                                   
+}                                                   
+                                                  
+</script>                                                   
+<ilayer width=&{marqueewidth}; height=&{marqueeheight}; name="cmarquee01">                                                          
+<layer name="cmarquee02" width=&{marqueewidth}; height=&{marqueeheight};></layer>                                                         
+</ilayer></td>                     
+                                                      
+    </tr>                                                         
+    <tr>                                                           
+              
+    <td width="101" bordercolor="#FFFFFF" height="100" > </td>                   
+                                                    
+    </tr>                                                       
+  </table>                                                       
+<p><img border="0" src="image/f4.gif" width="50" height="40">  <font face="华文彩云"> <font size="4">这是我们班的李夏腩同学在到新加坡之前与全体同学的合影</font>！</font></p>                                                                                                                  
+<p align="center">　</p>                                                                                                                
+<p align="center"><img border="0" src="image/hors_anm.gif" width="200" height="35"></p>                                                                                                               
+<p align="center">大家好！我是本站的作者，欢迎您光临我的主页！请您使用IE4.0以上浏览器，分辨率最好为800*600！                                                                                                            
+<p align="center">希望您对本网站多多支持，欢迎您跟我Email联系！        
+<p align="center">我的Email是<img border="0" src="image/Mail.gif" width="32" height="32"><a href="mailto:ufo_123@sina.com">ufo_123@sina.com</a></p>                                                                                                            
+<p align="center">　</p>
+<p align="center">　</p>

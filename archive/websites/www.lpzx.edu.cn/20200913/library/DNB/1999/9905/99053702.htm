@@ -1,0 +1,87 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>指针与函数的关系</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><font face="黑体" color="#004080"><p
+        align="center"></font><strong><big><big><font color="#FFFFFF">指 针 与 函 数 的 关 系</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#000000"><span
+        style="line-height: 1.5">　　在学习C语言的过程中，学员常常对指针和函数的关系不甚清楚。事实上，C语言中的指针变量可以指向一个函数；函数指针可以作为参数传递给其它函数；函数的返回值可以是一个指针值。<br>
+        　　1．指向函数的指针<br>
+        　　函数虽然不是变量，但是它在内存中占有实际位置。函数的首地址就是该函数的入口地址，它可以赋给指针变量，使得指针变量指向函数。利用指向函数的指针变量，可以代替函数名，也可以作为函数的参数传递给其它函数。<br>
+        　　函数指针可以用如下形式说明：&lt;类型&gt; 
+        （＊指针变量名）（）；<br>
+        　　例如：int (＊funcp)();<br>
+        　　表示funcp被定义为指向一个返回值是整型量的函数。<br>
+        　　若函数指针被说明为：float (＊funcp)();<br>
+        　　则说明了funcp是一个指向一个返回值是浮点数的函数。<br>
+        　　以上说明中，第一对圆括号是必须要的，如果去掉，如int (＊funcp)()，就变成了int 
+        ＊funcp()；<br>
+        　　按照运算符的优先级，编译程序把这个说明解释为：funcp是一个返回值为指向整型量指针的函数。<br>
+        　　这就与前面的解释完全不同了。<br>
+        　　2．把指向函数的指针变量作为函数参数<br>
+        　　函数的指针变量作为参数传递到其它函数中，是函数指针的重要用途之一，其基本思想是：设有一函数func(p1, 
+        p2)；有两个形参p1和p2，它们被说明为指向函数的指针变量。则在调用func()函数时，实在参数用f1和f2两个函数名给形式参数p1和p2传递函数地址，这样在函数func()中就可以调用函数f1和f2。如<br>
+        　　f1() f2<br>
+        　　{ {<br>
+        　　…… ……<br>
+        　　} }<br>
+        　　main()<br>
+        　　{<br>
+        　　……<br>
+        　　func(f1, f2) ／＊将两个函数名f1，f2传递给func函数＊／<br>
+        　　……<br>
+        　　}<br>
+        　　func(p1, p2)<br>
+        　　int (＊p1)(), (＊p2)();<br>
+        　　{<br>
+        　　int a, b, i, j;<br>
+        　　a=(＊p1)(i); ／＊调用函数f1＊／<br>
+        　　b=(＊p2)(i, j); ／＊调用函数f2＊／<br>
+        　　……<br>
+        　　}<br>
+        　　其中i和j是函数f1和f2所要求的参数。(＊p1)(i)就等价于f1(i)，(＊p2)(i, 
+        j)等价于f2(i, j)。利用这一基本思想，实现了同一段程序调用不同的函数进行操作。<br>
+        　　3．返回值为指针的函数<br>
+        　　函数返回值可以是一个指针。在函数定义时要指明，同样在调用前也要对其进行说明。定义这种函数如同定义指针一样，都是通过“＊”来表示。一般说明形式为：<br>
+        　　&lt;类型符&gt; ＊&lt;函数名&gt; （&lt;形参数&gt;）<br>
+        　　（形参数说明部分）<br>
+        　　{<br>
+        　　……<br>
+        　　}<br>
+        　　需要注意的是，调用返回值是指针的函数之前，先要对其进行说明。<strong>(四川 
+        周静)</strong></span></font></p>
+        <p align="right"><font color="#000000"><span style="line-height: 1.5">本文出自：<a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></font></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VFP经验谈</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>46 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VFP经验谈</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VFP经验谈 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　1．在VFP的文本框中进行数据合法性校验： <br>
+　　在VALID事件中编写校验代码，比如：<br>
+　　if val(this.value)&lt;100<br>
+　　return .t.<br>
+　　else<br>
+　　return .f.<br>
+　　endif<br>
+　　即输入大于100为合法，小于100则为非法，光标不能离开该控件，可以设置表格的partition属性做到。<br>
+　　2．在GRID中使用PACK命令，GRID将全部显示为空白问题的解决：<br>
+　　因为PACK命令要关闭数据库，因此会造成一片空白，所以在表格中不能使用PACK，最好在关闭表格时，才将记录真正删除，如要不显示已做删除标记的记录，可用set delete on，如果一定要PACK，可用如下语句代替：<br>
+　　copy to lsk for .not. delete()<br>
+　　zap<br>
+　　append from l<br>
+　　3．对VFP中的表进行加密：<br>
+　　加密部分：（建议将该程序放于退出系统事件中，从而保证在退出时能对表完成加密过程）<br>
+　　restore from c:\bf\tbs additive  ＆＆恢复原表头值变量<br>
+　　if file(′c:\bf\dz.dbf′)  ＆＆dz.dbf为要保护的数据表<br>
+　　getid=fopen(′c:\bf\dz.dbf′)<br>
+　　bt=fread(getid,1)  ＆＆获得当前表头第一字节的值<br>
+　　if bt=b  ＆＆ b 为tbs中存贮的原表头值变量若bt=b表明未加密<br>
+　　bt=′a′<br>
+　　endif<br>
+　　=fclose(getid)<br>
+　　newid=fopen(′c:\bf\dz.dbf′,12)  ＆＆将文件以可读写且非缓冲方式打开<br>
+　　=fwrite(newid,bt)  ＆＆将表头加密<br>
+　　=fclose(newid)<br>
+　　endif<br>
+　　解密部分与加密部分基本相同，只需将相应判断语句修改一下即可：<br>
+　　其中b 值可以用如下方法取得：<br>
+　　if file(′c:\bf\dz.dbf′)<br>
+　　getid=fopen(′c:\bf\dz.dbf′)<br>
+　　b=fread(getid,1)<br>
+　　endif<br>
+　　save to c:\bf\tbs all like b <br>
+　　注：程序中两次打开同一文件是为了使文件指针指向第一个字节，Fseek(gitid,0,0)可将指针移到开头<br>
+　　4．在VFP中捆绑OLE控件，调用WORD或EXCEL文件：<br>
+　　使用如下命令可以调用WORD、EXCEL等：<br>
+　　PUBLIC MYOLE<br>
+　　MYOLE=CREATEOBJECT（″WORD.APPLICATION″）<br>
+　　＆＆若是调用EXCEL，以上括号中改为EXCEL.APPLICATIONMYOLE.VISUBLE=.T.就可以了
+　　5．在VFP应用程序中破坏系统画面做资料备份：<br>
+　　如不压缩，直接用copy file...to...复制，大数据库可用copy to...分隔成若干小数据库。如要压缩，在调用压缩软件时，如arj,rar等带n2参数，比如：run ／n2 rar...<br>
+　　即设置窗口最小化。以上方法比较简单易行，完善的方法可调用两个共享的动态链接库AZIP.DLL和AUNZIP.DLL来完成，在http:／／happyfox.163.net／foxtips.html这个网址有使用方法介绍和下载。<br><b>（风帆）  </B></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99461301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

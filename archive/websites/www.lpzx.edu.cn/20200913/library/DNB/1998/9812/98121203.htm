@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>方正办公套件的卸载方法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>方正办公套件的卸载方法<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　《电脑报配套光盘第三辑》上有方正公司的办公套件(WORDMATE)。这是一套不错的办公软件，但这个软件没有提供卸载功能。如果用鼠标右击其子目录，选择“删除”的方法，Windows会有“这一变化将影响部分已注册的程序，继续吗?”的提示。虽然可以将该子目录从硬盘上删除，但并非将这个软件完全地从硬盘上删除掉。<br>
+        　　我经过多次实验，找到了一个可行的方法。不妨一试。<br>
+        　　1打开WIN.INI文件，会找到以下几行(假设该软件装在D盘)，全部删掉。<br>
+        　　[FZOfficc]<br>
+        　　FilmPath－D:\WORDMATE\FILM.EXE<br>
+        　　WordMatePath=D:\WORDMATE\WORDMATE.EXE<br>
+        　　SprcadPath－D:\WORDMATE\SPREAD.EXE<br>
+        　　2启动注册表编辑器，打开“查找”对话框，键入“FILM”后，按“查找下一个”，将会找到几个如：D：\WORDMATE\FILM.EXE”(假设该软件装在D盘)字样的键值(可能有一些不同)，将其删除。<br>
+        　　3重新启动系统，打开资源管理器，右击“WORDMATE”子目录，选择“删除”。就可以将WORDMATE完全地从硬盘上删除了。<strong>(黑龙江　何兴龙)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月30日第12期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

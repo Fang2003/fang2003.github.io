@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Flash 4 teaching</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<link rel="StyleSheet" type="text/css" href="goodpage/wdxly/study/flash4/flasht.css">
+</head>
+
+<body bgcolor="#FFFFFF" background="backgr.gif">
+<a name="top"></a>
+<div align="center">
+<p><font size="+2">第八课&nbsp;按钮(Button)的加入</font></p>
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="55%">&nbsp;&nbsp;&nbsp;&nbsp;想在你的网页中加入一个漂亮的按钮吗？你一定会想到用Javascript或GIF图形来做一个满意的按钮。其实，用Flash，小小的1到2K就能够做出一个令人惊叹的绝色按钮，看右面的例子（把鼠标移上去）。
+<td width="45%">
+<div align="center"><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#3,0,0,0" width="300" height="100" id="Shockwave Flash Object1">
+<param name="SRC" value="swf/button.swf">
+<embed src="swf/button.swf" pluginspage="http://www.macromedia.com/shockwave/download/" type="application/x-shockwave-flash" width="300" height="100">
+</embed>
+</OBJECT></div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="35%">&nbsp;&nbsp;&nbsp;&nbsp;不错吧，其实上完这课，你也可以在短短的几分钟内搞定这个按钮。首先，还是老把戏，按Ctrl+M把工作区定成300*100，按Ctrl+Shift+Alt+G显示格子，按Ctrl+Alt+G定位鼠标。在工作区里画上一个带圆角的矩形。矩形的圆角是把工具栏下方的圆角按钮按下，在对话框里输入圆角的象素点数（本例为5）后，画出矩形即可。详细操作见右图。现在，工作区应如下图所示。
+
+<td width="65%">
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="48%"><img src="images/l8_01.gif" width="161" height="58">
+<td width="52%">把工具栏下方的圆角按钮按下
+
+<tr>
+<td width="48%"><img src="images/l8_02.gif" width="292" height="53">
+<td width="52%">在对话框里输入圆角的象素点数
+
+</table>
+
+
+</table>
+<br>
+<table width="302" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td><img src="images/l8_03.gif" width="302" height="102">
+
+<tr>
+<td>
+<div align="center">工作区图示</div>
+
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="65%">&nbsp;&nbsp;&nbsp;&nbsp;现在，用箭头工具(Arrow)把这个矩形选中，在菜单中选择Insert
+-&gt;Convert to Symbol或按F8键出现生成符号(Symbol)的界面（一个对话框）。这时注意了，不能象前面几课那样直接点OK钮把这个矩形转换成图像符号(Graphics
+Symbol)了。因为我们要把这个矩形做成按钮，所以这里，我们要象右图那样，选中Button，把它定义成按钮符号，然后在点OK钮。见右面的界面。
+<td width="35%">
+<div align="center"><img src="images/l8_04.gif" width="158" height="110"><br>
+选中Button</div>
+
+
+</table>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="48%">
+<table width="98%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="35%"><img src="images/l8_05.gif" width="120" height="50">
+<td width="65%">点击书签区里的编辑符号标签
+
+<tr>
+<td width="35%"><img src="images/l8_06.gif" width="158" height="45">
+<td width="65%">按钮符号的Timeline区只有四格
+
+</table>
+
+<td width="52%"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;接着，我们还要对这个按钮符号进行编辑，点击书签区里的编辑符号标签，选择刚才定义的那个按钮符号，进入编辑符号状态（如左）。这时我们发现，按钮符号的Timeline区只有四格，分别是Up、Over、Down、Hit，如左图。它们的意思分别是：
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;Up&nbsp;&nbsp;&nbsp;：鼠标不在按钮上的状态；<br>
+&nbsp;&nbsp;&nbsp;Over&nbsp;：鼠标在按钮上但没有按下的状态；<br>
+&nbsp;&nbsp;&nbsp;Down&nbsp;：鼠标在按钮上按下时的状态；<br>
+&nbsp;&nbsp;&nbsp;Hit&nbsp;&nbsp;：鼠标按下后的状态。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;现在我们看见Up下有一个小圆点，这表示在鼠标不在按钮上时。按钮的状态就按在Up那一帧里定义的一样。而Over、Down、Hit下没有圆点表示这些状态下按钮图样没有定义，在这些状态下，就默认为与Up帧一样。现在，你应该明白下面该怎么做了吧。对了，定义这些帧。
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td width="50%">&nbsp;&nbsp;&nbsp;&nbsp;为了使每个状态下的按钮位置一致，我们可以复制Up帧到其他的帧，然后在修改那些帧。<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;先在Up帧下方格内按右键，弹出菜单后选Copy Frame复制帧。然后在其他几帧的方格内单击右键，弹出菜单后选Paste
+Frame粘贴帧。（如右图）<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;看，现在那些小方格里都有圆点了吧（见下图）！不过，工作还未做完，网虫还需努力！我们接下来还要继续修改这几个不同状态下的按钮图案。<br>
+<br>
+<table width="32%" border="0" cellspacing="0" cellpadding="0" align="center">
+<tr>
+<td><img src="images/l8_09.gif" width="158" height="44">
+
+</table>
+
+<td>
+<table width="100%" border="1" cellspacing="2" cellpadding="0">
+<tr>
+<td width="49%" height="101"><img src="images/l8_07.gif" width="170" height="166">
+<td width="51%" height="101"><img src="images/l8_08.gif" width="175" height="168">
+
+<tr>
+<td width="49%">
+<div align="center">在Up帧下方格内按右键<br>
+弹出菜单后选Copy Frame</div>
+
+<td width="51%">
+<div align="center">在其他几帧的方格内单击右键<br>
+弹出菜单后选Paste Frame</div>
+
+
+</table>
+
+
+</table>
+<br>
+<table width="75%" border="1" cellspacing="2" cellpadding="2">
+<tr>
+<td width="53%">&nbsp;&nbsp;&nbsp;&nbsp;在Up帧的按钮上用文字工具写上一行字“Move on me”，提醒你把鼠标移到按钮上。
+<td width="47%"><img src="images/l8_10.gif" width="204" height="59">
+
+<tr>
+<td width="53%">&nbsp;&nbsp;&nbsp;&nbsp;在Over帧的按钮上用油漆桶换种颜色，同时写上“Click on
+me”，提醒你按下按钮。
+<td width="47%"><img src="images/l8_11.gif" width="206" height="62">
+
+<tr>
+<td width="53%">&nbsp;&nbsp;&nbsp;&nbsp;在Down帧的按钮上同样用油漆桶换色，然后写上“You've clicked
+me”，表示你已按下按钮。
+<td width="47%"><img src="images/l8_12.gif" width="206" height="64">
+
+<tr>
+<td width="53%">&nbsp;&nbsp;&nbsp;&nbsp;在Hit帧一般不做改动。
+<td width="47%">&nbsp;
+
+</table>
+<br>
+<table width="98%" border="0" cellspacing="3" cellpadding="0">
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;好了，到这里就基本OVER了。哦，还有一点，你可以在菜单栏里选Control -&gt;
+Enable Buttons，这样，你就能在工作区里直接看到效果了。好了，按下Ctrl+Enter看一下，是不是比JavaScript简单，比Gif小巧，比HTML漂亮？<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;从下一课起，我们就要进入这个教程最Cool最炫的部分——特效！心动了吧，<a href="lesson9.htm">Follow
+me！</a>
+
+</table>
+</div>
+<hr>
+<table width="300" border="0" cellspacing="0" cellpadding="0" align="right">
+<tr>
+<td>
+<div align="center"><a href="lesson9.htm">下一课</a></div>
+
+
+</table>
+</body>
+</html>

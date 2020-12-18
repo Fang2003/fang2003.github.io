@@ -1,0 +1,54 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用VB设计文件自动备份程序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 编者按：自VB班开学以来，不少学员都感到获益匪浅，纷纷来信来稿反映自己的学习状况，下面从中摘录一篇具有代表性的文章。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 本人是函授学校VB短训班的一名学员，经过一段时间的学习逐步掌握了可视化编程的原理，并用VB编写了一些简单的小程序。本文介绍我用VB编写“文件自动备份程序”的方法，与各位VB短训班的同学共同探讨，学习VB的强大功能。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        每一个经常使用计算机的朋友都要在硬盘中保存大量的数据，这些数据时刻面临着被误删除、病毒破坏等种种危险。下面的这段小程序每逢偶数日(因备份文件比较耗时，所以不需要每天都备份)就将一些重要文件自动备份到硬盘的另一个地方，以保证数据的安全。此程序主要用到了VB的几个常用控件和文件拷贝函数。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 一、界面<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        整个程序只用一个窗体。在窗体中添加以下控件：一个文本柜、一个计时器和一个按钮。计算器在程序运行中是不可见的控件所以其放置的集团很随意：文本框和按钮的集团要视窗体的大小和显示内容而定。在VB的属性窗口中将计时器的Interval属性值设为3000。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 二、代码<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        先编写一个备份文件的子过程，代码如下：PublicSubkb0Cmdbf.Enabled=False′在拷贝文件的过程中按钮不被显示Timer.Enabled=False′在拷贝文件的过程中计时器不计时Textbf.Text=″正在备份文件……″′在文本框中显示信息FileCopy″源文件名″，″目标文件名″′可使用多个FileCopy函数Textbf.Text=″备份结束″Cmdbf.Enabled=TrueTimer.Enabled=True′使计时器开始计时EndSub在窗体的Load事件中添加以下代码：IfDay(Date)/2=Int(Day(Date)/2)Then′判断是否为偶数日Callkb′如果是，则执行kb子过程Else′如果不是，则显示相关信息Textbf.Text=″今天是″＆Format(Date,″longdate″)＆″，是奇数日，所以不作备份!″EndIf在按钮的Click事件中添加下面一行代码：Callkb′执行kb子过程在计时器Timer事件中添加下面一行代码：End′关闭文件备份程序三、程序执行过程程序运行后首先执行窗体Load事件中的代码，判断系统日期是否为偶数日，如果是则执行kb子过程；如果不是则显示相关提示信息，并同时显示强制备份的命令按钮。这时如果按这个按钮，程序还将执行kb子过程，以方便在非备份日强制备份文件。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 在执行kb子过程时命令按钮不可用。为防止在拷贝文件过程中计时器到时而中断拷贝的进行，所以需要在拷贝文件前将计时器禁用，拷贝完成后再恢复。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        程序中运用计时器控件的目的在于使程序运行结束后自动关闭，做到整个备份过程不需要人为干预。使用此程序时只要将其放入Windows的启动组中，在每次启动Windows的时候就会自动运行它，完成重要文件的备份工作。(辽宁潘峰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月5日第38期40版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

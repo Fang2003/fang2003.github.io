@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>点对点传送文件</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">点对点传送文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　某日，一位同市的网友给你来电话，声称“红色警报”有一关过不去，向你求救，要用你的存盘文件。放下电话，你皱起眉头，几百K的文件，若通过Internet来传送的话，速度实在太慢，要费不少时间和Money，用E－mail，除了速度慢，还可能把对方的信箱撑爆，实在不敢造次；若亲自送去，就那么一张小磁盘，可能要你穿过大半个市区，也太累人了些。那么，这时候，你有没有想过通过点对点拨号通信来传送这个文件呢?<br>
+        　　在流行上网冲浪的今天，很多拥有Modem的人都已经忘却了点对点通信的时代。然而，点对点通信在传送文件方面，特别是双方处于同一地区，不需要拨长途电话的情况下，有其独到的好处。一个好处是速度快，尤其是双方都拥有高速Modem的情况下。通过Internet传送文件，要忍受出口带宽和网络拥挤的限制，有的ISP提供的还是低速上网条件，更加无法容忍。而用两台Modem直接拨号连接，就不必考虑这么多，笔者与朋友都使用USR 
+        Spotster 33.6的Modem连接，文件传输速度几乎可以达到4KB每秒，差不多5分钟就是1M，感觉很爽。另一个好处是经济，若通过Internet连接，双方都要支付电话费和连网费，费时长，花钱多，而通过点对点通信，只需要一方(拨号方)支付电话费即可，并且由于耗时少，可以大大节省钞票。再有就是你可以传送较大的文件，而不必考虑将对方的信箱撑爆之类的问题，当然，相信你也不会将整个硬盘都倒过去。<br>
+        　　通过Modem实现点对点拨号通信要有以下条件：硬件方面，需要PC(个人计算机)、Modem、程控电话各一台；软件方面，有很多选择，不少软件支持这一功能，而且由于都支持贺氏AT命令集，用起来也差不多。在DOS下可以用Telix，在Windows95下可以用“超级终端”。另外如果你买的是名牌Modem的话，一般会有附带的通信软件，如USR的QuickLink，贺氏的SmartCom，这些软件功能更加齐全，使用也更方便。<br>
+        　　以上介绍的软件使用起来大同小异，但在实践中，还需注意以下设置：<br>
+        　　终端模式(Terminal Emulator)的设置　大部分的通信软件的终端模式默认的是ANSI模式，而两台PC通过Modem拨号实现点对点通信来传输文件应该选择TTY模式，这是最关键的设置。对于接收方来说，必须提前将终端模式设置为TTY；对于拨号方，有两种方法，一种也是提前设置为TTY，拨号时用人工输入命令：ATDT＋电话号码(音频电话)或是ATDP＋电话号码(脉冲电话)；另一种是通过编辑拨号列表(Phone 
+        List)，将你朋友的电话号码编入其中，在选择拨这一号码的终端模式时选择TTY，这样即使你一开始没有将软件设置为TTY模式，在拨号时也会自动转换。由于许多人要通过通信软件上BBS，终端模式希望一直保持为ANSI，就可以采取这种方法。<br>
+        　　显示模式(Display Option)的设置　一些人发现两台机器连通后自己打出来的字在屏幕上看不到。这时你可以找到关于显示模式的设置，选中诸如“显示本地发出字符”或是“本地回应”之类的选项即可。也有些人发现自己打出来的字有重影，即打出来的字都是一个变两个，那么你需要将“本地回应”选项去掉。<br>
+        　　摘机应答　有的人在接收时听着电话铃一个劲的响却不知所措，而不应答自然是无法连通的。应答有两种形式：自动和手动。自动是指某些功能较强的软件，如QuickLink和SmartCom，它们提供一个可以驻留内存的接电话程序，可以接语音、传真、数据等呼叫，接收方只要将其驻留内存，随后就可以等着拨号方拨过来了，不过要将这类程序的响应模式(Answer 
+        Mode)设置为可以响应数据(Data)呼叫；而手动就相对麻烦一些，需要接收方在听到电话铃响时，输入命令ATA进行人工摘机应答。<br>
+        　　传输协议的设置　笔者推荐使用Zmodem协议，这种协议现在最流行。<br>
+        　　一切设置好之后，就可以进行连接并传输文件了。现将大致过程介绍如下：<br>
+        　　1.双方通个电话，告诉对方自己需要什么文件，让他作好必要的准备。<br>
+        　　2.接收方将终端模式设置为TTY，如果使用自动应答，将应答程序驻留内存。<br>
+        　　3.拨号方拨号，若用手动拨号，需先将终端模式设置为TTY，再输入ATDT(ATDP)＋电话号码；若使用事先编辑好的拨号列表，则更方便，但要保证拨出时终端模式为TTY。<br>
+        　　4.接收方应答，若使用自动方式就不必劳烦；若使用手动应答，在听到电话铃响后输入ATA命令。随后双方连通。<br>
+        　　5.需要文件的一方进行下载文件(Download File)操作，传送文件的一方进行上载文件(Upload 
+        File)操作。<br>
+        　　6.最后，文件传输完毕后，可要记住断线哦!</font></p>
+        <p class="ourfont"><font color="#369681">　　(南京　王耘雷)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月19日第3期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

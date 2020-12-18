@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Visual 
+        FoxPro使用技巧三则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　<strong>一、自己的软件用自己的图标</strong><br>
+        　　1用Imagedit或其他软件创建自己的图标文件(.ico)，或者拷贝原有的图标文件。<br>
+        　　2在项目管理中，单击鼠标右键，在打开的右键菜单中，左击“项目信息”。<br>
+        　　3打开信息窗，选定“项目”页，在“.EXE文件中附加图标”选择框中打上“√”，按“图标”按钮，选定自己的图标文件，单击“确定”按钮返回。<br>
+        　　这样，项目编译后，应用程序的图标再也不会是Fox头了。<br>
+        　　<strong>二、屏蔽Wizstyle类中不必要的组件</strong><br>
+        　　在Form中插入的Wizstyle类，其中有些组件并非本Form所必需的，例如图形按钮组中的“打印”按钮等，但这些组件又不能删除，一般可按如下方法将其屏蔽：<br>
+        　　1选中按钮对象，在其上单击鼠标右键，选右键菜单中的“编辑”，使按钮组处于编辑状态。<br>
+        　　2选中要屏蔽的组件，如“打印”按钮，打开属性窗口。<br>
+        　　3将“布局”页中的Height、Width属性值设为“0”，Visible属性值设为“.F.”。<br>
+        　　4将“其他”页中的Enabled、Tabstop属性都设为“.F.”。<br>
+        　　<strong>三、重用Form</strong><br>
+        　　软件开发过程中，如果有一组Form从结构上讲是相同的，那么就可以考虑Form重用。<br>
+        　　1定制通用(标准)Form，将Form中的个性化部分，如标题、数据处理及文件管理程序等，分别用变量赋值的方法加以定义。<br>
+        　　2打开Form级属性，选“方法”页，在Load Event中编写Form级变量赋值及控制程序，在Activate 
+        Event中编写Form中的对象级变量赋值及控制程序。<br>
+        　　3在项目中添加调用Form的程序，分别给通用(标准)Form中的变量赋予不同的值，以实现重用通用(标准)Form生成特定的Form，完成相应的功能。<br>
+        　　4数据的传递一般可通过.mem文件进行，用Save及Restore命令完成对文件的操作。<strong>(湖北　谭祖胜)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月13日第14期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

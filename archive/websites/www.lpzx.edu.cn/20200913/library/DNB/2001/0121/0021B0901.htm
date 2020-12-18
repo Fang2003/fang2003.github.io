@@ -1,0 +1,159 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/soft.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>开发自己的英文语音朗读软件</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0121/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0121/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第21期<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->开发自己的英文语音朗读软件<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 很多人都使用过带文本朗读功能的软件。其实，自己动手制作一个英文语音朗读软件是一件很容易的事情，下面就给出一个编程的实例。<br>
+              一、 前言：<br>
+              笔者通过研究现有的一些语音朗读软件发现，有很多的产品都使用了Ｍｉｃｒｏｓｏｆｔ的Ｓｐｅｅｃｈ ＡＰＩ，再通过进一步的实践发现。Ｍｉｃｒｏｓｏｆｔ 
+              Ｓｐｅｅｃｈ ＡＰＩ的功能十分强大，不光可以准确读出单词，而且还能够实现流利地朗读句子乃至段落、文章。对于不常见的单词（如中文人名的拼音），也能够根据英文的发音原则，读出较准确的发音。而且让人兴奋的是：Ｍｉｃｒｏｓｏｆｔ 
+              Ｓｐｅｅｃｈ ＡＰＩ可以以ＣＯＭ组件的形式提供给程序员，方便程序员的开发与使用。<br>
+              二、 开发英文语音朗读程序的软、硬件环境：<br>
+              本文所采用的操作系统是Ｗｉｎｄｏｗｓ ９８。它对Ｍｉｃｒｏｓｏｆｔ Ｓｐｅｅｃｈ ＡＰＩ支持得非常好。而所采用的编程环境是 Ｂｏｒｌａｎｄ的Ｄｅｌｐｈｉ 
+              ５．０。Ｄｅｐｈｉ不光支持ＶＣＬ组件，对ＣＯＭ组件的支持也是非常好的，而且在Ｗｉｎｄｏｗｓ下面Ｄｅｌｐｈｉ确实是一种强大而且易于使用的开发工具。接下来最重要的是安装Ｍｉｃｒｏｓｏｆｔ 
+              Ｓｐｅｅｃｈ ＡＰＩ，Ｍｉｃｒｏｓｏｆｔ Ｓｐｅｅｃｈ ＡＰＩ在共享软件光盘上都会带有，也可以在金山词霸的光盘上找到，文件名是ｓｐｃｈａｐｉ．ｅｘｅ，是个自解压文件，直接运行即可。<br>
+              硬件环境没有什么特殊的要求，只要能够顺利运行Ｗｉｎｄｏｗｓ ９Ｘ操作系统就可以了。<br>
+              三、进行英文语音朗读程序开发的基本步骤：<br>
+              １．在Ｄｅｌｐｈｉ中新建一应用程序，将Ｆｏｒｍ１改名为ｆｒｍＳｐｅｅｃｈ，将Ｕｎｉｔ１保存为ＳｐｅｅｃｈＵｎｉｔ，将工程保存为Ｓｐｅｅｃｈ。<br>
+              ２．选中Ｐｒｏｊｅｃｔ菜单项中的Ｉｍｐｏｒｔ Ｔｙｐｅ Ｌｉｂｒａｒｙ，弹出如图所示的对话框：<br>
+              再点击Ａｄｄ按钮，此时会弹出一个文件选择框，将此框定位到Ｗｉｎｄｏｗｓ目录下的Ｓｐｅｅｃｈ目录，选中ｖｔｘｔａｕｔｏ．ｔｌｂ文件，选择打开。再点击Ｉｎｓｔａｌｌ按钮即可。<br>
+              ３．经过上面的步骤，已经将此组件引入到我们的程序中来，并生成了ＶＴｘｔＡｕｔｏ＿ＴＬＢ单元ｕｎｉｔ，我们只需要在自己的应用程序中使用此单元就可以了。现在我们在ＳｐｅｅｃｈＵｎｉｔ的ｕｓｅｓ声明的末尾加上ＶＴｘｔＡｕｔｏ＿ＴＬＢ。并在Ｖａｒ下面声明一个名为ｖｔｘｔ的全局变量，类型为ＶＴｘｔＡｕｔｏ＿。<br>
+              ４．现在我们需要在ｆｒｍＳｐｅｅｃｈ上放上一个Ｅｄｉｔ控件和两个Ｂｕｔｔｏｎ控件。将两个按钮控件的ｎａｍｅ属性分别改为：ｂｔｎＳｐｅａｋ和ｂｔｎＳｔｏｐ，再将两个按钮的Ｃａｐｔｉｏｎ属性分别改为：Ｓｐｅａｋ和Ｓｔｏｐ。<br>
+              ５．在ｆｒｍＳｐｅｅｃｈ的ＯｎＣｒｅａｔｅ事件中加入以下代码：<br>
+              ｖｔｘｔ ＝ ＣｏＶＴｘｔＡｕｔｏ＿．Ｃｒｅａｔｅ<br>
+              ｖｔｘｔ．Ｒｅｇｉｓｔｅｒ＇＇＇Ｓｐｅｅｃｈ＇<br>
+              ６．双击Ｓｐｅａｋ按钮，加入以下代码：<br>
+              ｖｔｘｔ．Ｓｐｅｅｄ ＝ １００<br>
+              ｖｔｘｔ．ＳｐｅａｋｔｒｉｍＥｄｉｔ１．Ｔｅｘｔ１０<br>
+              ７．双击Ｓｔｏｐ按钮，加入以下代码：<br>
+              ｖｔｘｔ．ＳｔｏｐＳｐｅａｋｉｎｇ<br>
+              自此，一个最简单的英文朗读软件就已制作完成了。使用时在Ｅｄｉｔ对话框中输入欲朗读的单词、句子或段落，按Ｓｐｅａｋ按钮就可以开始进行朗读，按Ｓｔｏｐ按钮就可以停止朗读。<br>
+              四、 进一步的深入探讨：<br>
+              其实Ｍｉｃｒｏｓｏｆｔ Ｓｐｅｅｃｈ ＡＰＩ的功能非常的强大，它还提供了许多方法和属性可以用来改进并强化我们的语音朗读程序。其提供的主要方法与属性如下：<br>
+              １．ｐｒｏｃｅｄｕｒｅ Ｓｐｅａｋｃｏｎｓｔ ｐｓｚＢｕｆｆｅｒ ＷｉｄｅＳｔｒｉｎｇ ｄｗＦｌａｇｓ Ｉｎｔｅｇｅｒ<br>
+              朗读ｐｓｚＢｕｆｆｅｒ指向的字符串，并可以通过调整ｄｗＦｌａｇ参数来得到不同的语气、语调。<br>
+              ２．ｐｒｏｃｅｄｕｒｅ ＳｔｏｐＳｐｅａｋｉｎｇ<br>
+              停止当前的朗读。<br>
+              ３．ｐｒｏｃｅｄｕｒｅ ＡｕｄｉｏＰａｕｓｅ<br>
+              暂停当前的朗读。<br>
+              ４．ｐｒｏｃｅｄｕｒｅ ＡｕｄｉｏＲｅｓｕｍｅ<br>
+              从当前暂停的地方恢复朗读。<br>
+              ５．ｐｒｏｃｅｄｕｒｅ ＡｕｄｉｏＲｅｗｉｎｄ<br>
+              重新开始朗读。<br>
+              ６．ｐｒｏｃｅｄｕｒｅ ＡｕｄｉｏＦａｓｔＦｏｒｗａｒｄ<br>
+              快速朗读。<br>
+              ７．ｐｒｏｐｅｒｔｙ Ｓｐｅｅｄ<br>
+              设置朗读速度。<br>
+              ８．ｐｒｏｐｅｒｔｙ ＩｓＳｐｅａｋｉｎｇ ＷｏｒｄＢｏｏｌ<br>
+              判断当前朗读是否在进行。<br>
+              ９．ｐｒｏｃｅｄｕｒｅ Ｓｅｔ＿ＳｐｅｅｄｐｄｗＳｐｅｅｄ Ｉｎｔｅｇｅｒ<br>
+              设置朗读速度。<br>
+              １０．ｆｕｎｃｔｉｏｎ Ｇｅｔ＿Ｓｐｅｅｄ Ｉｎｔｅｇｅｒ<br>
+              获得当前的朗读速度。<br>
+              合理地使用这些方法与属性，相信大家一定能够开发出好的语音朗读软件。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Windows 
+        NT4.0网络中漫游用户配置文件的建立<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　目前，关于如何在NT中建立漫游用户配置文件的书籍不少，但大多理论多、实例少，即使有几个例子，也不连贯。针对这种情况，笔者通过一个具体的实例来阐述建立漫游用户配置文件的详细过程。本例的网络为NT网络，网络中只有一个域，主域控制器的计算机名为“HP”，操作系统为Windows 
+        NT Server 4.0；域中有一台工作站名为“LX”，操作系统为Windows NT 
+        Workstation 4.0，现在想为“LX”的使用者Gwy创建一漫游用户配置文件，须经下列步骤：<br>
+        　　步骤一：在HP上的任意位置创建一子目录User，再在User中创建另一子目录Gwy(当然也可与HP上的本地用户配置文件放在一起如：\\HP\Winnt\Profiles\Gwy)，并将User设为共享。<br>
+        　　步骤二：在域用户管理器上创建一个账号“Gwy”，再在其配置文件对话框的配置文件路径中填入路径：“\\HP\User\Gwy”。在登录脚本名中填入登录脚本名，如果登录后无特殊要求的话，此项可以不填。为实验其效果，本例中采用了一个自编的D.BAT文件，用于列出宿主目录中的文件。在登录脚本名中填入：“D.BAT”，并将其放入“\HP\Winnt\System32\Repl\Import\Scripts”中。在宿主目录中填入：连接“X”到“\\HP\Winnt”。其中“X”是为宿主目录所起的名字，“X”实质上就是映射的网络驱动器名，每次登录时自动连接，但要注意不要与“LX”上的任意驱动器重名，否则无效。至于“\\HP\Winnt”中的“Winnt”项可任选为其他的任意需要共享的目录，但要注意共享名的正确性。本例中如果“Winnt”是由安装时系统创建的，那么它很有可能使用的是默认隐藏的共享名“Admin＄”，这时候如果再使用“Winnt”作为共享名就会得到错误提示，或最近达不到连接的效果。<br>
+        　　步骤三：为“Gwy”创建配置文件，可采用两种方法：<br>
+        　　方法一：在“\\HP\User\Gwy”中手工创建，将自己认为与“Gwy”配置文件要达到的目标相近的用户配置文件从“\\HP\Winnt\Profiles\％Username％”中拷到“\\HP\User\Gwy”中，再根据自己的需要做适当修改。<br>
+        　　方法二：在“LX”上以“Gwy”账号登录，这样系统就会为“Gwy”创建一套默认用户配置文件，经过适当的修改，如墙纸颜色、启动菜单、桌面设置、快捷方式等等。达到自己的要求后打开“控制面板”，打开“系统图标”，切换到“用户配置文件”标签，选中“Gwy”，单击“复制到”按钮，在弹出的对话框中选中“HP”上的“Gwy”文件夹，单击确定，则“\\LX\Winnt\Profiles\Gwy”就被复制到“\\HP\User\Gwy”中了。<br>
+        　　至此，漫游用户的配置文件的建立就大功告成了，下面让我们简单试一下它的效果如何。首先在“LX”上注销登录，然后在“\\HP\User\Gwy\桌面”中添加一个位图图像。然后在“LX”上重新登录，登录后你会发现屏幕上突然多了一个DOS运行窗口，有一行行的目录在向上滚动。不要奇怪，那是我们的一个实验小登录脚本“D.BAT”在列出它的宿主目录“X”(即\\HP\Winnt)中的子目录呢!登录脚本执行完后，你会发现屏幕上出现了一个新建位图图像，这就是在“HP”上的配置文件中刚刚加上去的位图图像，如果想把配置文件定为强制型的，只需将“HP”中“Gwy”文件夹中的“NTUser.dat”改名为“NTUser.man”即可。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(浙江　郭维宇)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月26日第41期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

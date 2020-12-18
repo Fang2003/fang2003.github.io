@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>改变文件的打开方式<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　计算机中的文件格式类型繁多，不同格式文件需要不同的程序来打开。在Windows95操作中，我们时常会遇到打开一些文件的障碍。笔者就曾遇到过这类问题。我在使用Netscape浏览器上网时，常把一些精美的图片用“save 
+        image as”菜单中的gif或jpeg等格式保存起来。查看时通过在图片上双击鼠标左键即可直接打开，十分方便(我用的看图软件是Acdsee32)。后来我又装了北欧小巧的浏览器Opera，安装后设置Opera为默认浏览器，并设置Opera管理gif、jpeg等格式文件。后因使用不习惯将Opera卸载。这样一来像gif、jpeg这些格式的图形文件，却无法通过用鼠标双击来打开，屏幕弹出一个对话框“Windows未找到opera.exe。此程序用来打开‘image’类型的文件。”只有先执行Acdsee32，然后选open，才能打开图片，这种“曲线救国”方式十分不便。如何恢复原来的打开方式呢?<br>
+        　　经过仔细琢磨，发现文件的打开方式和Windows95的注册表有关系。因为安装Opera时，设定了Opera处理gif和jpeg等格式的“image”类型文件。安装完毕后刷新屏幕或重新启动计算机后，gif、jpeg等格式的文件打开方式已在注册表里重新注册。能不能通过修改注册表，来达到改变文件打开方式的目的呢?答案是肯定的。<br>
+        　　单击Windows95“开始”按钮，运行“regedit”(注册表编辑器)，在注册表编辑器里找到HKEY_CLASSES_ROOT子目录，双击该目录，在二级子目录中找到gif目录，打开该目录，你会发现名称为“默认”的右面数据栏是“opera.image”，问题正出在这里。在“默认”上单击右键，在弹出菜单上选择“修改”，把“opera.image”改成“ACDC_GIF”，选择“确定”按钮，然后在“查看”菜单中选择“刷新”，则大功告成!原来的图形文件又可通过双击直接打开。其余的像jpeg、bmp等图形格式的文件均可仿此类推。<br>
+        　　实际上，用户在解决任何文件打开方式障碍时，包括像选择了“始终用该程序打开文件”选框又发现打开方式有误而无法更改时，都可通过这种方法解决。<strong>(安徽　张克听)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

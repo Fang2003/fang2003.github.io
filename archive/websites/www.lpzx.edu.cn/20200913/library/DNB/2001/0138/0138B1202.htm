@@ -1,0 +1,170 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0138/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0138/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="772" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第38期 </a>&gt;&gt;<a href="software.html">软件世界</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">如何实现文本动态显示</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>我们编写VB程序时，有时需在启动窗体上显示一些文本内容，作些细节说明，如果能在屏幕上产生逐字打印特效，使文本内容动态显示，则画面将会更生动有趣。下面就是一个特效文本显示程序。<br>
+              第一步：新建一个窗体，设置窗体属性。设置好窗体大小、窗体背景色、字体、字体颜色。<br>
+              第二步：在窗体上添加两个计时器。设置Timer1的属性：Interval=200，设置Timer2的属性：Enabled=False，interval=5000。<br>
+              第三步：编写代码。<br>
+              Dim l As Integer<br>
+              Dim i As Integer<br>
+              Dim x As Integer<br>
+              Dim y As Integer<br>
+              Dim page As Integer<br>
+              Dim filenum As Integer<br>
+              Dim words As String<br>
+              Private Sub Form_Load<br>
+              ChDrive App.Path<br>
+              ChDir App.Path<br>
+              FileName$ = &quot;test.txt&quot;<br>
+              filenum = FreeFile<br>
+              Open FileName$ For Input As #filenum<br>
+              Do While Not EOFfilenum<br>
+              Line Input #filenum Text$<br>
+              words = words + Text$ + Chr13 + Chr10 '将文本内容赋值给words串变量，包括回车符和换行符<br>
+              Loop<br>
+              Close #filenum<br>
+              l = Lenwords '计算words串变量长度字符个数<br>
+              End Sub<br>
+              Private Sub Timer1_Timer<br>
+              If page = 1 Then '满一页后清除窗体内容<br>
+              Form1.Cls<br>
+              page = 0<br>
+              Timer1.Interval = 200 '重置打字速度<br>
+              End If<br>
+              typewrite '调用打字子例程<br>
+              End Sub<br>
+              Public Sub typewrite<br>
+              i = i + 1 '字符计数器<br>
+              x = x + 1<br>
+              CurrentX = 100 '设置打字的起始点<br>
+              CurrentY = 300<br>
+              CurrentX = CurrentX + x  250 '设置字间距<br>
+              CurrentY = CurrentY + y * 280 '设置行间距<br>
+              t$ = Mid$words i 1 '从words串中指定位置取一个汉字或标点符号<br>
+              Print t$ '在窗体上打印一个字符<br>
+              If x = 20 Or Mid$words i 2 = Chr$13 + Chr$10 Then '设置行字符个数，若行字符数满或段落结束(遇回车换行符)则换行<br>
+              y = y + 1<br>
+              x = 0<br>
+              End If<br>
+              If y = 12 Then '设置行数<br>
+              page = 1 '行数满为一页<br>
+              y = 0<br>
+              Timer1.Interval = 6000 '设置页显示停留时间<br>
+              End If<br>
+              If i &gt; l Then '文本内容打印完毕，计时器2打开<br>
+              Timer1.Enabled = False<br>
+              Timer2.Enabled = True<br>
+              End If<br>
+              End Sub<br>
+              Private Sub Timer2_Timer<br>
+              Timer2.Enabled = False<br>
+              Timer1.Enabled = False<br>
+              End '改变end，可执行其他子例程<br>
+              End Sub<br>
+              最后，编辑好预显示的文本内容，即可运行文本动态显示程序。<br>
+              (安徽 李志龙)</p>
+            <p></p>
+            <p></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

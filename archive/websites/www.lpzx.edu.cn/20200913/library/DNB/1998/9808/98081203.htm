@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用partitionmagician分区一例</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>用partitionmagician分区一例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　使用新硬盘前必须用FDISK等软件进行分区，一旦分区完成后写入大量数据，如果由于特殊要求(如扩大某分区容量以容纳大型商业软件)，就必须再次使用FDISK来重新分区。随着个人PC机的硬盘容量不断增长，对于大容量硬盘的再次分区不仅造成原有数据的丢失，而且重新格式化分区和安装软件会浪费用户大量的时间。这里向读者介绍一种由PowerQuest公司推出的动态分区软件PartitionMagician，该软件可以在不损坏原有数据基础上，任意调整分区的大小。<br>
+        　　笔者有一个Quantum Bigfoot 1.2G的硬盘，共有两个分区，其中C盘800M，D盘400M。有一天Windows95莫名其妙死机，从DOS下也不能进入D盘，用磁盘医生(NDD)检查为分区表损坏，为此准备格式化D盘，但FORMAT程序报告D盘0磁道损坏，不能进行格式化，这极可能是盘面上该磁道出现物理缺陷，必须用FDISK重新调整逻辑D盘的大小，使D盘的逻辑0磁道向前和向后移动，跨越这个坏磁道。但这样一来，C盘上500多兆的文件就得重装。为此我借助于PartitionMagician的威力，首先在DOS下启动PQMAGICTEXE(注意由于Windows95的保护机制，不能在其DOS模式下使用)，进入其主菜单，选择P(Select 
+        a new Partition)后键入C，此时屏幕会显示C盘的分区和容量信息，然后选择O(Option)进入Option子菜单后，再键入R(Resize 
+        Selected Partition)，按屏幕提示将C盘的容量减小为700M，将D盘调整为500M，然后选择F(Format 
+        Partition)菜单，将D盘进行格式化，完成后退出PQMAGICT。这样对C盘上的文件秋毫无犯，且D盘又重见天日了，而时间不到5分钟。<br>
+        　　PQMAGICT还有许多美妙的功能，如增加或减少分区数，对特定分区进行隐藏(这一点对于保护公用计算机上重要信息具有特殊意义)等。<br>
+        　　读者如果有兴趣，可以从PowerQuest公司的网址上下载partitionmagician。网址为<br>
+        <a href="library/DNB/1998/9808/http%A6%A1%CEwww.powerquest.com/newsltr/index.html">http:∥www.powerquest.com/newsltr/index.html</a>。<strong>(湖北　董泽华)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

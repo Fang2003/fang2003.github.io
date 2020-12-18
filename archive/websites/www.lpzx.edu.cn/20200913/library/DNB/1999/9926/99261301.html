@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 用VB6实现动态增减控件</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.cpcw.com/'><IMG SRC='images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=link&user=issue-software&realm=software' TARGET='_blank'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-software&realm=software' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999'>1999 年</A> &gt; <A HREF='index.html'>26 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 用VB6实现动态增减控件</TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 用VB6实现动态增减控件 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　用过Internet Explorer收藏夹的朋友都知道，利用鼠标单击时收藏夹会出现，再次单击则收藏夹消失。从编程角度讲，这是个在程序运行阶段动态增减控件的问题。以前，这仅仅是C＋＋之类编程语言的专利。如今，微软在Visual Basic6.0中也新增了这个功能，下面就此举例进行介绍:<br>
+　　1.新建一个工程，窗体Form1为缺省窗体，Form1的属性项Caption=″动态增减控件的例子″。<br>
+　　2.加入两个命令按钮（CommandButton）,其中：<br>
+　　Command1的属性项Caption=″增加控件″;<br>
+　　Command2的属性项Caption=″删除控件″。<br>
+　　3.加入如下代码，运行该工程，单击″增加控件″则出现新增按钮。若单击″新增按钮″时会出现对话框，表明你触发的是动态增加控件的单击事件。<br>
+　　Option Explicit<br>
+　　′通过使用 WithEvents 关键字声明一个对象变量为新的命令按钮<br>
+　　Private WithEvents NewButton As CommandButton   <br>  
+　　′增加控件<br>
+　　Private Sub Command1_Click()<br>
+　　If NewButton Is Nothing Then<br>
+　　′增加新的按钮cmdNew<br>
+　　Set NewButton =Controls.Add(″VB.CommandButton″, ″cmdNew″, Me)<br>
+　　′确定新增按钮cmdNew的位置<br>
+　　NewButton.Move Command1.Left ＋ Command1.Width ＋ 240, Command1.Top<br>
+　　NewButton.Caption = ″新增的按钮″     <br>       
+　　NewButton.Visible = True<br>
+　　End If<br>
+　　End Sub<br>
+　　′删除控件(注：只能删除动态增加的控件)<br>
+　　Private Sub Command2_Click()<br>
+　　If NewButton Is Nothing Then       <br>
+　　Else<br>
+　　Controls.Remove NewButton<br>
+　　Set NewButton = Nothing<br>
+　　End If<br>
+　　End Sub<br>
+　　′新增控件的单击事件<br>
+　　Private Sub NewButton_Click()<br>
+　　MsgBox ″您选中的是动态增加的按钮！″<br>
+　　End Sub<br>
+　　注意：如果你希望添加一个用户控件或任何 ActiveX 控件到您的窗体，必须把这个控件添加到“工具箱”，或者把控件的 License 关键字添加到 Licenses 集合中。而且，你不能选定“工程属性”对话框的“生成” 选项卡上的“删除有关未使用的 ActiveX 控件”选项，否则controls.Add 方法将失败，因为必需的信息已经被丢失。<br><b>（广西　周涛）</b></TD></TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/26/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99261301.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

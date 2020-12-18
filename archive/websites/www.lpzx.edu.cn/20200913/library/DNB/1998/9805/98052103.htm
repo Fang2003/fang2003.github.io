@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">Novell网运行及维护的十点体会<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　1.至少创建两个应用卷　通过传递或拷贝数据的方法保证两个卷上的系统完全一致，当第一个卷发生故障时，可以紧急启动第二个卷代替它进行工作。<br>
+        　　2.做好启动配置文件的备份　NOVELL网有两个重要的启动配置文件，分别是AUTOEXEC.NCF和STARTUP.NCF(作用类似于DOS的AUTOEXEC.BAT和CONFIG.SYS)。这两个文件是文本文件，其内容可以打印输出，在必要时可用文本编辑器编辑产生。<br>
+        　　3.做好系统入网底稿和用户入网底稿的备份　系统入网底稿(SYSTEM 
+        LOGIN SCRIPT)为网上所有用户服务，在服务器SYS：PUBLIC子目录下，是一个名为NET＄LOG.DAT的文本文件。用户入网底稿由系统管理员为每个用户建立，统称为LOGIN，保存在服务器SYS：MAIL下对应的用户ID子目录中。<br>
+        　　4.建一个与SUPERVISOR同等权限的用户　当忘记系统管理员口令或系统管理员权限因意外发生变化时，可以利用这个与SUPERVISOR权限等效的用户进行系统管理和维护，具体创建方法是：<br>
+        　　①执行SYSCON，按插入键新建一个网络用户(设用户名为TMIS)，此时会出现它的“USER 
+        INFORMATION”菜单。<br>
+        　　②从菜单中选择“SECURITY EQUIVALANCES”项，从用户列表中找出TMIS，系统将对应显示其所属的用户组，再按插入键，从用户列表中选出SUPERVISOR把它分配到TMIS所在用户组中，则SUPERVISOR就用自己的权限替换了TMIS原有的权限。<br>
+        　　5.工作站软件的正确使用及保护　目前NOVELL网大都采用有盘工作站方式，存放在工作站本地硬盘上的上网软件很容易遭到破坏，一定要做好其备份工作。在使用工作站软件时，还要注意三点：<br>
+        　　①工作站是DOS还是DOS ODI工作方式，不同方式将对应不同的上网程序。<br>
+        　　②NET.CFG设置中要注意NETWARE版本、网络拓扑类型、网络访问控制方式三者间的兼容。<br>
+        　　③根据网上软件运行的具体需要，设定NET.CFG的FILE HANDLES的数目。<br>
+        　　6.严格网络注销和关闭操作　工作站在关机前必须先执行LOGOUT命令，向网络登记注销；文件服务器要在所有工作站都掉网后才可关闭，且需先执行DOWN命令，其作用是把文件服务器磁盘缓冲器中的内容完全回写，关闭所有的文件并更新所有的目录和文件分配表，之后再允许用EXIT退出关机。<br>
+        　　7.优化网络运行环境<br>
+        　　①用NORTON或PCTOOLS等工具软件定期重整服务器硬盘，压缩文件碎片，全面优化硬盘，提高文件读写速度。<br>
+        　　②定期删除网上软件运行时产生的临时文件。<br>
+        　　③缩短网络段长度，可在文件服务器中插入两块网卡，以网桥方式联结两个网段，从而减少数据传输次数，缩短网络访问时间，进一步提高网络运行速度。<br>
+        　　8.定期检测计算机病毒<br>
+        　　①制作一张干净的DOS系统盘，拷贝无毒的工作站上网软件到盘上，用此盘注册到服务器，再选用杀毒软件分别对F：盘或G：盘等逐一进行病毒检测。<br>
+        　　②在DOS环境下检测、清杀文件服务器硬盘上的病毒。<br>
+        　　③定期检测工作站本地硬盘是否存在病毒。<br>
+        　　9.制作NETWARE应急盘　应急盘的作用是方便系统管理员在文件服务器出现运行故障时，进行紧急修复，盘中应包括SERVER、SYSCON、MOUNT、DISMOUNT、LOGIN、LOGOUT、LOAD、BIND等常用命令和VREPAIR、NLM等工具。如果是文件服务器应用卷出现问题，修复工作可在F：盘上进行；如果SYS卷出了问题，修复工作只能在服务器控制台下进行；如果文件服务器不能正常启动，可执行应急盘的SERVER命令，再用LOAD 
+        VREPAIR对SYS卷检测修复，或者用完整的NETWARE系统盘逐步恢复系统。<br>
+        　　10.正确设定每个网络用户的权限　系统管理员应根据实际需要正确设定每个用户对服务器目录和文件的访问权限，制定合适的用户入网底稿，以保证网上数据的安全，同时要给每个用户设定注册口令，防止非法用户侵入系统。</font></p>
+        <p class="ourfont"><font color="#369681">　　(山西　武世杰)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

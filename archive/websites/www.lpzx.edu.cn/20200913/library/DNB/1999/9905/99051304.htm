@@ -1,0 +1,66 @@
+<html>
+
+<haed>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+
+<title>从VFP中导出数据的几种方法</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#000000"><strong><font face="黑体" color="#004080"><p
+        align="center"></font><big><big><font face="黑体" color="#FFFFFF">从VFP中导出数据的几种方法</font></big></big></strong></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><span style="line-height: 1.5"><font
+        color="#369681">　　当VFP处理好数据后，这时你可以用多种方法将这些数据导出，以便被其它应用程序(如Excel等)所用。下面向你简单介绍几种导出数据的方法：<br>
+        　　1.用“导出数据”对话框。你可以从VFP主菜单中选择“文件/导出…”打开“导出”对话框，在该对话框中的“来源”框中输入表名(c:\vfp\students.dbf)，在“类型”中指定要导出数据的类型(Microsoft 
+        Excel)，在“到”框中输入导出的路径和文件名(C:\excel\aa.xls)，然后按“确定”即可。这时你如果查看command窗口，可发现以下代码：<br>
+        　　COPY TO C：\excel\aa.XLS TYPE XL5<br>
+        　　2.用COPY TO命令。COPY TO命令的工作对象是VFP中的表，它要依据“TYPE”项才知道要产生哪一类导出文件。对于上面的导出过程，可用以下方法实现：<br>
+        　　USE students<br>
+        　　COPY TO C：\excel\aa.XLS TYPE XL5<br>
+        &nbsp;&nbsp;&nbsp; 3.用SET ALTERNATE TO写入ASCⅡ文件。用该命令可以把屏幕上的内容导出,导向一个文件，下面例子可以将系统状态输入到status.txt文件中：<br>
+        　　SET ALTERNATE TO status.txt<br>
+        　　SET ALTERNATE ON<br>
+        　　SET CONSOLE OFF<br>
+        　　?“系统状态”＋DTOC(DATE())＋“@”＋TIME()<br>
+        　　LIST STATUS<br>
+        　　SET ALTERNATE OFF<br>
+        　　SET CONSOLE ON<br>
+        　　4.用SET PRINTER TO命令。用该命令可把打印输出到文本文件中：<br>
+        　　SET PRINTER TO hello.txt<br>
+        　　SET PRINT ON<br>
+        　　???CHR(27)＋“广大计算机爱好者”<br>
+        　　??“你们好!”<br>
+        　　?“祝你们新年快乐”<br>
+        　　SET PRINT OFF<br>
+        　　5.用REPORT FORM TO FILE命令。运行报表的REPORT命令有许多选项，把报表输出保存到文件中的方法为：<br>
+        　　REPORT FORM(报表名)TO FILE(文件名)<strong>(江苏　曾庆祝)</strong></font></span></p>
+        <p align="right"><span style="line-height: 1.5"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月1日第05期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

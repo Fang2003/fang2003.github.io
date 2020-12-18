@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">双机通信方法三种<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　<strong>一、在Windows95下用直接电缆连接</strong><br>
+        　　Windows95直接电缆连接要求两台计算机使用同一类端口如9针串口、25针串口或并口。下面以25针并口为例,介绍电缆的连接。<br>
+        　　首先根据两台微机间的距离,购买扁平电缆若干米,两个25针打印机插头,将扁平电缆分劈成11根,然后照下图连接（其中数字代表插头的第几根针，在主机和电缆头上均有标记）。<br>
+        　　2———15<br>
+        　　3———13<br>
+        　　4———12<br>
+        　　5———10<br>
+        　　6———11<br>
+        　　15———2<br>
+        　　13———3<br>
+        　　12———4<br>
+        　　10———5<br>
+        　　11———6<br>
+        　　25———25<br>
+        　　将电缆连接好后，在Windows95的“控制面板/网络”下的“适配器”中选MICROSOFT的“拨号网络适配器”和“协议”中的“IPX/SPX兼容协议”及“NetBEUI协议”。然后选择“控制面板/添加/删除程序 
+        /安装WINDOWS/通讯”中的“直接电缆连接”，装入Windows95安装盘进行安装。安装好后，重新启动计算机。选定一台计算机作主机，在主机“我的电脑”中用右键击某一驱动器（如C：驱），选择“共享”，选好共享级别。分别在两机的附件中运行“直接电缆连接”，在主机上，选择所用的通讯端口(本例为LPT1)。选另一台作客户机，按提示操作，稍等片刻，联机完成。打开“客户机”桌面上的“网上邻居”，你会发现你不再孤独了，你可通过“网上邻居”访问你的主机，也可以通过“映射网络驱动器”的方法将网络驱动器映射为自己的虚拟物理驱动器，更妙的是如果你所联的主机已经上了局域网，那么你还能通过主机访问所有的网上资源。而且在你访问的同时，并不影响主机的正常工作，这一点对于笔记本计算机的用户尤为有利。<br>
+        　　<strong>二、在DOS下用INTERSVR和INTERLNK联机</strong><br>
+        　　并不是所有的计算机都安装了Windows95，也许你还用着286的计算机，你仍然可以使用电缆通过通信端口进行双机通信。从MS－DOS6.0开始，MICROSOFT在DOS中增加了INTERLNK和INTERSVR两条外部命令，使用这两条命令可实现双机连接。仍以25针并行口为例介绍电缆的连接方法。<br>
+        　　2———5<br>
+        　　3———13<br>
+        　　4———12<br>
+        　　5———10<br>
+        　　6———11<br>
+        　　10———5<br>
+        　　11———6<br>
+        　　12———4<br>
+        　　13———3<br>
+        　　15———2<br>
+        　　25———25<br>
+        　　用电缆连好两台计算机后，选定一台计算机作主机，在主机上运行INTERSVR命令，因INTERSVR可自动判断所用端口，所以一般情况下其参数可以不用，启动INTERSVR后进入主机界面。在客户机执行INTERLNK命令，一般参数可以不用，但如果主机有超过三个磁盘驱动器的话，必须使用参数/drives:n，其中n为主机驱动器的个数，因为INTERLNK缺省连接三个驱动器。比如主机硬盘分为C和D盘，另有一个CD－ROM驱动器，使用interlnk.exe 
+        /drives:5。客户机开机后，从主机上可看到客户机的连接情况。当连接完成后，客户机可像使用自已的硬盘一样使用主机的硬盘和打印机。这种连接方式对硬件要求低，使用简单，但连接时主机无法干其他工作。<br>
+        　　<strong>三、用PCANYWHARE连机</strong><br>
+        　　PCANYWHARE是SYMANTEC公司的计算机互连软件，使用PCANYWHARE可通过调制解调器、局域网和电缆实现双机互连，其最引人注目的特点是客户机可通过联网方式遥控操作主机。从实际应用上来说，最有价值的是通过调制解调器从远方遥控你办公室的主机，远方的你可以像在办公室一样操作你的计算机。利用PCANYWHARE也可通过电缆实现双机连接，它提供了一个文件传输器，通过文件传输器，可实现文件的传输。以9针串口为例介绍电缆连接方法：<br>
+        　　1＋6———4<br>
+        　　4———1＋6<br>
+        　　2———3<br>
+        　　3———2<br>
+        　　5———5<br>
+        　　7———8<br>
+        　　8———7<br>
+        　　9———9<br>
+        　　(SYMANTEC可以通过访问www.symantec.com站点获得。)</font></p>
+        <p class="ourfont"><font color="#369681">　　(北京　李亚非)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月16日第6期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

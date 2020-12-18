@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>如何正确处理系统不认鼠标器的故障<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　所谓系统不认鼠标器，是指开机自检后，系统报“鼠标器没有检测到&quot;或屏幕显示“没有安装鼠标器&quot;，而实际上是安装了鼠标器及其驱动程序的。<br>
+        　　要使鼠标器正常工作，一是要硬件工作正常，二是要装入正确的驱动程序，三是要进行正确的设置。而系统不承认有鼠标器的故障可由接触不良、鼠标器模式设置错误、鼠标器的硬件故障、病毒或主板故障等引起，一般按下列步骤检查和处理：<br>
+        　　1.首先拔插鼠标器与主机的接口插头，检查接触是否良好，处理后重新启动系统。<br>
+        　　2.如果故障仍存在，拔下鼠标器的接口插头，换一COM接口插上去，并把CMOS中对COM接口的设置作相应的修改，重新开机启动。<br>
+        　　3.若没有解决问题，则检查鼠标器底部是否有模式设置开关，如果有，试着改变其位置，重新启动系统。若没有解决问题，仍把开关拨回原位。<br>
+        　　实例：一台Pentium100 CPU、16MB内存、1GB硬盘的微机，安装中文版Windows 
+        95后，启动时屏幕提示：“Windows没有检测到鼠标器,您可以连接一个串行鼠标器,可将鼠标器连接到PS/2鼠标器端口&quot;。该鼠标器为联想光电式三键鼠标器，类型不详，已接入PS/2端口，在DOS 
+        6.22和中文Windows 3.2下均能正常使用。在Windows 95的控制面板下选添加新设备项，采用自动检测和手动选择各串行鼠标器设置均无效。查阅Windows 
+        95帮助文档，找到光盘上鼠标驱动程序MSCMOUSE.DRV，并将其拷入Windows目录下，同时修改SYSTEM.INI文件中“MOUSE.DRV=LMOUSE.DRV&quot;语句为“MOUSE.DRV=MSCMOUSE.DRV&quot;。重新启动Windows 
+        95，未出现错误信息，鼠标器问题得以解决。还有一个更为简便的解决方法。仔细观察鼠标器，发现底部右侧有一开关，开关上有左、右两箭头标识“2&quot;和“3&quot;，分别指向“MS&quot;和“PC&quot;字样。左箭头是指Microsoft标准双键鼠标器，遂把开关拨到左侧，启动Windows 
+        95，在控制面板下选添加新设备项，采用自动检测方式，检测完毕，观察SYSTEM.INI文档MOUSE.DRV语句已变为“MOUSE.DRV=MSCMOUSE.DRV&quot;标准鼠标器设置，重新启动Windows 
+        95，鼠标器问题亦得到成功解决。<br>
+        　　4.若故障仍存在，则用替换法，将另一只正常的相同型号的鼠标器与主机连接，再开机启动。<br>
+        　　5.若故障消失，则说明是鼠标器的硬件故障引起的，检查鼠标器的接口插头和连线有无问题，如无问题，再检查鼠标器的X轴和Y轴的移动机构或光电接收电路系统有无问题。<br>
+        　　6.若用替换法后故障仍存在，则说明是软故障。退出Windows后，在DOS下检查CONFIG.SYS文件或AUTOEXEC.BAT文件中是否已加入了鼠标驱动程序；若没有，则装入鼠标驱动程序。<br>
+        　　7.若在DOS下已加入了鼠标驱动程序，再在Windows下检查SYSTEM.INI文件BOOT段中是否加入了MOUSE.DRV=&lt;文件名&gt;设置项。<br>
+        　　8.若故障仍存在，则用KV300进行检测杀毒，重新冷启动后，检查鼠驱动程序是否完好，如有问题应重新安装。如果驱动程序是好的，再检查CMOS的内容是否被修改，如被病毒修改应重新设置，然后再次开机启动。<br>
+        　　实例：一台P5－133兼容机，装机调试时一切正常，第二天开机后鼠标器不能工作。在DOS和Windows下情况一样。用MSD软件检测时报告：“Mouse 
+        Hardware not Detected&quot;(鼠标硬件没有检测到)。开始怀疑是鼠标器损坏，但将该鼠标器接到其他微机上后工作正常，排除了鼠标器本身有故障的可能性。又怀疑是COM1接口有问题，于是将鼠标器接到COM2口上，并把驱动程序中对接口的设置作了相应修改。重新开机后报告鼠标驱动程序运行正常，但鼠标器仍然不工作，用MSD检测，报告是同样的结果。这时开始怀疑可能是安装应用软件时感染了病毒。用KV300检查硬盘，在CD－ROM驱动程序中报告：“Find 
+        CMOS Destroyed Virus, Kill It, OK！”至此，可以初步认定是由于CD－ROM驱动程序安装盘带毒，在安装CD－ROM驱动程序时，病毒感染了微机。由于病毒修改了CMOS的内容，所以机器自检时找不到鼠标器。作出相应处理后，故障排除。由于不明原因造成微机外设如打印机、鼠标器等的突然故障，应怀疑是病毒修改CMOS而引起的。用KV300检测一下，或许能够解决问题。<br>
+        　　9.若经以上检查后故障仍存在，就怀疑主板线路有故障，送专业人员修理。(重庆 
+        余新)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月9日第5期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

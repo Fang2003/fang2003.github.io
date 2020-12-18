@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 两起特殊的网卡冲突的解决</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><img src="images/cpcw.gif" width="468" height="60" border="0"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>30 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 两起特殊的网卡冲突的解决</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 两起特殊的网卡冲突的解决 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在网络的安装中，经常会遇到网卡与其它设备发生冲突的情况，笔者在本单位的网络安装中遇到两起特殊的网卡冲突的例子，现把解决过程给大家介绍一下，让遇到类似情况的朋友少绕圈子。<br>
+　　<b>1.USB（通用串行总线接口）与网卡的冲突</b><br>
+　　故障现象：电脑配置为：捷波J－571主板、Pentium MMX 200 CPU、Trident 9680显卡、420M硬盘、AdicoAE－310－TX PCI 10／100M 自适应网卡,安装Windows95  OSR2简体中文版。该机此前曾作为Windows NT网络的工作站，安装有Adico网卡，能正常登录网络。后由于给机器换3.2G硬盘而重装操作系统，重新启动机器后，找到新硬件，按提示装入网卡驱动程序后,机器又提示发现新的PCI设备并自动搜索安装驱动程序。安装完成后按网络要求设置好相关的协议、IP地址，重新启动机器后，不能登录网络。<br>
+　　故障处理及解决：由于该机以前能正常登录网络，检查各种参数后，重新启动登录，故障依旧，提示为“没有合适的域服务器来证实你的口令”。想到该网卡可能与其它设备发生了冲突，于是打开“控制面板”，检查Adico网卡的“属性”，一切正常，但发现“其它设备”中有PCI设备出现冲突，检查其“属性”，“驱动程序”项无效，要求升级驱动程序，考虑到机内除网卡外无其它设备，故认为是系统没有识别网卡，将其删除后，重启系统，又要求为新设备安装驱动程序。于是再安装网卡驱动程序，重启系统后，顺利启动系统，但仍不能登录网络。检查“控制面板／系统／设备管理”，在“网络适配器”中发现两块相同的网卡，检查其配置，其中一块配置正确。另一块网卡的资源中没有IRQ中断请求，将其删除后重新启动系统，又报告发现新的PCI设备，并为之搜索安装驱动程序，仍不能登录网络。继续在“控制面板／系统／设备管理”中检查冲突，但无论是IRQ、I／O地址、内存地址和DMA（直接内存访问）都没有冲突，这时似乎已到绝境。在重新启动系统时，无意中看见USB占用IRQ 11，而“控制面板／系统／设备管理”中的PCI设备正是占用的IRQ 11，可能冲突就在这里，于是在设备管理项中更改PCI设备的IRQ值，却不能成功。查阅主板说明书，此主板支持USB接口，在BIOS中找到“Integrated Peripherals”项，发现其“USB Controller” 项被设为“允许”，将其改为“禁止”后，重新启动，机器不作任何修改即可登录网络，至此，USB口与网卡的冲突排除。<br>
+　　本例中之所以出现以前登录正常而更换硬盘后发生冲突的现象，就是因为BIOS的缺省设置中“USB Controller”设为了“允许”，在更换硬盘后，其他人调用了BIOS的缺省设置。因此在网卡的安装过程中出现冲突，除了检查IRQ、I／O地址、内存冲突外，还应当考虑一下USB口的冲突和BIOS中的设置。<br>
+　　<b>2.PCI插槽与网卡的冲突</b><br>
+　　故障现象：电脑硬件配置为：AC－511MediaGXm一体化主板、集成声卡、32M内存(其中2M用作显存)、AdicoAE－310－TX PCI 10／100M 自适应网卡。操作系统为Windows 95 OSR2简体中文版。AC－511MediaGXm一体化主板为新购，加入网卡并正确安装，配置好驱动程序，重新启动后，直接进入Windows95桌面，不能出现登录网络的窗口。<br>
+　　 故障处理及解决：打开“控制面板”，检查Adico网卡的“属性”，没有发现任何冲突（包括IRQ、DMA、I／O地址、内存），驱动程序有效。于是检查其他设备的IRQ、DMA、I／O地址，发现显存地址有部份出现惊叹号，但并不与网卡的地址发生冲突。试着在BIOS中把显存由2M改为1M，重新启动后，故障依旧。以后采用重新安装Windows95、重装网卡驱动程序等办法，故障仍然存在。<br>
+　　于是换一种网卡Accton100M,插入Adico网卡所在PCI口中，重新开机，但机器仍不能启动。因Accton100M在别的机器上使用正常，所以怀疑PCI插槽与网卡地址冲突。因网卡无跳线，无法改变地址，查阅主板说明书，发现主板上3个PCI插槽中，网卡占用3号插槽，于是将其插入1号插槽，重新启动后，出现网络登录窗口，故障排除。<br><b>（四川  吕兵）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/30/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99302302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+<A HREF='http://www.lpzx.edu.cn/show_stats.htm%20target=sxrl'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

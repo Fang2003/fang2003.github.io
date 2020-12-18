@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- AutoCAD 使用技巧二则</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>47 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; AutoCAD 使用技巧二则</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 AutoCAD 使用技巧二则 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　1怎样在无WNEWCPEXE的情况下解决R12转换成R14或R2000时的汉字乱码问题</b></p>
+　　首先，用AutoCAD R12将文件打开，键入DWGCODEPAGE回车，命令行会提示：New value for DWGCODEPAGE&lt;″dos850″&gt;:，键入“undefined”回车后存盘退出。然后用AutoCAD R14或AutoCAD R2000将文件打开，你会看到乱码问题已经解决。这时再键入“DWGCODEPAGE”，命令行提示变为：DWGCODEPAGE=″ANSI_936″(read only)。<br>
+　　对于使用亚洲文字字型的DWG文件，AutoCAD R12使用的文件代码页（DWGCODEPAGE）为dos850(Multilingual)，而AutoCAD R14和R2000使用的文件代码页为ANSI_936、GB2312－80（简体中文）和ANSI_950、Big－5(繁体中文)及其他如日文、韩文指定代码页，两者互不兼容。AutoCAD R13及以上版本，已将此选项和系统代码页（SYSCODEPAGE）选项一起设置为只读(read only)，这就是为什么会出现汉字乱码问题的根本原因。若先用AutoCAD R12将文件代码页变成未定义（undefined），再用R14或R2000打开这个代码页未定义的文件，选自动配置代码页属性，问题就解决了。其实，这就是WNEWCPEXE的工作原理。但WNEWCP允许一次选中整个文件夹里的所有文件进行转换，并不再需要AutoCAD R12，所以，建议大家还是想办法找到WNEWCPEXE为根本解决之道。
+<p><b>　　2．巧用Find命令取代CHT命令进行文字替换</b></p>
+　　在一个文件中需要大量替换同一文字为另一文字时，大家通常是加载CHT功能并使用CHT相关命令来完成替换工作。AutoCAD R14及R2000可直接使用find命令来完成替换工作而无须再加载CHT。对R14方法是，在命令行直接键入“find”，会弹出一个“find and Replace命令窗口”，这个窗口和Office 9X等其他应用软件的Find/Replace窗口很相似。在“Find”栏中键入原文字，在“Replace With”栏中键入新文字（可以是中文），如需区分文字的大小写则点中“Case Sensitive”。如想一次全部修改则点中Global Change。下一步你就可以自由选择所有需要修改的地方，确认后会弹出另一窗口，让你确认是依次替换、自动替换还是跳过当前位置替换下一个。<br>
+　　AutoCAD R2000的Find命令使用更方便，功能强大得多。在Command命令状态直接单击鼠标右键就可以调出“Find”窗口，而且所有的查找及替换工作都可以在这一个窗口中完成。<br>
+　　另外，对于线型、颜色、图层、线段比例等的修改，AutoCAD R2000新增了一个“Quick Select”命令，可以像用“Find”命令那样对所有对象或部分选择对象一次性地进行修改。“Quick Select”的调用和“Find”一样，也可以通过在“Command”命令状态下直接单击鼠标右键就调出其窗口。<br><b>(文/宋强)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99473803.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

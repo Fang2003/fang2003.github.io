@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">3C508网卡成功安装两例<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　3Com508－TPO网卡是3COM公司出品的一种ISA总线的网卡，适于在各种以太网中作网络适配器，可用于同轴细缆和双绞线的连接。笔者在工作中多次安装过这种网卡，发现其安装方法与一般网卡如TOPSTAR、同维等有所不同，现举两例说明。<br>
+        　　一例是在Novell环境下安装3C508网卡。用3COM公司原配的安装盘运行安装程序，安装程序自动在C盘上建立NWCLIENT目录，将3C508.COM等程序拷入该目录，并对AUTOEXEC.BAT文件做了修改。重新启动系统后，执行AUTOEXEC.BAT文件时出现：VLM.EXE加载失败，并且不能转到网络盘符F：提示符状态。经检查，网络连线无问题；更换其他驱动程序，情况依旧。后阅读安装盘上的README文件，并仔细观察系统的启动过程，发现安装程序自动在AUTOEXEC.BAT中加载了802.2协议，而不是应加载的802.3协议，进入C:\NWCLIENT目录，用EDIT编辑NET.CFG文件，找到这一行：frame=Ether_net 
+        802.2，将802.2改为802.3，存盘退出，重新启动，故障排除。<br>
+        　　二例是在Win95环境下用3C508网卡连接两台主机，组成小型局域网。在其中一台组装机上安装，设置为即插即用方式，并进行Win95组网的软件设置工作，很快完成安装，占用资源为IRQ9，PORT210H。而另一台AST 
+        PⅢ＋486型号主机则不能联网，在Win95控制面板/系统/网络适配器/属性中发现，网卡虽“正常运转”，但无应占用的中断号，显然不正常。由于该机有声卡，采取先改变声卡的中断号，使之不占用IRQ9与210H，再安装网卡的方法。在设置网卡为即插即用时，存入设置并退出时，发现安装程序报告说“IRQ9已被占用，要继续吗”，此时如果选“NO”则不能设为IRQ9，故障同前，所以一定要选择“YES”，强行安装，然后该机成功联接入网。<strong></p>
+        </strong></font><p class="ourfont"><font color="#369681">　　(福建　欧黎光)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

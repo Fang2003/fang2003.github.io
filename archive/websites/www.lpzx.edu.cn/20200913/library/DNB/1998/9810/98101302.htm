@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>在Authorware 
+        3.0中使用MIDI文件<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　Authorware 
+        3.0是一套基于图标管理，以流程线为编辑结构的强大的多媒体制作系统，运用显示、声音、影像图标能够直接读取多种多媒体格式文件，使编制图、文、声、像并茂的程序更为容易。但使用中发现，声音图标只能读取wav、pcm、aif 
+        等声音文件，缺少了对MIDI文件的支持。经分析，发现在Authorware 3.0多媒体扩展函数库apwmme.ucd中包含有MIDI类控制函数可供调用。<br>
+        　<strong>　1.MIDI类控制函数的装载</strong><br>
+        　　在Data下拉菜单中选Load Function，点取apwmme.ucd打开该函数库，选出以MIDI开头的函数，单击load按钮装入函数，此时就可以在计算图标中编制代码时调用。<br>
+        　　<strong>2.MIDI类控制函数的说明</strong><br>
+        　　MIDI类控制函数共有6个，分别为：<br>
+        　　(1)MIDIPlay(″fileName″,tempo,wait)　播放指定的MIDI文件，其中：<br>
+        　　fileName　文件名，可指定路径；<br>
+        　　tempo　播放速度，tempo等于100时用标准速度播放；<br>
+        　　wait　为逻辑变量，控制是否进行同步播放，如果wait等于TRUE，播放完指定的MIDI文件后，才继续执行程序，为FALSE时，播放MIDI文件同时可继续执行程序。<br>
+        　　(2)MIDIPlaySegment(″fileName″,tempo,fromSeconds,forSeconds,wait)　对指定的MIDI文件，截取一段播放，其中：<br>
+        　　fromSeconds　开始播放的时间(以秒为单位）；<br>
+        　　forSeconds　播放长度（以秒为单位）。<br>
+        　　(3)MIDIPause()　暂停播放<br>
+        　　(4)MIDIResume()　从暂停处继续播放<br>
+        　　(5)MIDIStop()　停止播放<br>
+        　　(6)MIDIPlaying()　检测MIDI的当前状态，若正在播放返回TRUE，否则返回FALSE。<br>
+        　　<strong>3.MIDI类控制函数的应用</strong><br>
+        　　例如：在C:\midi下有一个cloud.mid文件， 要求作为背景音乐，从第10秒开始播放，持续播放30秒。可在计算图标中插入如下代码：<br>
+        　　MIDIPlaysegment(″c:\midi\cloud.mid″,100,10,30,FALSE)即可。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月16日第10期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

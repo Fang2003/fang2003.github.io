@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　湖南读者王晓军问：1.CMOS设置被“屏蔽”，在同创TRUAIT 
+        P5／166（AWARD MODULAR BIOS V4.51）微机的CMOS设置中遇到这样的问题：除用户口令设置、保存修改退出及不保存退出三项外，其余各项均无法进入。怀疑有破坏CMOS的病毒存在，但是无法正常杀毒，因为BIOS设置中Boot 
+        Sequence设为“C:,A:”。2.有一台ARTEC VIEW SATION AT3扫描仪（SCSI接口），故障现象为：重新安装驱动程序后，一般可正常运行（但有时也不行），但下一次冷启动后，提示：“Driver未能加载”（注：按照使用说明手册，在冷启动之前打开了扫描仪电源）。3.第二次安装IE4.0后，出现“无法打开……站点，Windows 
+        Explorer扩展版本出现内部错误”的提示信息。 
+        故障过程为：在删除第一次安装的IE4.0后，Windows系统就不再正常，重装《电脑报配套光盘第四辑》的IE4.0p便出现了以上现象。<br>
+        　　答：1.你这台微机的CMOS设置出现了问题，可能是CMOS被病毒破坏，也可能是CMOS存储器出现故障所致。首先，你可将CMOS作放电处理（从电脑使用手册上查找CMOS放电的跳线），如果CMOS放电不能解决问题，你可升级BIOS设置程序（在电脑报配套光盘中可以找到）。如果还不行，可能是CMOS存储器有问题，只有更换它才能解决。<br>
+        　　2.此问题是由驱动程序冲突引起的。在Windows 95中可以找到SCSI板卡，并且在安装时可能已经安装了其驱动程序，但是在使用扫描仪时又安装了其驱动程序。此时，有两种驱动程序被Windows 
+        95调用，在重新启动Windows 95时，这两个驱动程序将出现冲突。为了解决这个问题，你可以在安装扫描仪驱动程序之前，先进入到控制面板的“系统”图标中，将&quot;设备管理&quot;中的有关扫描仪驱动程序删除掉，然后再重新安装扫描仪驱动程序。 
+        此方法在安装其他设备时也适用。<br>
+        　　另外，由于Windows 95使用的设备比较多，最好不要在Windows 95中安装同一设备的多个驱动程序。按照一般的想法，在Windows 
+        95中安装后面的驱动程序时，系统会覆盖掉原先的驱动程序，其实不然，Windows 
+        95会为设备安装不同的设备驱动程序，这样在运行时就可能不正常。这一点千万要引起大家的注意。<br>
+        　　3.你的这个问题与第二个问题有点类似。出现这种问题，主要是由于IE 
+        4.0删除不彻底造成， 从而导致了第二次安装IE 4.0后产生了问题。你在信中说， 
+        你已经重装了Windows，我想你可能采用的是升级安装法，即在原先的Windows目录下重新安装Windows。有时这不能解决问题。因为此时的Windows程序仍存在冲突。为了彻底地解决这个问题，建议你在重装Windows时，采用与原先目录不同的其他目录，这样可避免程序发生冲突。有的读者想不重新安装Windows就解决这个问题，可能不行，因为Windows是一个庞大而复杂的操作系统，只要有一个系统文件遭到莫名其妙的覆盖或者破坏，则整个系统就无法运行了。对于一般用户来说，很难跟踪错误来源。我曾经使用Windows启动时的Bootlog.txt跟踪错误，但是失败了。为了能运行Windows，你所做的只能是重装Windows，且安装到其他目录中。如果你的硬盘有足够空间，则可将Windows 
+        95系统中System目录下的.386、.drv、.dll拷贝一个备份，再出现问题时，重新拷回。<br>
+        　　沈阳读者杨名问：1.一台486DX2／66电脑，安装有ESS688声卡。在DOS下音箱发声正常，但是在Windows下使用多媒体软件时出现“口兹口兹”的杂声，有时甚至只有刺耳的杂声，无正常的音乐和语音。2.我有一块&quot;金象&quot;解压卡，在安装驱动程序和设置参数时受阻。有许多设置参数需要配置，但是我对其中的Video 
+        base I／O Address和Audio base I／O Address不了解，试了多次没有成功。<br>
+        　　答：1.其实主要原因是你在Windows中没有正确安装ESS688声卡的驱动程序。 
+        在DOS下是通过Set Blaster=A220 I7 D1环境变量来设置的。但是，要在Windows中发声，必须安装相应的驱动程序。如果安装了声卡驱动程序，则问题就解决了。<br>
+        　　2.Video base I／O Address用于设置视频I／O基地址，通常为0x340、0x380。Audio 
+        base I／O Address用于设置音频I／O基地址，通常为0x220等。为了检查你所设置的I／O地址（I／O 
+        Address） 是否发生冲突，你可使用MSD等检测软件来查阅I／O地址的分布情况。<br>
+        　　重庆读者朱晶进问：我用ARJ 2.55b压缩了一些重要文件，并设了密码，密码记在一个笔记本上，现在要用这些文件，可那笔记本不翼而飞了，密码丢失！ 
+        希望快速地解开此密码。<br>
+        　　答：俄罗斯人ANOTOLY SKOBLOV用Borland C＋＋编写了一个用于解除ARJ密码的工具软件ARJPASS，利用该工具软件可以解开你的密码。 
+        ARJPASS可以用两种方法获取ARJ压缩软件的口令字，虽然使用方法比较奇特，但可以解决问题。<br>
+        　　第一种方法：使用程序SOLVEPWD.COM，可以立即获取口令字，但是必须具有压缩包中一个文件供对比之用， 
+        这个文件必须是用ARJ以不加密方式压缩的。获取口令字的命令行语法为：<br>
+        　　SOLVEPWD 不加密压缩包 加密压缩包<br>
+        　　例如，你把\CGJ子目录中所有文件制作成一个加密压缩包CGJ.ARJ，但是忘记了口令字，而压缩在CGJ.ARJ中的LHA.EXE手头还有，就可再用ARJ将LHA.EXE另制成只有一个文件的压缩包LHA.ARJ，不加口令字，然后执行下面的命令：<br>
+        　　SOLVEPWD LHA.ARJ CGJ.ARJ<br>
+        　　屏幕上马上显示出CGJ.ARJ的口令字。<br>
+        　　如果加密压缩包中的文件你一个也没有，就只有改用BRKARJ.EXE程序了。使用这个程序时，数据文件PASSWORD.DAT必须在同一个子目录中，其命令行语法为：<br>
+        　　 BRKARJ 加密软件包<br>
+        　　在该程序执行时，程序以“穷尽法”测试并显示所有可能的口令字，当找到正确的口令字时， 
+        即显示在屏幕上并结束操作。ARJ允许的口令字长度是1～8个字符，每个字符又可以是91个不同字符之一，它们分别是： 
+        10个数字、52个大小写字母、29个其他字符，最后一个字符是“／”。这些字符依上述排列放在PASSWORD.DAT中，供BRKARJ解密时使用。假定压缩包使用的是8个字符的口令字，第一个和最后一个字符都是“／”，那么差不多真的需要穷尽所有的可能性，才能找到口令字了，所需的时间是无法想象的，因此，使用该方法查找口令字时，一看时间稍长，最好放弃了事。不过，在大多数情况下可以在短时间内找到口令字的。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月21日第36期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

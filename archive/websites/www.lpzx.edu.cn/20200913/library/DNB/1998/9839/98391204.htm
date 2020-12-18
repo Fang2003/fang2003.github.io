@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>在LotusNotes中建立可折叠的数据库</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在LotusNotes中建立可折叠的数据库<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp;&nbsp; 
+        在LotusNotes中打开一个数据库，在右边的的视图窗口中常常可以见到带有三角形符号的文档列表，用鼠标点击三角符号可以改变三角符号的指向，三角符号指向右时，相关文档被折叠起来，只能看到标题，而三角符号指向下时，相关文档则可展开显示，非常方便。下面通过一个实例介绍实现这种功能的步骤。<br>
+        一、在本地新建一个练习数据库(当然也可以在服务器上建立作为共享使用)，方法为：依次选择“文件/数据库/新建”，在“新建数据库”对话框的“文件名”中输入数据库名“练习库”，“服务器”寻本地”。<br>
+        二、打开新建的数据库，设计一个表示文档结构的表单，方法为：依次选择“创建/设计/表单”。<br>
+        三、在菜单中寻创建/域”，在表单中加入所需要的域“Name”和“Tel”，类型为“文本”。<br>
+        四、在表单中加入用以实现“折叠/展开”功能的域“Depa”，类型选为“关键字”，并设置为隐藏。关闭并保存表单为“Tele”。<br>
+        五、设计视图，将视图名称设为“电话号簿”，在视图的列标题上单击鼠标右键，在弹出的对话框中寻列属性”，在弹出对话框的“基本”页面中选中“当行可展开时显示可展开标记”，在“排序”页面中选中“升序”、“分类”。<br>
+        六、定义列的显示内容为“Depa”域。<br>
+        七、右击视图的列标题，在弹出的对话框中寻追加列”，定义新列的显示内容为“Name”域，同法再追加一列，定义新列的显示内容为“Tel”域。关闭视图设计窗口。<br>
+        八、输入文档：在“创建”中选中上面建立的表单“Tele”，在域“Name”、“Tel”、“Depa”中输入姓名、电话号码、所在部门，结束后在数据库的导航窗口中选择视图“电话号簿”，就可以看到如图所示的“折叠/展开”效果了。(安徽张友民)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月12日第39期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

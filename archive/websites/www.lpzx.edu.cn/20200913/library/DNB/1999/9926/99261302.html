@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 利用DLL在程序中实现文件拷贝</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.cpcw.com/'><IMG SRC='images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=link&user=issue-software&realm=software' TARGET='_blank'><IMG SRC='http://cgi.cd.cpcw.com/cgi-bin/link/start.pl?action=view&user=issue-software&realm=software' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999'>1999 年</A> &gt; <A HREF='index.html'>26 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 利用DLL在程序中实现文件拷贝</TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 利用DLL在程序中实现文件拷贝 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在所开发的应用软件中，有时我们对某些文件进行拷贝（如对数据库进行备份、制作安装程序等），但是常用的一些语言却没有提供可直接进行文件拷贝的过程或函数。为此，我曾利用Delphi编制了可提供文件拷贝过程的动态连接库Copf.dll，其输出过程为CopyFile。由于DLL具有简化编程、运行速度快等诸多优点，且不受编程语言的限制，用Delphi编 写的Copf.dll同样可被VB、VC等面向对象语言进行静态或动态调用，从而方便地在程序中实现文件拷贝。<br>
+　　附源程序如下：<br>
+　　library copf;<br>
+　　uses<br>
+　　SysUntils,<br>
+　　Classes;<br>
+　　Procedure  copyfile(Sfname.Dfname:string):far;export;//带路径的文件名；<br>
+　　Var<br>
+　　Sourcef,Destinef:file;<br>
+　　NumRead,NumWritten: Integer;<br>
+　　Buf: array[1..4096] of Char;//定义缓冲区；<br>
+　　Begin<br>
+　　AssignFile(Sourcef,Dfname);<br>
+　　Reset(Sourcef,1);<br>
+　　AssignFile(Destinef,Dfname);<br>
+　　Rewrite(Destinef,1);<br>
+　　Repeat<br>
+　　BlockRead(Sourcef,Buf,Size Of(Buf),NumRead);//读源文件；<br>
+　　BlockWrite(Destinef,Buf,NumRead,NumWritten);//写目标文件；<br>
+　　Until (NumRead = 0) or (NumWritten&lt;&gt;NumRead);<br>
+　　CloseFile(Soucef);<br>
+　　CloseFile(Destinef);<br>
+　　End;<br>
+　　Exports<br>
+　　Copyfile;//输出过程；<br>
+　　End；<br>
+　　以上源程序编译后便生成Copf.dll。<br>
+　　现就静态调用举例：<br>
+　　unit Name;<br>
+　　interface<br>
+　　uses<br>
+　　Windows…;<br>
+　　Type<br>
+　　Tzcform=class(Tform)<br>
+　　…<br>
+　　end;<br>
+　　var<br>
+　　Form1: Tform1;<br>
+　　Implementation<br>
+　　Procedure  copyfile(Sfname,Dfname:string);far;external ′c:\copf′;//DDL路径名；<br>
+　　{＄R ＊.DFM}<br>
+　　Procedure  Tform1.CopyButtonClick(Sender: Tobject);<br>
+　　Begin<br>
+　　…<br>
+　　if fileexist(Sfname)//如果源文件；<br>
+　　then copyfile(Sfname,Dfname);<br>
+　　…<br>
+　　end;   <br><b>（河北　王寅龙）</b></TD></TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/26/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99261302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

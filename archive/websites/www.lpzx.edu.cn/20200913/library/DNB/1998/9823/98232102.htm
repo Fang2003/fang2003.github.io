@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Win95对等网共享Modem上网<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　一台电脑上网已经是很普遍的事情，但几台电脑，是否可以共享一个Modem上网呢？答案是肯定的。我们已实现了这一点。<br>
+        　　<strong>一、准备Win95对等网及上网的必需设备</strong><br>
+        　　1.要有几台装有Win95和浏览器（本文以IE4为例）的电脑，其中一台装有Modem，可以单独上网，我们把它作为对等网的服务器。<br>
+        　　2.在每台电脑都装上网卡，用同轴电缆（或双绞线）连接起来，这样就构成了一个Win95对等网。如果连接成功，打开“网上邻居”图标，就可以看到本机和其他几台电脑的存在；否则，就说明连接失败。须再检查网卡和连线，还有“控制面板”里“网络”中的各个项目的设置。直到成功为止。<br>
+        　　3.服务器（有Modem的电脑）要装上Proxy代理服务器软件,常用的有：<br>
+        Wingate2.0、VSOCKS0.9、CSM Proxy等（我们这里采用Wingate2.0）。<br>
+        　　<strong>二、安装和设置软件</strong><br>
+        　　1.各台电脑都要装上TCP／IP协议。<br>
+        　　2.设置TCP／IP协议的属性。其中又分服务器和工作站的TCP／IP协议的属性设置两种。 
+        <br>
+        　　1)设置服务器的TCP／IP协议的属性：打开“控制面板”—“网络”，选中“TCP／IP－&gt;Anet 
+        2000 Jum.....” (TCP／IP协议指向网卡这一项)，单击打开“属性”，选中“IP地址”，选中“指定IP地址”。在“IP地址”中填上本台服务器的IP地址（可自定）,如111.111.111.1 
+        。在“子网屏蔽”中填上：255.255.255.0 。其它可不变。<br>
+        　　2)设置工作站TCP／IP协议的属性：按同样方法打开，在“IP地址”中填上各台机的IP地址，如2号机的IP为：111.111.111.2，3号机的IP地址为：111.111.111.3，依此类推。在“子网屏蔽”中填上：255.255.255.0 
+        。(各台机都一样)。再选定“DNS配置”这项，填上主机名（必须填)和域名（可不填），在“DNS服务器搜索顺序”中填上：111.111.111.1 
+        。<br>
+        　　3.安装Proxy代理服务器软件。运行Wingate2.0的setup.exe安装程序，按提示就可以装好。在安装过程中，要填写以下数据：本台服务器的IP地址、ISP的“DNS 
+        server”等几项，都挺简单的，只要按提示去做就可以了。<br>
+        　　4.设置浏览器的“Internet选项”。打开浏览器IE，选“查看”菜单，选中“Internet选项”，选“连接”，选中“通过局域网连接到Internet”；再选中“通过代理服务器访问Internet”，并单击“高级”，在这里要填上代理服务器地址（即IP）和端口号，其中“http”、“secure”、“ftp”、,“socks”这四项填上相同的IP（如：111.111.111.1），端口号前三项填上“80”，“socks”的端口号填上“1080”，“gopher”项可不填。到这里工作站基本上已设置好。服务器因为可以上网了，所以其设置不用再改。<strong></p>
+        </strong></font><p class="ourfont" align="left"><font color="#369681">　　( 
+        广东　傅汉球)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月15日第23期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

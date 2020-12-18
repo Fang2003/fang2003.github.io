@@ -1,0 +1,126 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/internet.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Novell网使用技巧三则</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0123/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0123/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第23期 <!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+        </tr>
+      </table>
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->Novell网使用技巧三则<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->笔者在小学从事CAI工作，也使用Novell网络，在使用Novell网络的过程中得出了几个实用的技巧，写出来与大家共同交流。<br>
+              一、如何让Novell认识高内存<br>
+              现在的许多机器起码都具有32MB以上的内存，如果用它来运行Microsoft Windows固然是没有问题，智能的Windows会管理好它，并充分地利用它们。但是，如果用它来运行Novell操作系统时就应该注意一个问题，在默认情况下，Novell操作系统只能支持到16MB的内存(由于Novell制作时电脑的配置没有现在这么高档)，如果要使用16MB以上的内存，必须用register 
+              memory命令在服务器上进行设置，否则机器无法使用。它的用法是register memory起始地址(16进制)以上内在容量(16进制)。如现在我的机器是32MB内存，我就必须从16MB之外再利用16MB的空间，所以写成register 
+              memory 100000 100000(前面为16MB起始地址，后面为16MB内存空间，总共为32MB，如果用户不方便，可以通过Windows中的计算器来计算)。我们也可以将它加入到服务器的autoexec．ncf文件中，这样一旦Novell服务器启动，该命令就会被执行生效，非常方便。<br>
+              二、如何远程控制Novell服务器<br>
+              我们都知道，在Novell网络中，服务器享有最高的权限，它可以删除用户，也可以强制某一用户退出网络(包括Supervisor)，因此，控制了Novell的服务器就等于控制了整个Novell网络。在一般情况下，我们都是在服务器上对Novell进行设置的，但是，在一些特殊的情况下，我们需要对服务器进行远程控制。其实这个功能Novell操作系统早就为我们设计好了，方法如下：<br>
+              (1)在Novell服务器上点状态下运行load install，装入安装模块。<br>
+              (2)在安装模块中选择“编辑autoexec．ncf”文件，在里面加入如下几句命令：<br>
+              load remote abc123(装入远程控制模块并以abc123为口令)<br>
+              load rspx(装入SPX协议支持模块，因为Novell网络中的通讯协议是SPX协议)<br>
+              (3)按下ESC键，退出安装模块，回到点状态下。<br>
+              (4)通过上面的设置，以后用户不管在哪一台工作站上登录(除非经过限制登录设置)只要运行PUBLIC目录下的RCONSOLE．EXE命令，再输入Supervisor口令或abc123(在服务器上设置的)，再看一看屏幕，是不是有点儿不相信了，在你面前的就是一个Novell服务器，在上面操作就跟在真的Novell服务器上操作一样方便，此时你甚至可以关闭Novell服务器，只不过你现在是在远程地控制它。<br>
+              三、如何从Novell服务器上发送中文信息<br>
+              在Novell服务器上，我们可以向所有的工作站发送信息，如通知它们要关闭网络、请立即退网等等。但是在一般情况下在Novell服务器上只能发送英文信息，这对于使用中文的用户来说就有一些不方便了。那么，我们能不能从Novell服务器上向用户发送中文信息呢？其实，我们只要通过一定的方法，还是可以的。只要我们利用方法2的步骤，在服务器上设置允许远程控制Novell服务器，然后只要在任何一台工作站上先启动中文操作系统，如UCDOS，再登录到Novell服务器，并运行PUBLIC目录下的RCONSOLE．EXE命令，再输入Supervisor口令或在服务器上设置的密码后，你面前就会出现一个“中文的Novell服务器”，此时我们就可以向用户发送中文信息了。不过你的中文用户此时也必须有中文操作系统的支持，否则，看到的就只能是乱码。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>

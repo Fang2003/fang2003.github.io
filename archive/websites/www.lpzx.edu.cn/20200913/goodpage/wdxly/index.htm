@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+
+<title>我的小乐园</title>
+<script language="JavaScript">
+<!--
+<!--
+function MM_timelinePlay(tmLnName, myID) {//v1.2
+//Copyright 1997 Macromedia, Inc. All rights reserved.
+var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+if (document.MM_Time==null) MM_initTimelines();//if *very* 1st time
+tmLn=document.MM_Time[tmLnName];
+if (myID==null) {myID=++tmLn.ID;firstTime=true;}//if new call, incr ID
+if (myID==tmLn.ID) {//if Im newest
+setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+fNew=++tmLn.curFrame;
+for (i=0;i<tmLn.length;i++) {
+sprite=tmLn[i];
+if (sprite.charAt(0)=='s') {
+if (sprite.obj) {
+numKeyFr=sprite.keyFrames.length;firstKeyFr=sprite.keyFrames[0];
+if (fNew>=firstKeyFr && fNew <=sprite.keyFrames[numKeyFr-1]) {//in range
+keyFrm=1;
+for (j=0;j<sprite.values.length;j++) {
+props=sprite.values[j];
+if (numKeyFr !=props.length) {
+if (props.prop2==null) sprite.obj[props.prop]=props[fNew-firstKeyFr];
+else sprite.obj[props.prop2][props.prop]=props[fNew-firstKeyFr];
+} else {
+while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+if (props.prop2==null) sprite.obj[props.prop]=props[keyFrm-1];
+else sprite.obj[props.prop2][props.prop]=props[keyFrm-1];
+}}}}}
+} else if (sprite.charAt(0)=='b' && fNew==sprite.frame) eval(sprite.value);
+if (fNew> tmLn.lastFrame) tmLn.ID=0;
+}}
+}
+
+function MM_swapImgRestore() {//v2.0
+if (document.MM_swapImgData !=null)
+for (var i=0;i<(document.MM_swapImgData.length-1);i+=2)
+document.MM_swapImgData[i].src=document.MM_swapImgData[i+1];
+}
+
+function MM_preloadImages() {//v2.0
+if (document.images) {
+var imgFiles=MM_preloadImages.arguments;
+if (document.preloadArray==null) document.preloadArray=new Array();
+var i=document.preloadArray.length;
+with (document) for (var j=0;j<imgFiles.length;j++) if (imgFiles[j].charAt(0)!="#"){
+preloadArray[i]=new Image;
+preloadArray[i++].src=imgFiles[j];
+}}
+}
+
+function MM_swapImage() {//v2.0
+var i,j=0,objStr,obj,swapArray=new Array,oldArray=document.MM_swapImgData;
+for (i=0;i <(MM_swapImage.arguments.length-2);i+=3) {
+objStr=MM_swapImage.arguments[(navigator.appName=='Netscape')?i:i+1];
+if ((objStr.indexOf('document.layers[')==0 && document.layers==null) ||
+(objStr.indexOf('document.all[')==0 && document.all==null))
+objStr='document'+objStr.substring(objStr.lastIndexOf('.'),objStr.length);
+obj=eval(objStr);
+if (obj !=null) {
+swapArray[j++]=obj;
+swapArray[j++]=(oldArray==null || oldArray[j-1]!=obj)?obj.src:oldArray[j];
+obj.src=MM_swapImage.arguments[i+2];
+}}
+document.MM_swapImgData=swapArray;//used for restore
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) {//v2.0
+//Copyright 1997 Macromedia, Inc. All rights reserved.
+var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+if (document.MM_Time==null) MM_initTimelines();//if *very* 1st time
+tmLn=document.MM_Time[tmLnName];
+if (numGotos !=null)
+if (tmLn.gotoCount==null) tmLn.gotoCount=1;
+else if (tmLn.gotoCount++>=numGotos) {tmLn.gotoCount=0;return}
+jmpFwd=(fNew> tmLn.curFrame);
+for (i=0;i <tmLn.length;i++) {
+sprite=(jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i];//count bkwds if jumping back
+if (sprite.charAt(0)=="s") {
+numKeyFr=sprite.keyFrames.length;
+firstKeyFr=sprite.keyFrames[0];
+lastKeyFr=sprite.keyFrames[numKeyFr - 1];
+if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue;//skip if untouchd
+for (keyFrm=1;keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm];keyFrm++);
+for (j=0;j<sprite.values.length;j++) {
+props=sprite.values[j];
+if (numKeyFr==props.length) propNum=keyFrm-1 //keyframes only
+else propNum=Math.min(Math.max(0,fNew-firstKeyFr),props.length-1);//or keep in legal range
+if (sprite.obj !=null) {
+if (props.prop2==null) sprite.obj[props.prop]=props[propNum];
+else sprite.obj[props.prop2][props.prop]=props[propNum];
+}}
+} else if (sprite.charAt(0)=='b' && fNew==sprite.frame) eval(sprite.value);
+}
+tmLn.curFrame=fNew;
+if (tmLn.ID==0) eval('MM_timelinePlay(tmLnName)');
+}
+
+
+//-->
+
+function MM_initTimelines() {
+//MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+var ns=navigator.appName=="Netscape";
+document.MM_Time=new Array(1);
+document.MM_Time[0]=new Array(2);
+document.MM_Time["Timeline1"]=document.MM_Time[0];
+document.MM_Time[0].MM_Name="Timeline1";
+document.MM_Time[0].fps=30;
+document.MM_Time[0][0]=new String("behavior");
+document.MM_Time[0][0].frame=31;
+document.MM_Time[0][0].value="MM_timelineGoto('Timeline1','1')";
+document.MM_Time[0][1]=new String("sprite");
+document.MM_Time[0][1].slot=1;
+if (ns)
+document.MM_Time[0][1].obj=document["Layer18"];
+else
+document.MM_Time[0][1].obj=document.all ? document.all["Layer18"] : null;
+document.MM_Time[0][1].keyFrames=new Array(1, 5, 8, 15, 18, 19, 23, 27, 29, 30);
+document.MM_Time[0][1].values=new Array(2);
+document.MM_Time[0][1].values[0]=new Array(592,564,536,510,486,466,452,429,410,390,367,343,321,302,284,262,253,245,223,207,188,166,144,126,109,93,76,38,11,8);
+document.MM_Time[0][1].values[0].prop="left";
+document.MM_Time[0][1].values[1]=new Array(313,311,308,307,308,316,328,336,337,336,335,333,332,331,332,341,353,363,371,374,377,379,379,376,370,364,360,358,359,358);
+document.MM_Time[0][1].values[1].prop="top";
+if (!ns) {
+document.MM_Time[0][1].values[0].prop2="style";
+document.MM_Time[0][1].values[1].prop2="style";
+}
+document.MM_Time[0].lastFrame=31;
+for (i=0;i<document.MM_Time.length;i++) {
+document.MM_Time[i].ID=null;
+document.MM_Time[i].curFrame=0;
+document.MM_Time[i].delay=3000/document.MM_Time[i].fps;
+}
+}
+//-->
+</script><SCRIPT language="JavaScript">
+<!--HPB_SCRIPT_ROV_50
+//
+// Licensed Materials - Property of IBM
+// 83H7391, 42L1820
+// (C) Copyright IBM Corp. 1995, 1999 All Rights Reserved.
+//
+// Version: 5.0.1
+//
+
+// HpbImgPreload:
+//
+function HpbImgPreload()
+{
+var appVer=parseInt(navigator.appVersion);
+var isNC=(document.layers && (appVer>=4));// Netscape Navigator 4.0 or later
+var isIE=(document.all && (appVer>=4));// Internet Explorer 4.0 or later
+if (isNC || isIE)
+{
+if (document.images)
+{
+var imgName=HpbImgPreload.arguments[0];
+var cnt;
+swImg[imgName]=new Array;
+for (cnt=1;cnt <HpbImgPreload.arguments.length;cnt++)
+{
+swImg[imgName][HpbImgPreload.arguments[cnt]]=new Image();
+swImg[imgName][HpbImgPreload.arguments[cnt]].src=HpbImgPreload.arguments[cnt];
+}
+}
+}
+}
+// HpbImgFind:
+//
+function HpbImgFind(doc, imgName)
+{
+for (var i=0;i <doc.layers.length;i++)
+{
+var img=doc.layers[i].document.images[imgName];
+if (!img) img=HpbImgFind(doc.layers[i], imgName);
+if (img) return img;
+}
+return null;
+}
+// HpbImgSwap:
+//
+function HpbImgSwap(imgName, imgSrc)
+{
+var appVer=parseInt(navigator.appVersion);
+var isNC=(document.layers && (appVer>=4));// Netscape Navigator 4.0 or later
+var isIE=(document.all && (appVer>=4));// Internet Explorer 4.0 or later
+if (isNC || isIE)
+{
+if (document.images)
+{
+var img=document.images[imgName];
+if (!img) img=HpbImgFind(document, imgName);
+if (img) img.src=imgSrc;
+}
+}
+}
+var swImg;swImg=new Array;
+//-->
+</SCRIPT><SCRIPT language="JavaScript">
+<!--HPB_SCRIPT_PLD_50
+HpbImgPreload('_HPB_ROLLOVER14', 'images/m_image11.gif', 'images/n_image11.gif');
+HpbImgPreload('_HPB_ROLLOVER16', 'images/m_image12.gif', 'images/n_image12.gif');
+HpbImgPreload('_HPB_ROLLOVER18', 'images/m_image14.gif', 'images/n_image14.gif');
+HpbImgPreload('_HPB_ROLLOVER19', 'images/m_image15.gif', 'images/n_image15.gif');
+HpbImgPreload('_HPB_ROLLOVER1', 'images/n_image2.gif', 'images/m_image2.gif');
+HpbImgPreload('_HPB_ROLLOVER2', 'images/m_image4.gif', 'images/n_image4.gif');
+HpbImgPreload('_HPB_ROLLOVER3', 'images/m_image6.gif', 'images/n_image6.gif');
+HpbImgPreload('_HPB_ROLLOVER4', 'images/m_image7.gif', 'images/n_image7.gif');
+HpbImgPreload('_HPB_ROLLOVER5', 'images/m_image8.gif', 'images/n_image8.gif');
+HpbImgPreload('_HPB_ROLLOVER6', 'images/m_image9.gif', 'images/n_image9.gif');
+//-->
+</SCRIPT></head><BODY onload="MM_timelinePlay('Timeline1'); MM_preloadImages('arr-2.gif','#920516311200'); MM_preloadImages('arr-8.gif','#922269615355'); MM_preloadImages('arr-4.gif','#922269615333');" tracingsrc="../%A9%B3%B9%CF1.jpg" tracingopacity="100" link="#ffffcc" vlink="#ff99cc" alink="#99ffcc" text="#000099" background="images/p6b.gif">
+<DIV style="width : 125px;height : 24px;top : 35px;left : 554px;
+position : absolute;
+z-index : 9;
+visibility : visible;
+" id="Layer4"><SCRIPT language="JavaScript">
+today=new Date();
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]}
+var d=new initArray(
+"星期日",
+"星期一",
+"星期二",
+"星期三",
+"星期四",
+"星期五",
+"星期六");
+document.write(
+"<font color=#Red style='font-size:9pt;font-family: 宋体'> ",
+today.getYear(),"年",
+today.getMonth()+1,"月",
+today.getDate(),"日",
+d[today.getDay()+1],
+"</font>");
+</SCRIPT></DIV>
+<DIV style="width : 410px;height : 78px;top : 11px;left : 153px;
+position : absolute;
+z-index : 8;
+visibility : visible;
+" id="Layer5" align="center"><IMG src="images/leyuan.jpg" border="0" width="525" height="70"></DIV>
+<DIV style="width : 153px;height : 233px;top : 101px;left : 569px;
+position : absolute;
+z-index : 7;
+visibility : visible;
+" id="Layer2" align="right">
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD height="40"><FONT color="Blue" size="+2" face="华文隶书"><A href="xuexi.htm" id="_HPB_ROLLOVER14" onmouseout="HpbImgSwap('_HPB_ROLLOVER14','images/m_image11.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER14','images/n_image11.gif');"><IMG src="images/m_image11.gif" width="118" height="24" border="0" name="_HPB_ROLLOVER14"></A></FONT>
+
+
+      <TD><IMG src="images/ANI_130.gif" width="15" height="15" border="0"></TD>
+    <TR>
+<TD height="40"><A href="yule.htm" id="_HPB_ROLLOVER16" onmouseout="HpbImgSwap('_HPB_ROLLOVER16','images/m_image12.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER16','images/n_image12.gif');"><IMG src="images/m_image12.gif" width="118" height="24" border="0" name="_HPB_ROLLOVER16"></A>
+
+
+      <TD><IMG src="images/ANI_130.gif" width="15" height="15" border="0"></TD>
+    <TR>
+<TD height="40"><a href="dnkt.htm" id="_HPB_ROLLOVER1" onmouseout="HpbImgSwap('_HPB_ROLLOVER1','images/n_image2.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER1','images/m_image2.gif');"><IMG src="images/n_image2.gif" width="113" height="24" border="0" name="_HPB_ROLLOVER1"></a>
+
+
+      <TD><IMG src="images/ANI_130.gif" width="15" height="15" border="0"></TD>
+    <TR>
+<TD height="40"><A href="liuyan.htm" id="_HPB_ROLLOVER18" onmouseout="HpbImgSwap('_HPB_ROLLOVER18','images/m_image14.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER18','images/n_image14.gif');"><IMG src="images/m_image14.gif" width="118" height="24" border="0" name="_HPB_ROLLOVER18"></A>
+
+
+      <TD><IMG src="images/ANI_130.gif" width="15" height="15" border="0"></TD>
+    <TR>
+<TD height="40"><A href="mailto:lylj@cnuninet.com" id="_HPB_ROLLOVER19" onmouseout="HpbImgSwap('_HPB_ROLLOVER19','images/m_image15.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER19','images/n_image15.gif');"><IMG src="images/m_image15.gif" width="118" height="24" border="0" name="_HPB_ROLLOVER19"></A>
+
+
+      <TD><IMG src="images/ANI_130.gif" width="15" height="15" border="0"></TD>
+    </TBODY>
+</TABLE>
+</DIV>
+<DIV style="width : 167px;height : 233px;top : 101px;left : 47px;
+position : absolute;
+z-index : 6;
+visibility : visible;
+" id="Layer1">
+<TABLE border="0">
+<TBODY>
+<TR>
+<TD height="40"><IMG src="images/ANI_130.gif" width="15" height="15" border="0"><TD><A href="jieshao.htm" id="_HPB_ROLLOVER2" onmouseout="HpbImgSwap('_HPB_ROLLOVER2','images/m_image4.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER2','images/n_image4.gif');"><IMG src="images/m_image4.gif" width="114" height="24" border="0" name="_HPB_ROLLOVER2"></A></TD>
+    <TR>
+<TD height="40"><IMG src="images/ANI_130.gif" width="15" height="15" border="0"><TD><A href="xuexiao.htm" id="_HPB_ROLLOVER3" onmouseout="HpbImgSwap('_HPB_ROLLOVER3','images/m_image6.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER3','images/n_image6.gif');"><IMG src="images/m_image6.gif" width="117" height="24" border="0" name="_HPB_ROLLOVER3"></A></TD>
+    <TR>
+<TD height="40"><IMG src="images/ANI_130.gif" width="15" height="15" border="0"><TD><A href="xiangce.htm" id="_HPB_ROLLOVER4" onmouseout="HpbImgSwap('_HPB_ROLLOVER4','images/m_image7.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER4','images/n_image7.gif');"><IMG src="images/m_image7.gif" width="117" height="24" border="0" name="_HPB_ROLLOVER4"></A></TD>
+    <TR>
+<TD height="40"><IMG src="images/ANI_130.gif" width="15" height="15" border="0"><TD><A href="zuopin.htm" id="_HPB_ROLLOVER5" onmouseout="HpbImgSwap('_HPB_ROLLOVER5','images/m_image8.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER5','images/n_image8.gif');"><IMG src="images/m_image8.gif" width="116" height="24" border="0" name="_HPB_ROLLOVER5"></A></TD>
+    <TR>
+<TD height="40"><IMG src="images/ANI_130.gif" width="15" height="15" border="0">
+      <TD><A href="wangzhan.htm" id="_HPB_ROLLOVER6" onmouseout="HpbImgSwap('_HPB_ROLLOVER6','images/m_image9.gif');" onmouseover="HpbImgSwap('_HPB_ROLLOVER6','images/n_image9.gif');"><IMG src="images/m_image9.gif" width="116" height="24" border="0" name="_HPB_ROLLOVER6"></A></TD>
+    </TBODY>
+</TABLE>
+</DIV>
+<DIV id="Layer11" style="position:absolute;left : 679px;top : 15px;width : 92px;height : 84px;z-index : 2;" class="AlbumTitle" align="center"><IMG src="images/s_ani017.gif" width="56" height="56" border="0" align="bottom">
+<div align="center">
+</div></DIV>
+<DIV id="Layer23" style="position:absolute;width : 309px;height : 51px;z-index : 5;left : 229px;top : 309px;" class="Fixed02" align="center"><FONT color="#990000" face="华文宋体" size="2"><FONT class="footnote">版权所有 (c) &nbsp;2001 我的小乐园<BR>
+制作人:李骏</FONT></FONT><FONT color="#990000" size="2"><BR>
+建议使用IE4.0以上浏览器，600*800分辨率浏览</FONT></DIV>
+<DIV id="Layer3" style=" position:absolute;z-index : 1;width : 276px;height : 180px;left : 246px;top : 107px;
+visibility : visible;
+" align="center"><A href="images/7.jpg"><IMG src="images/photo4.gif" width="270" height="180" border="0"></A></DIV>
+
+<DIV id="Layer16" style="position:absolute;left : 41px;top : 7px;width : 93px;height : 213px;z-index : 4;
+visibility : visible;
+" align="center">
+<P align="center"><IMG src="images/Maxx.gif" width="52" height="75"><EMBED src="images/mystery.mid" autostart="true" hidden="true" loop="true" width="128" height="128"></P>
+</DIV>
+<DIV id="Layer18" style="position:absolute;left : 573px;top : 320px;width:36px;height:24px;z-index : 3;"><img src="images/MAOK.gif" width="146" height="58"></DIV>
+</BODY>
+</html>

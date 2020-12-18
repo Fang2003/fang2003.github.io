@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在Delphi应用程序中拖动控件</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 在Delphi应用程序中拖动控件</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在Delphi应用程序中拖动控件 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　在应用程序的开发中，常常要将某些控件对象(如标签)用鼠标选中后进行拖动操作，用以改变控件的位置，在Delphi中如何实现这一功能呢？笔者想了一个方法：通过在 public 中定义全局变量用以跟踪 鼠标在移动和拖动控件时的坐标，然后在拖动结束时将鼠标的坐标值赋给控件的 TOP和LEFT属性，以达到拖动的目的。<br>
+　　举例如下：创建一个 Panel，再创建一个Label，通过编程使控件 Lable 可以在 Panel 中被拖放到任意位置。以下是具体实现过程：<br>
+　　1.首先做一下准备工作，运行Delphi3.0，进入集成开发环境，在 File 菜单中选择New Application  。<br>
+　　2.在Form1中创建对象 Panel1，并在 Panel1 中创建另一对象 Label1。<br>
+　　3.选中Label1,修改其下列属性的值：  <br>
+        属性          值<br>
+      Caption    : 标签移动测试!<br>
+      Cursor     : crHandPoint<br>
+      DragCursor : crDrag<br>
+      DragMode   : dmAutomatic<br>
+　　4.在程序的开头部分声明全局变量 x_panel,y_panel,x_label,y_label<br>
+　　其中,x_panel,y_panel :鼠标在Panel1上的坐标。<br>
+　　x_label,y_label :鼠标在label1上的坐标。<br>
+　　注：这里分别获取在Panel1和Label1上的坐标是为了更精确地计算出Label1实际的移动距离。<br>
+　　5.在Panel1的OnDragOver 和OnMouseMove 事件中添加如下代码：<br>
+　　x_panel:=X;<br>
+　　y_panel:=Y;<br>
+　　注：该操作是获得 mouse 在Panel1上的坐标。<br>
+　　6.在Label1的OnMouseMove 事件中添加如下代码：<br>
+　　x_Labell:=X;<br>
+　　y_Label1:=Y;<br>
+　　注：该操作是获得 mouse 在Label1上的坐标。 <br>
+　　7.在Label1的OnEndDrag 事件中添加如下代码：<br>
+　　label1.left :=x_panel－x_label;<br>
+　　label1.top  :=y_panel－y_label; <br>
+　　说明：两者相减是为了求得 label1 实际的移动距离。 <br>
+　　8.创建一个对象 Button1 ，并在其 OnClick 事件中添加如下代码：<br>
+　　close;  用以关闭应用程序。<br>
+　　好了，现在运行程序，测试一下结果。<br>
+　　<b>以下是程序源代码，在Delphi3.0、Windows95/98中测试通过。</b><br>
+	unit test_move;<br>
+	interface<br>
+	uses<br>
+	Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,<br>
+	StdCtrls, ExtCtrls;<br>
+	type<br>
+	TForm1 = class(TForm)<br>
+	Panel1: TPanel;<br>
+ 	Label1: TLabel;<br>
+ 	Button1: TButton;<br>
+	procedure Button1Click(Sender: TObject);<br>
+	procedure Panel1MouseMove(Sender: TObject; Shift: TShiftState; X,Y: Integer);<br>
+	procedure Panel1DragOver(Sender, Source: TObject; X, Y: Integer;<br>
+	State: TDragState; var Accept: Boolean);<br>
+	procedure Label1MouseMove(Sender: TObject; Shift: TShiftState; X,Y: Integer);<br>
+	procedure Label1EndDrag(Sender, Target: TObject; X, Y: Integer);<br>
+	private<br>
+	{ Private declarations }<br>
+	public<br>
+    	{ Public declarations }<br>
+    	x_panel,y_panel,x_label,y_label:integer;<br>
+	end;<br>
+	var<br>
+	Form1: TForm1;<br>
+	implementation<br>
+	{＄R ＊.DFM}<br>
+	procedure TForm1.Button1Click(Sender: TObject);<br>
+	begin<br>
+	close;<br>
+	end;<br>
+	procedure FTorm1.Panel1MouseMove<br>
+	(Sender: TObject; Shift: TShiftState; <br>
+	X,Y: Integer);<br>
+	begin<br>
+	x_panel:=X;<br>
+	y_panel:=Y;<br>
+	end;<br>
+	procedure TForm1.Panel1DragOver(Sender, Source: TObject; X, Y: Integer;<br>
+	State: TDragState; var Accept: Boolean);<br>
+	begin<br>
+	x_panel:=X;<br>
+	y_panel:=Y;<br>
+	end;<br>
+	procedure TForm1.Label1MouseMove(Sender: TObject; Shift: TShiftState;<br>
+ 	X,Y: Integer);<br>
+	begin<br>
+	x_label:=X;<br>
+	y_label:=Y;<br>
+	end;<br>
+	procedure TForm1.Label1EndDrag(Sender, Target: TObject; X, Y: Integer);<br>
+	begin<br>
+	label1.left :=x_panel－x_label;   <br>
+	label1.top:=y_panel－y_label; <br>    
+	end;<br>
+	end.<br>
+<b>( 徐州     张海峰)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99361302.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 155;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 155;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#E4F2D5" onLoad="MM_timelinePlay('Timeline1')">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td width="5" height="2" valign="top"></td>
+    <td width="7" height="2" valign="top"></td>
+    <td width="193" height="2" valign="top"></td>
+    <td width="1" height="2" valign="top"></td>
+    <td width="1" height="2" valign="top"></td>
+    <td width="20" height="2" valign="top"></td>
+    <td width="3" height="2" valign="top"></td>
+    <td width="306" height="2" valign="top"></td>
+    <td width="8" height="2" valign="top"></td>
+    <td width="205" height="2" valign="top"></td>
+    <td width="6" height="2" valign="top"></td>
+    <td width="14" height="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="21" valign="top"></td>
+    <td width="200" height="114" colspan="2" rowspan="3" valign="top"><img src="../pic/h1.gif" width="200" height="70"></td>
+    <td width="1" height="21" valign="top"></td>
+    <td width="1" height="21" valign="top"></td>
+    <td width="20" height="21" valign="top"></td>
+    <td width="3" height="21" valign="top"></td>
+    <td width="306" height="21" valign="top"></td>
+    <td width="8" height="21" valign="top"></td>
+    <td width="205" height="21" valign="top"></td>
+    <td width="6" height="21" valign="top"></td>
+    <td width="14" height="21" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="35" valign="top"></td>
+    <td width="1" height="35" valign="top"></td>
+    <td width="1" height="35" valign="top"></td>
+    <td width="20" height="35" valign="top"></td>
+    <td width="3" height="35" valign="top"></td>
+    <td width="525" height="35" colspan="4" valign="top">
+      <h5><font color="#6666FF"><a href="goodpage/hgpx/index.htm">[首页]</a>&nbsp;<a href="../01/index.htm">[稻谷]</a>&nbsp;<a href="../02/index.htm">[豆子]</a>&nbsp;[薯芋类]&nbsp;<a href="../04/index.htm">[蔬菜类]</a>&nbsp;<a href="../05/index.htm">[水果类]</a>&nbsp;<a href="../07/index.html" target="_blank">[家乡名优]</a>&nbsp;<a href="../gd.htm">[更多]</a></font> 
+      </h5>
+    </td>
+    <td width="14" height="35" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="58" valign="top"></td>
+    <td width="1" height="58" valign="top"></td>
+    <td width="563" height="58" colspan="8" valign="top"><img src="../pic/h2.gif" width="563" height="8"></td>
+  </tr>
+  <tr>
+    <td width="5" height="1" valign="top"></td>
+    <td width="7" height="1" valign="top"></td>
+    <td width="195" height="628" colspan="3" rowspan="3" valign="top" bgcolor="#CCCCFF"><h3 align="center"><font color="#CC6600"><br>
+    马铃薯的种植方法</font></h3>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;在3月份时，选择阳光充足的场所，做一个50厘米间隔的畦，放入堆肥，挖30厘米深的洞，将做种用的<font color="#000000">马铃薯放入，深度约为马铃薯的3倍。马铃薯和马铃薯之间放化学肥料。</font></p>
+  <p><font color="#000000">①切成两半，切口撒上一层煤灰。<br>
+    </font> <img src="302.jpg" width="156" height="73"> </p>
+  <p><font color="#000000">②种植时将切口朝下。</font><img src="303.jpg" width="194" height="98"></p>
+  <h3 align="center"><font color="#FF3333">小知识</font></h3>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">马铃薯</font>原产于南美大陆的安第斯山脉，1500年左右扩展到墨西哥一带。1570年时从墨西哥传到西班牙，1590年时有传到英国。<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;此时期正是欧洲人将领土扩展到亚洲、美洲的时期，而<font color="#000000">马铃薯也随着欧洲人传到各个国家。</font></p></td>
+    <td width="20" height="1" valign="top"></td>
+    <td width="3" height="1" valign="top"></td>
+    <td width="306" height="1" valign="top"></td>
+    <td width="8" height="1" valign="top"></td>
+    <td width="205" height="1" valign="top"></td>
+    <td width="6" height="1" valign="top"></td>
+    <td width="14" height="1" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="3" valign="top"></td>
+    <td width="7" height="3" valign="top"></td>
+    <td width="20" height="3" valign="top"></td>
+    <td width="309" height="679" colspan="2" rowspan="4" valign="top"><p><img src="306.jpg" width="300" height="317"></p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;养分储存在地面下的根、茎等部位的植物称为薯芋类植物。这类植物含有丰富的淀粉，自古以来，世界各地均有栽培。</p>
+  <p><img src="301.jpg" width="300" height="282"></p></td>
+    <td width="8" height="3" valign="top"></td>
+    <td width="205" height="3" valign="top"></td>
+    <td width="6" height="3" valign="top"></td>
+    <td width="14" height="3" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="624" valign="top"></td>
+    <td width="7" height="624" valign="top"></td>
+    <td width="20" height="624" valign="top"></td>
+    <td width="8" height="624" valign="top"></td>
+    <td width="205" height="663" rowspan="2" valign="top" bgcolor="#CCCCFF"> 
+  <h3 align="center"><font color="#CC6600"><br>
+    马铃薯的种植方法</font></h3>
+  <p><font color="#000000">①于2月或者3月时先做秧畦，然后将做种用的番薯植入。温度高达30-35摄氏度时才会发芽，待茎长到30厘米时，切下来当苗来种。</font></p>
+  <p><font color="#000000"><img src="307.jpg" width="193" height="96"></font></p>
+  <p><font color="#000000">②5月或者6月时，在日晒充足的场所做成间隔60-90厘米的垄，将枝插入，也要放入堆肥。</font></p>
+  <p><font color="#000000"><img src="308.jpg" width="192" height="94"></font></p>
+  <p><font color="#000000">③各种插枝方法。</font></p>
+  <p><img src="309.jpg" width="176" height="76"><font color="#CC6600"><br>
+    <br>
+    <img src="310.jpg" width="190" height="87"> </font></p>
+</td>
+    <td width="6" height="624" valign="top"></td>
+    <td width="14" height="624" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="39" valign="top"></td>
+    <td width="7" height="39" valign="top"></td>
+    <td width="193" height="39" valign="top"></td>
+    <td width="1" height="39" valign="top"></td>
+    <td width="1" height="39" valign="top"></td>
+    <td width="20" height="39" valign="top"></td>
+    <td width="8" height="39" valign="top"></td>
+    <td width="6" height="39" valign="top"></td>
+    <td width="14" height="39" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="13" valign="top"></td>
+    <td width="7" height="13" valign="top"></td>
+    <td width="193" height="13" valign="top"></td>
+    <td width="1" height="13" valign="top"></td>
+    <td width="1" height="13" valign="top"></td>
+    <td width="20" height="13" valign="top"></td>
+    <td width="8" height="13" valign="top"></td>
+    <td width="205" height="13" valign="top"></td>
+    <td width="6" height="13" valign="top"></td>
+    <td width="14" height="13" valign="top"></td>
+  </tr>
+  <tr>
+    <td width="5" height="1" valign="top"><img width="5" height="1" src="transparent.gif"></td>
+    <td width="7" height="1" valign="top"><img width="7" height="1" src="transparent.gif"></td>
+    <td width="193" height="1" valign="top"><img width="193" height="1" src="transparent.gif"></td>
+    <td width="1" height="1" valign="top"><img width="1" height="1" src="transparent.gif"></td>
+    <td width="1" height="1" valign="top"><img width="1" height="1" src="transparent.gif"></td>
+    <td width="20" height="1" valign="top"><img width="20" height="1" src="transparent.gif"></td>
+    <td width="3" height="1" valign="top"><img width="3" height="1" src="transparent.gif"></td>
+    <td width="306" height="1" valign="top"><img width="306" height="1" src="transparent.gif"></td>
+    <td width="8" height="1" valign="top"><img width="8" height="1" src="transparent.gif"></td>
+    <td width="205" height="1" valign="top"><img width="205" height="1" src="transparent.gif"></td>
+    <td width="6" height="1" valign="top"><img width="6" height="1" src="transparent.gif"></td>
+    <td width="14" height="1" valign="top"><img width="14" height="1" src="transparent.gif"></td>
+  </tr>
+</table>
+</body>
+</html>

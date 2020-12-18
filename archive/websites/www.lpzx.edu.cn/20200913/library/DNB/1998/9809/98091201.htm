@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>在程序中制作字符动画<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　上过网的用户都熟悉页面动画的效果，它允许在一定范围内让字符串作规定的动作，如平行移动、来回滚动等，这些都是Microsoft在Html中添加的新标准，使用JavaScript中的Marquee（中文翻译为“大屏幕”）制作而成的，那么在我们的Visual 
+        Basic应用程序中是否可以通过编程来实现这一功能呢？答案是肯定的。<br>
+        　　首先我们假设应用程序中有一个标签对象LABEL1，我们要让它在默认行中从0到4320之间作来回滚动，这似乎只要在程序中不断改变LABEL1的LEFT属性的值就可实现，但难点在于：<br>
+        　　1我们制作的这个动画不应该影响程序其它部件的执行；<br>
+        　　2在大多数情况下，标签对象所在行还会有其它对象的存在，所以我们要指定标签对象的滚动范围而不至于影响其它对象的显示，所以程序必须知道LABEL1什么时候向左移动，什么时候向右移动。<br>
+        　　由于我们必须在程序中不断地改变LABEL1的LEFT属性而又不能影响其它部件的执行，这种情况下我们通常使用的对象是TIMER时钟对象，它可以让你在指定的时间间隔去执行某一特定操作，时钟对象只在设计状态中显示其位置而在运行状态下不可见，我们可以在应用程序中放置一个TIMER对象来不断改变LABEL1的LEFT属性的值；至于如何让系统知道LABEL1在什么范围之内作如何的运动，我们可以设置两个静态局部变量来监视LABEL1的运动位置，具体程序如下：<br>
+        　　Static x,y　′用x来记录LABEL1向右移动的条件，用y来记录LABEL1向左移动的条件<br>
+        　　If x=0 And y&lt;&gt;4320 Then<br>
+        　　　Label1.Left=Label1.Left＋20<br>
+        　　　If Label1.Left＋Label1.Width &gt;=4320 Then<br>
+        　　　　y=4320<br>
+        　　　End If<br>
+        　　Else<br>
+        　　　Label1.Left=Label1.Left－20<br>
+        　　　If Label1.Left&lt;=0 Then<br>
+        　　　　y=0<br>
+        　　　End If<br>
+        　　End If<br>
+        　　这样，我们的要求基本上达到了，我们可以看到一个类似于网上的字符动画，当然我们可以通过对程序作适当调整来改变对这个动画的一些要求，如左右边界、移动速度等，就这个动画程序而言，需要说明的是如果标签的字体属性被设置为“斜体”，那么在移动中可能会留下一些痕迹，我们应该把该标签的“斜体”属性去掉。<br>
+        　　有了上面的尝试，我们还可以尝试其它类型的动画，比如平行移动、上下移动、大小渐变、淡入淡出等，只要在程序中不断改变其相关的属性就可以了。这种动画的设计思想并不仅局限于标签对象，对其它的对象我们也可以作一些尝试。<br>
+        　　最后要说明的是，以上的尝试只要稍作改动就可以应用于其它的面向对象的程序设计中去，如Microsoft 
+        Visual Foxpro等。<strong>(江苏　张　强)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

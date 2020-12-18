@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 上机考试环境安全性的探讨</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>40 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 上机考试环境安全性的探讨</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 上机考试环境安全性的探讨 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　摘要:上机考试硬件环境的优化和工作稳定性对考试系统的影响。软件环境安全方面的努力:操作系统的选择和相互间的隔离,提高网络环境的安全性;考试系统与网络系统软件的隔离,提高网络操作系统核心部分(SYS卷)的安全性;考生登录的隔离,提高试卷的安全性。<br>
+<p><b>　　关键词:上机考试环境  等级考试  安全性</b></p>
+　　全国计算机等级考试是由教育部考试中心主办,测试应试者计算机应用知识与能力的等级水平考试。其考试的组织和实施都有较为严格的规范和要求。与其它考试不同的是它还有上机考试这一部分,用于考核应试者的实际操作能力。这也是计算机等级考试的一大特点。为了给考生提供一个良好的上机考试环境,作为考点除了必须具备有较好的硬件设备,如较高配置的服务器和工作站等。更重要的一点就是能否提供一个良好的软件环境,这是保证上机考试能否顺利进行的关键所在。
+　　本文结合历次考试积累下来的经验,对上机考试环境的安全性做如下几方面的探讨。<br>
+　　<b>一、硬件方面:</b>本考点采用服务器→交换机→集线器→工作站这种星型拓朴结构,由一台PⅡ400／64M／6.4G的服务器带80台K6－300／32M／4.3G的工作站。工作站网卡均配有引导芯片,可用无盘站方式启动入网。采用这种网络拓朴结构,一有利于提高网络数据传输的速率,二有利于及时判断网络上硬件故障的发生所在和及时解决问题。同时也避免了工作站之间因故障而引起的相互影响。<br>
+　　<b>二、软件方面:</b><br>
+　　1. 网络操作系统我们安装的是比较成熟和稳定的Netware 3.12／250用户版本。用MS－DOS6.22版本生成远程启动映像文件。工作站上虽然都有硬盘,但我们采取如下方法对单机环境和网络环境做了隔离。即对单机上的硬盘,采用Windows97提供的具有32位分区(FAT32)功能的Fdisk命令把它做成32位分区的格式后再安装相应的软件。这样,在工作站开机时,因其网卡上均带有引导芯片,故我们可以选择以网络方式启动或以单机方式启动机器。以网络方式启动时,因其加载的MS－DOS6.22操作系统不能识别32位分区(FAT32)的硬盘,故相当于屏蔽了本地硬盘,此时的工作站等同于无盘工作站。而单机启动时,我们对访问网络的权限做了必要的限制。这样可避免因病毒而引起的交叉传染。<br>
+　　2. 考试系统的安装。我们在服务器上专门建立一个KS卷把考试系统和相应的系统软件(如DOS,UCDOS,MFoxBASE等)及考生目录依如下方式进行组织:<br>
+　　KS:KS\DOS<br>
+　　KS:KS\UCDOS<br>
+　　KS:KS\MfoxBASE<br>
+　　……<br>
+　　KS:KS\KSSYS<br>
+　　KS:KS\KS01<br>
+　　KS:KS\KS02<br>
+　　……<br>
+　　KS:KS\KS80<br>
+　　(其中KS01～KS80为考生目录)<br>
+　　并建立如下映射关系:<br>
+　　MAP ROOT K:=KS:KS<br>
+　　MAP ROOT G:=KS:KS\％LOGIN_NAME<br>
+　　DRIVE G:<br>
+　　把考试系统和考生信息单独放在一个卷上,一则有助于优化服务器上数据的读写,二则有利于网络系统的安全。因对系统卷只须给考生授予最基本的F,R权,保证了网络操作系统的安全性。<br>
+　　3. 考生的登录。按照上机考试的要求,每批考生登录时不得使用同一用户名,目的是防止在同一用户名下考生相互拷贝作弊。那么能否让考生在登录时就限定在指定的工作站上呢?答案是肯定的。由于每个网卡上的网卡地址是唯一的,所以我们可以利用该地址通过二次登录的方式来实现每个工作站以不同的用户名自动登录上网。<br>
+　　用以下格式建立LOGIN.DOC文件(每个网卡地址对应一个用户,每个用户一行):<br>
+　　IF P_STATION=“网卡地址” THEN EXIT “LOGIN用户名”<br>
+　　建立一个公共用户名KS,在其用户登录文件(Login Script)里输入 :<br>
+　　INCLUDE SYS:LOGIN\LOGIN.DOC<br>
+　　这样,当以KS用户登录时,计算机就会先调用LOGIN.DOC,之后根据当前工作站的网卡地址所对应的用户名自动进行二次登录入网。保证每台工作站均用不同的用户名登录上网,做到了考生间考试信息的相互隔离。<br>
+　　以上本人就计算机等级考试中上机考试部分,如何维护考试环境的安全性做了几个方面的探讨。有不妥之处,欢迎各位同仁给予指正。<br></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/40/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99403701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

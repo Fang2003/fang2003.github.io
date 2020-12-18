@@ -1,0 +1,68 @@
+<html>
+<haed>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">跳线新思维——Soft 
+        FSB实现软件跳线<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　主板的免跳线一度是名牌大厂拿来炫耀的新技术，而现在已经为许多新型主板采用，大大方便了用户的设置和升级，但对于我们超频发烧友，仍然要在设置后重新启动，进入WIN95/98/NT，才能测试其稳定性。有部分主板由于种种原因仍然采用传统的跳线设置（比如我的华硕P2B），使这部分用户还要忍受折腾机箱、跳线之苦。笔者近日在网上却意外发现一个绝妙的软件跳线——SOFT 
+        FSB，让我也享受了先进的免跳线技术。<br>
+        　　我用的VERSION 1.3版是专为Intel BX芯片组设计的软件，运行在WIN95/98/NT下，SOCKET 
+        7以及SLOT 1的兼容芯片组的主板暂时不能使用。它对市面上常见的基于BX芯片组的主板有良好的支持，同时也支持ICS、IC－WORKS及WINBOND等牌号的PLL 
+        IC（时钟发生器）。附表是SOFT FSB作者经测试正式支持的主板牌号及其使用的PLL－IC的型号。<br>
+        除此之外，IC－WORKS的W145X、W150X，ICS的ICS9148xx－36，WINBOND的W83194R－39A等PLL－IC也通过了测试。其实，经我试用，只要是采用以上PLL－IC的BX主板，大部分都能正常使用SOFT 
+        FSB，但我在使用VIA PRO芯片组的建邦P6PRO－A5及VIA MVP3的精英P5SD－B＋上，无论如何都没有成功。<br>
+        　　SOFT FSB就是基于对主板时钟发生器所产生的外频进行调节，充分利用PLL 
+        IC的变频能力，如上述的IC－WORKS的W164X，使用SOFT FSB能够使外频及PCI频率实现从66.8（33.4）MHz～153（38.3）MHz多达16种频率选择（括弧内为PCI总线频率），而且不受主板跳线的限制。SOFT 
+        FSB使我的华硕主板支持了更多非标准外频，如103MHz，使我的赛扬300A超到了464MHz。但SOFT 
+        FSB并不能改变CPU的倍频设置，其倍频是由主板跳线来决定的。不过对于PⅡ级的CPU，Intel早就实行惨无“频”道的大锁频，主板的硬跳线对此都无能为力，所以倍频的调节也就没有多少意义了。<br>
+        　　使用上，SOFT FSB界面比较简洁：<br>
+        　　首先是设置主板牌号和PLL IC发生器的型号（对于AOpen板，还要复选“USING 
+        AOPEN M/B&quot;项，但作者说稳定性还是不能保证），然后选GET FSB，就会出现外频调节的选项。设置好外频，SOFT 
+        FSB将同时显示PCI BUS的当前频率，如果PLL－IC支持同步/异步时钟频率，还可以设置PCI的同步/异步状态。接着按下SET 
+        FSB，就能即时产生效果，CURRENT CPU FREQ就会告诉你CPU的运行频率，你也就能马上看到你的CPU在这个频率下运行WIN95/98/NT的稳定性，大大减少了重启WINDOWS的机会。当然，SOFT 
+        FSB是基于WIN32的软件，退出WINDOWS时，设置也就失效了，但如果WIN32系统都正常使用了，其它还成问题吗？<img
+        src="http://www.lpzx.edu.cn/library/DNB/1999/9906/image/Coft.gif" width="216" height="206" alt="Coft.gif (16199 字节)" align="left"><br>
+        　　以我的华硕P2B为例，首先是选定主板“ASUS P2B－XX”和PLL－IC的型号“ICS 
+        ICS9150XX－08”，设置FSB频率为103MHz，PCI频率为34.3MHz，按下SET FSB，咦？没有反应？研究一下README，一串乱码，用RICHWIN才知道是日文，因为作者是日本人呀。无奈，只好采用瞎猫碰死鼠的办法了，简洁的界面上也只有那个“WRITE 
+        ONLY PLL－IC”了，选上！再选SET FSB，哈！CURRENT CPU FREQ：464MHz！笔者自己分析，可能是因为P2B本身不支持软跳线的缘故吧。马上就运行NFSⅢ、MOTORACERⅡ等3D游戏，连续数小时没有死机，与原来硬件跳线的450MHz一样稳定，而运行其它测试软件也证实我的赛扬300A真的是运行在464MHz了，比原先的450MHz更上了一层楼，使我这个飞不上504MHz的CPU再次超到了极限！<br>
+        　　下面是作者的网站： http://www2.tky.3web.ne.jp/～nrklv/<br>
+        　　E－mail : nrklv@tky2.3web.ne.jp<br>
+        　　作者还有很多关于PⅡ的小工具软件，如可调节L2 CACHE等待时间的WL2DD130，查看目前外频、内频及L2 
+        CACHE状态的WCPU220等（可以用它来检验跳线后的状态喔），看来作者可是个PⅡ迷呀，我们还是快发邮件，让他给我们搞个软倍频跳线、软电压跳线，我们又可以大超特超了。<br>
+        　　(广东 孙伟强)<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年02月08日第06期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

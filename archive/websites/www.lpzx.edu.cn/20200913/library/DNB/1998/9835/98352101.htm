@@ -1,0 +1,87 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>一个不够，再来一个——用双服务器改造网络<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　改造网络的一种方法是换用较高性能的服务器、传输介质和连接设备等，但这种升级方法需更换较多的硬件设备，耗资较大，同时也并不见得能取得非常理想的效果。近日我在给某个单位改造网络时，利用双服务器结构成功实现网络升级改造，从而总结出一种既省钱又实用的改造方法。下面我就把具体过程介绍给大家。<br>
+        　　<strong>一、对新建网络的要求</strong><br>
+        　　1.原有网络概况<br>
+        　　该教学单位有两个微机室。其中组建较早的一个微机室（一号机房）有50余台无硬盘386和486微机，网络服务器为COMPAQ486，操作系统为Netware3.12。后来组建的微机室（二号机房）有50台无硬盘586微机，服务器为COMPAQ586，操作系统也为Netware3.12，HUB为100M 
+        HUB。这两个网络一直担负着学生的计算机上机任务，运行良好。<br>
+        　　2.对新网络的要求<br>
+        　　要求每个工作站都能运行装在任一台服务器中的教学软件。<br>
+        　　<strong>二、对网络设备的选择和规划</strong><br>
+        　　为了让原有的硬件设备都能发挥其作用，让100余台工作站都能使用所有的教学软件，且尽量小的改变现有网络的布线，将网络作如下的调整：<br>
+        　　将二号机房的586服务器移至一号机房的总控制室，并将两台服务器同时用细缆连于新购置的智能交换式10M/100M自适应HUB上。将原来一号机房的4个16口的共享HUB用一条细缆串接到与交换式HUB相连的转发器上，而二号机房的4个16口的100M 
+        HUB分别用双绞线连入与服务器直接相连的HUB的RJ－45接口上。连接后网络的结构如图所示：<br>
+        　　通过上述规划，两台服务器所运行的网络操作系统都是Netware3.12，每个工作站便可任意调用任何一台服务器上的文件，实现资源共享。考虑到不同软件对网络带宽的要求，并尽量提高工作站上教学软件的运行速度，可将一些常用的应用软件安装在486服务器上，而将教学软件安装在586服务器上，这样不但解决了所有工作站都能随时使用教学软件的问题，而且便于服务器软件和网络硬件的日常维护。<br>
+        　　<strong>三、对两台服务器软件的设置</strong><br>
+        　　当网络连接完成之后，需对两台服务器进行有关软件的设置，否则，这两个服务器是无法在同一个网络系统中工作的。<br>
+        　　1.修改服务器中AUTOEXEC.NCF文件的内容<br>
+        　　分别启动两个文件服务器，修改其AUTOEXEC.NCF文件的内容。修改时注意两台服务器的“File 
+        server name”及“IPX Internal net”应设置成不同，而“bind IPX to PCNTNW net=”应设置为相同（其中PCNTNW为COMPAQ服务器中网卡自带的驱动程序，不同网卡其驱动程序不同）。修改以后两个服务器中AUTOEXEC.NCF文件的内容分别为：<br>
+        　　COMPAQ486服务器AUTOEXEC.NCF文件的内容为：<br>
+        　　file server name XYW－A<br>
+        　　IPX Internal net 1995<br>
+        　　load c:\server.312\PCNTNW.LAN IOP=8800 Frame=Ethernet_802.3<br>
+        　　bind IPX to PCNTNW net=123<br>
+        　　mount all<br>
+        　　load monitor<br>
+        　　COMPAQ586服务器AUTOEXEC.NCF文件的内容为：<br>
+        　　file server name XYW－B（应不同）<br>
+        　　IPX Internal net 1998（应不同）<br>
+        　　load c:\server.312\PCNTNW.LAN IOP=8800 Frame=Ethernet_802.3（视网卡而定）<br>
+        　　bind IPX to PCNTNW net=123（应相同）<br>
+        　　mount all<br>
+        　　load monitor<br>
+        　　2.检查工作站与服务器之间是否连通<br>
+        　　检查工作站与两台服务器之间是否连通的方法是从任意一台工作站上以Supervisor的身份登录，运行SYSCON文件，选择主菜单“Available 
+        Topics”下的“Change Current Server”选项，如此时工作站与第一台服务之间已经连通，则会出现第一个已连接的服务器名“XYW－A”，按“INS”键，若第二台服务器连接正常，则又出现第二个已连接的服务器名“XYW－B”。此时若选择主菜单下的“Use 
+        Information”选项，将会出现两个服务器的名称（XYW－A和XYW－B）和登录两个服务器时的身份(Supervisor)。<br>
+        　　3.修改系统登录原稿System Login Script<br>
+        　　工作站与两个服务器都连通后，我们就需修改两个服务器的系统登录原稿System 
+        Login Script。其方法是：从工作站上以Supervisor的身份登录，运行SYSCON文件，选择主菜单“Available 
+        Topics”下的“Supervisor Options”选项，再选取“System Login Script”，在此文件的前面加入如下内容：<br>
+        　　Attach XYW－A/supervisor<br>
+        　　Attach XYW－B/supervisor<br>
+        　　Map F:=XYW－A/SYS:LOGIN<br>
+        　　Map G:=XYW－B/SYS:LOGIN<br>
+        　　存盘后，便将F盘映射为486服务器，G盘映射为586服务器。<br>
+        　　通过上述的设置，重新启动两台服务器后以普通用户的身份从工作站登录服务器，便可显示有关两个服务器的网络映射关系。选择F盘就可进入486服务器，若选择的是G盘则进入586服务器，而且可随时在两台服务器间进行切换。这样，学生上机时便可根据每个人的上机内容任意选择服务器了。<br>
+        　　此网络目前运行良好，满足了现在的教学需求。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　（江苏　王群　李馥娟　宋玲华）</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月14日第35期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

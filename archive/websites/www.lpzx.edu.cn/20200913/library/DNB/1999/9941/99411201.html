@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 软件一点通</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>41 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 软件一点通</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 软件一点通 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p><b>　　一、 修改短文件名命名方式</b></p>
+　　一般来说，Windows 98的长文件名在转换为8.3制的短文件名时一般都是先使用长文件名中的前6个合法字符，然后再添加一个“～”符号以及一个数字序列号，不过我们可通过下面的方法将这种命名方式修改为使用长文件名中的前8个合法字符作为短文件名：<br>
+　　1. 启动Windows 98的注册表编辑器。<br>
+　　2. 在注册表编辑器中依次展开HKEY_Loccal_Machines、Systems、CurrentControlSet、Control、FileSystem分支。<br>
+　　3. 在FileSystem分支中新建一个名为“NameNumericTail”的二进制值，并将其值修改为1。<br>
+　　4. 执行“注册表”菜单的“退出”命令，关闭注册表编辑器。<br>
+　　5. 重新启动计算机。
+<p><b>　　二、 增强IE4 自动匹配功能</b></p>
+　　大家都知道，我们在IE中输入某个网址时，系统可自动加上“http://www”的前缀和“.com”的后缀（如输入cpcw之后，系统将自动添加为“http://www.cpcw.com”），但对于像“.com.cn”之类后缀，IE就无能为力了，没关系，执行下述步骤后我们就可令系统自动为Web网址添加“.com.cn”后缀：<br>
+　　1. 启动Windows 98的注册表编辑器。<br>
+　　2. 在注册表编辑器中依次展开HKEY_LOCAL_MACHINE、SOFTWARE、Microsoft、Internet Explorer、Main、UrlTemplate分支（缺省情况下，该分支中有1～6等6个键值，它们就是用于定义IE的自动添加前缀及后缀功能的）。<br>
+　　3. 在注册表编辑器右边新建一个名为“7”（或其它某个顺序编号）的字符串，然后将其自定义为“www.％s.com.cn”。<br>
+　　4. 再在注册表编辑器右边新建一个名为“8”（或其它某个顺序编号）的字符串，然后将其自定义为“％s.com.cn”。<br>
+　　5. 执行“注册表”菜单的“退出”命令，关闭注册表编辑器。<br>
+　　6．重新启动计算机。<br>
+　　此后，用户在输入某个没有添加后缀的网址之后，系统也就会自动搜索具有“.com.cn”后缀的网址了。
+<p><b>　　三、 采用缩略图方式查看文档</b></p>
+　　Windows 98新增了一种缩略图查看方式，利用该功能，我们可以直接在资源管理器中查看图形、HTML文档和其他文件类型的缩略图像，从而极大的方便了用户对文件管理。使用缩略图方式查看文档的步骤为：<br>
+　　1. 打开Windows 98的资源管理器或我的电脑，并选择某个希望采用“缩略图”方式进行显示的文件夹。<br>
+　　2. 右击该文件夹，然后从弹出的快捷菜单中执行“属性”命令，打开相关文件夹的属性设置框。<br>
+　　3. 选中该文件夹属性设置框中的“启用缩略图查看方式”选项。<br>
+　　单击“确定”按钮，关闭该文件夹的属性设置框。
+<p><b>　　四、单键关闭计算机/快速重新启动计算机</b></p>
+　　Windows 98中正常关机前要先确认，现在新式Win98键盘上设有开关机功能键，可以直接关闭计算机，那么，老式键盘如何实现这个功能呢？方法如下：在桌面上单击右键，选择新建→快捷方式，在命令行输入“Rundll32.exe User.exe,ExitWindows”（注意，Rundll32.exe和User.exe中间有一空格，另外，引号不必输入，下同），单击下一步，命名此快捷方式为“关闭计算机”，单击完成。然后右键单击桌面上的这个快捷方式，在“快捷方式”对话框中为它指定一个快捷键，如“F12”，按确定即可。这时，你就可以按F12实现关机功能了。<br>
+　　使用同样方法可以实现快速重新启动计算机，不同之处是在命令行输入的是“RUNDLL.EXE user.exe,exitwindowsexec”。如果将这两个快捷方式拖到任务条上的快速启动栏，就可以使用鼠标单击来关闭计算机或快速重新启动计算机了。<br><b>(湖北　胡锦承)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/41/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99411201.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

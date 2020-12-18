@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>用3D MAX创建水泡翻腾特效</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>用3D 
+        MAX创建水泡翻腾特效</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　创建水中水泡弥漫的特效，用一般方法相当困难。现在我要给大家介绍一种简单的方法，可以很轻松地创建出逼真的水泡特效。用这种方法，你不必创建大量的SPHERE(球体)以模拟水中的气泡，你只要运用粒子系统（SPRAY），并赋予它材质，就能实现。步骤如下：<br>
+        　　1.创建气泡贴图<br>
+        　　1)首先在编辑窗口中创建一个SPHERE，参数如下：<br>
+        　　X，Y，Z：0，0，0<br>
+        　　RADIUS：100<br>
+        　　SEGMENT ：64<br>
+        　　2)在SPHERE的右上方增加一个点光源（SPOTLIGHT）到场景中，如图1所示。参数如下：<br>
+        　　SPOT：<br>
+        　　X，Y，Z：400，－200，400<br>
+        　　SPOT TARGET：<br>
+        　　X，Y，Z：0，0，0<br>
+        　　将颜色调为灰白。颜色参数如下：<br>
+        　　R，G，B：255，255，255<br>
+        　　H，S，V：0，0，255<br>
+        　　3)打开MATERIAL EDITOR(材质编辑器)。激活第一个材质框，单击BASIC 
+        PARAMETERS（基本属性）卷页栏，在颜色属性窗口中将AMBIENT(阴影区)和DIFFUSE(过渡区)的颜色锁定，使它们一致，同时将颜色设为灰白。将SHADING(着色方式)设为METAL(金属)着色方式。其它参数如下：<br>
+        　　SHININESS：70<br>
+        　　SHININESS STRENGTH：30<br>
+        　　SELF－ILLUMINATION：0<br>
+        　　OPACITY：50<br>
+        　　选中2－SIDE复选框，对其进行双面着色。如图2所示。<br>
+        　　4)在场景中选中SPHERE，然后回到材质编辑窗口，单击ASSIGN METAL TO 
+        SELECTIONS按钮，将材质赋予场景中的SPHERE。单击工具栏中的RENDER SCENE按钮对FRONT视窗进行着色输出，并将着色后的文件保留。<br>
+        　　5)打开一个图形处理软件如：PHOTOSHOP、PHOTOSTYLER，调出刚才着色的文件，将其剪裁成正方形。再次保存该文件。该文件如图3所示。<br>
+        　　2． 创建粒子发射器<br>
+        　　1)接下来你该创建粒子系统以模拟水泡了。从FILE菜单中选择NEW，开启一个新的场景文件。在右边的命令窗口中依次用鼠标单击CREATE 
+        / GEOMETRY / PARTICLE SYSTEM 按钮，进入粒子系统命令窗口，在OBJECT TYPE命令栏中选中SPRAY按钮，然后再在场景窗口中创建粒子发射器。各种参数如下：<br>
+        VIEWPORT COUNT：100<br>
+        RENDER COUNT：100<br>
+        DROP SIZE：2.0<br>
+        SPEED：4.0<br>
+        VARIATION：5.0<br>
+        类型：DROPS<br>
+        RENDER：FACING<br>
+        START：－100<br>
+        LIFE：100<br>
+        EMITTER WIDTH：200<br>
+        EMITTER LENGTH：200<br>
+        　　2)打开MATERIAL EDITOR，激活第二个材质框，调整它的BASIC PARAMETER，将SHADING设为PHONE，同时，也将AMBIENT和DIFFUSE锁定，并将其颜色调为灰白。继续将FILTER调为亮灰色（R：180，G：180，B：180）。其它参数如下：<br>
+        　　SHININESS：0<br>
+        　　SHININESS STRENGTH：0<br>
+        　　SELF－ILLUMINATION：100<br>
+        　　OPACITY：100<br>
+        　　如图4所示。<br>
+        　　3)进入MAP（贴图）属性窗口，调入刚才所存储的图形文件，并将其作为DIFFUSE和OPACITY（透明）贴图。并将DIFFUSE贴图的OUTPUT 
+        属性中的RGB LEVEL设为2.00(这一点很重要)。这时水泡的贴图才算完成，如图5所示。<br>
+        　　3．将贴图材质赋予粒子系统<br>
+        　　进入场景编辑窗口，选中粒子系统后，再回到材质编辑窗口，将该材质赋予粒子系统，然后单击RENDER(着色)按钮进行着色，在着色时应将FORCE 
+        2－SIDE设为ON。着色后如图6所示。<br>
+        　　现在，在水中翻腾的水泡特效就作好了。当然还有很多其它方法来实现它，例如用PLUGINS(插件)。但别忘了，这种方法也许是最简单的方法之一，因为在创建过程中没有使用任何其它的PLUGINS。<br>
+        <br>
+        (福建　林 刚)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年3月30日第12期38版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

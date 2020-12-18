@@ -1,0 +1,189 @@
+ 
+<html>
+<head>
+<title>《电脑报》电子版CPCW.COM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0140/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| 
+      <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0140/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| 
+      <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="771" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年第40期 </a>&gt;&gt;<a href="wrapup.html">网络与通信</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center">设置双重DNS服务器</div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p>一、基本思想<br>
+              为了安全的原因我们需要在Linux系统上配置双重DNS服务器，其核心思想是：在DNS服务器上运行两个BIND，分别为来自内部网络和外部网络的域名请求提供解析，每个BIND具有不同的配置文件和域名数据库文件，并分别在不同的端口监听。DNS服务器在接到客户端请求时，根据客户的IP地址将请求重定向到不同的BIND服务端口，这样就可以根据客户端的IP地址将不同的解析结果返回给客户端，而整个过程对于客户端来说都是透明的。实现的关键在于运行两个BIND及运用iptables命令进行IP地址及端口改写操作。<br>
+              二、具体配置<br>
+              步骤1： 配置内核<br>
+              Netfilter要求内核版本不低于2.3.5，在编译新内核时，要求选择和netfilter相关的项目，这些项目通常都是位于“Networking 
+              options”子项下。<br>
+              步骤2：配置BIND服务<br>
+              缺省的BIND服务监听在53端口，可以通过配置，让BIND运行在任意的端口上。实现这一点并不复杂，假设DNS服务器的IP地址是192.168.200.1，并且想区分局域网和非局域网的用户，这时必须运行两个BIND，并使用不同的配置文件，在使用非标准监听端口的BIND配置文件中用listen-on命令指定BIND监听的端口。<br>
+              在/etc目录下创建两个配置文件/etc/named.conf和/etc/named.cf，DNS服务器依据配置文件的内容来决定它的行为模式以及要维护的域名资料。两个配置文件如下，其中named.conf是完整的配置文件，named.cf只列出与named.conf不同的部分。<br>
+              named.conf——为局域网用户提供域名解析服务。<br>
+              options <br>
+              directory &quot;/var/named1&quot;<br>
+              //域名数据库netpub1所在的目录<br>
+              //query-source address · port 53 在DNS默认的53端口侦听请求<br>
+              <br>
+              zone &quot;.&quot; IN <br>
+              type hint<br>
+              file &quot;named.ca&quot;<br>
+              <br>
+              zone &quot;localhost&quot; IN <br>
+              type master<br>
+              file &quot;localhost.zone&quot;<br>
+              allow-update  none <br>
+              <br>
+              zone &quot;0.0.127.in-addr.arpa&quot; IN <br>
+              type master<br>
+              file &quot;named.local&quot;<br>
+              allow-update  none <br>
+              <br>
+              zone &quot;netpub.com&quot; IN <br>
+              type master<br>
+              file &quot;net1&quot; //内网用户的域名数据库<br>
+              <br>
+              named.cf——为外网用户提供域名解析服务<br>
+              options <br>
+              directory &quot;/var/named2&quot; //域名数据库netpub2所在的目录<br>
+              listen-on port 1028 192.9.200.51 //在DNS的1028端口侦听请求<br>
+              <br>
+              zone &quot;netpub.com&quot; IN <br>
+              type master<br>
+              file &quot;net2&quot; //外网用户的域名数据库<br>
+              <br>
+              写好配置文件后用命令named的-c 选项指定named读入不同的配置文件：<br>
+              /usr/sbin/named -u named -c /etc/named.conf<br>
+              /usr/sbin/named -u named -c /etc/named.cf<br>
+              执行命令ps -A ｜ grep named，显示<br>
+              1488 ﹖ 000000 named<br>
+              1489 ﹖ 000000 named<br>
+              说明两个DNS都已成功激活。<br>
+              步骤3：配置重定向转发规则<br>
+              假设DNS服务器的IP地址为192.168.200.1，监听在标准端口的BIND服务器为局域网用户提供域名解析，监听在1028端口的BIND服务器为非局域网用户提供域名解析。下面就DNS服务器前面是否架设防火墙的两种情况说明如何用iptables命令配置规则。<br>
+              1.没有防火墙的情况：在DNS主机上设置如下脚本。<br>
+              假设局域网IP地址范围为192.168.200.0～24。<br>
+              #/bin/bash<br>
+              #打开端口转发<br>
+              echo 1 &gt; /proc/sys/net/ipv4/ip_forward<br>
+              #加载相关的内核模块<br>
+              /sbin/modprobe iptable_filter<br>
+              /sbin/modprobe ip_tables<br>
+              /sbin/modprobe iptables_nat<br>
+              #刷新所有规则<br>
+              /sbin/iptables -t nat -F<br>
+              #来自非局域网的DNS请求转发规则，将其重定向到本地1028端口<br>
+              /sbin/iptables -t nat -A PREROUTING -p udp -s  192.9.200.0/24 
+              -dport 53 -i eth0 -j REDIRECT 1028<br>
+              #将返回给非局域网用户数据包的源端口1028伪装成53端口<br>
+              /sbin/iptables -t nat -A POSTROUTING -p udp --sport 1028 -o eth0 
+              -j SNAT --to 192.168.200.5153<br>
+              2.有防火墙的情况：在防火墙主机上设置脚本。<br>
+              假设局域网IP地址范围为192.168.200.0～24，防火墙有两个网卡，其中eth0是局域网IP地址，eth1是非局域网IP地址。非局域网的DNS请求由防火墙的eth1接收，再由eth0转发给DNS服务器。<br>
+              #/bin/bash<br>
+              #打开端口转发<br>
+              echo 1 &gt; /proc/sys/net/ipv4/ip_forward<br>
+              #加载相关的内核模块<br>
+              /sbin/modprobe iptable_filter<br>
+              /sbin/modprobe ip_tables<br>
+              /sbin/modprobe iptables_nat<br>
+              #刷新所有规则<br>
+              /sbin/iptables -t nat -F<br>
+              #来自外网的DNS请求转发规则，将其转发到DNS主机的1028端口<br>
+              /sbin/iptables -t nat -A PREROUTING -p udp -d 192.168.200.1 -dport 
+              53 -i eth1 -j DNAT -to 192.168.200.11028<br>
+              配置好DNS服务器的两个BIND服务，再根据具体的网络结构编写相应的规则脚本。如果它们都能正常工作，则一个双重DNS服务器就可以投入使用了。</p>
+            </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

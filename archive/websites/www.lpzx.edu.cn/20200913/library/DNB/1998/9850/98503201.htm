@@ -1,0 +1,95 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>游戏修改大师--Game 
+        Master功能介绍<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　相信各位玩家已有不少修改游戏的经验了吧，而且Fpe、Pctools等老牌游戏修改工具更是常常挂在嘴边。所谓魔高一尺，道高一丈，新的游戏修改工具不断推陈出新，这次笔者要向众位玩家介绍一款由香港的一位中学生何静韬编写的新型游戏修改工具——Game 
+        Master！它的功能相当强大，并且容易上手。有了这样的好东东，大家可以随心所欲地去修改各类游戏了。<br>
+        　　Game Master是一个纯Windows程序，它可以修改在Win9x平台和Windows的MS－DOS方式下执行的游戏。安装使用Game 
+        Master的基本配置是：中英文Win9x操作平台、486以上电脑、16M内存，并建议保留50MB以上硬盘空间。下面笔者以Game 
+        Master V601（以下简称GM）作范例为大家介绍一下它的主要功能。<br>
+        　　一、GM的界面<br>
+        　　Game Master V6X的界面与开始的几个版本有很大的不同，现在大家可以用中文版了。<br>
+        　　二、GM的强大功能<br>
+        　　1内存扫描。<br>
+        　　内存扫描几乎是任何一个游戏修改工具最重要的一项功能，GM当然也不例外。它的特点是可以同时搜索五十个目标，而且在搜索每个目标时都可以用高阶扫描和低阶扫描。需要提醒一句，同时扫描的目标越多，所需的硬盘空间也就越大，如果同时进行五十个目标的低阶扫描，需要1GB以上的硬盘空间。<br>
+        　　进行高阶扫描时，在“搜寻目标”中除了可输入十进制的数字外，也可以输入其它语法，语法分为下列五项：<br>
+        　　（1）直接输入十进位数值如：12345；<br>
+        　　（2）直接输入十六位进位数值如：A1FFh。在表达十六进位数时，要在数字后加一个“h”；<br>
+        　　（3）浮点数输入法，可直接输入如：50012，如果你只知道整数部分，你可以把点数的值输入成零，如：5000；<br>
+        　　（4）文字输入法，只要把文字直接输入便可。如：ABCDEF；<br>
+        　　（5）数字列输入法，其实只是把多个十进位和十六进位数混合输入。例如：12，0，0h，99，FFh，2Bh，5，各连续数之间一定要以“，”号分隔。<br>
+        　　进行低阶扫描时，在“搜寻目标”中要输入“？”、“＋”、“－”、“！”和“=”，分别表示开始、增加、减少、不等于、等于。<br>
+        　　GM的热键是[F12]。具体如何操作，相信大家已经看过不少游戏修改工具的介绍，而且GM的操作非常简单易学，与Fpe也有许多相似之处，这里笔者就不多讲了。<br>
+        三、与众不同的搜寻格式<br>
+        　　GM有一个功能叫作范围扫描。以游戏《美少女梦工场之梦幻妖精》为例，其中的数值如身高、体重等等在内存中的存放方式是在数值后面加两位，如身高为100的话，其在内存中的存放方式为100XX。但这个XX到底有多大，你是不知道的。这时你就可以用范围扫描来处理，只需在“搜寻目标”中键入10000－10099就可以了。<br>
+        　　3超级GM Plus功能。<br>
+        　　在对许多游戏进行修改时，大家常会遇到这样一种情况：呼出修改工具后，就再也无法切换回游戏。针对这种无奈，GM增加了一个Plus，它的功能是无需切换到GM界面，在游戏进行中直接下达修改命令。我把基本命令给大家介绍一下：<br>
+        　　scanX（“X”为扫描目标）：进行内存扫描；<br>
+        　　clear：清除扫描结果；<br>
+        　　addX：把所有扫描结果全部搬到“位址表格”并锁定数值等于X；<br>
+        　　list：列出前八个扫描结果；<br>
+        　　valueX：把“位址表格”中所有数值锁定为X；<br>
+        　　lock：锁定“位址表格”中所有的数值；<br>
+        　　unlock：取消锁定；<br>
+        　　pause:强制性暂停。但一定要在GM的“系统设定”中选择“中断功能”。<br>
+        　　GM Plus要和GM同时运行才有效，输入命令后要按“Enter”。<br>
+        　　4中断功能。<br>
+        　　可以强制性暂停游戏，使扫描更加准确。<br>
+        　　5位址表格存档和调档功能。<br>
+        　　可以将扫描及修改结果保存为＊gm文件，下次玩游戏时调出来使用，不必花力气再次扫描。另外，你还可将位址表格保存为＊html文件，与网友分享修改结果。GM可将位址表格中的修改结果保存为 
+        ＊exe文件，即使别人没装GM也可以玩到无敌档，这可是馈赠亲友的好东东哟！<br>
+        　　6抓图和看图功能。<br>
+        　　用热键[Alt＋Space]可以抓取图片并保存为bmp格式，而且还能浏览jpg、gif、bmp、ico等多种格式图片。<br>
+        　　7系统编辑功能。<br>
+        　　可以调整运行软件的系统资源，加快程序或者停止运行。<br>
+        　　8中英文切换功能。<br>
+        　　在使用GM时可以随时切换中文版或英文版。不过中文使用的是繁体大五码，需要进行内码转换。<br>
+        　　9招式记录功能。<br>
+        　　可将游戏招式记录下来，这样在玩格斗游戏时再也不用为发不出必杀技发愁了。<br>
+        　　10存档文件扫描功能。<br>
+        　　准确地说,这是Game Master中的另一个组件Save File Editor（简称SFE），是用来修改游戏存档文件的。大家都知道，用其它游戏修改工具是不能直接修改《风云》的，而Game 
+        Master V60以前的版本没有Plus组件，自然也不行。这时，我们就需要使用SFE来修改游戏。<br>
+        　　（1）运行《风云》并存一个档例如sav1dat，这时生命值为100；让步惊云跟人打一架，耗掉一些生命值直到80，这时再存一个档sav2dat；让步惊云吃一点补生命值的药，使生命值恢复到90，存档为sav3dat。<br>
+        　　（2）运行SFE，按“Load File”读取存档文件sav1dat，“Scan Target”中键入当前生命值100，按下“Scan”扫描。一般来说扫描结果不止一个，把“Seek 
+        with last result”栏打勾，读取存档文件sav2dat，在“Scan Target”中键入80，再次扫描。如果扫描结果不止一个，就重复上面的步骤，读取sav3dat，直到只剩下一个地址。如果有些游戏三个存档文件也找不到时，多存几个就是了。<br>
+        　　（3）用鼠标选中右边栏中的搜索结果，在“Please input a number for 
+        modify”栏中键入你需要的数值，点“Modify”，最后点“Save”，把修改结果保存到原来游戏存档文件中。运行游戏，读取那个修改过的存档，嘿嘿，大功告成了！<br>
+        　　SFE也可以对存档文件进行低阶扫描，方法与上述相同。<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/9850/index.htm.txt">《电脑报》1998年12月28日第50期32版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

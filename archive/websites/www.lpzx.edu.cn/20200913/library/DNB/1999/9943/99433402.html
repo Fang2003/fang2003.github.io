@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 在EXCEL中实现人民币金额大写显示的方法</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>43 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 在EXCEL中实现人民币金额大写显示的方法</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 在EXCEL中实现人民币金额大写显示的方法 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD><p align="center"><b>Excel 97内置函数法</b></p>
+<p><b>　　方法1：</b></p>
+　　在Excel97中有这样一个功能，利用单元格格式中的设置可以将一个小写的阿拉伯数值转换成一个大写中文数值,但不能按财务金额的格式显示。其实,对于一个金额来讲,如5.34元(五元三角四分),可将5.34中的5、3、4分别分离，然后在每个<a href="images/341.gif" target="_blank"><img src="images/thm341.gif" width="100" height="75" align="left" border="0"></a>数值中间加入元、角、分，最后将数值用大写中文数值表示即可。<br>
+      　　如图所示，具体操作步骤如下：<br>
+　　(1)在单元格A3中输入所需转换的金额，也可以从其他表单读入。<br>
+　　(2)在单元格C3、E3、G3中分别填入元、角、分。<br>
+　　(3)在单元格B3中输入 =INT(A3)。<br>
+　　(4)在单元格D3中输入 =INT((A3－INT(A3))＊10)。<br>
+　　(5)在单元格F3中输入 =INT((A3＊10－INT(A3＊10)＋0.0001)＊10)。<br>
+　　注：在这里由于Excel的计算误差，一定要加上0.0001这个修正值，不然就得不到正确结果。<br>
+　　(6)按住CTRL键，左键点击B3、D3、F3单元格，在格式下拉菜单中选择“单元格”格式，在“数字”标签中“分类”项中选择“特殊”，在右栏“类型”中选择“中文大写数字”。确定后退出。<br>
+　　(7)将B列宽度拉长，以便显示较大数值，将C列至G列的宽度缩小至一个中文字符的宽度。<br>
+　　通过上述步骤后，可进行填充边框线操作，对于大量数值的处理可通过拖曳表格A3：G3来解决，也可将B3：G3单元格复制到某个所需单元格中去。<br><b>
+(江苏　李激扬)</b><br>
+<p><b>　　方法2：</b></p>
+　　步骤如下：<br>
+　　(1)在“金额”后面增加3列并设定表格(见附表)。<br>
+　　(2)在单元格B2中输入=INT(A2)，设置A2的格式，选“格式”“单元格”“数字”，在“分类”下选“自定义”，在“类型”下输入([DBNum2]G/通用格式“元”)(圆括号中的内容)。<br>
+　　(3)在单元C2中输入=INT((A2－B2)＊10)，同(2)在“类型”下输入([DBNum2]G/通用格式“角”)。<br>
+　　(4)在单元格D2中输入=ROUND((A2－B2－C2＊0.1)＊100，0)，同(3)在“类型”下输入([DNBum2]G/通用格式“分”)。<br>
+　　(5)将B2至D2向下复制到最后一行。<br>
+　　(6)在单元格A13中输入=SUM(A2:A12)。最后结果如附表所示。<br><b>(四川 徐卫多)</b>
+<p align="center"><b>VBA编程法</b></p>
+　　选择菜单下的“工具”下的“宏”，给这个宏起个名字叫“转换大写数字”，然后编辑这个宏，源程序如下：<br>
+　　Sub 转换大写数字()<br>
+　　    Dim i, j As Integer<br>
+　　    Dim row, col As Integer<br>
+　　    row = Selection.Rows.Count   ‘获取所选区域的行数<br>
+　　    col = Selection.Columns.Count ‘获取所选区域的列数<br>
+　　    For i = 1 To row<br>
+　　       For j = 1 To col<br>
+　　           Selection.Cells(i, j).Value =转换(Selection.Cells(i, j).Value)  ‘完成转换<br>
+　　       Next j<br>
+　　    Next i<br>
+　　End Sub<br>
+
+　　Function 转换(digit As Currency) As String<br>
+　　    If IsMissing(digit) Then<br>
+　　       Exit Function<br>
+　　    Else<br>
+　　       Dim s, ip, dp As String<br>
+　　       Dim ss1, s2, s3, s4 As String<br>
+　　       Dim i, n As Integer<br>
+　　       ss1 = ″仟佰拾亿仟佰拾万仟佰拾″<br>
+　　       s = ″″<br>
+　　       ip = Str(Int(digit))    ‘分离整数部分<br>
+　　       dp = Right(Str(digit ＊ 100), 2)  ‘分离小数部分<br>
+　　       i = 2<br>
+　　       s2 = ″″<br>
+　　       s3 = ″″<br>
+　　       n = Len(ip) － 2<br>
+　　       s4 = Right(Trim(ss1), n)<br>
+　　       n = 1<br>
+　　       Do While i &lt;= Len(ip)<br>
+　　          s2 = 对应数值(Val(Mid(ip, i, 1)))<br>
+　　          s3 = Mid(s4, n, 1)<br>
+　　          s = s ＋ s2 ＋ s3<br>
+　　          i = i ＋ 1<br>
+　　          n = n ＋ 1<br>
+　　       Loop<br>
+　　       s = s ＋ ″元″ ＋ 对应数值(Mid(dp, 1, 1)) ＋ ″角″ ＋<br>
+　　对应数值(Right(dp, 1)) ＋ ″分″<br>
+　　       转换 = s<br>
+　　    End If<br>
+　　End Function<br>
+　　Function 对应数值(num As Integer) As String<br>
+　　    Dim ss2 As String<br>
+　　    ss2 =″零壹贰叁肆伍陆柒捌玖″<br>
+　　    对应数值 = Mid(ss2, num ＋ 1, 1)<br>
+　　End Function<br>
+　　使用方法就是选一个要转换的区域，然后再选菜单“工具”下的“宏”执行这个宏就行了。<br><b>(广西　张唏)</b>
+
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD>下载本期推荐软件</TD><TD ALIGN='right'><A HREF='99433402.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

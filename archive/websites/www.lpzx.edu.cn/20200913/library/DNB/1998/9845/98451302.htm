@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>VF5.0的小工具<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp; 使用VF5.0的朋友可能会发现，在VF的TOOLS目录下有一些实用的小工具，这些小工具是微软公司的开发人员为了帮助用户更好地使用VF而特意制作的。它们体形小巧玲珑，但功能却会让你爱不释手。好，下面我就为大家介绍一下其中的四个实用小程序。<br>
+        &nbsp;&nbsp;&nbsp; <strong>1ADDLABEL.APP</strong><br>
+        &nbsp;&nbsp;&nbsp; 它位于VisualFoxPro的TOOLS\ADDLABEL目录下。它的作用是通过向WindowsRegistry添加新的尺寸，允许你在标签设计器中向一个新的标签对话框中添加自定义的标签尺寸。其语法如下：<br>
+        &nbsp;&nbsp;&nbsp; DOADDLABEL.APP如果你在“标签设计器”中没有找到需要的标签尺寸，那么你就通过添加新的标签定义，向“新标签”对话框中添加标签尺寸，方法如下：首先运行ADDLABELAPP，然后在“自定义标签”对话框中选择“新建”，再从“新标签定义”对话框的“标签名称”框中为新的标签定义一个名字，然后在标签说明上面显示的文本框中键入标签的高度、宽度和边距，也可以直接从“列数”微调按钮中指定在一行中打印多少标签，然后再选择“加入”即完成设置。<br>
+        &nbsp;&nbsp;&nbsp; <strong>2CPZERO.PRG</strong><br>
+        此程序位于VFP\TOOLS\CPZERO下。CPZEROPRG可以从任何一个具有表文件的结构文件中移去代码页的标记。移去代码页之后，CPZERO将应用你指定的另一个代码页标记。其语法如下：<br>
+        &nbsp;&nbsp;&nbsp; DOCPZERO[WITH″filename″[,codepage_number]]参数filename用于指定文件的名字，并且必须用单引号或者双引号括起来。如果不输入指定的文件名，就会显示“打开”对话框，让你从文件列表中选择。<br>
+        &nbsp;&nbsp;&nbsp; codepage_number用于指定所需要的代码页号。如果没有包括此项，则显示一个“代码页”对话框。<br>
+        有两点需要注意：一是在某个表上运行CPZERO之前，必须保证该表是关闭的。二是VisualFoxPro使用表存储数据，并根据存储数据的不同定义了不同的文件类型。<br>
+        &nbsp;&nbsp;&nbsp; <strong>3GENDBC.PRG</strong><br>
+        &nbsp;&nbsp;&nbsp; 本工具位于VFP\TOOLS\GENDBC下，它可以生成一个程序，可以利用该程序重新创建一个数据库。它的语法是：DOGENDBCWITHfilename参数filename指包含一个输出文件名字的字符串，可以包含路径和扩展名。如果没有提供扩展名，使用PRG作为默认的扩展名。<br>
+        &nbsp;&nbsp;&nbsp; 注意：此程序只对当前活动的数据库起作用。<br>
+        &nbsp;&nbsp;&nbsp; 4“WWW搜索页向导”<br>
+        它的作用是用来创建一个Web页，并允许Web页的访问者从VisualFoxPro表中搜索和检索记录。此向导会自动提示你，指定要搜索的表、搜索的字段，以及如何编排所创建的Web页格式的信息。<br>
+        &nbsp;&nbsp;&nbsp; 注意：此向导建立的查询只使用=操作符，而不使用LIKE操作符。因此，你在Web页的搜索域中不能输入＊或％等通配符。使用=操作符和通配符会返回空的结果集合。<br>
+        &nbsp;&nbsp;&nbsp; 在“命令”窗口中键入下列命令以启动“WWW搜索页向导”：<br>
+        &nbsp;&nbsp;&nbsp; DOHOME()＋″TOOLS\INETWIZ\WWWPAGEAPP″第一步，选择可用的表。向导会首先列出可用的表，你可以在“数据库和表”框中选中指定的数据库或用“浏览”功能查询。注意：如果你选择 
+        &nbsp;&nbsp;&nbsp; 了一个位于HTTP服务器上的表，或者一个在该服务器上使用的表，那么该表与服务器应有相同的结构和相对路径，否则在搜索时可能会找不到数据。<br>
+        &nbsp;&nbsp;&nbsp; 第二步，选择搜索字段。向导会列出表中可用的索引，且只允许你选择一个索引表达式，用来保证查询是完全可优化的。如果你想要搜索的字段不在该列表中，则需要自己修改表，并添加该字段的索引。<br>
+        &nbsp;&nbsp;&nbsp; 第三步，设置搜索页选项。向导会向搜索页添加你提供的标题和说明，你所提供的标题将出现在Web浏览器页面的上面。说明就是跟在标题后面的简短段落，并且在标题下居中对齐。可以使用说明阐述站点的目的，以及如何进行搜索。也可以为用户提供使用提示。<br>
+        &nbsp;&nbsp;&nbsp; 第四步，设置搜索页。如果想在Web页中添加图形，可以用图像（GIF或JPEG）作为标题和背景图像。这些图像是可选的，标题图形出现在标题和说明之间。背景图像将成为页的背景，应尽量使用小的和简单的图像作为背景。大的或复杂的图像作为背景时可能显示不正常。向导在使用指定的图像文件时，将创建一个子目录(IMG)，用以保存页所引用的图像。如果你想允许Web页的访问者将数据下载为文本，那么可以选中“搜索结果以文件形式返回”，向导将为Web页添加一个复选框，访问者可以选择这个复选框，并下载查询到的数据。<br>
+        &nbsp;&nbsp;&nbsp; 第五步，搜索结果字段。向导列出了可以在结果页上显示的字段，包含了被选中的搜索表中的所有字段，一次最多可以选择五个字段。如你想显示一个表中的产品图片、产品名称、类别和说明，那么应先选择保存产品图片的字段，然后选择产品名称字段，依此类推。<br>
+        &nbsp;&nbsp;&nbsp; 第六步，设置搜索结果页。由于Web结果页与搜索页相似，因此也可以在结果页上添加标题和背景图像。图像的位置也与搜索页相同。还可以指定ODBC数据源的名称，Web服务器使用该数据源管理搜索和搜索的结果。<br>
+        &nbsp;&nbsp;&nbsp; 为页指定选项之后，你就可以创建这些页了。选择“完成”可以显示“另存为”对话框，并为你的Web页提供一个名称和目录。向导将在你指定的目录中创建如下的三个文件：name.HTM，作为搜索页的HTML文件；name.HTX，作为结果页的HTML文件，该页包含一个模板、搜索返回的记录；Name.IDC，搜索的特定信息、用户用来查找记录的SQL语句。<strong>(北京 
+        吴立群)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="library/DNB/1998/44/index.htm">《电脑报》1998年11月23日第45期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

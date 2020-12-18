@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='Wang Ji'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 电脑鱼快速升级法</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'>&nbsp;</A>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><A HREF='http://www.cpcw.com' TARGET='_blank'><IMG SRC='images/cpcw.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></A></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='470' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.cpcw.com/issue/'>电脑报电子版</A> &gt; <A HREF='http://www.cpcw.com/issue/1999/'>1999 年</A> &gt; <A HREF='index.html'>25 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; 电脑鱼快速升级法</TD>
+</TR></TABLE>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 电脑鱼快速升级法 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　看了《电脑报》第15期15版后，我也从网上下载了一条电脑鱼养在我的电脑里。但是养了十天才赚到280个点子。看它的说明得知，要赚够800点才能有一棵水草；到1600点时才给一个加氧泵；赚够2400点可得温度计和水温控制器；如果赚够3200点的话，就可以得到一个密码并获准从它的站点上下载一份特别鱼食。照这个进度，那要到猴年马月才能把这条鱼“养”到最高境界呀！<br>
+　　打开电脑鱼的安装目录，查看所有文件的创建时间。发现BRAIN.DAT的创建时间每天都更新，嘿！奥妙肯定就在这里面。先把这个文件拷贝一个备份，等点数发生变化后再用PCTools下的FC命令加／B参数对新文件和备份文件进行二进制比较，找到一些变化之处。其中偏移量为00000000、00000001之处及偏移量为00000004、00000005之处的十六进制数值转换为十进制后正好和对应电脑鱼的点数一致。<br>
+　　接下来的工作，把电脑启动在纯DOS状态下。启动PCTools，选中BRAIN.DAT；按“E”键进行编辑，再按F1键进入十六进制模式。如图所示，对偏移量为00000000、00000001和00000004、00000005两处的十六进制值进行修改。注意高低位是对调的，比如本例中00000000的值为50,00000001的值为00，即为十六进制的0050，转换为十进制就是80，也就是说这个电脑鱼的点数为80。如果想让电脑鱼的点数变为3200，十六进制值为0C80，高低位对调就是800C；把00000000的值改为80,00000001的值改为0C即可。十进制与十六进制之间的计算转换可以用Windows95的计算器切换到“科学型”。偏移量为00000004、00000005处也要修改成同样的值。完成后按F5键更新文件并退出（在Windows98下无法存盘，则可以将该文件先拷贝到软盘，修改后覆盖原文件）。重新启动Windows后再看，哈哈！原本光秃秃的鱼缸里，出了一棵水草。水草后面“咕嘟嘟”地冒着气泡，旁边还有一只温度计，水温正好25°C；按一下那个红心看看，有一个密码。按照提示的地址上网后用这个密码下载一份特别鱼食，给你的鱼吃了之后，你的电脑鱼就会对你含情脉脉，向你抛来一串飞吻了。<br><b>(新疆 李晓）</b></TD></TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/25/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99251202.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='470' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='470' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

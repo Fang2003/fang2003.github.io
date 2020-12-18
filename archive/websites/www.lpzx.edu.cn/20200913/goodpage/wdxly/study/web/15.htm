@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+<title>状态栏显示一条条的信息</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<style type="text/css">
+<!--
+.12px24px {font-family: "宋体";font-size: 12px;line-height: 24px;}
+.12px {font-family: "宋体";font-size: 12px;}
+.15px {font-family: "宋体";font-size: 15px;}
+.top {font-family: "宋体";font-size: 12px;line-height: 18px;text-decoration: none;}
+body {font-family: "宋体";font-size: 12px;line-height: 16px;text-decoration: none;}
+td {font-family: "宋体";font-size: 12px;line-height: 16px;text-decoration: none;}
+A:link {text-decoration: none;color: #0000A0;}
+A:visited {text-decoration: none;color: #0000A0;}
+A:active {text-decoration: none;}
+A:hover {text-decoration: underline;color: Red;}
+.a a:link {text-decoration:none;color: #c1eaff;}
+.b a:visited {text-decoration:none;color: #c1eaff;}
+.c a:active {text-decoration:none;color: #c1eaff;}
+.d a:hover {text-decoration:none;color: #80FF80;}
+-->
+</style>
+<script language="JavaScript">
+
+function makeArray(n) {
+this.length=n;
+}
+
+function stopBanner() {
+if (bannerRunning)
+clearTimeout(timerID);
+bannerRunning=false;
+}
+
+function startBanner() {
+stopBanner();
+showBanner();
+}
+
+function showBanner() {
+var text=ar[currentMessage];
+if (offset <text.length) {
+if (text.charAt(offset)==" ")
+offset++;
+var partialMessage=text.substring(0, offset + 1);
+window.status=partialMessage;
+offset++;
+timerID=setTimeout("showBanner()", speed);
+bannerRunning=true;
+} else {
+offset=0;
+currentMessage++;
+if (currentMessage==arlength)
+currentMessage=0;
+timerID=setTimeout("showBanner()", pause);
+bannerRunning=true;
+}
+}
+
+var speed=100
+var pause=1000
+var timerID=null;
+var bannerRunning=false;
+var currentMessage=0;
+var offset=0;
+
+var arlength=3;
+var ar=new makeArray(arlength);
+ar[0]="还不错吧 ：）";
+ar[1]="欢迎访问我的网页";
+ar[2]="网址 http://www.bdinfo.net/zyzz"
+
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" background="http://www.lpzx.edu.cn/goodpage/wdxly/study/web/177fb-b-bg01.gif" onload="startBanner()">
+<div align="center"><center>
+
+<table border="0" cellPadding="0" cellSpacing="0" width="456">
+<TBODY>
+<tr>
+<td width="456"><p align="center"><font COLOR="Black"></font><b><font
+color="#D587FA" face="黑体"><big>状态栏显示一条条的信息</big></font></b><br>
+<font COLOR="Black">将下代码copy入你网页的&lt;head&gt;和&lt;/head&gt;中的合适地方即可。</font>
+<br>
+<br>
+&lt;SCRIPT LANGUAGE=JAVASCRIPT&gt;<br>
+&lt;!-- <br>
+function makeArray(n) {<br>
+this.length=n;<br>
+}<br>
+function stopBanner() {<br>
+if (bannerRunning)<br>
+clearTimeout(timerID);<br>
+bannerRunning=false;<br>
+}<br>
+function startBanner() {<br>
+stopBanner();<br>
+showBanner();<br>
+} function showBanner() {<br>
+var text=ar[currentMessage];<br>
+if (offset <text.length) {>br> if (text.charAt(offset)==&quot;&quot;)<br>
+offset++;<br>
+var partialMessage=text.substring(0,
+offset + 1);<br>
+window.status=partialMessage;<br>
+offset++;<br>
+timerID=setTimeout(&quot;showBanner()&quot;,
+speed);<br>
+bannerRunning=true;<br>
+} else {<br>
+offset=0;<br>
+currentMessage++;<br>
+if (currentMessage==arlength)<br>
+currentMessage=0;<br>
+timerID=setTimeout(&quot;showBanner()&quot;,
+pause);<br>
+bannerRunning=true;<br>
+}<br>
+}<br>
+var speed=100 /* 数越小速度越快 */<br>
+var pause=1000 /* 数越大停顿越长 */<br>
+var timerID=null;<br>
+var bannerRunning=false;<br>
+var currentMessage=0;<br>
+var offset=0;<br>
+var arlength=3;/* 字幕的条数 */<br>
+var ar=new makeArray(arlength);<br>
+ar[0]=&quot;还不错吧 ：）&quot;;/*
+填入你的信息 */<br>
+ar[1]=&quot;欢迎访问我的网页&quot;;
+/* 填入你的信息 */<br>
+ar[2]=&quot;网址 http://www.bdinfo.net/zyzz&quot;
+/* 填入你的信息 */<br>
+--&gt;<br>
+&lt;/SCRIPT&gt;<br>
+<br>
+<font COLOR="Black">将你Html文件的&lt;body&gt;改为如下：</font> <br>
+&lt;BODY onload=startBanner()&gt;<br>
+<br>
+　　　　　　　　　　　　　</p>
+
+
+</TBODY></table>
+</center></div>
+<P align="center"><SPAN class="ok2"><b><A href="javascript:window.close()" onmouseout=" window.status='';return true" onmouseover=" window.status='关闭窗口';return true">[关闭窗口]</A></b></SPAN></P>
+</body>
+</html>

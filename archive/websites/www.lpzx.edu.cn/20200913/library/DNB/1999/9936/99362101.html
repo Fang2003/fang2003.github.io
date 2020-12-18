@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='http://www.lpzx.edu.cn/library/DNB/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 剖析硬盘的容量限制</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/banner.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>36 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 剖析硬盘的容量限制</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 剖析硬盘的容量限制 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　随着电脑硬盘价格的不断下降，主流硬盘的容量已从过去的4GB发展到现在的8GB以上，但不少人在安装使用8GB以上的硬盘时遇到了麻烦，需要升级BIOS程序或使用专门的硬盘管理工具才能解决。使用电脑时间较长的用户，一定还记得当初在使用容量超过528MB的硬盘时也曾遇到过类似的问题，那么出现问题的原因是什么呢？下一个硬盘容量的障碍点又是多少？<br>
+　　要理解以上问题，需要从硬盘的数据存取过程谈起（如图一所示），操作系统（或特殊的应用程序绕过操作系统）通过中断INT13调用BIOS中的磁盘服务程序，该服务程序再将INT13 请求转换为硬盘的ATA接口请求，继而在硬盘上进行数据的存取。要使用硬盘，就必须提供硬盘的地址信息，早期的硬盘与BIOS磁盘服务程序一样通过CHS（柱面数、磁头数、每柱面扇区数）寻址，现在的硬盘支持LBA（逻辑块地址）寻址。<br>
+　　与硬盘容量有关的部分就是INT13接口和ATA接口。INT13接口程序保存在主板的BIOS中，独立于操作系统；ATA接口与硬盘驱动器相关。这两种接口都是通过寄存器寻址的，下面我们先对INT13接口进行说明。<br>
+　　如图二所示，在一个8位的寄存器中，使用了其低6位来保存柱面扇区数信息，其余2位与另一个8位寄存器一起用来保存柱面数。由于柱面数和磁头数都是从0开始的，而扇区数是从1开始的，每个扇区的容量为512字节，所以当使用CHS寻址时，通过INT13接口，硬盘理论上可寻址的最大容量为：<br>
+　　1024×63×256×512/1024 KB=7.75 GB<br>
+　　接下来我们再看一下ATA接口的寄存器寻址情况，如图三所示。<br>
+　　当使用CHS寻址时，通过ATA接口，硬盘理论上可寻址的最大容量为：<br>
+　　65536×255×16×512/1024 KB=127.5 GB<br>
+　　由于INT13和ATA两个接口表示硬盘地址的C、H、S三个参数的位数不一致，又因为早期的硬盘容量比较小（只有10MB、40MB等），所以开发商在开发BIOS程序时采用了最简单的办法：取两个接口中位数最少的参数来表示硬盘的地址，即用10位表示柱面数，用6位表示扇区数，用4位表示磁头数，系统在接口间传递参数时，只需将多余的高位清0就可以了，无需作任何额外的转换。这样在系统中能够支持的硬盘最大容量为：<br>
+　　1024×63×16×512/1024 KB=504MB(由于硬盘标称的容量是以1000而不是1024来作为换算单位的，所以上式也可改为1024×63×16×512/10002 =528MB)，这就是最初的硬盘具有528MB容量限制的原因。<br>
+　　为了克服528MB容量的限制，BIOS和硬盘开发商想出了多种办法，主要的有如下两种：<br>
+　　1采用位移变换法。即在INT13和ATA两个接口间传递硬盘地址参数时，BIOS磁盘服务程序保持硬盘的柱面扇区数不变，而采取减少（增加）柱面数，同时增加（减少）磁头数的方法，并保持磁盘的总容量不变。如假设一个硬盘有4096个柱面和16个磁头，其柱面数超出了INT13地址寄存器的最大范围（1024），则BIOS服务程序将其变换为1024（4096/4）个柱面和64（16×4）个磁头，这样既保证了硬盘的容量未变，又使操作系统或应用程序能够识别和访问到全部的硬盘空间。<br>
+　　2采用LBA变换法。为了更好地支持大硬盘，硬盘开发商对ATA接口驱动做了改进，除了原来的CHS寻址方式外，又增加了LBA方式。LBA寻址方式，简单地说，就是把原来分别表示C、H、S三个参数的28个位（16＋4＋8），看成是一个表示地址的数，因此可以寻址的最大空间为：<br>
+　　228×512/10243=128GB<br>
+　　在LBA变换方式下，BIOS磁盘服务程序将来自ATA接口的表示硬盘LBA地址的数，按一定规则产生符合INT13接口要求的C、H、S值，提供给操作系统或应用程序；反之，BIOS磁盘服务程序只要将INT13地址寄存器中的C、H、S值相乘就得到一个有效的LBA地址值。<br>
+　　对于大容量硬盘，人们基本上都是采用的LBA寻址方式，在该方式下，前面已经分析过，硬盘驱动器ATA接口的容量限制是128GB，而BIOS的INT13磁盘服务接口的容量限制是（见前面图二的分析，不同的是在LBA方式下，表示扇区数的0也是有效的，因为它是组成LBA地址值的一部分，而不是表示不存在的0扇区）：<br>
+　　1024×64×256×512/1024 KB=8 GB<br>
+　　这就是目前一些微机系统不支持8GB以上大容量硬盘的原因。不难看出，问题出在BIOS的磁盘服务程序部分，所以只要升级BIOS程序就能解决。<br>
+　　那么新的BIOS磁盘服务程序是如何克服8GB容量的障碍的呢？原来BIOS开发商重新定义了新的扩展INT13中断功能，该新的磁盘服务程序不再通过寄存器来传递硬盘地址信息，而是通过主存储器传递硬盘地址信息包，该信息包是一个64位的LBA地址（摆脱了原来通过寄存器寻址时24位8GB的限制），其中的低28位可以直接传送到ATA接口寄存器中。<br>
+　　至此，硬盘8GB容量的限制已经不复存在，读者也一定能看出，硬盘容量的下一个障碍点是多少，对，是128GB，也就是硬盘驱动器接口地址28位的限制。不要认为这是很遥远的事，想想三年前你的硬盘容量是多大？1.2GB够大了吧，而现在20GB的硬盘已经在频频向你招手了。<br>
+<b>(江苏  崔华明)</b>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/36/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99362101.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

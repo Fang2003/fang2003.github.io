@@ -1,0 +1,106 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>荔中信息输入</title>
+<style type="text/css">
+<!--     
+.c1{
+	font-family: "宋体";
+	font-size: 12pt;
+	line-height: 12pt;
+	padding: 2px;
+}
+.c2{
+	font-family: "宋体";
+	font-size: 9pt;
+	line-height: 12pt;
+	padding: 2px;
+}
+
+-->
+</style>
+
+</head>
+
+<body>
+<script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.subject.value == "")
+  {
+    alert("请在 subject 域中输入值。");
+    theForm.subject.focus();
+    return (false);
+  }
+
+  if (theForm.subject.value.length > 60)
+  {
+    alert("在 subject 域中，请最多输入 60 个字符。");
+    theForm.subject.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><form method="POST" action="http://www.lpzx.edu.cn/xw/inputcl.asp" enctype="multipart/form-data" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1">
+<table border="0" width="100%" bgcolor="#00FF00">
+  <tr>
+    <td width="50%">
+        <p align="center"><a href="allxw.htm">新闻信息</a>
+      </td>
+    <td width="50%">
+        <p align="center"><a href="manage.htm">管理特区</a>
+      </td>
+  </tr>
+</table>
+  <p align="center"><font color="#FF0000" size="6" face="楷体_GB2312">新闻信息录入</font></p>
+  <div align="center">
+    <center>
+    <table border="0" width="626" cellspacing="4" cellpadding="3">
+      <tr>
+          <td width="107">标题：</td>
+        <td width="491"><input type="text" name="subject" size="60" maxlength="60"  class="c1"></td>
+      </tr>
+      <tr>
+          <td width="107">分类：</td>
+        <td width="491"><select name="flid" size="1">
+          
+          <option value="1">通知与通告</option>
+          
+          <option value="2">校内新闻</option>
+          
+          <option value="3">国内新闻</option>
+          
+          <option value="4">国际新闻</option>
+          
+          <option value="5">批评与表彰</option>
+          
+          <option value="6">新人新作</option>
+          
+          <option value="7">教育园地</option>
+          
+          </select>
+          </td>
+          
+      </tr>
+      <tr>
+          <td width="107">内容：</td>
+        <td width="491"><textarea rows="8" name="info" cols="86" class="c2"></textarea></td>
+      </tr>
+      <tr>
+          <td width="107">图片：</td>
+        <td width="491"><input type="file" name="pic" size="20"></td>
+      </tr>
+    </table>
+    </center>
+  </div>
+  <p align="center"><input type="submit" value="提交新闻" name="B1"><input type="reset" value="全部重写" name="B2"></p>
+</form>
+
+</body>
+
+</html>

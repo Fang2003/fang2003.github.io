@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">在Windows95中建立一对多的关联<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> 
+        &nbsp; 在实际应用中，我们经常需要用不同的应用程序来打开某一类的文件。在Windows95中可以用“发送”菜单来实现一个文件与多个应用程序相关联。具体方法如下：<br>
+        　　首先，建立批处理文件SEND.BAT，其内容为：<br>
+        　　deltree/y c:\windows\sendto\program<br>
+        &nbsp;&nbsp;&nbsp; md c:\windows\sendto\program<br>
+        &nbsp;&nbsp;&nbsp; xcopy c:\windows\startm～1\programs/s/q c:\windows\sendto\program<br>
+        　　假如你的Windows95不是安装在c:\windows，而是安装在其它文件夹下，如D:\windows，则应修改此批处理文件。<br>
+        　　然后，为SEND.BAT创建快捷方式，将它的属性设置为最小化运行，且在退出时关闭，执行此批处理文件后，系统就会将Windows95“开始”菜单中程序项的内容全部复制到“发送”菜单。<br>
+        　　通过拷贝整个“开始”菜单至“发送”菜单的这种方法，可以轻易地在Windows95或Windows 
+        NT4.0中用任何兼容的应用程序打开任意文件。这样，就可以用发送菜单中的不同程序来打开同一类型的文件，实现一对多的关联。<br>
+        　　在每次更改开始菜单后执行此批处理文件，可使“发送”菜单保持与“开始”菜单同步更新；或将此文件放置在启动组中，使“发送”菜单在每次启动Windows95时被更新，与“开始”菜单保持同步。<strong>（江苏 
+        汪浩）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

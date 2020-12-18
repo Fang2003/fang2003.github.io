@@ -1,0 +1,123 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>9901请你编程</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">9901请你编程<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　新年的第一期请你编程和你见面了，所有喜爱编程的新老朋友，请继续支持我们的栏目，好了，先来看看本期的题目吧：编程实现一个打字游戏。下面是广西读者黄寿斌的答案。<br>
+        　　编程思路：为了清晰，程序中定义了一个 SUB 过程和一个 FUNCTION 
+        过程。SUB 过程 delaytqf(s,t＄) 的作用是延时 s 
+        秒钟，在延时过程中按任一键即提前结束延时并由 t＄ 
+        带回所按键名。如所按键名与落下的字母相同，则又随机落下另一个字母……。“落下”效果是通过不断地抹除原字母并在下一行同一列位置上显示该字母来实现的。不宜用一般的空循环语句来延时，因为空循环语句的延时时间是不固定的，它与计算机的速度有关。FUNCTION 
+        过程 binrand(a,b) 的作用是产生闭区间 [a,b] 内的一个随机整数。闭区间[a,b] 
+        的端点 a 可大于或小于端点 b 。<br>
+        　　源程序：<br>
+        　　DECLARE SUB delaytqf (s, t＄)<br>
+        　　DECLARE FUNCTION binrand (a, b)<br>
+        　　RANDOMIZE (TIMER) ′ 设置随机数发生器的起因数<br>
+        　　CLSDO ′ <br>
+        　　LOCATE 10, 20, 1: PRINT ＄TRINGS(50, ″ ″);<br>
+        　　LOCATE 10, 20: INPUT “请你指定一个速度(从1到20,默认7)：”, s＄<br>
+        　　IF s＄ = ″″ THEN s＄ = “7&quot;<br>
+        　　sudu = VAL(s＄)<br>
+        　　LOOP WHILE sudu &lt; 1 OR sudu &gt; 20<br>
+        　　shijian = 1 ／ sudu ′ 速度与时间成反比例<br>
+        　　CLS<br>
+        　　COLOR 12<br>
+        　　LOCATE 1, 1, 0: PRINT STRING＄′ 随机产生一个列坐标<br>
+        　　zimu = binrand(ASC(″A″), ASC(″Z″)) ′ 随机产生某一个大写字母的 
+        ASCII 码<br>
+        　　 ′ 上一个语句也可写为： zimu = binrand(65,90)<br>
+        　　zimu＄ = CHRS(zimu) <br>
+        　　′ zimuS 为某一个大写字母<br>
+        　　FOR hang = 1 TO 25<br>
+        　　LOCATE hang, lie<br>
+        　　PRINT zimu＄; : CALL delaytqf(shijian, t＄)<br>
+        　　IF UCASES(t＄) = zimu＄ THEN<br>
+        　　LOCATE hang, lie: PRINT ″ ″; ′ “该字母消失”<br>
+        　　COLOR 12<br>
+        　　LOCATE 1, lie: PRINT ″_″; ′ 补画屏幕上部横线的缺口<br>
+        　　COLOR 7<br>
+        　　EXIT FOR ′ 跳出 FOR 循环，接着“又随机落下另一个字母”。<br>
+        　　ELSE<br>
+        　　IF hang = 25 THEN EXIT DO ′ 字母已“落地”，跳出 DO 循环而结束。<br>
+        　　LOCATE hang, lie: PRINT ″ ″;<br>
+        　　END IF<br>
+        　　NEXT<br>
+        　　LOOP<br>
+        　　LOCATE 10, 1 ′ 
+        结束前将光标移到屏幕中部，这一步并不是必需的。<br>
+        　　END<br>
+        　　FUNCTION binrand (a, b)<br>
+        　　′ 产生 a 到 b 之间（包括 a 和 b）的随机整数<br>
+        　　IF a &gt; b THEN SWAP a, b<br>
+        　　d = b － a ＋ 1<br>
+        　　binrand = a ＋ INT(d ＊ RND)<br>
+        　　END FUNCTION<br>
+        　　SUB delaytqf (s, t＄)<br>
+        　　′延迟一段时间，单位为秒。按任意键提前返回。<br>
+        　 t = TIMER<br>
+        　　t8 = 86400 ′ t8 为一天二十四小时的总秒数<br>
+        　　DO<br>
+        　　t＄ = INKEY＄<br>
+        　　tt = TIMER － t<br>
+        　　IF tt &lt; 0 THEN tt = tt ＋ t8 ′ 
+        此句可避免时间跨过午夜零点时造成死循环<br>
+        　　LOOP WHILE t＄ = ″″ AND tt &lt; s<br>
+        　　END SUB<br>
+        　　9903请你编程题目：<br>
+        　　有一条横向的走廊，长200米，宽100米。在走廊中分布着一些柱子，给要通过的人造成一定的麻烦。瘦的人，有可能一次走到底，顺利地通过走廊。胖子就倒霉了，往往走了一大半的路，前面突然出现一大群柱子，再也走不过去了，只好“回头是岸”。最气人的是，完全有可能无论这位胖子如何走，他也不可能通过这条走廊。现在要求你为胖子们编写一个程序，算出能通过走廊最胖的胖子的直径。（假设柱子的直径可以忽略不计，而胖子也可以认为是一个不可伸缩的大圆球。）<br>
+        　　 程序要求如下：<br>
+        　　 1、数据从文本文件fatman.txt中读取。文件格式为：首先一行为一个整数N，表示有N根柱子。当N=0时表示数据输入结束。以后N行每行包括两个整数x、y表示第N根柱子的坐标。x表示柱子离走廊左端X米，y表示柱子离走廊上端Y米，两数之间用空格隔开。然后是另一个整数N，表示另一组输入数据的开始。（1&lt;N&lt;=200）<br>
+        　　 2、结果输出到屏幕，每个结果占一行，要求小数点后至少保留5位。<br>
+        　　输入范例：<br>
+        　　5<br>
+        　　1 2<br>
+        　　2 1<br>
+        　　4 3<br>
+        　　5 45<br>
+        　　1 1<br>
+        　　0<br>
+        　　输出范例：<br>
+        　　55.00000<br>
+        　　来稿请寄磁盘稿或用E－mail来稿，请写明编程思路和源程序。截止日期3月15日，同时欢迎 
+        提供请你编程的题目。<br>
+        　　本期获奖名单：<br>
+        　　杨波 （重庆） 施宏杰 （浙江） 黄寿斌 （广西） 陆俊 
+        （江苏） 曹志铭 （安徽）康艺泓 （广东） 刘岩 （河北） 冯波 
+        （四川）刘多仁 （福建）<br>
+        　　每位获奖者将获得苦丁香公司提供的光盘一张<strong>(本栏目由苦丁香公司协办)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年01月25日第04期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

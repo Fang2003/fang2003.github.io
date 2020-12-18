@@ -1,0 +1,193 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>学用C++进行Winsock编程(三)——Client端</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0103/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0103/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第03期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{学用C++进行Winsock编程(三)——Client端}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ CloseHandlehMutex<br>
+              closesocketsk<br>
+              return 1<br>
+              <br>
+              /这是一个既可以将IP地址转换成网际地址,又可以将用域名表示的地址转换成网际地址的函数——ServerIp/<br>
+              unsigned long ServerIpcharserverip<br>
+              <br>
+              hostenthost<br>
+              unsigned long ulTemp=inet＿addrserverip<br>
+              ifulTemp==INADDR＿NONE/如果不能用inet＿addr转换成网际地址,则表示这是一个用域名表示的地址/<br>
+              <br>
+              host=gethostbynameserverip<br>
+              ifhost==NULLreturn INADDR＿NONE//无效的地址<br>
+              ulTemp=unsigned longhost-&gt;h＿addr＿list0<br>
+              <br>
+              return ulTemp<br>
+              <br>
+              /调用方法为/<br>
+              unsigned long Ip=ServerIp″202.205.210.2″；<br>
+              也可以是<br>
+              unsigned long Ip=ServerIp″www.cfan.cn.net″<br>
+              /总之,只要是一个有效的地址,这个函数就会返回网际地址,如果所给地址无效,则返回INADDR＿NONE/<br>
+              //以下是窗体的构造函数<br>
+              ＿＿fastcall TForLoverTForLoverTComponent Owner<br>
+               TFormOwner<br>
+              <br>
+              WSADATA wsaData<br>
+              ifWSAStartup0x101＆wsaDataMessageBoxNULL″WINSOCK版本不行″″错误″MB＿OK<br>
+              <br>
+              /单击按钮,开始扫描/<br>
+              void ＿＿fastcall TForLoverButton1ClickTObject Sender<br>
+              <br>
+              HANDLE hMutexHandle=CreateMutexNULLfalsemutexName<br>
+              try<br>
+              <br>
+              int Result=0<br>
+              startPort=PortStart-&gt;Text.ToInt-1<br>
+              endPort=PortEnd-&gt;Text.ToInt<br>
+              char szResult56<br>
+              ZeroMemorygscansizeofg＿scanthreadNum<br>
+              usPart=unsigned shortendPort-startPort/threadNum<br>
+              Button1-&gt;Enabled=false<br>
+              Application-&gt;ProcessMessages<br>
+              forint i=0i&lt;threadNumi++<br>
+              <br>
+              strcpygscani.szFileedResult-&gt;Text.c＿str<br>
+              strcpygscani.szMutexmutexName<br>
+              gscani.sPort=iusPart+startPort+1<br>
+              //线程的起始端口<br>
+              ifi==threadNum-1<br>
+              gscani.ePort=endPort<br>
+              else<br>
+              gscani.ePort=i+1usPart+startPort<br>
+              gscani.goalIp=ServerIpedHost-&gt;Text.c＿str<br>
+              hThreadi=CreateThreadNULL0ScanPortLPVOID＆gscani0＆dwThreadId<br>
+              SetThreadPriorityhThreadiTHREAD＿PRIORITY＿HIGHEST<br>
+              <br>
+              while1<br>
+              <br>
+              iLiveThread=0<br>
+              forint j=0j&lt;threadNumj++<br>
+              <br>
+              GetExitCodeThreadhThreadj＆dwThreadCode<br>
+              /这是检测线程是否已经结束的代码/<br>
+              /用GetExitCodeThread函数来检测线程是否已经结束/<br>
+              ifdwThreadCode==STILL＿ACTIVEiLiveThread++<br>
+              <br>
+              ifiLiveThread==0break/如果iLiveThread为0则表示已经没有活动的线程,则终止while循环/<br>
+              Sleep3000<br>
+              <br>
+              forint a=0a&lt;threadNuma++<br>
+              <br>
+              Result+=gscana.Result//统计结果<br>
+              CloseHandlehThreada//关闭句柄<br>
+              <br>
+              wsprintfszResult″已经结束扫描共发现％d个目标请查看结果文件″Result<br>
+              MessageBoxHandleszResult″提醒″MB＿OK<br>
+              <br>
+              catch...MessageBoxHandle″错误″″警告″MB＿OK<br>
+              CloseHandlehMutexHandle<br>
+              Button1-&gt;Enabled =true<br>
+              <br>
+              /在窗体的最后进行清理/<br>
+              void ＿＿fastcall TForLoverFormDestroyTObject Sender<br>
+              <br>
+              WSACleanup <br>
+              (未完待续)<br>
+              编后：至此,关于Client端的编程就介绍完了。下一次,我们将继续为大家介绍关于Server端的编程。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

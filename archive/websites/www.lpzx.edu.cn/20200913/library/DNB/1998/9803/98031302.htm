@@ -1,0 +1,63 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">在Windows95下卸载应用程序<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681"> 
+        &nbsp; 一般基于Windows95的应用程序都会为Windows95提供足够的卸载信息或是自身就带有卸载程序，卸载比较容易，而基于Windows32或DOS开发的应用程序，在Windows95下安装后再想完全卸载，情况就要复杂得多。下面，我就结合自己在实际使用中的做法，来谈谈如何在Windows95下卸载应用程序。<br>
+        　　<strong>一、完全卸载Windows95应用程序</strong><br>
+        　　在Windows95下完全卸载一个Windows95应用程序的方法是：<br>
+        　　&nbsp;&nbsp;&nbsp; 1打开控制面板，单击“添加/删除程序”组。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2单击“安装/卸载”标签，从应用程序列表中选择需要卸载的应用程序。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3单击“添加/删除(R)”按钮。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4选择“确定”，Windows95就会自动将应用程序删除。<br>
+        　　<strong>二、安全卸载Windows3x应用程序</strong><br>
+        　　当我们将一个Windows95下的Windows3x应用程序删除后，对Windows95系统产生的影响是：系统不能正常启动，系统总是试图去寻找那些已经不存在的文件。因此，尽量不要在Windows95下安装非Windows95的应用程序。如果确实要安装，请记住以下三点，就可以最大限度地保证在Windows95下安全地卸载Windows3x应用程序：<br>
+        　　1当安装文件提示将对系统文件进行修改时，一定要选择手动完成对重要文件的修改，这样保证重要系统文件的安全。<br>
+        　　2在安装每个新的应用程序前对重要的系统文件如Configsys、Autoexecbat、Winini、Systemini、Userdat、Systemdat进行备份。<br>
+        　　3在安装应用程序前，应对硬盘上所有的目录进行保存，在安装完应用程序后，将两者进行比较，即可清楚应用程序对系统所进行的改动。以后想要删除时便能做到“有的放矢”，具体步骤为：<br>
+        　　1在系统根目录下通过Dir命令为系统所有的目录、文件及其大小、建立时间建立一个系统映像文件，如Wlq.txt为c:\Dir/S&gt;&gt;Wlqtxt。<br>
+        　　2在应用程序安装完成后，再用此命令将系统所有的目录和文件建立一个系统映像文件如Wlq1.txt。<br>
+        &nbsp;&nbsp;&nbsp; 3用文件比较命令Fc将两个文件进行比较，将比较的结果输出到另一个文件如Wlqbj.txt中去。<br>
+        　　<strong>三、删除DOS应用程序</strong><br>
+        　　删除DOS应用程序相对来说是较为安全的，与删除Windows3x和Windows95应用程序不同的是，大多数基于DOS的应用程序不能自己卸载，必须要我们手动删除它们。在删除它们以后，如何恢复原有的系统文件，可以参照“安全卸载Windows3x应用程序”方法。<br>
+        　　<strong>四、用Clean System Directory 1.5来清扫你的.DLL文件</strong><br>
+        　　当我们手动删除一个应用程序时，除非我们备份了所有的系统目录及文件，否则我们无法准确地判断出哪些dll文件是与应用程序相关联的。<br>
+        　　现在好了，一个仅有70K的小文件Clean System Directory 15可以帮助我们。它是从Internet网上自由下载的一个免费的实用小程序。文件名为Clnsys15zip，把它下载到你的硬盘上，用Pkunzipexe将其解开，运行后它就可以把你系统中所有的dll文件的详细资料列出，哪些文件与有关程序相关联，哪些文件没有被任何程序所使用，均一目了然。你可以将那些未被使用的dll文件删除，来加快你的系统执行速度。在东方网景的Ftp站可以下载这个文件：ftp:∥ftp.east.cn.net/pub/ 
+        win95power/clnsys15zip。你还可以到它的“娘家”去了解一下它的详细信息：http:∥www.ozemail.com.au/～kevsol 
+        win95。<strong>(北京　吴立群)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月19日第3期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>利用Data控件执行数据<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 1. VB以前的版本中，在利用Data 
+        控件执行数据访问操作时，常常需要用到TextBox、Label、Picture、CheckBox、Image以及ComboBox等内部控件。而在VB5.0中，只需把Data控件与ActiveX控件中的绑定控件DBGrid结合使用，就能实现大部分的数据库操作和管理。下面我们通过一个实例来着重介绍新增DBGrid控件的强大功能。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 本例中使用的数据库为VB中Biblio.mdb的Publisher，它由字段Pub_ID、Name、CompanyName、Address、City、State、Zip、Telephone、Fax、Comments组成。按以下步骤建立图示的应用程序：1．创建一个新的项目，将窗体命名为DateTest。在该窗体中调入一个Data控件、一个DBGrid控件、两个CommandButton控件(如果DBGrid控件没出现在工具箱中，必须加载该控件，方法为：从“工程”菜单中选择“部件”菜单项→选择弹出对话框中的“控件”标签→选中“MicrosoftDataBoundGridControl”复选框→单击“确认”按钮即可。)2．修改Data控件的属性：Connect为Access；DataBaseName为C:\vb50\BIBLIO.MDB（或将C:\vb50\改为相应的路径），RecordSource为Publishers；修改DBGrid控件的属性：Connect为Access，DataSource为Data1，AllowAddNew和AllowDelete均设为True；修改控件Command1的属性：Caption为“退出”；修改控件Command2的属性：Caption为“查询”。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 然后在控件Command1中输入下列代码：<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; x＄=InputBox(“请输入查询内容：”，“查询界面(按Name字段查询)”)quer=“[Name]='”＋x＄＋“'”Data1.Recordset.FindFirstquerIfData1.Recordset.NoMatchThenx＄=MsgBox(&amp;quot;没有符合查询条件的记录，请重新输入０，0,”出错处理&amp;quot;)EndIf在Command2中输入End。<br>
+        </font>&nbsp;&nbsp;<font color="#369681">&nbsp; 
+        运行本程序，我们可以发现：利用Data控件和DBGrid控件就能实现大部分的数据库操作功能，而且只需很少的代码就可实现记录的查询。(四川韩旭)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月5日第38期40版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

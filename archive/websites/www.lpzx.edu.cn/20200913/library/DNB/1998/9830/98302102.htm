@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>XENIX通用应急启动盘的制作与使用<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><font color="#369681"><p class="ourfont" align="left">　　系统应急启动盘对XENIX系统的重要性是不言而喻的。不同的计算机出现故障时，只有用自己的应急盘才能启动，这不仅加重了网络管理员的工作量，而且当某台计算机的应急启动盘损坏时，就只能重装系统。<br>
+        　　本文给大家介绍了一种制作通用应急启动盘的方法，它很好地解决了上述问题。<br>
+        　　一、通用应急启动盘的制作<br>
+        　　1.在XENIX中用diskcp命令完整拷贝一张系统安装盘的N1盘；<br>
+        　　2.检查所需修复的计算机启动软驱(A驱，即UNIX、XENIX系统所称的“0”驱)的容量与N1盘是否一致。如果不一致，应进入CMOS中改为一致，否则不能用软盘启动系统；<br>
+        　　3.在由硬盘启动的XENIX系统提示符＃下顺序执行以下命令：<br>
+        　　＃mount /dev/devicename /mnt<br>
+        　　(若N1盘为1.44M，则devicename为fd0135或fd1135；若N1盘为1.2M，则devicename为fd096或fd196。)<br>
+        　　＃cd /mnt<br>
+        　　＃rm hdlist profile.hd<br>
+        　　＃cd bin<br>
+        　　＃rm cpio dd<br>
+        　　＃rm －r /etc/perms /usr/lib<br>
+        　　(以上操作的目的是为节省出N1盘的剩余磁盘空间，以便在用N1盘启动后可以将硬盘根文件系统安装在N1盘上。N1盘的剩余磁盘空间可以用df－v命令检查出。)<br>
+        　　＃chmod u＋w .profile<br>
+        　　＃vi .profile<br>
+        　　(在vi全屏幕编辑.profile文件时依次作以下修改：<br>
+        　　1用dd命令删除从if /usr/lib/mkdev/hd 0开始的以下各行；<br>
+        　　2将if语句以上各行依次改为：<br>
+        　　PS1=″＃″<br>
+        　　HZ=20<br>
+        　　SHELL=/bin/sh<br>
+        　　PATH=/etc:/bin:/usr/bin<br>
+        　　3wq命令存盘退出。)<br>
+        　　＃cp /bin/l /mnt/bin<br>
+        　　＃cd /<br>
+        　　＃unmount /dev/devicename<br>
+        　　＃sync(连续三遍)<br>
+        　　＃haltsys<br>
+        　　二、用通用应急启动盘维护XENIX系统<br>
+        　　若我们不慎把超级用户口令遗失，或不正常操作丢失，就需通用应急启动盘维护XENIX系统，其具体步骤如下：<br>
+        　　1.将制作好的通用应急启动盘插入A驱，引导系统；<br>
+        　　2.在＃提示符下依次执行以下命令：<br>
+        　　＃mount /dev/hd0root /mnt<br>
+        　　＃cd /mnt/etc<br>
+        　　＃cp passwd passwd.old<br>
+        　　＃cp /ctc/passwd /mnt/ctc<br>
+        　　＃cd /<br>
+        　　＃haltsys<br>
+        　　3.移去通用应急启动盘，从硬盘启动机器；<br>
+        　　4.在login下键入root即直接进入系统(此时已无需超级用户口令)；<br>
+        　　5.在＃提示符下执行以下命令：<br>
+        　　＃cd /etc<br>
+        　　＃cp passwd.old passwd<br>
+        　　＃passwd<br>
+        　　此时用户即可输入自己的新口令。<br>
+        　　以上操作在OLIVETTI 386SX16及PHILIP Pentium 100机上获得通过。</p>
+        </font><p class="ourfont" align="left"><font color="#369681">　　(安徽　屠其俊)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年8月10日第30期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

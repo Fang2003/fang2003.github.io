@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">WINDOWS95 
+        下两种常见的网卡安装故障<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　一、Windows95中找不到网卡<br>
+        　　一台5X86/133微机、ALD5400主板、16M EDO内存、昆腾640M硬盘，主板的BIOS使用AMI 
+        BIOS 1992版本，安装NE2000兼容网卡。在Windows95中搜索新硬件时，报告未找到网卡。后使用随卡配带的Windows95驱动程序进行安装，重新启动后报告网络适配器不存在，但同样的网卡在另外两台奔腾133微机上安装，却无任何问题。查阅网卡说明书，该网卡缺省设置为“无跳线 
+        /即插即用”模式，而该486主板不支持即插即用。因此将网卡设为“人工跳线调整”模式，并查看说明书，将网卡的IRQ和I/O值设为15和30031FH。重新开机，寻找新硬件，报告找到NE2000兼容网卡，并自动安装了相应的协议和驱动程序(也可安装随卡自带的驱动程序)，使用时一切正常。<br>
+        　　小结：要实现即插即用功能，必须要有支持即插即用BIOS的主板和支持即插即用的操作系统(如Windows95或OS/2 
+        WARP)，其中较为重要的是主板的BIOS，它负责给硬件分配资源，避免冲突。在非即插即用主板上，由于BIOS没有给硬件分配资源，Windows95不一定能识别网卡。此时，可考虑将网卡设为“人工跳线调整”模式。<br>
+        　　二、网卡在Windows95中工作不正常<br>
+        　　安装好网卡后，手工将IRQ和I/O值设为3和200H～220H，启动微机进入Windows95，报告网络适配器工作不正常。查看资源列表，原来的两项值均被COM2和声卡占用，存在冲突。在Windows95中，取消自动配置，将上述两项值改为15和300H～330H，重新启动微机，仍报告工作不正常，运行网卡诊断盘，发现IRQ和I/O值仍为改动前的值。打开机箱，手工将跳线调整为与改动后的值相对应。重新开机，一切正常。<br>
+        　　小结：网卡处于“人工调整跳线”模式时，不但要注意所设定的值不能与其它设备冲突，而且必须与Windows95中的配置相对应，软件配置改动后，相应的跳线也要随之改动。(北京 
+        唐 皓) </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：<a
+        href="index.htm">《电脑报》1998年1月12日第2期36版</a></font></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

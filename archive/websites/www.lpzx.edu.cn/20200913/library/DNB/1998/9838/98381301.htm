@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>创建电子表格<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp;&nbsp;&nbsp;&nbsp; 
+        电子表格是用户非常熟悉和经常使用的。它类似实际的表格，逻辑清楚、形式简洁，用VB编写的软件若能提供这种功能，让你的用户可以轻松输入一大堆数据无疑是大受欢迎的，如要录入全校各班级的课程表，就可以创建一张电子表格。<br>
+        　　首先在VB中选择MSFlexGrid控件，如果在VB的工具箱中找不到这个控件，那可通过在菜单“工程/部件…”弹出的对话框中选中“Microsoft 
+        FlexGrid 5.0 Control”添加该控件。<br>
+        　　然后建立窗体frmKCB，安放FlexGrid 控件设置其属性FormatString为以下字符串：“|星期一|星期二|星期三|星期四|星期五;|1|2|3|4|5|6|7|8|9|10”<br>
+        　　安放按钮控件，公共对话框控件，调节各控件的大小、位置并为相应事件编写代码：<br>
+        　　Option Explicit<br>
+        　　Private Sub Command1_Click(Index As Integer)<br>
+        　　Select Case Index<br>
+        　　Case 0<br>
+        　　CommonDialog1.ShowOpen<br>
+        　　′.......以下代码省略<br>
+        　　Case 1<br>
+        　　CommonDialog1.ShowSave<br>
+        　　′.......以下代码省略<br>
+        　　Case 2<br>
+        　　Unload Me<br>
+        　　End Select<br>
+        　　End Sub<br>
+        　　在窗体上增加了一个文本框。并设置其Visible属性为False。在Grid控件的Click事件中编写代码，把文本框移动到点击的单元格上，然后调整它的大小使之与单元格大小一样，读出单元格的内容到文本框，然后设置文本框Visible属性为True，并获得焦点。当在文本框输入内容后，在文本框Change事件中编写代码：把文本框内容写入Grid的单元格中。<br>
+        　　Private Sub msfgdKCB_Click()<br>
+        　　With msfgdKCB<br>
+        　　txtF.Left=CellLeft＋80<br>
+        　　txtF.Top=CellTop<br>
+        　　txtF.Height=CellHeight<br>
+        　　txtF.Width=CellWidth＋30<br>
+        　　txtF.Text=Text<br>
+        　　txtF.Visible=True<br>
+        　　txtF.SetFocus<br>
+        　　End With<br>
+        　　End Sub<br>
+        　　Private Sub txtF_Change()<br>
+        　　msfgdKCB.Text=txtF.Text<br>
+        　　End Sub<br>
+        　　好了，现在我们拥有了自己的电子表格，你可以轻松输入需要的内容了。(重庆　晓　文)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月5日第38期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

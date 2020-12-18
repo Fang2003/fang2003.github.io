@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>请你翻译T9820译文：<br>
+        Visual Basic使用技巧<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        　 在一个与工具条关联的图片列表控件中添加和删除图片。<br>
+        　　当一个工程仍处于设计状态时，我们需要保证在一个与工具条关联的图片列表控件中添加和删除图片时的灵活性。这是因为，当一个图片列表控件与一个工具条关联的时候，你不能动态地改动图片列表控件中的图片。我们可以使用以下这种办法来避免这一限制：<br>
+        　　1往图片列表控件中加入位图图片并为加入的每张位图赋予一个唯一的关键字。<br>
+        　　2往工具条控件中加入按钮并将位图图片的关键字赋给按钮关键字。每一个带位图的按钮的关键字应该与图片列表控件中相应位图的关键字一致。诸如tbrSeparator、tbrPlaceHolder不带位图的按钮没有关键字。<br>
+        　　3在窗体的Load加载事件代码中将图片列表控件与工具条关联起来：<br>
+        　　Set ToolBar1ImageList=ImageList1<br>
+        　　4将位图图片赋给工具条上的按钮:<br>
+        　　Dim myButton as Variant<br>
+        　　For Each myButton in ToolBar1Buttons<br>
+        　　If myButtonKey&lt;&gt;Empty Then<br>
+        　　myButtonImage=myButtonKey<br>
+        　　′如果关键字是可读的<br>
+        　　′就将其赋给myButton的Description和ToolTipText属性<br>
+        　　myButtonDescription=myButtonKey<br>
+        　　myButtonToolTipText=myButtonKey<br>
+        　　Endif<br>
+        　　Next<strong>&nbsp; (陕西　陈　剑）</strong><br>
+        　　<strong>请你翻译第20期（T9820）幸运读者：</strong><br>
+        　<font face="楷体_GB2312">　潘海英　河北承德　　　裴　培　湖北黄石<br>
+        　　胡旭光　内蒙古包头　　林　静　重庆<br>
+        　　林　雨　北京　　　　　赖鸿辉　江西吉安<br>
+        　　廖自力　四川　　　　　谢静芳　湖南湘潭<br>
+        　　曾红生　广东南海　　　王　东　黑龙江佳木斯</font><br>
+        　　<strong>以上读者将获得北京实达铭泰开发的汉化、翻译软件《东方快车98》一套。<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月21日第49期4版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> V012 - 结构函数（Framework）</font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+FindText<br><br>string := FindText(&quot;searchString&quot;, scopeIconID, textOrKeywords, matchPattern, resultsInContext, <br><br>convertResultsToPageIDs, searchInBackground)<br><br>表示搜寻某个字串　在 searchString <br><br>中填入所要搜寻的字串　而搜寻的地方则在後面的引数中表示　 <br><br>GetTextContaining<br><br>string := GetTextContaining(n [, m, maxlen])<br><br>查询某个特定的字串　这个字串为搜寻动作後指定的那一个字　如　 <br><br>string := GetTextContaining(5) <br><br>或者是二个指定位置之间的字串　这二个位置分别是所搜寻符合的字　如　 <br><br>string := GetTextContaining(5, 10) <br><br>Keywords<br><br>string := Keywords(IconID@&quot;IconTitle&quot;) <br><br>查询某个特定图示的关键字　如果关键字多於一个以上　则关键字之间会以 <br><br>Enter 键区隔它　所以一行之中的字串表示一个关键字　 <br><br>PageContaining<br><br>ID:=PageContaining(IconID@&quot;IconTitle&quot;[, @&quot;framework&quot;])<br><br>查询含有此图示的结构图示编号　也就是查询含有此页的结构图示编号　 <br><br>PageFoundID<br><br>ID := PageFoundID(n)<br><br>当使用到找寻 Match <br><br>的功能时　本函数可以查询特定的图示编号　而这个图示是符合找寻的结果　如　PageFoundID(1) <br><br>表示第一个符合找寻结果的图示编号　同理 PageFoundID(2) <br><br>表示第二个符合找寻结果的图示编号　 <br><br>PageFoundTitle<br><br>title := PageFoundTitle(n [,m]) <br><br>当使用到找寻 Match <br><br>的功能时　本函数可以查询特定的图示名称　而这个图示是符合找寻的结果　如果同时使用了二个引数 <br><br>n 与 m　则结果是这二个图示间所有的图示名称　 <br><br>PageHistoryID<br><br>ID := PageHistoryID(n [, m]) <br><br>查询最近所看过的页图示编号　例如　PageHistoryID(1) <br><br>表示最近这一次看过的页图示编号　PageHistoryID(2) <br><br>表示上上一次看过的页图示编号　 <br><br>PageHistoryTitle<br><br>title := PageHistoryTitle(n [, m])<br><br>查询最近所看过的页图示名称　此函数的用法与上个指令相同　 <br><br>PurgePageHistory<br><br>PurgePageHistory()<br><br>将看过的图示的记忆清除　如此程式就不记得使用者看过那些页了　<br><br>曾安德　编著
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001114160547
+<div align="center"><a href="xwpl_339.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

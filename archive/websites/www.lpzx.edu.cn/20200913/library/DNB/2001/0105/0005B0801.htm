@@ -1,0 +1,208 @@
+<html><!-- #BeginTemplate "/模板/soft.dwt" -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>用VB编写拼图游戏</title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/_25C4_25A3_25B0_25E5/cpcw.css">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> | <a href="library/DNB/2001/0105/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+  </table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="http://www.lpzx.edu.cn/library/DNB/2001/0105/tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava">本期看点—— </td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> 
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="library/DNB/2001/Templates/index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->{第05期}<!-- #EndEditable --> 
+            </a>&gt;&gt;</font>软件世界</td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->{用VB编写拼图游戏}<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="5" align="center">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->{ 相信许多朋友都玩过拼图游戏，在VB6.0中有一个PictureClip控件它可以把一张图片划分为若干个单元，用它来设计拼图游戏，非常方便。你要是有兴趣，就跟我来吧！<br>
+              1.首先要准备一张大小适中的图片。<br>
+              2.单击“工程”→“部件”，然后找到“Microsoft PictureClip Controls6.0”，选中后PictureClip控件就会出现在工具箱中。<br>
+              3.将PictureClip控件拖到窗体上，在属性窗口中设置其属性：点击Picture属性，加入刚才准备的图片。将Cols、Rows属性均设为3，这样就将图片划分为3行3列9个单元了。这些单元用GraphicCell属性进行编号，编号从0开始，编号的顺序是从左到右，从上到下。我们这样来访问这些单元，比如：在From＿load过程中加入下面的语句：<br>
+              Form1.Picture＝PictureClip1.GraphicCell0<br>
+              一运行就会发现，窗体上显示的是PictureClip1中图片左上角的一块了。<br>
+              4.在窗体上摆上9个Image控件，为了减化程序代码，我们使用一个Image控件数组。那么如何建立控件数组呢？先在窗体上放置一个控件Image1，然后点击“复制”按钮，再点击“粘贴”按钮，将询问是否要建立一个控件数组，单击“是”即可。连续单击“粘贴”按钮，增加数组成员，这样窗体上就有了Image10、Image11、......Image18等9个Image控件了。这些控件是用来显示图片的9个单元，即每一个图块用一控件显示。<br>
+              这样就差不多了，再加上一个命令按钮Command1和两个标签控件Label1、label2，将它们的Caption属性分别设为“开始”、“步数”和“0”。界面的设计就算大功告成了。<br>
+              程序代码如下：<br>
+              Option Explicit<br>
+              Dim i As Integer′定义循环变量<br>
+              Dim j As Integer<br>
+              Dim step As Integer<br>
+              Dim x8 As Integer′定义一个数组，用来存放随机编号<br>
+              Private Sub Command1＿Click<br>
+              init′初始化游戏<br>
+              Command1.Enabled ＝ False′使开始按钮失效<br>
+              End Sub<br>
+              Private Sub Form＿Load<br>
+              Randomize<br>
+              End Sub<br>
+              Sub init′初始化游戏子程序<br>
+              For i ＝ 0 To 7′随机产生不重复的8个编号（从0到7）<br>
+              a0 xi ＝ IntRnd  8<br>
+              For j ＝ 0 To i - 1<br>
+              If xi ＝ xj Then GoTo a0<br>
+              Next<br>
+              Next<br>
+              For i ＝ 0 To 7<br>
+              Image1i.Enabled ＝ True′使Image1响应鼠标事件<br>
+              Image1xi.Picture ＝ PictureClip1.GraphicCelli′让图片的8个单元分别赋予 
+              8个Image控件<br>
+              Next<br>
+              Image18.Picture ＝ LoadPicture″″′空位用于移动图片<br>
+              End Sub<br>
+              Private Sub Image1＿ClickIndex As Integer′注意索引值的运用<br>
+              Select Case Index Mod 3′把9个Image控件分成三列<br>
+              Case 0′当鼠标点击第1列时<br>
+              If Image1Index + 1.Picture ＝ LoadPicture″″ Then′判断右边是否为空<br>
+              Image1Index + 1.Picture ＝ Image1Index.Picture′交换图片<br>
+              Image1Index.Picture＝LoadPicture″″ win′测试是否拼图成功<br>
+              End If<br>
+              Case 1′当鼠标点击第2列时<br>
+              If Image1Index - 1.Picture ＝ LoadPicture″″ Then′判断左边是否为空<br>
+              Image1Index - 1.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              If Image1Index + 1.Picture ＝ LoadPicture″″ Then′判断右边是否为空<br>
+              Image1Index + 1.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              Case 2′当鼠标点击第3列时<br>
+              If Image1Index - 1.Picture ＝ LoadPicture″″ Then′判断左边是否为空<br>
+              Image1Index - 1.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              End Select<br>
+              Select Case Index\ 3′把9个Image控件分成三行<br>
+              Case 0′当鼠标点击第1行时<br>
+              If Image1Index + 3.Picture ＝ LoadPicture″″ Then′判断下边是否为空<br>
+              Image1Index + 3.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              Case 1′当鼠标点击第2行时<br>
+              If Image1Index - 3.Picture ＝ LoadPicture″″ Then′判断上边是否为空<br>
+              Image1Index - 3.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              If Image1Index + 3.Picture ＝ LoadPicture″″ Then′判断下边是否为空<br>
+              Image1Index + 3.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              Case 2′当鼠标点击第3行时<br>
+              If Image1Index - 3.Picture ＝ LoadPicture″″Then′判断上边是否为空<br>
+              Image1Index - 3.Picture ＝ Image1Index.Picture<br>
+              Image1Index.Picture＝LoadPicture″″<br>
+              win<br>
+              End If<br>
+              End Select<br>
+              End Sub<br>
+              Sub win′测试是否拼图成功的子程序<br>
+              Dim num As Integer<br>
+              step＝step + 1′步数加1<br>
+              Label2.Caption＝ step<br>
+              For i ＝ 0 To 8′判断图块是否全部就位<br>
+              If Image1i.Picture＝ PictureClip1.GraphicCelliThen num = num + 
+              1<br>
+              Next<br>
+              If num ?＝8 Then<br>
+              MsgBox ″你真棒！″<br>
+              For i＝0 To 8<br>
+              Image1 i.Enabled＝False′使之不响应鼠标事件<br>
+              Next<br>
+              Command1.Enabled＝True′恢复命令按钮<br>
+              End If<br>
+              End Sub<br>
+              这个程序可能有些难度，不过玩玩自己编的游戏，一定会让PFans兴奋不已。我想编程的乐趣大概就在于此吧，嘿嘿。<br>
+              }<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+        如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate --></html>

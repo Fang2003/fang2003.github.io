@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>有了毛病赶快医<br>
+        ——Trident4D－WAVE声卡的除障经验<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left">&nbsp;&nbsp;<font
+        color="#369681">&nbsp; 时下，PCI插卡十分流行，就连一向是ISA天下的声卡，也在PCI槽中“安下了家”。如今的PCI声卡处理芯片真是百“芯”齐鸣，不仅有流行的EnsoniqAudioPCI芯片、EssMaestro－1芯片、S3SonicVibes芯片，更有EssMaestro－2等最新型的PCI二代芯片，当然，也不能漏掉在Comdex大展上崭露头脚的创通DubbedSoundBlasterLive所使用的EMU10K1芯片。然而，本人近来在市场上购得一块太阳花4D－WAVE声卡，使用的却是罕见的Trident4D－WAVE芯片。这块声卡是真正64位复音波表声卡，64个声音通道可自行设置分配给WAVE和MIDI的比例。此声卡随卡带有一张光盘，上有驱动程序和2MB、4MB、6MB的波表样本，音质比一般声卡要好很多，且只卖二百多元，真是价廉物美。但是，在使用中却遇到了一些问题。<br>
+        </font>&nbsp;<font color="#369681">&nbsp; 首先，在安装完WIN95的驱动程序后，系统自动安装了DOS驱动程序，但启动运行到WAVEINITEXE命令行时，报告驱动程序没有找到声卡的主环境，重新启动多次后也无济于事。查看硬件后，发现没有问题，便怀疑是CONFIGSYS和AUTOEXECBAT两文件中有内存驻留程序与之冲突，就以安全模式启动，这时程序能正常执行。于是把CONFIGSYS和AUTOEXECBAT中的命令行逐一加注REM语句，最后发现是EMM386EXE与之有冲突。本以为是EMM386EXE的参数设置问题，谁知改了所有参数还是不行，看来只能去掉EMM386EXE。可这样一来，基本内存就骤减到300K了，满足不了多数应用程序的需要，真是没办法。谁知，在给WAVEINITEXE命令行加上LH调入高端内存后，便一切正常了，但只要一把LH去掉，就又出现故障，试了多次都是这样。也许是在基本内存中放了EMM386后，再放入的WAVEINIT便会与之发生冲突吧。<br>
+        </font>&nbsp;<font color="#369681">&nbsp; 
+        此后，又过了一段时间，我发现此卡所默认的IRQ9不能被大多数DOS游戏识别。后来，我尝试过用《电脑报配套光盘》上的TWEAK软件修改了声卡的IRQ，这样游戏能识别出来了，可是TWEAK未注册过，每次使用前都要修改数值，一重新启动就又变了。不久，我又找到了另一种更有效的方法，具体如下：重新启动，进入CMOS设置，把PNP/PCIConfigurationSetup中的ResourcesControlledby由AUTO(自动)改为MANUL(手动)，再将IRQ9设为ISA专用，这时声卡便使用IRQ12，再将IRQ12设为ISA专用，声卡就使用了IRQ5，这样大多数游戏便可以识别该声卡了。有兴趣的朋友可以试一试。但要注意的是各机器的IRQ使用情况不一样，总之直到声卡使用IRQ5或IRQ7等多数游戏程序能识别的IRQ为止。<br>
+        </font>&nbsp;<font color="#369681">&nbsp; 另外还有一点，是关于WAVEINITEXE的参数问题。在声卡说明书上说支持模拟SBPro，而WAVEINITEXE的参数中还支持设置为模拟SB16，这样在游戏中就能把音效设置为SoundBlaster16，把音乐设置为GeneralMIDI。最重要的是/n这个参数，如果是使用TX、LX或BX等新型芯片组的主板，就非得加上，否则声卡就会出错。<br>
+        </font>&nbsp;<font color="#369681">&nbsp; 
+        虽然这块声卡有上述一些小问题，但其在音质方面的表现出色，令人十分满意，仍算是一块非常超值的声卡。(江苏陶轩)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年9月28日第37期40版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

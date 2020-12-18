@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>如何调用UCDOS/WIN 7.0的天然码</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>如何调用UCDOS/WIN 
+        7.0的天然码<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　如果你是UCDOS/WIN 
+        7.0的用户，翻开使用手册第41面的列表，一定可以发现，居于首位的就是“天然码”，而且是九十年代唯一进入UCDOS/WIN 
+        7.0的新增编码。经笔者试用，UCDOS/WIN 7.0的天然码采用了一种反常规加密处理，必须经过以下转换，才能正常调用。方法是：<br>
+        　　当你安装UCDOS/WIN 7.0之后，请在UCDOS目录下执行以下命令：<br>
+        　　1 IMDMNG TRM.IMD T.DIC回车<br>
+        　　2 IMDMNG T.DIC TRM.IMD(选择“Y”删除原文件)回车<br>
+        　　3 COPY TRM.IMD DRV(选择“Y”复盖原文件)回车<br>
+        　　之后，输入LIMD TRM回车，按ALT＋F7即可调出天然码；另外，也可输入SETUP，再按功能键F5调出选择窗口，用鼠标或空格健选中“天然码”并存盘退出。以后启动UCDOS/WIN 
+        7.0就可直接用ALT＋F7调用天然码了。<strong>（湖北　张清风）</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月9日第9期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

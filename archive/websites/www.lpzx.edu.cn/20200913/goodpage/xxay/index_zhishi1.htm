@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>知识内容</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+<!--
+function MM_timelinePlay(tmLnName, myID) { //v1.2
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,propNum,theObj,firstTime=false;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (myID == null) { myID = ++tmLn.ID; firstTime=true;}//if new call, incr ID
+  if (myID == tmLn.ID) { //if Im newest
+    setTimeout('MM_timelinePlay("'+tmLnName+'",'+myID+')',tmLn.delay);
+    fNew = ++tmLn.curFrame;
+    for (i=0; i<tmLn.length; i++) {
+      sprite = tmLn[i];
+      if (sprite.charAt(0) == 's') {
+        if (sprite.obj) {
+          numKeyFr = sprite.keyFrames.length; firstKeyFr = sprite.keyFrames[0];
+          if (fNew >= firstKeyFr && fNew <= sprite.keyFrames[numKeyFr-1]) {//in range
+            keyFrm=1;
+            for (j=0; j<sprite.values.length; j++) {
+              props = sprite.values[j]; 
+              if (numKeyFr != props.length) {
+                if (props.prop2 == null) sprite.obj[props.prop] = props[fNew-firstKeyFr];
+                else        sprite.obj[props.prop2][props.prop] = props[fNew-firstKeyFr];
+              } else {
+                while (keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]) keyFrm++;
+                if (firstTime || fNew==sprite.keyFrames[keyFrm-1]) {
+                  if (props.prop2 == null) sprite.obj[props.prop] = props[keyFrm-1];
+                  else        sprite.obj[props.prop2][props.prop] = props[keyFrm-1];
+        } } } } }
+      } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+      if (fNew > tmLn.lastFrame) tmLn.ID = 0;
+  } }
+}
+
+function MM_timelineGoto(tmLnName, fNew, numGotos) { //v2.0
+  //Copyright 1997 Macromedia, Inc. All rights reserved.
+  var i,j,tmLn,props,keyFrm,sprite,numKeyFr,firstKeyFr,lastKeyFr,propNum,theObj;
+  if (document.MM_Time == null) MM_initTimelines(); //if *very* 1st time
+  tmLn = document.MM_Time[tmLnName];
+  if (numGotos != null)
+    if (tmLn.gotoCount == null) tmLn.gotoCount = 1;
+    else if (tmLn.gotoCount++ >= numGotos) {tmLn.gotoCount=0; return}
+  jmpFwd = (fNew > tmLn.curFrame);
+  for (i = 0; i < tmLn.length; i++) {
+    sprite = (jmpFwd)? tmLn[i] : tmLn[(tmLn.length-1)-i]; //count bkwds if jumping back
+    if (sprite.charAt(0) == "s") {
+      numKeyFr = sprite.keyFrames.length;
+      firstKeyFr = sprite.keyFrames[0];
+      lastKeyFr = sprite.keyFrames[numKeyFr - 1];
+      if ((jmpFwd && fNew<firstKeyFr) || (!jmpFwd && lastKeyFr<fNew)) continue; //skip if untouchd
+      for (keyFrm=1; keyFrm<numKeyFr && fNew>=sprite.keyFrames[keyFrm]; keyFrm++);
+      for (j=0; j<sprite.values.length; j++) {
+        props = sprite.values[j];
+        if (numKeyFr == props.length) propNum = keyFrm-1 //keyframes only
+        else propNum = Math.min(Math.max(0,fNew-firstKeyFr),props.length-1); //or keep in legal range
+        if (sprite.obj != null) {
+          if (props.prop2 == null) sprite.obj[props.prop] = props[propNum];
+          else        sprite.obj[props.prop2][props.prop] = props[propNum];
+      } }
+    } else if (sprite.charAt(0)=='b' && fNew == sprite.frame) eval(sprite.value);
+  }
+  tmLn.curFrame = fNew;
+  if (tmLn.ID == 0) eval('MM_timelinePlay(tmLnName)');
+}
+
+function MM_initTimelines() {
+    //MM_initTimelines() Copyright 1997 Macromedia, Inc. All rights reserved.
+    var ns = navigator.appName == "Netscape";
+    document.MM_Time = new Array(1);
+    document.MM_Time[0] = new Array(1);
+    document.MM_Time["Timeline1"] = document.MM_Time[0];
+    document.MM_Time[0].MM_Name = "Timeline1";
+    document.MM_Time[0].fps = 15;
+    document.MM_Time[0][0] = new String("behavior");
+    document.MM_Time[0][0].frame = 201;
+    document.MM_Time[0][0].value = "MM_timelineGoto('Timeline1','1')";
+    document.MM_Time[0].lastFrame = 201;
+    for (i=0; i<document.MM_Time.length; i++) {
+        document.MM_Time[i].ID = null;
+        document.MM_Time[i].curFrame = 0;
+        document.MM_Time[i].delay = 1000/document.MM_Time[i].fps;
+    }
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+@import "mdd7.css";
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_timelinePlay('Timeline1')" background="2.jpg">
+<table width="562" border="0" cellspacing="0" cellpadding="0" height="688" bordercolor="#FF0033">
+  <tr> 
+    <td width="498" height="46" bgcolor="#FFFFFF"><img src="xian.gif" width="498" height="24"></td>
+    <td width="64" height="46"><img src="angle.gif" width="70" height="60"></td>
+  </tr>
+  <tr> 
+    <td width="498" align="left" valign="top" height="79"> 
+      <div align="left"><font color="#0000FF"><b> </b></font> 
+        <div id="Layer1" style="position:absolute; width:116px; height:111px; z-index:1; left: -100px; top: 33px; overflow: hidden"><font color="#0000FF"><b><img src="book.gif" width="84" height="75" vspace="0" hspace="0" name="Image1"></b></font></div>
+        <div align="center"><font color="#0000FF"><b><font color="#FF3333"><span class="mdd6">古代奥运会的起源－－庄严的仪式盛典<br>
+          <br>
+          古代奥运会的起源</span>　 </font></b></font></div>
+      </div>
+    </td>
+    <td width="64" align="center" valign="middle" rowspan="2"><img src="right.gif" width="65" height="395"></td>
+  </tr>
+  <tr>
+    <td width="498" align="left" valign="top"> 
+      <p>　　<span class="mdd7">在古代希腊为了能得到身体强壮的士兵，赢得战争的胜利。希腊诸邦国家都建有专供人们进行锻炼的练身场，练身场一度成为古希腊诸城邦的标志之一。 
+        <br>
+        　　古希腊的练身场，通常是一大块长方形的场地，场地四周建有回廊练身场上有跑道，跑道四周有看台，练身场没有屋顶，竞技练习都在露天进行，古代希腊人认为晒太阳是健康的标志，白皮肤则意味着身体不健壮。在古希腊进练身场，也是公民的一种荣誉。 
+        　　<br>
+        　　在古希腊，人们崇尚体育运动，所以几乎每个希腊自由的公民都到练身场去受过训练，尤其是那些贵族，他们认为只有到练身场去受过训练的人，才算是有教养的人，否则就要将他们归入做手艺和出身低微的人之列。 
+        　　<br>
+        　　古希腊进行如此严格而残酷的体育锻炼完全是为了适应战争的需要。而这种体育竞赛，也往往跟古希腊的宗教祭祀活动等紧密联系起来。但在今天我们的体育运动已完全和以祭祀神灵来获得战争胜利的方式没有任何联系了，体育运动的胜利，对于弘扬民族精神，提高民族自尊心来说是不可缺少的。体育运动从古代发展到今天，已赋予我们新的使命 
+        　　</span><br>
+        　　　　　　　　　　　<span class="mdd6"><b><font color="#FF0000">庄严的仪式盛典</font></b></span> 
+        　<br>
+        　<br>
+        　　<span class="mdd7">古代奥运会作为一个宗教性的赛会，每天都举行各种不同的仪式，其中最为重要的当推对宙斯神的祭礼。宙斯祭礼是安排在运动会的第一天举行，参加者只有成年男子，少年被排斥在外。举行祭礼的地方是在赫拉神庙和珀罗普斯墓东面的宙斯大祭坛。献给宙斯的祭礼后，人们又开始依次敬祭其他神位。 
+        　　<br>
+        　　在对神灵表示完敬意之后，就开始举行宣誓仪式，主要是运动员和裁判员在市政大厅的宙斯像前举行。接着，赛会的裁判员也在这里举行相似的宣誓。 　　<br>
+        　　古代奥运会的发奖仪式场面宏阔、热烈、壮观，它的规模，用现在的眼光看，也足以令人感叹。古代奥运会的授奖台设在天神宙斯像前。对优胜者奖以野橄榄叶编成的桂冠，制备程序十分隆重。优胜者站在用黄金和象牙制成的授奖台上接受奖品，头戴月桂花环、身着绛红色礼服、手持棕榈树枝的裁判员，用高亢而庄严的声调向公众宣布优胜者的姓名、个人历史、父母姓名、所属城邦国家的名称，以及 
+        他们在本界运动会上获胜的项目，并同时向优胜者授予一枝棕榈树叶。随后优胜者被观众簇拥着参加各种庆祝活动，成千上万羽信鸽腾空而起，直上云霄，把奥林匹克竞技优胜者的英名和功绩传报四方。橄榄冠成为古代奥运会的至高奖品，获得它是最高的荣誉。 
+        </span> </p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

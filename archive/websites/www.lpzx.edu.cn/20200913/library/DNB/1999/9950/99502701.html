@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 建立本地CGI调试环境</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>大众网络</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='internet.html'>大众网络</A> &gt; 建立本地CGI调试环境</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 建立本地CGI调试环境 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　现在CGI程序已被广泛使用，不少的免费主页都开通了CGI服务，而且有不少的网站都提供非常酷的免费的CGI程序下载!但是如果在网上调试CGI程序，那真是费时、费力、费网费!所以现在不少朋友都希望在自己的电脑上把CGI程序调试好，再上传到主机上，这样不但可以减少反复上传的麻烦而且还可以节省下来一大笔网费哟！<br>
+　　首先你要一个perl 程序，本例中使用ActivePERL518，这个程序主要是用来负责CGI脚本的解释；然后再安装ohttpd203，这是一个虚拟主机软件。<br>
+　　安装完成后你的硬盘里就会有 perl 和httpd两个目录，perl是ActivePERL的安装目录； httpd是ohttpd的安装目录，它有一个CGI－BIN的子目录，你的程序就是放在那里。<br>
+　　httpd程序我们需进行一些简单的设置：<br>
+　　1.选择Properties，用鼠标点击“Add”，添加虚拟主机，按Edit配置它的属性，为服务器分配不同的IP地址（如：127.0.0.1），WWW目录等。如果用于网络，IP地址要与你的网络主机地址相同。<br>
+　　2.选择你要修改的WEB主机，点按钮Web Serverd Global Setting，配置服务器。在这里有两项属性需要修改，其余可以取默认值：第一个是External按钮，如果你打算使用Perl CGI，而且已经安装了Perl for WIN32，在这里就必须配置使用Perl脚本时的扩展名和Perl解释器的绝对路径。在“Virtual”栏内输入“.pl”，在“Actual”栏内输入Perl解释器的绝对路径，例如“c:\perl\bin\perl.exe”。第二个是Advanced按钮，在此栏中有五个选框，一般凭个人爱好选择。<br>
+　　3.按钮Default Virtual Setting：是默认设定。点击弹出窗口中的“Edit”按钮后会弹出一个新的窗口，编辑它的设定，如：<br>
+　　(1)Server<br>
+　　Server IP：是你WEB服务器的IP地址，默认值是：“127.0.0.1”；<br>
+　　Server Name：服务器的名称；<br>
+　　Server Root：WEB主页存放的绝对路径；<br>
+　　Default Index：首页的文件名，默认的是“index.html”；<br>
+　　Admin E－mail：EMAIL的地址。<br>
+　　(2)Security<br>
+　　这里选择安全等级。第一项设定为只读；第二项设定用户名和密码来执行一些权限；第三项设定每个用户使用的目录。(6)、(7)两项可以增加新的组、新的用户以及限制某些目录等。<br>
+　　(3)Alias<br>
+　　该标签的功能类似于Unix下NCSA服务器中虚拟目录命令“Alias”。例如，你在主页中使用一个文件，需要“http://www.yourmane.com/xx/xx.xxx"这段代码,而使用了虚拟目录之后，就可以使用/xx/xx.xxx了！<br>
+　　(4)Standard CGI<br>
+　　CGI目录的设定，一般用cgi－bin这个目录放在 你的程序主页中http://127.0.0.1/cgi－bin/你的程序目录/＊.cgi（或＊.pl）<br>
+　　(5)Users and Groups<br>
+　　当在“Security”标签中选中第三项时，此标签设定才有效，即可以增加新的组，在组中添加用户。<br>
+　　(6)Access Control list<br>
+　　当在“Security”标签中选中第三项，而且“Users and Groups”标签中有组，组中有用户时，可以针对某个组或者某个用户设定专门的使用目录，以保障服务器的安全。<br>
+　　(7)Redirection<br>
+　　重新导向的页面的设定。<br>
+　　(8)Windows CGI
+　　标签的设定，针对的是用VB制作的Windows格式的CGI程序。<br>
+　　(9)ISAPI Extension<br>
+　　ISAPI扩展。<br>
+　　(10)Indexing<br>
+　　如果浏览某页时，找不到该页面，服务器将指向的文件。　<br><b>　（北京　李　量）</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99502701.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

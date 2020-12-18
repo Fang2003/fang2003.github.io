@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font color="#004080" face="黑体"><strong>Delphi 
+        3.0中的函数调用模式<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　在用Delphi 
+        3.0开发软件时，出现了硬件驱动程序(DLL)中的函数和过程不能正常调用的问题，该硬件由英国Schlumberger公司生产，驱动程序用汇编语言编写的。其《编程指南》给出的Microsoft 
+        C的示范程序均能正常运行。但运行此软件时现出的错误提示为：<br>
+        　　Access violation at address ×××××××× in module……<br>
+        　　经仔细分析，才发现问题出现在函数调用模式上。<br>
+        　　Delphi 3.0支持五种调用模式：register、cdecl、pascal、stdcall和safecall。根据调用模式的不同，参数可以通过CPU的寄存器或堆栈传递给函数和过程。register模式使用CPU的三个寄存器传递参数，而其它模式则用堆栈来传递参数。在register和pascal模式下从左至右传递参数，即参数表中最左边的参数最先被求值并传递，而最右边的参数最后求值并传递。另三种模式cdecl、stdcall和safecall则从右至左传递参数。这些模式中除了cdecl外，都是由过程和函数在返回时清除堆栈中的参数，而对于cdecl模式，需由调用者在调用结束时清除堆栈中的参数。<br>
+        　　如何选择调用模式，有以下三条规则：<br>
+        　　1.Delphi 3.0使用register模式作为缺省调用模式以提高运行效率。<br>
+        　　2.如果有调用关系的几个模块是用不同语言编写的，其接口应使用stdcall模式。<br>
+        3.如果要实现双界面函数和过程，应使用safecall模式。<br>
+        　　所以解决我们的问题只要选用stdcall模式即可，Schlumberger公司的《编程指南》上在Microsoft 
+        C环境下的DLL函数说明(仅举两例)为：<br>
+        　　void(FAR PASCAL ＊Imp_ Connect)(unsigned short far＊,short far＊);<br>
+        　　void(FAR PASCAL ＊Imp_ Init)(short far＊,short far＊);<br>
+        　　相应的在Delphi 3.0下DLL函数引入说明为：<br>
+        　　procedure Imp_ Connect(var CardAddress:word;var CardHandle:smallint);stdcall;<br>
+        　　procedure Imp_ Init(var Poll_Tab:smallint;var ErrorFlag:smallint;var 
+        CardHandle:smallint);stdcall;<br>
+        　　这样修改以后，程序即可正常运行(原来我们没有说明调用模式，即使用缺省的register模式)，由此我们也可得出一个经验：对一些高版本的新软件，使用时要注意改进和扩充，并经常看看帮助文件，定会大有裨益。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月23日第11期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+.mstheme     { nav-banner-image: url(citbanna.gif); separator-image: url(citsepa.gif); 
+               list-image-1: url(citbul1a.gif); list-image-2: 
+               url(citbul2a.gif); list-image-3: url(citbul3a.gif); 
+               navbutton-horiz-pushed: url(citnavhp.gif); 
+               navbutton-horiz-normal: url(citnavha.gif); 
+               navbutton-horiz-hovered: url(citnavhh.gif); 
+               navbutton-vert-pushed: url(citnavhp.gif); 
+               navbutton-vert-normal: url(citnavha.gif); 
+               navbutton-vert-hovered: url(citnavhh.gif); 
+               navbutton-home-normal: url(cithomea.gif); 
+               navbutton-home-hovered: url(cithomeh.gif); 
+               navbutton-home-pushed: url(cithomep.gif); navbutton-up-normal: 
+               url(citupa.gif); navbutton-up-hovered: url(cituph.gif); 
+               navbutton-up-pushed: url(citupp.gif); navbutton-prev-normal: 
+               url(citbacka.gif); navbutton-prev-hovered: url(citbackh.gif); 
+               navbutton-prev-pushed: url(citbackp.gif); 
+               navbutton-next-normal: url(citnexta.gif); 
+               navbutton-next-hovered: url(citnexth.gif); 
+               navbutton-next-pushed: url(citnextp.gif) }
+.mstheme-bannertxt { font-size: 6; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-horiz-navtxt { font-size: 2; font-weight: bold; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-vert-navtxt { font-size: 2; font-weight: bold; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-navtxthome { font-size: 1; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-navtxtup { font-size: 1; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-navtxtprev { font-size: 1; color: rgb(0,0,0); font-family: 宋体 }
+.mstheme-navtxtnext { font-size: 1; color: rgb(0,0,0); font-family: 宋体 }
+ul           { list-style-image: url('citbul1a.gif') }
+ul ul        { list-style-image: url('citbul2a.gif') }
+ul ul ul     { list-style-image: url('citbul3a.gif') }
+a:link       { color: rgb(255,102,51) }
+a:visited    { color: rgb(153,153,51) }
+a:active     { color: rgb(255,51,0) }
+body         { color: rgb(0,0,0); background-color: rgb(204,255,102) }
+h1           { color: rgb(255,102,51) }
+h2, marquee  { color: rgb(51,204,0) }
+h3           { color: rgb(255,153,0) }
+h4           { color: rgb(255,51,102) }
+h5           { color: rgb(51,102,0) }
+h6           { color: rgb(255,102,51) }
+hr           { color: rgb(255,153,0) }
+button       { background-color: rgb(255,102,51); color: white; border-color: rgb(102,255,51) }
+label, .MSTHEME-LABEL { color: rgb(0,0,0) }
+textarea     { color: black; border-color: rgb(102,204,0) }
+fieldset     { color: black; border-color: rgb(102,204,0) }
+legend       { color: rgb(255,153,0) }
+select       { color: black; border-color: rgb(102,204,0) }
+table        { table-border-color-light: rgb(102,255,51); table-border-color-dark: 
+               rgb(102,204,0); color: rgb(0,0,0); border-color: rgb(102,204,0) }
+caption      { color: rgb(255,153,0) }
+th           { color: rgb(0,0,0); border-color: rgb(102,204,0) }
+td           { border-color: rgb(102,204,0) }
+.mstheme-bannertxt a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt a:visited { color: rgb(0,0,0) }
+.mstheme-bannertxt-g { color: rgb(0,0,0); text-align: left; vertical-align: middle; 
+               background-image: url('citbannd.gif'); font-family: 宋体 }
+.mstheme-bannertxt-g a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt-g a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-bannertxt-s { color: rgb(0,0,0); text-align: left; vertical-align: middle; font-family: 
+               宋体 }
+.mstheme-bannertxt-s a:active { color: rgb(0,0,0) }
+.mstheme-bannertxt-s a:link { color: rgb(0,0,0) }
+.mstheme-bannertxt-s a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:active { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:link { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citnavhd.gif'); font-family: 宋体 }
+.mstheme-horiz-navtxt-g a:active { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-g a:link { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-gs { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citnavhs.gif'); font-family: 宋体 }
+.mstheme-horiz-navtxt-gs a:active { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-gs a:link { color: rgb(0,0,0) }
+.mstheme-horiz-navtxt-gs a:visited { color: rgb(0,0,0) }
+.mstheme-navtxthome a:active { color: rgb(0,0,0) }
+.mstheme-navtxthome a:link { color: rgb(0,0,0) }
+.mstheme-navtxthome a:visited { color: rgb(0,0,0) }
+.mstheme-navtxthome-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('cithomed.gif'); font-family: 宋体 }
+.mstheme-navtxthome-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxthome-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxthome-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:active { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:link { color: rgb(0,0,0) }
+.mstheme-navtxtnext a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citnextd.gif'); font-family: 宋体 }
+.mstheme-navtxtnext-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtnext-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:active { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:link { color: rgb(0,0,0) }
+.mstheme-navtxtprev a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citbackd.gif'); font-family: 宋体 }
+.mstheme-navtxtprev-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtprev-g a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtup a:active { color: rgb(0,0,0) }
+.mstheme-navtxtup a:link { color: rgb(0,0,0) }
+.mstheme-navtxtup a:visited { color: rgb(0,0,0) }
+.mstheme-navtxtup-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citupd.gif'); font-family: 宋体 }
+.mstheme-navtxtup-g a:active { color: rgb(0,0,0) }
+.mstheme-navtxtup-g a:link { color: rgb(0,0,0) }
+.mstheme-navtxtup-g a:visited { color: rgb(0,0,0) }
+.mstheme-topbar-font a:active { color: rgb(0,0,0) }
+.mstheme-topbar-font a:link { color: rgb(0,0,0) }
+.mstheme-topbar-font a:visited { color: rgb(0,0,0) }
+.mstheme-topbar-font-g { font-size: 1; color: rgb(0,0,0); background-image: url('citglobl.gif'); 
+               font-family: 宋体 }
+.mstheme-topbar-font-g a:active { color: rgb(0,0,0) }
+.mstheme-topbar-font-g a:link { color: rgb(0,0,0) }
+.mstheme-topbar-font-g a:visited { color: rgb(0,0,0) }
+.mstheme-vert-navtxt a:active { color: rgb(0,0,0) }
+.mstheme-vert-navtxt a:link { color: rgb(0,0,0) }
+.mstheme-vert-navtxt a:visited { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-g { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citnavvd.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-g a:active { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-g a:link { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-g a:visited { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-gs { color: rgb(0,0,0); text-align: center; vertical-align: middle; 
+               background-image: url('citnavvs.gif'); font-family: 宋体 }
+.mstheme-vert-navtxt-gs a:active { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-gs a:link { color: rgb(0,0,0) }
+.mstheme-vert-navtxt-gs a:visited { color: rgb(0,0,0) }
+.mstheme     { navbutton-background-color: rgb(255,255,255); top-bar-button: 
+               url(citglobl.gif) }
+.mstheme-topbar-font { font-size: 1; color: rgb(0,0,0); font-family: 宋体 }
+body         { background-image: url('cittext.gif'); font-family: 宋体 }
+h1           { font-weight: normal; font-style: normal; font-size: 24pt; font-family: 宋体 }
+h2           { font-weight: normal; font-style: normal; font-size: 18pt; font-family: 宋体 }
+h3           { font-weight: normal; font-style: normal; font-size: 14pt; font-family: 宋体 }
+h4           { font-weight: normal; font-style: normal; font-size: 12pt; font-family: 宋体 }
+h5           { font-weight: normal; font-style: normal; font-size: 10pt; font-family: 宋体 }
+h6           { font-weight: normal; font-style: normal; font-size: 8pt; font-family: 宋体 }
+button       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+label, .MSTHEME-LABEL { font-size: 8pt; font-style: normal; font-family: 宋体 }
+textarea     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+fieldset     { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+legend       { font-size: 8pt; font-style: Normal; font-family: 宋体 }
+select       { font-size: 8pt; font-style: normal; font-family: 宋体; border-style: solid; 
+               border-width: 1pt }
+table        { font-style: normal; font-family: 宋体 }
+caption      { font-size: 14pt; font-style: Normal; font-family: 宋体 }
+th           { font-style: normal; font-family: 宋体 }
+marquee      { font-size: 14pt; font-family: 宋体 }

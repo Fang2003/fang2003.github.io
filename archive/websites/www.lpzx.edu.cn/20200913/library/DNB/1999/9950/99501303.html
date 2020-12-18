@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/cpcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- VB编程俱乐部</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/yjds.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>软件世界</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>50 期</A> &gt;  <A HREF='software.html'>软件世界</A> &gt; VB编程俱乐部</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 VB编程俱乐部 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　这是为悼念Prisoner而作的专题，他回答的问题多得数也数不清，可如今他却离我们远去了！<br>
+　　这期精选了他生命的最后阶段回答的6个问题如下。<br>
+      　　<b>问题1</b>：4×4的矩阵为：<br>
+　　1   2   3  4<br>
+　　5   6   7  8<br>
+　　9  10 11 12<br>
+　　13 14 15 空<br>
+　　随机打散后，有何算法可以保证回复到上面的排序形式。 <br>
+      　　<b>回答</b>：问题其实很简单，可以把二维数组先转化为一维数组，进行升序排序，然后再转化为二维数组。<br>
+      　　<b>问题2</b>：如何实现二进制&lt;－－&gt;十进制&lt;－－&gt;十六进制&lt;－－&gt;八进制的转换？<br>
+      　　<b>回答</b>：十进制转换为八进制、十六进制可以用Oct\Hex函数，注意返回的都是字符型。对于其他的转换，可以简单地把其他进制先转换为十进制。再把十进制转换为二进制，而其他进制转换为十进制只要简单的乘法和加法就行了。<br>
+      　　<b>问题3</b>：怎样点击窗体上的标签控件（显示主页地址）即可自动调出浏览器？怎样点击窗体上的标签控件（显示眉儿地址）即可自动调出E－mail软件？<br>
+      　　<b>回答</b>：使用API函数ShellExcute<br>
+　　Declare Function ShellExecute Lib ″shell32.dll″ Alias ″ShellExecuteA″ _<br>
+　　(ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As _<br>
+String, ByVal lpParameters As String, ByVal lpDirectory As String,_<br>
+　　ByVal nShowCmd As Long) As Long<br>
+　　在Label控件的click事件上加入代码：<br>
+　　Private Sub lblURL_Click()<br>
+　　Dim HyperJump	<br>
+　　HyperJump = ShellExecute(0＆, vbNullString, WEB, vbNullString,vbNullString, vbNormalFocus)<br>
+　　其中WEB为你定义的超链接地址，例如：<br>
+　　Private Const WEB = ″http:／／i.am／hellprisoner″<br>
+　　如果需要调入Email，就要在Email地址前加入mailto: 例如<br>
+　　Private Const WEB = ″mailto:prisoner@990.net″<br>
+　　如果再在Label的属性中设置MousePointer = 99  'Custom 并把MouseIcon设置为一只手的图标，当鼠标移动到标签上时，指针就变成手的形状，这就更像超链接了。<br>
+      　　<b>问题4</b>：如何在VB4中得到一个文本文件的长度（其长度大于64K）。我试过用getfilesize()不行。能不能用LOF（）循环，请给出具体代码。或是用Window 
+      API方法。<br>
+      　　<b>回答</b>：其实getfilesize（）就是Windows API函数。 <br>
+　　Declare Function GetFileSize Lib ″kernel32″ Alias ″GetFileSize″ _<br>
+　　(ByVal hFile As Long, lpFileSizeHigh As Long) As Long<br>
+　　或者用以下函数，不过可能比较复杂。<br>
+　　Declare Function GetFileInformationByHandle Lib ″kernel32″ Alias<br>
+　　″GetFileInformationByHandle″ (ByVal hFile As Long, lpFileInformation As<br>
+　　BY_HANDLE_FILE_INFORMATION) As Long<br>
+　　Type BY_HANDLE_FILE_INFORMATION<br>
+　　dwFileAttributes As Long<br>
+　　ftCreationTime As FILETIME<br>
+　　ftLastAccessTime As FILETIME<br>
+　　ftLastWriteTime As FILETIME<br>
+　　dwVolumeSerialNumber As Long<br>
+　　nFileSizeHigh As Long<br>
+　　nFileSizeLow As Long<br>
+　　nNumberOfLinks As Long<br>
+　　nFileIndexHigh As Long<br>
+　　nFileIndexLow As Long<br>
+　　End Type<br>
+      　　<b>问题5</b>：用access开发的数据库应用程序如何脱离access在其它机器上运行? <br>
+      　　<b>回答</b>：有一位朋友告诉我Office97开发员版本有将Access97数据库编译为可执行程序的工具。还有一个办法，有一个工具叫AccessToVB 
+      (最新版本4.02），可以将Access97数据库转换为VB5／6的工程，然后就可以编译为可执行文件了。不过可能有一小部分代码还需要手工修改，我刚刚拿到手，还没有来得及试验。http:／／www.gfminc.com／AccessToVB4.zip 
+      下载试用版。<br>
+      　　<b>问题6</b>：在进行多个文本框输入时，怎样控制输入完第一个文本框时用回车键跳跃到第二个文本框，而不是用TAB键来切换。<br>
+      　　<b>回答</b>：假设有text1和text2两个文本框，加入如下代码即可实现：<br>
+　　Private Sub Text1_KeyDown(KeyCode As Integer, Shift As Integer)<br>
+　　If KeyCode = vbKeyReturn Then<br>
+　　Text2.SetFocus<br>
+　　End If<br>
+　　End Sub<br>
+</TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99501303.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW网站</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

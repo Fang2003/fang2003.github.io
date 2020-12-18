@@ -1,0 +1,108 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4" height="513">
+      <tr>
+        <td width="670" valign="top" height="39"><font face="黑体" color="#004080"><strong><p
+        align="center">教你自制WORD高级模板</strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top" height="458"><p class="ourfont"><strong>&nbsp;&nbsp;&nbsp;</strong><font
+        color="#369681">模板是一种特殊的文档，它将各类文档应有的一切手段集于一身，使我们的写作编排工作变得轻松自如。WORD有大量现成的模板供用户选择。如果你经常应用某种特别的模板，而现有的模板又不合适，可按照自已的需要定制模板。<br>
+        　　定制模板有如下三种方式：<br>
+        　　一是创建或修改一篇文档，使它具有某种专用文档的格式。也可创建自动图文集、定制用户工具条及记录宏，然后作为模板保存；二是修改和精加工某一专用模板，把它作为新模板保存；三是重新创建专用于某种文档的模板，并保存起来。<br>
+        　　前两种方式较简单（编者注：本报也作过多次介绍），后一种方式比较复杂，但当我们的文档有特殊需要时却非常有用，下面就以“通讯报导”专用的模板为例，让我们来看一看怎样自制专用的高级模板。<br>
+        　　<strong>一、定制具有域和自动宏的高级模板：</strong><br>
+        　　域虽不是模板必备的要素，但为了编写文档的便利起见，可在模板内设置若干域并记录能自动运行的宏。<br>
+        　　1.构造文档的格局<br>
+        　　打开一空白文档后，即可着手构造通讯稿文档的格局。其详细步骤是：<br>
+        　　&middot;单击标准工具条中的居中对齐钮，使插入点移到中间；<br>
+        　　&middot;选择16磅黑体字，键入标题栏文字：每月通讯，接着按回车键；<br>
+        　　&middot;此时插入点仍居中，选择14磅宋体字；<br>
+        　　&middot;按Ctrl＋F9插入域符，在域中键入代码，使成为：{Fillin“请键入通讯稿题目”， 
+        再单击OK}， 就插入了一个填充域，接着按回车键；<br>
+        　　&middot;单击标准工具条中的右对齐钮，使插入点移到右侧；<br>
+        　　&middot;选择10磅宋体字，键入“第”字；<br>
+        　　&middot;接着插入嵌套域，域代码为：{={date\@ yyyy\＊mergefoimat}－1998}，按END键或单击嵌套域右域符之后处，将插入点定位于嵌套域之后，再键入“卷”字与4个空格；<br>
+        　　&middot;键入“第”字，再插入又一个填充域，域代码为： {Fillin“请键入期号，再单击OK”}，按END键。再键入“期”字，按回车键，使插入点到下一段；<br>
+        　　&middot;此时插入点仍在右侧，键入“本期共”等字样，接着插入页数域：{NUMPAGES}，在其后键入“页”字，按回车键，使插入点到下一段的右侧；<br>
+        　　&middot;插入日 期域：{DATE\@&quot;dddd,MMMM dd,yyyy&quot;\＊ MERGEFORMAT}, 
+        以长的日期格式引进当天日期，按回车键，使插入点到下一段；<br>
+        　　&middot;单击标准工具条中的两边对齐钮，使插入点移到左侧。连续键入通配符、直至右边沿，作为装饰兼分隔符，按回车键， 
+        使插入点到下一段；<br>
+        　　&middot;发出菜单命令Insert,Break(插入，分断线)，弹出分断线对话框。在此对话框中选择Column 
+        Break(列分断线)与Continuous(连续)两项，单击OK在插入点处插入列分断线，同时把文档分成两个区；<br>
+        　　&middot;单击标准工具条中分列钮，在列数选择图中选择二列，将本分区的版面分成二列；<br>
+        　　&middot;选择10磅楷体字；<br>
+        　　&middot;接连按二次回车符，使插入点下移二段，再单击右对齐钮，使插点移到右侧；<br>
+        　　&middot;插入嵌套域：{AUTHOR{Fillin“请键入通讯稿作者姓名”}}。<br>
+        　　这时，将通讯稿的总体格局构造完毕，把文档分成两个分区：第一分区作为稿头，第二分区用来键入稿件内容，最后是稿件作者的姓名。<br>
+        　　说明： 1嵌套域 {={date\@yyyy\＊mergeformat}－1998}的意义是以1998年作为出版每月通讯的第1年，卷号为1，依次类推，1999年出版的即是第2卷。<br>
+        　　2 
+        以上所作的只是示范的例子，读者可根据自己的喜好来选择字体与段落的风格，插入需要的域。<br>
+        　　2.为了能在打开模板时自动更新域，可记录一条自动运行的宏。将插点定位在文档之首，然后开始记录宏。整个过程如下：<br>
+        　　&middot;发出菜单命令Tools,Macro(工具、宏)、弹出宏对话框。在Macro 
+        Name(宏名称)正文框中键入AUTOOPEN, 
+        作为宏名称，这是打开文件时能自动运行的宏；<br>
+        　　&middot;在宏对话框中，单击Record(记录)钮，启动宏记录器开始记录宏；<br>
+        　　&middot;按Ctrl＋A 选择整篇文档；<br>
+        　　&middot;按F9以更新文档中所有的域，接着依次可看到3个Microsoft 
+        Word对话框，它们是由填充域所弹出的。每个对话框均不填充任何字符，而直接单击OK关闭；<br>
+        　　&middot;按向下箭头键，使插入点移到第二分区中。再按左箭头等键，使插入点移到第二分区之首；<br>
+        　　&middot;单击水平标尺上0.25英寸(二小格标记)处，设置左定位符，接着按TAB键，使插入点移到左定位符处，以便将来键入正文时，段落的首行向里缩排0&middot;25英寸；<br>
+        　　&middot;单击宏工具条中停止记录钮，关闭宏记录器完成宏的记录；<br>
+        　　3.保存自定制模板<br>
+        　　 
+        模板的保存与一般文档的保存并无多大的区别，只是它们的扩展名不相同。保存步骤如下：<br>
+        　　&middot;单击保存钮，弹出另存为对话框；<br>
+        　　&middot;单击“保存在”栏中右端下箭头，展开驱动器名称列表，在其中找到Winword\Templates\OtherDocuments(或Msoffice\Templates\Other 
+        Documents)文件夹，或选择其他合适的文件夹，以便保存自定制模板；<br>
+        　　&middot;在Save as type(保存文件类型)下拉式列表框中，选择Document 
+        Template(文档模板)；<br>
+        　　&middot;在File Name(文件名称)盒中，应为所制模板键入自定的文档模板名（以英文名为宜）。在Windows95中允许使用长文件名，单击OK将它存于指定的文件夹中。<br>
+        　　如果是单位里公用的微机，可将自定制模板的特性定为只读文件，方法是：<br>
+        　　右单击Windows95桌面上“启动”钮，弹出快速菜单，单击其中的Explore(探查)命令， 
+        调用Windows Explorer(窗口探查器)。在Explorer中找到模板所在的驱动器与文件夹，单击选择Monthly 
+        Communicationdot或者每月通讯dot文档模板名。单击右键弹出快速菜单，从中单击“属性”， 
+        弹出属性对话框。在对话框的“特性”盒中，打开“只读”复选项，单击OK关闭对话框。<br>
+        　　这就把模板的特性设为只读文件，旁人就不能轻易改动它了。<br>
+        　　<strong>二、 使用自定制模板</strong><br>
+        　　本例定制的高级模板与一般模板有所不同，它具有几个域，尤其是要通过自动宏更新3个填充域。使用此模板的方法是：<br>
+        　　&middot;当按常规打开Monthly Communication.dot 后，会立刻自动运行AUTOOPEN宏，根据宏所记录的内容，须依次更新3个填充域；<br>
+        　　&middot;首先弹出对话框，它提示用户“请键入通讯稿题目，再单击OK”。即可在对话框下方的正文框内键入题目，单击OK后，域结果是以14磅宋体字显示的通讯稿题目；<br>
+        　　&middot;接着弹出第2个对话框，提示请“键入期号，再单击OK”，按提示完成后，域结果是以10磅宋体字显示的第几卷；<br>
+        　　&middot;最后弹出第3个对话框，提示“请键入通讯稿作者姓名”。按提示完成后，域结果是以9磅楷体字显示的通讯稿作者姓名；<br>
+        　　&middot;嵌套域的结果会自动更新，域结果是以10磅宋体字显示的第几卷；<br>
+        　　&middot;日期域也会自动更新，域结果是英文全词表示的星期几与月份，两位和四位数字分别表示的日子与年度；<br>
+        　　&middot;最后插入点自动定位于文档的第二分区之首，并向右缩排025英寸。即可开始键入本期通讯稿的内容，字体将是10磅的宋体字，而版面将自动分成二列。</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期15版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<html><!-- #BeginTemplate "/Templates/internet.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>SMTP认证功能的设置</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+      
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第02期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;<a href="internet.html">互联网时代</a></font></td>
+
+        </tr>
+
+      </table>
+
+      <table width="430" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->SMTP认证功能的设置<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" --> 　　为了抵制“垃圾邮件”发送者的危害行为，维护大多数互联网用户的利益，日前，不少的免费电子邮件服务商开始使用认证的邮件传输方式ESMTP。例如263免费邮箱，为了限制非263系统的正式用户利用本系统散发垃圾邮件或其他不当行为，发送邮件时需要进行身份验证，否则不能发送。 
+
+              <br>
+
+              　　使用SMTP认证功能对于我们无疑是个好消息，但要启用这项功能还需要对你的收发邮件客户端做一些改动。我使用的是FoxMail3．1 
+
+              Build0909，是较新的版本，但是在去年12月28日上午8点以后，我的FoxMail将无法用263的邮箱发送邮件了，因为FoxMail不支持“发信服务器认证”功能。当我在网上闲逛的时候，我发现FoxMail已经推出了新的3．11 
+
+              Build1228版本，于是我将它下载下来，发现它果然是为了增加“发信服务器认证”功能而推出的。于是我将压缩包内的文件解压到FoxMail文件夹下并覆盖原文件后，再次打开FoxMail，点中263的邮箱，通过“账户”→“属性”菜单打开“账户属性”对话框，选择“邮件服务器”选项，并选中“ESMTP服务器需要认证”复选框，然后确定(如果用于验证的账号、密码与当前的POP3账号、口令不同，可以点击“设置”按钮进行设置)，这样就算设置好了。再次驱猫上网，给自己发一封邮件试试，结果发送邮件正常(注意：FoxMail 
+
+              3．11 Build226版本，虽然也增加了“发信服务器认证”功能，但存在Bug，发送邮件有问题)。所以推荐使用FoxMail的朋友去下载这个新的版本。据说这个FoxMail3．11是FoxMail3．2之前的测试版，具有编辑HTML邮件功能的FoxMail3．2将在不久以后推出。不过，这个3．11版还是有不少改进，除了上面提到的ESMTP认证功能外，还有很多新增功能。 
+
+              <br>
+
+              　　如果你使用的不是FoxMail，为了能正常收发需要“发信服务器认证”的邮件，可以作如下设置： 1．使用Outlook Express 
+
+              4．x及以上版本收发邮件 (1)在Outlook Express 或通讯簿中，单击“工具”菜单，然后单击“账号”； (2)选定263．net账号，单击“属性”； 
+
+              (3)选中“服务器”菜单，可以看到弹出框下部有“外发邮件服务器”，选中“我的服务器要求身份验证”并单击旁边的“设置”； (4)登录信息选择“使用与接收邮件服务器相同的设置”。 
+
+              2．使用Netscape4．7收发邮件 (1)在Netscape 或通讯簿中，单击“Edit”菜单，然后单击“Preferences”； 
+
+              (2)选定Mail Servers，下侧有一Outgoing Mail Servers ，填上Outgoing Mail Server名，即smtp．263．net，在Outgoing 
+
+              Mail User下填上你的用户名； (3)在Use Secure Socket LayerSSL or TLS for outgoing 
+
+              下，选择If Possible 。 大家改变设置以后可以发给我几封邮件试试能不能正常发送，我的邮箱是ePump＠263．net。 
+
+              (天津 ePump)<!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

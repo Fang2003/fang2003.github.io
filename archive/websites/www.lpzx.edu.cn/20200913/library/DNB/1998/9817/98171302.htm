@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>Delphi使用经验五则<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　<strong>1实现类似于VB中Doevents函数的功能</strong><br>
+        　　在Delphi中没有类似于VB中的Doevents函数，这样，有的时候，我们将无法使Windows响应多个同时发生的事件，怎么解决这一问题?其实，你可以通过调用Application的ProcessMessage来完成像VB中Doevents函数的功能。<br>
+        　　<strong>2格化整数输出</strong><br>
+        　　当比较大的数字输出时会显得不易阅读。这时我们可在Delphi中通过如下方法显示带分节号的数字：×××××.Caption=FormatFloat(′＃′，524667500)。<br>
+        　　<strong>3制作丰富多彩的标签</strong><br>
+        　　在Delphi只提供了简单的标签，能不能在标签中有不同的字体，不同的颜色呢?回答是肯定的，并且用不着第三方提供的控件，我们只要巧妙的利用Delphi自己提供的TRichEdit就可以了。首先将TRichEdit控件的边框清除：RichEdit1.BorderStyle：=bsNone；同时设置只读属性为真：RichEdit1.ReadOnly:=True；然后，你利用Write之类的软件制作好RichText格式的文本，通过以下语句就可以显示出来了：<br>
+        　　RichEdit1.PlainText:=False;<br>
+        　　RichEdit1.Lines.LoadFromFile(′c:\test.rtf′)；<br>
+        　　<strong>4在编译时获得提示</strong><br>
+        　　在Delphi 20中，编译时，可以让编译器告诉我们一些提示，但因一些特殊需要，我们只要在指定的代码段需要Delphi这样的提示，怎么办?请参考如下的程序：<br>
+        　　{＄HINTON}<br>
+        　　procedureTform1.Button1Click(Sender:TObject);<br>
+        　　var<br>
+        　　X:integer;<br>
+        　　begin<br>
+        　　end;<br>
+        　　{＄HINTOFF}<br>
+        　<strong>　5确定刚才用鼠标击了哪一个对象</strong><br>
+        　　在Windows95中，鼠标的右键起了很大的作用，但在Delphi中，对于右键的使用还不够有效，怎样才能知道刚才鼠标右击的对象名称呢?首先建立一个popmenu，然后以下的代码就可以告诉你刚才右击的对象名称：PopupMenu1.PopupComponent.ClassName。　<strong>　(河北　李文龙)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月4日第17期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 如何建立Win95下的DOS工作站</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><IMG SRC='images/loga.gif' WIDTH='468' HEIGHT='60' ALT='广告Logo' BORDER='0'></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='hardware.html'><FONT CLASS='title'>硬件周刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>ＯＡ专刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>39 期</A> &gt;  <A HREF='oa.html'>OA专刊</A> &gt; 如何建立Win95下的DOS工作站</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 如何建立Win95下的DOS工作站 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　关于Windows95对等网或以WindowsNT为服务器的网络都较容易配置成功。而目前，许多单位计算机中只安装了Windows95和DOS＋PWin32操作系统，能否将这些以DOS为操作系统的计算机与Windows95联网呢？，我们通过仔细查阅Windows95/NT有关文档资料，并经过多次反复调试，终于找到了将这些以DOS为操作系统的计算机作为工作站联入以Windows95为操作系统的计算机的具体方法：<br>
+　　一、在以DOS为操作系统的计算机中，正确安装好网卡（正确配置网卡的DMA、IRQ、I/O及网络接口类型）。<br>
+　　二、第二步，利用Windows NT40安装系统盘制作MS Network Client for MS－DOS安装软盘一张（即将NT40光盘目录MSCLIENT\NETSETUP下的所有文件复制到一张软盘上）。<br>
+　　三、在DOS为操作系统的计算机上运行刚制作的MS Network Client for MS－DOS安装软盘中的SETUPEXE程序。安装程序为：<br>
+　　1自动检测网络配置<br>
+　　2自动拷贝Client软件<br>
+　　3请你为每个DOS工作站及工作组命名<br>
+　　4请你选择网卡类型<br>
+　　5请你选择添加网络协议（Add Protocol）。网络协议选择Microsoft TCP/IP。<br>
+　　6自动修改DOS根目录下的CONFIGSYS和AUTOEXECBAT文件以自动配置网络启动文件。<br>
+　　四、重新启动计算机，计算机自动运行网络软件过程，但过程中有错，联网不成功。因此，还应在CLIENT软件目录下修改PROTOCOLINI文件如下：<br>
+　　指定IP地址：IPaddress0=192　168　0　1<br>
+　　指定掩码：subNETMask0=255　255　255　0<br>
+　　设DHCP无效：DisableDHCP=1（0有效，1无效）<br>
+　　修改好后存盘退出。<br>
+　　（★注：各台微机的IP地址应不同。假若有10台，IP各为192　168　0　1到192　168　0　10）<br>
+　　五、再次重新启动计算机后，我们就可以在DOS工作站上使用Windows95计算机的共享资源了。在DOS工作站上执行C：\&gt;net网络命令后，就可以映射Windows95的共享文件夹及打印机等资源。如果进入PWin32后，可以在PWin32环境下使用Windows95的共享资源。<br>
+　　关于net网络命令的一些用法，简单介绍如下：<br>
+　　1NET　运行网络连接程序<br>
+　　2NET/？　查看NET命令的用法<br>
+　　3NET LOGON　登录网络<br>
+　　4NET LOGOFF　注销网络<br>
+　　5NET VIEW \\Win95Server　观察服务器Win95Server中的共享资源<br>
+　　6NET USE F：\\Win95Server\Public　将网络驱动器F：连接服务器Win95Server中的共享资源，其共享名称为Public<br>
+　　7NET USE　观察网络驱动器及网络打印机连接状况<br>
+　　8NET USE F：/DELETE　删除网络驱动器F：<br>
+　　9NET USE LPTn：\\Win95Server\EpsonLQ－1600K　将服务器Win95Server上的EpsonLQ－1600K作为网络共享打印机连接到本机的LPTn端口上<br>
+　　10NET USE LPTn：/DELETE　中断所连接的网络打印机<br></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/39/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99393904.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>&nbsp;
+
+
+
+
+</TD>
+<TD> 《电脑报》版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>磁头偏位人工调整法</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　软驱磁头偏位是微机使用过程中较为常见的一种故障，下面将其检测、校正方法予以简单介绍。<br>
+        　　用一张空白盘片在被测软驱上作格式化，并拷入系统文件，然后拿到另外一个好的软盘驱动器上启动系统，如果不能启动，则说明被测软驱的磁头偏位，这时可进一步测试是0磁头偏位还是1磁头偏位。用PCTOOLS对被测软驱内的空盘做格式化，选择180KB，然后拷入系统文件，这时再将这张格式化成180KB的软盘拿到一个好的软驱上去启动，如果能启动y也能列出目录，说明0磁头是准的，偏位的是1磁头，否则肯定是0磁头偏位。<br>
+        　　校正磁头必须先调整0磁头，在0磁头调准的基础上才可调整1磁头。<br>
+        　　一、0磁头的调整<br>
+        　　将一张360KB的空盘在好的软驱上用PCTOOLS格式化成180KB，并拷入系统文件，然后在这张盘上拷满可执行文件。将这张盘拿到被调整的软盘驱动器上，用DIR列目录，因0磁头定位不准，屏幕显示：“Sector 
+        Not Found Error Reading Drive A”。此时，可小心地将带动磁头前进的马达上的二颗螺丝略微拧松，使步进马达在用力推的情况下可前后移动，这时可让马达从原来位置向前推进一点点，然后用DIR列目录，看看是否能列出来，不行则再往前推一点。如果往前推了1mm左右还不能列出目录，则说明方向不对，这时可按上述方法向反方向推，边推边用DIR列目录，一般经过几次就能用DIR列出目录，这时可将固定螺丝稍稍拧紧，然后执行一下目录中最后一个可执行文件(这个文件存在于磁盘最内磁道)，如果能够执行，说明0磁头已完全校正，否则说明0磁头校正还不是很准，需要再稍加调整。这时可将马达在刚调好的位置上稍稍向前或向后推进一点点，直到列目录、执行文件都不出错为止。调准之后，一定要将固定螺丝拧紧。<br>
+        　　二、1磁头的调整<br>
+        　　1磁头偏位分为两种情况：前后磁道偏位和左右方位角偏位，因此在调整的时候应分情况而论，一般应先调整方位角再调整磁道。将被调整软驱的门关上(此时软驱中应没有磁盘，有些软驱在无盘情况下无法关门，应首先拨动关门装置的机关，使门关上)，使1磁头被压下，此时再用手稍加力，让1磁头与0磁头刚好接触。这时从软驱正前方看，上下磁头的边应在同一条直线上，否则就是方位角不准，用螺丝刀小心地将固定1磁头的两颗螺丝之一拧开，稍稍转一下再拧紧，使上下磁头的边在同一条直线上。这时从软驱侧面看上下磁头，应基本垂直对准，否则磁道也可能偏位，这时就要把固定1磁头的两颗螺丝都拧开，将1磁头前后移动一些，使上下磁头垂直对准。然后将一张在好的驱动器上格式化并存储满可执行文件的启动软盘插入被调整的软驱内，复位并重新启动，如果能启动起来，并且运行软盘目录中最后一个文件也不会出错，则说明磁头已经调准好，否则还要按上述步骤再稍加调整。(注意!有些软驱上下磁头在前后方向上并不完全垂直对准，在调整磁道偏位时应参考同型号的软驱。(河南 
+        丁光谦)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年2月23日第7期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

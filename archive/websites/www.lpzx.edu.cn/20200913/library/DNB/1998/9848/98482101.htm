@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在Novell网中无盘启动Win95<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　在Novell网络中实现无盘启动Win95已成为近来的热门话题，越来越多的企业内部网络要求实现这一功能。使用无盘启动Win95，不仅可以使网络具有无盘工作站的资源共享、安全性强的特点，还可以利用Win95界面友好、操作简便、功能强大等许多优于DOS、Windows3X操作系统的优点。<br>
+        　　安装设置环境：<br>
+        　　服务器名：DONG<br>
+        　　安装卷名：SYS<br>
+        　　安装共享目录：G:\Win95<br>
+        　　安装Win95目录：G:\USER\USER1\Windows(G为SYS卷的根目录)G:\USER\USER2\Windows1.需要软件：Novell3.12、Win952.<br>
+        　　安装步骤：(1)安装Novell服务器，使其支持Win95长文件名按常规步骤安装完Novell服务器后，在控制台提示符下键入：LoadOS2AddNameSpaceOS2ToSYS(SYS是卷名)其中LoadOS2要加入AUTOEXEC.NCF中，AddNameSpaceOS2ToSYS运行一次即可。<br>
+        　　(2)服务器上Win95共享目录的安装<br>
+        　　在一个有盘Win95工作站上以管理员身份登录到Novell网络(如何用Win95登录Novell，请参阅其他有关资料)，转换到含有全版Win95的光盘中运行Admin\Nettools\Netsetup\Netsetup.exe。<br>
+        　　安装设置如下：<br>
+        　　设置路径：\\DONG\SYS\Win95(\\服务器名\卷名\安装目录)。<br>
+        　　选择服务器安装<br>
+        　　选择不创建默认值<br>
+        　　键入产品序列号<br>
+        　　然后就进行了服务器的安装，复制文件三遍后，再把文件设置为只读属性(安装自动完成)，大概要半小时时间，即告服务器安装完毕。<br>
+        　　(3)设置MSBATCH.INF<br>
+        　　这是安装启动无盘Win95的最重要的文件之一，安装成功与否就看该文件的设定了。<br>
+        在Win95光盘中运行Admin\Nettools\Netsetup\Batch.EXE安装设置如下：(其中未提到的读者可根据提示自行选择)<br>
+        　　NetworkOptions设置<br>
+        　　1.AvailableProtocols中选择IPX/SPXCompatibleProtocol。<br>
+        　　2.AvailableServices中选择FileandPrintSharingforNetWareNetworks。<br>
+        　　3.AvailableClients中选择ClientforNetWareNetworks。<br>
+        　　PreferredServer中键入服务器名(如：DONG)<br>
+        　　4.切记选择EnableServer－BasedSetup然后选择RemoteBoot。<br>
+        　　5.选择OK。<br>
+        　　InstallationOptions设置<br>
+        　　1.在SetupOptions选项中的TypeofInstallation选择Custom，InstallationDirectory选项中键入安装路径(如：G:\USER\USER1\Windows，切不可填写G:\Win95目录)。<br>
+        　　2.TimeZone和MonitorSettings选项可自行填写。<br>
+        　　3.Set中选择Stopduringsetupatthefollowing\Everypage(allowcustomizationofallsettings)(防止在安装过程中检测可能出现的错误)。<br>
+        　　4.Uninstall中选择Don'tcreateuninstallinformation。<br>
+        　　5.Printers中设置可根据实际情况自行选择。<br>
+        　　Optionalcomponents可设置附件及其他的选项。<br>
+        　　设置完毕后保存在网络盘符G:\Win95下，并把文件名改为Msbatch.inf(该文件已在该目录下存在，首先改掉只读属性，把其覆盖即可)。<br>
+        　　(4)工作站安装<br>
+        　　在一无盘工作站以管理员身份入网(无盘工作站的设置请参阅其他书籍)，在G盘建一临时目录Temp，进入G:\Win95目录键入Setup/T:G:\Temp/is/id开始安装。切记加上参数/T和临时目录，不然就会出现“ErrorLoadingProgram”的提示信息就退出了，参数/is/id为可选项，其意义可参看Setup/?的帮助信息。<br>
+        　　(5)设置Machines.ini文件<br>
+        这是另外一个重要的文件，它负责提供工作的信息，如果设置不当，照样不能实现无盘启动。该文件实际已存在于G:\Win95目录下，用任何文本编辑软件(如EDIT等)打开。<br>
+        　　内容如下：<br>
+        　　;Windows95MACHINES.INI<br>
+        　　;[nodeaddress]<br>
+        　　;SYSDATPATH=x:\&amp;lt;homedirectory&amp;gt;;x=\\server\share例子如下：[00002100F425]SYSDATPATH=G:\USER\USER1　　\WindowsH=\\DONG\SYS(可省略)[00001122CC28]SYSDATPATH=G:\USER\USER2\Windows实际上该文件已经把设置格式都告诉你了，就按所述格式设计，其中网卡号可由Userlist/A看到或者从服务器Monitor中看到。不足12位的在其前加“0”。<br>
+        切记一点，按其格式设定好后，一定要把它的描述文字删除，不然就会在启动过程中出现错误信息，然后死机。<br>
+        　　(6)最后设置<br>
+        　　把在G:\USER\USER1\Windows下生成的镜像文件NET＄DOS.SYS复制到G:\LOGIN目录下，并设置其属性为共享。如果你想实现DOS和Win95共存，可自行设定BOOTCONF.SYS多重启动文件(具体设置方法可参考Novell的有关资料)。第一台工作站设置完毕。<br>
+        　　(7)添加其他工作站<br>
+        　　把G:\Win95目录共享，然后在有盘的Win95工作站中按前述步骤设置Msbatch.inf文件，使其安装路径改为其他的目录(如G:\USER\USER2\WINDOWS)，或直接在G:\Win95目录下用文本编辑软件编辑Msbatch.inf文件，改安装路径即可，重新安装后编辑Machines.ini文件，添加其他的工作站信息，格式如第一个。其他的工作站即添加完毕。<br>
+        　　到此为止，你就算全部完成了在Novell网络上启动无盘Win95的设定。</font></p>
+        <p class="ourfont"><font color="#369681">　　(广西　董志强　苑立刚)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年12月14日第48期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

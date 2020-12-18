@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>最新多系统引导软件SYSTEM 
+        COMMANDER 4.0上手指南<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp;&nbsp; 　美国Communications公司出品的SYSTEM COMMANDER 4.0（以下简称SC40）是一个可以安装多个操作系统的引导工具软件。它通过向硬盘分区表中写入信息而获得硬盘引导控制权。开机时，SC40会从相应子目录中将系统文件（MSDOS.SYS 
+        、COMMAND.COM、CONFIG.SYS、AUTOEXEC.BAT等）拷入硬盘引导区， 
+        从而实现多个操作系统的引导。据悉，它能识别并同时安装近10个流行的操作系统。笔者用它在一台计算机上任意安装和删除DOS、PWIN32、PWIN95、PWIN95 
+        OSR2、PWIN98 BETA2等操作系统，均获得成功。<br>
+        　　以下就详细介绍该软件的使用方法。</font></p>
+        <p class="ourfont" align="center"><font color="#369681">　　<strong>启 动 篇</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681">　　开机时，会出现SC40的开机菜单。在OS 
+        Selection Menu下有A、B、C等选项，可以选择从A盘启动；该软件界面的最上方是工具条，有OS 
+        Wizard、Setup、Detail、Info－disk、Color和Help共六项，用ALT＋关键字母选择（SC40会自动侦测鼠标）。<br>
+        　　<strong>一、OS Wizard：操作系统安装大师</strong><br>
+        　　下设三个选项：New installation（安装新系统）、Reinstall existing OS（重装当前版本的OS）、Install 
+        new version on top of old version（升级安装新版本）。<br>
+        　　当点Cancel,上述三个选项消失,屏幕上端出现工具条,共有四个选项 
+        : File 、View、Partition、Help，下面仅对Partition选项做个详细介绍：<br>
+        　　点Partition，则出现分区显示：左边为几个常用工具和彩色图例；正中是两个彩色立体柱状图，左方为DOS主分区和扩展分区， 
+        右方为若干逻辑分区；右边为选定分区信息显示；最上端为工具条。<br>
+        　　<strong>二、Setup：设置开机状态</strong><br>
+        　　1. Timeouts and default OS menu（系统默认菜单）：可设置等待时间、启动任一OS、声音、屏幕保护等。<br>
+        　　2. Global special option menu（总体选择菜单）：可设置 Numb Lock状态、键盘速度、自动侦测鼠标等。<br>
+        　　3. Local special option menu（当前特殊选项菜单）：可设置自动侦测活动分区等。<br>
+        　 4. Password control menu（密码控制菜单）：可设置修改开机密码。<br>
+        　　5. File management menu（文件管理菜单）：可设置字母移下去SC40开机自动拷贝路径等。<br>
+        　　6. add removal menu：增加或移走OS选项。<br>
+        　　7. Description and Icon menu：为各个OS选项更名或改图标等。</font></p>
+        <p class="ourfont" align="center"><font color="#369681"><strong>应用及疑难解答篇</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　下面介绍在没有安装SC40的情况下，想安装其它OS的情况。首先，要求把CMOS设为从C盘启动,以避免不必要的麻烦。<br>
+        　<strong>　一、如何在DOS6.22下安装PWIN95或PWIN98？</strong><br>
+        　　首先安装SC40。重启动后，按常规方法安装PWIN95，在PWIN95进行最后设置前，SC40会自动识别出此OS，保存即可。下次启动时，SC40的启动菜单会出现该OS项，从而省去了修改MSDOS.SYS的麻烦。PWIN98 
+        的安装方法与PWIN95类似。<br>
+        　　<strong>二、如何在DOS6.22下安装PWIN95 OSR2？</strong><br>
+        　　将这个问题单独列出，是因为有其特殊性：<br>
+        　　第一种方法:将DOS6.22系统盘插入软驱→从A盘启动→在SC40目录下敲入SCIN→选Special 
+        Options→Transfer System(Advanced SYS)→重启动后保留即可。<br>
+        　　第二种方法:在SC40开机菜单中按ALT＋O(进入OS Wizard)→选 New 
+        installation→DOS→MS－DOS(Version 4 to 6.22)→DOS boot diskette→Together with other 
+        like OS→重启→SC40提示插入DOS系统盘→自动传输系统即完成。<br>
+        　　之后，你可以在DOS6.22下重装PWIN3.X和PWIN95，再将WIN.COM恢复原名。<br>
+        　　<strong>三、如何删除各种OS？</strong><br>
+        　　在SC40开机菜单中，按ALT＋S(进入Setup)→Order,add,removal menu→ALT＋R(进入Removal)→移去该OS→从DOS启动后，删除此OS目录即可，但必须保留一个OS。<br>
+        　　<strong>四、如何对硬盘进行重新分区？</strong><br>
+        　　参见“启动篇”，笔者建议你使用PQMAGIC软件。经PQMAGIC分区重启动后，SC40会自动识别出分区已改变，保存即可。<br>
+        　　<strong>五、系统启动速度很慢，如何解决？</strong><br>
+        　　首先确认CMOS的Quick Boot选项已打开，然后在SC40目录下敲入scdisk 
+        dlimit1，即可实现快速启动。<br>
+        　<strong>　六、为何一些杀毒软件会报告分区表中有病毒？</strong><br>
+        　　这是由于SC40修改了分区表的信息，从而引起杀毒软件的误报。</font></p>
+        <p class="ourfont" align="center"><font color="#369681">　<strong>　结 束 语</strong></font></p>
+        <p class="ourfont" align="left"><font color="#369681">　　SC40的强大功能的确令人折服。当你在使用中遇到问题时，可在参见笔者拙文的同时，多试验几回，不要怕失败，这样自己很可能得到更多的软件使用经验。请记住，实践出真知！<strong> 
+        &nbsp;&nbsp;&nbsp; (河南 李　民)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期10版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

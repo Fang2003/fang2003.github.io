@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">NOVELL网的远程管理<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">　　我们能不能坐在一台工作站前控制一台远在几百公里外的服务器?答案是肯定的，那就是使用NetWare 
+        3X中为我们提供的远程管理功能。<br>
+        　　NetWare 3.X的远程管理是Novell公司提供的一种在网络工作站上执行的虚拟控制台服务。利用这项功能，网络系统管理员或其等效用户可以从一台工作站上而不是直接从文件服务器上执行控制台命令。它使得网络系统管理员可以跨越异步线路或通过第三方网桥和路由器来执行控制台命令。网络系统管理员选择了一个服务器并输入正确的口令后，可以完成NLM(NetWare 
+        Loadable Module,NetWare可装载模块)、驱动程序和协议栈等的装卸载，以及交互地使用服务器控制台程序。通过授权，系统管理员还能够完成多个服务器的远程维护和故障定位，就像他坐在实际的服务器控制台之前一样。<br>
+        　　NetWare 3.X的远程管理是由REMOTE.NLM、RSPX.NLM可装载模块和RCONSOLE.EXE命令来完成的。REMOTE.NLM的主要功能是完成服务器控制台会话的处理和初始化。RSPX.NLM在装载REMOTE.NLM之后加载，功能是提供SPX通信支持。这两个模块是在服务器上进行装载的，通常的做法是将这两条命令编辑进AUTOEXEC.NCF文件中，在启动服务器时自动进行装载。与这两个可装载模块不同的是，在服务器上装载了上面的两个可装载模块后，网络管理员通过运行RCONSOLE.EXE即可在工作站上对服务器实施远程管理。<br>
+        　　网络管理员按以下步骤可完成网络的远程管理。<br>
+        　　1.在服务器上装载REMOTE.NLM模块。<br>
+        　　：LOAD PATH\REMOTE ABC123<br>
+        　　REMOTE.NLM通常在SYS：SYSTEM目录下，若不在此路径下应指明正确路径。ABC123是启动远程控制台时使用的口令，管理员可根据情况改变口令。<br>
+        　　2.在服务器上装载RSPX.NLM模块。<br>
+        　　：LOAD PATH\RSPX<br>
+        　　RSPX.NLM通常在SYS：SYSTEM目录下，若不在此路径下应指明正确路径。<br>
+        　　上面的两条命令可加在AUTOEXEC.NCF中，启动文件服务器即可完成远程命令的装载。<br>
+        　　3.在一台被认可的工作站上运行RCONSOLE.EXE程序。<br>
+        　　(1)网络系统管理员或其等效用户以SUPERVISOR身份注册进要管理的服务器；<br>
+        　　(2)键入RCONSOLE.EXE命令，输入远程控制台口令ABC123(网络管理员在加载REMOTE.NLM时自选的口令)并选择一服务器。<br>
+        　　这时，有趣的现象发生了，呈现在系统管理员面前的是与服务器控制台一样的“服务器屏幕”。在此虚拟的控制台上，网络管理员可完成各种控制台操作，如用DISPLAY 
+        SERVERS、TRACK ON查看路由信息、从软盘上远程安装新的NLM实用程序等。选择不同的服务器，可对多个服务器进行远程管理。<br>
+        　　或许对普通用户来说，根本用不上或可能不知道NetWare 3.X的远程管理，但对SUPERVISOR来说，这一功能却极为有用，正因如此，NetWare 
+        3.X的远程管理已成为广大网络管理员最为喜爱的实用程序之一。</font></p>
+        <p class="ourfont"><font color="#369681">　　(河南　诚君)</font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年3月2日第8期21版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

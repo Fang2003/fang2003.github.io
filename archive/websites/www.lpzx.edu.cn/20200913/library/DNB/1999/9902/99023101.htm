@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>建立因特网上的邮件服务器</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="678"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="670" valign="top"><font face="黑体" color="#004080"><strong><p align="center">建立因特网上的邮件服务器<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="670" valign="top"><p class="ourfont">&nbsp;&nbsp;&nbsp; <font color="#369681">&nbsp; 
+        《电脑报》1998年第40期介绍了使用Exchange Server在NT局域网内建立电子邮件系统。其实，如果企业已拥有了自己的Web服务器，则还可用Exchange 
+        Server建立因特网上的邮件服务器。以下是安装的步骤：<br>
+        　　<strong>一、安装Windows NT Server 4.0</strong><br>
+        　　Exchange Server只能与Windows NT Server一起使用，因此必须先在服务器上安装Windows 
+        NT Server。安装过程中请注意以下两点：<br>
+        　　1．在选择分区格式时，应将系统分区格式化为NTFS。<br>
+        　　2．在选择域控制器状态时，应把服务器加到现有的NT域中，使之成为一台普通的NT服务器。 
+        <br>
+        　　<strong>二、安装Windows NT4.0 Server Pack3 (SP3)</strong><br>
+        　　SP3是Windows NT4.0的升级服务包，除修正原有错误外，还包括了NT4.0发布后的新技术支持。安装结束重新启动后，会看到操作系统管理器的版本已由4.0变为4.01，版本号已由“Build 
+        I381 Server Pack1”改为“Build I381 Server Pack3”。 <br>
+        　　<strong>三、安装Exchange Server5.5</strong><br>
+        　　根据安装向导的提示创建组织和新节点，指定节点服务账号，最后运行优化程序（优化程序会把数据库文件移动到服务器的其他硬盘和分区上，从而提高Exchange 
+        Server的性能）。安装完毕后，要验证Exchange 
+        是否成功启动了必要的服务，在“Start”－“Settings”－“Control Panel”－“Service”中，查看是否启动了以下服务：<br>
+        　　Microsoft Exchange Directory<br>
+        　　Microsoft Exchange Information Store<br>
+        　　Microsoft Exchange Message Transfer Agent<br>
+        　　Microsoft Exchange System Attendant<br>
+        　　MS Mail Connector Interchange<br>
+        　　Remote Procedure Call (RPC) Locator<br>
+        　　Remote Procedure Call (RPC) Service <br>
+        　　<strong>四、设置Exchange Server5.5</strong><br>
+        　　启动“Start”－“Programs”－“Microsoft Exchange ”－“Microsoft 
+        Exchange Administrator”，对Exchange Server进行设置。<br>
+        　　1．安装和启动Internet Mail Service:<br>
+        　　Internet Mail Service是一个Windows NT服务，它安装在Exchange Server服务器上，能够从支持SMTP的计算机上接收和发送电子邮件。进入“Microsoft 
+        Exchange Administrator”后，在“File”菜单中，指向“New Other”，然后单击“Internet 
+        Mail Service” ，运行安装向导，除选择“使用DNS收发邮件”和“创建节点邮件地址(如WTM.JS.CN)”外，其余对话框全部取默认值。 
+        <br>
+        　　2．验证POP3协议：<br>
+        　　进入“Microsoft Exchange Administrator”后，在Configuration容器下，单击Protocols，在右边窗口中，双击POP3对象，验证POP3协议是否已启用。 
+        <br>
+        　　3．为NT域内用户设置邮箱：<br>
+        　　进入“Microsoft Exchange Administrator”后，在“File”菜单中，指向“New 
+        Mailbox”，出现邮箱属性窗口，单击“Primary Windows NT Account”,选择“Select 
+        an existing Windows NT account”，为NT域内用户逐一添加邮箱。<br>
+        　　邮件服务器安装设置至此全部完成。 <br>
+        　　<strong>五、在Web服务器上为Exchange 创建DNS记录</strong><br>
+        　　邮件服务器必须安装TCP/IP协议，分配IP地址，并为网络的“域名服务”(DNS)提供信息。在DNS中需添加以下两条记录：<br>
+        　　1.A记录：又称地址记录。例如本单位的邮件服务器主机名为MAIL，Internet域名是WTM.JS.CN，IP地址是210.45.0.82，则A记录应为：MAIL.WTM.JS.CN.IN 
+        A 210.45.0.82。<br>
+        　　2. MX记录：告诉哪台计算机负责为系统处理SMTP邮件。例如本单位想把所有关联域地址WTM.JS.CN的邮件发送到主机MAIL上，则MX记录为：WTM.JS.CN.IN 
+        MX 10 MAIL.WTM.JS.CN。 <br>
+        　　<strong>六、客户端收发邮件功能的实现</strong><br>
+        　　NT域内用户可利用电子邮件客户端程序（如Outlook Express），完成电子邮件收发功能。首先添加自己的邮件账号，把SMTP和POP3服务器设置为已安装后的邮件服务器，如本单位的MAIL.WTM.JS.CN，登录账号和口令则与NT域内的一致。设置完成后，就可收发电子邮件了。<br>
+        　　 这样，每个NT域内用户都可以拥有自己的Internet电子邮件信箱。 <strong>(江苏　张平献) 
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1999年1月11日第2期</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

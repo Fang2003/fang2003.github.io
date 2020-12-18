@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<title>PartitionMagic的硬盘分区技巧</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><b>PartitionMagic的硬盘分区技巧</b></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif">
+                    <p align="left">　　PartitionMagic又称硬盘分区魔术师，目前最新的是4.0版，支持FAT、FAT32、NTFS、HPFS和Linux 
+                      Ext2等多种格式的文件系统，能运行在Dos/Windows3.1、Windows95/98和Windows NT多种操作平台上，是实现硬盘动态分区和无损分区的最佳选择。下面让我们看看它的“魔法”何在吧。<br>
+        　　一、创建新分区<br>
+        　　用PartitionMagic创建新分区有两种方法：<br>
+        　　1.用单个自由空间创建独立分区<br>
+                      　　1用鼠标单击程序界面板中的C下面的“*”，或在菜单“Partitions”中选择“2.Free Space”；<br>
+        　　2点击“Operations”下拉菜单选择“Create”菜单项，打开“Create 
+        Partition”对话框后，可选择创建分区的大小、类型和位置。一般情况下，使用系统的默认设置即可。<br>
+        　　注意：<br>
+        　　a.位于C盘后和扩充区中的自由空间可用来创建逻辑驱动器和主分区，选择创建逻辑驱动器后，这部分自由空间将被映射为原扩充分区的一个逻辑驱动器，盘符由系统重新分配。<br>
+        　　b.在已有主分区的情况下，如果选择创建主分区，这部分空间将被创建为隐含分区。由于OS/2和Windows95/98不支持多个主分区，所以不能将隐含分区转换为可见主分区。如果强制转换，将会导致数据丢失和系统瘫痪。<br>
+        　　c.位于C盘前面的自由空间，只能创建隐含的主分区，出于同样的原因，也不能在OS/2和Windows95/98下转换为可见主分区。<br>
+        　　3按下“OK”，关闭对话框。<br>
+        　　2.使用“Creat new partition”向导<br>
+        　　1在窗口下方单击“Creat new partiton”图标，选择“Next”后，在“Select 
+        hard drive”窗口列出该机已安装的物理硬盘列表中，你可选择一个硬盘来创建新的分区。单击“Advanced”按钮，进入高级设置，这时对应于每一个分区有两个任选项：<br>
+                      　　“Allow wizard to move partition”(允许向导移动该分区位置)<br>
+                      　　“Allow wizard to resize partiton”(允许向导调整该分区大小),程序默认为全部选中。<br>
+        　　2单击“Next”，进入“Select file system type”，有FAT、FAT32、NTFS、HPFS和Ext2五种类型供选择。<br>
+        　　3单击“Next”，进入“Select partition size”对话框。在“Size for new 
+        patition”下面已有一个数字，这是PartitionMagic根据分区类型、硬盘大小计算出新分区容量的最佳值，你可以改变它。单击“Next”继续。<br>
+        　　4填入卷标，单击“Next”进入“Confirm creation of new partiton”对话框。其中有创建分区前后硬盘格局的图示，如果同意创建，按下“Finsh”，否则，单击“Cancel”。<br>
+        　　二、调整分区的大小<br>
+        　　1.减小单个分区或逻辑驱动器<br>
+        　　1在菜单“Partitions”中选定需要减小的分区，如C。<br>
+        　　2选择菜单“Operation”→“Resize/Move…”，弹出“Resize/Move 
+        Partiton”对话框，在“New Size”中键入新值，它不能小于C盘已占用的容量，或移动鼠标到示意条两端的滑杆上，当鼠标指针变成双箭头“”时，拖动滑杆来改变容量。<br>
+        　　3.按下“OK”结束。<br>
+        　　2.增大单个逻辑驱动器<br>
+        　　1当单个分区容量小于2037.6MB，且该分区还有自由空间时，其操作同减小单个分区的操作类似，在此不再赘述。<br>
+        　　2当单个分区容量大于2037.6MB，且采用FAT16文件系统时，如果该分区还有自由空间，因FAT16文件系统的局限性，逻辑驱动器最大只能管理2037.6MB的硬盘空间，此时要想扩大逻辑驱动器的容量，只有将16位的分区转换成32位的分区。<br>
+        　　分区转换工具很多，如Windows98中的“驱动器转换器”，只是速度太慢，转换一次至少也得个把小时。该我们的魔术师大显身手了，在“Partitions”菜单内选择欲转换的磁盘驱动器，如C，然后选择菜单“Operation”→“Convert”→“Convert 
+        FAT to FAT32”。在确定后点击“Apply”，程序以MS－DOS方式重新启动计算机，进行转换。<br>
+        　　3.分区间调整容量<br>
+        　　1减少主分区，增大扩充分区<br>
+        　　在主分区中建立新的逻辑驱动器，创建后的逻辑驱动器将自动转为扩充分区的一部分，具体操作见前面一、1节。<br>
+        　　2增大主分区，减少扩充分区<br>
+        　　a.在下拉菜单“Partitions”中选择逻辑驱动器D，依次点击“Operation”→“Resize/Move…”。在弹出的“Resize/Move 
+        Partiton”对话框中，将鼠标移到“示意条”左端的滑杆上，向右拖动滑杆直至“New 
+        Size”的值符合要求为止，或直接在“Free Space Before”中键入C盘欲增大的容量值。<br>
+        　　b.同样，将Extended Partition(扩充分区)从前部减少至要求的容量。<br>
+        　　c.在下拉菜单“Partitions”中选择C，执行“Resize/Move…”操作时要将鼠标移到“示意条”右面的滑杆上，向右拖动滑杆直至不能拖动为止。<br>
+        　　d.点击“Apply”，在片刻的等待之后，C分区顺利扩容。<br>
+        　　PartitonMagic还提供了一个用于移动应用程序的工具MagicMover、五个操作向导……嘿嘿，好东西多着呢，不妨自己试一试。<br>
+        <strong>(山西　张永建)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月08日第09期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+    <table border="1" width="680" bordercolor="#000000" cellspacing="1">
+      <tr> 
+        <td width="100%" height="22"> 
+          <table border="0" cellpadding="2" bgcolor="#C0C0C0" width="100%"
+    cellspacing="0">
+            <tr> 
+              <td width="100%"><span style="font-size: 9pt"><font color="#FF0000">重庆海阔天空提供</font><font
+        color="#000000"><br>
+                软件最新版本下载：<a href="http://www.ilike.com.cn/soft_disktool/pmagic.html">Partition 
+                Magic 4.01</a></font></span></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center></div>
+</body>
+</html>

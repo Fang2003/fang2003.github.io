@@ -1,0 +1,30 @@
+A:hover {
+	COLOR: #000000; BACKGROUND-COLOR: #d1e8bb; TEXT-DECORATION: underline
+}
+BODY {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: black; LINE-HEIGHT: 15px; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+P {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: black; LINE-HEIGHT: 15px; FONT-STYLE: normal
+}
+BR {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: black; LINE-HEIGHT: 15px; FONT-STYLE: normal
+}
+DIV {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; LINE-HEIGHT: 15px; FONT-STYLE: normal
+}
+A {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; COLOR: #0066cc; FONT-STYLE: normal; TEXT-DECORATION: none
+}
+EM {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; TEXT-TRANSFORM: none; FONT-STYLE: normal
+}
+B {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 9pt; FONT-STYLE: normal
+}
+H1 {
+	FONT-SIZE: 48pt; FONT-FAMILY: "黑体"
+}

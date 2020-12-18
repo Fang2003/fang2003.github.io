@@ -1,0 +1,29 @@
+ 
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>New Page 1</title>
+</head>
+
+<body>
+
+<p align="center"> <font size="6" face="宋体" color="#FF0000"> 在Authorware中调用外部程序 　　 </font><font face="宋体"> 
+  </font></p>
+<hr>
+<table>
+<tr><td>
+&nbsp; &nbsp; 在不少报刊杂志上看到这方面的讨论,不少人用C写DLL来实现。其实Authorware有这样的函数（在想实现某一功能时先多看看函数和变量的帮助!） 　　JumpOut和JumpOutReturn可以调用外部程序,它们不同于JumpFile,　JumpFileReturn,后者只能调用Authoreware自己的文件。带Return的函数可以返回调用文件继续运行。<br><br>　　JumpOut的JumpOutReturn可以加调用参数,语法是: JumpOut(&quot;程序名&quot;,&quot;文档名&quot;)　,其中文档名是要程序打开的文档，也可以把用程序执行的参数加在这里，比如调用ScreenCam做成的自执行电影时可以加参数/s禁止ScreenCam的Logo,这样即可：<br><br>　　JumpOutReturn(&quot;play.exe&quot;,&quot;/s&quot;)－－假设play.exe是自执行电影文件名．<br><br>&nbsp; 　这个功能有时用起来不听话，比如我自已编了一个BMP打印程序，用来在Authorware下打印BMP图片(详见我的工具集)，参数是要打印的文件，可是如果用JumpOutReturn(&quot;prtbmp.exe&quot;,&quot;1.bmp&quot;)的方法调用时，Authorware自动调用了与BMP关联的画图程序打开了这幅图片，而不是用我的程序，所以如果你要用其它语言编写供Authorware调用的可执行程序时建议你参数的格式为这样&quot;/参数&quot;，有了这个&quot;/&quot;,参数就可以正常传递了，我的程序调用方法就是这样： JumpOutReturn(&quot;prtbmp.exe&quot;,&quot;/1.bmp&quot;)，就行了！<br><br> 　　其它调用外部程序的函数是JumpPrintReturn(),可用于调用外部程序打印文档．参数用法也差不多． <br><br>
+</td></tr>
+</table>
+<hr>
+
+<p align="right">
+
+20001106100653
+<div align="center"><a href="xwpl_351.htm">我来说两句</a></div>
+</body> 
+ 
+</html> 

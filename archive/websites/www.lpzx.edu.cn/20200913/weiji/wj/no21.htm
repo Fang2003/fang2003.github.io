@@ -1,0 +1,169 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>高一第二十一课</title>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<p align="center"><font size="6" face="隶书" color="#FF0000">高一第二十一课</font></p>
+<hr>
+<div align="center">
+  <center>
+  <table border="0" width="750">
+    <tr>
+      <td width="100%"><b>总体任务：下载本班上学期期考EXCEL表格，计算所有学生成绩总分和平均分</b>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+<div align="center">
+  <center>
+  <table border="0" width="750">
+    <tr>
+      <td width="100%">
+  </center>
+      <b>相关知识</b>：<b>公式和函数</b>
+      <p>&nbsp;&nbsp;&nbsp; 在第18课我们已经知道EXCEL有公式可用，<font color="#FF0000">公式的第一个字符一定是“=”</font>，代表需要计算机计算数据。如：=4+5，代表让计算机计算4+5的值，并把它显示在单元格中。常用运算符号是：</p>
+      <div align="center">
+        <center>
+        <table border="1" width="400">
+          <tr>
+            <td align="center">加法</td>
+            <td align="center">  减法</td>
+            <td align="center">  乘法</td>
+            <td align="center">  除法</td>
+            <td align="center">  乘方</td>
+          </tr>
+          <tr>
+            <td align="center">+</td>
+            <td align="center">      -</td>
+            <td align="center">     *</td>
+            <td align="center">     /</td>
+            <td align="center">     ^</td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;&nbsp;&nbsp; 乘方符号的“     ^”在数字键6的上方，公式的运算和平常计算等式一样有运算的优先，先算乘方，再算乘除，最后算加减。<font color="#FF0000"><b>在使用公式和函数时，所使用的字符和字母都是英文的半角符号。</b></font><br>  
+      <br>
+      &nbsp;&nbsp;&nbsp;   
+      在公式的使用中，参加运算的数据不仅仅可以是实际的数据，如“=4+9”，也可以是单元格中已有的数据，如：如果需要计算单元格A1和单元格A2两个数据的和，并把求出的数值放在A3单元格，可在A3单元格输入“=A1+A2”，这时，A3单元格的数据就是A1和A2单元格的和，当我们随意改动A1或A2的值时，A3的值也在随着变动。<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;   
+      书写公式，必要时可以加入小括号“（”和“）”。在公式中，只能使用小括号，而不能使用中括号和大括号，如果公式必须使用多重括号嵌套，则全部用小括号代替。如：<br>
+      =1/(1+2/(2+7*3))<br>
+      再举几个例子</p>
+      <div align="center">
+        <center>
+        <table border="1" width="500">
+          <tr>
+            <td>=9^2</td>
+            <td>     计算9的平方</td>
+          </tr>
+          <tr>
+            <td>=8^(1/3)</td>
+            <td>  计算8的立方根</td>
+          </tr>
+          <tr>
+            <td>=A1+B1+C1+D1+E1</td>
+            <td>   计算A1到E1这5个单元格中数据的和</td>
+          </tr>
+          <tr>
+            <td>=(A1+B1+C1+D1+E1)/5</td>
+            <td>   计算A1到E1这5个单元格中数据的平均值</td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;&nbsp;&nbsp; 有时侯公式的计算会用到大量的数据，造成公式书写繁琐和容易出错，EXCEL引入了函数概念。如函数SUM是求和，函数AVERAGE是求平均，上面的后两项就可以写成：</p>
+      <p>&nbsp;&nbsp;&nbsp; =SUM(A1,B1,C1,D1,E1)<br>  
+      &nbsp;&nbsp;&nbsp; =AVERAGE(A1,B1,C1,D1,E1)</p>  
+      <p>&nbsp;&nbsp;&nbsp; 括号内的A1,B1,C1,D1,E1就是这两个函数的参数，对于一个矩形区域的数据，我们可以这么描述：<br>  
+      <font color="#FF0000">“A1:E1”代表从A1到E1这5个单元格，“A1:A10”代表从A1到A10这10个单元格，</font>考虑一下，A1:E2代表多少个单元格？于是，上面的两项又可以写成：</p>
+      <p>&nbsp;&nbsp;&nbsp; =SUM(A1:E1)<br>  
+      &nbsp;&nbsp;&nbsp; =AVERAGE(A1:E1)</p>  
+      <p>&nbsp;&nbsp;&nbsp; <font color="#FF0000">书本上第77页有一个常用函数表，那几个指定的函数的用途需要记忆<br>  
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum average count abs int sqrt</font></p>   
+      <p><b>公式和函数的实际操作</b></p>
+      <p>&nbsp;&nbsp;&nbsp; 在使用公式和函数时，第一步应该是选单击公式或函数输入的单元格，最直接就是马上输入公式和函数。如：直接在F1单元格输入“=A1+B1+C1+D1+E1”或输入“=SUM(A1:E1)”，这种办法直接办法并不直观，下面介绍一些直观的小技巧。<br>  
+      <br>
+      1、用单击和拖拽的办法引用其它单元格数据<br>
+      &nbsp;&nbsp;&nbsp; 单击一个单元格，在公式中就直接引用该单元格数据<br>  
+      &nbsp;&nbsp;&nbsp; 如：单击F1单元格，键盘输入“=”<br>  
+      &nbsp;&nbsp;&nbsp; 单击A1单元格，编辑栏上显示“=A1”<br>  
+      &nbsp;&nbsp;&nbsp; 键盘输入“+”，编辑栏上显示“=A1+”<br>  
+      &nbsp;&nbsp;&nbsp; 单击B1单元格，编辑栏上显示“=A1+B1”<br>  
+      &nbsp;&nbsp;&nbsp; ……</p>  
+      <p align="center"><img border="0" src="image/2101.gif" width="427" height="106"></p>
+      <p>2、拖拽选择区域，则引用一个矩形区域的数据<br>
+      &nbsp;&nbsp;&nbsp; 如：单击F2单元格，键盘输入“=SUM(”<br>  
+      &nbsp;&nbsp;&nbsp; 拖拽选择A1至E1单元格，编辑栏上显示“=SUM(A1:E1”<br>  
+      &nbsp;&nbsp;&nbsp; 键盘再输入“)”，编辑栏上显示“=SUM(A1:E1)”<br>  
+      &nbsp;&nbsp;&nbsp; ……&nbsp;</p>  
+      <p align="center"><img border="0" src="image/2102.gif" width="539" height="124"></p>
+      <p>3、用向导的办法插入函数<br>
+      &nbsp;&nbsp;&nbsp; 有些函数不常用，记不住函数的名称或函数的参数意义，可考虑使用“fx”按钮或菜单“插入/函数”、“=” 按钮的办法插入函数。</p>  
+      <p align="center"><img border="0" src="image/2103.gif" width="677" height="169"></p>
+      <p>&nbsp;&nbsp;&nbsp; 单击“fx”按钮或菜单“插入/函数”弹出以下对话框，在函数分类里单击使用函数的类别，如果不知道类别，可单击“全部”，在函数名一栏单击使用函数名称，如“SUM”，再单击“确定”。</p>  
+      <p align="center"><img border="0" src="image/2104.gif" width="386" height="279"></p>
+      <p>&nbsp;&nbsp;&nbsp; 弹出函数对话框，单击Number1文本框，（移动对话框到指定的位置，这里对话框可能遮住了A1单元格），鼠标从A1单元格拖拽到E1单元格，在Number1文本框内就会自动显示A1:E1，而编辑栏上就自动显示“=SUM(A1:E1)”，当然，如果还有其它参数，可以继续操作Number2，Number3，……文本框。</p>  
+      <p align="center"><img border="0" src="image/2105.gif" width="613" height="337"></p>
+      <p align="center"><img border="0" src="image/2106.gif" width="542" height="217"></p>
+      <p>4、公式和函数的复制<br>
+      可用复制和粘贴的办法，注意观察复制后编辑栏的公式和函数变化</p>
+      <p>&nbsp;&nbsp;&nbsp; 如：F1单元格有公式“=SUM(A1:E1)”，显示在编辑栏上，算出的结果是306。</p>  
+      <p align="center"><img border="0" src="image/2107.gif" width="483" height="208"></p>
+      <p>&nbsp;&nbsp;&nbsp; 复制F1单元格（单击F1单元格，单击菜单编辑/复制），粘贴到F2单元格（单击F2单元格，单击菜单编辑/粘贴），观察F2的值和对应的编辑栏内容。</p>  
+      <p align="center"><img border="0" src="image/2108.gif" width="533" height="198"></p>
+      <p>&nbsp;&nbsp;&nbsp; 这时，F2单元格显示的203，而编辑栏上显示的是“=SUM(A2:E2)”，说明在F2单元格实际是在计算第二行数据的和了。当然如果还有其它单元格也可以这样处理。</p>  
+      <p>&nbsp;&nbsp;&nbsp; <font color="#FF0000"><b>如果是有大批量的类似计算，应该使用填充柄办法，填充柄的使用在第十八课有说明，其操作办法非常重要，<a href="no18.htm" target="_blank">不明白的同学请参考第十八课</a>。</b></font> 
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+<div align="center">
+  <table border="0" width="750">
+    <tr>
+      <td width="100%">
+      <b>实习：</b><br>
+      1、下载并保存自己班的2007-2008年度上学期期考成绩表，保存在自己的个人文件夹中
+      <p><b>参考步骤：</b><font color="#FF0000">右击以下链接，单击目标另存为，保存位置设定为自己的个人文件夹，再单击确定。<b>请勿直接左键单击打开，否则有某些工具无法使用。</b></font></p>
+      <table border="1" width="100%">
+        <tr>
+          <td width="16%"><a href="EXCEL/0701.xls">高一01班成绩</a></td>
+          <td width="16%"><a href="EXCEL/0702.xls">高一02班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0703.xls">高一03班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0704.xls">高一04班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0705.xls">高一05班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0706.xls">高一06班成绩</a></td>
+        </tr>
+        <tr>
+          <td width="16%"><a href="EXCEL/0707.xls">高一07班成绩</a></td>
+          <td width="16%"><a href="EXCEL/0708.xls">高一08班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0709.xls">高一09班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0710.xls">高一10班成绩</a></td>
+          <td width="17%"><a href="EXCEL/0711.xls">高一11班成绩</a></td>
+          <td width="17%">&nbsp;</td>
+        </tr>
+      </table>
+      <p>2、打开该文件，在后面增加总分、平均分和名次三列<br>
+      3、计算所有学生的总分和平均分（计算名次下节课介绍）<br>
+      4、保存文件
+      </td> 
+    </tr>
+  </table>
+</div>
+<hr>
+<div align="center"><a href="../weiji.html">返回目录</a>
+</div>
+</body>
+
+</html>

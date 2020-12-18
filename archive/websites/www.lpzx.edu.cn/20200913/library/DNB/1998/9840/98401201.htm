@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>制作Win98的“紧急恢复盘”<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681"> 
+        &nbsp;&nbsp;&nbsp; 如果你的Win98冷不丁地闹闹别扭，甚至罢工，该怎么办？事先制作好“系统启动盘”和“紧急恢复盘”就不用发愁了。<br>
+        &nbsp;&nbsp;&nbsp; Win95的“系统启动盘”可以通过“控制面板”的“添加/删除程序”中的“启动盘”来制作。<br>
+        &nbsp;&nbsp;&nbsp; 而“紧急恢复盘”的制作，我们则可以通过Win98系统目录里的一个隐含工具Scanreg(w)(系统注册表检查程序)来完成。<br>
+        &nbsp;&nbsp;&nbsp; 首先选择需备份的系统文件，我的选择如下所示：<br>
+        &nbsp;&nbsp;&nbsp; Autoexec.bat、Config.sys、Msdos.sys、Command.com、Io.sys、System.dat、User.dat、Protocol.ini、System.ini、Win.ini、Control.ini、Desktop.ini。<br>
+        &nbsp;&nbsp;&nbsp; 然后编辑Win98安装目录下的Scanreg.ini文件，文件内容如下：<br>
+        &nbsp;&nbsp;&nbsp; Backup=1；是否备份注册表，若值为0则不备份<br>
+        &nbsp;&nbsp;&nbsp; Optimize=1；是否优化注册表，若值为0则不优化<br>
+        &nbsp;&nbsp;&nbsp; ScanregVersion=00001;版本号<br>
+        &nbsp;&nbsp;&nbsp; MaxBackupCopies=5;最大备份份数<br>
+        &nbsp;&nbsp;&nbsp; BackupDirectory=a:\backup;指点压缩包的存放位置，缺省为&amp;lt;windir&amp;gt;\sysbckup<br>
+        &nbsp;&nbsp;&nbsp; Files=30,autoexec.bat,config.sys,msdos.sys,io.sys,command.com<br>
+        &nbsp;&nbsp;&nbsp; Files=10,Protocol.ini,Control.ini,Desktop.ini;<br>
+        &nbsp;&nbsp;&nbsp; 指定需额外备份的系统文件，文件之间用“，”分隔，目录代码为：<br>
+        &nbsp;&nbsp;&nbsp; ;10:Windows的安装目录(例如c:\windows)<br>
+        &nbsp;&nbsp;&nbsp; ;11:Windows的系统目录(例如c:\windows\system)<br>
+        &nbsp;&nbsp;&nbsp; ;30:根目录(例如c:\)<br>
+        &nbsp;&nbsp;&nbsp; ;31:宿主根目录(例如c:\)<br>
+        &nbsp;&nbsp;&nbsp; ;Files=[dircode,]file1,file2,file3<br>
+        &nbsp;&nbsp;&nbsp; ;Files=[dircode,]file1,file2,file3<br>
+        &nbsp;&nbsp;&nbsp; 接着运行Scanregw或Scanreg即可快速将选定的系统文件以压缩包（CAB）的形式备份到软盘上。然后将&amp;lt;windir&amp;gt;\command\Scanreg.exe和Scanreg.ini文件复制到软盘上，“紧急恢复盘”的制作就顺利完成了。<br>
+        &nbsp;&nbsp; <strong> 附：Scanreg.exe的命令行参数：</strong><br>
+        &nbsp;&nbsp;&nbsp; 命令格式：Scanreg/&amp;lt;参数&amp;gt;<br>
+        &nbsp;&nbsp;&nbsp; 参数：Backup－备份系统注册表及相关系统文件<br>
+        &nbsp;&nbsp;&nbsp; Restore－备份文件还原<br>
+        &nbsp;&nbsp;&nbsp; Fix－修复注册表<br>
+        &nbsp;&nbsp;&nbsp; Comment=“&amp;lt;注释&amp;gt;”－备份文件时添加指定注释<br>
+        &nbsp;&nbsp;&nbsp; <strong>(作者联系地址：hjacky@163.net)(上海江雁)</strong><br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月19日第40期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

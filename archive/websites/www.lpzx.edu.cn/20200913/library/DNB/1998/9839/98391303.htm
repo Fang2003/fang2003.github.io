@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>在RedHat5.1中使用中文</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在RedHat5.1中使用中文<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont"><font color="#369681">&nbsp;&nbsp;&nbsp; 
+        如果你需要在RedHat5.1中输入中文，该怎么办呢?下面就介绍一种在RedHat5.1下使用中文的方法：1在你刚登录后的home目录下，建一个文件。inputrc，内容如下：setconvert－metaoffsetoutput－metaon2编辑/etc/profile，加上：sttycs8－istripsttypass8－istripexportLANG=CexportLC_CTYPE=iso8859－13重新启动系统。<br>
+        4进入Xwindows后，进入/usr/X11R6/bin，执行xcin，再执行crvxt即可。<br>
+        现在可用Ctrl＋Spacebar切换中英文输入法了。不过要在X_windows的Netscape中看到漂亮的汉字，只在字体管理器中选中Song(宋体)是不行的，还要进行如下操作：选择“edit/preferences/appearance/font”，将12改为16。<br>
+        注：RedHat5.1是Linux操作系统的一种商业版本。(安徽潘健)<br>
+        </font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年10月12日第39期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

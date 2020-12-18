@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><font face="黑体" color="#004080"><strong><p align="center">专家坐堂<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　湖南湘潭周游问：一台486电脑，装有花王二号声卡，原在Windows3.1中文版中能正常播放MIDI及其它音乐，将其升级为Windows95中文版后，能播放WAV文件和CD，但在播放MIDI时只能看见一只缓慢移动的指针，却听不到任何声音。在DOS环境下用MIDI播放器却能收到良好效果。<br>
+        　　答：在DOS下能播放MIDI音乐，而且在Windows中能播放WAV文件和CD，且在播放MIDI时能看到缓慢移动的指针，可以初步认为MIDI文件是好的。系统在播放MIDI时，听不到MIDI音乐的原因可能是由MIDI输出定向不正确造成的。首先在控制面板下双击多媒体图标，激活多媒体属性图框，选择MIDI选项。检查是否是由于MIDI输出错误地定向于其它MIDI设备或外部MIDI端口造成的，如果是则加以修正；也可在多媒体属性图框中双击“MIDI设备的仪器条目”，选定其下的MIDI设备条目后，单击“属性”栏，检查其使用情况，根据其描述的情况加以修正。究其原因，可能是升级为Windows95中文版时，Windows95未能正确识别你的声卡，而帮助你安装了其它声卡的驱动程序。Windows95仅能正确识别一些有名的声卡，如SOUNDBLASTER等，这种情况可利用Windows95的附件－多媒体－－媒体播放器－MIDI序列发生器，试试其能否播放MIDI，如不能则建议重新安装相应声卡的Windows95驱动程序。还有一种情况是，虽然在Windows3.X中正确地安装了声卡的驱动程序，升级为Windows95后也会发生你所描述的情况，如ESS688声卡，在Windows95中使用其Windows3.1的驱动程序时，就会发生无法播放MIDI的情况，必须用其自身的Windows95驱动程序。笔者浅见，愿能为你解决问题提供帮助。<br>
+        　　湖南岳阳李宗雁问：一台586电脑，配置为：捷波J－656TX主板、Pentium133CPU、2.1GB 
+        Maxtor硬盘、9685显卡、同维ALS007－B声卡、SONY 8X光驱、木质音箱。开启音箱电源后，音箱即传来剌耳的啸叫声，换了五台三种不同的音箱和三种不同的声卡也不能解决问题，但将此音箱和声卡换到别的机器上，使用效果很好，请问如何解决故障？<br>
+        　　答：换了那么多的声卡和音箱，估计不会是声卡和音箱的毛病，建议从以下几方面查找原因：<br>
+        　　1．声卡和音箱间的连线未使用屏蔽线或屏蔽线未良好的接地都可能带来干扰。尤其是在连线较长情况下，由连线感应带来的外界电磁波会引起高频啸叫，取下音箱和声卡端的接头，在保持长连线的情况下开大高音和音量调节钮，听听即可判断是否是上述原因造成的。<br>
+        　　2．如果不是屏蔽线带来的故障，可考虑啸叫声是不是由于机内板、卡的电磁幅射造成的，尤其是9685显示卡上带有连接电视机的射频信号输出，其电磁幅射会带来高频干扰，将声卡安置在远离显示卡的插槽中或在两卡间加一接地金属板,看看是否能使啸叫声减小，或换块显示卡试试。<br>
+        　　3．微机电源中有40KHz左右的高频振荡信号，如电源的高频滤波不良，也会对声卡的正常工作造成影响，可在声卡的电源滤波电解电容（通常是最大的一只电容）两端并联一只1000pF的电容或换只电源试试。<br>
+        　　4．如果还不能解决问题，可在声卡输出端左右声道对地各接一只1000pF左右的电容，其可使啸叫声减小，但电容不宜太大，否则会影响放音的高音效果。<br>
+        　　陕西宝鸡刘希平问：一台微机，配置为：486DX2－66CPU、大众主板，4M内存，Trident8900C显卡。在Windows3.1中只能在VGA的640×480/16色方式下运行。利用SETUP将显示方式设置为256色后启动Windows，在出现启动界面后死机，不知何故，请答复。<br>
+        　　答：估计你使用的是西文Windows3.1，在大多数西文Windows中没有Trident系列显卡选项，解决的方法：一是安装中文Windows，在中文Windows安装过程中，在显示类型选择项中有Trident系列选项，可将显示方式设置为256色；二是将中文Windows的SETUP.INF文件拷至西文Windows所在目录下(将原SETUP.INF覆盖)，然后再运行SETUP，按实际显示卡型号和自己的需要选择合适的驱动程序，按屏幕提示插入相应的中文Windows软盘，即可完成安装。<br>
+        　　如果你使用的是中文Windows3.1，在利用SETUP将显示方式设置为256色后启动Windows时死机，则造成死机的原因可能是显示卡驱动程序选择不正确、鼠标驱动程序不兼容或某个设备驱动程序安装不当造成的，更换显示卡驱动程序和鼠标驱动程序试试。<br>
+        　　另外EMM386使用不当也有可能导致Windows3.1的显方式无法设置为256色，将CONFIG.SYS中DEVICE=C:\DOS\EMM386.EXE一句暂时关闭，或者改为DEVICE=C:\Windows\EMM386.EXE试试，或许可以解决问题。<strong></p>
+        </strong></font><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年1月5日第1期34版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

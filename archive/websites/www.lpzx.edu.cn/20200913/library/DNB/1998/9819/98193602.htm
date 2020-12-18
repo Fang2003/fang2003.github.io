@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>刷新率对视频播放的影响&nbsp; 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　故障现象：一台微机，配置为：Intel 
+        PentiumⅡ266，32M SDRAM，Intel 440LX芯片组主板，Seagate 3.2G DMA－33硬盘，20倍速光驱(和硬盘各自占用一个IDE口，硬盘连IDE1口，光驱连IDE2口，二者跳线均为Master方式)，S3 
+        325显示卡(即S3 Virge显卡，配2M显存)，15英寸Pnp显示器(最大可以支持1280×1024、60Hz以及1024×768、85Hz)。XING的版本是3.30，系统显示模式设置为1024×768、64K色(64K色是看VCD的最佳设置)，显示驱动采用DirectDraw(安装了DirectX)。<br>
+        　　这台微机用来播放VCD应该是小菜一碟，可实际上运行Xing时，速度极低!在全屏方式下测试，居然只有9fps(fps=Frames 
+        Per Second，每秒帧数)左右!而且色斑极其严重，看起来很不舒服。经查看，微机的软件设置一切正常!<br>
+        　　故障分析与处理：由于系统设置基本上没有问题，估计是软件损坏了。笔者首先更换了显卡驱动程序，更换后，发现Xing的播放速度果然大大提高，全屏播放速度一下子到了76fps左右，运行Xing的速度测试项时，即使同时运行一个消耗CPU资源的大户WINAMP 
+        1.70，全屏播放速度仍达66fps，大显了PentiumⅡ和MMX的风采。难道以前显卡驱动程序真的坏了?<br>
+        　　出于习惯和对视力的保护，笔者使用显示器时，一般习惯选择大于75Hz的刷新率和大于或等于此刷新率时的屏幕最大分辨率。虽然这个显示器是PnP(即插即用)的，但我还是喜欢自己设置。于是，我将系统显示模式设置为1024×768、64K色，刷新率设置为85Hz。再次用Xing测试，发现问题又出现了!哈哈，原来是很少受到重视的刷新率有问题了，要做做怪!<br>
+        　　一般人会认为，刷新率只会影响视觉效果：当屏幕的垂直刷新率大于70Hz左右时，肉眼就比较难以看出屏幕的闪动了。刷新频率越高，屏幕上图像越稳定，对眼睛的刺激就越小。当然，高刷新频率也意味着显示器所需要带宽要大大增加。而实际上，刷新率的影响不只于此，本例的故障就是证明。<br>
+        　　既然如此，我们就来详细考察一下刷新率的影响。微机硬件配置、软件配置同前，只对屏幕的分辨率和刷新率进行改变，我们来测试Xing的播放速度(共采用了两种驱动程序)，以下是测试结果。<br>
+        　　1.采用的驱动程序为S3 Virge PCI(Windows 95自带)，发布时间是1997年2月25日。表格中最上面一行为分辨率(单位为Pixel×Pixel)，左边第一列为屏幕刷新率(单位为Hz)，其他数据为Xing的测试速度(全屏方式，单位为fps)，“NA”代表系统不支持(Not 
+        Available)此刷新率。测试结果见表一。<br>
+        　　2.采用的驱动程序为S3 Inc.Virge PCI for Windows95，这是从Cardex(耕宇)的随卡驱动光盘中取得的，发布时间为1997年6月26日，比上面测试时用的驱动程序新一些。表二中数据排列方式、单位和意义与表一相同。测试结果见表二。<br>
+        　　由上述两表可以很清楚地看出刷新率对于Xing播放速度影响是多么大!横向比较还可以看出，使用新版驱动程序时，刷新率对Xing播放速度的影响尤其大。一般说来，新版的驱动程序可以提高系统的显示速度，可是它的一个前提往往是需要更多的显示内存。当没有更多的显示内存时，它在高分辨率、高颜色和高刷新率的条件下，性能可能还不如旧版驱动程序。由此可以看出，显示内存的大小，不但影响系统可用的最大分辨率和最大颜色数目，而且也深刻影响着刷新率和显示速度(实际上，有心的朋友从某些显示卡的说明书表格中可以看出，显卡只有在显存达到一定数量时，才能支持某个分辨率×色彩数目×刷新频率的组合)。<strong><br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年5月18日第19期36版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

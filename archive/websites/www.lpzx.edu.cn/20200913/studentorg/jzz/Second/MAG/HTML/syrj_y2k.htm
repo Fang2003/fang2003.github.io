@@ -1,0 +1,115 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<style>
+<!--
+        A:link {text-decoration: none; color: "#000000"}
+        A:visited {text-decoration: none; color: "#000000"}
+        A:active {text-decoration: none}
+        A:hover {text-decoration: underline; color: 800000}
+-->
+</style>
+<title>Y2K测试软件大观</title>
+</head>
+
+<body background="../images/background.jpg" bgcolor="#ffffff" topmargin="0" leftmargin="0">
+<a name="0">
+
+<table border="0" width="584" cellspacing="0" cellpadding="0"
+style="font-family: 宋体; font-size: 9pt">
+  <tr>
+    <td width="62"><img src="../images/blank.gif" width="60" height="0"
+    alt="blank.gif (63 字节)"></td>
+    <td width="522"><table border="0" width="98%" cellspacing="0" cellpadding="0"
+    style="font-family: 宋体; font-size: 9pt">
+      <tr>
+        <td width="100%"><table border="0" width="507" cellspacing="0" cellpadding="0"
+        style="font-family: 宋体; font-size: 12pt">
+          <tr>
+            <td width="229" bgcolor="#4F4F4F" align="center"></a><font color="#FFFFFF"><strong>Y2K测试软件大观</strong></font><a
+            name="0"></td>
+            <td width="278" align="center" style="font-family: 宋体; font-size: 9pt"><p align="left">&nbsp; 
+            …………………………………………………李红波</td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+      <tr>
+        <td width="100%"></a>&nbsp;&nbsp;&nbsp; <br>
+        <br>
+        &nbsp;&nbsp;&nbsp; 
+        提起千年虫问题及其可能给我们带来的危害，相信广大用户都不会陌生。各级政府及企事业单位的捉“虫”工作正在紧锣密鼓地进行，可我们自己呢？我们该怎样判断自己的计算机中有无千年虫呢？这就需要“捉虫”软件的帮助了！本人在日常操作中试用了几个不同的Y2K测试软件，现分别介绍给大家。<br>
+        <br>
+        一、RTC2000（DOS）<br>
+        RTC2000是一个专门用于测试电脑硬件是否存在Y2K时钟问题的软件，它主要测试RTC、BIOS时钟、OS时钟等方面是否存在Y2K问题。测试的具体内容主要包括1999年至2000年的Y2K过渡测试以及2000年至2010年的闰年测试等。我们只需在DOS（包括Windows 
+        98的DOS窗口）中启动该软件，即可对系统进行测试。在测试过程中，PASSED表示测试通过；PASSED-表示测试基本通过，即日期正确但机器内的星期表示不正确；FAILED表示测试不通过。实际测试RTC时钟时，许多机器由于主板日期生成电路板部分未进行修改，故仍存在Y2K问题，检测结果为FAILED。而在进行BIOS时钟测试时，由于许多机器在处理日期时，对闰年、过渡年星期没有做相应的更正，故机器日期正确但星期表示不正确，所以这些计算机仍要进一步获取修改程序以更正这些问题。<br>
+        <br>
+        二、CLOKTEST 2000（DOS）<br>
+        使用该软件之前首先应使用“FORMAT A:/S/U”命令格式化一张空白软盘，并将该软件中的所有文件全部拷贝到新格式化的软盘中，然后用该软盘启动计算机，在DOS状态下执行软盘上的CLOKTEST文件即可进行测试。测试过程中用户只需按照屏幕指示进行操作即可，测试完毕之后，CLOKTEST 
+        2000会将最后的测试结果保存到软盘的SUMMARY.TVR文件中，我们可据此了解相应的情况（如果计算机存在Y2K问题，还可以使用CLOKTEST 
+        2000的出品商TANTRA公司提供的CLOKTEST 2000 Pro加以解决，不过那可是要花钱的呦）。<br>
+        <br>
+        三、MFX2000（Windows 95/98）<br>
+        MFX2000可以算是市面上最好的Y2K检测工具之一。它的最大特点在于可以对所有的应用程序进行检查，以确保用户的程序文件都采用了4位数字的格式来表示年份（相比之下，其它大多数的Y2K软件都只能对系统BIOS和操作系统本身作“千年虫”测试）。同时，MFX2000会在测试结束之后给出一份非常详细的Y2K测试结果报告，使用户对计算机的“千年虫”状况有一个比较准确的了解。MFX2000的使用比较简单，启动之后只需按其提示进行操作即可，非常方便。<br>
+        <br>
+        四、Norton 2000 Test/Fix<br>
+        （Windows 95/98）<br>
+        Norton 2000 Test/Fix是著名的工具软件公司Symantec的产品，它不但能全面安全地检测电脑是否存在Y2K问题，而且还能杀虫。我们在使用Norton 
+        2000之前首先要准备一张干净的软盘（必须格式化且没有任何文件），然后运行Make 
+        BIOS Test Disk程序，制作一张BIOS测试盘（Norton 2000 Test/Fix需要重新启动计算机并在DOS下运行，所以我们必须按照它的要求制作一张启动盘）。然后再用创建的BIOS测试盘启动计算机，Norton 
+        2000 Test/Fix就会自动运行，并对计算机的Y2K问题及2000年至2015年的闰年问题进行测试（其间需要重新启动一次计算机）。在测试过程中如果发现问题，Norton 
+        2000 Test/Fix还会自动修正，使用非常方便。<br>
+        <br>
+        五、Test2000（DOS）<br>
+        Test 2000是一个DOS下的Y2K测试软件，它不能直接在Windows的DOS窗口下运行。其功能比较简单：仅能测试计算机能否从1999年12月31日顺利跳至2000年1月1日以及计算机是否能设置2000年2月29日两个方面。不过使用也很简单，我们只需切换到纯DOS状态，然后在DOS提示符下输入“Test 
+        2000”命令即可开始进行检测。在测试过程中，Test 2000会自动重新启动一次计算机，并对发现的问题提出报警，不过Test2000不会做出任何修改。<br>
+        <br>
+        六、Y2K Test&amp;Fix<br>
+        （Windows 3.x/95/98）<br>
+        Y2K Test&amp;Fix是一个简单而有效的个人计算机Y2K问题检测软件，它可对系统活动时的数据、2000年闰年问题、2001年的非闰年问题及系统重启时的情况进行检测，并可生成一个详尽的结果报告。Y2K 
+        Test＆Fix是一个自解压文件，安装完成后它就会自动启动，我们只需单击TEST按钮即可启动其测试功能。在测试过程中，计算机会自动重启3次（分别用于执行上述4个Y2K的测试），然后我们就可以得出详细的测试分析了。不过免费版的Y2K 
+        Test&amp;Fix并不提供修复功能，有兴趣的读者可购买它的完全版以对找到的问题进行修复。需要注意的是，Y2K 
+        Test&amp;Fix不支持Win98的beta版。<br>
+        <br>
+        七、TimeBomb（Windows）<br>
+        TimeBomb是一个Windows下的Y2K测试软件，能对计算机硬件各种级别的时钟（系统时钟、BIOS时钟、CMOS实时钟等）进行详细的测试，使操作人员可以很清楚地了解到所使用的计算机硬件是否有2000问题。另外，TimeBomb的出品厂商Continua公司还对26000多种应用软件及数据库的2000年问题进行了测试，并在TimeBomb中列出这些软件的版本号、出品厂商及是否符合2000年要求等信息，我们可以利用它查找自己所使用的软件是否存在2000年问题，这就给用户的日常操作带来了极大的便利。<br>
+        启动TimeBomb的主程序console.exe之后，系统就会显示出如图所示的界面，然后我们就可以利用“begin 
+        scan”按钮对驱动器上指定类型的文件进行查找，利用“run diagnostics”按钮对计算机硬件的Y2K问题进行测试，利用“datebase”按钮来查看Continua公司测试过的26000多种应用软件及数据库的信息资料（如图所示），使用非常方便。<br>
+        <br>
+        八、Beyond Century 2000<br>
+        （Windows 3x/9x/DOS）<br>
+        “超越世纪”（Beyond Century 2000）是一个用于快速检测基于x86兼容CPU的计算机是否存在2000年问题的软件。它可对从8088到PⅢ等各类计算机、兼容机、终端及服务器快速进行检测，应用范围非常广泛。除检测功能之外，Beyond 
+        Century 2000还具有修正功能。它能针对不同的检测结果对计算机系统进行修正，从而保护计算机的安全。“超越世纪”在检测时可对计算机的RTC、BIOS时钟、操作系统环境时钟三个层次进行独立全面的检测。检测内容包括：时钟接口的正确性、千年过渡测试、1999年到2010年的闰年测试、1999年到2010年的月末过渡测试、1999年到2050年间的大量特殊日期测试、边界日期测试、无效日期测试等。<br>
+        启动Beyond Century 2000之后的界面如图所示，我们可利用“Test”来自动测试系统，利用“View”设置和查看时间，利用“Readme”阅读帮助信息。经过测试如果发现了问题也不必着急，“超越世纪”提供了一个专门的Y2K修正软件Fixer.exe，我们可利用它自动对RTC、BIOS的千年、闰年、星期等问题进行修复。<br>
+        <br>
+        九、Finddate（DOS）<br>
+        前面所介绍的软件都是用于测试硬件系统的，而Finddate则有所不同。它是一个针对软件的2000年问题进行测试的软件，主要用于测试软件的源代码，帮助用户检测程序语言中的有关日期、时间方面的变量、字符串、格式等信息，找出可能存在2000年问题的程序行，并将相关的字符串记录、打印下来，程序员可根据报告分析源程序中这些位置的源代码，简化对源程序的处理。需要说明的是，Finddate是一个源代码测试软件，它只能直接处理ASCII格式的源代码文件，不能处理编译后的二进制文件，这点务请用户注意。<br>
+        <br>
+        上述所有软件均能从《中国计算机报》1999年6月份的配套光盘中找到，有兴趣的读者不妨试一下。<br>
+        <br>
+        附：有关计算机2000年问题的网站：<br>
+        <br>
+        http://2000.beijing.gov.cn 北京市计算机2000年问题办公室<br>
+        http://2000.beijing.gov.cn/dxh/index-1.htm 北京市计算机2000年问题办公室论坛<br>
+        http://2000.beijing.gov.cn/dxh/y2k-cymw.html 2000年问题的解决思路<br>
+        http://2000.beijing.gov.cn/dxh/y2k-dsektop.html 台式机如何渡过2000年危机<br>
+        http://2000.beijing.gov.cn/dxh/y2k-ms-desktop.html 微软桌面产品中的2000年问题分析<br>
+        http://2000.beijing.gov.cn/dxh/zjlt/y2k_gl_baoxian.htm 2000年问题管理报告<br>
+        http://jm-www.hb.cninfo.net/service/y2k.htm 计算机2000年问题指南<br>
+        http://MSIA.pine.ncu.edu.tw/~ppfoong/y2k_b5.html Y2K千年虫危机 <br>
+        http://www.chinabyte.com/y2k ChinaByte制作的2000年问题专版，为普通人及专业人士提供解决2000年问题的参考<br>
+        http://www.cintcm.ac.cn/2000/2.htm 2000年问题网站<br>
+        http://www.cintcm.ac.cn/2000/5.1.htm 有关国家政府为解决计算机2000年问题所采取的行动<br>
+        http://www.computerworld.com.cn/week/tech/970721_04.html 计算机2000年问题的修改方法和软件工具<br>
+        <br>
+        <br>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

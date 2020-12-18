@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='images/epcw.css' TYPE='text/css'>
+<TITLE>电脑报电子版 -- 小猫提速记</TITLE>
+</HEAD><BODY BGCOLOR='white'>
+<A NAME='top'></A>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><img src="images/cpcw.gif" width="468" height="60" border="0"></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR ALIGN='Center' BGCOLOR='#CCCC99'>
+<TD>
+<TABLE WIDTH='100%' BORDER='0' CELLSPACING='1' CELLPADDING='1'>
+<TR BGCOLOR='#CCCC99' ALIGN='Center'>
+<TD BGCOLOR='#999966'><A HREF='index.html'><FONT CLASS='title'>目录</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='wrapup.html'><FONT CLASS='title'>综合报道</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='software.html'><FONT CLASS='title'>软件世界</FONT></A></TD>
+<TD BGCOLOR='#FFCC66'><FONT CLASS='title'><FONT  COLOR='#CC0000'>硬件周刊</FONT></FONT></TD>
+<TD BGCOLOR='#999966'><A HREF='internet.html'><FONT CLASS='title'>大众网络</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='oa.html'><FONT CLASS='title'>ＯＡ专刊</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='game.html'><FONT CLASS='title'>游戏广场</FONT></A></TD>
+<TD BGCOLOR='#999966'><A HREF='maket.html'><FONT CLASS='title'>评测与市场</FONT></A></TD>
+</TR></TABLE></TD></TR></TABLE>
+<TABLE BORDER='0' WIDTH='468' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+<TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font>电脑报电子版 &gt; 1999 年 &gt; <A HREF='index.html'>30 期</A> &gt;  <A HREF='hardware.html'>硬件周刊</A> &gt; 小猫提速记</TD>
+</TR></TABLE>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR><TD><SPAN CLASS='title'>《 小猫提速记 》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR><TD>　　近日牵着我的TP－LINK小猫在网上闲逛，来到全向的网站一看，7月12日全向推出了新的FIRMWARE 2.300版文件（升级Modem的FIRMWARE相当于升级主板的BIOS），马上下载一个试试，经过一个小时的折腾，我的小猫的连接速度从原来的49333bps提升到了现在的52000bps，下面把我的升级经过介绍给大家：<br>
+　　1．全向已在自己的网站上郑重声明：这个新的升级程序只适用于1998年11月以后购买的全向56K New2外置以及后续外置产品（采用Rockwell芯片），因为这些产品使用了2M FLASH ROM作为固化软件的存储，对于用全向的FIRMWARE来升级其它品牌Modem出现的问题，全向概不负责。如果你的Modem采用的是其它芯片组如TI等，更不能使用这个升级程序。如果你和我一样是用其它品牌的Modem，升级之前请想想后果。<br>
+　　2．我的TP－LINK Modem采用的是Rockwell 6764芯片，同时支持V.90和K56Flex协议（可以查看Modem的背面来确认），再检查一下自己Modem原来FIRMWARE的版本和FLASH ROM容量的大小，方法如下：选择“面板”→“解调器”→“诊断”，选择查看Modem所在端口详细信息，看ATI3的响应信息是否为x.xxx V90_2M_DLS。我的Modem显示的是：AT13：V2.200_V90_2M_DLS（2M处代表FLASH ROM的大小），看来符合要求，决心一试。如果你的Modem的响应信息不是如此，请不要继续往下做，如果显示的是V2.300－V90_2M_DLS，则已是最新的FIRMWARE版本了，无需升级。<br>
+　　3．确认自已的Modem符合以上两点后，从全向的站点上下载那个501K的升级文件QXFLASH V3.0，网址为http：//www.qxcomm.com/011/qxflash3.zip。<br>
+　　4．找出自己Modem的刷新专用程序，最好把它拷到硬盘上来运行，TP－LINK的刷新程序是在r6764\update目录下，名为flashcom32.exe。把从全向站点上下载的qxflash3.zip中的firm2300文件解压出来，放到自己的Modem刷新程序所在的目录中，根据各刷新程序对FIRMWARE文件的要求来更改升级文件的文件名，比如我将其改为v90.s37。<br>
+　　5．运行Modem的刷新程序，以我的TP－LINK为例：运行TP－LINK自带的flashcom32.exe，运行后，flashcom32会自动检测到机器中安装的TP－LINK Modem的型号。<br>
+　　6．点files选项，选择firmware loader，然后点下面的edit，再在file path中指定用来升级的v90.s37文件所在路径（指定好路径即可，其它的选项全部用默认值）。<br>
+　　7．返回install modems画面，点一下欲升级的Modem，然后点下面的update modem……，接下来，首先在modem loader/unloader中选择xmodem firmware unloader,按下ok开始备份，flashcom32会自动生成一个备份文件，我生成的备份文件名为backup0723235847.s37，生成的备份文件大小为786，560个字节。然后在modem loader/unloader中选择xmodem firmware loader，在modem firmware中选择firmware loader按下ok即开始升级Modem的FIRMWARE。备份和升级都需要一段时间，在做备份时如果因停电等原因失败，对Modem不会有任何影响，但在升级FIRMWARE时碰上停电这样的情况，Modem可能就玩完了，如果你和我一样还没有UPS，就只有拼命地祈祷了。<br>
+　　升级完成后，再用第2步的方法，AT13响应信息将变为：QXCOMM V2.300_V90_2M_DLS。升级后，拨号连接速度由原来的49333bps上升到52000bps。升级后的注意事项：如果不想把驱动程序也换成全向的，每次启动电脑的时候请把Modem的电源关掉。升级后，由于电话线路的原因，可能出现连线不稳定的情况，如果想改回来的话，用TP－LINK的朋友请用flashcom32 －admin这样的方法来运行，否则flashcom32将会拒绝更新Modem的FIRMWARE。另外，这个版本的FIRMWARE不适用于rockwell 6762芯片。<br>
+　　由于本人是第一次升级Modem，难免经验不足，还望各位老手多多指教，也欢迎大家来信交流，我的信箱是gispy@126.com<br><b>(广西　星风)</b></TD></TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://pcsoft.cpcw.com/recommend/1999/30/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='99302101.html#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='images/dot.gif' WIDTH='468' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='468' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+
+<NOSCRIPT>
+<A HREF='http://best.nease.net/cgi-bin/view/viewbasic.cgi?cpcw' TARGET='_blank'>
+</A>
+<A HREF='http://www.lpzx.edu.cn/show_stats.htm%20target=sxrl'>
+</A>
+</NOSCRIPT>
+</TD>
+<TD> <A HREF='http://www.cpcw.com/'>《电脑报》</A>版权所有，<A HREF='mailto:webmaster@cpcw.com'>电脑报网站编辑部</A>设计制作发布</TD>
+</TR>
+</TABLE></BODY></HTML>

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>慎用Windows95的DEL命令<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　　笔者在用命令DEL 
+        ＊.％?％ 删除WPS非正常关闭所产生的扩展名为％A％、％B％的文件时，碰到了一件怪事，竟然把无扩展名的所有文件全部删除干净，带有扩展名％A％、％B％的文件反而未删除掉，使笔者不得不再用UNDELETE命令费尽心机去恢复这些被误删的文件。究竟是什么原因引起的呢？<br>
+        　　开始笔者认为计算机有病毒了！然而笔者使用了手头所能找到的各种杀毒软件进行杀毒，结果都是查无病毒。是不是硬盘有问题？用各种方法检查的结果也否定了是硬盘出错所致。通过仔细的分析，发现在使用这一命令时，计算机都是工作在Windows95的COMMAND方式下，难道Windows95的DEL命令与MSDOS 
+        6.XX不同吗？确实如此！本厂的大部分计算机都是从MSDOS 6.22上装Windows95的，一旦回到MSDOS 
+        6.22下，DEL＊.％?％就再也不会误将无扩展名的文件删掉了。进而又发现，Windows95的DIR命令与MSDOS 
+        6.XX亦有不同，在Windows95方式，DIR ＊.％?％ 竟然与DIR ＊. 
+        的效果相同，将所有无扩展名的文件一起列出，扩展名为％？％的文件反而不列出来！难怪乎DEL 
+        ＊.％?％ 
+        会将无扩展名的文件全部删除干净，而本应删掉的扩展名为％A％及％B％的文件反未删除。不论是Windows95、Windows95 
+        OSR2还是Windows98β3，对后缀为“.％?％”的文件都无一例外。同理，想用COPY 
+        FILENAME.％A％ FILENAME 也会出现：File cannot be copied onto itself的提示。那么，想删除扩展名为％A％及％B％的所有文件，难道只能靠回到MSDOS 
+        6.XX下用 DEL ＊.％?％ 命令或者在Windows95的资源管理器下逐个将其删除吗？毕竟太麻烦了。通过试验，笔者发现使用Windows95的查找，在名称栏中输入 
+        ＊.％?％， 可以正确地将所有扩展名为％A％及％B％的文件找到，删除就容易了。真是怪事，查找能把＊.％?％和＊. 
+        区分开来而DEL 、DIR、COPY等命令则无法区分！<br>
+        　　所以，笔者认为：习惯于原DOS命令行操作的用户，在Windows95的COMMAND方式下，使用DEL等命令时要着重注意该命令与MSDOS 
+        6.XX下的不同，使用时若加上/P参数要求确认删除就安全了。特别是把Windows95的COMMAND 
+        ONLY 方式当作MSDOS 6.XX升级版来使用的用户更应提高警惕，Windows95与MSDOS 
+        6.XX虽然同出于Microsoft，但不同之处还是颇多的，不能把它混同于MSDOS 
+        6.XX来用！&nbsp; <strong>(浙江　张维仁)　</strong><br>
+        　<strong>&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年6月15日第23期12版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

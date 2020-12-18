@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>二也说Voodoo和次世代游戏机</strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">&nbsp; 
+        &nbsp;&nbsp; 　我是一个游戏发烧友，玩游戏已有十多年了，拥有的机型从小学的FC到中学的MD、SFC，再到现在大学的SS、PS和PC，除了对N64不“感冒”外，可算是集齐了。另外我还是一个PC硬件发烧友，我必看的硬件报刊有《电脑报》、《微型计算机》。但看了贵报第14期上《选择Voodoo还是次世代游戏机》一文（以下略称为《选》文）后，觉得有些数据同我的经验和资料不符，于是到处“收刮”资料，以便大家对Voodoo和次世代游戏机有更正确的了解。<br>
+        　　先让我们看看在游戏中的3D效果是怎么实现的。三维空间中的每一个物体都是由各自独立的多边形Polygon（一般是三角形Triangle）组成的，每个三角形有三个顶点，对每个顶点进行坐标变换和透视变换就能把所有物体的形状画出来，然后对三角形进行材质填充，计算各种3D效果，最后把图形以像素的形式填充出来（显示出来）。<br>
+        　　据游戏厂商提供的资料，SS采用的CPU是两片32位RISC SH2芯片,没有专用的3D加速芯片，它所有的3D效果都是用CPU算出来的，所以也没有公布3D性能数据。SEGA公司的下一代主机原计划采用3DFX公司的芯片，后来由于各种原因才改用NEC的POWER 
+        VR2。<br>
+        　　再说PS，PS里面其实也没有使用第三方厂商提供的专用3D加速芯片，大家可以把它拆开看看（快跑！有人要拆我的PS啊！）。PS的3D效果是由GTE（坐标变换引擎）、GPU（图形处理器）协同完成的。GTE的工作是计算顶点的坐标，1秒钟可以计算450万个顶点，也就是150万个多边形/秒。但是这些多边形是只有点和边而没有进行材质填充，材质填充的工作是由GPU来进行的，再由GPU进行像素填充，而且GPU又承担所有的2D图形工作（GPU：“好累，好累！”），由于GPU的限制，PS输出的处理好的多边形数只有36～38万个/秒。而且GPU的功能有限，它只能作一些简单的3D效果处理，例如简单的光影效果。对于N64，由于在国内市场还不大，我就不说了。<br>
+        　　现在我们来看看PC上专用的3D图形加速芯片吧。一般的3D芯片都是把顶点计算和材质填充功能集成在一起的，同时集成的还有像素填充功能和别的2D效果功能，如POWER 
+        VR系列和Riva 128等等，而Voodoo是用一块芯片处理顶点计算和材质填充,用另一块处理像素填充，Voodoo2则是用两块芯片处理顶点计算和材质填充，再加一块处理像素填充，速度自然不同凡响。至于多边形处理速度，POWER 
+        VR2是120万个/秒，Voodoo是100万个/秒，Voodoo2则是300万个/秒，而且这些计算出来的多边形是已经加上了诸如MIP 
+        Maping（MIP贴图处理）、Raytracing（光迹追踪）、Z－Buffer（Z轴缓冲）、Fogged（雾化）和边沿抗锯齿处理等（还有很多!）功能的，特别是最后两项，它们会使你的画面中不会看到马赛克现象！PS总没有这种功能吧。<br>
+        　　再说说软件，的确，每年PS是有几百个游戏推出，但是有PS的“战友”请说，你会玩其中的多少个？PS上的3D大作也只是屈指可数，《选》文中提到的PS 
+        3D游戏如《生化危机》、《古墓丽影》（注：《世嘉拉力》是SEGA的招牌大作，怎会在她的对手PS上推出呢？），我都有Voodoo版，而且效果都比PS版要好。至于FF7，我可是天天看着EIDOS的站点的啊！今年EIDOS才抢到代理合约，现在已经在开发中，在Diamond的Voodoo2的DEMO光盘上和《古墓丽影GOLD》上已经有FF7的DEMO，我已经看过这个DEMO,相信正式版效果肯定是比PS好的。至于SS上的《世嘉拉力》和《环游美国》是SEGA的两大3D赛车游戏，都有PC移植版，《世嘉拉力》因为没有用到3D加速卡，所以效果只与SS版相当，但《环游美国》用了D3D加速，不但加了赛道，还增加了几种天气选择如半夜、清晨、雾天等，光影和临场效果比街机还好，更别说比SS了。<br>
+        　　说了这么多的次世代游戏机的不是，难道次世代游戏机就一无是处吗？NO！要是这样，我就不会把我的SS和PS留下了。因为有些感觉是在PC上没法找到的，例如格斗的感觉，无论在PC上接上多好的GAME 
+        PAD（PS对手柄的响应是1/30秒，PC上绝对达不到这种速度），无论PC版的VR 
+        Fighter 2和LAST BRONX做得有多好，我都只会在次世代游戏机上玩，格斗的操纵感在PC上完全无法实现，2D的射击游戏的感觉PC也无法提供。还有就是次世代游戏机的最大的优势——价格！正如《选》文说的一样，SS或PS只要一张Voodoo卡的价钱，对于那些现时没有PC而又很想玩游戏的朋友来说是很正确的选择。对于那些已经有PC而又很想得到高质量的3D游戏效果的朋友，那么Voodoo或Voodoo2绝对是最好的选择！顺便提一句，从以往的情况推测，1999年的SEGA新机型推出时至少要卖3000元以上，1600～1800元看来是不可能的。</font></p>
+        <p class="ourfont" align="left"><font color="#369681">(湖北　李凌江)</font></p>
+        <font color="#369681"><p align="right"><span class="ourfont"><font color="#369681">本文出自：</font></font><a
+        href="index.htm"><font color="#0000FF">《电脑报》1998年5月4日第17期40版</font></a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

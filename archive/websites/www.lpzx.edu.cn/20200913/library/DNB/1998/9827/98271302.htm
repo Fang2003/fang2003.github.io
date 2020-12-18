@@ -1,0 +1,79 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>　在Delphi中支持文件拖放的程序 
+        <br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681">　<strong>　</strong>Windows中应用程序间的文件拖放操作非常简单、快捷、实用，通常我们在Windows中做拷贝、移动文件操作时，常常是使用支持文件拖放的程序来进行，如Windows 
+        3X中的文件管理器，Windows 95资源管理器等。实现文件拖放并不复杂，以下面的例子来简单说明它的原理：<br>
+        　　文件管理器或资源管理器向程序Project1发一个WM_ DROPFILES消息，Project1获取WM_ 
+        DROPFILES消息后调用WinAPI函数DragAcceptFiles()、DragQueryFile()处理WM_ DROPFILES消息。<br>
+        　　以下是用Delphi实现这个功能的过程：<br>
+        　　1新建一个工程Project1，在Unit1的uses保留字后加上ShellApi单元。<br>
+        　　2在Form1的OnCreate事件中添加下面一行，使Form1可以接收WM_ 
+        DROPFIELS消息。<br>
+        　　DragAcceptFiles(Form1Handle, True)；<br>
+        　　3从构件面板上拖一个Memo1到Form1上，设Memo1的Align属性为alClient。<br>
+        　　4在Form1的公有域添加如下代码，声名一个处理WM_ DROPFIELS消息的过程。<br>
+        　　public<br>
+        　　{Public declarations}<br>
+        　　procedure WMDropFiles(var message:TMessage);message WM_ DROPFILES;<br>
+        　　end;<br>
+        　　5在implementation后面编写过程WMDropFiles()的代码。<br>
+        　　procedure Tform1WMDropFiles(var message:TMessage);<br>
+        　　var<br>
+        　　P:array[0..254] of Char;<br>
+        　　I:word;<br>
+        　　begin<br>
+        　　Inherited;<br>
+        　　Memo1LinesClear;<br>
+        　　{＄IFDEF WIN32}<br>
+        　　I:=DragQueryFile(Message.wParam,＄ffffffff,nil,0);<br>
+        　　{＄ELSE}<br>
+        　　I:=DragQueryFile(Message.wParam,＄ffff,nil,0);<br>
+        　　{＄ENDIF}<br>
+        　　Caption:=IntToStr(i);<br>
+        　　for I:=0 to I－1 do<br>
+        　　begin<br>
+        　　DragQueryFile(MessagewParam,I,P,255);<br>
+        　　Memo1LinesAdd(StrPas(P));<br>
+        　　end;<br>
+        　　end;<br>
+        　　运行Project1，从Windows 3X的文件管理器或Windows 95中的资源管理器里拖一些文件或目录到Project1窗口上，释放鼠标左键后可以看到Project1窗口标题上显示了拖放文件或者目录的数目，并且Memo1详细列出这个文件或目录的全路径名。<br>
+        &nbsp;&nbsp; <strong>(广西　黄慧强)<br>
+        </strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年27月27日第27期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

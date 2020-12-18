@@ -1,0 +1,96 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+BODY  {font-size : 12pt; font-weight : normal; font-style : normal; text-decoration : none;}
+P  {font-size : 12pt;}
+A  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Visited  {font-size : 9pt; color: blue; text-decoration : none;}
+A:Active  {font-size : 9pt; color: red; text-decoration : none;}
+A:Hover  {font-size : 9pt; color: blue; text-decoration : underline;}
+TD  {font-size : 12pt;}
+-->
+</style>
+<title>同时使用FAT32与FAT16</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+    <TABLE BORDER="0" WIDTH="715" HEIGHT="80" ALIGN="center">
+      <TR> 
+        <TD WIDTH="221" HEIGHT="69"><A HREF="../../../../www_lpzx_edu_default.html"><IMG SRC="http://www.lpzx.edu.cn/images/title01.gif" WIDTH="166"
+        HEIGHT="77" ALT="电脑报LOGO" BORDER="0"></A></TD>
+        <TD WIDTH="484" HEIGHT="69"> 
+          <P ALIGN="center"><A
+        HREF="http://netfin4.china.com/?adlink|2|CPCW-Front-Top|1|468x60|247MEDIA" TARGET="_top"><IMG
+        SRC="http://netfin4.china.com/?adserv|2|CPCW-Front-Top|1|468x60|247MEDIA" BORDER="0"
+        WIDTH="468" HEIGHT="60"></A><BR>
+            中文十大网站之一，广告效果极佳，欢迎在此<A href="bill/index.htm">刊登广告</A>。 
+        </TD>
+      </TR>
+    </TABLE>
+    <table border="0" width="700" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="100%" valign="top" align="center"><div align="center"><center><table border="0"
+    width="680" cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top" bgcolor="#55002B"><p align="center"><font face="黑体"
+        color="#FFFFFF"><strong>同时使用FAT32与FAT16</strong></font></td>
+      </tr>
+      <tr VALIGN="BOTTOM" ALIGN="LEFT">
+        <td width="672" background="http://www.lpzx.edu.cn/library/images/%B5%D7%CE%C6.gif"><p align="left">　　随着硬盘容量的日益加大，如何更有效地使用硬盘空间和管理硬盘，成为人们日益关注的问题。WIN98的推出和流行，FAT32文件系统的使用也越来越普遍。FAT32是一种新型的文件系统，能够支持大于2GB的硬盘分区，同时，它所使用的簇比传统的FAT16使用的簇要小，当硬盘分区在8GB以下时，每簇的大小只有4KB，因此能更有效地利用硬盘空间。但FAT32也有它的不足，如不能再用双重启动引导运行老版本的 
+        DOS和Windows、大多数的磁盘压缩工具与FAT32不兼容、不能卸载WIN98、一些磁盘工具不能正常使用等。<br>
+        　　要想同时获得FAT32与FAT16的优点，克服各自的缺点，只有同时使用它们。<br>
+        　　<strong>一、硬盘所有的分区都小于2GB</strong><br>
+        　　当硬盘所有的分区都小于2GB时，则可以在DOS下对硬盘进行分区和格式化，此时的文件系统是FAT16，按顺序安装DOS和WIN98。启动WIN98，单击“开始/程序/附件/系统工具”，然后单击“驱动器转换器”(FAT32)。 
+        选择需要转换的分区，将它转换为FAT32(C盘保留为FAT16)。这样，C盘为FAT16文件系统，可以实现WIN98的双重启动和卸载，其它分区是FAT32文件系统，可以有效地利用硬盘空间。当然，双启动进入以前的DOS或Windows后，只能使用C盘，不能识别和使用其它的FAT32分区盘。<br>
+        　　<strong>二、硬盘分区大于2GB</strong><br>
+        　　若硬盘较大，为了避免分区过多带来管理上的不方便，则硬盘的分区有可能大于2GB;或硬盘容量在8GB以上，由于分区数不能超过4个，则必然有分区大于2GB。由于FAT16文件系统的最大分区不能超过2GB，因此在对硬盘进行分区时，只能采用FAT32文件系统进行分区。<br>
+        　　1.系统盘采用FAT16，其它盘采用FAT32<br>
+        　　采用FAT32文件系统对硬盘进行分区时，若分区小于512MB，则系统自动使用FAT16文件系统。因此分区时，若C盘小于512MB，则可以按一般的步骤进行分区和格式化。用WIN98创建的启动盘启动计算机，运行FDISK，当出现“Do 
+        you wish to enable large disk support(Y/N)…?”的提问时，回答“Y”，在创建主分区时，使其容量小于512MB，其它分区容量任意，若其它分区容量大于512MB，则系统采用FAT32文件系统。退出FDISK，用WIN98启动盘重新启动计算机，用Format格式化其它分区即可。<br>
+        　　但分区时，若C盘大于512MB，则不能采用一般的步骤，可以按以下步骤进行分区：<br>
+        　　·用WIN98启动盘启动计算机；<br>
+        　　·运行FDISK，当出现“Do you wish to enable large disk support(Y/N)…?”的提问时，回答“N”，进入FDISK，创建主分区 
+        。然后退出FDISK；<br>
+        　　·再次进入FDISK，当出现“Do you wish to enable large disk 
+        support(Y/N)…?”的提问时，回答“Y”，进入FDISK后，不创建主分区，而是直接创建扩展分区和逻辑分区，分区结束后退出FDISK；<br>
+        　　·重新启动计算机，用Format格式化各分区。<br>
+        　　经过以上步骤后，C盘采用的是FAT16文件系统，其它分区若大于512MB则采用FAT32文件系统。<br>
+        　　采用FAT16文件系统时，若分区大于1024MB，则硬盘每簇占用32KB，为了更有效地利用硬盘空间，一般C盘小于1024MB。另外，由于WIN98的应用程序在安装时经常向系统盘内拷入动态链接库和其它文件，因此C盘也不能太小，一般为1000MB，应用软件则安装在其它盘上。<br>
+        　　若系统盘采用FAT16系统文件，则安装WIN98的步骤为：<br>
+        　　·安装以前的DOS；<br>
+        　　·用WIN98的启动盘启动计算机；<br>
+        　　·安装WIN98。<br>
+        　　注意：千万不要用硬盘启动DOS后再安装WIN98。WIN98在安装时将保存光驱的驱动器号，以备以后添加程序。若用硬盘启动DOS，因其不能识别FAT32，则光驱将占用硬盘的驱动器号。安装完后启动WIN98，由于WIN98文件系统能识别FAT32盘，则硬盘驱动器将占用安装WIN98时的光驱驱动器号，在以后添加程序时，WIN98将找不到安装路径。<br>
+        　　2.系统盘采用FAT32，其它分区中有的采用FAT16<br>
+        　　在这种情况下，可以用WIN98的启动盘启动计算机，运行FDISK，当出现“Do 
+        you wish to enable large disk support(Y/N)…?”的提问时，回答“Y”，进入FDISK后，按顺序创建主分区、扩展分区和逻辑分区。退出FDISK后，重新启动计算机，格式化各分区。若在分区创建时，逻辑分区小于512MB，则系统自动采用FAT16文件系统。由于C盘为FAT32文件系统，不能实现双重启动。<br>
+        <strong>(天津　郭文平)</strong></p>
+        <p align="right"><font COLOR="#000000">本文出自：<a href="index.htm">《电脑报》1999年03月29日第12期</a></font> 
+        </td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+    <DIV ALIGN="center">
+      <CENTER>
+      </CENTER>
+    </DIV>
+    <SCRIPT>
+		document.write("<a href="library/DNB/1999/show_stats.htm%5C%22" target=sxrl>"); 
+		document.write("<img src=\"http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&refer="+escape(top.document.referrer)+"\" width=25 height=15 border=0 alt=\"《电脑报》栏目排行榜\">"); 
+		document.write("</a>"); 
+	</SCRIPT>
+    <NOSCRIPT> 
+    <DD ALIGN="center"><A
+  HREF="http://view.gznet.com/cgi-bin/rl_views.cgi?UID=10015861 target=sxrl&gt;"><IMG
+  SRC="http://refer.gznet.com/cgi-bin/rl_refer.cgi?UID=10015861&amp;refer=http%3A//www.cpcw.com/NoJavaScript"
+  WIDTH="25" HEIGHT="15" BORDER="0" ALT="《电脑报》栏目排行榜"></A></DD>
+    </NOSCRIPT> 
+  </center></div>
+</body>
+</html>

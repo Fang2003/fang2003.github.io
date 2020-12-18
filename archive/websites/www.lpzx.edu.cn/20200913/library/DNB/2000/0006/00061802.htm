@@ -1,0 +1,109 @@
+<HTML><!-- #BeginTemplate "/Templates/software.dwt" -->
+<HEAD>
+<META HTTP-EQUIV='Content-Type' CONTENT='text/html; charset=utf-8'>
+<META NAME='author' CONTENT='William Wan'>
+<LINK REL='STYLESHEET' HREF='epcw.css' TYPE='text/css'>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>电脑报电子版 -- 用ＶＢ编程绘制网格图像</TITLE>
+<!-- #EndEditable --> 
+<style type="text/css">
+<!--
+.centertitle {  font-weight: bold; text-align: center; line-height: 35px; font-size: 9pt; color: #000000}
+.lefttitle {  line-height: 35px; font-weight: bold; font-size: 9pt; color: #000000}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR='white'>
+<span class="centertitle"></span><A NAME='top'></A> 
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='6' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='top'><TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR>
+</TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='Center'>
+<TR>
+<TD WIDTH='145' BGCOLOR='#CCCC99' 	ALIGN='Center' VALIGN='top'><A HREF='http://www.yesky.com'><IMG SRC='http://www.lpzx.edu.cn/images/logo.gif' WIDTH='143' HEIGHT='50' ALT='电脑报' BORDER='0'></A></TD>
+<TD WIDTH='470' BGCOLOR='#CCCC99' HEIGHT='50'><a href="http://chat.yesky.com"> 
+      <img src="images/0823-3.gif" width="468" height="60" border="0"> </a></TD>
+</TR>
+</TABLE><TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='2' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/pixel.gif' WIDTH='1' HEIGHT='1'></TD>
+</TR>
+</TABLE>
+<TABLE BORDER='0' WIDTH='615' CELLSPACING='0' CELLPADDING='0' HEIGHT='3' ALIGN='Center' BGCOLOR='#CCCC99'>
+<TR VALIGN='bottom'>
+<TD WIDTH='100%'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='Center'>
+<TR>
+    <TD WIDTH='615' COLSPAN='2'><font color="#FF6666">当前位置：</font><A HREF='http://www.lpzx.edu.cn/issue/'>CPCW电子版</A> 
+      &gt; <A HREF='http://www.lpzx.edu.cn/issue/2000/'>2000 年</A> &gt; <a href="issue/2000/06/index.html"><!-- #BeginEditable "%C6%DA" -->06期<!-- #EndEditable --></a> 
+      &gt; <!-- #BeginEditable "%C0%B8%C4%BF" --><a href="issue/2000/06/software.html">软件世界</a><!-- #EndEditable --> 
+      &gt; <!-- #BeginEditable "%B1%EA%CC%E2" -->用ＶＢ编程绘制网格图像<!-- #EndEditable --></TD>
+</TR></TABLE>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'><TR ALIGN='center' VALIGN='bottom'><TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD></TR></TABLE>
+<BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' BGCOLOR='#FFCC66' ALIGN='center'>
+<TR>
+    <TD><SPAN CLASS='title'>《 <!-- #BeginEditable "%CE%C4%D5%C2%CD%B7" -->用ＶＢ编程绘制网格图像<!-- #EndEditable --> 
+      》</SPAN></TD>
+</TR></TABLE><BR><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+    <TD><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->　　如果你曾经用过像Photoshop或CorelDraw那样强大的图像处理软件, 
+      那你一定知道对网格的操作, 如显示网格，对齐网格等等。这些操作对图像处理有一定的帮助。就好像刚刚学习画画的人要打格子一样，它精确、整齐，给画画的人带去了很多的方便！那么在VB中如何绘制一幅本来只有在Photoshop等绘图软件中才能完成的网格图像呢？现在就让笔者用VB编程来实现它。<br>
+      　　首先：做准备工作：在FORM1上新建一个PICTURE1（并装载一幅你喜爱的图像）和两个COMMAND命令按钮在PICTURE1下面（即COMMAND1和COMMAND2），其他属性不变，然后输入以下代码：<br>
+      　　Private Sub Form_Load()//初始化设置<br>
+      　　Picture1.AutoSize = True<br>
+      　　Command1.Caption = ″显示网格″<br>
+      　　Command2.Caption = ″取消网格″<br>
+      　　Form1.Caption = ″显示网格图像演示程序″<br>
+      　　End Sub<br>
+      　　－－－－－－－－－－－－－－－－<br>
+      　　Private Sub Form_Activate()//设置网格颜色<br>
+      　　Picture1.ForeColor = vbWhite<br>
+      　　Picture1.Move 0, 0<br>
+      　　End Sub<br>
+      　　－－－－－－－－－－－－－－－－<br>
+      　　Private Sub Command1_Click()//显示网格<br>
+      　　Dim HLINESNUM As Integer<br>
+      　　Dim WLINESNUM As Integer<br>
+      　　Dim XX As Integer<br>
+      　　Dim I As Integer<br>
+      　　Dim J As Integer<br>
+      　　Dim YY As Integer<br>
+      　　HLINESNUM = 15 //设置网格为15＊15显示<br>
+      　　WLINESNUM = 15<br>
+      　　Picture1.Refresh<br>
+      　　Picture1.AutoRedraw = False<br>
+      　　XX = Int(Picture1.ScaleWidth / WLINESNUM)<br>
+      　　YY = Int(Picture1.ScaleHeight / HLINESNUM)<br>
+      　　For I = 1 To HLINESNUM ＋ 1<br>
+      　　Picture1.Line (XX ＊ I, 0)－(XX ＊ I, Picture1.Height － 1)<br>
+      　　Picture1.Line (0, YY ＊ I)－(Picture1.Width － 1, YY ＊ I)<br>
+      　　Next<br>
+      　　End Sub<br>
+      　　－－－－－－－－－－－－<br>
+      　　Private Sub Command2_Click()//取消网格<br>
+      　　Picture1.AutoRedraw = False<br>
+      　　Picture1.Refresh<br>
+      　　End Sub<br>
+      　　－－－－－－－－－－－－<br>
+      　　Private Sub Form_Unload(Cancel As Integer)<br>
+      　　Unload Me //结束程序<br>
+      　　End<br>
+      　　End Sub<br>
+      　　好了，请按F5运行一下吧，效果如何？<br>
+      　　注：以上程序在中文WINDOWS98, 中文VB5.0专业版中调试通过!　<br>
+      <b>　（上海　季昭君）</b><!-- #EndEditable --></TD>
+  </TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR>
+<TD><A HREF='http://www.mydown.com/dnb/' TARGET='_blank'>下载本期推荐软件</A></TD><TD ALIGN='right'><A HREF='00061802.htm#top'>页 首</A></TD>
+</TR></TABLE><BR>
+<TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='0' ALIGN='center'>
+<TR ALIGN='center' VALIGN='bottom'>
+<TD HEIGHT='6'><IMG SRC='http://www.lpzx.edu.cn/images/dot.gif' WIDTH='615' HEIGHT='1'></TD>
+</TR></TABLE><TABLE WIDTH='615' BORDER='0' CELLSPACING='0' CELLPADDING='2' ALIGN='center'>
+<TR ALIGN='center'>
+<TD>
+</TD>
+<TD> <A HREF='../../../../www_lpzx_edu_default.html'>CPCW版权所有</A>，<A HREF='mailto:webmaster@staff.yesky.com'>YESKY天极网编辑部</A>设计制作发布<script language="JavaScript" src="http://www.lpzx.edu.cn/library/DNB/download/yeskye.js">
+</script></TD>
+</TR>
+</TABLE></BODY><!-- #EndTemplate --></HTML>

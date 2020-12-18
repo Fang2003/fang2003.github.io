@@ -1,0 +1,284 @@
+<html><!-- #BeginTemplate "/Templates/hardware.dwt" -->
+
+<head>
+
+<!-- #BeginEditable "doctitle" --> 
+
+<title>自己动手做Quadro2 MXR</title>
+
+<!-- #EndEditable --> 
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="cpcw.css">
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+
+  <tr> 
+
+    <td width="148" align="center"> <iframe src="http://www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+
+    </td>
+
+    <td width="473" align="center" height="61"> 
+
+       
+
+    </td>
+
+    <td align="center" width="149"><iframe src="http://www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+
+  <tr> 
+
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+
+      | <a href="maket.html"><font color="#FFFFFF">评测与市场</font></a> | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+
+      </a>| <a href="http://www.cpcw.com"><font color="#FFFFFF">首页</font></a></span></td>
+
+    <td align="right" width="147" rowspan="2"><img src="images/b2.gif" width="147" height="22"></td>
+
+  </tr>
+
+  <tr> 
+
+    <td colspan="2" bgcolor="#FFCF96" height="2"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FF9900" height="48">
+
+  <tr> 
+
+    <td width="174" valign="bottom"><img src="images/a1.gif" width="169" height="38"></td>
+
+    <td width="448" class="nava"><span class="nava"><font color="#FFFFFF">严正声明<br>
+
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</font></span></td>
+
+    <td align="right" width="148" valign="top"><img src="images/b3.gif" width="147" height="38"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+
+  <tr> 
+
+    <td width="169" rowspan="2" valign="top"><img src="images/a2.gif" width="169" height="11"></td>
+
+    <td width="460" height="2" bgcolor="#D77201"></td>
+
+    <td width="141" rowspan="2" valign="top"><img src="images/a3.gif" width="160" height="9"></td>
+
+  </tr>
+
+  <tr>
+
+    <td width="460" height="9"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td colspan="3" valign="top"> 
+
+      <table width="599" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="http://www.cpcw.com">《电脑报》电子版</a> 
+
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第1期<!-- #EndEditable --> 
+
+            </a>&gt;&gt;<a href="hardware.html">硬件周刊</a></font></td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->自己动手做Quadro2 
+
+              MXR<!-- #EndEditable --></div>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+
+        <tr> 
+
+          <td> 
+
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->&nbsp&nbsp&nbsp&nbsp我的显卡为GeForce2 
+
+              MX，近日看到介绍关于GeForce256修改成Quadro的文章，就拿自己的显卡小影霸速龙6000)动手术，出乎意外地获得了极大的成功，不敢独享成功的喜悦，写出来和各位大虾共同切磋，我先给各位介绍一下nVIDIA 
+
+              Quadro2 显卡。 Quadro是GeForce系列里专业级显示芯片的名称，其价格远高于我们平时所见的GeForce显卡，也不是每家厂都能生产的，面向的对象主要是专业图形设计，如AutoCAD等等，它与GeForce系列的差别见表1。 
+
+              <br>
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbspQuadro芯片与普通的GeForce芯片到底有什么结构上的差异呢？如果是只是品质上的差别或根本没有差异的话，改造GeForce成为Quadro的可能性就很大了。据了解Quadro使用的就是GeForce芯片，只是在显卡某些部分设计得与GeForce不同罢了。 
+
+              <br>
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbsp表1 QUADRO与GeForce性能差异表 GeForce Quadro AA Lines No Yes Two－sided 
+
+              Lighting No Yes Shared Back Buffer No Yes 3D Window Clipping No	
+
+              Yes 128 MB Frame Buffer No Yes Pro App Validation No Yes 改装篇 我的显卡配置32MB 
+
+              SDRAM。这块GeForce2 MX所设定的芯片和显存默认频率分别为183和183MHz，事先装有雷管驱动6．34版本，再看这块显卡的走线和零件规格也和公板基本一致，因此改装工作完成得比较顺利。由于有些需要改装的地方比较靠近显示芯片，所以改装时一定要把芯片上的散热片拔下来，注意散热片是粘上去的，不要硬来，把它取下来这里有个小窍门：“以柔克刚”，找一根比较细的线穿在散热片与芯片之间，来回拉几下就开了，下一步就是更改电阻的位置了，正确的方法是将图1中所标的三个电阻摘下焊接到原来空焊的三个电阻处就可以了(其实更简单的方法就是，将R121、R123的电阻焊到R122、R124的位置就可以了)，如果电阻不小心弄坏了的话，就去电子元件商店买个SMD封装的10k的电阻代替。改装前后显卡电阻的示意图<br>
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbsp见图2，接下来开机进入Windows 98，程序报告发现了新显卡nVIDIA Quadro2 MXR，看来硬件改造已基本成功，安装好驱动程序并重新启动以后可以查看到新的驱动程序(见图3)。整个改装过程前后进行了40分钟，主要是差劲的焊功所致，焊功熟练的朋友可能花不了几分钟就可以搞定了。值得注意的是焊接中要防静电，防止芯片被损坏，还有由于显卡上的电阻体积较小，电阻间排布紧密，希望朋友能准备好镊子等工具(我是用的鸭嘴笔，感觉好用)，方便电阻的夹取，并在改造完后注意清除焊锡以防焊锡造成短路，开机后，BIOS信息仍是nVIDIA 
+
+              GeForce2/MX ，这是由于显卡的BIOS没有更改的缘故。 <br>
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbsp测试篇 由于Quadro2主要针对OpenGL应用，改装后对D3D性能基本没有多少提高，所以省略掉了3D mark2000 为首的D3D测试软件，直接让GTS2 
+
+              和改装完毕的MX(Quadro2 MXR)运行一些专业OpenGL测试程序，测试差距，并以此测试改造后的效果。 在测试平台的硬件选用上由于条件上的限制，俺只能用自己的电脑，没能使用外频为133的CPU，俺的配置是赛扬2代 
+
+              566超873MHz(103MHz外频)、EPOX的BXA－M主板、128M内存CL＝3、IBM的5400转硬盘。软件环境为Windows98操作系统，Drieax8．0，显卡统一使用NVIDIA 
+
+              6．34公版驱动程序。 ViewPerf 6．1．2测试 此程序为中等复杂程度的OpenGL测试，与以往的ViewPerf 6．1．1测试不同，ViewPerf 
+
+              6．1．2加大了模型复杂程度，并增加了一项MedCAD－01测试，这更加重了其面向CAD/CAM的成分，结果见下表。从表中可看出改造后的显卡在ProCDRS－03和MedCAD－01测试中分别有很大提高，尤其是MedCAD－01中Clipping单项得分是GTS的7倍，这显示出两者质的区别，决不是仅仅改变了BIOS对显示芯片的辨别名称而已，测试结果见表2。 
+
+              表2 ViewPerf6．1．2测试成绩 项目 GeForce2 GTS 改装的Quadro2 MXR awadvs－04 32．38	
+
+              50．80 drv－07 7．356 11．20 dx－06 11．24 11．23 light－04 3．632 3．437 
+
+              medcad－01 9．101 19．16 procdrs－03 8．886 9．999 测试结果够酷的吧，比Geforce2 
+
+              GTS都要高那么多，是不是感到非常超值，有胆量的DIY高手们赶快动手吧，还等什么？我的OICQ号码是11838243，有问题互相切磋。 
+
+              <br>
+
+              <br>
+
+              &nbsp&nbsp&nbsp&nbsp此次测试证明了GeForce系列显卡和Quadro系列显卡其实是同“根”芯片同“源”(研发)所不同的只是两个电阻的摆放位置而已。大家不要盲目跟从NVIDIA的技术白皮书而花费大把不必要的银子。另外也证明Quadro系列显卡的OpenGL性能确实强大从目前来看除了INTENSE 
+
+              3D的WILDCAT 4210和HP的某些超高档3D加速卡性能略超过它以外 Quadro几乎所向无敌而且相信GeForce、GeForce2 
+
+              GTS显卡的改造方法也差不多，DIY爱好者只需要稍微动一下手，就会在不增加一分钱的前提下大幅度提高显卡的性能， 最后要声明的是：虽然俺这次改装非常成功，但不能保证你去改装也同样顺利。本操作具有一定难度，而且被改装的对象不同可能会导致改装失败，最好在专业人员指导下进行改装。在此声明：本次改装纯属本着DIY精神和兴趣爱好而进行的，改装后造成的一切后果请自己负责。高 
+
+              鹏<!-- #EndEditable --></p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+      <br>
+
+      <br>
+
+      <br>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+
+  <tr> 
+
+    <td width="161" bgcolor="#99CCFF"> </td>
+
+    <td width="610" bgcolor="#FF9900"></td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><a href="bill/index.html" target="_blank"></a><a href="hdong/gao.htm" target="_blank"> 
+
+        欢迎投稿 </a> | <a href="bill/index.html" target="_blank">广告联系</a>| <a href="serve/dnbjs.htm" target="_blank">关于我们</a>| 
+
+        <a href="maillist/index.html" target="_blank">电子杂志</a>| <a href="hdong/zaopin.html" target="_blank">加入我们</a>| 
+
+        <a href="hdong/xinsi.html" target="_blank">隐私条款</a></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+
+  <tr> 
+
+    <td> 
+
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br> 
+
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br> <a href="mailto:webmaster@yesky.com"> 
+
+        如有意见请与我们联系 </a></font></span></div>
+
+    </td>
+
+  </tr>
+
+</table>
+
+</body>
+
+<!-- #EndTemplate --></html>
+

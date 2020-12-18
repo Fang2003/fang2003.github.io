@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style type="text/css">
+<!--
+.ourfont{font-size: 12px;line-height: 17px;}
+A:link {text-decoration: none; color: blue}
+A:visited {text-decoration: none; color: "#54646D"}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: 000080} 
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>《电脑报》</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<hr align="center" width="700">
+<div align="center"><center>
+
+<table border="0" width="700" cellspacing="0" cellpadding="4" bgcolor="#ECF7F4">
+  <tr>
+    <td width="100%" valign="top"><div align="center"><center><table border="0" width="680"
+    cellspacing="0" cellpadding="4">
+      <tr>
+        <td width="672" valign="top"><p align="center"><font face="黑体" color="#004080"><strong>在VB中用pictureclip控件实现动画<br>
+        </strong></font></td>
+      </tr>
+      <tr>
+        <td width="672" valign="top"><p class="ourfont" align="left"><font color="#369681"> 
+        &nbsp; 　VB的功能强大，比如用pictureclip等控件组合就可以轻松实现动画。<br>
+        　　pictureclip控件本身并不能显示图像，它是依靠与picture控件或IMAGE控件的组合来完成动画的。pictureclip控件就像是一个图片仓库，所不同的是仓库中的图片只有一张。pictureclip控件将此图片平均分成若干区域，程序运行时pictureclip控件将指定的区域赋值给一个显示控件的有关属性，如picture控件的picture属性。<br>
+        　　下面我们以VB50为例，具体的来介绍使用pictureclip控件实现动画。<br>
+        　　首先，我们应该确定工具箱中有pictureclip控件，如果没有，我们应通过工程菜单的“部件”来添加pictureclip控件。<br>
+        　　有了pictureclip控件后，在窗体上添加pictureclip控件。按F4键显示属性窗口，双击“自定义”属性则出现一个“属性页”对话窗口。选取“图片”项，单击“浏览”选定一个图片。一般情况下此图片应是若干个大小相同的小图片组成。我们以VB例程中的REDTOPBMP为例，选取一个图片后我们在“预览”框中就可以看见图片全貌。我们发现REDTOPBMP图片由三行六列共18个小图片组成，选择“通用属性”项，根据我们的上述发现，定义好“行”、“列”的值，划分好图形区域。<br>
+        　　此时我们在窗体上就可以看见REDTOP图片。在运行时pictureclip控件是不可见的，所以不需要理会pictureclip控件的位置。<br>
+        　　在以后的过程中，我们可以将一图形显示控件，调整大小，放在窗体中指定的位置，将pictureclip控件中指定区域，赋值给显示控件的picture属性，便可以显示图形了，设pictureclip控件区域值为一变量，在定时控件中，用循环语句改变此变量，就可以实现动画了。例程如下：<br>
+        　　Dim a As Integer　′在模块说明中定义a变量<br>
+        　　Private Sub Form_Load()<br>
+        　　′指定picture1的图形为pictureclip控件中的第二个图形区域<br>
+        　　picture1.picture=pictureclip1.GraphicCell(1)<br>
+        　　′定义变量a的初始值和定时控件的时间间隔属性<br>
+        　　a=1<br>
+        　　Timer1.Interval=100<br>
+        　　End Sub<br>
+        　　Private Sub Timer1_Timer()<br>
+        　　′每发生一次Timer事件时改变变量a的值<br>
+        　　a=a＋1:If a=18 Then a=0<br>
+        　　′利用变量值的改变给picture1控件指定不同的图形<br>
+        　　picture1.picture=pictureclip1.GraphicCell(a)<br>
+        　　End Sub<br>
+        　　怎么样，如此简单就可以实现动画!如法炮制，我们可以实现立体图形按钮等效果。<br>
+        　　以上是我在自学VB的过程中学会的一个小技巧，希望它能起到一个抛砖引玉的作用。<strong>(河北　贾　亮)</strong></font></p>
+        <p align="right"><span class="ourfont"><font color="#369681">本文出自：</font><a
+        href="index.htm">《电脑报》1998年4月27日第16期13版</a></span></td>
+      </tr>
+    </table>
+    </center></div></td>
+  </tr>
+</table>
+</center></div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>徽韵</title>
+
+<script language=JavaScript>
+   var MESSAGE  = "欢迎您走进古徽州！体会古色古香的徽韵！！"
+   var POSITION = 100
+   var DELAY    = 5
+   var scroll = new statusMessageObject()
+ function statusMessageObject(p,d) {
+  this.msg = MESSAGE
+  this.out = " "
+  this.pos = POSITION
+  this.delay = DELAY
+  this.i     = 0
+  this.reset = clearMessage}
+function clearMessage() {
+  this.pos = POSITION}
+function scroller() {
+  for (scroll.i = 0; scroll.i < scroll.pos; scroll.i++) {
+    scroll.out += " "}
+  if (scroll.pos >= 0)
+   scroll.out += scroll.msg
+  else scroll.out = scroll.msg.substring(-scroll.pos,scroll.msg.length)
+  window.status = scroll.out
+  scroll.out = " "
+  scroll.pos--
+  if (scroll.pos < -(scroll.msg.length)) {
+   scroll.reset()}
+  setTimeout ('scroller()',scroll.delay)}
+function snapIn(jumpSpaces,position) {
+  var msg = scroll.msg
+  var out = ""
+  for (var i=0; i<position; i++) 
+    {out += msg.charAt(i)}
+  for (i=1;i<jumpSpaces;i++) 
+    {out += " "}
+  out += msg.charAt(position)
+  window.status = out
+  if (jumpSpaces <= 1) {
+    position++
+    if (msg.charAt(position) == ' ') 
+      {position++ }
+    jumpSpaces = 100-position
+  } else if (jumpSpaces >  3)
+       {jumpSpaces *= .75}
+  else
+    {jumpSpaces--}
+  if (position != msg.length) {
+    var cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+    scrollID = window.setTimeout(cmd,scroll.delay);
+  } else {    window.status=""
+    jumpSpaces=0
+    position=0
+    cmd = "snapIn(" + jumpSpaces + "," + position + ")";
+    scrollID = window.setTimeout(cmd,scroll.delay);
+    return false }
+  return true}
+snapIn(100,0);
+</script>
+
+<script language="JavaScript">
+<!-- 
+var caution = false
+function setCookie(name, value, expires, path, domain, secure) {
+        var curCookie = name + "=" + escape(value) +
+                ((expires) ? "; expires=" + expires.toGMTString() : "") +
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                ((secure) ? "; secure" : "")
+        if (!caution || (name + "=" + escape(value)).length <= 4000)
+                document.cookie = curCookie
+        else
+                if (confirm("Cookie exceeds 4KB and will be cut!"))
+                        document.cookie = curCookie
+}
+function getCookie(name) {
+        var prefix = name + "="
+        var cookieStartIndex = document.cookie.indexOf(prefix)
+        if (cookieStartIndex == -1)
+                return null
+        var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length)
+        if (cookieEndIndex == -1)
+                cookieEndIndex = document.cookie.length
+        return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex))
+}
+function deleteCookie(name, path, domain) {
+        if (getCookie(name)) {
+                document.cookie = name + "=" + 
+                ((path) ? "; path=" + path : "") +
+                ((domain) ? "; domain=" + domain : "") +
+                "; expires=Thu, 01-Jan-70 00:00:01 GMT"
+        }
+}
+function fixDate(date) {
+        var base = new Date(0)
+        var skew = base.getTime()
+        if (skew > 0)
+                date.setTime(date.getTime() - skew)
+}
+var now = new Date()
+fixDate(now)
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+var visits = getCookie("counter")
+if (!visits)
+        visits = 1
+else
+        visits = parseInt(visits) + 1
+setCookie("counter", visits, now)
+today=new Date();
+dateValue=today.getYear()+"年"+(today.getMonth()+1)+"月"+today.getDate()+"日";
+window.alert("\n      徽韵网站\n\n 欢迎您的第" + visits + "次光临！\n\n这里能让你了解古徽州！！\n\n  今天是"+dateValue);
+//-->
+</script>
+
+<style type="text/css">
+  .spanstyle {
+  	position:absolute;
+  	visibility:visible;
+  	top:-50px;
+  	font-size:9pt;
+  	color: #000000;
+   font-weight:bold;
+  }</style>
+<meta name="Microsoft Border" content="t">
+</head>
+<body bgcolor="#000000"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left" style="margin-top: -3; margin-bottom: -4"><font color="#0000FF" size="7">&nbsp;</font><img border="0" src="hz00.gif" width="169" height="128" style="position: absolute; left: 601; top: 69">&nbsp;&nbsp;&nbsp; 
+<img border="0" src="hz00.gif" width="169" height="128" style="position: absolute; left: -8; top: 67">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font face="方正行楷简体" color="#0000FF" size="7"><span style="font-size: 112.0pt; mso-bidi-font-size: 12.0pt; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">徽     
+韵</span></font></p>    
+<p align="left" style="margin-top: -24; margin-bottom: 2"><font color="#0000FF" size="7">&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF" size="7">HUI&nbsp;&nbsp;&nbsp;     
+&nbsp; YUN</font></p>    
+<p align="center">　</p>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--msnavigation--><td valign="top">
+
+<table border="2" width="11%" height="274" bgcolor="#FFFFCC" bordercolorlight="#FF00FF" bordercolor="#FF00FF" style="position: absolute; left: 18; top: 289">
+  <tr>
+    <td width="100%" height="322">
+      <p align="center"><b><font size="7" face="方正黄草简体">一</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">生</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">痴</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">绝</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">处</font></b></td>
+  </tr>
+</table>
+<p>&nbsp;&nbsp;</p>
+<table border="2" width="11%" style="position: absolute; left: 632; top: 292" height="274" bgcolor="#FFFFCC" bordercolorlight="#FF00FF" bordercolor="#FF00FF">
+  <tr>
+    <td width="64" height="305">
+      <p align="center"><b><font size="7" face="方正黄草简体">无</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">梦</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">到</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">徽</font></b></p>
+      <p align="center"><b><font size="7" face="方正黄草简体">州</font></b></td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="qkmz5.jpg" style="position: absolute; left: 108; top: 290" width="244" height="163"></p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center"><img border="0" src="qkmz1.jpg" style="position: absolute; left: 360; top: 292" width="262" height="160"></p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center"><img border="0" src="tupf1.jpg" style="position: absolute; left: 107; top: 469" width="246" height="176"></p>
+<p align="center"><img border="0" src="yxfg4.jpg" style="position: absolute; left: 363; top: 470" width="258" height="176"></p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center">　</p>
+<p align="center"><font color="#FF00FF" size="5" face="华文新魏">让您走进古色古香的徽州建筑；</font></p>
+<p align="center"><font color="#FF00FF" size="5" face="华文新魏">让您了解源远流长的徽州历史；</font></p>
+<p align="center"><font color="#FF00FF" size="5" face="华文新魏">&nbsp; 
+让您体验多姿态多彩的徽州风情；</font></p> 
+<p align="center"><font color="#FF00FF" size="5" face="华文新魏">让您感受光辉灿烂的徽州文化；</font></p> 
+<p align="center"><font color="#FF00FF" size="5" face="华文新魏">让您品味闻名遐迩的徽州特产。</font></p> 
+<p>　</p> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                           
+<font color="#FFFFFF" face="华文行楷">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                           
+</font><font face="隶书" size="5" color="#FFFFFF"><blink>                                                                                          
+<applet code="fphover.class" width="156" height="36">                                                                                          
+  <param name="color" value="#000080">                                                                                          
+  <param name="hovercolor" value="#0000FF">                                                                                          
+  <param name="text" value="走进徽州">                                                                                          
+  <param name="effect" value="glow">                                                                                          
+  <param name="url" valuetype="ref" value="总框架.htm">                                                                                          
+  <param name="textcolor" value="#00FF00">                                                                                          
+  <param name="font" value="TimesRoman">                                                                                          
+  <param name="fontstyle" value="bold">                                                                                          
+  <param name="fontsize" value="30">                                                                                          
+</applet>                                                                                          
+</blink></font><font color="#FFFFFF" face="华文行楷">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                                                           
+</font>                                                                                      
+                                                                                          

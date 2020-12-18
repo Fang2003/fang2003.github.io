@@ -1,0 +1,149 @@
+ 
+<html>
+<!-- #BeginTemplate "/Templates/oa.dwt" --> 
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>学用Lotus办公——Domino </title>
+<!-- #EndEditable --> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="library/DNB/2001/0123/cpcw.css">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="2" marginwidth="0" marginheight="0">
+<table width="770" border="1" cellspacing="0" cellpadding="1" align="center" bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF">
+  <tr> 
+    <td width="148" align="center"> <iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-left.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe> 
+    </td>
+    <td width="473" align="center" height="61"> 
+      <script language="JavaScript" src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/js/cpcw.js"></script>
+    </td>
+    <td align="center" width="149"><iframe src="http://www.lpzx.edu.cn/library/www.yesky.com/adj/html/cpcw-right.htm" width="140" height="60" frameborder="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="22" bgcolor="#3366CC">
+  <tr> 
+    <td width="40" align="center" height="20"><img src="images/b1.gif" width="14" height="14"></td>
+    <td width="583" height="20"> <span class="wj">| <a href="wrapup.html" class="wj"><font color="#FFFFFF">综合报道</font></a> 
+      | <a href="software.html"><font color="#FFFFFF">软件世界</font></a> 
+      | <a href="hardware.html"><font color="#FFFFFF">硬件周刊</font></a> 
+      | <a href="internet.html"><font color="#FFFFFF">互联网时代</font></a> 
+      | <a href="oa.html"><font color="#FFFFFF">OA专刊</font> 
+      </a>| <a href="game.html"><font color="#FFFFFF">游戏广场</font></a> 
+      | <a href="library/DNB/2001/0123/maket.html"><font color="#FFFFFF">评测与市场</font></a> 
+      | <a href="zt.html"><font color="#FFFFFF">专题版</font> 
+      </a>| <a href="library/DNB/default.htm"><font color="#FFFFFF">首页</font></a></span></td>
+    <td align="right" width="147" rowspan="2">&nbsp;</td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="48">
+  <tr> 
+    <td width="174" valign="bottom"><a href="library/DNB/default.htm"><img src="tit.gif" width="169" height="68" border="0"></a></td>
+    <td width="448" class="nava"><span class="nava">严正声明<br>
+      　　未经许可，任何商业网站或个人网站都不得提供《电脑报》电子版的浏览或下载！违者我们将追究其法律责任！</span></td>
+    <td align="right" width="148" valign="top"><a href="library/www.yesky.com/default.htm"><img src="http://www.lpzx.edu.cn/library/www.yesky.com/newimages/news/logo.gif" width="140" height="60" border="0"></a></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="11">
+  <tr> 
+    <td width="169" rowspan="2" valign="top">&nbsp;</td>
+    <td width="141" rowspan="2" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="460" height="9"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td colspan="3" valign="top"> <br>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td class="nava"><font color="#FF9900">你所在的位置：&gt;&gt;<a href="library/DNB/default.htm">《电脑报》电子版</a> 
+            &gt;&gt;<a href="index.html">2001年<!-- #BeginEditable "%B5%DA%BC%B8%C6%DA" -->第23期 <!-- #EndEditable --> 
+            </a>&gt;&gt;<a href="oa.html">OA专刊</a></font></td>
+        </tr>
+      </table>
+      <table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td> 
+            <div align="center"><!-- #BeginEditable "%CE%C4%D5%C2%B1%EA%CC%E2" -->学用Lotus办公——Domino 
+              Web服务器应用<!-- #EndEditable --></div>
+          </td>
+        </tr>
+      </table>
+      <table width="600" border="1" cellspacing="0" cellpadding="5" align="center" bordercolor="#FFCC99">
+        <tr> 
+          <td> 
+            <p><!-- #BeginEditable "%CE%C4%D5%C2%C4%DA%C8%DD" -->学过Do-mino邮件服务配置后，大家对Domino服务应该有了更深刻的认识体会。本篇继续介绍Domino 
+              Web服务器的配置，结合一个Web方式办公BBS系统的创建要点介绍Domino Web服务器应用。<br>
+              一、Domino Web服务器配置<br>
+              Domino Web服务器的工作方式是：Domino Web服务器检查外来请求中的URL，确定该请求是针对Domino数据库中的条目还是文件系统中的HTML文件。如果是HTML文件，Domino服务器将同其他Web服务器一样，为Web客户机提供文件服务。如果请求的是Domino数据库中的内容，Domino将与数据库交互作用，为Web客户机处理消息，或者将信息从Web客户机存入数据库。<br>
+              Domino支持URL扩展，该扩展使得Web客户机能够使用Domino功能。例如：Http//www．kingstone．com/hello．nsf﹖OpenDatabase可以用于打开Kingstone．com站点上的数据库等。<br>
+              配置Domino Web服务器步骤如下：<br>
+              1．首先启动Domino Administrator，在Domino Administrator中，单击“配置”附签，选择“服务器”，然后打开“服务器”文档。<br>
+              2．选择“端口→Internet端口→Web附签”，然后填入TCP/IP端口号，如果你的NT装有IIS，建议选择端口号不要和IIS相同，如8081等。<br>
+              3．选择“Internet协议→HTTP附签”，然后在DNS查询项中选择“禁用”，这样可以改善Domino服务器性能。接着启用“联编到主机名”，在“主机名”中输入别名，这样可允许用户使用不同于Domino服务器名的别名来访问Web服务器。最后在“允许HTTP客户浏览数据库”一栏中选择“是”，允许Web用户使用“﹖OpenServer”命令显示服务器上的数据库列表。<br>
+              4．选择“Internet协议→Domino Web引擎”，然后选择“启用”，使搜索站点者可以访问本站点。<br>
+              5．最后在NT控制台中输入命令“tell<br>
+              http restart”，重新启动http服务，使得修改得以生效。<br>
+              6．其它Domino Web服务器控制操作：<br>
+              (1)手动启动Web服务器，在控制台中输入“load http”。<br>
+              (2)启动Domino时自动启动Web服务器，只需在NOTES．INI中编辑ServerTasks，使其包括http命令。<br>
+              (3)关闭Web服务器可以在控制台中输入“tell http quit”。<br>
+              二、Domino Web服务器应用<br>
+              Domino Web服务器较之IIS系统的优点在于：Domino Web服务器包含了数据库、页面、应用程序，同时提供了众多的模板，使得用户可以迅速完成一个含数据库功能复杂站点的建设。以下结合一个Web方式BBS系统的创建要点介绍Domino 
+              Web服务器的应用构建要点。<br>
+              1．建立BBS组件<br>
+              (1)数据库：向HTTP服务器显示一个Notes数据库来组织、保存数据和设计元素以供Web用户查看。<br>
+              (2)表单：为用户提供向数据库中输入新信息和查看现有信息的框架。<br>
+              (3)文档：保存数据库数据的单个W-eb页面。<br>
+              (4)域：文档中的域包含了一部分信息，例如人名、注释、号码、日期或计算结果。<br>
+              (5)导航器：作为图像映像出现在W-eb页面上，导航器提供了图形化的方式来让用户查找文档或在打开的数据库中执行操作而不用打开视图。<br>
+              (6)主页面：可使用AboutDatabase文档或表单、导航器制作，也可直接用HTML文件。<br>
+              (7)链接：Domino支持数据库链接、文档链接、视图链接以及URL链接。<br>
+              (8)公式与Lotus Script：大部分公式、@函数和Script都可在Web上应用。<br>
+              (9)代理和动作：代理通常由动作触发或在表单提交时被触发，动作用于链接Notes对象和触发代理建立。<br>
+              2．规划BBS站点<br>
+              Web站点是组织起来的信息集合，这些信息保存在Domino服务器上的一个或多个数据库中。规划Web 站点时，要考虑到构建站点的数据库、视图、表单和导航器的类型和存取级别(使用读者、作者、编辑者、管理者四种权限等级)。<br>
+              3．实现BBS站点<br>
+              Domino自动地将所有的设计元素和文档转换成Web页面。因此，创建了带有视图、导航器、表单和文档的数据库，就相当于创建了Web页面。<br>
+              (1)主页数据库：站点主页文档，包括站点介绍以及其他有关数据库视图、文档或导航器的链接。<br>
+              (2)注册区数据库：注册表单，更改个人信息表单。<br>
+              (3)讨论区数据库：主文档表单，答复文档表单，答复的答复文档表单，以及按作者、按日期、按主题的视图各一张，按作者、按日期、按主题的导航器各一个。<br>
+              (4)精华区数据库：主文档表单，按作者、按日期、按主题的视图各一张，按作者、按日期、按主题的导航器各一个。<!-- #EndEditable --></p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center" height="4" bgcolor="#FF9900">
+  <tr> 
+    <td width="161" bgcolor="#99CCFF"> </td>
+    <td width="610" bgcolor="#FF9900"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><a href="library/DNB/bill/index.html" target="_blank"></a><a href="library/DNB/hdong/gao.htm" target="_blank"> 
+        欢迎投稿 </a> | <a href="library/DNB/bill/index.html" target="_blank">广告联系</a>| <a href="library/DNB/serve/dnbjs.htm" target="_blank">关于我们</a>| 
+        <a href="library/DNB/maillist/index.html" target="_blank">电子杂志</a>| <a href="library/DNB/hdong/zaopin.html" target="_blank">加入我们</a>| 
+        <a href="library/DNB/hdong/xinsi.html" target="_blank">隐私条款</a></div>
+    </td>
+  </tr>
+</table>
+<table width="770" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td> 
+      <div align="center"><span class="nava"><font color="#000000" face="Arial, Helvetica, sans-serif"> 
+        Copyright (C) 2000 Yesky.com, All Rights Reserved </font><font color="#000000"><br>
+        版权所有　 <font face="Arial, Helvetica, sans-serif"> Yesky </font><br>
+        <a href="mailto:webmaster@yesky.com"> 如有意见请与我们联系 </a></font></span></div>
+    </td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+</html>
